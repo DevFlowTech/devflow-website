@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import StructuredData from "@/components/SEO/StructuredData";
+import CustomCursor from "@/components/ui/CustomCursor";
 
 // Base URL for the site
 const siteUrl = "https://devflow.co.in";
@@ -195,6 +196,9 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
+        {/* Custom Cursor for premium interactions */}
+        <CustomCursor />
+        
         {/* Structured Data for SEO */}
         <StructuredData />
         

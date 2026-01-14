@@ -78,60 +78,98 @@ h6 {
   background: rgba(186, 230, 84, 0.3);
 }
 
-/* Premium button styles */
+/* ========================================
+   PREMIUM BUTTON STYLES
+   ======================================== */
+
+/* Primary CTA - High contrast, action-focused */
 .btn-primary {
-  position: relative;
-  padding: 0.875rem 1.75rem;
-  background: linear-gradient(135deg, var(--devflow-green), #c8f062);
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 48px;
+  padding: 0 1.75rem;
+  background: linear-gradient(135deg, var(--devflow-green) 0%, #c8f062 100%);
   color: var(--devflow-black);
+  font-family: var(--font-inter);
   font-weight: 600;
   font-size: 0.9375rem;
-  border-radius: 0.75rem;
+  line-height: 1;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 2px 16px rgba(186, 230, 84, 0.15);
+  white-space: nowrap;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 2px 12px rgba(186, 230, 84, 0.2), 0 0 0 0 rgba(186, 230, 84, 0);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 4px 32px rgba(186, 230, 84, 0.35),
-    0 0 0 1px rgba(186, 230, 84, 0.3);
   transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(186, 230, 84, 0.35),
+    0 0 0 1px rgba(186, 230, 84, 0.3);
 }
 
 .btn-primary:active {
   transform: translateY(0) scale(0.98);
 }
 
+/* Subtle shine overlay on hover */
 .btn-primary::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), transparent);
-  transform: translateY(100%);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+  pointer-events: none;
 }
 
 .btn-primary:hover::before {
-  transform: translateY(0);
+  left: 100%;
 }
 
+/* Secondary CTA - Subtle, supporting action */
 .btn-secondary {
-  position: relative;
-  padding: 0.875rem 1.75rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 48px;
+  padding: 0 1.75rem;
+  background: rgba(255, 255, 255, 0.04);
   color: var(--devflow-gray-100);
+  font-family: var(--font-inter);
   font-weight: 500;
   font-size: 0.9375rem;
-  border-radius: 0.75rem;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  line-height: 1;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
 }
 
 .btn-secondary:hover {
   background: rgba(186, 230, 84, 0.08);
-  border-color: rgba(186, 230, 84, 0.3);
+  border-color: rgba(186, 230, 84, 0.35);
   color: var(--devflow-green);
   transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0) scale(0.98);
 }
 
 /* Glass card effect */
@@ -420,4 +458,308 @@ h6 {
 }
 .font-mono {
   font-family: var(--font-jetbrains);
+}
+
+/* ========================================
+   PREMIUM ANIMATIONS & EFFECTS
+   ======================================== */
+
+/* Hide default cursor on desktop */
+@media (hover: hover) {
+  body {
+    cursor: none;
+  }
+
+  a,
+  button,
+  [role="button"],
+  input,
+  textarea,
+  select,
+  [data-cursor] {
+    cursor: none;
+  }
+}
+
+/* Smooth page transitions */
+html.is-animating {
+  pointer-events: none;
+}
+
+/* Float animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  75% {
+    transform: translateY(5px) rotate(-1deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Subtle pulse animation */
+@keyframes subtlePulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+.animate-subtle-pulse {
+  animation: subtlePulse 3s ease-in-out infinite;
+}
+
+/* Glow pulse animation */
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(186, 230, 84, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(186, 230, 84, 0.5),
+      0 0 60px rgba(186, 230, 84, 0.2);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* Border flow animation */
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-border-flow {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(186, 230, 84, 0.5),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: borderFlow 3s linear infinite;
+}
+
+/* Gradient shift animation */
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
+}
+
+/* Spin slow */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+/* Scale in animation */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Slide up animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Magnetic hover effect base */
+.magnetic-hover {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Tilt on hover */
+.tilt-hover {
+  transition: transform 0.3s ease;
+}
+
+.tilt-hover:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) scale(1.02);
+}
+
+/* Card lift effect */
+.card-lift {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-lift:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(186, 230, 84, 0.1);
+}
+
+/* Link underline animation */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--devflow-green), transparent);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Image reveal animation */
+@keyframes imageReveal {
+  from {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.animate-image-reveal {
+  animation: imageReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Stagger animation delay utilities */
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+.stagger-2 {
+  animation-delay: 0.2s;
+}
+.stagger-3 {
+  animation-delay: 0.3s;
+}
+.stagger-4 {
+  animation-delay: 0.4s;
+}
+.stagger-5 {
+  animation-delay: 0.5s;
+}
+
+/* Marquee animation for infinite scroll */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Blob animation for background elements */
+@keyframes blob {
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: translate(10px, -10px) rotate(120deg);
+  }
+  66% {
+    border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%;
+    transform: translate(-10px, 10px) rotate(240deg);
+  }
+}
+
+.animate-blob {
+  animation: blob 8s ease-in-out infinite;
+}
+
+/* ========================================
+   RESPONSIVE UTILITIES
+   ======================================== */
+
+/* Hide cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor,
+  [data-cursor] {
+    display: none !important;
+  }
 }

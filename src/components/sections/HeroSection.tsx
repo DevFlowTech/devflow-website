@@ -1,8 +1,10 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
+import MagneticButton from "@/components/ui/MagneticButton";
+import { LineReveal } from "@/components/ui/TextReveal";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -13,6 +15,10 @@ export default function HeroSection() {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95]);
+  
+  // Smooth spring for parallax
+  const smoothY = useSpring(y, { damping: 20, stiffness: 100 });
 
   return (
     <section
@@ -23,9 +29,31 @@ export default function HeroSection() {
       {/* Animated grid background */}
       <div className="absolute inset-0 grid-lines" />
       
-      {/* Gradient orbs */}
-      <div className="absolute top-1/4 -left-40 w-[500px] h-[500px] bg-devflow-green/5 rounded-full blur-[120px]" />
-      <div className="absolute bottom-1/4 -right-40 w-[400px] h-[400px] bg-devflow-green/3 rounded-full blur-[100px]" />
+      {/* Gradient orbs with animation */}
+      <motion.div 
+        className="absolute top-1/4 -left-40 w-[500px] h-[500px] bg-devflow-green/5 rounded-full blur-[120px]"
+        animate={{
+          x: [0, 50, 0],
+          y: [0, -30, 0],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div 
+        className="absolute bottom-1/4 -right-40 w-[400px] h-[400px] bg-devflow-green/3 rounded-full blur-[100px]"
+        animate={{
+          x: [0, -30, 0],
+          y: [0, 50, 0],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
       
       {/* Flow lines SVG */}
       <svg
@@ -37,6 +65,13 @@ export default function HeroSection() {
           <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="rgba(186, 230, 84, 0)" />
             <stop offset="50%" stopColor="rgba(186, 230, 84, 0.5)" />
+            <stop offset="100%" stopColor="rgba(186, 230, 84, 0)" />
+          </linearGradient>
+          <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <animate attributeName="x1" values="0%;100%;0%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="x2" values="100%;200%;100%" dur="3s" repeatCount="indefinite" />
+            <stop offset="0%" stopColor="rgba(186, 230, 84, 0)" />
+            <stop offset="50%" stopColor="rgba(186, 230, 84, 0.8)" />
             <stop offset="100%" stopColor="rgba(186, 230, 84, 0)" />
           </linearGradient>
         </defs>
@@ -67,129 +102,146 @@ export default function HeroSection() {
           animate={{ pathLength: 1, opacity: 0.2 }}
           transition={{ duration: 3, ease: "easeInOut", delay: 1.1 }}
         />
+        {/* Animated flow line */}
+        <motion.path
+          d="M-100,420 Q300,320 600,420 T1300,420"
+          stroke="url(#flowGradient)"
+          strokeWidth="2"
+          fill="none"
+          strokeLinecap="round"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 2, ease: "easeInOut", delay: 1.5 }}
+        />
       </svg>
 
-      <motion.div style={{ y, opacity }} className="relative z-10 section-container">
+      <motion.div 
+        style={{ y: smoothY, opacity, scale }} 
+        className="relative z-10 section-container"
+      >
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
             {/* Eyebrow */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-devflow-dark/80 border border-devflow-green/20 mb-8"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-devflow-dark/80 border border-devflow-green/20 mb-8 backdrop-blur-sm"
             >
-              <span className="w-2 h-2 rounded-full bg-devflow-green animate-pulse" />
+              <motion.span 
+                className="w-2 h-2 rounded-full bg-devflow-green"
+                animate={{ 
+                  scale: [1, 1.3, 1],
+                  opacity: [1, 0.7, 1],
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
               <span className="text-sm font-medium text-devflow-gray-200">
                 Engineering Excellence
               </span>
+              <motion.span
+                className="text-xs text-devflow-green font-semibold px-2 py-0.5 bg-devflow-green/10 rounded-full"
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.8 }}
+              >
+                2024
+              </motion.span>
             </motion.div>
 
-            {/* Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="font-display text-display-lg lg:text-display-xl text-white mb-6 text-balance"
-            >
-              We build{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10 text-devflow-green">world-class</span>
-                <motion.span
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 0.6, delay: 1, ease: [0.16, 1, 0.3, 1] }}
-                  className="absolute bottom-2 left-0 right-0 h-3 bg-devflow-green/10 -z-0 origin-left"
-                />
-              </span>
-              <br />
-              web experiences
-            </motion.h1>
+            {/* Headline with enhanced animation */}
+            <div className="mb-6">
+              <LineReveal delay={0.3}>
+                <h1 className="font-display text-display-lg lg:text-display-xl text-white text-balance">
+                  We build{" "}
+                  <span className="relative inline-block">
+                    <motion.span 
+                      className="relative z-10 text-devflow-green"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.8 }}
+                    >
+                      world-class
+                    </motion.span>
+                    <motion.span
+                      initial={{ scaleX: 0 }}
+                      animate={{ scaleX: 1 }}
+                      transition={{ duration: 0.6, delay: 1, ease: [0.16, 1, 0.3, 1] }}
+                      className="absolute bottom-2 left-0 right-0 h-3 bg-devflow-green/10 -z-0 origin-left"
+                    />
+                  </span>
+                </h1>
+              </LineReveal>
+              <LineReveal delay={0.4}>
+                <h1 className="font-display text-display-lg lg:text-display-xl text-white text-balance">
+                  web experiences
+                </h1>
+              </LineReveal>
+            </div>
 
             {/* Subheadline */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
               className="text-body-xl text-devflow-gray-200 max-w-lg mx-auto lg:mx-0 mb-10"
             >
               High-performance digital products engineered for businesses that
               demand precision, speed, and measurable impact.
             </motion.p>
 
-            {/* CTAs */}
+            {/* CTAs - Clean row layout with proper spacing */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="flex flex-wrap gap-4 justify-center lg:justify-start"
             >
-              <Link href="#contact" className="btn-primary group">
-                <span className="flex items-center gap-2">
-                  Start Your Project
-                  <svg
-                    className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </span>
+              <Link href="#contact" className="btn-primary">
+                Start Your Project
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
               </Link>
               <Link href="#work" className="btn-secondary">
                 View Our Work
               </Link>
             </motion.div>
 
-            {/* Stats indicator */}
+            {/* KPI Stats - Clear visual separation */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1 }}
-              className="mt-12 flex flex-wrap items-center gap-8 justify-center lg:justify-start"
+              className="mt-10 pt-8 border-t border-white/[0.06] flex flex-wrap items-center gap-6 lg:gap-10 justify-center lg:justify-start"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-devflow-green/10 border border-devflow-green/20 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-devflow-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-lg font-semibold text-white">99+</p>
-                  <p className="text-xs text-devflow-gray-400">Performance Score</p>
-                </div>
-              </div>
-              <div className="w-px h-10 bg-white/[0.08] hidden sm:block" />
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-devflow-green/10 border border-devflow-green/20 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-devflow-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-lg font-semibold text-white">&lt;1s</p>
-                  <p className="text-xs text-devflow-gray-400">Load Time</p>
-                </div>
-              </div>
-              <div className="w-px h-10 bg-white/[0.08] hidden sm:block" />
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-devflow-green/10 border border-devflow-green/20 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-devflow-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-lg font-semibold text-white">100%</p>
-                  <p className="text-xs text-devflow-gray-400">SEO Optimized</p>
-                </div>
-              </div>
+              {[
+                { value: "99+", label: "Performance" },
+                { value: "<1s", label: "Load Time" },
+                { value: "100%", label: "SEO Score" },
+              ].map((stat, index) => (
+                <motion.div 
+                  key={stat.label}
+                  className="flex items-center gap-2"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.1 + index * 0.1 }}
+                >
+                  <span className="text-xl font-bold text-devflow-green">{stat.value}</span>
+                  <span className="text-sm text-devflow-gray-300">{stat.label}</span>
+                </motion.div>
+              ))}
             </motion.div>
           </div>
 
@@ -207,20 +259,30 @@ export default function HeroSection() {
                 animate={{ rotateY: -5, rotateX: 5 }}
                 transition={{ duration: 1.5, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 className="relative transform-style-3d"
+                whileHover={{ rotateY: 0, rotateX: 0, scale: 1.02 }}
               >
                 {/* Browser frame */}
                 <div className="relative rounded-xl bg-devflow-charcoal border border-white/[0.08] overflow-hidden shadow-2xl">
                   {/* Browser bar */}
                   <div className="flex items-center gap-2 px-4 py-3 bg-devflow-dark border-b border-white/[0.06]">
                     <div className="flex gap-1.5">
-                      <span className="w-3 h-3 rounded-full bg-red-500/80" />
-                      <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                      <span className="w-3 h-3 rounded-full bg-green-500/80" />
+                      <motion.span 
+                        className="w-3 h-3 rounded-full bg-red-500/80"
+                        whileHover={{ scale: 1.2 }}
+                      />
+                      <motion.span 
+                        className="w-3 h-3 rounded-full bg-yellow-500/80"
+                        whileHover={{ scale: 1.2 }}
+                      />
+                      <motion.span 
+                        className="w-3 h-3 rounded-full bg-green-500/80"
+                        whileHover={{ scale: 1.2 }}
+                      />
                     </div>
                     <div className="flex-1 mx-4">
                       <div className="h-6 rounded-md bg-devflow-black/50 flex items-center px-3">
                         <span className="text-xs text-devflow-gray-400 font-mono">
-                          devflow.tech
+                          devflow.co.in
                         </span>
                       </div>
                     </div>
@@ -234,50 +296,66 @@ export default function HeroSection() {
                     {/* Dashboard mockup elements */}
                     <div className="relative z-10 space-y-4">
                       <div className="flex gap-4">
-                        <div className="h-20 flex-1 rounded-lg bg-devflow-green/10 border border-devflow-green/20 p-3">
-                          <div className="w-8 h-2 rounded bg-devflow-green/30 mb-2" />
-                          <div className="w-16 h-4 rounded bg-devflow-green/20" />
-                        </div>
-                        <div className="h-20 flex-1 rounded-lg bg-devflow-dark border border-white/[0.06] p-3">
-                          <div className="w-8 h-2 rounded bg-devflow-gray-500 mb-2" />
-                          <div className="w-12 h-4 rounded bg-devflow-gray-600" />
-                        </div>
-                        <div className="h-20 flex-1 rounded-lg bg-devflow-dark border border-white/[0.06] p-3">
-                          <div className="w-8 h-2 rounded bg-devflow-gray-500 mb-2" />
-                          <div className="w-14 h-4 rounded bg-devflow-gray-600" />
-                        </div>
+                        {[1, 2, 3].map((i) => (
+                          <motion.div 
+                            key={i}
+                            className={`h-20 flex-1 rounded-lg ${i === 1 ? 'bg-devflow-green/10 border-devflow-green/20' : 'bg-devflow-dark border-white/[0.06]'} border p-3`}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 1 + i * 0.1 }}
+                            whileHover={{ scale: 1.02, borderColor: 'rgba(186, 230, 84, 0.3)' }}
+                          >
+                            <div className={`w-8 h-2 rounded ${i === 1 ? 'bg-devflow-green/30' : 'bg-devflow-gray-500'} mb-2`} />
+                            <div className={`w-16 h-4 rounded ${i === 1 ? 'bg-devflow-green/20' : 'bg-devflow-gray-600'}`} />
+                          </motion.div>
+                        ))}
                       </div>
                       
                       {/* Chart mockup */}
-                      <div className="h-40 rounded-lg bg-devflow-dark border border-white/[0.06] p-4">
-                        <div className="flex items-end gap-2 h-full">
+                      <motion.div 
+                        className="h-40 rounded-lg bg-devflow-dark border border-white/[0.06] p-4 overflow-hidden"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 1.3 }}
+                      >
+                        <div className="flex items-center gap-3 mb-2">
+                          <span className="text-xs text-devflow-gray-400">Performance</span>
+                        </div>
+                        <div className="flex items-end gap-1 h-[calc(100%-24px)]">
                           {[40, 65, 45, 80, 55, 90, 70, 85, 60, 75, 95, 80].map((h, i) => (
                             <motion.div
                               key={i}
                               initial={{ scaleY: 0 }}
                               animate={{ scaleY: 1 }}
-                              transition={{ duration: 0.5, delay: 1.2 + i * 0.05 }}
-                              className="flex-1 rounded-t origin-bottom"
+                              transition={{ duration: 0.5, delay: 1.4 + i * 0.05 }}
+                              className="flex-1 rounded-t origin-bottom bg-devflow-green/40"
                               style={{
                                 height: `${h}%`,
-                                background: `linear-gradient(to top, rgba(186, 230, 84, 0.3), rgba(186, 230, 84, 0.1))`,
                               }}
                             />
                           ))}
                         </div>
-                      </div>
+                      </motion.div>
                       
                       {/* List items */}
                       <div className="space-y-2">
                         {[1, 2, 3].map((i) => (
-                          <div
+                          <motion.div
                             key={i}
                             className="h-10 rounded-lg bg-devflow-dark/50 border border-white/[0.04] flex items-center gap-3 px-3"
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 1.8 + i * 0.1 }}
+                            whileHover={{ x: 4, borderColor: 'rgba(186, 230, 84, 0.2)' }}
                           >
-                            <div className="w-2 h-2 rounded-full bg-devflow-green" />
+                            <motion.div 
+                              className="w-2 h-2 rounded-full bg-devflow-green"
+                              animate={{ scale: [1, 1.2, 1] }}
+                              transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
+                            />
                             <div className="flex-1 h-2 rounded bg-devflow-gray-600" />
                             <div className="w-12 h-2 rounded bg-devflow-gray-500" />
-                          </div>
+                          </motion.div>
                         ))}
                       </div>
                     </div>
@@ -289,7 +367,8 @@ export default function HeroSection() {
                   initial={{ opacity: 0, x: 30, y: -20 }}
                   animate={{ opacity: 1, x: 0, y: 0 }}
                   transition={{ duration: 0.6, delay: 1.5 }}
-                  className="absolute -right-8 top-1/4 w-48 p-4 rounded-xl bg-devflow-charcoal/90 backdrop-blur-xl border border-white/[0.08] shadow-xl"
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className="absolute -right-8 top-1/4 w-48 p-4 rounded-xl bg-devflow-charcoal/90 backdrop-blur-xl border border-white/[0.08] shadow-xl cursor-default"
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-8 h-8 rounded-lg bg-devflow-green/20 flex items-center justify-center">
@@ -299,7 +378,14 @@ export default function HeroSection() {
                     </div>
                     <span className="text-sm font-medium text-white">Performance</span>
                   </div>
-                  <div className="text-2xl font-bold text-devflow-green">99.9%</div>
+                  <motion.div 
+                    className="text-2xl font-bold text-devflow-green"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 1.8, type: "spring" }}
+                  >
+                    99.9%
+                  </motion.div>
                   <div className="text-xs text-devflow-gray-400">Uptime Score</div>
                 </motion.div>
 
@@ -307,13 +393,25 @@ export default function HeroSection() {
                   initial={{ opacity: 0, x: -30, y: 30 }}
                   animate={{ opacity: 1, x: 0, y: 0 }}
                   transition={{ duration: 0.6, delay: 1.7 }}
-                  className="absolute -left-6 bottom-1/4 w-44 p-4 rounded-xl bg-devflow-charcoal/90 backdrop-blur-xl border border-devflow-green/20 shadow-xl"
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className="absolute -left-6 bottom-1/4 w-44 p-4 rounded-xl bg-devflow-charcoal/90 backdrop-blur-xl border border-devflow-green/20 shadow-xl cursor-default"
                 >
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="w-2 h-2 rounded-full bg-devflow-green animate-pulse" />
+                    <motion.span 
+                      className="w-2 h-2 rounded-full bg-devflow-green"
+                      animate={{ opacity: [1, 0.5, 1] }}
+                      transition={{ duration: 1, repeat: Infinity }}
+                    />
                     <span className="text-xs text-devflow-gray-300">Live</span>
                   </div>
-                  <div className="text-lg font-bold text-white">12ms</div>
+                  <motion.div 
+                    className="text-lg font-bold text-white"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 2 }}
+                  >
+                    12ms
+                  </motion.div>
                   <div className="text-xs text-devflow-gray-400">Response Time</div>
                 </motion.div>
               </motion.div>
@@ -326,18 +424,19 @@ export default function HeroSection() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 1.5 }}
+        transition={{ duration: 0.6, delay: 2 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center gap-2"
+          className="flex flex-col items-center gap-2 cursor-pointer group"
+          data-cursor="Scroll"
         >
-          <span className="text-xs text-devflow-gray-400 uppercase tracking-wider">
+          <span className="text-xs text-devflow-gray-400 uppercase tracking-wider group-hover:text-devflow-green transition-colors">
             Scroll
           </span>
-          <div className="w-5 h-8 rounded-full border border-devflow-gray-500 flex items-start justify-center p-1">
+          <div className="w-5 h-8 rounded-full border border-devflow-gray-500 flex items-start justify-center p-1 group-hover:border-devflow-green/50 transition-colors">
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
