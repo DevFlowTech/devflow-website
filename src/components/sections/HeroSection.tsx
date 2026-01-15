@@ -121,7 +121,7 @@ export default function HeroSection() {
       >
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left pt-24 lg:pt-0">
             {/* Eyebrow */}
             <motion.div
               initial={{ opacity: 0, y: 20, scale: 0.9 }}
@@ -146,7 +146,7 @@ export default function HeroSection() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8 }}
               >
-                2024
+                2025
               </motion.span>
             </motion.div>
 

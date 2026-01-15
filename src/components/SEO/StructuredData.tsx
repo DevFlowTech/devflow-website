@@ -11,7 +11,7 @@ const organizationSchema = {
   url: 'https://devflow.co.in',
   logo: 'https://devflow.co.in/logo.png',
   description: 'High-performance digital experiences engineered for businesses that demand precision, speed, and measurable impact. Elite web development for founders and agencies.',
-  foundingDate: '2024',
+  foundingDate: '2025',
   sameAs: [
     'https://twitter.com/devflowtechnology',
     'https://linkedin.com/company/devflowtechnology',

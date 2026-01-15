@@ -49,7 +49,7 @@ export default function Navbar() {
                 alt="DevFlow Technology"
                 width={400}
                 height={112}
-                className="w-48 h-auto object-contain group-hover:opacity-90 transition-opacity duration-300"
+                className="w-36 md:w-48 h-auto object-contain group-hover:opacity-90 transition-opacity duration-300"
                 priority
               />
             </Link>
