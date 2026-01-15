@@ -5,6 +5,7 @@ import ProcessSection from "@/components/sections/ProcessSection";
 import WorkSection from "@/components/sections/WorkSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ContactSection from "@/components/sections/ContactSection";
+import ParallaxSection from "@/components/ui/ParallaxSection";
 
 export default function Home() {
   return (
@@ -15,34 +16,46 @@ export default function Home() {
       </article>
 
       {/* Clients Section - Social proof and trust indicators */}
-      <article aria-label="Trusted by leading companies and startups">
-        <ClientsSection />
-      </article>
+      <ParallaxSection speed={0.15}>
+        <article aria-label="Trusted by leading companies and startups">
+          <ClientsSection />
+        </article>
+      </ParallaxSection>
 
       {/* Capabilities Section - Service offerings and technical expertise */}
-      <article aria-label="IT Services - AI Solutions, ERP Systems, Web Development, Mobile Apps, Cloud DevOps">
-        <CapabilitiesSection />
-      </article>
+      <ParallaxSection speed={0.2}>
+        <article aria-label="IT Services - AI Solutions, ERP Systems, Web Development, Mobile Apps, Cloud DevOps">
+          <CapabilitiesSection />
+        </article>
+      </ParallaxSection>
 
       {/* Process Section - Methodology and workflow explanation */}
-      <article aria-label="Our agile development process and methodology">
-        <ProcessSection />
-      </article>
+      <ParallaxSection speed={0.25}>
+        <article aria-label="Our agile development process and methodology">
+          <ProcessSection />
+        </article>
+      </ParallaxSection>
 
       {/* Work Section - Portfolio and case studies showcase */}
-      <article aria-label="Portfolio - Web development and AI projects showcase">
-        <WorkSection />
-      </article>
+      <ParallaxSection speed={0.2}>
+        <article aria-label="Portfolio - Web development and AI projects showcase">
+          <WorkSection />
+        </article>
+      </ParallaxSection>
 
       {/* Testimonials Section - Client success stories */}
-      <article aria-label="Client testimonials and success stories">
-        <TestimonialsSection />
-      </article>
+      <ParallaxSection speed={0.15}>
+        <article aria-label="Client testimonials and success stories">
+          <TestimonialsSection />
+        </article>
+      </ParallaxSection>
 
       {/* Contact Section - Lead generation and communication */}
-      <article aria-label="Contact DevFlow Technology - Get a free consultation">
-        <ContactSection />
-      </article>
+      <ParallaxSection speed={0.1}>
+        <article aria-label="Contact DevFlow Technology - Get a free consultation">
+          <ContactSection />
+        </article>
+      </ParallaxSection>
     </>
   );
 }

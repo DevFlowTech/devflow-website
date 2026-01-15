@@ -4,6 +4,9 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import StructuredData from "@/components/SEO/StructuredData";
 import CustomCursor from "@/components/ui/CustomCursor";
+import ScrollProgress from "@/components/ui/ScrollProgress";
+import BackToTop from "@/components/ui/BackToTop";
+import PageLoader from "@/components/ui/PageLoader";
 
 // Base URL for the site
 const siteUrl = "https://devflow.co.in";
@@ -232,6 +235,12 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
+        {/* Page Loader */}
+        <PageLoader />
+
+        {/* Scroll Progress Indicator */}
+        <ScrollProgress />
+
         {/* Custom Cursor for premium interactions */}
         <CustomCursor />
 
@@ -259,6 +268,9 @@ export default function RootLayout({
 
         {/* Footer */}
         <Footer />
+
+        {/* Back to Top Button */}
+        <BackToTop />
       </body>
     </html>
   );

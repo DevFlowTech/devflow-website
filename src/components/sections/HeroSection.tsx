@@ -5,6 +5,9 @@ import { useRef } from "react";
 import Link from "next/link";
 import MagneticButton from "@/components/ui/MagneticButton";
 import { LineReveal } from "@/components/ui/TextReveal";
+import TypewriterText from "@/components/ui/TypewriterText";
+import FloatingParticles from "@/components/ui/FloatingParticles";
+import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -16,7 +19,7 @@ export default function HeroSection() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95]);
-  
+
   // Smooth spring for parallax
   const smoothY = useSpring(y, { damping: 20, stiffness: 100 });
 
@@ -26,11 +29,14 @@ export default function HeroSection() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-devflow-black"
     >
+      {/* Floating Particles */}
+      <FloatingParticles count={40} />
+
       {/* Animated grid background */}
       <div className="absolute inset-0 grid-lines" />
-      
+
       {/* Gradient orbs with animation */}
-      <motion.div 
+      <motion.div
         className="absolute top-1/4 -left-40 w-[500px] h-[500px] bg-devflow-green/5 rounded-full blur-[120px]"
         animate={{
           x: [0, 50, 0],
@@ -42,7 +48,7 @@ export default function HeroSection() {
           ease: "easeInOut",
         }}
       />
-      <motion.div 
+      <motion.div
         className="absolute bottom-1/4 -right-40 w-[400px] h-[400px] bg-devflow-green/3 rounded-full blur-[100px]"
         animate={{
           x: [0, -30, 0],
@@ -54,7 +60,7 @@ export default function HeroSection() {
           ease: "easeInOut",
         }}
       />
-      
+
       {/* Flow lines SVG */}
       <svg
         className="absolute inset-0 w-full h-full pointer-events-none"
@@ -68,8 +74,18 @@ export default function HeroSection() {
             <stop offset="100%" stopColor="rgba(186, 230, 84, 0)" />
           </linearGradient>
           <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <animate attributeName="x1" values="0%;100%;0%" dur="3s" repeatCount="indefinite" />
-            <animate attributeName="x2" values="100%;200%;100%" dur="3s" repeatCount="indefinite" />
+            <animate
+              attributeName="x1"
+              values="0%;100%;0%"
+              dur="3s"
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="x2"
+              values="100%;200%;100%"
+              dur="3s"
+              repeatCount="indefinite"
+            />
             <stop offset="0%" stopColor="rgba(186, 230, 84, 0)" />
             <stop offset="50%" stopColor="rgba(186, 230, 84, 0.8)" />
             <stop offset="100%" stopColor="rgba(186, 230, 84, 0)" />
@@ -115,8 +131,8 @@ export default function HeroSection() {
         />
       </svg>
 
-      <motion.div 
-        style={{ y: smoothY, opacity, scale }} 
+      <motion.div
+        style={{ y: smoothY, opacity, scale }}
         className="relative z-10 section-container"
       >
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -129,9 +145,9 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-devflow-dark/80 border border-devflow-green/20 mb-8 backdrop-blur-sm"
             >
-              <motion.span 
+              <motion.span
                 className="w-2 h-2 rounded-full bg-devflow-green"
-                animate={{ 
+                animate={{
                   scale: [1, 1.3, 1],
                   opacity: [1, 0.7, 1],
                 }}
@@ -156,7 +172,7 @@ export default function HeroSection() {
                 <h1 className="font-display text-display-lg lg:text-display-xl text-white text-balance">
                   We build{" "}
                   <span className="relative inline-block">
-                    <motion.span 
+                    <motion.span
                       className="relative z-10 text-devflow-green"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -167,7 +183,11 @@ export default function HeroSection() {
                     <motion.span
                       initial={{ scaleX: 0 }}
                       animate={{ scaleX: 1 }}
-                      transition={{ duration: 0.6, delay: 1, ease: [0.16, 1, 0.3, 1] }}
+                      transition={{
+                        duration: 0.6,
+                        delay: 1,
+                        ease: [0.16, 1, 0.3, 1],
+                      }}
                       className="absolute bottom-2 left-0 right-0 h-3 bg-devflow-green/10 -z-0 origin-left"
                     />
                   </span>
@@ -175,7 +195,19 @@ export default function HeroSection() {
               </LineReveal>
               <LineReveal delay={0.4}>
                 <h1 className="font-display text-display-lg lg:text-display-xl text-white text-balance">
-                  digital solutions
+                  <TypewriterText
+                    words={[
+                      "digital solutions",
+                      "AI solutions",
+                      "web experiences",
+                      "mobile apps",
+                      "ERP systems",
+                      "cloud services",
+                    ]}
+                    typingSpeed={80}
+                    deletingSpeed={40}
+                    pauseDuration={2500}
+                  />
                 </h1>
               </LineReveal>
             </div>
@@ -219,29 +251,51 @@ export default function HeroSection() {
               </Link>
             </motion.div>
 
-            {/* KPI Stats - Clear visual separation */}
+            {/* KPI Stats with Animated Counters */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1 }}
               className="mt-10 pt-8 border-t border-white/[0.06] flex flex-wrap items-center gap-6 lg:gap-10 justify-center lg:justify-start"
             >
-              {[
-                { value: "99+", label: "Performance" },
-                { value: "<1s", label: "Load Time" },
-                { value: "100%", label: "SEO Score" },
-              ].map((stat, index) => (
-                <motion.div 
-                  key={stat.label}
-                  className="flex items-center gap-2"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.1 + index * 0.1 }}
-                >
-                  <span className="text-xl font-bold text-devflow-green">{stat.value}</span>
-                  <span className="text-sm text-devflow-gray-300">{stat.label}</span>
-                </motion.div>
-              ))}
+              <motion.div
+                className="flex items-center gap-2"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.1 }}
+              >
+                <span className="text-xl font-bold text-devflow-green">
+                  <AnimatedCounter end={99} suffix="+" />
+                </span>
+                <span className="text-sm text-devflow-gray-300">
+                  Performance
+                </span>
+              </motion.div>
+
+              <motion.div
+                className="flex items-center gap-2"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.2 }}
+              >
+                <span className="text-xl font-bold text-devflow-green">
+                  &lt;
+                  <AnimatedCounter end={1} />s
+                </span>
+                <span className="text-sm text-devflow-gray-300">Load Time</span>
+              </motion.div>
+
+              <motion.div
+                className="flex items-center gap-2"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.3 }}
+              >
+                <span className="text-xl font-bold text-devflow-green">
+                  <AnimatedCounter end={100} suffix="%" />
+                </span>
+                <span className="text-sm text-devflow-gray-300">SEO Score</span>
+              </motion.div>
             </motion.div>
           </div>
 
@@ -257,7 +311,11 @@ export default function HeroSection() {
               <motion.div
                 initial={{ rotateY: -15, rotateX: 10 }}
                 animate={{ rotateY: -5, rotateX: 5 }}
-                transition={{ duration: 1.5, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                transition={{
+                  duration: 1.5,
+                  delay: 0.8,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
                 className="relative transform-style-3d"
                 whileHover={{ rotateY: 0, rotateX: 0, scale: 1.02 }}
               >
@@ -266,15 +324,15 @@ export default function HeroSection() {
                   {/* Browser bar */}
                   <div className="flex items-center gap-2 px-4 py-3 bg-devflow-dark border-b border-white/[0.06]">
                     <div className="flex gap-1.5">
-                      <motion.span 
+                      <motion.span
                         className="w-3 h-3 rounded-full bg-red-500/80"
                         whileHover={{ scale: 1.2 }}
                       />
-                      <motion.span 
+                      <motion.span
                         className="w-3 h-3 rounded-full bg-yellow-500/80"
                         whileHover={{ scale: 1.2 }}
                       />
-                      <motion.span 
+                      <motion.span
                         className="w-3 h-3 rounded-full bg-green-500/80"
                         whileHover={{ scale: 1.2 }}
                       />
@@ -287,56 +345,82 @@ export default function HeroSection() {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Mockup content */}
                   <div className="p-6 aspect-[4/3] relative">
                     {/* Grid overlay */}
                     <div className="absolute inset-0 grid-lines opacity-30" />
-                    
+
                     {/* Dashboard mockup elements */}
                     <div className="relative z-10 space-y-4">
                       <div className="flex gap-4">
                         {[1, 2, 3].map((i) => (
-                          <motion.div 
+                          <motion.div
                             key={i}
-                            className={`h-20 flex-1 rounded-lg ${i === 1 ? 'bg-devflow-green/10 border-devflow-green/20' : 'bg-devflow-dark border-white/[0.06]'} border p-3`}
+                            className={`h-20 flex-1 rounded-lg ${
+                              i === 1
+                                ? "bg-devflow-green/10 border-devflow-green/20"
+                                : "bg-devflow-dark border-white/[0.06]"
+                            } border p-3`}
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 1 + i * 0.1 }}
-                            whileHover={{ scale: 1.02, borderColor: 'rgba(186, 230, 84, 0.3)' }}
+                            whileHover={{
+                              scale: 1.02,
+                              borderColor: "rgba(186, 230, 84, 0.3)",
+                            }}
                           >
-                            <div className={`w-8 h-2 rounded ${i === 1 ? 'bg-devflow-green/30' : 'bg-devflow-gray-500'} mb-2`} />
-                            <div className={`w-16 h-4 rounded ${i === 1 ? 'bg-devflow-green/20' : 'bg-devflow-gray-600'}`} />
+                            <div
+                              className={`w-8 h-2 rounded ${
+                                i === 1
+                                  ? "bg-devflow-green/30"
+                                  : "bg-devflow-gray-500"
+                              } mb-2`}
+                            />
+                            <div
+                              className={`w-16 h-4 rounded ${
+                                i === 1
+                                  ? "bg-devflow-green/20"
+                                  : "bg-devflow-gray-600"
+                              }`}
+                            />
                           </motion.div>
                         ))}
                       </div>
-                      
+
                       {/* Chart mockup */}
-                      <motion.div 
+                      <motion.div
                         className="h-40 rounded-lg bg-devflow-dark border border-white/[0.06] p-4 overflow-hidden"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1.3 }}
                       >
                         <div className="flex items-center gap-3 mb-2">
-                          <span className="text-xs text-devflow-gray-400">Performance</span>
+                          <span className="text-xs text-devflow-gray-400">
+                            Performance
+                          </span>
                         </div>
                         <div className="flex items-end gap-1 h-[calc(100%-24px)]">
-                          {[40, 65, 45, 80, 55, 90, 70, 85, 60, 75, 95, 80].map((h, i) => (
-                            <motion.div
-                              key={i}
-                              initial={{ scaleY: 0 }}
-                              animate={{ scaleY: 1 }}
-                              transition={{ duration: 0.5, delay: 1.4 + i * 0.05 }}
-                              className="flex-1 rounded-t origin-bottom bg-devflow-green/40"
-                              style={{
-                                height: `${h}%`,
-                              }}
-                            />
-                          ))}
+                          {[40, 65, 45, 80, 55, 90, 70, 85, 60, 75, 95, 80].map(
+                            (h, i) => (
+                              <motion.div
+                                key={i}
+                                initial={{ scaleY: 0 }}
+                                animate={{ scaleY: 1 }}
+                                transition={{
+                                  duration: 0.5,
+                                  delay: 1.4 + i * 0.05,
+                                }}
+                                className="flex-1 rounded-t origin-bottom bg-devflow-green/40"
+                                style={{
+                                  height: `${h}%`,
+                                }}
+                              />
+                            )
+                          )}
                         </div>
                       </motion.div>
-                      
+
                       {/* List items */}
                       <div className="space-y-2">
                         {[1, 2, 3].map((i) => (
@@ -346,12 +430,19 @@ export default function HeroSection() {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 1.8 + i * 0.1 }}
-                            whileHover={{ x: 4, borderColor: 'rgba(186, 230, 84, 0.2)' }}
+                            whileHover={{
+                              x: 4,
+                              borderColor: "rgba(186, 230, 84, 0.2)",
+                            }}
                           >
-                            <motion.div 
+                            <motion.div
                               className="w-2 h-2 rounded-full bg-devflow-green"
                               animate={{ scale: [1, 1.2, 1] }}
-                              transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
+                              transition={{
+                                duration: 2,
+                                repeat: Infinity,
+                                delay: i * 0.2,
+                              }}
                             />
                             <div className="flex-1 h-2 rounded bg-devflow-gray-600" />
                             <div className="w-12 h-2 rounded bg-devflow-gray-500" />
@@ -372,13 +463,25 @@ export default function HeroSection() {
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-8 h-8 rounded-lg bg-devflow-green/20 flex items-center justify-center">
-                      <svg className="w-4 h-4 text-devflow-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                      <svg
+                        className="w-4 h-4 text-devflow-green"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                        />
                       </svg>
                     </div>
-                    <span className="text-sm font-medium text-white">Performance</span>
+                    <span className="text-sm font-medium text-white">
+                      Performance
+                    </span>
                   </div>
-                  <motion.div 
+                  <motion.div
                     className="text-2xl font-bold text-devflow-green"
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -386,7 +489,9 @@ export default function HeroSection() {
                   >
                     99.9%
                   </motion.div>
-                  <div className="text-xs text-devflow-gray-400">Uptime Score</div>
+                  <div className="text-xs text-devflow-gray-400">
+                    Uptime Score
+                  </div>
                 </motion.div>
 
                 <motion.div
@@ -397,14 +502,14 @@ export default function HeroSection() {
                   className="absolute -left-6 bottom-1/4 w-44 p-4 rounded-xl bg-devflow-charcoal/90 backdrop-blur-xl border border-devflow-green/20 shadow-xl cursor-default"
                 >
                   <div className="flex items-center gap-2 mb-2">
-                    <motion.span 
+                    <motion.span
                       className="w-2 h-2 rounded-full bg-devflow-green"
                       animate={{ opacity: [1, 0.5, 1] }}
                       transition={{ duration: 1, repeat: Infinity }}
                     />
                     <span className="text-xs text-devflow-gray-300">Live</span>
                   </div>
-                  <motion.div 
+                  <motion.div
                     className="text-lg font-bold text-white"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -412,7 +517,9 @@ export default function HeroSection() {
                   >
                     12ms
                   </motion.div>
-                  <div className="text-xs text-devflow-gray-400">Response Time</div>
+                  <div className="text-xs text-devflow-gray-400">
+                    Response Time
+                  </div>
                 </motion.div>
               </motion.div>
             </div>
