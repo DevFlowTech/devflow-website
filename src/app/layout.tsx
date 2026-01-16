@@ -3,12 +3,8 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import StructuredData from "@/components/SEO/StructuredData";
-import CustomCursor from "@/components/ui/CustomCursor";
-import ScrollProgress from "@/components/ui/ScrollProgress";
 import BackToTop from "@/components/ui/BackToTop";
-import PageLoader from "@/components/ui/PageLoader";
-import AIChatbot from "@/components/ui/AIChatbot";
-import ProjectEstimator from "@/components/ui/ProjectEstimator";
+import CustomCursor from "@/components/ui/CustomCursor";
 
 // Base URL for the site
 const siteUrl = "https://devflow.co.in";
@@ -237,13 +233,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        {/* Page Loader */}
-        <PageLoader />
-
-        {/* Scroll Progress Indicator */}
-        <ScrollProgress />
-
-        {/* Custom Cursor for premium interactions */}
+        {/* Custom Cursor */}
         <CustomCursor />
 
         {/* Structured Data for SEO */}
@@ -256,9 +246,6 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-
-        {/* Noise overlay for texture */}
-        <div className="noise-overlay" aria-hidden="true" />
 
         {/* Navigation */}
         <Navbar />
@@ -273,12 +260,6 @@ export default function RootLayout({
 
         {/* Back to Top Button */}
         <BackToTop />
-
-        {/* AI Chatbot */}
-        <AIChatbot />
-
-        {/* Project Estimator */}
-        <ProjectEstimator />
       </body>
     </html>
   );
