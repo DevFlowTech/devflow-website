@@ -8,6 +8,10 @@ import RiskReversalSection from "@/components/sections/RiskReversalSection";
 import FounderSection from "@/components/sections/FounderSection";
 import ContactSection from "@/components/sections/ContactSection";
 import TechStackSection from "@/components/sections/TechStackSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import ProjectShowcase from "@/components/sections/ProjectShowcase";
+import StatsBar from "@/components/sections/StatsBar";
+import FAQSection from "@/components/sections/FAQSection";
 import ParallaxText from "@/components/ui/ParallaxText";
 import { CurveDivider } from "@/components/ui/WaveDivider";
 
@@ -21,6 +25,9 @@ export default function Home() {
     <>
       {/* Hero - Clear value proposition */}
       <HeroSection />
+
+      {/* Stats Bar - Impressive numbers */}
+      <StatsBar />
 
       {/* Tech Stack Marquee - Social Proof via Technology */}
       <TechStackSection />
@@ -58,6 +65,12 @@ export default function Home() {
         <ParallaxText baseVelocity={150}>CODE • DESIGN • DEPLOY •</ParallaxText>
       </div>
 
+      {/* Project Showcase - Portfolio Gallery */}
+      <ProjectShowcase />
+
+      {/* Testimonials - Client Success Stories */}
+      <TestimonialsSection />
+
       {/* Case Study - Proof with real outcomes */}
       <CaseStudySection />
 
@@ -72,6 +85,9 @@ export default function Home() {
 
       {/* Founder Message - Human element */}
       <FounderSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* Elegant Divider */}
       <SectionDivider />

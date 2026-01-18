@@ -476,21 +476,28 @@ h6 {
    PREMIUM ANIMATIONS & EFFECTS
    ======================================== */
 
-/* Hide default cursor on desktop */
-@media (hover: hover) {
-  body {
-    cursor: none;
-  }
+/* Force default cursor - override any hidden cursor styles */
+* {
+  cursor: auto !important;
+}
 
-  a,
-  button,
-  [role="button"],
-  input,
-  textarea,
-  select,
-  [data-cursor] {
-    cursor: none;
-  }
+body {
+  cursor: auto !important;
+}
+
+a,
+button,
+[role="button"],
+input,
+textarea,
+select {
+  cursor: pointer !important;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  cursor: text !important;
 }
 
 /* Smooth page transitions */
@@ -512,8 +519,81 @@ html.is-animating {
   }
 }
 
+/* Slow float animation for gradient backgrounds */
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(50px, 50px) scale(1.1);
+  }
+}
+
+@keyframes float-reverse {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50px, -50px) scale(0.95);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 20s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 25s ease-in-out infinite;
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+/* Gentle float for code symbols */
+@keyframes float-gentle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes float-gentle-reverse {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 8s ease-in-out infinite;
+}
+
+.animate-float-gentle-reverse {
+  animation: float-gentle-reverse 10s ease-in-out infinite;
+}
+
+/* Slow pulse for glows */
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
 }
 
 /* Subtle pulse animation */

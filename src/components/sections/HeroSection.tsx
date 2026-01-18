@@ -15,6 +15,7 @@ import FloatingElements from "@/components/ui/FloatingElements";
 import Typewriter from "@/components/ui/Typewriter";
 import AnimatedGradientBackground from "@/components/ui/AnimatedGradientBackground";
 import InteractiveGrid from "@/components/ui/InteractiveGrid";
+import HeroMockup from "@/components/ui/HeroMockup";
 
 const trustSignals = [
   { text: "Engineering-first approach" },
@@ -139,9 +140,10 @@ export default function HeroSection() {
             <p className="text-sm font-medium text-devflow-gray-400 uppercase tracking-widest">
               Trusted by Innovative Companies
             </p>
-            {/* We will let existing ClientSection handle the logos below this section, 
-                or we can integrate a small preview here. For now, just the label. */}
           </motion.div>
+
+          {/* Hero Mockup - Laptop Visual */}
+          <HeroMockup />
         </motion.div>
       </div>
     </section>

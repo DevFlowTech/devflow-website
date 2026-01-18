@@ -4,10 +4,10 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import StructuredData from "@/components/SEO/StructuredData";
 import BackToTop from "@/components/ui/BackToTop";
-import CustomCursor from "@/components/ui/CustomCursor";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import MouseGlow from "@/components/ui/MouseGlow";
 import StickyDotNav from "@/components/ui/StickyDotNav";
+import FloatingContact from "@/components/ui/FloatingContact";
 
 // Base URL for the site
 const siteUrl = "https://devflow.co.in";
@@ -236,9 +236,6 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        {/* Custom Cursor */}
-        <CustomCursor />
-
         {/* Scroll Progress Bar */}
         <ScrollProgress />
 
@@ -273,8 +270,8 @@ export default function RootLayout({
         {/* Back to Top Button */}
         <BackToTop />
 
-        {/* Subtle Noise Texture Overlay */}
-        <div className="noise-overlay" aria-hidden="true" />
+        {/* Floating Contact Button */}
+        <FloatingContact />
       </body>
     </html>
   );
