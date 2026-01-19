@@ -11,11 +11,11 @@ export default function FloatingElements() {
       <div className="absolute bottom-32 left-[5%] w-80 h-80 bg-devflow-green/5 rounded-full blur-2xl animate-float-reverse will-change-transform" />
 
       {/* Floating code symbols with CSS animation */}
-      <div className="absolute top-[15%] left-[8%] text-devflow-green/15 text-6xl font-mono select-none animate-float-gentle will-change-transform">
+      <div className="absolute top-[15%] left-[8%] text-devflow-green/5 md:text-devflow-green/15 text-6xl font-mono select-none animate-float-gentle will-change-transform">
         {"</>"}
       </div>
 
-      <div className="absolute bottom-[25%] right-[12%] text-devflow-green/10 text-5xl font-mono select-none animate-float-gentle-reverse will-change-transform">
+      <div className="absolute bottom-[25%] right-[12%] text-devflow-green/5 md:text-devflow-green/10 text-5xl font-mono select-none animate-float-gentle-reverse will-change-transform">
         {"{ }"}
       </div>
 
