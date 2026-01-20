@@ -143,13 +143,13 @@ export const metadata: Metadata = {
         alt: "DevFlow Technology - AI Agency & Web Development Company India",
         type: "image/png",
       },
-      {
-        url: `${siteUrl}/og-image-square.png`,
-        width: 600,
-        height: 600,
-        alt: "DevFlow Technology Logo",
-        type: "image/png",
-      },
+      // {
+      //   url: `${siteUrl}/og-image-square.png`,
+      //   width: 600,
+      //   height: 600,
+      //   alt: "DevFlow Technology Logo",
+      //   type: "image/png",
+      // },
     ],
   },
 
@@ -184,9 +184,9 @@ export const metadata: Metadata = {
 
   // Icons - for PWA and browsers
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 
   // Manifest for PWA support
