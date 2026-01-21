@@ -5,14 +5,11 @@ import { useRef, useEffect, useState } from "react";
 
 // Placeholder client logos - replace with actual client logos
 const clients = [
-  { name: "TechVentures", id: 1 },
-  { name: "Innovate Labs", id: 2 },
-  { name: "CloudScale", id: 3 },
-  { name: "DataFlow", id: 4 },
-  { name: "NextGen AI", id: 5 },
-  { name: "Quantum", id: 6 },
-  { name: "Apex Digital", id: 7 },
-  { name: "FutureTech", id: 8 },
+  { name: "Pixsignerz", id: 1 },
+  { name: "Future Realty Space", id: 2 },
+  { name: "Aureon", id: 3 },
+  { name: "Vassu Infotech", id: 4 },
+  { name: "Narmada Sales", id: 5 },
 ];
 
 function LogoPlaceholder({ name }: { name: string }) {

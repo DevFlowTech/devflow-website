@@ -6,39 +6,64 @@ import { staggerContainer, staggerItem, viewportOnce } from "@/lib/motion";
 
 const projects = [
   {
-    title: "Gateway App",
-    category: "Web Application",
+    title: "Pixsignerz Portal",
+    category: "Enterprise Solutions",
     description:
-      "Secure payment gateway integration with real-time transaction processing and analytics dashboard",
+      "Secure digital enterprise portal for Aureon, streamlining internal workflows and document management.",
     tech: ["React", "Node.js", "PostgreSQL"],
     color: "from-devflow-green/20 to-devflow-green/5",
     accent: "devflow-green",
+    url: "https://pixsignerz.aureon.co.in",
   },
   {
-    title: "Data Scraper",
-    category: "Automation Tool",
+    title: "Future Realty Space",
+    category: "Real Estate",
     description:
-      "Automated web scraping solution for business intelligence and lead generation",
-    tech: ["Python", "Tauri", "React"],
+      "Modern property brokerage platform enabling seamless property discovery and client management.",
+    tech: ["Next.js", "Tailwind", "MongoDB"],
     color: "from-blue-500/20 to-blue-500/5",
     accent: "blue-500",
+    url: "https://futurerealtyspace.com",
   },
   {
-    title: "Bulk Email Sender",
-    category: "Internal Tool",
+    title: "Aureon India",
+    category: "Corporate Tech",
     description:
-      "High-volume email campaign tool with template management and delivery tracking",
-    tech: ["Node.js", "React", "AWS SES"],
+      "Professional corporate presence for a leading IT and managed services provider.",
+    tech: ["React", "TypeScript", "Framer Motion"],
     color: "from-purple-500/20 to-purple-500/5",
     accent: "purple-500",
+    url: "https://aureon.co.in",
+  },
+  {
+    title: "Vassu Infotech",
+    category: "IT Services",
+    description:
+      "Comprehensive IT services and hardware solutions platform with e-commerce integration.",
+    tech: ["Next.js", "Stripe", "PostgreSQL"],
+    color: "from-indigo-500/20 to-indigo-500/5",
+    accent: "indigo-500",
+    url: "https://vassuinfotech.com",
+  },
+  {
+    title: "Narmada Sales",
+    category: "Web Application",
+    description:
+      "Full-stack real estate management system optimizing property tracking and sales operations.",
+    tech: ["PHP", "MySQL", "JavaScript"],
+    color: "from-orange-500/20 to-orange-500/5",
+    accent: "orange-500",
+    url: "https://narmadasales.pages.dev",
   },
 ];
 
 const categories = [
   "All",
+  "Enterprise Solutions",
+  "Real Estate",
+  "Corporate Tech",
+  "IT Services",
   "Web Application",
-  "Automation Tool",
-  "Internal Tool",
 ];
 
 export default function ProjectShowcase() {
@@ -110,16 +135,58 @@ export default function ProjectShowcase() {
                 className={`absolute inset-0 bg-gradient-to-br ${project.color} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
               />
 
-              <div className="relative p-6 bg-devflow-charcoal border border-white/5 rounded-2xl hover:border-white/10 transition-all duration-300 h-full">
-                {/* Project Preview Placeholder */}
-                <div
-                  className={`h-40 rounded-xl bg-gradient-to-br ${project.color} border border-white/5 mb-5 flex items-center justify-center overflow-hidden`}
-                >
-                  <div className="text-4xl opacity-30">{"</>"}</div>
+              <div className="relative p-6 bg-devflow-charcoal border border-white/5 rounded-2xl hover:border-white/10 transition-all duration-300 h-full flex flex-col">
+                {/* Project Browser Frame URL Preview */}
+                <div className="relative h-48 w-full rounded-xl bg-gray-900 border border-white/10 overflow-hidden mb-5 group-hover:border-devflow-green/30 transition-colors">
+                  {/* Browser Bar */}
+                  <div className="absolute top-0 left-0 right-0 h-6 bg-gray-800 flex items-center px-3 gap-1.5 z-10 border-b border-white/5">
+                    <div className="w-2 h-2 rounded-full bg-[#ff5f56]" />
+                    <div className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
+                    <div className="w-2 h-2 rounded-full bg-[#27c93f]" />
+                    <div className="ml-2 w-full max-w-[120px] h-3 bg-gray-700/50 rounded-full text-[8px] text-gray-400 flex items-center px-2 truncate">
+                      {project.url}
+                    </div>
+                  </div>
+
+                  {/* Iframe Preview - Scaled to fit */}
+                  <div className="w-full h-full pt-6 bg-white">
+                    <iframe
+                      src={project.url}
+                      title={project.title}
+                      className="w-[200%] h-[200%] origin-top-left scale-50 pointer-events-none select-none"
+                      loading="lazy"
+                      scrolling="no"
+                    />
+                  </div>
+
+                  {/* Hover Overlay with Button */}
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20 backdrop-blur-[2px]">
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-devflow-green text-devflow-black font-semibold rounded-full transform scale-90 hover:scale-100 transition-transform duration-200 flex items-center gap-2"
+                    >
+                      <span>View Live Site</span>
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
 
                 {/* Category Badge */}
-                <span className="inline-block px-3 py-1 bg-white/5 rounded-full text-xs text-devflow-gray-400 mb-3">
+                <span className="inline-block px-3 py-1 bg-white/5 rounded-full text-xs text-devflow-gray-400 mb-3 w-fit">
                   {project.category}
                 </span>
 
@@ -127,12 +194,12 @@ export default function ProjectShowcase() {
                   {project.title}
                 </h3>
 
-                <p className="text-devflow-gray-400 text-sm mb-4 leading-relaxed">
+                <p className="text-devflow-gray-400 text-sm mb-4 leading-relaxed flex-grow">
                   {project.description}
                 </p>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mt-auto">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}

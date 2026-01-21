@@ -5,28 +5,44 @@ import { useRef } from "react";
 
 const workShowcase = [
   {
-    id: "gateway",
-    title: "Enterprise Gateway Application",
-    category: "Financial Services",
+    id: "pixsignerz",
+    title: "Pixsignerz Portal",
+    category: "Enterprise Solutions",
     description:
-      "Secure payment processing system handling real-time transactions with enterprise-grade reliability and compliance",
-    metrics: { performance: "99", accessibility: "100", seo: "98" },
+      "Secure digital enterprise portal for Aureon, streamlining internal workflows and document management.",
+    metrics: { performance: "98", accessibility: "100", seo: "95" },
   },
   {
-    id: "dashboard",
-    title: "Operations Dashboard",
-    category: "Business Intelligence",
+    id: "futurerealty",
+    title: "Future Realty Space",
+    category: "Real Estate",
     description:
-      "Real-time analytics platform providing actionable insights across multiple data sources",
-    metrics: { performance: "97", accessibility: "98", seo: "100" },
+      "Modern property brokerage platform enabling seamless property discovery and client management.",
+    metrics: { performance: "99", accessibility: "98", seo: "100" },
   },
   {
-    id: "webapp",
-    title: "Client Management System",
+    id: "aureon",
+    title: "Aureon India",
+    category: "Corporate Tech",
+    description:
+      "Professional corporate presence for a leading IT and managed services provider.",
+    metrics: { performance: "97", accessibility: "99", seo: "98" },
+  },
+  {
+    id: "vassu",
+    title: "Vassu Infotech",
+    category: "IT Services",
+    description:
+      "Comprehensive IT services and hardware solutions platform with e-commerce integration.",
+    metrics: { performance: "96", accessibility: "98", seo: "94" },
+  },
+  {
+    id: "narmada",
+    title: "Narmada Sales",
     category: "Web Application",
     description:
-      "End-to-end workflow management with role-based access and automated reporting",
-    metrics: { performance: "98", accessibility: "100", seo: "95" },
+      "Full-stack real estate management system optimizing property tracking and sales operations.",
+    metrics: { performance: "98", accessibility: "97", seo: "96" },
   },
 ];
 

@@ -7,34 +7,42 @@ import { staggerContainer, staggerItem, viewportOnce } from "@/lib/motion";
 const testimonials = [
   {
     quote:
-      "DevFlow transformed our operations with a custom dashboard that saved us 20+ hours per week. Their engineering-first approach really shows in the quality of their work.",
-    author: "Rahul Sharma",
-    role: "Founder",
-    company: "TechVentures",
+      "The team delivered a robust enterprise portal that perfectly tailored to our specific operational needs. Highly recommended.",
+    author: "Project Manager",
+    role: "IT Operations",
+    company: "Pixsignerz (Aureon)",
     rating: 5,
   },
   {
     quote:
-      "Finally, a development team that actually listens and delivers. Our e-commerce platform handles 10x the traffic now with zero downtime.",
-    author: "Priya Patel",
-    role: "CTO",
-    company: "CloudScale",
+      "Our online presence has transformed completely. We are seeing more inquiries and better client engagement with the new site.",
+    author: "Rakesh Patel",
+    role: "Director",
+    company: "Future Realty Space",
     rating: 5,
   },
   {
     quote:
-      "The internal tools they built for us completely changed how our team operates. Fast, reliable, and exactly what we needed.",
-    author: "Amit Kumar",
+      "Professional execution and great attention to detail. The website truly reflects our corporate identity and service standards.",
+    author: "Amit Shah",
     role: "Operations Head",
-    company: "DataFlow Solutions",
+    company: "Aureon India",
     rating: 5,
   },
   {
     quote:
-      "Professional, punctual, and incredibly skilled. DevFlow delivered our MVP in record time without compromising on quality.",
-    author: "Neha Gupta",
-    role: "Product Manager",
-    company: "NextGen AI",
+      "An excellent partner for our digital needs. The platform manages our diverse service offerings perfectly.",
+    author: "Vassu Team",
+    role: "Management",
+    company: "Vassu Infotech",
+    rating: 5,
+  },
+  {
+    quote:
+      "The real estate management system they built has streamlined our property tracking and sales processes significantly.",
+    author: "Sales Director",
+    role: "Head of Sales",
+    company: "Narmada Sales",
     rating: 5,
   },
 ];
