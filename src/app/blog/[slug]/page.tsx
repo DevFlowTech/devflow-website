@@ -124,6 +124,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               src={post.image}
               alt={post.title}
               fill
+              sizes="(max-width: 1200px) 100vw, 1200px"
               className="object-cover"
               priority
             />
@@ -251,6 +252,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       src={relatedPost.image}
                       alt={relatedPost.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-devflow-black/20 group-hover:bg-transparent transition-colors duration-300" />

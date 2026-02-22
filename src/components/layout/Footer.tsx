@@ -97,10 +97,11 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex items-center gap-3">
               <a
-                href="https://github.com"
+                href="https://github.com/devflowtechnology"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-white/[0.03] border border-white/[0.06] flex items-center justify-center text-devflow-gray-500 transition-all duration-150 hover:text-white hover:border-white/10"
+                aria-label="Follow us on GitHub"
               >
                 <svg
                   className="w-4 h-4"
@@ -115,10 +116,11 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/company/devflowtechnology"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-white/[0.03] border border-white/[0.06] flex items-center justify-center text-devflow-gray-500 transition-all duration-150 hover:text-white hover:border-white/10"
+                aria-label="Connect with us on LinkedIn"
               >
                 <svg
                   className="w-4 h-4"
@@ -129,10 +131,11 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://twitter.com"
+                href="https://twitter.com/devflowtech"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-white/[0.03] border border-white/[0.06] flex items-center justify-center text-devflow-gray-500 transition-all duration-150 hover:text-white hover:border-white/10"
+                aria-label="Follow us on X (Twitter)"
               >
                 <svg
                   className="w-4 h-4"

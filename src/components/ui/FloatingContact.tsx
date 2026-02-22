@@ -63,6 +63,9 @@ export default function FloatingContact() {
       {/* Main Button */}
       <motion.button
         onClick={() => setIsExpanded(!isExpanded)}
+        aria-label={
+          isExpanded ? "Close contact options" : "Open contact options"
+        }
         className={`w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
           isExpanded
             ? "bg-devflow-gray-500 rotate-45"

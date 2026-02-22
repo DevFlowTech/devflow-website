@@ -65,9 +65,10 @@ export default function StickyDotNav() {
         <motion.button
           key={section.id}
           onClick={() => scrollToSection(section.id)}
-          className="relative group flex items-center"
+          className="relative group p-2 flex items-center justify-center -m-2"
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
+          aria-label={`Scroll to ${section.label} section`}
         >
           {/* Tooltip */}
           <motion.span

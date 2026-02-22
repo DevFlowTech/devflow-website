@@ -70,6 +70,7 @@ export default function BlogPage() {
                     src={featuredPost.image}
                     alt={featuredPost.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     priority
                   />

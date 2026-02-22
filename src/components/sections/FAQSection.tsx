@@ -77,6 +77,8 @@ export default function FAQSection() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                aria-expanded={openIndex === index}
+                aria-controls={`faq-answer-${index}`}
                 className={`w-full text-left p-6 rounded-2xl border transition-all duration-300 ${
                   openIndex === index
                     ? "bg-devflow-charcoal border-devflow-green/20"
@@ -98,6 +100,7 @@ export default function FAQSection() {
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                       strokeWidth={2}
+                      aria-hidden="true"
                     >
                       <path
                         strokeLinecap="round"
@@ -111,6 +114,7 @@ export default function FAQSection() {
                 <AnimatePresence>
                   {openIndex === index && (
                     <motion.div
+                      id={`faq-answer-${index}`}
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}

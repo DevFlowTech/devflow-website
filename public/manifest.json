@@ -1,7 +1,7 @@
 {
-  "name": "DevFlow Technology",
+  "name": "DevFlow Technology - AI Agency & Web Development",
   "short_name": "DevFlow",
-  "description": "We build custom internal tools and operational software for scaling startups.",
+  "description": "Leading AI agency & web development company in India building custom ERP, AI tools, and operational software.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a0a",
@@ -9,8 +9,14 @@
   "icons": [
     {
       "src": "/favicon.ico",
-      "sizes": "48x48",
+      "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
