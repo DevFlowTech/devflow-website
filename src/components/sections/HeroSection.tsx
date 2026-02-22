@@ -66,7 +66,6 @@ export default function HeroSection() {
               Engineering-First IT Partner
             </span>
           </motion.div>
-
           {/* Headline */}
           <motion.h1
             variants={staggerItem}
@@ -88,7 +87,6 @@ export default function HeroSection() {
               />
             </span>
           </motion.h1>
-
           {/* Subheadline */}
           <motion.p
             variants={staggerItem}
@@ -99,7 +97,6 @@ export default function HeroSection() {
             <span className="text-white font-medium">AI Solutions</span>, we
             scale effective digital products that drive business growth.
           </motion.p>
-
           {/* CTAs */}
           <motion.div
             variants={staggerItem}
@@ -131,7 +128,6 @@ export default function HeroSection() {
               </Link>
             </MagneticButton>
           </motion.div>
-
           {/* Trust Strip */}
           <motion.div
             variants={staggerItem}
@@ -141,7 +137,6 @@ export default function HeroSection() {
               Trusted by Innovative Companies
             </p>
           </motion.div>
-
           {/* Hero Mockup - Laptop Visual */}
           <HeroMockup />
         </motion.div>

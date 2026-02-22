@@ -8,6 +8,8 @@ import {
   viewportOnce,
   arrowSlide,
 } from "@/lib/motion";
+import MagneticButton from "@/components/ui/MagneticButton";
+import { HiArrowRight } from "react-icons/hi2";
 
 const options = [
   {
@@ -114,32 +116,18 @@ export default function RiskReversalSection() {
               <p className="text-devflow-gray-400 mb-8 leading-relaxed">
                 {option.description}
               </p>
-              <motion.div initial="rest" whileHover="hover" animate="rest">
+              <MagneticButton>
                 <Link
                   href={option.href}
-                  className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-150 ${
-                    option.highlighted
-                      ? "bg-devflow-green text-devflow-black hover:bg-devflow-green/90"
-                      : "bg-white/[0.03] text-white border border-white/10 hover:bg-white/[0.06]"
-                  }`}
+                  className={`
+                    group flex items-center justify-center gap-2 w-full h-12 rounded-xl font-medium transition-all duration-300
+                    ${option.highlighted ? "btn-primary" : "btn-secondary"}
+                  `}
                 >
                   {option.cta}
-                  <motion.svg
-                    variants={arrowSlide}
-                    className="w-4 h-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </motion.svg>
+                  <HiArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
-              </motion.div>
+              </MagneticButton>
             </motion.div>
           ))}
         </motion.div>

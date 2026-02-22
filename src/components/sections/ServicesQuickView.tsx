@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { staggerContainer, staggerItem, viewportOnce } from "@/lib/motion";
 import GlowCard from "@/components/ui/GlowCard";
+import MagneticButton from "@/components/ui/MagneticButton";
 
 const services = [
   {
@@ -55,27 +56,11 @@ export default function ServicesQuickView() {
                 <span className="text-devflow-gray-500">IT Solutions</span>
               </h3>
             </div>
-            <Link
-              href="#services"
-              className="group inline-flex items-center gap-2 text-sm font-medium text-white transition-colors duration-200"
-            >
-              View all services
-              <span className="block w-4 h-4 rounded-full border border-white/30 flex items-center justify-center group-hover:border-devflow-green group-hover:bg-devflow-green transition-all duration-200">
-                <svg
-                  className="w-2.5 h-2.5 text-transparent group-hover:text-devflow-black transition-colors duration-200"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={3}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </span>
-            </Link>
+            <MagneticButton className="md:self-end">
+              <Link href="#services" className="btn-secondary">
+                View all services
+              </Link>
+            </MagneticButton>
           </motion.div>
 
           {/* Services Grid */}

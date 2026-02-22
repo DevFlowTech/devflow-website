@@ -1,3 +1,4 @@
+import { Poppins, JetBrains_Mono } from "next/font/google";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
@@ -8,6 +9,21 @@ import ScrollProgress from "@/components/ui/ScrollProgress";
 import MouseGlow from "@/components/ui/MouseGlow";
 import StickyDotNav from "@/components/ui/StickyDotNav";
 import FloatingContact from "@/components/ui/FloatingContact";
+
+// Optimize fonts using next/font
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-poppins",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-jetbrains",
+  display: "swap",
+});
 
 // Base URL for the site
 const siteUrl = "https://devflow.co.in";
@@ -217,28 +233,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html
+      lang="en"
+      className={`scroll-smooth ${poppins.variable} ${jetbrainsMono.variable}`}
+    >
       <head>
-        {/* Preconnect to external domains for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-
         {/* DNS prefetch for potential external resources */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-
-        {/* Preload critical fonts */}
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-          as="style"
-        />
       </head>
-      <body className="antialiased">
+      <body className={`${poppins.className} antialiased`}>
         {/* Scroll Progress Bar */}
         <ScrollProgress />
 

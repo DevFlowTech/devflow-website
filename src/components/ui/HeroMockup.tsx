@@ -105,11 +105,18 @@ export default function HeroMockup() {
       </div>
 
       {/* Floating Elements - static positioning, CSS hover effect */}
-      <div className="absolute -top-4 -right-4 w-14 h-14 bg-devflow-charcoal/80 backdrop-blur-sm rounded-xl border border-devflow-green/20 flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+      <div
+        className="absolute -top-4 -right-4 w-14 h-14 bg-devflow-charcoal/80 backdrop-blur-sm rounded-xl border border-devflow-green/20 flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300"
+        role="img"
+        aria-label="Speed and Power"
+      >
         <span className="text-2xl">⚡</span>
       </div>
-
-      <div className="absolute -bottom-2 -left-4 w-12 h-12 bg-devflow-charcoal/80 backdrop-blur-sm rounded-xl border border-purple-500/20 flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+      <div
+        className="absolute -bottom-2 -left-4 w-12 h-12 bg-devflow-charcoal/80 backdrop-blur-sm rounded-xl border border-purple-500/20 flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300"
+        role="img"
+        aria-label="Launch and Scale"
+      >
         <span className="text-xl">🚀</span>
       </div>
     </motion.div>

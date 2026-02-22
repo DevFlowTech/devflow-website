@@ -1,12 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
-
 @import "tailwindcss";
 
 :root {
   /* Mapping everything to Poppins as requested */
-  --font-inter: "Poppins", system-ui, sans-serif;
-  --font-outfit: "Poppins", system-ui, sans-serif;
-  --font-jetbrains: "JetBrains Mono", monospace;
+  --font-inter: var(--font-poppins), system-ui, sans-serif;
+  --font-outfit: var(--font-poppins), system-ui, sans-serif;
+  --font-jetbrains: var(--font-jetbrains), monospace;
 
   /* Custom properties for dynamic theming */
   --green-pulse: #bae654;
@@ -24,8 +22,9 @@
   --devflow-green: #bae654;
   --devflow-gray-100: #e5e5e5;
   --devflow-gray-200: #b3b3b3;
-  --devflow-gray-300: #808080;
-  --devflow-gray-400: #4d4d4d;
+  /* Brightened slightly for better WCAG contrast */
+  --devflow-gray-300: #a3a3a3;
+  --devflow-gray-400: #737373;
   --devflow-gray-500: #2d2d2d;
   --devflow-gray-600: #1f1f1f;
 }

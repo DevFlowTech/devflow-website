@@ -162,15 +162,20 @@ export default function ProjectShowcase() {
                     </div>
                   </div>
 
-                  {/* Iframe Preview - Scaled to fit */}
-                  <div className="w-full h-full pt-6 bg-white">
-                    <iframe
-                      src={project.url}
-                      title={project.title}
-                      className="w-[200%] h-[200%] origin-top-left scale-50 pointer-events-none select-none"
-                      loading="lazy"
-                      scrolling="no"
-                    />
+                  {/* Optimized Preview Placeholder (Replaced heavy iframes) */}
+                  <div
+                    className={`w-full h-full pt-6 bg-gradient-to-br ${project.color} flex items-center justify-center`}
+                  >
+                    <div className="flex flex-col items-center gap-3 opacity-40">
+                      <div className="w-12 h-12 rounded-full border-2 border-current flex items-center justify-center">
+                        <span className="text-2xl">
+                          {project.title.charAt(0)}
+                        </span>
+                      </div>
+                      <span className="text-[10px] font-mono uppercase tracking-widest">
+                        Preview Securely Hosted
+                      </span>
+                    </div>
                   </div>
 
                   {/* Hover Overlay with Button */}

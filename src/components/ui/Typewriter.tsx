@@ -19,7 +19,7 @@ export default function Typewriter({
   delayBetweenWords = 2000,
 }: TypewriterProps) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [currentText, setCurrentText] = useState("");
+  const [currentText, setCurrentText] = useState(words[0]);
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
