@@ -7,19 +7,12 @@ import ReCaptcha from "@/components/ui/ReCaptcha";
 
 // ─── Data ──────────────────────────────────────────────────────────────────
 const services = [
-  { label: "AI Automation", icon: "🤖", desc: "Smart workflows & agents" },
-  { label: "Web Development", icon: "🌐", desc: "Sites & web apps" },
-  { label: "Mobile App", icon: "📱", desc: "iOS & Android" },
-  { label: "UI/UX Design", icon: "🎨", desc: "Interfaces & experiences" },
-  { label: "Custom ERP", icon: "⚙️", desc: "Enterprise systems" },
-  { label: "Other", icon: "💡", desc: "Something else" },
-];
-
-const budgets = [
-  { label: "Under ₹1L", icon: "🚀", desc: "Quick start" },
-  { label: "₹1L - ₹5L", icon: "📈", desc: "Growing" },
-  { label: "₹5L - ₹10L", icon: "🔥", desc: "Serious" },
-  { label: "₹10L+", icon: "💎", desc: "Enterprise" },
+  { label: "AI Automation", desc: "Smart workflows & agents" },
+  { label: "Web Development", desc: "Sites & web apps" },
+  { label: "Mobile App", desc: "iOS & Android" },
+  { label: "UI/UX Design", desc: "Interfaces & experiences" },
+  { label: "Custom ERP", desc: "Enterprise systems" },
+  { label: "Other", desc: "Something else" },
 ];
 
 // ─── Floating Label Input ──────────────────────────────────────────────────
@@ -32,6 +25,7 @@ function FloatingInput({
   required = false,
   multiline = false,
   rows = 3,
+  placeholder = "",
 }: {
   id: string;
   label: string;
@@ -41,6 +35,7 @@ function FloatingInput({
   required?: boolean;
   multiline?: boolean;
   rows?: number;
+  placeholder?: string;
 }) {
   const [focused, setFocused] = useState(false);
   const active = focused || value.length > 0;
@@ -62,8 +57,8 @@ function FloatingInput({
         }
         onFocus={() => setFocused(true)}
         onBlur={() => setFocused(false)}
-        rows={multiline ? rows : undefined}
-        className={`
+        rows={multiline ? rows : undefined}          placeholder={focused ? placeholder : ""}
+          className={`
           w-full px-4 ${multiline ? "pt-9 pb-3" : "pt-6 pb-2.5"}
           bg-transparent text-white text-base rounded-xl outline-none
           border border-white/[0.08]
@@ -134,7 +129,7 @@ function GridSelector({
   onChange,
 }: {
   label: string;
-  options: { label: string; icon: string; desc: string }[];
+  options: { label: string; desc: string }[];
   value: string;
   onChange: (v: string) => void;
 }) {
@@ -175,8 +170,7 @@ function GridSelector({
                   <div className="absolute inset-0 rounded-xl ring-1 ring-devflow-green/30 ring-inset" />
                 </motion.div>
               )}
-              <div className="relative z-10 flex items-center gap-3">
-                <span className="text-xl">{opt.icon}</span>
+              <div className="relative z-10">
                 <div>
                   <span
                     className={`
@@ -334,7 +328,7 @@ export default function ContactPage() {
   const [email, setEmail] = useState("");
   const [notes, setNotes] = useState("");
   const [selectedService, setSelectedService] = useState("");
-  const [selectedBudget, setSelectedBudget] = useState("");
+  const [budget, setBudget] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
@@ -348,7 +342,7 @@ export default function ContactPage() {
     if (!name.trim()) { setError("Please enter your name."); return; }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setError("Please enter a valid email."); return; }
     if (!selectedService) { setError("Please select a service."); return; }
-    if (!selectedBudget) { setError("Please select a budget range."); return; }
+    if (!budget.trim()) { setError("Please enter your budget."); return; }
 
     setIsSubmitting(true);
 
@@ -359,7 +353,7 @@ export default function ContactPage() {
         body: JSON.stringify({
           name, email, notes,
           service: selectedService,
-          budget: selectedBudget,
+          budget,
           _subject: `New Project Inquiry from ${name}`,
           _replyto: email,
           ...(recaptchaToken ? { "g-recaptcha-response": recaptchaToken } : {}),
@@ -439,12 +433,14 @@ export default function ContactPage() {
                     onChange={setSelectedService}
                   />
 
-                  {/* Budget selector */}
-                  <GridSelector
+                  {/* Budget input */}
+                  <FloatingInput
+                    id="budget"
                     label="Estimated Budget"
-                    options={budgets}
-                    value={selectedBudget}
-                    onChange={setSelectedBudget}
+                    value={budget}
+                    onChange={setBudget}
+                    required
+                    placeholder="e.g. ₹2L - ₹3L"
                   />
 
                   {/* Notes */}
