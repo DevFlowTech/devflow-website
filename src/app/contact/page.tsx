@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { easeOut } from "@/lib/motion";
 import ReCaptcha from "@/components/ui/ReCaptcha";
@@ -22,227 +22,194 @@ const budgets = [
   { label: "₹10L+", icon: "💎", desc: "Enterprise" },
 ];
 
-const steps = [
-  { num: 1, label: "Intro", icon: "👋" },
-  { num: 2, label: "Contact", icon: "✉️" },
-  { num: 3, label: "Service", icon: "🎯" },
-  { num: 4, label: "Budget", icon: "💰" },
-  { num: 5, label: "Details", icon: "📝" },
-];
+// ─── Floating Label Input ──────────────────────────────────────────────────
+function FloatingInput({
+  id,
+  label,
+  value,
+  onChange,
+  type = "text",
+  required = false,
+  multiline = false,
+  rows = 3,
+}: {
+  id: string;
+  label: string;
+  value: string;
+  onChange: (v: string) => void;
+  type?: string;
+  required?: boolean;
+  multiline?: boolean;
+  rows?: number;
+}) {
+  const [focused, setFocused] = useState(false);
+  const active = focused || value.length > 0;
+  const Tag = multiline ? "textarea" : "input";
 
-const stepLabels = [
-  "Hello, what should we call you?",
-  (name: string) => `Nice to meet you, ${name}. What is your email?`,
-  "What are we engineering?",
-  "What is your estimated budget?",
-  "Any technical specs or goals to share?",
-];
-
-const stepDescriptions = [
-  "Start with your name — we're friendly!",
-  "So we can reach you about your project.",
-  "Pick the type of project you have in mind.",
-  "Help us understand the scope of your vision.",
-  "The more detail, the better our proposal.",
-];
-
-// ─── Animated progress icon ────────────────────────────────────────────────
-function ProgressDots({ current }: { current: number }) {
   return (
-    <div className="flex items-center gap-3 mb-10">
-      {steps.map((s, i) => {
-        const isActive = s.num === current;
-        const isPast = s.num < current;
-        return (
-          <div key={s.num} className="flex items-center gap-3">
-            {/* Step dot */}
-            <motion.div
-              initial={false}
-              animate={{
-                scale: isActive ? 1.15 : 1,
-              }}
-              transition={{ type: "spring", stiffness: 300, damping: 18 }}
-              className={`
-                relative w-9 h-9 rounded-full flex items-center justify-center
-                text-xs font-mono font-semibold
-                transition-colors duration-300
-                ${
-                  isPast
-                    ? "bg-devflow-green text-devflow-black"
-                    : isActive
-                      ? "bg-devflow-green/15 text-devflow-green border border-devflow-green/40"
-                      : "bg-white/[0.03] text-devflow-gray-500 border border-white/[0.06]"
-                }
-              `}
-            >
-              {isPast ? (
-                <motion.svg
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  className="w-4 h-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={3}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M5 13l4 4L19 7"
-                  />
-                </motion.svg>
-              ) : (
-                s.icon
-              )}
-              {/* Active glow */}
-              {isActive && (
-                <motion.div
-                  layoutId="step-glow"
-                  className="absolute inset-0 rounded-full ring-2 ring-devflow-green/30 ring-offset-2 ring-offset-devflow-charcoal"
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                />
-              )}
-            </motion.div>
-
-            {/* Connector line */}
-            {i < steps.length - 1 && (
-              <div className="w-6 md:w-10 h-[2px] rounded-full relative overflow-hidden">
-                <div className="absolute inset-0 bg-white/[0.06]" />
-                <motion.div
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: isPast ? 1 : 0 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="absolute inset-0 bg-devflow-green origin-left"
-                />
-              </div>
-            )}
-          </div>
-        );
-      })}
+    <div className="relative group">
+      <Tag
+        id={id}
+        type={multiline ? undefined : type}
+        value={value}
+        required={required}
+        onChange={(e) =>
+          onChange(
+            multiline
+              ? (e as React.ChangeEvent<HTMLTextAreaElement>).target.value
+              : (e as React.ChangeEvent<HTMLInputElement>).target.value,
+          )
+        }
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
+        rows={multiline ? rows : undefined}
+        className={`
+          w-full px-4 ${multiline ? "pt-9 pb-3" : "pt-6 pb-2.5"}
+          bg-transparent text-white text-base rounded-xl outline-none
+          border border-white/[0.08]
+          transition-all duration-300
+          ${multiline ? "resize-none" : ""}
+          ${
+            focused
+              ? "border-devflow-green/50 shadow-[0_0_20px_rgba(204,255,0,0.08)]"
+              : "hover:border-white/[0.15]"
+          }
+        `}
+      />
+      {/* Floating label */}
+      <label
+        htmlFor={id}
+        className={`
+          absolute left-4 pointer-events-none select-none
+          transition-all duration-300 ease-out-expo
+          ${
+            multiline ? "top-4" : "top-1/2 -translate-y-1/2"
+          }
+          ${
+            active
+              ? "top-2.5 translate-y-0 text-[10px] font-mono uppercase tracking-wider text-devflow-green/70"
+              : "text-devflow-gray-400 text-base"
+          }
+        `}
+      >
+        {label}
+        {required && <span className="text-devflow-green/60 ml-0.5">*</span>}
+      </label>
+      {/* Bottom glow */}
+      <div
+        className={`
+          absolute bottom-0 left-1/2 -translate-x-1/2
+          h-[1px] rounded-full transition-all duration-500
+          ${
+            focused
+              ? "w-full bg-gradient-to-r from-transparent via-devflow-green/60 to-transparent"
+              : "w-0"
+          }
+        `}
+      />
+      {/* Corner accents */}
+      <div
+        className={`
+          absolute top-0 left-0 w-3 h-3 border-l border-t rounded-tl-xl
+          transition-all duration-500
+          ${focused ? "border-devflow-green/40" : "border-transparent"}
+        `}
+      />
+      <div
+        className={`
+          absolute top-0 right-0 w-3 h-3 border-r border-t rounded-tr-xl
+          transition-all duration-500
+          ${focused ? "border-devflow-green/40" : "border-transparent"}
+        `}
+      />
     </div>
   );
 }
 
-// ─── Grid selector ─────────────────────────────────────────────────────────
+// ─── Grid Selector ──────────────────────────────────────────────────────────
 function GridSelector({
+  label,
   options,
   value,
   onChange,
 }: {
+  label: string;
   options: { label: string; icon: string; desc: string }[];
   value: string;
   onChange: (v: string) => void;
 }) {
   return (
-    <div className="grid grid-cols-2 gap-3">
-      {options.map((opt, i) => {
-        const selected = value === opt.label;
-        return (
-          <motion.button
-            key={opt.label}
-            type="button"
-            onClick={() => onChange(opt.label)}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.05 * i, duration: 0.3, ease: easeOut }}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.97 }}
-            className={`
-              group relative p-4 md:p-5 rounded-2xl text-left
-              transition-all duration-300 overflow-hidden
-              ${
-                selected
-                  ? "bg-devflow-green/[0.08] border-devflow-green/50 shadow-[0_0_20px_rgba(204,255,0,0.06)]"
-                  : "bg-black/40 border-white/[0.06] hover:border-white/[0.15] hover:bg-white/[0.03]"
-              }
-              border
-            `}
-          >
-            {/* Selected ring glow */}
-            {selected && (
-              <motion.div
-                layoutId="selector-bg"
-                className="absolute inset-0 rounded-2xl"
-                transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              >
-                <div className="absolute inset-0 rounded-2xl ring-1 ring-devflow-green/30 ring-inset" />
-              </motion.div>
-            )}
-
-            <div className="relative z-10">
-              <span className="text-2xl block mb-2">{opt.icon}</span>
-              <span
-                className={`
-                  text-sm font-semibold block leading-tight
-                  ${selected ? "text-devflow-green" : "text-white group-hover:text-devflow-green/80"}
-                  transition-colors duration-200
-                `}
-              >
-                {opt.label}
-              </span>
-              <span className="text-[10px] font-mono text-devflow-gray-500 mt-1 block uppercase tracking-wider">
-                {opt.desc}
-              </span>
-            </div>
-
-            {/* Corner accent */}
-            <div
+    <div>
+      <p className="text-[10px] font-mono uppercase tracking-wider text-devflow-gray-500 mb-3 ml-1">
+        {label} <span className="text-devflow-green/60">*</span>
+      </p>
+      <div className="grid grid-cols-2 gap-2.5">
+        {options.map((opt, i) => {
+          const selected = value === opt.label;
+          return (
+            <motion.button
+              key={opt.label}
+              type="button"
+              onClick={() => onChange(opt.label)}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.04 * i, duration: 0.3, ease: easeOut }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.97 }}
               className={`
-                absolute top-0 right-0 w-6 h-6
-                transition-all duration-300
-                ${selected ? "opacity-100" : "opacity-0"}
+                group relative p-3.5 md:p-4 rounded-xl text-left border
+                transition-all duration-300 overflow-hidden
+                ${
+                  selected
+                    ? "bg-devflow-green/[0.08] border-devflow-green/50 shadow-[0_0_15px_rgba(204,255,0,0.05)]"
+                    : "bg-black/40 border-white/[0.06] hover:border-white/[0.15] hover:bg-white/[0.02]"
+                }
               `}
             >
-              <div className="absolute top-0 right-0 w-3 h-3 border-t border-r rounded-tr-lg border-devflow-green/50" />
-            </div>
-          </motion.button>
-        );
-      })}
+              {selected && (
+                <motion.div
+                  layoutId="selector-ring"
+                  className="absolute inset-0 rounded-xl"
+                  transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                >
+                  <div className="absolute inset-0 rounded-xl ring-1 ring-devflow-green/30 ring-inset" />
+                </motion.div>
+              )}
+              <div className="relative z-10 flex items-center gap-3">
+                <span className="text-xl">{opt.icon}</span>
+                <div>
+                  <span
+                    className={`
+                      text-sm font-semibold block leading-tight
+                      ${selected ? "text-devflow-green" : "text-white group-hover:text-devflow-green/80"}
+                      transition-colors duration-200
+                    `}
+                  >
+                    {opt.label}
+                  </span>
+                  <span className="text-[9px] font-mono text-devflow-gray-500 block uppercase tracking-wider">
+                    {opt.desc}
+                  </span>
+                </div>
+              </div>
+              {/* Corner accent */}
+              <div
+                className={`
+                  absolute top-0 right-0 w-5 h-5 transition-all duration-300
+                  ${selected ? "opacity-100" : "opacity-0"}
+                `}
+              >
+                <div className="absolute top-0 right-0 w-2.5 h-2.5 border-t border-r rounded-tr-lg border-devflow-green/50" />
+              </div>
+            </motion.button>
+          );
+        })}
+      </div>
     </div>
   );
 }
 
-// ─── Floating input ────────────────────────────────────────────────────────
-function StepInput({
-  value,
-  onChange,
-  placeholder,
-  type = "text",
-  autoFocus = false,
-}: {
-  value: string;
-  onChange: (v: string) => void;
-  placeholder: string;
-  type?: string;
-  autoFocus?: boolean;
-}) {
-  return (
-    <div className="relative">
-      <input
-        type={type}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder={placeholder}
-        autoFocus={autoFocus}
-        className="
-          w-full bg-transparent
-          border-b-2 border-white/[0.12]
-          focus:border-devflow-green
-          py-4 text-2xl md:text-3xl
-          text-white
-          outline-none
-          transition-all duration-300
-          placeholder:text-devflow-gray-600
-          font-display font-medium
-        "
-      />
-      {/* Bottom glow on focus */}
-      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-devflow-green/40 to-transparent opacity-0 focus-within:opacity-100 transition-opacity duration-500" />
-    </div>
-  );
-}
-
-// ─── Success screen ────────────────────────────────────────────────────────
+// ─── Success Screen ────────────────────────────────────────────────────────
 function SuccessScreen({ name, email }: { name: string; email: string }) {
   const numDots = 8;
   const r = 0;
@@ -279,10 +246,8 @@ function SuccessScreen({ name, email }: { name: string; email: string }) {
           />
         );
       })}
-      {/* Trigger rotation */}
 
       <div className="relative z-10">
-        {/* Checkmark */}
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -361,74 +326,43 @@ function SuccessScreen({ name, email }: { name: string; email: string }) {
       </div>
     </motion.div>
   );
-}  // ─── Main Component ────────────────────────────────────────────────────────
-  export default function ContactPage() {
-  const [step, setStep] = useState(1);
+}
+
+// ─── Main Component ────────────────────────────────────────────────────────
+export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [notes, setNotes] = useState("");
   const [selectedService, setSelectedService] = useState("");
   const [selectedBudget, setSelectedBudget] = useState("");
-  const [notes, setNotes] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
   const [error, setError] = useState("");
 
-  // Resolve step label (supports both strings and functions)
-  const getStepLabel = (stepIndex: number): string => {
-    const label = stepLabels[stepIndex];
-    return typeof label === "function" ? label(name) : label;
-  };
-
-  const handleNext = () => {
-    setError("");
-    if (step === 1 && !name.trim()) {
-      setError("Please enter your name.");
-      return;
-    }
-    if (step === 2) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        setError("Please enter a valid email address.");
-        return;
-      }
-    }
-    if (step === 3 && !selectedService) {
-      setError("Please select a project type.");
-      return;
-    }
-    if (step === 4 && !selectedBudget) {
-      setError("Please select your budget range.");
-      return;
-    }
-    setStep((p) => p + 1);
-  };
-
-  const handleBack = () => {
-    setError("");
-    if (step > 1) setStep((p) => p - 1);
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
     setError("");
+
+    // Validate
+    if (!name.trim()) { setError("Please enter your name."); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setError("Please enter a valid email."); return; }
+    if (!selectedService) { setError("Please select a service."); return; }
+    if (!selectedBudget) { setError("Please select a budget range."); return; }
+
+    setIsSubmitting(true);
 
     try {
       const response = await fetch("https://formspree.io/f/meeyqenk", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name,
-          email,
+          name, email, notes,
           service: selectedService,
           budget: selectedBudget,
-          notes,
           _subject: `New Project Inquiry from ${name}`,
           _replyto: email,
-          ...(recaptchaToken
-            ? { "g-recaptcha-response": recaptchaToken }
-            : {}),
+          ...(recaptchaToken ? { "g-recaptcha-response": recaptchaToken } : {}),
         }),
       });
 
@@ -447,240 +381,150 @@ function SuccessScreen({ name, email }: { name: string; email: string }) {
   return (
     <main className="min-h-screen bg-devflow-black pt-28 pb-16 overflow-hidden flex items-center justify-center">
       {/* Background orbs */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-devflow-green/[0.015] blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-white/[0.01] blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full bg-devflow-green/[0.015] blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] rounded-full bg-white/[0.01] blur-[100px] pointer-events-none" />
 
       <div className="section-container relative z-10 max-w-2xl w-full">
-        <AnimatePresence mode="wait">
-          {!isSubmitted ? (
-            <motion.div
-              key={`step-${step}`}
-              initial={{ opacity: 0, y: 24, scale: 0.97 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -24, scale: 0.97 }}
-              transition={{ duration: 0.35, ease: easeOut }}
-            >
-              {/* Premium card */}
-              <div className="relative p-[1px] rounded-2xl bg-gradient-to-b from-white/[0.06] to-transparent">
-                <div className="rounded-2xl bg-devflow-charcoal/95 backdrop-blur-xl p-8 md:p-10">
-                  {/* Progress dots */}
-                  <ProgressDots current={step} />
+        {!isSubmitted ? (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: easeOut }}
+          >
+            {/* Premium card */}
+            <div className="relative p-[1px] rounded-2xl bg-gradient-to-b from-white/[0.06] to-transparent">
+              <div className="rounded-2xl bg-devflow-charcoal/95 backdrop-blur-xl p-8 md:p-10">
+                {/* Header */}
+                <div className="mb-10">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-devflow-green/20 bg-devflow-green/[0.03] mb-5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-green animate-pulse-slow" />
+                    <span className="text-[9px] font-mono uppercase tracking-[0.2em] text-devflow-green/70">
+                      Project Discovery
+                    </span>
+                  </div>
+                  <h1 className="font-display text-3xl md:text-4xl font-medium text-white leading-tight">
+                    Tell us about your project
+                  </h1>
+                  <p className="text-devflow-gray-400 text-sm mt-2 font-light">
+                    All fields are required unless marked optional. We&apos;ll respond within 24 hours.
+                  </p>
+                </div>
 
-                  {/* Step info */}
-                  <div className="mb-10">
-                    <motion.p
-                      key={step}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      className="text-[11px] font-mono uppercase tracking-[0.15em] text-devflow-gray-500 mb-2"
-                    >
-                      Step {step} of 5 — {stepDescriptions[step - 1]}
-                    </motion.p>
-                    <motion.h2
-                      key={`label-${step}`}
-                      initial={{ opacity: 0, y: 8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.05 }}
-                      className="font-display text-2xl md:text-3xl font-medium text-white leading-tight"
-                    >
-                      {getStepLabel(step - 1)}
-                    </motion.h2>
+                {/* ── Form ─────────────────────────────────── */}
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Row: Name + Email */}
+                  <div className="grid md:grid-cols-2 gap-5">
+                    <FloatingInput
+                      id="name"
+                      label="Your Name"
+                      value={name}
+                      onChange={setName}
+                      required
+                    />
+                    <FloatingInput
+                      id="email"
+                      label="Email Address"
+                      value={email}
+                      onChange={setEmail}
+                      type="email"
+                      required
+                    />
                   </div>
 
-                  {/* ── Form ──────────────────────────────────────── */}
-                  <form onSubmit={handleSubmit} className="space-y-8">
-                    {/* Step 1: Name */}
-                    {step === 1 && (
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.1 }}
-                      >
-                        <StepInput
-                          value={name}
-                          onChange={setName}
-                          placeholder="Your name"
-                          autoFocus
-                        />
-                      </motion.div>
-                    )}
+                  {/* Service selector */}
+                  <GridSelector
+                    label="Select a Service"
+                    options={services}
+                    value={selectedService}
+                    onChange={setSelectedService}
+                  />
 
-                    {/* Step 2: Email */}
-                    {step === 2 && (
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.1 }}
-                      >
-                        <StepInput
-                          value={email}
-                          onChange={setEmail}
-                          placeholder="hello@example.com"
-                          type="email"
-                          autoFocus
-                        />
-                      </motion.div>
-                    )}
+                  {/* Budget selector */}
+                  <GridSelector
+                    label="Estimated Budget"
+                    options={budgets}
+                    value={selectedBudget}
+                    onChange={setSelectedBudget}
+                  />
 
-                    {/* Step 3: Service */}
-                    {step === 3 && (
-                      <GridSelector
-                        options={services}
-                        value={selectedService}
-                        onChange={setSelectedService}
-                      />
-                    )}
+                  {/* Notes */}
+                  <FloatingInput
+                    id="notes"
+                    label="Project Details (Optional)"
+                    value={notes}
+                    onChange={setNotes}
+                    multiline
+                    rows={4}
+                  />
 
-                    {/* Step 4: Budget */}
-                    {step === 4 && (
-                      <GridSelector
-                        options={budgets}
-                        value={selectedBudget}
-                        onChange={setSelectedBudget}
-                      />
-                    )}
+                  {/* reCAPTCHA */}
+                  <div className="pt-2">
+                    <ReCaptcha onChange={setRecaptchaToken} />
+                  </div>
 
-                    {/* Step 5: Notes */}
-                    {step === 5 && (
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.1 }}
-                      >
-                        <textarea
-                          value={notes}
-                          onChange={(e) => setNotes(e.target.value)}
-                          placeholder="e.g. integrations, feature requirements, timelines..."
-                          autoFocus
-                          rows={5}
-                          className="
-                            w-full bg-white/[0.02]
-                            border border-white/[0.08]
-                            rounded-xl p-5
-                            focus:border-devflow-green/40
-                            focus:shadow-[0_0_20px_rgba(204,255,0,0.05)]
-                            h-36
-                            text-white
-                            outline-none
-                            transition-all duration-300
-                            text-sm font-light leading-relaxed
-                            resize-none
-                            placeholder:text-devflow-gray-600
-                          "
-                        />
-                      </motion.div>
-                    )}
+                  {/* Error */}
+                  {error && (
+                    <motion.p
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      className="text-xs text-red-400 font-mono bg-red-500/5 border border-red-500/10 rounded-lg px-4 py-2"
+                    >
+                      ⚠ {error}
+                    </motion.p>
+                  )}
 
-                    {/* reCAPTCHA */}
-                    {step === 5 && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
-                        className="pt-2"
-                      >
-                        <ReCaptcha onChange={setRecaptchaToken} />
-                      </motion.div>
-                    )}
+                  {/* Submit */}
+                  <div className="pt-4">
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className={`
+                        group relative w-full h-[54px] rounded-xl font-semibold text-base
+                        overflow-hidden transition-all duration-300
+                        ${
+                          isSubmitting
+                            ? "bg-devflow-green/80 text-devflow-black cursor-not-allowed"
+                            : "bg-devflow-green text-devflow-black hover:shadow-[0_0_30px_rgba(204,255,0,0.3)] active:scale-[0.98]"
+                        }
+                      `}
+                    >
+                      {/* Shine */}
+                      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
 
-                    {/* Error */}
-                    {error && (
-                      <motion.p
-                        initial={{ opacity: 0, x: -10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        className="text-xs text-red-400 font-mono bg-red-500/5 border border-red-500/10 rounded-lg px-4 py-2"
-                      >
-                        ⚠ {error}
-                      </motion.p>
-                    )}
-
-                    {/* Navigation */}
-                    <div className="flex justify-between items-center pt-6 border-t border-white/[0.05]">
-                      {step > 1 ? (
-                        <motion.button
-                          type="button"
-                          onClick={handleBack}
-                          whileHover={{ x: -3 }}
-                          className="
-                            group flex items-center gap-2
-                            text-xs font-mono uppercase tracking-wider
-                            text-devflow-gray-400 hover:text-white
-                            transition-colors duration-200
-                          "
-                        >
-                          <svg className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                      {isSubmitting ? (
+                        <span className="flex items-center justify-center gap-2">
+                          <motion.span
+                            animate={{ rotate: 360 }}
+                            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                            className="w-4 h-4 border-2 border-devflow-black/30 border-t-devflow-black rounded-full"
+                          />
+                          Sending...
+                        </span>
+                      ) : (
+                        <span className="flex items-center justify-center gap-2">
+                          Submit Your Project
+                          <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                           </svg>
-                          Previous
-                        </motion.button>
-                      ) : (
-                        <div />
+                        </span>
                       )}
+                    </button>
+                  </div>
 
-                      {step < 5 ? (
-                        <motion.button
-                          type="button"
-                          onClick={handleNext}
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                          className="
-                            btn-primary py-2.5 px-7 font-semibold
-                            relative overflow-hidden group
-                          "
-                        >
-                          <span className="relative z-10 flex items-center gap-2">
-                            Continue
-                            <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                            </svg>
-                          </span>
-                        </motion.button>
-                      ) : (
-                        <motion.button
-                          type="submit"
-                          disabled={isSubmitting}
-                          whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
-                          whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                          className="
-                            btn-primary py-2.5 px-8 font-semibold
-                            relative overflow-hidden
-                          "
-                        >
-                          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/25 to-transparent" />
-                          <span className="relative z-10 flex items-center gap-2">
-                            {isSubmitting ? (
-                              <>
-                                <motion.span
-                                  animate={{ rotate: 360 }}
-                                  transition={{
-                                    duration: 1,
-                                    repeat: Infinity,
-                                    ease: "linear",
-                                  }}
-                                  className="w-4 h-4 border-2 border-devflow-black/30 border-t-devflow-black rounded-full shrink-0"
-                                />
-                                Sending...
-                              </>
-                            ) : (
-                              <>
-                                Submit Discovery
-                                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                                </svg>
-                              </>
-                            )}
-                          </span>
-                        </motion.button>
-                      )}
-                    </div>
-                  </form>
-                </div>
+                  {/* Footer */}
+                  <p className="text-center text-[11px] text-devflow-gray-500 font-mono">
+                    ⏎ Response within 24 hours · Or email{" "}
+                    <a href="mailto:devflowtechnology@gmail.com" className="text-devflow-green/70 hover:text-devflow-green transition-colors">
+                      devflowtechnology@gmail.com
+                    </a>
+                  </p>
+                </form>
               </div>
-            </motion.div>
-          ) : (
-            <SuccessScreen name={name} email={email} />
-          )}
-        </AnimatePresence>
+            </div>
+          </motion.div>
+        ) : (
+          <SuccessScreen name={name} email={email} />
+        )}
       </div>
     </main>
   );
