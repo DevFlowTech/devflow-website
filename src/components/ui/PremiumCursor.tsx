@@ -13,10 +13,6 @@ export default function PremiumCursor() {
     const cursorYSpring = useSpring(cursorY, springConfig);
 
     useEffect(() => {
-        // Force hide default cursor site-wide
-        document.documentElement.style.cursor = 'none';
-        document.body.style.cursor = 'none';
-
         const moveCursor = (e: MouseEvent) => {
             cursorX.set(e.clientX);
             cursorY.set(e.clientY);
@@ -44,7 +40,7 @@ export default function PremiumCursor() {
             <motion.div
                 className="pointer-events-none fixed inset-0 z-30 hidden lg:block will-change-transform transform-gpu"
                 style={{
-                    background: `radial-gradient(400px circle at ${cursorXSpring}px ${cursorYSpring}px, rgba(186, 230, 84, 0.04), transparent 70%)`,
+                    background: `radial-gradient(400px circle at ${cursorXSpring}px ${cursorYSpring}px, rgba(204, 255, 0, 0.04), transparent 70%)`,
                 }}
             />
 
@@ -59,24 +55,10 @@ export default function PremiumCursor() {
                 }}
                 animate={{
                     scale: isHovered ? 2.2 : 1,
-                    backgroundColor: isHovered ? "rgba(186, 230, 84, 0.05)" : "rgba(186, 230, 84, 0)",
-                    borderColor: isHovered ? "rgba(186, 230, 84, 0.5)" : "rgba(186, 230, 84, 0.3)",
+                    backgroundColor: isHovered ? "rgba(204, 255, 0, 0.05)" : "rgba(204, 255, 0, 0)",
+                    borderColor: isHovered ? "rgba(204, 255, 0, 0.5)" : "rgba(204, 255, 0, 0.3)",
                 }}
                 transition={{ type: "spring", stiffness: 400, damping: 28, mass: 0.5 }}
-            />
-
-            {/* Center Dot */}
-            <motion.div
-                className="pointer-events-none fixed top-0 left-0 w-1.5 h-1.5 bg-devflow-green rounded-full z-[10000] hidden lg:block transform-gpu"
-                style={{
-                    x: cursorX,
-                    y: cursorY,
-                    translateX: "-50%",
-                    translateY: "-50%",
-                }}
-                animate={{
-                    scale: isHovered ? 0 : 1,
-                }}
             />
         </>
     );

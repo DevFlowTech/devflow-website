@@ -18,7 +18,7 @@ export default function StickyDotNav() {
   const pathname = usePathname();
   const [activeSection, setActiveSection] = useState("hero");
   const [isVisible, setIsVisible] = useState(false);
-  const { scrollY } = useScroll();
+  useScroll();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,8 +46,8 @@ export default function StickyDotNav() {
   }, []);
 
   // Hide on legal and blog pages
-  const hiddenPaths = ["/blog", "/privacy", "/terms"];
-  if (hiddenPaths.some(path => pathname?.startsWith(path))) {
+  const hiddenPaths = ["/blog", "/privacy", "/terms", "/about", "/services", "/work", "/contact"];
+  if (hiddenPaths.some(path => pathname === path || pathname?.startsWith(path + "/"))) {
     return null;
   }
 

@@ -1,102 +1,245 @@
 "use client";
 
-import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
+import Link from "next/link";
 import HeroSection from "@/components/sections/HeroSection";
-import StatsBar from "@/components/sections/StatsBar";
 import TechStackSection from "@/components/sections/TechStackSection";
-import { CurveDivider } from "@/components/ui/WaveDivider";
-
-// Dynamic imports for sections below the fold to optimize performance
-const ServicesQuickView = dynamic(() => import("@/components/sections/ServicesQuickView"), { ssr: false });
-const ProblemSolutionSection = dynamic(() => import("@/components/sections/ProblemSolutionSection"), { ssr: false });
-const CoreServiceSection = dynamic(() => import("@/components/sections/CoreServiceSection"), { ssr: false });
-const ProcessSection = dynamic(() => import("@/components/sections/ProcessSection"), { ssr: false });
-const ProjectShowcase = dynamic(() => import("@/components/sections/ProjectShowcase"), { ssr: false });
-const TestimonialsSection = dynamic(() => import("@/components/sections/TestimonialsSection"), { ssr: false });
-const CaseStudySection = dynamic(() => import("@/components/sections/CaseStudySection"), { ssr: false });
-const FounderSection = dynamic(() => import("@/components/sections/FounderSection"), { ssr: false });
-const FAQSection = dynamic(() => import("@/components/sections/FAQSection"), { ssr: false });
-const ContactSection = dynamic(() => import("@/components/sections/ContactSection"), { ssr: false });
-const ParallaxText = dynamic(() => import("@/components/ui/ParallaxText"), { ssr: false });
-
-// Elegant section divider component
-const SectionDivider = () => (
-  <div className="section-divider mx-auto max-w-4xl my-0" />
-);
+import { staggerContainer, staggerItem } from "@/lib/motion";
+import { FiCpu, FiDatabase, FiGrid, FiArrowUpRight, FiLayers } from "react-icons/fi";
+import { HiStar } from "react-icons/hi";
 
 export default function Home() {
   return (
-    <>
-      {/* Hero - Clear value proposition */}
+    <div className="relative min-h-screen bg-devflow-black text-white overflow-hidden">
+      {/* Aurora Gradient Backdrops */}
+      <div className="absolute top-[20%] left-[5%] aurora-bg-blue opacity-50" />
+      <div className="absolute top-[50%] right-[10%] aurora-bg-gold opacity-30" />
+      <div className="absolute top-[80%] left-[15%] aurora-bg-blue opacity-40" />
+
+      {/* Hero Section */}
       <HeroSection />
 
-      {/* Stats Bar - Impressive numbers */}
-      <StatsBar />
+      {/* Main Bento Grid Layout Section */}
+      <section className="py-20 relative z-10 section-container max-w-7xl mx-auto">
+        <motion.div 
+          className="text-center md:text-left mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: [0.2, 0, 0, 1] }}
+        >
+          <span className="text-xs font-mono text-devflow-gold uppercase tracking-widest block mb-3">
+            [ SYSTEM SUMMARY ]
+          </span>
+          <h2 className="font-display text-3xl md:text-5xl font-medium text-white">
+            Operational Capabilities at a Glance
+          </h2>
+        </motion.div>
 
-      {/* Tech Stack Marquee - Social Proof via Technology */}
-      <TechStackSection />
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[240px]"
+        >
+          {/* Block 1: Key Metrics (col-span-2) -> Links to Work */}
+          <Link href="/work" className="md:col-span-2 block h-full">
+            <motion.div
+              variants={staggerItem}
+              className="glass-panel p-8 rounded-2xl flex flex-col justify-between group overflow-hidden relative h-full cursor-pointer"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-devflow-green/5 to-transparent pointer-events-none" />
+              <div className="flex justify-between items-start">
+                <span className="text-xs font-mono text-devflow-gray-400">[ RELIABILITY // METRICS ]</span>
+                <FiLayers className="w-5 h-5 text-devflow-green group-hover:rotate-12 transition-transform duration-300" />
+              </div>
+              
+              <div className="grid grid-cols-3 gap-4 py-4">
+                <div>
+                  <span className="block text-3xl md:text-5xl font-bold font-mono text-devflow-green group-hover:scale-105 transition-transform duration-300 origin-left">99.9%</span>
+                  <span className="text-[10px] font-mono text-devflow-gray-400">SERVER UPTIME</span>
+                </div>
+                <div>
+                  <span className="block text-3xl md:text-5xl font-bold font-mono text-devflow-green group-hover:scale-105 transition-transform duration-300 origin-left">50k+</span>
+                  <span className="text-[10px] font-mono text-devflow-gray-400">HOURS SAVED</span>
+                </div>
+                <div>
+                  <span className="block text-3xl md:text-5xl font-bold font-mono text-white group-hover:scale-105 transition-transform duration-300 origin-left">2.4x</span>
+                  <span className="text-[10px] font-mono text-devflow-gray-400">WORK SPEEDUP</span>
+                </div>
+              </div>
 
-      {/* Curved Transition to Services */}
-      <CurveDivider color="#0a0a0a" className="-mt-1 bg-devflow-charcoal" />
+              <div className="flex justify-between items-center text-xs font-mono">
+                <p className="text-xs text-devflow-gray-300 font-light truncate max-w-[80%]">
+                  We build fast web systems, dashboards, and automated software to save your team time.
+                </p>
+                <span className="text-devflow-green group-hover:translate-x-1 transition-transform duration-300">
+                  VIEW PORTFOLIO &rarr;
+                </span>
+              </div>
+            </motion.div>
+          </Link>
 
-      {/* Services Quick View - Scannable at a glance */}
-      <ServicesQuickView />
+          {/* Block 2: Capabilities Checklist (col-span-1 row-span-2) -> Links to Services */}
+          <Link href="/services" className="block h-full md:row-span-2">
+            <motion.div
+              variants={staggerItem}
+              className="glass-panel p-8 rounded-2xl flex flex-col justify-between group h-full cursor-pointer"
+            >
+              <div>
+                <div className="flex justify-between items-start mb-6">
+                  <span className="text-xs font-mono text-devflow-gray-400">[ WHAT WE BUILD ]</span>
+                  <FiGrid className="w-5 h-5 text-devflow-green group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <ul className="space-y-4">
+                  <li className="flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" />
+                    <span className="text-sm font-mono text-white">Custom Business Portals</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" />
+                    <span className="text-sm font-mono text-white">Task Automation</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" />
+                    <span className="text-sm font-mono text-white">Connecting Your Apps</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" />
+                    <span className="text-sm font-mono text-white">Fast Servers & Cloud</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="inline-flex items-center gap-2 text-xs font-mono text-devflow-green group-hover:underline">
+                SEE WHAT WE BUILD
+                <FiArrowUpRight className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
+              </div>
+            </motion.div>
+          </Link>
 
-      {/* Parallax Text - Visual Impact */}
-      <div className="bg-devflow-black overflow-hidden py-4">
-        <ParallaxText baseVelocity={-200}>
-          INNOVATE • BUILD • SCALE •
-        </ParallaxText>
-      </div>
+          {/* Block 3: Tech Marquee (full-width, 2 rows) -> Continuous Carousel */}
+          <motion.div
+            variants={staggerItem}
+            className="md:col-span-2 lg:col-span-3 md:row-span-2 glass-panel rounded-2xl flex flex-col justify-between overflow-hidden relative group py-6"
+          >
+            <div className="px-8 flex items-center justify-between mb-2">
+              <span className="text-xs font-mono text-devflow-gray-400">[ TECH ALIGNMENT ]</span>
+              <span className="text-[10px] font-mono text-devflow-gray-500">JS • MOBILE • SEO • AEO • GEO</span>
+            </div>
+            
+            <div className="flex-grow flex items-center w-full">
+              <TechStackSection />
+            </div>
 
-      {/* Problem → Solution - Speak to pain points */}
-      <ProblemSolutionSection />
+            <div className="px-8 text-xs font-mono text-devflow-gray-400">
+              BUILT ON 40+ INDUSTRIAL-GRADE FRAMEWORKS & TOOLS.
+            </div>
+          </motion.div>
 
-      {/* Elegant Divider */}
-      <SectionDivider />
+          {/* Block 4: Philosophy Panel (col-span-1 row-span-2) -> Links to About */}
+          <Link href="/about" className="block h-full md:row-span-2">
+            <motion.div
+              variants={staggerItem}
+              className="glass-panel p-8 rounded-2xl flex flex-col justify-between group h-full cursor-pointer"
+            >
+              <div>
+                <div className="flex justify-between items-start mb-6">
+                  <span className="text-xs font-mono text-devflow-gray-400">[ PHILOSOPHY ]</span>
+                  <FiCpu className="w-5 h-5 text-devflow-green group-hover:rotate-12 transition-transform duration-300" />
+                </div>
+                <h3 className="text-xl font-display font-medium text-white mb-4">
+                  Simple code. Direct solutions.
+                </h3>
+                <p className="text-sm text-devflow-gray-300 font-light leading-relaxed">
+                  We write clean, organized software that your business fully owns. No complex jargon, no hidden fees, and no visual clutter.
+                </p>
+              </div>
+              <span className="text-[10px] font-mono text-devflow-green group-hover:underline uppercase block">
+                OUR VALUES &rarr;
+              </span>
+            </motion.div>
+          </Link>
 
-      {/* Core Service - What we build, who it's for */}
-      <CoreServiceSection />
+          {/* Block 5: Featured Testimonial (col-span-2) -> Links to Work */}
+          <Link href="/work" className="md:col-span-2 block h-full">
+            <motion.div
+              variants={staggerItem}
+              className="glass-panel p-8 rounded-2xl flex flex-col justify-between group relative h-full cursor-pointer"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-devflow-green/[0.02] to-transparent pointer-events-none" />
+              <div className="flex justify-between items-start">
+                <span className="text-xs font-mono text-devflow-gray-400">[ CLIENT REVIEWS ]</span>
+                <div className="flex gap-1 text-devflow-green">
+                  {[...Array(5)].map((_, i) => (
+                    <HiStar key={i} className="w-4 h-4" />
+                  ))}
+                </div>
+              </div>
 
-      {/* Curved Transition */}
-      <CurveDivider color="#121212" className="-mb-1 bg-devflow-black" flip />
+              <p className="text-sm md:text-base text-white font-light italic leading-relaxed my-2">
+                "DevFlow fixed our database errors and built our customer delivery portal in under 5 weeks. Our daily work speeded up immediately."
+              </p>
 
-      {/* Process - Step-by-step with clear outcomes */}
-      <ProcessSection />
+              <div className="flex justify-between items-center text-xs font-mono">
+                <div className="flex items-center gap-3">
+                  <span className="w-6 h-px bg-devflow-green animate-pulse" />
+                  <span className="text-[10px] text-devflow-gray-300">CTO, VASSU INFOTECH</span>
+                </div>
+                <span className="text-devflow-green group-hover:translate-x-1 transition-transform duration-300">
+                  READ CASE STUDIES &rarr;
+                </span>
+              </div>
+            </motion.div>
+          </Link>
 
-      {/* Parallax Text - Visual Impact */}
-      <div className="bg-devflow-black overflow-hidden py-4">
-        <ParallaxText baseVelocity={150}>CODE • DESIGN • DEPLOY •</ParallaxText>
-      </div>
+          {/* Block 6: Contact Estimator CTA (col-span-1) -> Links to Contact */}
+          <Link href="/contact" className="block h-full">
+            <motion.div
+              variants={staggerItem}
+              className="glass-panel p-8 rounded-2xl flex flex-col justify-between bg-gradient-to-br from-devflow-green/[0.04] to-devflow-green/[0.02] border-devflow-green/20 hover:border-devflow-green/30 cursor-pointer h-full group"
+            >
+              <div className="flex justify-between items-start">
+                <span className="text-xs font-mono text-devflow-green">[ COST ESTIMATOR ]</span>
+                <FiArrowUpRight className="w-5 h-5 text-devflow-green group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+              </div>
 
-      {/* Project Showcase - Portfolio Gallery */}
-      <ProjectShowcase />
+              <div>
+                <h4 className="text-lg font-display font-medium text-white mb-2 group-hover:text-devflow-green transition-colors duration-300">
+                  Estimate Your Project Cost
+                </h4>
+                <p className="text-xs text-devflow-gray-400 leading-relaxed font-light">
+                  Answer simple questions to estimate your custom software cost and timeline in under 3 minutes.
+                </p>
+              </div>
 
-      {/* Testimonials - Client Success Stories */}
-      <TestimonialsSection />
+              <div className="text-[10px] font-mono text-devflow-green tracking-widest uppercase">
+                ESTIMATE COST &rarr;
+              </div>
+            </motion.div>
+          </Link>
+        </motion.div>
+      </section>
 
-      {/* Case Study - Proof with real outcomes */}
-      <CaseStudySection />
-
-      {/* Elegant Divider */}
-      <SectionDivider />
-
-      {/* Risk Reversal - Low-risk ways to start */}
-
-      {/* Curved Transition to About */}
-      <CurveDivider color="#121212" className="-mt-1 bg-devflow-black" />
-
-      {/* Founder Message - Human element */}
-      <FounderSection />
-
-      {/* FAQ Section */}
-      <FAQSection />
-
-      {/* Elegant Divider */}
-      <SectionDivider />
-
-      {/* Final CTA - Contact */}
-      <ContactSection />
-    </>
+      {/* Trust Strip */}
+      <section className="py-16 border-t border-white/[0.04] bg-devflow-black relative z-10 text-center">
+        <motion.div 
+          className="section-container max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: [0.2, 0, 0, 1] }}
+        >
+          <p className="text-xs font-mono text-devflow-gray-400 uppercase tracking-widest mb-6">
+            [ TRUSTED BY TECHNOLOGY TEAMS ]
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-12 opacity-40">
+            <span className="text-xl font-bold font-display tracking-widest text-white">VASSU INFOTECH</span>
+            <span className="text-xl font-mono tracking-widest text-white">AUREON GROUP</span>
+            <span className="text-xl font-bold tracking-widest text-white font-serif italic">TECH LABS</span>
+          </div>
+        </motion.div>
+      </section>
+    </div>
   );
 }

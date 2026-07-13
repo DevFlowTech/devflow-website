@@ -13,19 +13,18 @@ import { easeOut } from "@/lib/motion";
 import Magnetic from "@/components/ui/Magnetic";
 
 const navItems = [
-  { label: "Home", href: "/#hero" },
-  { label: "Services", href: "/#services" },
-  { label: "Process", href: "/#process" },
-  { label: "Projects", href: "/#work" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Work", href: "/work" },
   { label: "Blog", href: "/blog" },
-  { label: "About", href: "/#about" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { scrollY } = useScroll();
+  const { scrollY, scrollYProgress } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setIsScrolled(latest > 50);
@@ -91,8 +90,8 @@ export default function Navbar() {
               >
                 <Magnetic>
                   <Link
-                    href="/#contact"
-                    className="px-5 py-2.5 bg-devflow-green text-devflow-black font-semibold text-sm rounded-lg transition-all duration-150 hover:bg-devflow-green/90 shadow-[0_0_15px_rgba(186,230,84,0.1)]"
+                    href="/contact"
+                    className="px-5 py-2.5 bg-devflow-green text-devflow-black font-semibold text-sm rounded-lg transition-all duration-150 hover:bg-devflow-green/90 shadow-[0_0_15px_rgba(204,255,0,0.15)]"
                   >
                     Let's Talk
                   </Link>
@@ -134,6 +133,12 @@ export default function Navbar() {
             </button>
           </div>
         </nav>
+
+        {/* Top Scroll Progress Indicator */}
+        <motion.div
+          className="absolute bottom-0 left-0 right-0 h-[2px] bg-devflow-green origin-left z-50 shadow-[0_1px_8px_rgba(204,255,0,0.4)]"
+          style={{ scaleX: scrollYProgress }}
+        />
       </motion.header>
 
       {/* Mobile Menu */}
@@ -188,7 +193,7 @@ export default function Navbar() {
                   className="mt-6"
                 >
                   <Link
-                    href="#contact"
+                    href="/contact"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block text-center py-4 bg-devflow-green text-devflow-black font-semibold rounded-lg"
                   >

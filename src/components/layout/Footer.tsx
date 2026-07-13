@@ -7,11 +7,10 @@ import { staggerContainer, staggerItem, viewportOnce } from "@/lib/motion";
 
 const footerLinks = {
   company: [
-    { label: "Services", href: "#services" },
-    { label: "Process", href: "#process" },
-    { label: "Work", href: "#work" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "Services", href: "/services" },
+    { label: "Work", href: "/work" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 interface Particle {
@@ -10,38 +10,55 @@ interface Particle {
   size: number;
   duration: number;
   delay: number;
+  offsetX: number;
 }
 
-export default function FloatingParticles({ count = 30 }: { count?: number }) {
-  const [particles, setParticles] = useState<Particle[]>([]);
-
+export default function FloatingParticles({ 
+  count = 45,
+  mode = "float"
+}: { 
+  count?: number;
+  mode?: "float" | "snow";
+}) {
+  const [mounted, setMounted] = useState(false);
+  
   useEffect(() => {
-    const newParticles: Particle[] = Array.from({ length: count }, (_, i) => ({
+    setMounted(true);
+  }, []);
+
+  const [particles] = useState<Particle[]>(() =>
+    Array.from({ length: count }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 4 + 1,
-      duration: Math.random() * 10 + 10,
-      delay: Math.random() * 5,
-    }));
-    setParticles(newParticles);
-  }, [count]);
+      y: mode === "snow" ? Math.random() * -100 : Math.random() * 100,
+      size: Math.random() * 3.5 + 1,
+      duration: mode === "snow" ? Math.random() * 10 + 8 : Math.random() * 12 + 10,
+      delay: Math.random() * -10, // start immediately using negative delay
+      offsetX: Math.random() * 50 - 25,
+    }))
+  );
+
+  if (!mounted) return null;
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute rounded-full bg-devflow-green/20"
+          className="absolute rounded-full bg-devflow-green/25 backdrop-blur-[0.5px]"
           style={{
             left: `${particle.x}%`,
-            top: `${particle.y}%`,
+            top: mode === "snow" ? "-5vh" : `${particle.y}%`,
             width: particle.size,
             height: particle.size,
           }}
-          animate={{
+          animate={mode === "snow" ? {
+            y: ["0vh", "110vh"],
+            x: [0, particle.offsetX, particle.offsetX * 2],
+            opacity: [0, 0.6, 0.6, 0],
+          } : {
             y: [0, -30, 0],
-            x: [0, Math.random() * 20 - 10, 0],
+            x: [0, particle.offsetX, 0],
             opacity: [0.2, 0.6, 0.2],
             scale: [1, 1.2, 1],
           }}
@@ -49,7 +66,7 @@ export default function FloatingParticles({ count = 30 }: { count?: number }) {
             duration: particle.duration,
             delay: particle.delay,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "linear",
           }}
         />
       ))}

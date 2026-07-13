@@ -1,20 +1,78 @@
-import { MetadataRoute } from 'next'
- 
+import { MetadataRoute } from "next";
+import { blogPosts } from "@/data/blogData";
+import { projects } from "@/data/projectData";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://devflow.co.in'
-  const currentDate = new Date().toISOString()
-  
-  // Note: Hash/fragment URLs (like #capabilities) are not indexed by Google
-  // as separate pages. They are client-side navigation only.
-  // For better SEO, consider creating separate pages for each service
-  // like /services/ai-solutions, /services/web-development, etc.
-  
-  return [
+  const baseUrl = "https://devflow.co.in";
+  const currentDate = new Date().toISOString();
+
+  // Static pages
+  const staticPages = [
     {
       url: baseUrl,
       lastModified: currentDate,
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly" as const,
       priority: 1.0,
     },
-  ]
+    {
+      url: `${baseUrl}/about`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/work`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: currentDate,
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/terms`,
+      lastModified: currentDate,
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    },
+  ];
+
+  // Blog post pages
+  const blogEntries = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date).toISOString(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  // Work/case study pages
+  const workEntries = projects.map((project) => ({
+    url: `${baseUrl}/work/${project.slug}`,
+    lastModified: currentDate,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...blogEntries, ...workEntries];
 }

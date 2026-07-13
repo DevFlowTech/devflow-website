@@ -7,9 +7,9 @@ export default function InteractiveGrid() {
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {/* Static CSS grid pattern - much lighter than SVG dots */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage: `radial-gradient(circle, #bae654 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle, #CCFF00 1px, transparent 1px)`,
           backgroundSize: "40px 40px",
         }}
       />

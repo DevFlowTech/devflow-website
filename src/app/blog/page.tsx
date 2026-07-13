@@ -5,8 +5,9 @@ import { blogPosts } from "@/data/blogData";
 import BlogCard from "@/components/blog/BlogCard";
 
 export const metadata: Metadata = {
-  title:
-    "Tech Blog - Latest Insights on AI, Web Development & Software Engineering | DevFlow",
+  title: {
+    absolute: "Tech Blog - Latest Insights on AI, Web Development & Software Engineering | DevFlow",
+  },
   description:
     "Explore expert insights on AI integration, web development, custom software, and digital transformation. Stay updated with the latest tech trends and best practices.",
   keywords: [

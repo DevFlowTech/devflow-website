@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 
 interface TextScrambleProps {
   text: string;
@@ -21,25 +21,7 @@ export default function TextScramble({
   const ref = useRef<HTMLSpanElement>(null);
   const hasAnimated = useRef(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated.current) {
-          hasAnimated.current = true;
-          scramble();
-        }
-      },
-      { threshold: 0.5 },
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [text]);
-
-  const scramble = () => {
+  const scramble = useCallback(() => {
     setIsScrambling(true);
     let iteration = 0;
     const maxIterations = text.length * 3;
@@ -66,7 +48,25 @@ export default function TextScramble({
         setIsScrambling(false);
       }
     }, scrambleDuration / maxIterations);
-  };
+  }, [text, scrambleDuration]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true;
+          scramble();
+        }
+      },
+      { threshold: 0.5 },
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [text, scramble]);
 
   return (
     <motion.span

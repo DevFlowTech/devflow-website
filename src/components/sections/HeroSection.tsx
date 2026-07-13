@@ -1,147 +1,174 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
+import { useRef, useState, useEffect } from "react";
 import {
-  fadeUp,
   staggerContainer,
   staggerItem,
-  viewportOnce,
   arrowSlide,
   easeOut,
 } from "@/lib/motion";
 import MagneticButton from "@/components/ui/MagneticButton";
-import FloatingElements from "@/components/ui/FloatingElements";
-import Typewriter from "@/components/ui/Typewriter";
 import AnimatedGradientBackground from "@/components/ui/AnimatedGradientBackground";
 import InteractiveGrid from "@/components/ui/InteractiveGrid";
 import HeroMockup from "@/components/ui/HeroMockup";
 import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
-
-const trustSignals = [
-  { text: "Engineering-first approach" },
-  { text: "In-house development" },
-  { text: "India & international clients" },
-];
-
-const quickServices = [
-  { label: "Business Websites", href: "#services" },
-  { label: "Web Applications", href: "#services" },
-  { label: "Internal Tools", href: "#services" },
-  { label: "Custom Software", href: "#services" },
-];
+import FloatingParticles from "@/components/ui/FloatingParticles";
 
 export default function HeroSection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  // Track global viewport scroll progress on the hero component
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+
+  const [prefersReduced, setPrefersReduced] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setPrefersReduced(mediaQuery.matches);
+    
+    const listener = (event: MediaQueryListEvent) => {
+      setPrefersReduced(event.matches);
+    };
+    mediaQuery.addEventListener("change", listener);
+    return () => mediaQuery.removeEventListener("change", listener);
+  }, []);
+
+  // GPU-optimized parallax scroll transformations
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
+  const textY = useTransform(scrollYProgress, [0, 0.75], [0, -50]);
+  const mockupY = useTransform(scrollYProgress, [0, 0.75], [0, -75]);
+  const mockupScale = useTransform(scrollYProgress, [0, 0.75], [1, 1.03]);
+
+  // Bind values conditionally to respect reduced motion options
+  const finalBackgroundY = prefersReduced ? "0%" : backgroundY;
+  const finalTextOpacity = prefersReduced ? 1 : textOpacity;
+  const finalTextY = prefersReduced ? 0 : textY;
+  const finalMockupY = prefersReduced ? 0 : mockupY;
+  const finalMockupScale = prefersReduced ? 1 : mockupScale;
+
   return (
     <section
+      ref={containerRef}
       id="hero"
-      className="relative min-h-[90vh] flex items-center justify-center bg-devflow-black pt-32 pb-20 overflow-hidden"
+      className="relative min-h-screen flex items-center bg-devflow-black pt-32 pb-20 overflow-hidden"
     >
-      {/* Animated Gradient Background */}
+      {/* Animated Background layers */}
       <AnimatedGradientBackground />
-
-      <BackgroundBeams className="opacity-50" />
-
-      {/* Interactive Grid */}
+      <BackgroundBeams className="opacity-30" />
       <InteractiveGrid />
 
-      {/* Background Gradients */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(186,230,84,0.08),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(10,10,10,0)_0%,rgba(10,10,10,1)_100%)]" />
+      {/* Radial glow and shadow gradients */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_35%,rgba(204,255,0,0.04),transparent_40%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]" />
 
-      {/* Floating Animated Elements */}
-      <FloatingElements />
+      {/* Uploaded Green Wave Background Visual Layer - motion enabled for parallax scroll */}
+      <motion.div 
+        className="absolute inset-0 bg-cover bg-center opacity-[0.25] pointer-events-none z-0"
+        style={{
+          backgroundImage: "url('/hero-green-wave.jpg')",
+          y: finalBackgroundY,
+        }}
+      />
+      {/* Edge blending overlays - fades harsh left vertical and bottom horizontal borders */}
+      <div className="absolute inset-0 bg-gradient-to-r from-devflow-black/70 via-devflow-black/50 to-transparent w-full pointer-events-none z-[1] md:from-devflow-black md:via-devflow-black/90 md:w-3/4" />
+      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-devflow-black via-devflow-black/80 to-transparent h-[450px] pointer-events-none z-[1]" />
 
-      <div className="section-container relative z-10 flex flex-col items-center text-center">
+      {/* Falling green snow particles sprinkling overlay */}
+      <FloatingParticles count={50} mode="snow" />
+
+      <div className="section-container relative z-10 w-full">
         <motion.div
-          className="max-w-5xl mx-auto"
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
         >
-          {/* Badge */}
-          <motion.div
-            variants={staggerItem}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-devflow-green/20 bg-devflow-green/[0.05] mb-8 backdrop-blur-sm shadow-lg shadow-devflow-green/5"
+          {/* Left Column: Asymmetrical typography layout */}
+          <motion.div 
+            className="lg:col-span-7 space-y-8"
+            style={{
+              opacity: finalTextOpacity,
+              y: finalTextY,
+            }}
           >
-            <span className="w-2 h-2 rounded-full bg-devflow-green animate-breathing-glow" />
-            <span className="text-sm font-medium text-devflow-green tracking-wider uppercase">
-              Engineering-First IT Partner
-            </span>
-          </motion.div>
-          {/* Headline */}
-          <motion.h1
-            variants={staggerItem}
-            className="font-display text-4xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] tracking-tight mb-8 md:mb-10 text-shadow-soft"
-          >
-            We Build <br className="hidden md:block" />
-            <span className="text-devflow-green">
-              <Typewriter
-                words={[
-                  "Web Applications",
-                  "AI Solutions",
-                  "Mobile Apps",
-                  "Custom Software",
-                  "Cloud Systems",
-                ]}
-                typingSpeed={80}
-                deletingSpeed={40}
-                delayBetweenWords={2500}
-              />
-            </span>
-          </motion.h1>
-          {/* Subheadline */}
-          <motion.p
-            variants={staggerItem}
-            className="text-base md:text-xl text-devflow-gray-300 max-w-3xl mx-auto mb-8 md:mb-10 leading-relaxed font-light"
-          >
-            We build high-performance software with engineering precision. From{" "}
-            <span className="text-white font-medium">Web Apps</span> to{" "}
-            <span className="text-white font-medium">AI Solutions</span>, we
-            scale effective digital products that drive business growth.
-          </motion.p>
-          {/* CTAs */}
-          <motion.div
-            variants={staggerItem}
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-12 md:mb-16"
-          >
-            <MagneticButton>
-              <Link href="#contact" className="btn-primary min-w-[180px] md:min-w-[200px]">
-                Talk to Our Experts
-                <motion.svg
-                  variants={arrowSlide}
-                  className="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2.5}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </motion.svg>
-              </Link>
-            </MagneticButton>
+            {/* Monospaced indicator */}
+            <motion.div
+              variants={staggerItem}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-white/5 bg-devflow-charcoal text-xs font-mono tracking-widest uppercase text-devflow-gray-300"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-devflow-green animate-breathing-glow" />
+              [ 01 // SOFTWARE ENGINEERING ]
+            </motion.div>
 
-            <MagneticButton>
-              <Link href="#services" className="btn-secondary min-w-[180px] md:min-w-[200px]">
-                Explore Our Work
-              </Link>
-            </MagneticButton>
+            {/* Serif Editorial Headline */}
+            <motion.h1
+              variants={staggerItem}
+              className="font-display text-4xl md:text-6xl lg:text-[4.75rem] font-medium text-white leading-[1.1] tracking-tight"
+            >
+              Building clean, <br />
+              <span className="italic font-normal text-devflow-green font-display">operational software</span> <br />
+              for scaling startups.
+            </motion.h1>
+
+            {/* Subtext description */}
+            <motion.p
+              variants={staggerItem}
+              className="text-base md:text-lg text-devflow-gray-300 leading-relaxed font-light max-w-2xl"
+            >
+              We are a focused technical partner. We design and build high-performance Web Applications, bespoke ERP systems, and automated operational pipelines. No generic templates, no AI buzzwords. Just robust code.
+            </motion.p>
+
+            {/* CTA Actions */}
+            <motion.div
+              variants={staggerItem}
+              className="flex flex-col sm:flex-row items-start gap-4 pt-4"
+            >
+              <MagneticButton>
+                <Link href="/contact" className="btn-primary min-w-[200px]">
+                  Start Your Discovery
+                  <motion.svg
+                    variants={arrowSlide}
+                    className="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2.5}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </motion.svg>
+                </Link>
+              </MagneticButton>
+
+              <MagneticButton>
+                <Link href="/work" className="btn-secondary min-w-[200px]">
+                  View Our Portfolio
+                </Link>
+              </MagneticButton>
+            </motion.div>
           </motion.div>
-          {/* Trust Strip */}
-          <motion.div
-            variants={staggerItem}
-            className="flex flex-col items-center gap-4 border-t border-white/[0.08] pt-8 md:pt-10"
+
+          {/* Right Column: Code/Deployment Mockup visual */}
+          <motion.div 
+            className="lg:col-span-5 w-full relative"
+            style={{
+              y: finalMockupY,
+              scale: finalMockupScale,
+            }}
           >
-            <p className="text-xs md:text-sm font-medium text-devflow-gray-400 uppercase tracking-widest">
-              Trusted by Innovative Companies
-            </p>
+            <motion.div variants={staggerItem} className="w-full">
+              <HeroMockup />
+            </motion.div>
           </motion.div>
-          {/* Hero Mockup - Laptop Visual */}
-          <HeroMockup />
         </motion.div>
       </div>
     </section>

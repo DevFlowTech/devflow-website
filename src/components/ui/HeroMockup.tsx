@@ -33,80 +33,82 @@ export default function HeroMockup() {
 
           {/* Screen Content */}
           <div className="p-4 h-48 md:h-56 bg-gradient-to-br from-devflow-dark to-devflow-black">
-            {/* Code Lines - staggered fade-in */}
             <div className="space-y-2">
-              <motion.div
-                className="flex items-center gap-2"
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.6 }}
-              >
-                <span className="text-purple-400 font-mono text-xs">const</span>
-                <span className="text-blue-400 font-mono text-xs">app</span>
-                <span className="text-white font-mono text-xs">=</span>
-                <span className="text-yellow-400 font-mono text-xs">
-                  createApp
-                </span>
-                <span className="text-devflow-gray-400 font-mono text-xs">
-                  ();
-                </span>
-              </motion.div>
-
-              <motion.div
-                className="flex items-center gap-2"
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.8 }}
-              >
-                <span className="text-purple-400 font-mono text-xs">await</span>
-                <span className="text-blue-400 font-mono text-xs">deploy</span>
-                <span className="text-devflow-gray-400 font-mono text-xs">
-                  (
-                </span>
-                <span className="text-devflow-green font-mono text-xs">
-                  'production'
-                </span>
-                <span className="text-devflow-gray-400 font-mono text-xs">
-                  );
-                </span>
-              </motion.div>
-
-              <motion.div
-                className="flex items-center gap-2 mt-4"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.2 }}
-              >
-                <span className="text-devflow-green font-mono text-xs">✓</span>
-                <span className="text-devflow-green font-mono text-xs">
-                  Deployed successfully!
-                </span>
-              </motion.div>
-            </div>
-
-            {/* Dashboard Preview Elements */}
-            <div className="mt-4 grid grid-cols-3 gap-2">
-              {[
-                { label: "SPEED", value: "99" },
-                { label: "UPTIME", value: "100" },
-                { label: "SCALE", value: "10x" },
-              ].map((item, i) => (
+              {/* Code Lines - staggered fade-in */}
+              <div>
                 <motion.div
-                  key={item.label}
-                  className="p-1.5 md:p-2 rounded-lg bg-white/[0.03] border border-white/[0.05] flex flex-col items-center justify-center text-center"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1.4 + i * 0.1 }}
+                  className="flex items-center gap-2"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.6 }}
                 >
-                  <span className="text-[10px] md:text-xs font-bold text-white mb-0.5">
-                    {item.value}
-                    {item.label !== "SCALE" && "%"}
+                  <span className="text-purple-400 font-mono text-xs">const</span>
+                  <span className="text-blue-400 font-mono text-xs">app</span>
+                  <span className="text-white font-mono text-xs">=</span>
+                  <span className="text-yellow-400 font-mono text-xs">
+                    createApp
                   </span>
-                  <span className="text-[6px] md:text-[8px] text-devflow-green tracking-tighter uppercase font-medium">
-                    {item.label}
+                  <span className="text-devflow-gray-400 font-mono text-xs">
+                    ();
                   </span>
                 </motion.div>
-              ))}
+
+                <motion.div
+                  className="flex items-center gap-2"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.8 }}
+                >
+                  <span className="text-purple-400 font-mono text-xs">await</span>
+                  <span className="text-blue-400 font-mono text-xs">deploy</span>
+                  <span className="text-devflow-gray-400 font-mono text-xs">
+                    (
+                  </span>
+                  <span className="text-devflow-green font-mono text-xs">
+                    &apos;production&apos;
+                  </span>
+                  <span className="text-devflow-gray-400 font-mono text-xs">
+                    );
+                  </span>
+                </motion.div>
+
+                <motion.div
+                  className="flex items-center gap-2 mt-4"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1.2 }}
+                >
+                  <span className="text-devflow-green font-mono text-xs">✓</span>
+                  <span className="text-devflow-green font-mono text-xs">
+                    Deployed successfully!
+                  </span>
+                </motion.div>
+              </div>
+
+              {/* Dashboard Preview Elements */}
+              <div className="mt-4 grid grid-cols-3 gap-2">
+                {[
+                  { label: "SPEED", value: "99" },
+                  { label: "UPTIME", value: "100" },
+                  { label: "SCALE", value: "10x" },
+                ].map((item, i) => (
+                  <motion.div
+                    key={item.label}
+                    className="p-1.5 md:p-2 rounded-lg bg-white/[0.03] border border-white/[0.05] flex flex-col items-center justify-center text-center"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 1.4 + i * 0.1 }}
+                  >
+                    <span className="text-[10px] md:text-xs font-bold text-white mb-0.5">
+                      {item.value}
+                      {item.label !== "SCALE" && "%"}
+                    </span>
+                    <span className="text-[6px] md:text-[8px] text-devflow-green tracking-tighter uppercase font-medium">
+                      {item.label}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

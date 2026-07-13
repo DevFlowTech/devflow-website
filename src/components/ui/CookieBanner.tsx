@@ -68,7 +68,7 @@ export default function CookieBanner() {
                                         <p className="text-devflow-gray-300 text-xs md:text-sm leading-relaxed">
                                             This website stores cookies on your computer. These cookies are used to improve your experience and provide more personalized services. To find out more, see our <a href="/privacy" className="text-devflow-green hover:underline">Privacy Policy</a>.
                                             <br /><br className="hidden md:block" />
-                                            We won't track your information, but to comply with your preferences, we'll use one tiny cookie so you're not asked again.
+                                            We won&apos;t track your information, but to comply with your preferences, we&apos;ll use one tiny cookie so you&apos;re not asked again.
                                         </p>
                                     </div>
                                 </div>

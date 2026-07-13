@@ -1,40 +1,77 @@
 @import "tailwindcss";
 
-/* Aggressively hide system cursor site-wide */
-html,
-body,
-* {
-  cursor: none !important;
-}
-
 
 :root {
-  /* Mapping everything to Poppins as requested */
-  --font-inter: var(--font-poppins), system-ui, sans-serif;
-  --font-outfit: var(--font-poppins), system-ui, sans-serif;
-  --font-jetbrains: var(--font-jetbrains), monospace;
+  /* Mapping styles to the new font variables */
+  --font-inter: var(--font-sans), system-ui, sans-serif;
+  --font-outfit: var(--font-serif), serif;
+  --font-jetbrains: var(--font-mono), monospace;
 
   /* Custom properties for dynamic theming */
-  --green-pulse: #bae654;
-  --green-glow: rgba(186, 230, 84, 0.3);
-  --surface-primary: #0a0a0a;
-  --surface-elevated: #121212;
-  --surface-card: #1a1a1a;
-  --border-subtle: rgba(255, 255, 255, 0.06);
-  --border-accent: rgba(186, 230, 84, 0.2);
+  --accent-pulse: #CCFF00;
+  --accent-glow: rgba(204, 255, 0, 0.15);
+  --surface-primary: #000000;
+  --surface-elevated: #0d0d0f;
+  --surface-card: rgba(13, 13, 15, 0.5);
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  --border-accent: rgba(204, 255, 0, 0.1);
 
   /* DevFlow Colors */
-  --devflow-black: #0a0a0a;
-  --devflow-charcoal: #121212;
-  --devflow-dark: #1a1a1a;
-  --devflow-green: #bae654;
+  --devflow-black: #000000;
+  --devflow-charcoal: #0d0d0f;
+  --devflow-dark: #121214;
+  --devflow-blue: #CCFF00;
+  --devflow-green: #CCFF00;
+  --devflow-gold: #FFFFFF;
   --devflow-gray-100: #e5e5e5;
   --devflow-gray-200: #b3b3b3;
-  /* Brightened slightly for better WCAG contrast */
   --devflow-gray-300: #a3a3a3;
   --devflow-gray-400: #737373;
   --devflow-gray-500: #2d2d2d;
   --devflow-gray-600: #1f1f1f;
+}
+
+/* VisionOS Glass Panel styling */
+.glass-panel {
+  background: rgba(13, 13, 15, 0.5) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 
+    0 30px 60px -15px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease !important;
+}
+
+.glass-panel:hover {
+  border-color: rgba(204, 255, 0, 0.2) !important;
+  box-shadow: 
+    0 40px 80px -10px rgba(0, 0, 0, 0.9),
+    0 0 25px rgba(204, 255, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Aurora Background Gradients */
+.aurora-bg-blue {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(204, 255, 0, 0.03) 0%, rgba(204, 255, 0, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.aurora-bg-gold {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  will-change: transform;
 }
 
 /* Base styles */
@@ -98,8 +135,8 @@ h6 {
   gap: 0.5rem;
   height: 48px;
   padding: 0 1.75rem;
-  background: linear-gradient(135deg, var(--devflow-green) 0%, #c8f062 100%);
-  color: var(--devflow-black);
+  background: linear-gradient(135deg, var(--devflow-green) 0%, #b8e600 100%) !important;
+  color: #000000 !important;
   font-family: var(--font-inter);
   font-weight: 600;
   font-size: 0.9375rem;
@@ -115,15 +152,15 @@ h6 {
     transform 0.25s ease,
     box-shadow 0.25s ease;
   box-shadow:
-    0 2px 12px rgba(186, 230, 84, 0.2),
-    0 0 0 0 rgba(186, 230, 84, 0);
+    0 2px 12px rgba(204, 255, 0, 0.2),
+    0 0 0 0 rgba(204, 255, 0, 0) !important;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow:
-    0 6px 24px rgba(186, 230, 84, 0.35),
-    0 0 0 1px rgba(186, 230, 84, 0.3);
+    0 6px 24px rgba(204, 255, 0, 0.35),
+    0 0 0 1px rgba(204, 255, 0, 0.3) !important;
 }
 
 .btn-primary:active {
@@ -478,28 +515,29 @@ h6 {
    PREMIUM ANIMATIONS & EFFECTS
    ======================================== */
 
-/* Hide default cursor globally for pure custom cursor experience */
-* {
-  cursor: none !important;
+/* Custom cursor - only hide default cursor on desktop where PremiumCursor is shown */
+@media (pointer: fine) {
+  .custom-cursor-active * {
+    cursor: none !important;
+  }
+  
+  .custom-cursor-active a,
+  .custom-cursor-active button,
+  .custom-cursor-active [role="button"],
+  .custom-cursor-active input,
+  .custom-cursor-active textarea,
+  .custom-cursor-active select,
+  .custom-cursor-active input[type="text"],
+  .custom-cursor-active input[type="email"] {
+    cursor: none !important;
+  }
 }
 
-body {
-  cursor: none !important;
-}
-
-a,
-button,
-[role="button"],
-input,
-textarea,
-select {
-  cursor: none !important;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  cursor: none !important;
+/* On touch devices, always show default cursors */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
 }
 
 /* Smooth page transitions */
@@ -844,15 +882,36 @@ html.is-animating {
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(-25%);
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-25%);
+  }
+
+  to {
+    transform: translateX(0);
   }
 }
 
 .animate-marquee {
-  animation: marquee 30s linear infinite;
+  animation-name: marquee;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
-.animate-marquee:hover {
+.animate-marquee-reverse {
+  animation-name: marquee-reverse;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee-reverse:hover {
   animation-play-state: paused;
 }
 
@@ -1349,4 +1408,17 @@ ul.premium-list li::before {
       rgba(186, 230, 84, 0.3),
       transparent,
       rgba(186, 230, 84, 0.1));
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: scroll !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
 }

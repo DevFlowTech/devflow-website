@@ -25,12 +25,16 @@ export async function generateMetadata({
 
   if (!post) {
     return {
-      title: "Post Not Found",
+      title: {
+        absolute: "Post Not Found | DevFlow Blog",
+      },
     };
   }
 
   return {
-    title: `${post.title} | DevFlow Blog`,
+    title: {
+      absolute: `${post.title} | DevFlow Blog`,
+    },
     description: post.metaDescription,
     keywords: post.keywords,
     openGraph: {

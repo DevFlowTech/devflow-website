@@ -1,4 +1,4 @@
-import { Poppins, JetBrains_Mono } from "next/font/google";
+import { Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
@@ -8,22 +8,28 @@ import StructuredData from "@/components/SEO/StructuredData";
 import BackToTop from "@/components/ui/BackToTop";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import PremiumCursor from "@/components/ui/PremiumCursor";
-import StickyDotNav from "@/components/ui/StickyDotNav";
 import FloatingContact from "@/components/ui/FloatingContact";
 import CookieBanner from "@/components/ui/CookieBanner";
 
 // Optimize fonts using next/font
-const poppins = Poppins({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-serif",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-sans",
   display: "swap",
 });
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "500"],
-  variable: "--font-jetbrains",
+  variable: "--font-mono",
   display: "swap",
 });
 
@@ -237,22 +243,19 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`scroll-smooth ${poppins.variable} ${jetbrainsMono.variable}`}
+      className={`scroll-smooth ${playfair.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <head>
         {/* DNS prefetch for potential external resources */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
-      <body className={`${poppins.className} antialiased`}>
+      <body className={`${inter.className} antialiased custom-cursor-active`}>
         {/* Scroll Progress Bar */}
         <ScrollProgress />
 
         {/* Premium Custom Cursor */}
         <PremiumCursor />
-
-        {/* Sticky Section Navigation */}
-        <StickyDotNav />
 
         {/* Structured Data for SEO */}
         <StructuredData />

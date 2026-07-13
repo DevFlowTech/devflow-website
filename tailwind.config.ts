@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Deep black / charcoal base
-        "devflow-black": "#0A0A0A",
+        // Deep pure black / charcoal base
+        "devflow-black": "#000000",
         "devflow-charcoal": "#121212",
         "devflow-dark": "#1A1A1A",
         "devflow-gray": {
@@ -22,25 +22,51 @@ const config: Config = {
           600: "#1F1F1F",
           700: "#161616",
         },
-        // Electric / lime green accent
+        // Mapping green/blue colors to Electric Blue for styling compatibility
         "devflow-green": {
-          DEFAULT: "#bae654",
-          50: "#f8fce8",
-          100: "#f0f9c4",
-          200: "#e4f48f",
-          300: "#d4ed5c",
-          400: "#c6e73a",
-          500: "#bae654",
-          600: "#a5cc40",
-          700: "#8ab332",
-          800: "#6f9926",
-          900: "#4a6619",
+          DEFAULT: "#00F0FF",
+          50: "#e5fdff",
+          100: "#b3f9ff",
+          200: "#80f5ff",
+          300: "#4df1ff",
+          400: "#1aedff",
+          500: "#00F0FF",
+          600: "#00c0cc",
+          700: "#009099",
+          800: "#006066",
+          900: "#003033",
+        },
+        "devflow-blue": {
+          DEFAULT: "#00F0FF",
+          50: "#e5fdff",
+          100: "#b3f9ff",
+          200: "#80f5ff",
+          300: "#4df1ff",
+          400: "#1aedff",
+          500: "#00F0FF",
+          600: "#00c0cc",
+          700: "#009099",
+          800: "#006066",
+          900: "#003033",
+        },
+        "devflow-gold": {
+          DEFAULT: "#D4AF37",
+          50: "#faf6e7",
+          100: "#f3e7c3",
+          200: "#edd89f",
+          300: "#e6c97a",
+          400: "#e0ba56",
+          500: "#D4AF37",
+          600: "#aa8c2c",
+          700: "#806921",
+          800: "#554616",
+          900: "#2a230b",
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["var(--font-outfit)", "system-ui", "sans-serif"],
-        mono: ["var(--font-jetbrains)", "monospace"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-serif)", "serif"],
+        mono: ["var(--font-mono)", "monospace"],
       },
       fontSize: {
         "display-xl": [
