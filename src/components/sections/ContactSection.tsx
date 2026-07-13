@@ -35,7 +35,7 @@ export default function ContactSection() {
         body["g-recaptcha-response"] = recaptchaToken;
       }
 
-      const response = await fetch("https://formspree.io/f/xjgeyvve", {
+      const response = await fetch("https://formspree.io/f/meeyqenk", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
