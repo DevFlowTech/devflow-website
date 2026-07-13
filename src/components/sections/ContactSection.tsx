@@ -11,6 +11,7 @@ import {
 import TextScramble from "@/components/ui/TextScramble";
 import BackgroundText from "@/components/ui/BackgroundText";
 import MagneticButton from "@/components/ui/MagneticButton";
+import ReCaptcha from "@/components/ui/ReCaptcha";
 
 export default function ContactSection() {
   const [formState, setFormState] = useState({
@@ -21,19 +22,25 @@ export default function ContactSection() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      // Submit to Formspree
+      // Submit to Formspree with reCAPTCHA token if available
+      const body: Record<string, unknown> = { ...formState };
+      if (recaptchaToken) {
+        body["g-recaptcha-response"] = recaptchaToken;
+      }
+
       const response = await fetch("https://formspree.io/f/xjgeyvve", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formState),
+        body: JSON.stringify(body),
       });
 
       if (response.ok) {
@@ -214,6 +221,11 @@ export default function ContactSection() {
                     className="w-full px-4 py-3.5 bg-devflow-dark border border-white/[0.08] rounded-lg text-white placeholder:text-devflow-gray-600 focus:outline-none focus:border-devflow-green/40 transition-colors duration-150 resize-none"
                     placeholder="What operational challenges are you facing? What does success look like?"
                   />
+                </div>
+
+                {/* reCAPTCHA */}
+                <div className="mt-6 mb-4">
+                  <ReCaptcha onChange={setRecaptchaToken} />
                 </div>
 
                 <MagneticButton className="w-full">

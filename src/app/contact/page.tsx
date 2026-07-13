@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { fadeUp, staggerContainer, easeOut } from "@/lib/motion";
+import ReCaptcha from "@/components/ui/ReCaptcha";
 
 const services = ["AI Automation", "Web Development", "Mobile App", "UI/UX Design", "Custom ERP", "Other"];
 const budgets = ["Under ₹1L", "₹1L - ₹5L", "₹5L - ₹10L", "₹10L+"];
@@ -15,6 +16,8 @@ export default function ContactPage() {
   const [selectedBudget, setSelectedBudget] = useState("");
   const [notes, setNotes] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
   const [error, setError] = useState("");
 
   const handleNext = () => {
@@ -48,17 +51,38 @@ export default function ContactPage() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    // Persist details locally or log them
-    console.log({
-      name,
-      email,
-      service: selectedService,
-      budget: selectedBudget,
-      notes,
-    });
+    setIsSubmitting(true);
+    setError("");
+
+    try {
+      const response = await fetch("https://formspree.io/f/xjgeyvve", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          service: selectedService,
+          budget: selectedBudget,
+          notes,
+          _subject: `New Project Inquiry from ${name}`,
+          _replyto: email,
+          ...(recaptchaToken ? { "g-recaptcha-response": recaptchaToken } : {}),
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again or email us directly.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setError("Something went wrong. Please try again or email us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -186,6 +210,13 @@ export default function ContactPage() {
                   </p>
                 )}
 
+                {/* reCAPTCHA - only on final step */}
+                {step === 5 && (
+                  <div className="pt-4">
+                    <ReCaptcha onChange={setRecaptchaToken} />
+                  </div>
+                )}
+
                 {/* Navigation Actions */}
                 <div className="flex justify-between items-center pt-8 border-t border-white/[0.05]">
                   {step > 1 ? (
@@ -211,9 +242,10 @@ export default function ContactPage() {
                   ) : (
                     <button
                       type="submit"
-                      className="btn-primary py-2.5 px-8 font-semibold animate-pulse-green"
+                      disabled={isSubmitting}
+                      className="btn-primary py-2.5 px-8 font-semibold"
                     >
-                      Submit Discovery Form
+                      {isSubmitting ? "Sending..." : "Submit Discovery Form"}
                     </button>
                   )}
                 </div>
