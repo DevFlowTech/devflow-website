@@ -19,9 +19,16 @@ const organizationSchema = {
     {
       "@type": "Person",
       name: "Prince Gajjar",
-      jobTitle: "Founder & Owner",
+      jobTitle: "CEO & Co-Founder",
       url: "https://devflow.co.in/about",
       sameAs: ["https://github.com/princegajjar", "https://linkedin.com/in/princegajjar"],
+    },
+    {
+      "@type": "Person",
+      name: "Bhavin Rajput",
+      jobTitle: "CTO & Co-Founder",
+      url: "https://devflow.co.in/about",
+      sameAs: ["https://linkedin.com/in/bhavinrajput"],
     },
   ],
   sameAs: [

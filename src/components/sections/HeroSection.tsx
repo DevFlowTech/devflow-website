@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 import {
@@ -10,11 +11,25 @@ import {
   easeOut,
 } from "@/lib/motion";
 import MagneticButton from "@/components/ui/MagneticButton";
-import AnimatedGradientBackground from "@/components/ui/AnimatedGradientBackground";
-import InteractiveGrid from "@/components/ui/InteractiveGrid";
 import HeroMockup from "@/components/ui/HeroMockup";
-import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
-import FloatingParticles from "@/components/ui/FloatingParticles";
+
+// Dynamically import heavy background effect components
+const AnimatedGradientBackground = dynamic(
+  () => import("@/components/ui/AnimatedGradientBackground"),
+  { ssr: false }
+);
+const InteractiveGrid = dynamic(
+  () => import("@/components/ui/InteractiveGrid"),
+  { ssr: false }
+);
+const BackgroundBeams = dynamic(
+  () => import("@/components/ui/BackgroundBeams").then((mod) => ({ default: mod.BackgroundBeams })),
+  { ssr: false }
+);
+const FloatingParticles = dynamic(
+  () => import("@/components/ui/FloatingParticles"),
+  { ssr: false }
+);
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -58,7 +73,7 @@ export default function HeroSection() {
       id="hero"
       className="relative min-h-screen flex items-center bg-devflow-black pt-32 pb-20 overflow-hidden"
     >
-      {/* Animated Background layers */}
+      {/* Animated Background layers (lazy loaded) */}
       <AnimatedGradientBackground />
       <BackgroundBeams className="opacity-30" />
       <InteractiveGrid />
@@ -79,7 +94,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-devflow-black/70 via-devflow-black/50 to-transparent w-full pointer-events-none z-[1] md:from-devflow-black md:via-devflow-black/90 md:w-3/4" />
       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-devflow-black via-devflow-black/80 to-transparent h-[450px] pointer-events-none z-[1]" />
 
-      {/* Falling green snow particles sprinkling overlay */}
+      {/* Falling green snow particles sprinkling overlay (lazy loaded) */}
       <FloatingParticles count={50} mode="snow" />
 
       <div className="section-container relative z-10 w-full">

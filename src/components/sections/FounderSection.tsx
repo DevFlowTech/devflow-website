@@ -7,20 +7,20 @@ import { staggerContainer, staggerItem, viewportOnce } from "@/lib/motion";
 const founders = [
   {
     name: "Prince Gajjar",
-    role: "Founder & Lead Engineer",
-    code: "[ CEO // ARCHITECT ]",
+    role: "CEO & Co-Founder",
+    code: "[ CEO // GROWTH ]",
     description:
-      "Prince founded DevFlow with a vision to build software that truly works — no bloat, no shortcuts. With years of hands-on engineering experience across enterprise systems, web platforms, and AI integration, he architects every project with precision. Prince believes in clean code, direct communication, and absolute technical ownership.",
+      "Prince handles client acquisition and strategic outreach, ensuring every partnership starts with a clear understanding of the business goals. He aligns project outcomes with commercial objectives, so you get software that drives real revenue impact — not just technical features.",
     image: "/prince.jpg",
     initial: "P",
     accent: "from-devflow-green to-emerald-400",
   },
   {
     name: "Bhavin Rajput",
-    role: "Co-Founder & Operations Lead",
-    code: "[ COO // STRATEGY ]",
+    role: "CTO & Co-Founder",
+    code: "[ CTO // ENGINEERING ]",
     description:
-      "Bhavin brings operational rigor and strategic clarity to every engagement. He ensures that projects stay on track, teams communicate clearly, and clients always know where things stand. His background in managing complex workflows and client relationships means your project gets the structure it deserves — delivered on time and within scope.",
+      "Bhavin leads all development and technical architecture at DevFlow. He oversees the full engineering lifecycle — from system design and tech stack selection to deployment and infrastructure. With deep expertise in modern frameworks, cloud systems, and AI integration, he ensures every product is built with clean, scalable, and maintainable code.",
     image: "/bhavin.jpg",
     initial: "B",
     accent: "from-blue-500 to-cyan-400",

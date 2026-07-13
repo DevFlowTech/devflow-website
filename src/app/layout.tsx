@@ -1,5 +1,6 @@
 import { Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
 import type { Metadata, Viewport } from "next";
+import dynamic from "next/dynamic";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -7,9 +8,13 @@ import PageWrapper from "@/components/layout/PageWrapper";
 import StructuredData from "@/components/SEO/StructuredData";
 import BackToTop from "@/components/ui/BackToTop";
 import ScrollProgress from "@/components/ui/ScrollProgress";
-import PremiumCursor from "@/components/ui/PremiumCursor";
 import FloatingContact from "@/components/ui/FloatingContact";
-import CookieBanner from "@/components/ui/CookieBanner";
+
+// Dynamically import heavy components that are not in the initial viewport
+// Note: layout is a Server Component, so ssr: false is not available
+// These are still code-split into separate chunks for better caching
+const PremiumCursor = dynamic(() => import("@/components/ui/PremiumCursor"));
+const CookieBanner = dynamic(() => import("@/components/ui/CookieBanner"));
 
 // Optimize fonts using next/font
 const playfair = Playfair_Display({
@@ -524,13 +529,6 @@ export const metadata: Metadata = {
         alt: "DevFlow Technology - AI Agency & Web Development Company India",
         type: "image/png",
       },
-      // {
-      //   url: `${siteUrl}/og-image-square.png`,
-      //   width: 600,
-      //   height: 600,
-      //   alt: "DevFlow Technology Logo",
-      //   type: "image/png",
-      // },
     ],
   },
 
@@ -609,7 +607,7 @@ export default function RootLayout({
         {/* Scroll Progress Bar */}
         <ScrollProgress />
 
-        {/* Premium Custom Cursor */}
+        {/* Premium Custom Cursor (dynamically loaded) */}
         <PremiumCursor />
 
         {/* Structured Data for SEO */}
@@ -637,7 +635,10 @@ export default function RootLayout({
         {/* Back to Top Button */}
         <BackToTop />
 
-        {/* Cookie Consent Banner */}
+        {/* Floating Contact Button */}
+        <FloatingContact />
+
+        {/* Cookie Consent Banner (dynamically loaded) */}
         <CookieBanner />
       </body>
     </html>

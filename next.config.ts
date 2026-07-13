@@ -24,6 +24,14 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days cache
   },
 
+  // Reduce bundle size by modularizing icon imports only
+  // framer-motion is excluded as it breaks named imports like { motion }
+  modularizeImports: {
+    "react-icons": {
+      transform: "react-icons/{{member}}",
+    },
+  },
+
   // Security & performance headers
   async headers() {
     return [

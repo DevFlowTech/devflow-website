@@ -361,7 +361,7 @@ h6 {
   text-wrap: balance;
 }
 
-/* Perspective utilities */
+/* Perspective & 3D utilities */
 .perspective-1000 {
   perspective: 1000px;
 }
@@ -370,9 +370,59 @@ h6 {
   perspective: 2000px;
 }
 
-/* Transform style */
-.transform-style-3d {
+.transform-style-3d,
+.preserve-3d {
   transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Scrollbar styling */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Gradient text animation */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Glow effects */
+.glow-green {
+  box-shadow: 0 0 20px rgba(186, 230, 84, 0.3), 0 0 40px rgba(186, 230, 84, 0.2), 0 0 60px rgba(186, 230, 84, 0.1);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3), 0 0 40px rgba(168, 85, 247, 0.2), 0 0 60px rgba(168, 85, 247, 0.1);
+}
+
+/* Subtle background gradient animation */
+@keyframes gradientShift {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.4; }
+  50% { transform: translate(2%, 1%) scale(1.02); opacity: 0.5; }
+  100% { transform: translate(-1%, 2%) scale(1); opacity: 0.4; }
+}
+
+/* Animation timing functions */
+.ease-out-expo {
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Shadow utilities */
@@ -382,11 +432,6 @@ h6 {
 
 .shadow-glow-green-sm {
   box-shadow: 0 0 10px rgba(186, 230, 84, 0.2);
-}
-
-/* Animation timing functions */
-.ease-out-expo {
-  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Custom font sizes */
@@ -515,7 +560,7 @@ h6 {
    PREMIUM ANIMATIONS & EFFECTS
    ======================================== */
 
-/* Custom cursor - only hide default cursor on desktop where PremiumCursor is shown */
+/* Custom cursor - only hide default cursor on desktop */
 @media (pointer: fine) {
   .custom-cursor-active * {
     cursor: none !important;
@@ -535,7 +580,9 @@ h6 {
 
 /* On touch devices, always show default cursors */
 @media (hover: none) and (pointer: coarse) {
-  * {
+  *,
+  .custom-cursor,
+  [data-cursor] {
     cursor: auto !important;
   }
 }
@@ -649,25 +696,6 @@ html.is-animating {
   }
 }
 
-/* Subtle pulse animation */
-@keyframes subtlePulse {
-
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 0.8;
-    transform: scale(1.02);
-  }
-}
-
-.animate-subtle-pulse {
-  animation: subtlePulse 3s ease-in-out infinite;
-}
-
 /* Glow pulse animation */
 @keyframes glowPulse {
 
@@ -709,24 +737,6 @@ html.is-animating {
       transparent);
   background-size: 200% 100%;
   animation: borderFlow 3s linear infinite;
-}
-
-/* Gradient shift animation */
-@keyframes gradientShift {
-
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradientShift 5s ease infinite;
 }
 
 /* Spin slow */
@@ -943,124 +953,9 @@ html.is-animating {
    RESPONSIVE UTILITIES
    ======================================== */
 
-/* Hide cursor on touch devices */
-@media (hover: none) and (pointer: coarse) {
-
-  .custom-cursor,
-  [data-cursor] {
-    display: none !important;
-  }
-}
-
-/* ========================================
-   3D CARD UTILITIES
-   ======================================== */
-
-.perspective-1000 {
-  perspective: 1000px;
-}
-
-.perspective-2000 {
-  perspective: 2000px;
-}
-
-.preserve-3d {
-  transform-style: preserve-3d;
-}
-
-.backface-hidden {
-  backface-visibility: hidden;
-}
-
-.rotate-y-180 {
-  transform: rotateY(180deg);
-}
-
-/* Scrollbar styling */
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-
-/* Gradient text animation */
-@keyframes gradient-shift {
-
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient-shift 3s ease infinite;
-}
-
-/* Glow effect */
-.glow-green {
-  box-shadow:
-    0 0 20px rgba(186, 230, 84, 0.3),
-    0 0 40px rgba(186, 230, 84, 0.2),
-    0 0 60px rgba(186, 230, 84, 0.1);
-}
-
-.glow-purple {
-  box-shadow:
-    0 0 20px rgba(168, 85, 247, 0.3),
-    0 0 40px rgba(168, 85, 247, 0.2),
-    0 0 60px rgba(168, 85, 247, 0.1);
-}
-
-/* Subtle background gradient animation */
-@keyframes gradientShift {
-  0% {
-    transform: translate(0, 0) scale(1);
-    opacity: 0.4;
-  }
-
-  50% {
-    transform: translate(2%, 1%) scale(1.02);
-    opacity: 0.5;
-  }
-
-  100% {
-    transform: translate(-1%, 2%) scale(1);
-    opacity: 0.4;
-  }
-}
-
 /* ========================================
    AESTHETIC REFINEMENTS - PREMIUM POLISH
    ======================================== */
-
-/* Enhanced Typography - More Breathing Room */
-h1 {
-  letter-spacing: -0.03em;
-  font-weight: 700;
-}
-
-h2 {
-  letter-spacing: -0.02em;
-  font-weight: 600;
-}
-
-h3 {
-  letter-spacing: -0.01em;
-  font-weight: 600;
-}
-
-p {
-  letter-spacing: 0.01em;
-  line-height: 1.75;
-}
 
 /* Elegant Section Dividers */
 .section-divider {
@@ -1226,23 +1121,6 @@ select:focus {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--devflow-green);
-}
-
-/* Subtle Pulse Animation */
-@keyframes subtle-pulse {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.7;
-  }
-}
-
-.animate-subtle-pulse {
-  animation: subtle-pulse 3s ease-in-out infinite;
 }
 
 /* Breathing Glow Animation */
