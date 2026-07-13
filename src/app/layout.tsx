@@ -607,7 +607,7 @@ export default function RootLayout({
         {/* Scroll Progress Bar */}
         <ScrollProgress />
 
-        {/* Premium Custom Cursor (dynamically loaded) */}
+        {/* Premium Custom Cursor */}
         <PremiumCursor />
 
         {/* Structured Data for SEO */}
