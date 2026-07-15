@@ -1,4 +1,5 @@
-import { Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import type { Metadata, Viewport } from "next";
 import dynamic from "next/dynamic";
 import "./globals.css";
@@ -16,18 +17,63 @@ import FloatingContact from "@/components/ui/FloatingContact";
 const PremiumCursor = dynamic(() => import("@/components/ui/PremiumCursor"));
 const CookieBanner = dynamic(() => import("@/components/ui/CookieBanner"));
 
-// Optimize fonts using next/font
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-serif",
+// Optimize fonts using local fonts
+const satoshi = localFont({
+  src: [
+    {
+      path: "../../public/fonts/satoshi/Satoshi-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/satoshi/Satoshi-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/satoshi/Satoshi-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/satoshi/Satoshi-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/satoshi/Satoshi-Black.woff2",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-sans",
   display: "swap",
 });
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-sans",
+const neueMontreal = localFont({
+  src: [
+    {
+      path: "../../public/fonts/neue-montreal/PPNeueMontreal-Book.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/neue-montreal/PPNeueMontreal-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/neue-montreal/PPNeueMontreal-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/neue-montreal/PPNeueMontreal-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-serif",
   display: "swap",
 });
 
@@ -596,14 +642,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`scroll-smooth ${playfair.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+      className={`scroll-smooth ${neueMontreal.variable} ${satoshi.variable} ${jetbrainsMono.variable}`}
     >
       <head>
         {/* DNS prefetch for potential external resources */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
-      <body className={`${inter.className} antialiased custom-cursor-active`}>
+      <body className={`${satoshi.className} antialiased custom-cursor-active`}>
         {/* Scroll Progress Bar */}
         <ScrollProgress />
 

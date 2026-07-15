@@ -27,7 +27,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-devflow-black pt-28 pb-16 overflow-hidden">
       {/* Hero Narrative */}
-      <section className="py-20 border-b border-white/[0.04] relative">
+      <section className="pt-20 pb-12 border-b border-white/[0.04] relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(204,255,0,0.03),transparent_50%)] pointer-events-none" />
         <div className="section-container relative z-10 max-w-5xl">
           <motion.div
@@ -57,28 +57,7 @@ export default function AboutPage() {
               We started DevFlow because we noticed a gap in standard development shops: a lack of absolute technical ownership. We don't just build features; we architect robust digital systems that automate operational drag and enable compounding growth.
             </motion.p>
 
-            {/* Key Metrics */}
-            <motion.div
-              variants={staggerItem}
-              className="flex flex-wrap gap-10 md:gap-16 pt-8"
-            >
-              <div className="group">
-                <span className="font-display text-5xl md:text-7xl font-bold text-white group-hover:text-devflow-green transition-colors duration-300">
-                  438+
-                </span>
-                <p className="text-xs font-mono text-devflow-gray-400 uppercase tracking-widest mt-1">
-                  Projects Delivered
-                </p>
-              </div>
-              <div className="group">
-                <span className="font-display text-5xl md:text-7xl font-bold text-white group-hover:text-devflow-green transition-colors duration-300">
-                  300+
-                </span>
-                <p className="text-xs font-mono text-devflow-gray-400 uppercase tracking-widest mt-1">
-                  Happy Clients
-                </p>
-              </div>
-            </motion.div>
+
           </motion.div>
         </div>
       </section>
