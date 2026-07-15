@@ -16,6 +16,10 @@ const footerLinks = {
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
   ],
+  partners: [
+    { label: "Spontanneous", href: "https://spontanneous.com" },
+    { label: "RB Engineering", href: "https://rajputbhavin.engineer" },
+  ],
 };
 
 export default function Footer() {
@@ -32,7 +36,7 @@ export default function Footer() {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
-          <motion.div variants={staggerItem} className="lg:col-span-2">
+          <motion.div variants={staggerItem}>
             <Link href="/" className="inline-block mb-6">
               <Image
                 src="/logo.png"
@@ -42,15 +46,15 @@ export default function Footer() {
                 className="w-36 h-auto object-contain transition-opacity duration-150 hover:opacity-80"
               />
             </Link>
-            <p className="text-devflow-gray-500 max-w-sm mb-6 leading-relaxed">
+            <p className="text-devflow-gray-500 mb-6 leading-relaxed text-sm">
               We build custom internal tools and operational software for
-              scaling startups. Small team. Focused scope. Fast execution.
+              scaling startups.
             </p>
 
             {/* Email */}
             <a
               href="mailto:devflowtechnology@gmail.com"
-              className="text-devflow-green transition-colors duration-150 hover:text-devflow-green/80"
+              className="text-devflow-green transition-colors duration-150 hover:text-devflow-green/80 text-sm block"
             >
               devflowtechnology@gmail.com
             </a>
@@ -75,6 +79,27 @@ export default function Footer() {
             </ul>
           </motion.div>
 
+          {/* Partners Column */}
+          <motion.div variants={staggerItem}>
+            <h4 className="text-xs font-medium text-devflow-gray-500 uppercase tracking-wider mb-6">
+              Official Partners
+            </h4>
+            <ul className="space-y-3">
+              {footerLinks.partners.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-devflow-green transition-colors duration-150 hover:text-white text-sm block"
+                  >
+                    {link.label} &rarr;
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
           {/* Legal + Social Column */}
           <motion.div variants={staggerItem}>
             <h4 className="text-xs font-medium text-devflow-gray-500 uppercase tracking-wider mb-6">
@@ -92,8 +117,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-
-
           </motion.div>
         </div>
 

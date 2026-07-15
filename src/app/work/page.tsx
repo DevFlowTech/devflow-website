@@ -6,7 +6,7 @@ import Link from "next/link";
 import { staggerContainer, staggerItem, viewportOnce } from "@/lib/motion";
 import { projects } from "@/data/projectData";
 
-const categories = ["All", "Enterprise Solutions", "Real Estate", "Corporate Tech", "IT Services", "Web Application"];
+const categories = ["All", ...Array.from(new Set(projects.map((p) => p.category)))];
 
 export default function WorkPage() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -71,9 +71,6 @@ export default function WorkPage() {
           <motion.div
             layout
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
           >
             {filteredProjects.map((project, index) => {
               // Create dynamic bento shape: make the first element span 2 columns
@@ -82,7 +79,9 @@ export default function WorkPage() {
                 <motion.div
                   layout
                   key={project.slug}
-                  variants={staggerItem}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.03, ease: [0.16, 1, 0.3, 1] }}
                   className={`group relative flex flex-col justify-between p-8 rounded-2xl glass-panel ${
                     isLarge ? "md:col-span-2 h-[380px]" : "h-[380px]"
                   }`}

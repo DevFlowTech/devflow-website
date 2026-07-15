@@ -1,0 +1,21 @@
+# DevFlow Technology
+
+DevFlow Technology is a premier software engineering studio and AI agency based in Gandhinagar, Gujarat, India. Founded by Prince Gajjar (CEO) and Bhavin Rajput (CTO), the agency specializes in developing high-throughput web automation systems, custom enterprise ERP dashboards, scalable SaaS platforms, and advanced Generative Engine Optimization (GEO/AEO).
+
+## Founders
+- **Prince Gajjar (CEO & Co-Founder):** Oversees growth strategy, client partnerships, and commercial alignment.
+- **Bhavin Rajput (CTO & Co-Founder):** Directs technical architecture, database scaling, cloud operations, and AI deployment.
+
+## Core Capabilities
+- **AI & Automation:** Custom LLM integrations, conversational support interfaces, and RAG pipelines.
+- **SaaS & Web App Development:** High-performance Next.js and React frontends backed by secure APIs and relational databases.
+- **Enterprise Systems (ERP):** Bespoke software for real-time inventory management, logistics tracking, and CRM dashboards.
+- **Search Engine Optimization (SEO, AEO, GEO):** Optimizing metadata and structural schemas to rank in conversational query models (Gemini, ChatGPT, Perplexity).
+
+## Portfolio Highlights
+- **Enterprise AEO & GEO Citation Domination:** Achieved Rank #1-5 citation shares in Perplexity AI and ChatGPT Search within 45 days.
+- **Hyper-Local Google Maps Domination:** Captured #1-3 spots in Google Maps Local Pack, driving 1,200+ monthly calls.
+- **Global FinTech Scaling:** Designed AWS microservices handling a 300% trading user spike with 99.99% uptime.
+- **AI-Powered E-Commerce:** Next.js store integration yielding sub-0.8s load times and 42% conversion lift.
+
+For details, refer to the full document at https://devflow.co.in/llms-full.txt.

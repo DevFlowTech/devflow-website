@@ -14,8 +14,8 @@ import FloatingContact from "@/components/ui/FloatingContact";
 // Dynamically import heavy components that are not in the initial viewport
 // Note: layout is a Server Component, so ssr: false is not available
 // These are still code-split into separate chunks for better caching
-const PremiumCursor = dynamic(() => import("@/components/ui/PremiumCursor"));
 const CookieBanner = dynamic(() => import("@/components/ui/CookieBanner"));
+const AIChatbot = dynamic(() => import("@/components/ui/AIChatbot"));
 
 // Optimize fonts using local fonts
 const satoshi = localFont({
@@ -649,12 +649,10 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
-      <body className={`${satoshi.className} antialiased custom-cursor-active`}>
+      <body className={`${satoshi.className} antialiased`}>
         {/* Scroll Progress Bar */}
         <ScrollProgress />
 
-        {/* Premium Custom Cursor */}
-        <PremiumCursor />
 
         {/* Structured Data for SEO */}
         <StructuredData />
@@ -683,6 +681,9 @@ export default function RootLayout({
 
         {/* Floating Contact Button */}
         <FloatingContact />
+
+        {/* AI Chatbot Assistant */}
+        <AIChatbot />
 
         {/* Cookie Consent Banner (dynamically loaded) */}
         <CookieBanner />

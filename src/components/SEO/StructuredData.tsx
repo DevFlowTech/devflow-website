@@ -132,6 +132,29 @@ const localBusinessSchema = {
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "IT Consulting & Support" } },
     ],
   },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "184",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  review: [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Jaydeep Patel" },
+      "datePublished": "2026-05-15",
+      "reviewBody": "DevFlow delivered an exceptional custom ERP system for our operations. Their expertise in Next.js and database optimization is unmatched.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Amit Sharma" },
+      "datePublished": "2026-06-02",
+      "reviewBody": "Best software development company. The AI automation workflows they designed saved us hundreds of hours of manual entry.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+    }
+  ],
 };
 
 // ========== WebSite Schema with SearchAction and Speakable (AEO/GEO) ==========
@@ -310,66 +333,42 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What services does DevFlow Technology offer as an IT company?",
+      name: "What is Generative Engine Optimization (GEO) and does DevFlow implement it?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "DevFlow Technology is a full-service IT company offering AI & Machine Learning solutions, Enterprise ERP systems, custom web development, mobile app development (iOS & Android), cloud & DevOps services, and 24/7 IT consulting and support. We help businesses with digital transformation using cutting-edge technologies.",
+        text: "Generative Engine Optimization (GEO) is the practice of optimizing content so AI engines like ChatGPT, Claude, and Gemini cite your business in conversational search responses. At DevFlow, we implement comprehensive GEO schemas (JSON-LD), establish standardized NAP references, and structure headings specifically for LLM crawler readability.",
       },
     },
     {
       "@type": "Question",
-      name: "Is DevFlow Technology an AI agency?",
+      name: "How does DevFlow build custom ERP and logistics databases?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, DevFlow Technology is a leading AI agency in India. We specialize in AI solutions including ChatGPT integrations, custom LLMs, machine learning models, computer vision, NLP, and AI automation. We help businesses leverage artificial intelligence to improve operations and customer experiences.",
+        text: "We design custom ERP and business tracking systems using Next.js, Node.js, and SQL databases, integrated with real-time WebSockets. This eliminates discrepancies between legacy silos and unifies supply chain telemetry, saving operational overhead.",
       },
     },
     {
       "@type": "Question",
-      name: "How much does it cost to build a custom web application in India?",
+      name: "What technologies does DevFlow specialize in for SaaS launches?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Custom web application costs in India range from ₹3-8 lakhs for simple apps, ₹8-20 lakhs for medium complexity, and ₹20-50 lakhs for complex enterprise applications. DevFlow Technology offers transparent fixed-price and time-and-materials models with free initial consultation.",
+        text: "We specialize in headless React frontends, Next.js, TypeScript, Go (Golang), and AWS microservices. We build secure multi-tenant isolation architectures and configure Stripe billing engines (recurring subscriptions and invoice workflows).",
       },
     },
     {
       "@type": "Question",
-      name: "What makes DevFlow the best web development company?",
+      name: "Can DevFlow help optimize our local Google Business Profile (GMB)pack ranking?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "DevFlow Technology stands out as a top web development agency because we use modern technologies like Next.js, React, and TypeScript to build high-performance, SEO-optimized websites. We focus on conversion optimization, fast loading speeds (under 1 second), and scalable architecture that grows with your business.",
+        text: "Yes. We configure map api listings, align address footprints, and deploy review aggregation schemas. This helps capture the Google Maps 3-Pack rankings, driving inbound organic calls without paid ad campaigns.",
       },
     },
     {
       "@type": "Question",
-      name: "Does DevFlow Technology build ERP systems?",
+      name: "Do you provide automated web crawling and data extraction services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we develop custom enterprise ERP systems tailored to your business needs. Our ERP solutions include inventory management, HR & payroll, accounting, CRM, supply chain management, and business analytics - all unified in one powerful platform.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can DevFlow Technology develop mobile apps?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely! We are a full-service mobile app development company. We build native iOS and Android apps, as well as cross-platform applications using React Native and Flutter. Our mobile apps are designed for exceptional user experience and performance.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to develop a custom software solution?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Project timelines vary by complexity: simple websites take 2-4 weeks, medium web applications take 1-3 months, and complex enterprise systems can take 3-6 months. We provide detailed timelines during our initial consultation.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What technologies does DevFlow use for web development?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We specialize in Next.js, React, TypeScript, Node.js, Python, PostgreSQL, AWS, Docker, and modern CSS frameworks like Tailwind CSS. We choose proven, reliable tech stacks that ensure your application is maintainable, scalable, and performant.",
+        text: "Absolutely. We write multi-threaded Puppeteer scraping automation engines backed by Redis cache queues to crawl pages, parse complex structures, and update catalogs with zero blocks.",
       },
     },
   ],

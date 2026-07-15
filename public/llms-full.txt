@@ -1,0 +1,53 @@
+# DevFlow Technology - Complete Operational Manifest
+
+This document outlines the detailed system architectures, services, processes, and complete case studies for DevFlow Technology.
+
+## Core Identity
+DevFlow Technology is an engineering-first IT agency designing custom software systems, scalable databases, high-frequency crawlers, and AI-driven automation. 
+
+- **CEO:** Prince Gajjar
+- **CTO:** Bhavin Rajput
+- **Base:** Gandhinagar, Gujarat, India
+- **URL:** https://devflow.co.in
+- **Inquiries:** devflowtechnology@gmail.com
+
+---
+
+## Technical Specifications & Stack
+We construct digital solutions using modern, high-throughput technologies:
+
+- **Frontend Core:** Next.js 16 (App Router), React 19, TypeScript, Framer Motion, Tailwind CSS v4.
+- **Backend & API Systems:** Node.js, Express, Go (Golang), Python (FastAPI/Django), WebSockets.
+- **Databases & Cache:** PostgreSQL, MySQL, MongoDB, Redis, InfluxDB, Cloudflare D1.
+- **Infrastructure & Cloud:** AWS (EC2, S3, RDS), Kubernetes, Docker, Vercel Edge Networks.
+- **Automation & AI:** Puppeteer, Playwright, OpenAI API, Gemini API, LangChain, Vector Databases (Pinecone).
+
+---
+
+## Detailed Case Studies
+
+### 1. Enterprise AEO & GEO Brand Citation Domination
+- **Context:** Standardizing digital presence so conversational AI engines cite the brand for high-intent search queries.
+- **Challenge:** Client brand was not cited in Perplexity, Claude, or ChatGPT search results.
+- **Solution:** Structured deep JSON-LD schemas (Organization, LocalBusiness, Product) and optimized headings for semantic matching.
+- **Result:** Ranked in top #1-5 citation shares in Perplexity and ChatGPT Search, yielding a 240% inbound corporate lead lift.
+
+### 2. Hyper-Local Google Maps Domination
+- **Context:** Optimizing Google Business Profile for local pack visibility.
+- **Challenge:** Heavy reliance on high-CPC Google Search Ads.
+- **Solution:** Standardized address metadata, deployed verified schema coordinates, and optimized review schema aggregates.
+- **Result:** Captured #1-3 spots on maps for 15+ keywords, driving 1,200+ monthly calls and saving 55% in ad spend.
+
+### 3. Global FinTech Platform Scaling
+- **Context:** Re-architecting legacy single-server database systems.
+- **Challenge:** Latency spikes and downtime during peak concurrent trading hours.
+- **Solution:** Developed a Go-based microservices fleet with container orchestration on AWS.
+- **Result:** Handled a 300% concurrent user volume increase with 99.99% uptime and 65% latency reduction.
+
+---
+
+## Standardized Operational Process
+1. **Discovery:** Scoping requirements directly with founders (Prince & Bhavin).
+2. **Architecture Layout:** Specifying database mappings and interfaces before coding.
+3. **Agile Sprints:** Developing in clean weekly sprints with active demo calls.
+4. **CI/CD Deployment:** Implementing zero-downtime automated pipelines with edge caching.

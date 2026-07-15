@@ -4,6 +4,10 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import HeroSection from "@/components/sections/HeroSection";
 import TechStackSection from "@/components/sections/TechStackSection";
+import ProcessTimelineSection from "@/components/sections/ProcessTimelineSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import FounderSection from "@/components/sections/FounderSection";
+import FeaturedProjectsSection from "@/components/sections/FeaturedProjectsSection";
 import { staggerContainer, staggerItem } from "@/lib/motion";
 import { FiCpu, FiDatabase, FiGrid, FiArrowUpRight, FiLayers } from "react-icons/fi";
 import { HiStar } from "react-icons/hi";
@@ -81,8 +85,8 @@ export default function Home() {
             </motion.div>
           </Link>
 
-          {/* Block 2: Capabilities Checklist (col-span-1 row-span-2) -> Links to Services */}
-          <Link href="/services" className="block h-full md:row-span-2">
+          {/* Block 2: Capabilities Checklist (col-span-1) -> Links to Services */}
+          <Link href="/services" className="block h-full">
             <motion.div
               variants={staggerItem}
               className="glass-panel p-8 rounded-2xl flex flex-col justify-between group h-full cursor-pointer"
@@ -118,10 +122,10 @@ export default function Home() {
             </motion.div>
           </Link>
 
-          {/* Block 3: Tech Marquee (full-width, 2 rows) -> Continuous Carousel */}
+          {/* Block 3: Tech Marquee (full-width) -> Continuous Carousel */}
           <motion.div
             variants={staggerItem}
-            className="md:col-span-2 lg:col-span-3 md:row-span-2 glass-panel rounded-2xl flex flex-col justify-between overflow-hidden relative group py-6"
+            className="md:col-span-2 lg:col-span-3 glass-panel rounded-2xl flex flex-col justify-between overflow-hidden relative group py-6"
           >
             <div className="px-8 flex items-center justify-between mb-2">
               <span className="text-xs font-mono text-devflow-gray-400">[ TECH ALIGNMENT ]</span>
@@ -137,8 +141,8 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Block 4: Philosophy Panel (col-span-1 row-span-2) -> Links to About */}
-          <Link href="/about" className="block h-full md:row-span-2">
+          {/* Block 4: Philosophy Panel (col-span-1) -> Links to About */}
+          <Link href="/about" className="block h-full">
             <motion.div
               variants={staggerItem}
               className="glass-panel p-8 rounded-2xl flex flex-col justify-between group h-full cursor-pointer"
@@ -193,33 +197,42 @@ export default function Home() {
             </motion.div>
           </Link>
 
-          {/* Block 6: Contact Estimator CTA (col-span-1) -> Links to Contact */}
-          <Link href="/contact" className="block h-full">
+          {/* Block 6: Contact Estimator CTA (col-span-3) -> Links to Contact */}
+          <Link href="/contact" className="md:col-span-2 lg:col-span-3 block h-full">
             <motion.div
               variants={staggerItem}
-              className="glass-panel p-8 rounded-2xl flex flex-col justify-between bg-gradient-to-br from-devflow-green/[0.04] to-devflow-green/[0.02] border-devflow-green/20 hover:border-devflow-green/30 cursor-pointer h-full group"
+              className="glass-panel p-8 rounded-2xl flex flex-col md:flex-row md:items-center justify-between bg-gradient-to-br from-devflow-green/[0.04] to-devflow-green/[0.02] border-devflow-green/20 hover:border-devflow-green/30 cursor-pointer h-full group gap-6"
             >
-              <div className="flex justify-between items-start">
-                <span className="text-xs font-mono text-devflow-green">[ COST ESTIMATOR ]</span>
-                <FiArrowUpRight className="w-5 h-5 text-devflow-green group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-              </div>
-
-              <div>
-                <h4 className="text-lg font-display font-medium text-white mb-2 group-hover:text-devflow-green transition-colors duration-300">
+              <div className="space-y-2 text-left">
+                <span className="text-[10px] font-mono text-devflow-green uppercase tracking-widest block">[ COST ESTIMATOR ]</span>
+                <h4 className="text-xl md:text-2xl font-display font-medium text-white group-hover:text-devflow-green transition-colors duration-300">
                   Estimate Your Project Cost
                 </h4>
-                <p className="text-xs text-devflow-gray-400 leading-relaxed font-light">
+                <p className="text-xs text-devflow-gray-400 leading-relaxed font-light max-w-xl">
                   Answer simple questions to estimate your custom software cost and timeline in under 3 minutes.
                 </p>
               </div>
 
-              <div className="text-[10px] font-mono text-devflow-green tracking-widest uppercase">
+              <div className="text-[10px] font-mono text-devflow-green tracking-widest uppercase flex-shrink-0 group-hover:underline">
                 ESTIMATE COST &rarr;
               </div>
             </motion.div>
           </Link>
         </motion.div>
       </section>
+
+      {/* Process Roadmap Section */}
+      <ProcessTimelineSection />
+
+      {/* Featured Projects Section */}
+      <FeaturedProjectsSection />
+
+
+      {/* Client Testimonials Section */}
+      <TestimonialsSection />
+
+      {/* Team Founders Section */}
+      <FounderSection />
 
       {/* Trust Strip */}
       <section className="py-16 border-t border-white/[0.04] bg-devflow-black relative z-10 text-center">

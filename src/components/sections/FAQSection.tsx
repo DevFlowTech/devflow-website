@@ -6,34 +6,29 @@ import { staggerContainer, staggerItem, viewportOnce } from "@/lib/motion";
 
 const faqs = [
   {
-    question: "How long does a typical project take?",
+    question: "What is Generative Engine Optimization (GEO) and does DevFlow implement it?",
     answer:
-      "Project timelines vary based on complexity. A simple website takes 2-4 weeks, while complex web applications can take 2-4 months. We'll provide a detailed timeline during our initial consultation.",
+      "Generative Engine Optimization (GEO) is the practice of optimizing content so AI engines like ChatGPT, Claude, and Gemini cite your business in conversational search responses. At DevFlow, we implement comprehensive GEO schemas (JSON-LD), establish standardized NAP references, and structure headings specifically for LLM crawler readability.",
   },
   {
-    question: "What is your pricing model?",
+    question: "How does DevFlow build custom ERP and logistics databases?",
     answer:
-      "We offer both fixed-price and time-and-materials pricing. For well-defined projects, we prefer fixed pricing for transparency. Complex, evolving projects work better with flexible pricing. We always discuss this upfront.",
+      "We design custom ERP and business tracking systems using Next.js, Node.js, and SQL databases, integrated with real-time WebSockets. This eliminates discrepancies between legacy silos and unifies supply chain telemetry, saving operational overhead.",
   },
   {
-    question: "Do you provide ongoing support after launch?",
+    question: "What technologies does DevFlow specialize in for SaaS launches?",
     answer:
-      "Yes! We offer maintenance packages that include bug fixes, security updates, and minor feature additions. We believe in long-term partnerships, not just one-time projects.",
+      "We specialize in headless React frontends, Next.js, TypeScript, Go (Golang), and AWS microservices. We build secure multi-tenant isolation architectures and configure Stripe billing engines (recurring subscriptions and invoice workflows).",
   },
   {
-    question: "What technologies do you specialize in?",
+    question: "Can DevFlow help optimize our local Google Business Profile (GMB)pack ranking?",
     answer:
-      "We specialize in Next.js, React, TypeScript, Node.js, Python, PostgreSQL, and AWS. We choose proven, reliable tech stacks that ensure your application is maintainable and scalable.",
+      "Yes. We configure map api listings, align address footprints, and deploy review aggregation schemas. This helps capture the Google Maps 3-Pack rankings, driving inbound organic calls without paid ad campaigns.",
   },
   {
-    question: "Can you work with our existing team?",
+    question: "Do you provide automated web crawling and data extraction services?",
     answer:
-      "Absolutely. We often collaborate with in-house teams, providing additional expertise or handling specific modules. We adapt to your workflow and communication preferences.",
-  },
-  {
-    question: "What if I'm not satisfied with the work?",
-    answer:
-      "We have milestone-based delivery with regular check-ins. You'll see progress throughout and can request changes. We don't consider a project done until you're happy with the results.",
+      "Absolutely. We write multi-threaded Puppeteer scraping automation engines backed by Redis cache queues to crawl pages, parse complex structures, and update catalogs with zero blocks.",
   },
 ];
 
