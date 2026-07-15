@@ -10,6 +10,7 @@ const footerLinks = {
     { label: "Services", href: "/services" },
     { label: "Work", href: "/work" },
     { label: "About", href: "/about" },
+    { label: "Ahmedabad Branch", href: "/software-development-company-ahmedabad" },
     { label: "Contact", href: "/contact" },
   ],
   legal: [
