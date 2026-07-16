@@ -7,15 +7,14 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageWrapper from "@/components/layout/PageWrapper";
 import StructuredData from "@/components/SEO/StructuredData";
-import BackToTop from "@/components/ui/BackToTop";
 import ScrollProgress from "@/components/ui/ScrollProgress";
-import FloatingContact from "@/components/ui/FloatingContact";
 
 // Dynamically import heavy components that are not in the initial viewport
-// Note: layout is a Server Component, so ssr: false is not available
-// These are still code-split into separate chunks for better caching
+// These are code-split into separate chunks to optimize the critical rendering path
 const CookieBanner = dynamic(() => import("@/components/ui/CookieBanner"));
 const AIChatbot = dynamic(() => import("@/components/ui/AIChatbot"));
+const BackToTop = dynamic(() => import("@/components/ui/BackToTop"));
+const FloatingContact = dynamic(() => import("@/components/ui/FloatingContact"));
 
 // Optimize fonts using local fonts
 const satoshi = localFont({

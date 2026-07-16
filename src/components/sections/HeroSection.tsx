@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import {
   staggerContainer,
@@ -84,12 +85,20 @@ export default function HeroSection() {
 
       {/* Uploaded Green Wave Background Visual Layer - motion enabled for parallax scroll */}
       <motion.div 
-        className="absolute inset-0 bg-cover bg-center opacity-[0.25] pointer-events-none z-0"
+        className="absolute inset-0 opacity-[0.25] pointer-events-none z-0"
         style={{
-          backgroundImage: "url('/hero-green-wave.jpg')",
           y: finalBackgroundY,
         }}
-      />
+      >
+        <Image
+          src="/hero-green-wave.jpg"
+          alt="DevFlow Wave Background"
+          fill
+          priority
+          quality={85}
+          className="object-cover"
+        />
+      </motion.div>
       {/* Edge blending overlays - fades harsh left vertical and bottom horizontal borders */}
       <div className="absolute inset-0 bg-gradient-to-r from-devflow-black/70 via-devflow-black/50 to-transparent w-full pointer-events-none z-[1] md:from-devflow-black md:via-devflow-black/90 md:w-3/4" />
       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-devflow-black via-devflow-black/80 to-transparent h-[450px] pointer-events-none z-[1]" />

@@ -25,11 +25,8 @@ const nextConfig: NextConfig = {
   },
 
   // Reduce bundle size by modularizing icon imports only
-  // framer-motion is excluded as it breaks named imports like { motion }
-  modularizeImports: {
-    "react-icons": {
-      transform: "react-icons/{{member}}",
-    },
+  experimental: {
+    optimizePackageImports: ["react-icons", "framer-motion"],
   },
 
   // Security & performance headers
