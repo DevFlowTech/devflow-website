@@ -101,6 +101,8 @@ function TechItem({ tech }: { tech: TechEntry }) {
       <IconComponent
         className="w-6 h-6 transition-all duration-300 group-hover:scale-110"
         style={{ color: tech.color }}
+        aria-label={tech.name}
+        role="img"
       />
       <span className="text-sm font-semibold text-white whitespace-nowrap">
         {tech.name}

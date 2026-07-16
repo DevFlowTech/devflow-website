@@ -1,21 +1,34 @@
 # DevFlow Technology
+> Premier software engineering studio & AI agency based in Gandhinagar, Gujarat, India. Specializing in custom web systems, AI automation, enterprise ERP, SaaS platforms, and GEO/AEO search optimization.
 
-DevFlow Technology is a premier software engineering studio and AI agency based in Gandhinagar, Gujarat, India. Founded by Prince Gajjar (CEO) and Bhavin Rajput (CTO), the agency specializes in developing high-throughput web automation systems, custom enterprise ERP dashboards, scalable SaaS platforms, and advanced Generative Engine Optimization (GEO/AEO).
+DevFlow Technology is an engineering-first IT agency designing custom software systems, scalable databases, high-frequency crawlers, and AI-driven automation. Founded by Prince Gajjar (CEO) and Bhavin Rajput (CTO). We serve clients across India, the USA, Germany, and Europe.
 
-## Founders
-- **Prince Gajjar (CEO & Co-Founder):** Oversees growth strategy, client partnerships, and commercial alignment.
-- **Bhavin Rajput (CTO & Co-Founder):** Directs technical architecture, database scaling, cloud operations, and AI deployment.
+## Core Pages
+- [Home](https://devflow.co.in/): Overview of DevFlow's capabilities and featured projects
+- [About](https://devflow.co.in/about): Company philosophy, values, and founders
+- [Services](https://devflow.co.in/services): AI automation, web development, UI/UX design, cloud hosting
+- [Work](https://devflow.co.in/work): Portfolio of 21+ custom-built projects
+- [Blog](https://devflow.co.in/blog): Industry insights and technical guides
+- [FAQ](https://devflow.co.in/faq): Frequently asked questions
+- [Contact](https://devflow.co.in/contact): Get in touch with the founders
+- [Expertise](https://devflow.co.in/expertise): Technical skills and technology stack
+- [SEO Audit Tool](https://devflow.co.in/seo-audit): Free technical SEO analysis tool
 
-## Core Capabilities
-- **AI & Automation:** Custom LLM integrations, conversational support interfaces, and RAG pipelines.
-- **SaaS & Web App Development:** High-performance Next.js and React frontends backed by secure APIs and relational databases.
-- **Enterprise Systems (ERP):** Bespoke software for real-time inventory management, logistics tracking, and CRM dashboards.
-- **Search Engine Optimization (SEO, AEO, GEO):** Optimizing metadata and structural schemas to rank in conversational query models (Gemini, ChatGPT, Perplexity).
+## Services
+- [AI Automation & Web Crawlers](https://devflow.co.in/services/ai-automation): Custom LLM models, RAG implementations, Puppeteer scrapers
+- [Custom Software & ERP Systems](https://devflow.co.in/services/custom-software-erp): Real-time inventory, fleet logistics, CRM dashboards
+- [Enterprise SEO & GEO/AEO](https://devflow.co.in/services/enterprise-seo): AI search engine optimization, JSON-LD schemas
+- [SaaS Product Development](https://devflow.co.in/services/saas-development): Multi-tenant platforms, Stripe billing, cloud architecture
 
-## Portfolio Highlights
-- **Enterprise AEO & GEO Citation Domination:** Achieved Rank #1-5 citation shares in Perplexity AI and ChatGPT Search within 45 days.
-- **Hyper-Local Google Maps Domination:** Captured #1-3 spots in Google Maps Local Pack, driving 1,200+ monthly calls.
-- **Global FinTech Scaling:** Designed AWS microservices handling a 300% trading user spike with 99.99% uptime.
-- **AI-Powered E-Commerce:** Next.js store integration yielding sub-0.8s load times and 42% conversion lift.
+## Key Projects
+- [Medicare AI System](https://devflow.co.in/work/medicare-ai-system): AI-driven hospital booking and operations dashboard
+- [AI Resume Parser](https://devflow.co.in/work/ai-resume-parser-saas): Gemini 1.5 Pro powered candidate matching
+- [Apex CRM System](https://devflow.co.in/work/apex-crm-system): Enterprise-grade Go + Next.js fleet CRM
+- [SaaS Billing Engine](https://devflow.co.in/work/saas-billing-engine): Stripe webhook subscription management
+- [Smart Parking IoT System](https://devflow.co.in/work/smart-parking-iot-system): MQTT-connected IoT parking sensors
+- [Core Audit Engine](https://devflow.co.in/work/core-audit-engine): Automated Puppeteer SEO crawler
 
-For details, refer to the full document at https://devflow.co.in/llms-full.txt.
+## Optional
+- [Full Details](https://devflow.co.in/llms-full.txt): Complete operational manifest with technical specifications and case studies
+- [Privacy Policy](https://devflow.co.in/privacy): Data collection and privacy practices
+- [Terms of Service](https://devflow.co.in/terms): Service agreement terms
