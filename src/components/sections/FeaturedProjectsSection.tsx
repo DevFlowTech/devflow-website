@@ -52,43 +52,47 @@ export default function FeaturedProjectsSection() {
             <motion.div
               key={p.slug}
               variants={staggerItem}
-              className="glass-panel p-8 rounded-2xl flex flex-col justify-between h-[360px] relative overflow-hidden group hover:border-devflow-green/20 transition-all duration-300"
             >
-              {/* Radial glow in card background */}
-              <div 
-                className="absolute inset-0 opacity-[0.02] group-hover:opacity-[0.04] pointer-events-none transition-opacity duration-300"
-                style={{
-                  background: `radial-gradient(circle at 50% 50%, ${p.accent}, transparent 65%)`
-                }}
-              />
+              <Link
+                href={`/work/${p.slug}`}
+                className="block h-full"
+                aria-label={`Read case study: ${p.title}`}
+              >
+                <div className="glass-panel p-8 rounded-2xl flex flex-col justify-between h-[360px] relative overflow-hidden group hover:border-devflow-green/20 transition-all duration-300 cursor-pointer">
+                  {/* Radial glow in card background */}
+                  <div 
+                    className="absolute inset-0 opacity-[0.02] group-hover:opacity-[0.04] pointer-events-none transition-opacity duration-300"
+                    style={{
+                      background: `radial-gradient(circle at 50% 50%, ${p.accent}, transparent 65%)`
+                    }}
+                  />
 
-              <div>
-                <div className="flex justify-between items-center mb-6">
-                  <span className="text-[10px] font-mono text-devflow-green bg-devflow-green/10 border border-devflow-green/20 px-2.5 py-1 rounded-md uppercase tracking-wider">
-                    {p.category}
-                  </span>
-                  <span className="text-[10px] font-mono text-devflow-gray-500">[ 0{index + 1} ]</span>
+                  <div>
+                    <div className="flex justify-between items-center mb-6">
+                      <span className="text-[10px] font-mono text-devflow-green bg-devflow-green/10 border border-devflow-green/20 px-2.5 py-1 rounded-md uppercase tracking-wider">
+                        {p.category}
+                      </span>
+                      <span className="text-[10px] font-mono text-devflow-gray-500">[ 0{index + 1} ]</span>
+                    </div>
+
+                    <h3 className="text-xl md:text-2xl font-display font-medium text-white group-hover:text-devflow-green transition-colors duration-200 mb-3">
+                      {p.title}
+                    </h3>
+                    <p className="text-devflow-gray-300 text-xs leading-relaxed font-light line-clamp-3">
+                      {p.description}
+                    </p>
+                  </div>
+
+                  <div className="pt-6 border-t border-white/5 flex justify-between items-center">
+                    <span className="font-mono text-[9px] text-devflow-gray-500 uppercase tracking-widest">
+                      {p.tech.slice(0, 2).join(" + ")}
+                    </span>
+                    <span className="text-[10px] font-mono text-devflow-green flex items-center gap-1">
+                      CASE STUDY &rarr;
+                    </span>
+                  </div>
                 </div>
-
-                <h3 className="text-xl md:text-2xl font-display font-medium text-white group-hover:text-devflow-green transition-colors duration-200 mb-3">
-                  {p.title}
-                </h3>
-                <p className="text-devflow-gray-300 text-xs leading-relaxed font-light line-clamp-3">
-                  {p.description}
-                </p>
-              </div>
-
-              <div className="pt-6 border-t border-white/5 flex justify-between items-center">
-                <span className="font-mono text-[9px] text-devflow-gray-500 uppercase tracking-widest">
-                  {p.tech.slice(0, 2).join(" + ")}
-                </span>
-                <Link
-                  href={`/work/${p.slug}`}
-                  className="text-[10px] font-mono text-devflow-green hover:underline flex items-center gap-1"
-                >
-                  CASE STUDY &rarr;
-                </Link>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

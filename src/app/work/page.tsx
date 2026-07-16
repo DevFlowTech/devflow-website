@@ -76,58 +76,61 @@ export default function WorkPage() {
               // Create dynamic bento shape: make the first element span 2 columns
               const isLarge = index === 0 && activeCategory === "All";
               return (
-                <motion.div
-                  layout
+                <Link
                   key={project.slug}
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.03, ease: [0.16, 1, 0.3, 1] }}
-                  className={`group relative flex flex-col justify-between p-8 rounded-2xl glass-panel ${
-                    isLarge ? "md:col-span-2 h-[380px]" : "h-[380px]"
-                  }`}
+                  href={`/work/${project.slug}`}
+                  className="block"
+                  aria-label={`Read full case study on ${project.title}`}
                 >
-                  {/* Subtle color highlight in background */}
-                  <div 
-                    className="absolute inset-0 opacity-[0.02] group-hover:opacity-[0.05] pointer-events-none transition-opacity duration-500"
-                    style={{
-                      background: `radial-gradient(circle at 50% 50%, ${project.accent || '#CCFF00'}, transparent 65%)`
-                    }}
-                  />
+                  <motion.div
+                    layout
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.03, ease: [0.16, 1, 0.3, 1] }}
+                    className={`group relative flex flex-col justify-between p-8 rounded-2xl glass-panel cursor-pointer ${
+                      isLarge ? "md:col-span-2 h-[380px]" : "h-[380px]"
+                    }`}
+                  >
+                    {/* Subtle color highlight in background */}
+                    <div 
+                      className="absolute inset-0 opacity-[0.02] group-hover:opacity-[0.05] pointer-events-none transition-opacity duration-500"
+                      style={{
+                        background: `radial-gradient(circle at 50% 50%, ${project.accent || '#CCFF00'}, transparent 65%)`
+                      }}
+                    />
 
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs font-mono text-devflow-green uppercase tracking-widest">
-                        {project.category}
-                      </span>
-                      <span className="text-xs font-mono text-devflow-gray-500">
-                        [ {project.tech[0]} ]
-                      </span>
-                    </div>
-                    <h3 className="font-display text-2xl md:text-3xl font-medium text-white group-hover:text-devflow-green transition-colors duration-300">
-                      {project.title}
-                    </h3>
-                    <p className="text-devflow-gray-300 text-sm font-light leading-relaxed max-w-3xl">
-                      {project.description}
-                    </p>
-                  </div>
-
-                  <div className="pt-6 border-t border-white/5 flex items-center justify-between">
-                    <div className="flex gap-2">
-                      {project.tech.slice(0, 4).map((t, idx) => (
-                        <span key={idx} className="font-mono text-[10px] text-devflow-gray-500">
-                          {t}
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-mono text-devflow-green uppercase tracking-widest">
+                          {project.category}
                         </span>
-                      ))}
+                        <span className="text-xs font-mono text-devflow-gray-500">
+                          [ {project.tech[0]} ]
+                        </span>
+                      </div>
+                      <h3 className="font-display text-2xl md:text-3xl font-medium text-white group-hover:text-devflow-green transition-colors duration-300">
+                        {project.title}
+                      </h3>
+                      <p className="text-devflow-gray-300 text-sm font-light leading-relaxed max-w-3xl">
+                        {project.description}
+                      </p>
                     </div>
-                    
-                    <Link 
-                      href={`/work/${project.slug}`}
-                      className="flex items-center gap-1 text-xs font-mono text-devflow-green hover:text-white transition-colors"
-                    >
-                      CASE STUDY ↗
-                    </Link>
-                  </div>
-                </motion.div>
+
+                    <div className="pt-6 border-t border-white/5 flex items-center justify-between">
+                      <div className="flex gap-2">
+                        {project.tech.slice(0, 4).map((t, idx) => (
+                          <span key={idx} className="font-mono text-[10px] text-devflow-gray-500">
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                      
+                      <span className="flex items-center gap-1 text-xs font-mono text-devflow-green transition-colors">
+                        CASE STUDY ↗
+                      </span>
+                    </div>
+                  </motion.div>
+                </Link>
               );
             })}
           </motion.div>
