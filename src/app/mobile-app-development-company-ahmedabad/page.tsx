@@ -1,70 +1,37 @@
+
 "use client";
 
 import { motion } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/lib/motion";
 import StructuredData from "@/components/SEO/StructuredData";
 import Link from "next/link";
-import { HiMapPin, HiPhone, HiEnvelope, HiShieldCheck, HiStar, HiArrowRight, HiArrowPath, HiBolt, HiCpuChip, HiDeviceMobile, HiTablet, HiDesktopComputer, HiCloud, HiWifi, HiLockClosed, HiPaintBrush } from "react-icons/hi2";
+import { HiMapPin, HiPhone, HiEnvelope, HiShieldCheck, HiStar, HiArrowRight, HiArrowPath, HiBolt, HiCpuChip, HiDevicePhoneMobile, HiDeviceTablet, HiComputerDesktop, HiCloud, HiWifi, HiLockClosed, HiPaintBrush } from "react-icons/hi2";
 
-export const metadata = {
-  title: "Mobile App Development Company Ahmedabad | iOS, Android, Flutter, React Native",
-  description: "Top mobile app development company in Ahmedabad, Gujarat. Native iOS (Swift), Android (Kotlin), Flutter & React Native cross-platform apps. Serving Ahmedabad, Gandhinagar, Surat, Vadodara & all Gujarat.",
-  keywords: [
-    "mobile app development company Ahmedabad",
-    "mobile app development Ahmedabad",
-    "iOS app development Ahmedabad",
-    "Android app development Ahmedabad",
-    "Flutter app development Ahmedabad",
-    "React Native development Ahmedabad",
-    "cross platform app development Gujarat",
-    "app development company Gujarat",
-    "mobile app developers Ahmedabad",
-    "hire app developers Ahmedabad",
-    "custom mobile app development Gujarat",
-    "enterprise mobile apps Ahmedabad",
-    "app UI/UX design Ahmedabad",
-    "app maintenance support Ahmedabad",
-  ],
-  openGraph: {
-    title: "Mobile App Development Company Ahmedabad | DevFlow Technology",
-    description: "Leading mobile app development company in Ahmedabad building native iOS, Android, Flutter & React Native apps for Gujarat enterprises.",
-    type: "website",
-    images: [{ url: "https://devflow.co.in/og-image.png", width: 1200, height: 630, alt: "DevFlow Technology - Mobile App Development Company Ahmedabad" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Mobile App Development Company Ahmedabad | DevFlow Technology",
-    description: "Top mobile app development company in Ahmedabad, Gujarat. Native iOS, Android, Flutter & React Native apps.",
-    images: ["https://devflow.co.in/og-image.png"],
-  },
-  robots: { index: true, follow: true },
-  alternates: { canonical: "https://devflow.co.in/mobile-app-development-company-ahmedabad" },
-};
 
 const appServices = [
   {
-    icon: HiDeviceMobile,
+    icon: HiDevicePhoneMobile,
     title: "Native iOS Development",
     description: "Swift/SwiftUI apps optimized for iPhone, iPad, watchOS, and visionOS with App Store compliance and TestFlight distribution.",
     features: ["Swift & SwiftUI", "Core Data & CloudKit", "App Store Optimization", "TestFlight & CI/CD", "watchOS/visionOS"],
     href: "/services",
   },
   {
-    icon: HiDeviceMobile,
+    icon: HiDevicePhoneMobile,
     title: "Native Android Development",
     description: "Kotlin/Jetpack Compose apps for phones, tablets, Wear OS, and Android Auto with Play Store optimization and staged rollouts.",
     features: ["Kotlin & Compose", "Room & DataStore", "Play Console Management", "App Bundles & Dynamic Delivery", "Wear OS & Auto"],
     href: "/services",
   },
   {
-    icon: HiTablet,
+    icon: HiDeviceTablet,
     title: "Flutter Cross-Platform",
     description: "Single codebase for iOS, Android, Web, and Desktop. High-performance UI, native platform channels, and rapid iteration with hot reload.",
     features: ["iOS/Android/Web/Desktop", "Custom Platform Channels", "Flame/Game Engine", "Riverpod/Bloc State", "CI/CD with Codemagic"],
     href: "/services",
   },
   {
-    icon: HiDesktopComputer,
+    icon: HiComputerDesktop,
     title: "React Native Development",
     description: "JavaScript/TypeScript apps sharing 80%+ logic with web. Expo managed workflow, Hermes optimization, and native module bridging.",
     features: ["Expo & Bare Workflow", "Hermes Engine", "Code Push Updates", "Web Code Sharing", "Native Module Bridge"],

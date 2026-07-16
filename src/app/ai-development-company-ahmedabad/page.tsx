@@ -1,43 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { staggerContainer, staggerItem, viewportOnce } from "@/lib/motion";
+import { staggerContainer, staggerItem } from "@/lib/motion";
 import StructuredData from "@/components/SEO/StructuredData";
 import Link from "next/link";
 import { HiMapPin, HiPhone, HiEnvelope, HiShieldCheck, HiStar, HiArrowRight, HiCpuChip, HiSparkles, HiArrowPath, HiMagnifyingGlass, HiChatBubbleLeftRight, HiBolt } from "react-icons/hi2";
 
-export const metadata = {
-  title: "AI Development Company Ahmedabad | Top AI Solutions & LLM Integration",
-  description: "Leading AI development company in Ahmedabad, Gujarat. Custom LLM integration, RAG systems, AI chatbots, generative AI solutions, and ML models. Serving Ahmedabad, Gandhinagar, Surat, Vadodara & all Gujarat.",
-  keywords: [
-    "AI development company Ahmedabad",
-    "AI development company Gujarat",
-    "artificial intelligence company Ahmedabad",
-    "AI solutions Ahmedabad",
-    "LLM integration Ahmedabad",
-    "RAG systems development Ahmedabad",
-    "AI chatbot development Ahmedabad",
-    "generative AI company Ahmedabad",
-    "machine learning company Ahmedabad",
-    "AI automation Ahmedabad",
-    "AI consulting Ahmedabad",
-    "custom AI solutions Gujarat",
-  ],
-  openGraph: {
-    title: "AI Development Company Ahmedabad | DevFlow Technology",
-    description: "Top AI development company in Ahmedabad building custom LLM solutions, RAG systems, AI chatbots & generative AI applications for businesses across Gujarat.",
-    type: "website",
-    images: [{ url: "https://devflow.co.in/og-image.png", width: 1200, height: 630, alt: "DevFlow Technology - AI Development Company Ahmedabad" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "AI Development Company Ahmedabad | DevFlow Technology",
-    description: "Leading AI development company in Ahmedabad, Gujarat. Custom LLM integration, RAG systems, AI chatbots & generative AI solutions.",
-    images: ["https://devflow.co.in/og-image.png"],
-  },
-  robots: { index: true, follow: true },
-  alternates: { canonical: "https://devflow.co.in/ai-development-company-ahmedabad" },
-};
 
 const aiServices = [
   {
@@ -85,22 +53,9 @@ const aiServices = [
 ];
 
 const techStack = [
-  "PyTorch",
-  "TensorFlow",
-  "LangChain",
-  "LlamaIndex",
-  "Hugging Face",
-  "OpenAI API",
-  "Anthropic Claude",
-  "Pinecone",
-  "Weaviate",
-  "Qdrant",
-  "MLflow",
-  "Kubeflow",
-  "Docker",
-  "Kubernetes",
-  "AWS SageMaker",
-  "GCP Vertex AI",
+  "PyTorch", "TensorFlow", "LangChain", "LlamaIndex", "Hugging Face", "OpenAI API",
+  "Anthropic Claude", "Pinecone", "Weaviate", "Qdrant", "MLflow", "Kubeflow",
+  "Docker", "Kubernetes", "AWS SageMaker", "GCP Vertex AI",
 ];
 
 const localFaqs = [
@@ -310,6 +265,7 @@ export default function AIDevelopmentAhmedabadPage() {
                 <span className="text-xs font-mono text-devflow-green">[ GOOGLE MAPS DATA ]</span>
                 <HiShieldCheck className="w-6 h-6 text-devflow-green" />
               </div>
+              
               <div className="z-10 space-y-2">
                 <div className="flex gap-1 text-devflow-green">
                   <HiStar className="w-4 h-4 fill-current" />

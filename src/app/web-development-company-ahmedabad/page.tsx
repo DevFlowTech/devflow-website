@@ -1,50 +1,16 @@
+
 "use client";
 
 import { motion } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/lib/motion";
 import StructuredData from "@/components/SEO/StructuredData";
 import Link from "next/link";
-import { HiMapPin, HiPhone, HiEnvelope, HiShieldCheck, HiStar, HiArrowRight, HiCode, HiServer, HiCube, HiGlobeAlt, HiLockClosed, HiChartBar, HiCog6Tooth } from "react-icons/hi2";
+import { HiMapPin, HiPhone, HiEnvelope, HiShieldCheck, HiStar, HiArrowRight, HiCodeBracket, HiServer, HiCube, HiGlobeAlt, HiLockClosed, HiChartBar, HiCog6Tooth } from "react-icons/hi2";
 
-export const metadata = {
-  title: "Web Development Company Ahmedabad | Custom Web Apps, Next.js & React Experts",
-  description: "Leading web development company in Ahmedabad, Gujarat building custom web applications, enterprise portals, e-commerce platforms, and PWAs using Next.js, React, Node.js & TypeScript. Serving Ahmedabad, Gandhinagar, Surat, Vadodara & all Gujarat.",
-  keywords: [
-    "web development company Ahmedabad",
-    "web development company Gujarat",
-    "website development Ahmedabad",
-    "custom web development Ahmedabad",
-    "web application development Ahmedabad",
-    "Next.js development company Ahmedabad",
-    "React development company Ahmedabad",
-    "Node.js development company Ahmedabad",
-    "MERN stack development Ahmedabad",
-    "full stack development Ahmedabad",
-    "enterprise web development Gujarat",
-    "eCommerce website development Ahmedabad",
-    "progressive web app development Ahmedabad",
-    "website redesign Ahmedabad",
-    "web development services Gujarat",
-  ],
-  openGraph: {
-    title: "Web Development Company Ahmedabad | DevFlow Technology",
-    description: "Top web development company in Ahmedabad building custom web apps, enterprise portals & e-commerce with Next.js, React, TypeScript. Gujarat's trusted tech partner.",
-    type: "website",
-    images: [{ url: "https://devflow.co.in/og-image.png", width: 1200, height: 630, alt: "DevFlow Technology - Web Development Company Ahmedabad" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Web Development Company Ahmedabad | DevFlow Technology",
-    description: "Leading web development company in Ahmedabad, Gujarat. Custom web apps, Next.js, React, Node.js development.",
-    images: ["https://devflow.co.in/og-image.png"],
-  },
-  robots: { index: true, follow: true },
-  alternates: { canonical: "https://devflow.co.in/web-development-company-ahmedabad" },
-};
 
 const webServices = [
   {
-    icon: HiCode,
+    icon: HiCodeBracket,
     title: "Custom Web Application Development",
     description: "Full-cycle development of scalable web apps tailored to your business logic. Architecture design, API development, database modeling, and deployment automation.",
     features: ["System Architecture", "REST/GraphQL APIs", "Database Design", "CI/CD Pipelines", "DevOps Setup"],

@@ -4,52 +4,12 @@ import { motion } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/lib/motion";
 import StructuredData from "@/components/SEO/StructuredData";
 import Link from "next/link";
-import { HiMapPin, HiPhone, HiEnvelope, HiShieldCheck, HiStar, HiArrowRight, HiCpuChip, HiServer, HiCloud, HiLockClosed, HiArrowPath, HiUsers, HiChartBar, HiGlobeAlt, HiDeviceMobile, HiCode, HiCog6Tooth, HiMagnifyingGlass, HiPaintBrush, HiBolt, HiPresentationChartBar } from "react-icons/hi2";
+import { HiMapPin, HiPhone, HiEnvelope, HiShieldCheck, HiStar, HiArrowRight, HiCpuChip, HiServer, HiCloud, HiLockClosed, HiArrowPath, HiUsers, HiChartBar, HiGlobeAlt, HiCodeBracket, HiCog6Tooth, HiMagnifyingGlass, HiPaintBrush, HiBolt, HiPresentationChartBar } from "react-icons/hi2";
 
-export const metadata = {
-  title: "IT Services Ahmedabad | Complete IT Solutions, Software Development & Consulting Gujarat",
-  description: "Comprehensive IT services in Ahmedabad, Gujarat: custom software development, AI/ML solutions, web & mobile apps, cloud & DevOps, cybersecurity, IT consulting, staff augmentation & managed services. Serving Ahmedabad, Gandhinagar, Surat, Vadodara & all Gujarat.",
-  keywords: [
-    "IT services Ahmedabad",
-    "IT services Gujarat",
-    "IT solutions Ahmedabad",
-    "IT consulting Ahmedabad",
-    "software development services Ahmedabad",
-    "managed IT services Ahmedabad",
-    "IT support Ahmedabad",
-    "technology services Gujarat",
-    "digital transformation Ahmedabad",
-    "cloud services Ahmedabad",
-    "DevOps services Gujarat",
-    "cybersecurity services Ahmedabad",
-    "IT outsourcing Ahmedabad",
-    "staff augmentation Ahmedabad",
-    "dedicated development team Gujarat",
-    "custom software development Ahmedabad",
-    "enterprise software services Gujarat",
-    "AI development services Ahmedabad",
-    "web development services Gujarat",
-    "mobile app development services Ahmedabad",
-  ],
-  openGraph: {
-    title: "IT Services Ahmedabad | DevFlow Technology - Complete IT Solutions Gujarat",
-    description: "Full-spectrum IT services in Ahmedabad: software development, AI, cloud, DevOps, security, consulting & staffing. Gujarat's trusted technology partner.",
-    type: "website",
-    images: [{ url: "https://devflow.co.in/og-image.png", width: 1200, height: 630, alt: "DevFlow Technology - IT Services Ahmedabad" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "IT Services Ahmedabad | DevFlow Technology",
-    description: "Comprehensive IT services in Ahmedabad, Gujarat. Software, AI, cloud, DevOps, security, consulting & staffing.",
-    images: ["https://devflow.co.in/og-image.png"],
-  },
-  robots: { index: true, follow: true },
-  alternates: { canonical: "https://devflow.co.in/it-services-ahmedabad" },
-};
 
 const serviceCategories = [
   {
-    icon: HiCode,
+    icon: HiCodeBracket,
     title: "Custom Software Development",
     description: "Enterprise applications, SaaS platforms, ERP/CRM systems, portals, and APIs. Domain-driven design, clean architecture, test-driven development.",
     services: ["Enterprise App Development", "SaaS Product Engineering", "ERP/CRM Customization", "API & Microservices", "Legacy Modernization"],
