@@ -333,20 +333,20 @@ export function generateAgentResponse(userQuery: string): AgentResponse {
       if (searchResults.length > 0) {
         const top = searchResults[0];
         text =
-          `I found information about **${top.entry.title}**:\n\n` +
-          `${top.entry.summary}\n\n`;
+          `I found information about **${top.title}**:\n\n` +
+          `${top.summary}\n\n`;
 
         if (searchResults.length > 1) {
           text += "**Related topics you might be interested in:**\n";
           searchResults.slice(1, 4).forEach((r, i) => {
-            text += `${i + 1}. ${r.entry.title}\n`;
+            text += `${i + 1}. ${r.title}\n`;
           });
         }
 
         suggestions = searchResults.slice(0, 5).map((r) => ({
-          title: r.entry.title,
-          path: r.entry.path,
-          icon: r.entry.icon,
+          title: r.title,
+          path: r.path,
+          icon: r.icon,
         }));
       } else {
         text =
