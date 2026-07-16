@@ -56,7 +56,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-devflow-green/5 to-transparent pointer-events-none" />
               <div className="flex justify-between items-start">
                 <span className="text-xs font-mono text-devflow-gray-400">[ RELIABILITY // METRICS ]</span>
-                <FiLayers className="w-5 h-5 text-devflow-green group-hover:rotate-12 transition-transform duration-300" />
+                <FiLayers className="w-5 h-5 text-devflow-green group-hover:rotate-12 transition-transform duration-300" aria-label="Layers" />
               </div>
               
               <div className="grid grid-cols-3 gap-4 py-4">
@@ -94,7 +94,7 @@ export default function Home() {
               <div>
                 <div className="flex justify-between items-start mb-6">
                   <span className="text-xs font-mono text-devflow-gray-400">[ WHAT WE BUILD ]</span>
-                  <FiGrid className="w-5 h-5 text-devflow-green group-hover:scale-110 transition-transform duration-300" />
+                  <FiGrid className="w-5 h-5 text-devflow-green group-hover:scale-110 transition-transform duration-300" aria-label="Grid" />
                 </div>
                 <ul className="space-y-4">
                   <li className="flex items-center gap-3">
@@ -117,7 +117,7 @@ export default function Home() {
               </div>
               <div className="inline-flex items-center gap-2 text-xs font-mono text-devflow-green group-hover:underline">
                 SEE WHAT WE BUILD
-                <FiArrowUpRight className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
+                <FiArrowUpRight className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" aria-label="Arrow up right" />
               </div>
             </motion.div>
           </Link>
@@ -150,7 +150,7 @@ export default function Home() {
               <div>
                 <div className="flex justify-between items-start mb-6">
                   <span className="text-xs font-mono text-devflow-gray-400">[ PHILOSOPHY ]</span>
-                  <FiCpu className="w-5 h-5 text-devflow-green group-hover:rotate-12 transition-transform duration-300" />
+                  <FiCpu className="w-5 h-5 text-devflow-green group-hover:rotate-12 transition-transform duration-300" aria-label="CPU" />
                 </div>
                 <h3 className="text-xl font-display font-medium text-white mb-4">
                   Simple code. Direct solutions.
@@ -176,7 +176,7 @@ export default function Home() {
                 <span className="text-xs font-mono text-devflow-gray-400">[ CLIENT REVIEWS ]</span>
                 <div className="flex gap-1 text-devflow-green">
                   {[...Array(5)].map((_, i) => (
-                    <HiStar key={i} className="w-4 h-4" />
+                    <HiStar key={i} className="w-4 h-4" aria-label="Star rating" />
                   ))}
                 </div>
               </div>

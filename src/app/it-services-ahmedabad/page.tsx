@@ -227,7 +227,7 @@ export default function ITServicesAhmedabadPage() {
                 className="glass-panel p-8 rounded-2xl border border-white/[0.05] bg-devflow-charcoal/50 hover:border-devflow-green/25 transition-all group"
               >
                 <div className="w-12 h-12 rounded-xl bg-devflow-green/10 flex items-center justify-center text-devflow-green mb-6 group-hover:scale-110 transition-transform">
-                  <cat.icon className="w-6 h-6" />
+                  <cat.icon className="w-6 h-6" aria-label={cat.title} />
                 </div>
                 <h3 className="text-lg font-semibold mb-2 text-white">{cat.title}</h3>
                 <p className="text-sm text-devflow-gray-300 font-light leading-relaxed mb-4">{cat.description}</p>
@@ -313,7 +313,7 @@ export default function ITServicesAhmedabadPage() {
                 className="glass-panel p-8 rounded-2xl border border-white/[0.05] bg-devflow-charcoal/50 hover:border-devflow-green/25 transition-all"
               >
                 <div className="w-12 h-12 rounded-xl bg-devflow-green/10 flex items-center justify-center text-devflow-green mb-4">
-                  <model.icon className="w-6 h-6" />
+                  <model.icon className="w-6 h-6" aria-label={model.title} />
                 </div>
                 <h3 className="text-lg font-semibold mb-2 text-white">{model.title}</h3>
                 <p className="text-sm text-devflow-gray-300 font-light leading-relaxed">{model.desc}</p>
@@ -336,7 +336,7 @@ export default function ITServicesAhmedabadPage() {
               <div className="space-y-4">
                 <div className="flex gap-4 items-center">
                   <div className="w-10 h-10 rounded-xl bg-devflow-green/10 flex items-center justify-center text-devflow-green shrink-0">
-                    <HiMapPin className="w-5 h-5" />
+                    <HiMapPin className="w-5 h-5" aria-label="Address" />
                   </div>
                   <div>
                     <h4 className="text-xs font-mono text-devflow-gray-500 uppercase">OFFICE ADDRESS</h4>
@@ -345,7 +345,7 @@ export default function ITServicesAhmedabadPage() {
                 </div>
                 <div className="flex gap-4 items-center">
                   <div className="w-10 h-10 rounded-xl bg-devflow-green/10 flex items-center justify-center text-devflow-green shrink-0">
-                    <HiPhone className="w-5 h-5" />
+                    <HiPhone className="w-5 h-5" aria-label="Phone" />
                   </div>
                   <div>
                     <h4 className="text-xs font-mono text-devflow-gray-500 uppercase">TELEPHONE</h4>
@@ -354,7 +354,7 @@ export default function ITServicesAhmedabadPage() {
                 </div>
                 <div className="flex gap-4 items-center">
                   <div className="w-10 h-10 rounded-xl bg-devflow-green/10 flex items-center justify-center text-devflow-green shrink-0">
-                    <HiEnvelope className="w-5 h-5" />
+                    <HiEnvelope className="w-5 h-5" aria-label="Email" />
                   </div>
                   <div>
                     <h4 className="text-xs font-mono text-devflow-gray-500 uppercase">EMAIL</h4>
@@ -378,8 +378,8 @@ export default function ITServicesAhmedabadPage() {
             <div className="relative aspect-square rounded-2xl overflow-hidden border border-white/[0.06] bg-devflow-black p-8 flex flex-col justify-between group hover:border-devflow-green/20 transition-all">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(204,255,0,0.05),transparent_70%)]" />
               <div className="flex justify-between items-start z-10">
-                <span className="text-xs font-mono text-devflow-green">[ GOOGLE MAPS DATA ]</span>
-                <HiShieldCheck className="w-6 h-6 text-devflow-green" />
+                <span className="text-xs font-mono text-devflow-green">[ GOOGLE MAPS DATA ]</span>                  <HiShieldCheck className="w-6 h-6 text-devflow-green" aria-label="Verified" />
+
               </div>
               <div className="z-10 space-y-2">
                 <div className="flex gap-1 text-devflow-green">
