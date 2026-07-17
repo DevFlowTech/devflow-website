@@ -9,7 +9,7 @@ export default function InteractiveGrid() {
       <div
         className="absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage: `radial-gradient(circle, #CCFF00 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle, #0225dc 1px, transparent 1px)`,
           backgroundSize: "40px 40px",
         }}
       />

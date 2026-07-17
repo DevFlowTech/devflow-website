@@ -80,10 +80,10 @@ export default function HeroSection() {
       <InteractiveGrid />
 
       {/* Radial glow and shadow gradients */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_35%,rgba(204,255,0,0.04),transparent_40%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_35%,rgba(2,37,220,0.04),transparent_40%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]" />
 
-      {/* Uploaded Green Wave Background Visual Layer - motion enabled for parallax scroll */}
+      {/* Uploaded Blue Mountain Background Visual Layer - motion enabled for parallax scroll */}
       <motion.div 
         className="absolute inset-0 opacity-[0.25] pointer-events-none z-0"
         style={{
@@ -91,8 +91,8 @@ export default function HeroSection() {
         }}
       >
         <Image
-          src="/hero-green-wave.jpg"
-          alt="DevFlow Wave Background"
+          src="/hero-bg-blue.jpg"
+          alt="DevFlow Mountain Background"
           fill
           priority
           quality={85}

@@ -152,13 +152,13 @@ export default function AIChatbot() {
       {/* Collapsed Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="relative w-14 h-14 rounded-full bg-devflow-green text-devflow-black flex items-center justify-center shadow-[0_0_25px_rgba(204,255,0,0.3)] hover:scale-105 hover:shadow-[0_0_35px_rgba(204,255,0,0.4)] transition-all duration-200 cursor-pointer"
+        className="relative w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-[0_0_25px_rgba(2,37,220,0.3)] hover:scale-105 hover:shadow-[0_0_35px_rgba(2,37,220,0.4)] transition-all duration-200 cursor-pointer"
         whileTap={{ scale: 0.95 }}
         aria-label={isOpen ? "Close chat" : "Open AI assistant"}
       >
         {/* Pulsing ring */}
         {!isOpen && (
-          <span className="absolute inset-0 rounded-full bg-devflow-green/20 animate-ping" />
+          <span className="absolute inset-0 rounded-full bg-blue-600/20 animate-ping" />
         )}
         <AnimatePresence mode="wait">
           {isOpen ? (
@@ -181,7 +181,7 @@ export default function AIChatbot() {
               className="relative"
             >
               <FiMessageSquare className="w-6 h-6" />
-              <FiCompass className="w-3 h-3 absolute -top-1 -right-1 text-devflow-black" />
+              <FiCompass className="w-3 h-3 absolute -top-1 -right-1 text-white" />
             </motion.div>
           )}
         </AnimatePresence>
@@ -201,8 +201,8 @@ export default function AIChatbot() {
             <div className="p-4 bg-devflow-black border-b border-white/[0.05] flex items-center justify-between flex-shrink-0">
               <div className="flex items-center gap-3">
                 <div className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-devflow-green opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-devflow-green"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-600 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-600"></span>
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold text-white">
@@ -235,7 +235,7 @@ export default function AIChatbot() {
                     <div
                       className={`rounded-xl p-3 text-xs leading-relaxed whitespace-pre-line ${
                         msg.sender === "user"
-                          ? "bg-devflow-green text-devflow-black font-medium"
+                          ? "bg-blue-600 text-white font-medium"
                           : "bg-devflow-black border border-white/[0.06] text-devflow-gray-200"
                       }`}
                     >
@@ -251,7 +251,7 @@ export default function AIChatbot() {
                             onClick={() =>
                               handleSuggestionClick(suggestion.path)
                             }
-                            className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-devflow-charcoal border border-white/[0.08] hover:border-devflow-green/40 rounded-lg text-[10px] font-mono text-devflow-gray-300 hover:text-devflow-green transition-all duration-200 cursor-pointer group"
+                            className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-devflow-charcoal border border-white/[0.08] hover:border-blue-600/40 rounded-lg text-[10px] font-mono text-devflow-gray-300 hover:text-blue-600 transition-all duration-200 cursor-pointer group"
                           >
                             <span>{suggestion.icon || "→"}</span>
                             <span className="truncate max-w-[120px]">
@@ -270,9 +270,9 @@ export default function AIChatbot() {
               {isTyping && (
                 <div className="flex justify-start">
                   <div className="bg-devflow-black border border-white/[0.06] rounded-xl p-3 flex gap-1.5 items-center">
-                    <span className="w-2 h-2 bg-devflow-green rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
-                    <span className="w-2 h-2 bg-devflow-green rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
-                    <span className="w-2 h-2 bg-devflow-green rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
+                    <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
+                    <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
+                    <span className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
                     <span className="ml-1.5 text-[10px] font-mono text-devflow-gray-500">
                       BROWSING SITE...
                     </span>
@@ -285,9 +285,9 @@ export default function AIChatbot() {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="p-4 bg-devflow-black/80 border border-devflow-green/20 rounded-xl space-y-3"
+                  className="p-4 bg-devflow-black/80 border border-blue-600/20 rounded-xl space-y-3"
                 >
-                  <p className="text-[10px] font-mono text-devflow-green uppercase tracking-wider">
+                  <p className="text-[10px] font-mono text-blue-600 uppercase tracking-wider">
                     [ LEAD INTAKE MODULE ]
                   </p>
                   <p className="text-[10px] text-devflow-gray-400">
@@ -301,7 +301,7 @@ export default function AIChatbot() {
                       required
                       value={leadName}
                       onChange={(e) => setLeadName(e.target.value)}
-                      className="w-full bg-devflow-charcoal border border-white/10 rounded px-3 py-2 text-xs text-white placeholder-devflow-gray-400 focus:outline-none focus:border-devflow-green transition-colors"
+                      className="w-full bg-devflow-charcoal border border-white/10 rounded px-3 py-2 text-xs text-white placeholder-devflow-gray-400 focus:outline-none focus:border-blue-600 transition-colors"
                     />
                     <input
                       type="email"
@@ -309,11 +309,11 @@ export default function AIChatbot() {
                       required
                       value={leadEmail}
                       onChange={(e) => setLeadEmail(e.target.value)}
-                      className="w-full bg-devflow-charcoal border border-white/10 rounded px-3 py-2 text-xs text-white placeholder-devflow-gray-400 focus:outline-none focus:border-devflow-green transition-colors"
+                      className="w-full bg-devflow-charcoal border border-white/10 rounded px-3 py-2 text-xs text-white placeholder-devflow-gray-400 focus:outline-none focus:border-blue-600 transition-colors"
                     />
                     <button
                       type="submit"
-                      className="w-full bg-devflow-green text-devflow-black font-semibold text-xs py-2.5 rounded flex items-center justify-center gap-1.5 hover:brightness-110 transition-all cursor-pointer"
+                      className="w-full bg-blue-600 text-white font-semibold text-xs py-2.5 rounded flex items-center justify-center gap-1.5 hover:brightness-110 transition-all cursor-pointer"
                     >
                       <FiCheck className="w-3.5 h-3.5" />
                       SUBMIT DETAILS
@@ -330,7 +330,7 @@ export default function AIChatbot() {
               <div className="px-4 py-2 border-t border-white/[0.04] bg-devflow-black/40 flex gap-2 overflow-x-auto scrollbar-none flex-shrink-0">
                 <button
                   onClick={() => handleQuickReply("What services do you offer?")}
-                  className="px-3 py-1.5 bg-devflow-charcoal border border-white/5 hover:border-devflow-green/30 rounded-full text-[10px] text-devflow-gray-300 hover:text-white whitespace-nowrap transition-colors cursor-pointer flex-shrink-0"
+                  className="px-3 py-1.5 bg-devflow-charcoal border border-white/5 hover:border-blue-600/30 rounded-full text-[10px] text-devflow-gray-300 hover:text-white whitespace-nowrap transition-colors cursor-pointer flex-shrink-0"
                 >
                   Our Services 🛠️
                 </button>
@@ -338,13 +338,13 @@ export default function AIChatbot() {
                   onClick={() =>
                     handleQuickReply("Show me your projects")
                   }
-                  className="px-3 py-1.5 bg-devflow-charcoal border border-white/5 hover:border-devflow-green/30 rounded-full text-[10px] text-devflow-gray-300 hover:text-white whitespace-nowrap transition-colors cursor-pointer flex-shrink-0"
+                  className="px-3 py-1.5 bg-devflow-charcoal border border-white/5 hover:border-blue-600/30 rounded-full text-[10px] text-devflow-gray-300 hover:text-white whitespace-nowrap transition-colors cursor-pointer flex-shrink-0"
                 >
                   View Projects 💼
                 </button>
                 <button
                   onClick={() => handleQuickReply("What are your prices?")}
-                  className="px-3 py-1.5 bg-devflow-charcoal border border-white/5 hover:border-devflow-green/30 rounded-full text-[10px] text-devflow-gray-300 hover:text-white whitespace-nowrap transition-colors cursor-pointer flex-shrink-0"
+                  className="px-3 py-1.5 bg-devflow-charcoal border border-white/5 hover:border-blue-600/30 rounded-full text-[10px] text-devflow-gray-300 hover:text-white whitespace-nowrap transition-colors cursor-pointer flex-shrink-0"
                 >
                   Pricing 💰
                 </button>
@@ -352,7 +352,7 @@ export default function AIChatbot() {
                   onClick={() =>
                     handleQuickReply("Connect me with Prince & Bhavin")
                   }
-                  className="px-3 py-1.5 bg-devflow-charcoal border border-white/5 hover:border-devflow-green/30 rounded-full text-[10px] text-devflow-gray-300 hover:text-white whitespace-nowrap transition-colors cursor-pointer flex-shrink-0"
+                  className="px-3 py-1.5 bg-devflow-charcoal border border-white/5 hover:border-blue-600/30 rounded-full text-[10px] text-devflow-gray-300 hover:text-white whitespace-nowrap transition-colors cursor-pointer flex-shrink-0"
                 >
                   Contact Founders 📞
                 </button>
@@ -360,7 +360,7 @@ export default function AIChatbot() {
                   onClick={() =>
                     handleQuickReply("What AI services do you offer?")
                   }
-                  className="px-3 py-1.5 bg-devflow-charcoal border border-white/5 hover:border-devflow-green/30 rounded-full text-[10px] text-devflow-gray-300 hover:text-white whitespace-nowrap transition-colors cursor-pointer flex-shrink-0"
+                  className="px-3 py-1.5 bg-devflow-charcoal border border-white/5 hover:border-blue-600/30 rounded-full text-[10px] text-devflow-gray-300 hover:text-white whitespace-nowrap transition-colors cursor-pointer flex-shrink-0"
                 >
                   AI & Automation 🤖
                 </button>
@@ -378,14 +378,14 @@ export default function AIChatbot() {
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 disabled={showLeadForm && !leadSubmitted}
-                className="flex-grow bg-devflow-charcoal border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white placeholder-devflow-gray-400 focus:outline-none focus:border-devflow-green/50 disabled:opacity-50 transition-colors"
+                className="flex-grow bg-devflow-charcoal border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white placeholder-devflow-gray-400 focus:outline-none focus:border-blue-600/50 disabled:opacity-50 transition-colors"
               />
               <button
                 type="submit"
                 disabled={
                   (showLeadForm && !leadSubmitted) || !inputText.trim()
                 }
-                className="p-2.5 bg-devflow-green text-devflow-black rounded-xl hover:scale-105 active:scale-95 disabled:opacity-50 disabled:hover:scale-100 transition-all cursor-pointer"
+                className="p-2.5 bg-blue-600 text-white rounded-xl hover:scale-105 active:scale-95 disabled:opacity-50 disabled:hover:scale-100 transition-all cursor-pointer"
                 aria-label="Send message"
               >
                 <FiSend className="w-4 h-4" />

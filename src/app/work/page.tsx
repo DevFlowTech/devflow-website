@@ -95,7 +95,7 @@ export default function WorkPage() {
                     <div 
                       className="absolute inset-0 opacity-[0.02] group-hover:opacity-[0.05] pointer-events-none transition-opacity duration-500"
                       style={{
-                        background: `radial-gradient(circle at 50% 50%, ${project.accent || '#CCFF00'}, transparent 65%)`
+                        background: `radial-gradient(circle at 50% 50%, ${project.accent || '#0225dc'}, transparent 65%)`
                       }}
                     />
 

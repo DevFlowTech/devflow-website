@@ -1,5 +1,4 @@
-import { JetBrains_Mono } from "next/font/google";
-import localFont from "next/font/local";
+import { JetBrains_Mono, Plus_Jakarta_Sans, Outfit } from "next/font/google";
 import type { Metadata, Viewport } from "next";
 import dynamic from "next/dynamic";
 import "./globals.css";
@@ -16,62 +15,16 @@ const AIChatbot = dynamic(() => import("@/components/ui/AIChatbot"));
 const BackToTop = dynamic(() => import("@/components/ui/BackToTop"));
 const FloatingContact = dynamic(() => import("@/components/ui/FloatingContact"));
 
-// Optimize fonts using local fonts
-const satoshi = localFont({
-  src: [
-    {
-      path: "../../public/fonts/satoshi/Satoshi-Light.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/satoshi/Satoshi-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/satoshi/Satoshi-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/satoshi/Satoshi-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/satoshi/Satoshi-Black.woff2",
-      weight: "900",
-      style: "normal",
-    },
-  ],
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-sans",
   display: "swap",
 });
 
-const neueMontreal = localFont({
-  src: [
-    {
-      path: "../../public/fonts/neue-montreal/PPNeueMontreal-Book.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/neue-montreal/PPNeueMontreal-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/neue-montreal/PPNeueMontreal-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/neue-montreal/PPNeueMontreal-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-serif",
   display: "swap",
 });
@@ -675,14 +628,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`scroll-smooth ${neueMontreal.variable} ${satoshi.variable} ${jetbrainsMono.variable}`}
+      className={`scroll-smooth ${outfit.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}
     >
       <head>
         {/* DNS prefetch for potential external resources */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
-      <body className={`${satoshi.className} antialiased`}>
+      <body className={`${plusJakartaSans.className} antialiased`}>
         {/* Scroll Progress Bar */}
         <ScrollProgress />
 

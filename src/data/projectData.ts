@@ -27,7 +27,7 @@ export const projects: Project[] = [
       "SaaS"
     ],
     "color": "from-devflow-green/20 to-devflow-green/5",
-    "accent": "#CCFF00",
+    "accent": "#0225dc",
     "url": "https://devflow.co.in",
     "challenge": "Manual hospital queues and patient scheduling administrative bottlenecks.",
     "solution": "Engineered an AI-driven automated booking and hospital operations dashboard.",
@@ -68,7 +68,7 @@ export const projects: Project[] = [
       "Logic"
     ],
     "color": "from-devflow-green/20 to-devflow-green/5",
-    "accent": "#CCFF00",
+    "accent": "#0225dc",
     "url": "https://devflow.co.in",
     "challenge": "Inaccurate, time-consuming lead extraction from map directories.",
     "solution": "Custom Puppeteer scraping automation with multi-threaded node scripts.",
@@ -110,7 +110,7 @@ export const projects: Project[] = [
       "SaaS"
     ],
     "color": "from-devflow-green/20 to-devflow-green/5",
-    "accent": "#CCFF00",
+    "accent": "#0225dc",
     "url": "https://devflow.co.in",
     "challenge": "Manual filtering of thousands of resumes against complex job roles.",
     "solution": "Parser powered by Gemini 1.5 Pro to parse and match candidate profiles.",
@@ -173,7 +173,7 @@ export const projects: Project[] = [
       "Puppeteer"
     ],
     "color": "from-devflow-green/20 to-devflow-green/5",
-    "accent": "#CCFF00",
+    "accent": "#0225dc",
     "url": "https://devflow.co.in",
     "challenge": "Catalog desynchronization between supplier and retail frontends.",
     "solution": "High-frequency web automation crawler powered by Puppeteer and Redis.",
@@ -257,7 +257,7 @@ export const projects: Project[] = [
       "InfluxDB"
     ],
     "color": "from-devflow-green/20 to-devflow-green/5",
-    "accent": "#CCFF00",
+    "accent": "#0225dc",
     "url": "https://devflow.co.in",
     "challenge": "Under-utilized parking spots due to lack of real-time status.",
     "solution": "Connected IoT hardware nodes to an MQTT broker and React dashboard.",

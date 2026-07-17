@@ -80,16 +80,16 @@ const mobileBackend = [
 
 // Row 3: SEO / AEO / GEO & Marketing
 const seoTools = [
-  { name: "SEO", icon: FiSearch, color: "#CCFF00" },
-  { name: "AEO", icon: FiMic, color: "#CCFF00" },
-  { name: "GEO", icon: FiMapPin, color: "#CCFF00" },
+  { name: "SEO", icon: FiSearch, color: "#0225dc" },
+  { name: "AEO", icon: FiMic, color: "#0225dc" },
+  { name: "GEO", icon: FiMapPin, color: "#0225dc" },
   { name: "Analytics", icon: SiGoogleanalytics, color: "#E37400" },
   { name: "Search Console", icon: SiGooglesearchconsole, color: "#458CF5" },
   { name: "Semrush", icon: SiSemrush, color: "#FF642D" },
   { name: "Ahrefs", icon: FiTrendingUp, color: "#FF8C00" },
   { name: "WordPress", icon: SiWordpress, color: "#21759B" },
   { name: "Shopify", icon: SiShopify, color: "#7AB55C" },
-  { name: "International SEO", icon: FiGlobe, color: "#CCFF00" },
+  { name: "International SEO", icon: FiGlobe, color: "#0225dc" },
 ];
 
 type TechEntry = { name: string; icon: React.ComponentType<{ className?: string; style?: React.CSSProperties }>; color: string };
@@ -142,8 +142,8 @@ export default function TechStackSection() {
   return (
     <div className="w-full overflow-hidden relative flex flex-col gap-4">
       {/* Edge fades */}
-      <div className="absolute top-0 bottom-0 left-0 w-16 z-10 bg-gradient-to-r from-[rgba(10,10,10,1)] to-transparent pointer-events-none" />
-      <div className="absolute top-0 bottom-0 right-0 w-16 z-10 bg-gradient-to-l from-[rgba(10,10,10,1)] to-transparent pointer-events-none" />
+      <div className="absolute top-0 bottom-0 left-0 w-16 z-10 bg-gradient-to-r from-white to-transparent pointer-events-none" />
+      <div className="absolute top-0 bottom-0 right-0 w-16 z-10 bg-gradient-to-l from-white to-transparent pointer-events-none" />
 
       {/* Row 1: JS / Web Frameworks → scrolls left */}
       <MarqueeRow items={jsFrameworks} direction="left" duration={30} />

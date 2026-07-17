@@ -90,7 +90,7 @@ export default function StatsBar() {
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-devflow-green/50 to-transparent" />
 
       <div className="section-container">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-18 lg:gap-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -98,11 +98,11 @@ export default function StatsBar() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="text-center group"
+              className="glass-panel p-8 rounded-2xl text-center group hover:shadow-xl hover:shadow-blue-500/5 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden flex flex-col justify-center items-center h-full cursor-default"
             >
               {/* Icon */}
               <motion.div
-                className="flex justify-center mb-6 text-devflow-green"
+                className="flex justify-center mb-5 text-devflow-green"
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 transition={{ type: "spring", stiffness: 400 }}
               >
@@ -110,12 +110,12 @@ export default function StatsBar() {
               </motion.div>
 
               {/* Number */}
-              <div className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2 group-hover:text-devflow-green transition-colors duration-300">
+              <div className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 group-hover:text-devflow-green transition-colors duration-300">
                 <AnimatedNumber value={stat.value} suffix={stat.suffix} />
               </div>
 
               {/* Label */}
-              <p className="text-devflow-gray-400 text-sm md:text-base font-medium uppercase tracking-wider">
+              <p className="text-devflow-gray-500 text-xs md:text-sm font-semibold uppercase tracking-wider">
                 {stat.label}
               </p>
             </motion.div>

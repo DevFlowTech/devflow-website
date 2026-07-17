@@ -70,18 +70,20 @@ export default function FAQSection() {
               transition={{ delay: index * 0.1 }}
               className="mb-4"
             >
-              <button
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                aria-expanded={openIndex === index}
-                aria-controls={`faq-answer-${index}`}
-                className={`w-full text-left p-6 rounded-2xl border transition-all duration-300 ${
+              <div
+                className={`rounded-2xl border transition-all duration-300 ${
                   openIndex === index
-                    ? "bg-devflow-charcoal border-devflow-green/20"
+                    ? "bg-devflow-charcoal border-devflow-green/20 shadow-lg shadow-blue-500/5"
                     : "bg-devflow-charcoal/50 border-white/5 hover:border-white/10"
                 }`}
               >
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-medium text-white pr-8">
+                <button
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  aria-expanded={openIndex === index}
+                  aria-controls={`faq-answer-${index}`}
+                  className="w-full text-left p-6 flex items-center justify-between gap-4"
+                >
+                  <h3 className="text-lg font-medium text-white pr-4">
                     {faq.question}
                   </h3>
                   <motion.div
@@ -104,7 +106,7 @@ export default function FAQSection() {
                       />
                     </svg>
                   </motion.div>
-                </div>
+                </button>
 
                 <AnimatePresence>
                   {openIndex === index && (
@@ -116,13 +118,15 @@ export default function FAQSection() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <p className="mt-4 text-devflow-gray-300 leading-relaxed">
-                        {faq.answer}
-                      </p>
+                      <div className="px-6 pb-6">
+                        <p className="text-devflow-gray-300 leading-relaxed text-sm">
+                          {faq.answer}
+                        </p>
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </button>
+              </div>
             </motion.div>
           ))}
         </div>

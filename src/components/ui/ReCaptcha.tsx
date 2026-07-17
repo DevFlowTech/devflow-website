@@ -70,7 +70,7 @@ export default function ReCaptcha({ onChange }: ReCaptchaProps) {
         onChange={handleChange}
         onExpired={handleExpired}
         onErrored={() => setError(true)}
-        theme="dark"
+        theme="light"
         size="normal"
       />
       {error && (

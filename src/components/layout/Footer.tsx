@@ -38,14 +38,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
           <motion.div variants={staggerItem}>
-            <Link href="/" className="inline-block mb-6">
+            <Link href="/" className="flex items-center gap-4 group mb-6">
               <Image
                 src="/logo.png"
                 alt="DevFlow Technology"
-                width={400}
-                height={112}
-                className="w-36 h-auto object-contain transition-opacity duration-150 hover:opacity-80"
+                width={56}
+                height={56}
+                className="w-14 h-14 object-contain transition-transform duration-300 group-hover:rotate-12"
               />
+              <span className="font-display font-bold text-3xl tracking-tight text-devflow-gray-100 group-hover:text-devflow-green transition-colors duration-200">
+                DevFlow
+              </span>
             </Link>
             <p className="text-devflow-gray-500 mb-6 leading-relaxed text-sm">
               We build custom internal tools and operational software for

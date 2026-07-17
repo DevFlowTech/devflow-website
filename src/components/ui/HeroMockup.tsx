@@ -11,12 +11,12 @@ export default function HeroMockup() {
       transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
     >
       {/* Glow Effect */}
-      <div className="absolute -inset-4 bg-gradient-to-r from-devflow-green/15 via-devflow-green/10 to-transparent rounded-3xl blur-xl animate-pulse-slow" />
+      <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/25 via-blue-600/15 to-transparent rounded-3xl blur-xl animate-pulse-slow" />
 
       {/* Laptop Frame */}
       <div className="relative">
         {/* Screen */}
-        <div className="relative bg-devflow-charcoal rounded-t-xl border border-white/10 overflow-hidden">
+        <div className="relative bg-devflow-charcoal rounded-t-xl border border-white/10 overflow-hidden dark-terminal">
           {/* Browser Bar */}
           <div className="flex items-center gap-2 px-4 py-3 bg-devflow-dark border-b border-white/5">
             <div className="flex gap-1.5">

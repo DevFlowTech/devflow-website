@@ -53,37 +53,42 @@ export default function ProcessTimelineSection() {
         </motion.div>
 
         {/* Process Steps */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOnce}
-          variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto relative z-10"
-        >
-          {steps.map((step, idx) => (
-            <motion.div
-              key={idx}
-              variants={staggerItem}
-              className="glass-panel p-8 rounded-2xl flex flex-col justify-between group relative h-full"
-            >
-              {/* Number indicator */}
-              <div className="flex justify-between items-start mb-6">
-                <span className="text-3xl font-mono font-bold text-devflow-green">{step.num}</span>
-                <span className="text-[10px] font-mono text-devflow-gray-500">[ STEP ]</span>
-              </div>
+        <div className="relative max-w-6xl mx-auto">
+          {/* Connecting Timeline Track (Desktop) */}
+          <div className="hidden md:block absolute top-[44px] left-[10%] right-[10%] h-[1.5px] bg-gradient-to-r from-devflow-green/60 via-devflow-green/25 to-transparent z-0 pointer-events-none" />
 
-              {/* Title & description */}
-              <div>
-                <h3 className="text-lg font-display font-medium text-white mb-3 group-hover:text-devflow-green transition-colors duration-200">
-                  {step.title}
-                </h3>
-                <p className="text-devflow-gray-300 text-xs leading-relaxed font-light">
-                  {step.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            variants={staggerContainer}
+            className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10"
+          >
+            {steps.map((step, idx) => (
+              <motion.div
+                key={idx}
+                variants={staggerItem}
+                className="glass-panel p-8 rounded-2xl flex flex-col justify-between group relative h-full hover:shadow-xl hover:shadow-blue-500/5 hover:-translate-y-1 transition-all duration-300 z-10 cursor-default"
+              >
+                {/* Number indicator */}
+                <div className="flex justify-between items-start mb-6">
+                  <span className="text-3xl font-mono font-bold text-devflow-green bg-devflow-black px-2 py-0.5 rounded-lg z-10">{step.num}</span>
+                  <span className="text-[10px] font-mono text-devflow-gray-500">[ STEP ]</span>
+                </div>
+
+                {/* Title & description */}
+                <div>
+                  <h3 className="text-lg font-display font-medium text-white mb-3 group-hover:text-devflow-green transition-colors duration-200">
+                    {step.title}
+                  </h3>
+                  <p className="text-devflow-gray-300 text-xs leading-relaxed font-light">
+                    {step.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -40,7 +40,7 @@ export default function PremiumCursor() {
             <motion.div
                 className="pointer-events-none fixed inset-0 z-30 hidden lg:block will-change-transform transform-gpu"
                 style={{
-                    background: `radial-gradient(400px circle at ${cursorXSpring}px ${cursorYSpring}px, rgba(204, 255, 0, 0.04), transparent 70%)`,
+                    background: `radial-gradient(400px circle at ${cursorXSpring}px ${cursorYSpring}px, rgba(2, 37, 220, 0.04), transparent 70%)`,
                 }}
             />
 
@@ -55,8 +55,8 @@ export default function PremiumCursor() {
                 }}
                 animate={{
                     scale: isHovered ? 2.2 : 1,
-                    backgroundColor: isHovered ? "rgba(204, 255, 0, 0.05)" : "rgba(204, 255, 0, 0)",
-                    borderColor: isHovered ? "rgba(204, 255, 0, 0.5)" : "rgba(204, 255, 0, 0.3)",
+                    backgroundColor: isHovered ? "rgba(2, 37, 220, 0.05)" : "rgba(2, 37, 220, 0)",
+                    borderColor: isHovered ? "rgba(2, 37, 220, 0.5)" : "rgba(2, 37, 220, 0.3)",
                 }}
                 transition={{ type: "spring", stiffness: 400, damping: 28, mass: 0.5 }}
             />

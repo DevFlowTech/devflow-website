@@ -50,15 +50,22 @@ export default function Navbar() {
               }`}
           >
             {/* Logo */}
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center gap-4 group">
               <Image
                 src="/logo.png"
                 alt="DevFlow Technology"
-                width={400}
-                height={112}
-                className="w-32 md:w-40 h-auto object-contain transition-opacity duration-150 hover:opacity-80"
+                width={56}
+                height={56}
+                className={`object-contain transition-all duration-300 group-hover:rotate-12 ${
+                  isScrolled ? "w-11 h-11" : "w-14 h-14"
+                }`}
                 priority
               />
+              <span className={`font-display font-bold tracking-tight text-devflow-gray-100 group-hover:text-devflow-green transition-all duration-300 ${
+                isScrolled ? "text-2xl" : "text-3xl"
+              }`}>
+                DevFlow
+              </span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -94,9 +101,11 @@ export default function Navbar() {
                 <Magnetic>
                   <Link
                     href="/contact"
-                    className="px-5 py-2.5 bg-devflow-green text-devflow-black font-semibold text-sm rounded-lg transition-all duration-150 hover:bg-devflow-green/90 shadow-[0_0_15px_rgba(204,255,0,0.15)]"
+                    className="relative overflow-hidden group px-5 py-2.5 bg-devflow-green hover:bg-devflow-green/90 text-white font-semibold text-sm rounded-lg transition-all duration-300 shadow-[0_0_20px_rgba(2,37,220,0.25)] hover:shadow-[0_0_30px_rgba(2,37,220,0.45)] flex items-center justify-center"
                   >
-                    Let's Talk
+                    {/* Glare Reflection overlay for liquid glass effect */}
+                    <span className="absolute inset-0 w-[200%] h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-20 -translate-x-[120%] group-hover:translate-x-[120%] transition-transform duration-1000 ease-out pointer-events-none" />
+                    <span className="relative z-10">Let&apos;s Talk</span>
                   </Link>
                 </Magnetic>
               </motion.div>
