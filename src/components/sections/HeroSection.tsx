@@ -88,6 +88,8 @@ export default function HeroSection() {
         className="absolute inset-0 opacity-[0.25] pointer-events-none z-0"
         style={{
           y: finalBackgroundY,
+          WebkitMaskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0) 100%)",
+          maskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0) 100%)",
         }}
       >
         <Image
@@ -101,7 +103,7 @@ export default function HeroSection() {
       </motion.div>
       {/* Edge blending overlays - fades harsh left vertical and bottom horizontal borders */}
       <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-transparent w-full pointer-events-none z-[1] md:from-white/10 md:via-white/5 md:w-3/4" />
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/30 to-transparent h-20 pointer-events-none z-[1]" />
+      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/40 to-transparent h-48 pointer-events-none z-[1]" />
 
       {/* Falling green snow particles sprinkling overlay (lazy loaded) */}
       <FloatingParticles count={50} mode="snow" />
