@@ -12,7 +12,8 @@ import {
   easeOut,
 } from "@/lib/motion";
 import MagneticButton from "@/components/ui/MagneticButton";
-import HeroMockup from "@/components/ui/HeroMockup";
+// Dynamically import the mockup (heavy framer-motion animations) and background effects
+const HeroMockup = dynamic(() => import("@/components/ui/HeroMockup"), { ssr: false });
 
 // Dynamically import heavy background effect components
 const AnimatedGradientBackground = dynamic(
@@ -94,7 +95,8 @@ export default function HeroSection() {
           alt="DevFlow City Skyline Background"
           fill
           priority
-          quality={85}
+          quality={75}
+          sizes="100vw"
           className="object-cover"
         />
       </motion.div>

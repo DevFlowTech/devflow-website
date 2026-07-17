@@ -2,15 +2,18 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import HeroSection from "@/components/sections/HeroSection";
-import TechStackSection from "@/components/sections/TechStackSection";
-import ProcessTimelineSection from "@/components/sections/ProcessTimelineSection";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import FounderSection from "@/components/sections/FounderSection";
-import FeaturedProjectsSection from "@/components/sections/FeaturedProjectsSection";
 import { staggerContainer, staggerItem } from "@/lib/motion";
-import { FiCpu, FiDatabase, FiGrid, FiArrowUpRight, FiLayers } from "react-icons/fi";
+import { FiCpu, FiGrid, FiArrowUpRight, FiLayers } from "react-icons/fi";
 import { HiStar } from "react-icons/hi";
+
+// Dynamically import sections to reduce initial bundle size (keep SSR for SEO content)
+const TechStackSection = dynamic(() => import("@/components/sections/TechStackSection"));
+const ProcessTimelineSection = dynamic(() => import("@/components/sections/ProcessTimelineSection"));
+const TestimonialsSection = dynamic(() => import("@/components/sections/TestimonialsSection"));
+const FounderSection = dynamic(() => import("@/components/sections/FounderSection"));
+const FeaturedProjectsSection = dynamic(() => import("@/components/sections/FeaturedProjectsSection"));
 
 export default function Home() {
   return (

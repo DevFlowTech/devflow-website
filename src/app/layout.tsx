@@ -17,14 +17,14 @@ const FloatingContact = dynamic(() => import("@/components/ui/FloatingContact"))
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-sans",
   display: "swap",
 });
 
 const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-serif",
   display: "swap",
 });
@@ -631,9 +631,10 @@ export default function RootLayout({
       className={`scroll-smooth ${outfit.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}
     >
       <head>
-        {/* DNS prefetch for potential external resources */}
+        {/* DNS prefetch for external resources */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
       </head>
       <body className={`${plusJakartaSans.className} antialiased`}>
         {/* Scroll Progress Bar */}
