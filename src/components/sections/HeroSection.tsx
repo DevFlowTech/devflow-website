@@ -100,8 +100,8 @@ export default function HeroSection() {
         />
       </motion.div>
       {/* Edge blending overlays - fades harsh left vertical and bottom horizontal borders */}
-      <div className="absolute inset-0 bg-gradient-to-r from-devflow-black/70 via-devflow-black/50 to-transparent w-full pointer-events-none z-[1] md:from-devflow-black md:via-devflow-black/90 md:w-3/4" />
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-devflow-black via-devflow-black/80 to-transparent h-[450px] pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-transparent w-full pointer-events-none z-[1] md:from-white/10 md:via-white/5 md:w-3/4" />
+      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/30 to-transparent h-20 pointer-events-none z-[1]" />
 
       {/* Falling green snow particles sprinkling overlay (lazy loaded) */}
       <FloatingParticles count={50} mode="snow" />
