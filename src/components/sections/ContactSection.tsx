@@ -589,10 +589,10 @@ export default function ContactSection() {
                         <p className="text-sm text-devflow-gray-500">
                           Or email us directly:{" "}
                           <a
-                            href="mailto:devflowtechnology@gmail.com"
+                            href="mailto:info@devflow.co.in"
                             className="text-devflow-green/80 hover:text-devflow-green transition-colors"
                           >
-                            devflowtechnology@gmail.com
+                            info@devflow.co.in
                           </a>
                         </p>
                         <p className="text-xs text-devflow-gray-600 font-mono">

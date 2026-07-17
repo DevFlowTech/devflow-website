@@ -80,13 +80,12 @@ export default function Navbar() {
                     duration: 0.3,
                     ease: easeOut,
                   }}
-                >
-                  <Link
-                    href={item.href}
-                    className="relative px-4 py-2 text-sm font-medium text-devflow-gray-400 hover:text-white transition-colors duration-150"
-                  >
-                    {item.label}
-                  </Link>
+                >                    <Link
+                      href={item.href}
+                      className="relative px-4 py-2 text-sm font-medium text-devflow-gray-200 hover:text-devflow-green transition-colors duration-150"
+                    >
+                      {item.label}
+                    </Link>
                 </motion.div>
               ))}
             </div>
@@ -101,7 +100,7 @@ export default function Navbar() {
                 <Magnetic>
                   <Link
                     href="/contact"
-                    className="relative overflow-hidden group px-5 py-2.5 bg-devflow-green hover:bg-devflow-green/90 text-white font-semibold text-sm rounded-lg transition-all duration-300 shadow-[0_0_20px_rgba(2,37,220,0.25)] hover:shadow-[0_0_30px_rgba(2,37,220,0.45)] flex items-center justify-center"
+                    className="relative overflow-hidden group px-5 py-2.5 bg-devflow-green hover:brightness-110 text-white font-semibold text-sm rounded-lg transition-all duration-300 shadow-[0_0_20px_rgba(2,37,220,0.25)] hover:shadow-[0_0_30px_rgba(2,37,220,0.45)] flex items-center justify-center"
                   >
                     {/* Glare Reflection overlay for liquid glass effect */}
                     <span className="absolute inset-0 w-[200%] h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-20 -translate-x-[120%] group-hover:translate-x-[120%] transition-transform duration-1000 ease-out pointer-events-none" />
@@ -155,27 +154,26 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 lg:hidden"
-          >
-            <motion.div
+        {isMobileMenuOpen && (            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute inset-0 bg-devflow-black/95 backdrop-blur-xl"
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
-            <motion.nav
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ duration: 0.3, ease: easeOut }}
-              className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-devflow-charcoal border-l border-white/[0.04] pt-24 px-8"
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-40 lg:hidden"
+            >
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="absolute inset-0 mobile-menu-backdrop"
+                onClick={() => setIsMobileMenuOpen(false)}
+              />
+              <motion.nav
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "100%" }}
+                transition={{ duration: 0.3, ease: easeOut }}
+                className="absolute right-0 top-0 bottom-0 w-full max-w-sm mobile-menu-panel pt-24 px-8"
             >
               <div className="flex flex-col gap-1">
                 {navItems.map((item, index) => (
@@ -192,7 +190,7 @@ export default function Navbar() {
                     <Link
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="block py-3 text-lg font-medium text-devflow-gray-300 hover:text-white transition-colors duration-150"
+                      className="block py-3 text-lg font-medium text-devflow-gray-200 hover:text-devflow-green transition-colors duration-150"
                     >
                       {item.label}
                     </Link>

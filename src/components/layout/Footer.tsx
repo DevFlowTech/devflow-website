@@ -50,23 +50,23 @@ export default function Footer() {
                 DevFlow
               </span>
             </Link>
-            <p className="text-devflow-gray-500 mb-6 leading-relaxed text-sm">
+            <p className="text-devflow-gray-300 mb-6 leading-relaxed text-sm">
               We build custom internal tools and operational software for
               scaling startups.
             </p>
 
             {/* Email */}
             <a
-              href="mailto:devflowtechnology@gmail.com"
+              href="mailto:info@devflow.co.in"
               className="text-devflow-green transition-colors duration-150 hover:text-devflow-green/80 text-sm block"
             >
-              devflowtechnology@gmail.com
+              info@devflow.co.in
             </a>
           </motion.div>
 
           {/* Links Column */}
           <motion.div variants={staggerItem}>
-            <h4 className="text-xs font-medium text-devflow-gray-500 uppercase tracking-wider mb-6">
+            <h4 className="text-xs font-medium text-devflow-gray-300 uppercase tracking-wider mb-6">
               Navigation
             </h4>
             <ul className="space-y-3">
@@ -74,7 +74,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-devflow-gray-400 transition-colors duration-150 hover:text-white text-sm"
+                    className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
                   >
                     {link.label}
                   </Link>
@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Partners Column */}
           <motion.div variants={staggerItem}>
-            <h4 className="text-xs font-medium text-devflow-gray-500 uppercase tracking-wider mb-6">
+            <h4 className="text-xs font-medium text-devflow-gray-300 uppercase tracking-wider mb-6">
               Official Partners
             </h4>
             <ul className="space-y-3">
@@ -95,7 +95,7 @@ export default function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-devflow-green transition-colors duration-150 hover:text-white text-sm block"
+                    className="text-devflow-green transition-colors duration-150 hover:text-devflow-green/70 text-sm block"
                   >
                     {link.label} &rarr;
                   </a>
@@ -106,7 +106,7 @@ export default function Footer() {
 
           {/* Legal + Social Column */}
           <motion.div variants={staggerItem}>
-            <h4 className="text-xs font-medium text-devflow-gray-500 uppercase tracking-wider mb-6">
+            <h4 className="text-xs font-medium text-devflow-gray-300 uppercase tracking-wider mb-6">
               Legal
             </h4>
             <ul className="space-y-3 mb-8">
@@ -114,7 +114,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-devflow-gray-400 transition-colors duration-150 hover:text-white text-sm"
+                    className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
                   >
                     {link.label}
                   </Link>
@@ -127,9 +127,9 @@ export default function Footer() {
         {/* Bottom Bar */}
         <motion.div
           variants={staggerItem}
-          className="mt-14 pt-8 border-t border-white/[0.04]"
+          className="mt-14 pt-8 border-t border-devflow-green/10"
         >
-          <p className="text-devflow-gray-600 text-sm text-center">
+          <p className="text-devflow-gray-400 text-sm text-center">
             © {new Date().getFullYear()} DevFlow Technology. All rights
             reserved.
           </p>

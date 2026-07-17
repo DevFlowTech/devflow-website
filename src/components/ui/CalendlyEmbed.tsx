@@ -87,7 +87,7 @@ export default function CalendlyEmbed() {
         </div>
 
         <a
-          href="mailto:devflowtechnology@gmail.com?subject=Consultation%20Booking"
+          href="mailto:info@devflow.co.in?subject=Consultation%20Booking"
           className="block w-full py-3 bg-devflow-green text-devflow-black font-semibold rounded-xl text-center hover:opacity-90 transition-opacity mt-4"
         >
           Confirm Booking
@@ -96,7 +96,7 @@ export default function CalendlyEmbed() {
         <p className="text-xs text-center text-devflow-gray-500">
           Or email us at{" "}
           <span className="text-devflow-green">
-            devflowtechnology@gmail.com
+            info@devflow.co.in
           </span>
         </p>
       </div>

@@ -77,7 +77,7 @@ export default function SEOAuditPage() {
             </label>
             <div className="flex gap-2">
               <div className="relative flex-grow">
-                <FiGlobe className="absolute left-4 top-1/2 -translate-y-1/2 text-devflow-gray-500 w-4 h-4" />
+                <FiGlobe className="absolute left-4 top-1/2 -translate-y-1/2 text-devflow-gray-400 w-4 h-4" />
                 <input
                   type="url"
                   placeholder="https://yourwebsite.com"
@@ -85,13 +85,13 @@ export default function SEOAuditPage() {
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
                   disabled={isAuditing}
-                  className="w-full bg-devflow-black border border-white/10 rounded-xl pl-11 pr-4 py-3.5 text-sm text-white focus:outline-none focus:border-devflow-green/50 placeholder-devflow-gray-500"
+                  className="w-full bg-devflow-gray-600 border border-devflow-gray-200/20 rounded-xl pl-11 pr-4 py-3.5 text-sm text-devflow-gray-100 focus:outline-none focus:border-devflow-green/50 placeholder-devflow-gray-400"
                 />
               </div>
               <button
                 type="submit"
                 disabled={isAuditing}
-                className="px-6 py-3.5 bg-devflow-green text-devflow-black font-semibold rounded-xl flex items-center gap-2 hover:scale-[1.02] active:scale-95 transition-all disabled:opacity-50 cursor-pointer text-sm"
+                className="px-6 py-3.5 bg-devflow-green text-white font-semibold rounded-xl flex items-center gap-2 hover:scale-[1.02] active:scale-95 transition-all disabled:opacity-50 cursor-pointer text-sm shadow-[0_2px_12px_rgba(2,37,220,0.2)] hover:shadow-[0_4px_20px_rgba(2,37,220,0.35)]"
               >
                 <FiSearch className="w-4 h-4" /> {isAuditing ? "Auditing..." : "Run Audit"}
               </button>
@@ -105,13 +105,12 @@ export default function SEOAuditPage() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                className="mt-6 space-y-4 pt-6 border-t border-white/5 overflow-hidden"
+                className="mt-6 space-y-4 pt-6 border-t border-devflow-gray-200/10 overflow-hidden"
               >
                 <div className="flex justify-between text-xs font-mono text-devflow-gray-400">
                   <span>AUDITING PROGRESS</span>
                   <span>{Math.round(((auditStep + 1) / auditSteps.length) * 100)}%</span>
-                </div>
-                <div className="h-1 bg-white/5 rounded-full overflow-hidden">
+                </div>                  <div className="h-1 bg-devflow-gray-200/10 rounded-full overflow-hidden">
                   <motion.div
                     className="h-full bg-devflow-green"
                     initial={{ width: 0 }}
@@ -200,27 +199,27 @@ export default function SEOAuditPage() {
                     <h4 className="text-xl font-display font-medium text-white mb-2">
                       Get the Full AEO/GEO Optimization Blueprint
                     </h4>
-                    <p className="text-xs text-devflow-gray-400 leading-relaxed font-light">
-                      Leave your email below. Our founders, Prince &amp; Bhavin, will compile a custom SEO optimization report and send it to you within 24 hours.
-                    </p>
+                  <p className="text-xs text-devflow-gray-300 leading-relaxed font-light">
+                    Leave your email below. Our founders, Prince &amp; Bhavin, will compile a custom SEO optimization report and send it to you within 24 hours.
+                  </p>
                   </div>
 
                   {!emailSubmitted ? (
                     <form onSubmit={handleEmailSubmit} className="flex gap-2 max-w-md mx-auto">
                       <div className="relative flex-grow">
-                        <FiMail className="absolute left-4 top-1/2 -translate-y-1/2 text-devflow-gray-500 w-4 h-4" />
+                        <FiMail className="absolute left-4 top-1/2 -translate-y-1/2 text-devflow-gray-400 w-4 h-4" />
                         <input
                           type="email"
                           placeholder="name@company.com"
                           required
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
-                          className="w-full bg-devflow-black border border-white/10 rounded-xl pl-11 pr-4 py-3 text-xs text-white focus:outline-none focus:border-devflow-green"
+                          className="w-full bg-devflow-gray-600 border border-devflow-gray-200/20 rounded-xl pl-11 pr-4 py-3 text-xs text-devflow-gray-100 focus:outline-none focus:border-devflow-green placeholder-devflow-gray-400"
                         />
                       </div>
                       <button
                         type="submit"
-                        className="px-5 py-3 bg-devflow-green text-devflow-black font-semibold text-xs rounded-xl hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                        className="px-5 py-3 bg-devflow-green text-white font-semibold text-xs rounded-xl hover:scale-105 active:scale-95 transition-all cursor-pointer shadow-[0_2px_10px_rgba(2,37,220,0.2)] hover:shadow-[0_4px_16px_rgba(2,37,220,0.35)]"
                       >
                         Get Report
                       </button>

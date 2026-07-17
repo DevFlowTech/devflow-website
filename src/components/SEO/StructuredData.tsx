@@ -40,7 +40,7 @@ const organizationSchema = {
   contactPoint: [
     {
       "@type": "ContactPoint",
-      email: "devflowtechnology@gmail.com",
+      email: "info@devflow.co.in",
       contactType: "customer service",
       availableLanguage: ["English", "Hindi", "Gujarati"],
       areaServed: ["IN", "US", "GB", "AE", "AU"],
@@ -102,7 +102,7 @@ const localBusinessSchema = {
   url: "https://devflow.co.in",
   logo: "https://devflow.co.in/logo.png",
   image: "https://devflow.co.in/og-image.png",
-  email: "devflowtechnology@gmail.com",
+  email: "info@devflow.co.in",
   telephone: "+91-98765-43210",
   priceRange: "$$-$$$",
   currenciesAccepted: "INR, USD",
@@ -275,7 +275,7 @@ const localBusinessCitationSchema = {
   alternateName: "DevFlow Technology Ahmedabad",
   url: "https://devflow.co.in",
   telephone: "+91-98765-43210",
-  email: "devflowtechnology@gmail.com",
+  email: "info@devflow.co.in",
   address: {
     "@type": "PostalAddress",
     addressCountry: "IN",

@@ -250,7 +250,7 @@ export default function WebDevelopmentAhmedabadPage() {
                   </div>
                   <div>
                     <h4 className="text-xs font-mono text-devflow-gray-500 uppercase">EMAIL</h4>
-                    <p className="text-sm text-white font-medium">devflowtechnology@gmail.com</p>
+                    <p className="text-sm text-white font-medium">info@devflow.co.in</p>
                   </div>
                 </div>
               </div>

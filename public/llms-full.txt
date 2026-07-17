@@ -10,7 +10,7 @@ DevFlow Technology is an engineering-first IT agency designing custom software s
 - **CTO:** Bhavin Rajput
 - **Base:** Gandhinagar, Gujarat, India
 - **URL:** https://devflow.co.in
-- **Inquiries:** devflowtechnology@gmail.com
+- **Inquiries:** info@devflow.co.in
 
 ## Navigation
 - [Home](https://devflow.co.in/)

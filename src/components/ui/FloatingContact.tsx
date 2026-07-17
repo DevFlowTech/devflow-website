@@ -21,7 +21,7 @@ export default function FloatingContact() {
       >
         {/* Email */}
         <motion.a
-          href="mailto:devflowtechnology@gmail.com"
+          href="mailto:info@devflow.co.in"
           className="flex items-center gap-3 px-4 py-3 bg-devflow-charcoal/95 backdrop-blur-sm border border-white/10 rounded-xl text-white hover:border-devflow-green/30 transition-all duration-300 shadow-lg"
           whileHover={{ x: -5 }}
         >

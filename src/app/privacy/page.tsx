@@ -258,7 +258,7 @@ export default function PrivacyPolicy() {
                                 </div>
                                 <div className="bg-devflow-green/5 border border-devflow-green/20 rounded-2xl p-6 max-w-sm">
                                     <p className="text-xs font-bold text-devflow-green mb-2 uppercase tracking-tighter italic">Emergency Neutralization Link</p>
-                                    <p className="text-[11px] font-mono leading-relaxed">To trigger immediate data lockdown, relay your PGP-signed request to: <br /><a href="mailto:devflowtechnology@gmail.com" className="text-white hover:text-devflow-green transition-colors">devflowtechnology@gmail.com</a></p>
+                                    <p className="text-[11px] font-mono leading-relaxed">To trigger immediate data lockdown, relay your PGP-signed request to: <br /><a href="mailto:info@devflow.co.in" className="text-white hover:text-devflow-green transition-colors">info@devflow.co.in</a></p>
                                 </div>
                             </div>
                         </section>

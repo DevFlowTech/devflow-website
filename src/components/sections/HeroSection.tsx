@@ -81,29 +81,23 @@ export default function HeroSection() {
 
       {/* Radial glow and shadow gradients */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_35%,rgba(2,37,220,0.04),transparent_40%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]" />
 
       {/* Uploaded Blue Mountain Background Visual Layer - motion enabled for parallax scroll */}
       <motion.div 
         className="absolute inset-0 opacity-[0.25] pointer-events-none z-0"
         style={{
           y: finalBackgroundY,
-          WebkitMaskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0) 100%)",
-          maskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0) 100%)",
         }}
       >
         <Image
-          src="/hero-bg-blue.jpg"
-          alt="DevFlow Mountain Background"
+          src="/hero-bg-city.jpg"
+          alt="DevFlow City Skyline Background"
           fill
           priority
           quality={85}
           className="object-cover"
         />
       </motion.div>
-      {/* Edge blending overlays - fades harsh left vertical and bottom horizontal borders */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-transparent w-full pointer-events-none z-[1] md:from-white/10 md:via-white/5 md:w-3/4" />
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/40 to-transparent h-48 pointer-events-none z-[1]" />
 
       {/* Falling green snow particles sprinkling overlay (lazy loaded) */}
       <FloatingParticles count={50} mode="snow" />
@@ -126,7 +120,7 @@ export default function HeroSection() {
             {/* Monospaced indicator */}
             <motion.div
               variants={staggerItem}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-white/5 bg-devflow-charcoal text-xs font-mono tracking-widest uppercase text-devflow-gray-300"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-devflow-green/30 bg-white shadow-sm text-xs font-mono tracking-widest uppercase text-devflow-gray-100"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-devflow-green animate-breathing-glow" />
               [ 01 // SOFTWARE ENGINEERING ]
@@ -135,7 +129,7 @@ export default function HeroSection() {
             {/* Serif Editorial Headline */}
             <motion.h1
               variants={staggerItem}
-              className="font-display text-4xl md:text-6xl lg:text-[4.75rem] font-medium text-white leading-[1.1] tracking-tight"
+              className="font-display text-4xl md:text-6xl lg:text-[4.75rem] font-medium text-devflow-gray-100 leading-[1.1] tracking-tight"
             >
               Building clean, <br />
               <span className="italic font-normal text-devflow-green font-display">operational software</span> <br />
@@ -145,7 +139,7 @@ export default function HeroSection() {
             {/* Subtext description */}
             <motion.p
               variants={staggerItem}
-              className="text-base md:text-lg text-devflow-gray-300 leading-relaxed font-light max-w-2xl"
+              className="text-base md:text-lg text-devflow-gray-100/80 leading-relaxed font-light max-w-2xl"
             >
               We are a focused technical partner. We design and build high-performance Web Applications, bespoke ERP systems, and automated operational pipelines. No generic templates, no AI buzzwords. Just robust code.
             </motion.p>

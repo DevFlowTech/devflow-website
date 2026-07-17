@@ -60,14 +60,14 @@ function FloatingInput({
         rows={multiline ? rows : undefined}          placeholder={focused ? placeholder : ""}
           className={`
           w-full px-4 ${multiline ? "pt-9 pb-3" : "pt-6 pb-2.5"}
-          bg-transparent text-white text-base rounded-xl outline-none
-          border border-white/[0.08]
+          bg-devflow-gray-600 text-devflow-gray-100 text-base rounded-xl outline-none
+          border border-devflow-gray-200/20
           transition-all duration-300
           ${multiline ? "resize-none" : ""}
           ${
             focused
-              ? "border-devflow-green/50 shadow-[0_0_20px_rgba(204,255,0,0.08)]"
-              : "hover:border-white/[0.15]"
+              ? "border-devflow-green/50 shadow-[0_0_20px_rgba(2,37,220,0.08)]"
+              : "hover:border-devflow-gray-200/40"
           }
         `}
       />
@@ -82,13 +82,13 @@ function FloatingInput({
           }
           ${
             active
-              ? "top-2.5 translate-y-0 text-[10px] font-mono uppercase tracking-wider text-devflow-green/70"
-              : "text-devflow-gray-400 text-base"
+              ? "top-2.5 translate-y-0 text-[10px] font-mono uppercase tracking-wider text-devflow-green"
+              : "text-devflow-gray-300 text-base"
           }
         `}
       >
         {label}
-        {required && <span className="text-devflow-green/60 ml-0.5">*</span>}
+        {required && <span className="text-devflow-green ml-0.5">*</span>}
       </label>
       {/* Bottom glow */}
       <div
@@ -97,7 +97,7 @@ function FloatingInput({
           h-[1px] rounded-full transition-all duration-500
           ${
             focused
-              ? "w-full bg-gradient-to-r from-transparent via-devflow-green/60 to-transparent"
+              ? "w-full bg-gradient-to-r from-transparent via-devflow-green to-transparent"
               : "w-0"
           }
         `}
@@ -135,8 +135,8 @@ function GridSelector({
 }) {
   return (
     <div>
-      <p className="text-[10px] font-mono uppercase tracking-wider text-devflow-gray-500 mb-3 ml-1">
-        {label} <span className="text-devflow-green/60">*</span>
+      <p className="text-[10px] font-mono uppercase tracking-wider text-devflow-gray-300 mb-3 ml-1">
+        {label} <span className="text-devflow-green">*</span>
       </p>
       <div className="grid grid-cols-2 gap-2.5">
         {options.map((opt, i) => {
@@ -156,8 +156,8 @@ function GridSelector({
                 transition-all duration-300 overflow-hidden
                 ${
                   selected
-                    ? "bg-devflow-green/[0.08] border-devflow-green/50 shadow-[0_0_15px_rgba(204,255,0,0.05)]"
-                    : "bg-black/40 border-white/[0.06] hover:border-white/[0.15] hover:bg-white/[0.02]"
+                    ? "bg-devflow-green/[0.08] border-devflow-green/50 shadow-[0_0_15px_rgba(2,37,220,0.08)]"
+                    : "bg-devflow-gray-600 border-devflow-gray-200/15 hover:border-devflow-gray-200/40 hover:bg-devflow-gray-700"
                 }
               `}
             >
@@ -175,13 +175,13 @@ function GridSelector({
                   <span
                     className={`
                       text-sm font-semibold block leading-tight
-                      ${selected ? "text-devflow-green" : "text-white group-hover:text-devflow-green/80"}
+                      ${selected ? "text-devflow-green" : "text-devflow-gray-100 group-hover:text-devflow-green"}
                       transition-colors duration-200
                     `}
                   >
                     {opt.label}
                   </span>
-                  <span className="text-[9px] font-mono text-devflow-gray-500 block uppercase tracking-wider">
+                  <span className="text-[9px] font-mono text-devflow-gray-400 block uppercase tracking-wider">
                     {opt.desc}
                   </span>
                 </div>
@@ -213,7 +213,7 @@ function SuccessScreen({ name, email }: { name: string; email: string }) {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.4, ease: easeOut }}
-      className="relative p-10 md:p-14 rounded-2xl border border-white/[0.05] bg-devflow-charcoal text-center overflow-hidden"
+      className="relative p-10 md:p-14 rounded-2xl border border-devflow-green/15 bg-white shadow-[0_8px_40px_rgba(0,0,0,0.06)] text-center overflow-hidden"
     >
       {/* Orbiting dots */}
       {[...Array(numDots)].map((_, i) => {
@@ -275,7 +275,7 @@ function SuccessScreen({ name, email }: { name: string; email: string }) {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="font-display text-3xl md:text-5xl font-medium text-white"
+          className="font-display text-3xl md:text-5xl font-medium text-devflow-gray-100"
         >
           Clarity is on its way.
         </motion.h1>
@@ -286,10 +286,10 @@ function SuccessScreen({ name, email }: { name: string; email: string }) {
           transition={{ delay: 0.7 }}
           className="text-devflow-gray-300 text-sm font-light max-w-md mx-auto leading-relaxed mt-6"
         >
-          Thank you, <span className="text-white font-medium">{name}</span>.
+          Thank you, <span className="text-devflow-green font-medium">{name}</span>.
           We have received your project requirements. Prince Gajjar and the
           DevFlow engineering team will review your specs and reach out at{" "}
-          <span className="text-white font-medium">{email}</span> within 24
+          <span className="text-devflow-green font-medium">{email}</span> within 24
           hours.
         </motion.p>
 
@@ -300,12 +300,11 @@ function SuccessScreen({ name, email }: { name: string; email: string }) {
           className="mt-10"
         >
           <a
-            href="/"
-            className="
+            href="/"              className="
               inline-flex items-center gap-2
               px-6 py-3 rounded-xl
-              bg-white/[0.05] text-devflow-gray-200
-              border border-white/[0.08]
+              bg-devflow-gray-600 text-devflow-gray-100
+              border border-devflow-gray-200/20
               hover:bg-devflow-green/[0.08] hover:text-devflow-green hover:border-devflow-green/30
               transition-all duration-300
               text-sm font-medium
@@ -385,9 +384,8 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease: easeOut }}
           >
-            {/* Premium card */}
-            <div className="relative p-[1px] rounded-2xl bg-gradient-to-b from-white/[0.06] to-transparent">
-              <div className="rounded-2xl bg-devflow-charcoal/95 backdrop-blur-xl p-8 md:p-10">
+            {/* Premium card */}              <div className="relative p-[1px] rounded-2xl bg-gradient-to-b from-devflow-green/15 to-transparent shadow-xl shadow-devflow-green/5">
+              <div className="rounded-2xl bg-white p-8 md:p-10">
                 {/* Header */}
                 <div className="mb-10">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-devflow-green/20 bg-devflow-green/[0.03] mb-5">
@@ -396,10 +394,10 @@ export default function ContactPage() {
                       Project Discovery
                     </span>
                   </div>
-                  <h1 className="font-display text-3xl md:text-4xl font-medium text-white leading-tight">
+                  <h1 className="font-display text-3xl md:text-4xl font-medium text-devflow-gray-100 leading-tight">
                     Tell us about your project
                   </h1>
-                  <p className="text-devflow-gray-400 text-sm mt-2 font-light">
+                  <p className="text-devflow-gray-300 text-sm mt-2 font-light">
                     All fields are required unless marked optional. We&apos;ll respond within 24 hours.
                   </p>
                 </div>
@@ -479,13 +477,13 @@ export default function ContactPage() {
                         overflow-hidden transition-all duration-300
                         ${
                           isSubmitting
-                            ? "bg-devflow-green/80 text-devflow-black cursor-not-allowed"
-                            : "bg-devflow-green text-devflow-black hover:shadow-[0_0_30px_rgba(204,255,0,0.3)] active:scale-[0.98]"
+                            ? "bg-devflow-green/80 text-white cursor-not-allowed"
+                            : "bg-devflow-green text-white hover:shadow-[0_0_30px_rgba(2,37,220,0.3)] active:scale-[0.98]"
                         }
                       `}
                     >
                       {/* Shine */}
-                      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+                      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
                       {isSubmitting ? (
                         <span className="flex items-center justify-center gap-2">
@@ -508,10 +506,10 @@ export default function ContactPage() {
                   </div>
 
                   {/* Footer */}
-                  <p className="text-center text-[11px] text-devflow-gray-500 font-mono">
+                  <p className="text-center text-[11px] text-devflow-gray-400 font-mono">
                     ⏎ Response within 24 hours · Or email{" "}
-                    <a href="mailto:devflowtechnology@gmail.com" className="text-devflow-green/70 hover:text-devflow-green transition-colors">
-                      devflowtechnology@gmail.com
+                    <a href="mailto:info@devflow.co.in" className="text-devflow-green/70 hover:text-devflow-green transition-colors">
+                      info@devflow.co.in
                     </a>
                   </p>
                 </form>

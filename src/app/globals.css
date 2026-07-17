@@ -28,8 +28,9 @@
   --devflow-gray-100: #18181b;   /* zinc-900 (primary text) */
   --devflow-gray-200: #27272a;   /* zinc-800 */
   --devflow-gray-300: #3f3f46;   /* zinc-700 */
-  --devflow-gray-400: #71717a;   /* zinc-500 */
-  --devflow-gray-500: #e4e4e7;   /* zinc-200 */
+
+  --devflow-gray-500: #a1a1aa;   /* zinc-400 - made darker for visibility on white bg */
+  --devflow-gray-400: #52525b;   /* zinc-600 - darker for better contrast on light backgrounds */
   --devflow-gray-600: #f4f4f5;   /* zinc-100 */
   --devflow-gray-700: #fafafa;   /* zinc-50 */
 
@@ -67,22 +68,25 @@
 
 /* VisionOS Glass Panel styling */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.7) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
-  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
   box-shadow: 
-    0 30px 60px -15px rgba(0, 0, 0, 0.05),
+    0 4px 24px -8px rgba(0, 0, 0, 0.08),
+    0 30px 60px -15px rgba(0, 0, 0, 0.06),
     inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease !important;
 }
 
 .glass-panel:hover {
-  border-color: rgba(2, 37, 220, 0.2) !important;
+  border-color: rgba(2, 37, 220, 0.3) !important;
   box-shadow: 
+    0 8px 32px -8px rgba(0, 0, 0, 0.12),
     0 40px 80px -10px rgba(0, 0, 0, 0.08),
-    0 0 25px rgba(2, 37, 220, 0.04),
+    0 0 25px rgba(2, 37, 220, 0.06),
     inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+  transform: translateY(-4px) !important;
 }
 
 /* Aurora Background Gradients */
@@ -1350,11 +1354,17 @@ ul.premium-list li::before {
 .btn-primary:hover *,
 .badge-premium,
 .badge-premium *,
+.bg-devflow-green,
 .bg-devflow-green *,
+.bg-devflow-blue,
 .bg-devflow-blue *,
+.bg-emerald-500,
 .bg-emerald-500 *,
+.bg-red-500,
 .bg-red-500 *,
+.bg-yellow-500,
 .bg-yellow-500 *,
+.bg-green-500,
 .bg-green-500 *,
 .text-white-except-light {
   color: #ffffff !important;
@@ -1392,9 +1402,9 @@ ul.premium-list li::before {
   color: var(--devflow-gray-400) !important;
 }
 
-/* Navigation items adjustment */
+/* Navigation items adjustment - darker for light bg contrast */
 nav a {
-  color: var(--devflow-gray-300);
+  color: var(--devflow-gray-200) !important;
 }
 nav a:hover {
   color: var(--devflow-green) !important;
@@ -1405,38 +1415,60 @@ iframe[title="reCAPTCHA"] {
   filter: invert(0) !important;
 }
 
-/* Hero Section Dark Contrast Overrides (Aligning typography with mountain background image) */
-#hero h1.text-white {
-  color: #ffffff !important;
-}
-
-#hero .text-devflow-gray-300 {
-  color: rgba(255, 255, 255, 0.75) !important;
-}
-
-#hero .btn-secondary {
-  color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.25) !important;
-  background: rgba(255, 255, 255, 0.04) !important;
-}
-
-#hero .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border-color: rgba(255, 255, 255, 0.45) !important;
+/* Fix hover:text-white for light theme - show brand blue instead of invisible */
+.hover\:text-white:hover,
+.lg\:hover\:text-white:hover,
+.md\:hover\:text-white:hover {
   color: var(--devflow-green) !important;
 }
 
-#hero .bg-devflow-charcoal {
-  background-color: rgba(255, 255, 255, 0.05) !important;
-  border-color: rgba(255, 255, 255, 0.08) !important;
+/* Mobile menu backdrop - keep dark overlay visible even in light theme */
+.mobile-menu-backdrop {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
 }
 
-#hero .text-devflow-gray-400 {
-  color: rgba(255, 255, 255, 0.5) !important;
+.mobile-menu-panel {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-left: 1px solid rgba(0, 0, 0, 0.08) !important;
 }
 
-#hero .text-devflow-gray-500 {
-  color: rgba(255, 255, 255, 0.4) !important;
+/* Fix btn-secondary for light backgrounds - visible borders and bg */
+.btn-secondary {
+  background: rgba(2, 37, 220, 0.06) !important;
+  border-color: rgba(2, 37, 220, 0.25) !important;
+  color: var(--devflow-gray-100) !important;
+}
+
+.btn-secondary:hover {
+  background: rgba(2, 37, 220, 0.12) !important;
+  border-color: rgba(2, 37, 220, 0.45) !important;
+  color: var(--devflow-green) !important;
+  transform: translateY(-2px);
+}
+
+/* Hero Section overrides for city background contrast */
+#hero .btn-secondary {
+  border-color: rgba(2, 37, 220, 0.3) !important;
+  background: rgba(2, 37, 220, 0.08) !important;
+}
+
+#hero .btn-secondary:hover {
+  background: rgba(2, 37, 220, 0.15) !important;
+  border-color: rgba(2, 37, 220, 0.5) !important;
+  color: var(--devflow-green) !important;
+}
+
+/* Footer text contrast fixes for light theme - prevent invisible text */
+footer .text-devflow-gray-500 {
+  color: var(--devflow-gray-400) !important;
+}
+footer .text-devflow-gray-600 {
+  color: var(--devflow-gray-400) !important;
+}
+footer h4 {
+  color: var(--devflow-gray-300) !important;
 }
 
 /* Dark Terminal mockup styling exceptions to prevent light-theme clash */
@@ -1450,254 +1482,4 @@ iframe[title="reCAPTCHA"] {
 
 .dark-terminal .bg-devflow-dark {
   transform: scale(1.05);
-}
-
-/* Refined Focus States for Accessibility */
-*:focus-visible {
-  outline: 2px solid rgba(2, 37, 220, 0.5);
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-/* Subtle Grain Texture */
-.grain-texture::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  opacity: 0.02;
-  pointer-events: none;
-  mix-blend-mode: overlay;
-}
-
-/* Enhanced List Styling */
-ul.premium-list li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-
-ul.premium-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.6em;
-  width: 6px;
-  height: 6px;
-  background: var(--devflow-green);
-  border-radius: 50%;
-  box-shadow: 0 0 8px rgba(2, 37, 220, 0.4);
-}
-
-/* Smooth Color Transitions */
-.transition-colors-smooth {
-  transition:
-    color 0.3s ease,
-    background-color 0.3s ease,
-    border-color 0.3s ease;
-}
-
-/* Border Gradient Effect */
-.border-gradient {
-  position: relative;
-  background-clip: padding-box;
-  border: 1px solid transparent;
-}
-
-.border-gradient::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  margin: -1px;
-  border-radius: inherit;
-  background: linear-gradient(135deg,
-      rgba(2, 37, 220, 0.3),
-      transparent,
-      rgba(2, 37, 220, 0.1));
-}
-
-/* Accessibility: Respect Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-  *, ::before, ::after {
-    animation-delay: -1ms !important;
-    animation-duration: 1ms !important;
-    animation-iteration-count: 1 !important;
-    background-attachment: scroll !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0s !important;
-    transition-delay: 0s !important;
-  }
-}
-
-/* ========================================
-   LIGHT THEME TRANSITION OVERRIDES
-   ======================================== */
-
-.text-white {
-  color: #18181b !important;
-}
-
-/* exceptions where text must be white */
-.btn-primary,
-.btn-primary *,
-.btn-primary:hover,
-.btn-primary:hover *,
-.badge-premium,
-.badge-premium *,
-.bg-devflow-green *,
-.bg-devflow-blue *,
-.bg-emerald-500 *,
-.bg-red-500 *,
-.bg-yellow-500 *,
-.bg-green-500 *,
-.text-white-except-light {
-  color: #ffffff !important;
-}
-
-/* Layout container background conversion */
-.bg-devflow-black,
-.bg-devflow-charcoal,
-.bg-devflow-dark,
-.bg-black {
-  background-color: var(--surface-primary) !important;
-}
-
-/* Border overrides to subtle light borders */
-.border-white\/10,
-.border-white\/5,
-.border-white\/\[0\.06\],
-.border-white\/\[0\.04\],
-.border-white\/\[0\.05\],
-.border-white\/\[0\.08\] {
-  border-color: rgba(0, 0, 0, 0.08) !important;
-}
-
-/* Ensure text variables have strict overrides if needed */
-.text-devflow-gray-100 {
-  color: var(--devflow-gray-100) !important;
-}
-.text-devflow-gray-200 {
-  color: var(--devflow-gray-200) !important;
-}
-.text-devflow-gray-300 {
-  color: var(--devflow-gray-300) !important;
-}
-.text-devflow-gray-400 {
-  color: var(--devflow-gray-400) !important;
-}
-
-/* Navigation items adjustment */
-nav a {
-  color: var(--devflow-gray-300);
-}
-nav a:hover {
-  color: var(--devflow-green) !important;
-}
-
-/* Recaptcha theme alignment helper */
-iframe[title="reCAPTCHA"] {
-  filter: invert(0) !important;
-}
-
-/* Hero Section Dark Contrast Overrides (Aligning typography with mountain background image) */
-#hero h1.text-white {
-  color: #ffffff !important;
-}
-
-#hero .text-devflow-gray-300 {
-  color: rgba(255, 255, 255, 0.75) !important;
-}
-
-#hero .btn-secondary {
-  color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.25) !important;
-  background: rgba(255, 255, 255, 0.04) !important;
-}
-
-#hero .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border-color: rgba(255, 255, 255, 0.45) !important;
-  color: var(--devflow-green) !important;
-}
-
-#hero .bg-devflow-charcoal {
-  background-color: rgba(255, 255, 255, 0.05) !important;
-  border-color: rgba(255, 255, 255, 0.08) !important;
-}
-
-#hero .text-devflow-gray-400 {
-  color: rgba(255, 255, 255, 0.5) !important;
-}
-
-#hero .text-devflow-gray-500 {
-  color: rgba(255, 255, 255, 0.4) !important;
-}
-
-/* Dark Terminal mockup styling exceptions to prevent light-theme clash */
-.dark-terminal {
-  background-color: #ffffff !important;
-  border-color: rgba(0, 0, 0, 0.08) !important;
-  box-shadow: 
-    0 30px 60px -15px rgba(0, 0, 0, 0.08),
-    0 0 30px rgba(2, 37, 220, 0.05) !important; /* Soft blue drop shadow */
-}
-
-.dark-terminal .bg-devflow-dark {
-  background-color: #f4f4f5 !important;
-  border-color: rgba(0, 0, 0, 0.05) !important;
-}
-
-.dark-terminal .bg-devflow-black\/50 {
-  background-color: #ffffff !important;
-  color: #52525b !important;
-  border: 1px solid rgba(0, 0, 0, 0.08) !important;
-}
-
-#hero .dark-terminal .bg-devflow-black\/50 {
-  color: #52525b !important;
-}
-
-.dark-terminal .bg-gradient-to-br {
-  background: #ffffff !important;
-}
-
-.dark-terminal .text-white {
-  color: #18181b !important;
-}
-
-.dark-terminal .text-devflow-gray-400 {
-  color: #71717a !important;
-}
-
-#hero .dark-terminal .text-devflow-gray-400 {
-  color: #71717a !important;
-}
-
-.dark-terminal .text-devflow-green {
-  color: #059669 !important; /* Emerald green success string and status */
-}
-
-#hero .dark-terminal .text-devflow-green {
-  color: #059669 !important;
-}
-
-.dark-terminal .text-purple-400 {
-  color: #8b5cf6 !important; /* violet-500 keywords */
-}
-
-.dark-terminal .text-blue-400 {
-  color: #2563eb !important; /* blue-600 variables */
-}
-
-.dark-terminal .text-yellow-400 {
-  color: #0d9488 !important; /* teal-600 functions */
-}
-
-.dark-terminal .bg-white\/\[0\.03\] {
-  background-color: #f4f4f5 !important;
-}
-
-.dark-terminal .border-white\/\[0\.05\] {
-  border-color: rgba(0, 0, 0, 0.06) !important;
 }

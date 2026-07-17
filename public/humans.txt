@@ -1,6 +1,6 @@
 {
   "name": "DevFlow Technology",
-  "email": "devflowtechnology@gmail.com",
+  "email": "info@devflow.co.in",
   "hiring": false,
   "link": "https://devflow.co.in"
 }
