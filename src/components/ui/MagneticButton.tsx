@@ -1,12 +1,11 @@
 "use client";
 
 import { useRef, useState, MouseEvent } from "react";
-import { motion } from "framer-motion";
 
 export default function MagneticButton({
   children,
   className = "",
-  strength = 30, // How strong the attraction is
+  strength = 30,
 }: {
   children: React.ReactNode;
   className?: string;
@@ -14,36 +13,41 @@ export default function MagneticButton({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     const { clientX, clientY } = e;
     const { left, top, width, height } = ref.current!.getBoundingClientRect();
 
-    // Calculate center of button
     const centerX = left + width / 2;
     const centerY = top + height / 2;
 
-    // Calculate distance from center
     const x = (clientX - centerX) / strength;
     const y = (clientY - centerY) / strength;
 
     setPosition({ x, y });
+    setIsHovering(true);
   };
 
   const handleMouseLeave = () => {
     setPosition({ x: 0, y: 0 });
+    setIsHovering(false);
   };
 
   return (
-    <motion.div
+    <div
       ref={ref}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      animate={{ x: position.x, y: position.y }}
-      transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
       className={className}
+      style={{
+        transform: `translate(${position.x}px, ${position.y}px)`,
+        transition: isHovering
+          ? "transform 0.15s cubic-bezier(0.2, 0, 0, 1)"
+          : "transform 0.4s cubic-bezier(0.2, 0, 0, 1)",
+      }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

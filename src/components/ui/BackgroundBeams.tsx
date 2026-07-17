@@ -1,65 +1,37 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
-
 export const BackgroundBeams = ({ className }: { className?: string }) => {
-    const [paths, setPaths] = useState<{ d: string; duration: number; delay: number }[]>([]);
-
-    useEffect(() => {
-        // Generate random paths for the beams
-        const newPaths = Array.from({ length: 6 }).map(() => {
-            const startX = Math.random() * 100;
-            const startY = Math.random() * 100;
-            const endX = Math.random() * 100;
-            const endY = Math.random() * 100;
-
-            return {
-                d: `M ${startX} ${startY} L ${endX} ${endY}`,
-                duration: Math.random() * 10 + 10,
-                delay: Math.random() * 5,
-            };
-        });
-        setPaths(newPaths);
-    }, []);
-
     return (
         <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
-            <svg
-                className="h-full w-full opacity-[0.15]"
-                viewBox="0 0 100 100"
-                preserveAspectRatio="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                {paths.map((path, i) => (
-                    <motion.path
-                        key={i}
-                        d={path.d}
-                        stroke="url(#beam-gradient)"
-                        strokeWidth="0.2"
-                        strokeLinecap="round"
-                        initial={{ pathLength: 0, opacity: 0 }}
-                        animate={{
-                            pathLength: [0, 1, 1, 0],
-                            opacity: [0, 1, 1, 0],
-                            pathOffset: [0, 0, 1, 1],
-                        }}
-                        transition={{
-                            duration: path.duration,
-                            repeat: Infinity,
-                            ease: "easeInOut",
-                            delay: path.delay,
-                        }}
-                    />
-                ))}
-                <defs>
-                    <linearGradient id="beam-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#bae654" stopOpacity="0" />
-                        <stop offset="50%" stopColor="#bae654" stopOpacity="1" />
-                        <stop offset="100%" stopColor="#bae654" stopOpacity="0" />
-                    </linearGradient>
-                </defs>
-            </svg>
+            {/* CSS-only animated beams - no framer-motion needed */}
+            <div className="absolute inset-0 opacity-[0.12]">
+                <div className="absolute top-[10%] left-[5%] w-[30%] h-[1px] bg-gradient-to-r from-transparent via-devflow-green to-transparent animate-beam-1" />
+                <div className="absolute top-[30%] right-[15%] w-[25%] h-[1px] bg-gradient-to-r from-transparent via-devflow-green to-transparent animate-beam-2" />
+                <div className="absolute bottom-[25%] left-[20%] w-[35%] h-[1px] bg-gradient-to-r from-transparent via-devflow-green to-transparent animate-beam-3" />
+                <div className="absolute top-[50%] left-[10%] w-[20%] h-[1px] bg-gradient-to-r from-transparent via-devflow-green/60 to-transparent animate-beam-1" />
+                <div className="absolute bottom-[40%] right-[10%] w-[28%] h-[1px] bg-gradient-to-r from-transparent via-devflow-green/60 to-transparent animate-beam-2" />
+                <div className="absolute top-[70%] left-[40%] w-[22%] h-[1px] bg-gradient-to-r from-transparent via-devflow-green to-transparent animate-beam-3" />
+            </div>
+            <style>{`
+                @keyframes beam-slide-1 {
+                    0%, 100% { transform: translateX(-100%) scaleX(0.5); opacity: 0; }
+                    25%, 75% { opacity: 1; }
+                    50% { transform: translateX(200%) scaleX(1); opacity: 0.8; }
+                }
+                @keyframes beam-slide-2 {
+                    0%, 100% { transform: translateX(100%) scaleX(0.3); opacity: 0; }
+                    25%, 75% { opacity: 0.8; }
+                    50% { transform: translateX(-150%) scaleX(1); opacity: 1; }
+                }
+                @keyframes beam-slide-3 {
+                    0%, 100% { transform: translateX(50%) scaleX(0.4); opacity: 0; }
+                    30%, 70% { opacity: 0.7; }
+                    50% { transform: translateX(-200%) scaleX(0.8); opacity: 1; }
+                }
+                .animate-beam-1 { animation: beam-slide-1 8s ease-in-out infinite; }
+                .animate-beam-2 { animation: beam-slide-2 10s ease-in-out infinite; }
+                .animate-beam-3 { animation: beam-slide-3 12s ease-in-out infinite; }
+            `}</style>
         </div>
     );
 };

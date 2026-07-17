@@ -1216,6 +1216,95 @@ select:focus {
   }
 }
 
+/* ========================================
+   HERO STAGGER ENTRANCE ANIMATIONS
+   ======================================== */
+
+/* Hero stagger container - each child fades up sequentially */
+.hero-stagger > * {
+  opacity: 0;
+  animation: hero-fade-up 0.7s cubic-bezier(0.2, 0, 0, 1) forwards;
+}
+.hero-stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.hero-stagger > *:nth-child(2) { animation-delay: 0.13s; }
+.hero-stagger > *:nth-child(3) { animation-delay: 0.21s; }
+.hero-stagger > *:nth-child(4) { animation-delay: 0.29s; }
+.hero-stagger > *:nth-child(5) { animation-delay: 0.37s; }
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero content column - fades on scroll via opacity class */
+.hero-content-fade {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Code line stagger for mockup */
+.mockup-code > * {
+  opacity: 0;
+  animation: code-fade-in 0.5s ease forwards;
+}
+.mockup-code > *:nth-child(1) { animation-delay: 0.3s; }
+.mockup-code > *:nth-child(2) { animation-delay: 0.5s; }
+.mockup-code > *:nth-child(3) { animation-delay: 0.7s; }
+
+@keyframes code-fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Mockup dashboard card stagger */
+.mockup-cards > * {
+  opacity: 0;
+  animation: card-scale-in 0.4s ease forwards;
+}
+.mockup-cards > *:nth-child(1) { animation-delay: 1s; }
+.mockup-cards > *:nth-child(2) { animation-delay: 1.1s; }
+.mockup-cards > *:nth-child(3) { animation-delay: 1.2s; }
+
+@keyframes card-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Hero mockup entrance - appears after left column items stagger in */
+.hero-mockup-entrance {
+  opacity: 0;
+  animation: hero-fade-up 0.7s cubic-bezier(0.2, 0, 0, 1) 0.37s forwards;
+}
+
+/* Disable all animations for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-stagger > *,
+  .hero-mockup-entrance,
+  .mockup-code > *,
+  .mockup-cards > * {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+}
+
 /* Refined Blockquote Styling */
 blockquote {
   position: relative;

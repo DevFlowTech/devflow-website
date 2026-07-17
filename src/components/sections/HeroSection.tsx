@@ -1,21 +1,14 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
-import { useRef, useState, useEffect } from "react";
-import {
-  staggerContainer,
-  staggerItem,
-  arrowSlide,
-  easeOut,
-} from "@/lib/motion";
+import { useRef, useState, useEffect, useCallback } from "react";
 import MagneticButton from "@/components/ui/MagneticButton";
-// Dynamically import the mockup (heavy framer-motion animations) and background effects
+
+// Dynamically import the mockup (heavy visual component) and background effects
 const HeroMockup = dynamic(() => import("@/components/ui/HeroMockup"), { ssr: false });
 
-// Dynamically import heavy background effect components
 const AnimatedGradientBackground = dynamic(
   () => import("@/components/ui/AnimatedGradientBackground"),
   { ssr: false }
@@ -35,13 +28,7 @@ const FloatingParticles = dynamic(
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
-  
-  // Track global viewport scroll progress on the hero component
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"],
-  });
-
+  const [scrollProgress, setScrollProgress] = useState(0);
   const [prefersReduced, setPrefersReduced] = useState(false);
 
   useEffect(() => {
@@ -55,19 +42,36 @@ export default function HeroSection() {
     return () => mediaQuery.removeEventListener("change", listener);
   }, []);
 
-  // GPU-optimized parallax scroll transformations
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
-  const textOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
-  const textY = useTransform(scrollYProgress, [0, 0.75], [0, -50]);
-  const mockupY = useTransform(scrollYProgress, [0, 0.75], [0, -75]);
-  const mockupScale = useTransform(scrollYProgress, [0, 0.75], [1, 1.03]);
+  // RAF-throttled scroll listener for parallax (replaces framer-motion useScroll)
+  const rafRef = useRef<ReturnType<typeof requestAnimationFrame> | null>(null);
+  const handleScroll = useCallback(() => {
+    if (rafRef.current !== null || prefersReduced) return;
+    rafRef.current = requestAnimationFrame(() => {
+      rafRef.current = null;
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / windowHeight));
+      setScrollProgress(progress);
+    });
+  }, [prefersReduced]);
 
-  // Bind values conditionally to respect reduced motion options
-  const finalBackgroundY = prefersReduced ? "0%" : backgroundY;
-  const finalTextOpacity = prefersReduced ? 1 : textOpacity;
-  const finalTextY = prefersReduced ? 0 : textY;
-  const finalMockupY = prefersReduced ? 0 : mockupY;
-  const finalMockupScale = prefersReduced ? 1 : mockupScale;
+  useEffect(() => {
+    if (prefersReduced) return;
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
+    };
+  }, [handleScroll, prefersReduced]);
+
+  // Calculate parallax values using CSS custom properties
+  const bgY = prefersReduced ? 0 : scrollProgress * 25;
+  const textOffset = prefersReduced ? 0 : scrollProgress * -50;
+  const mockupOffset = prefersReduced ? 0 : scrollProgress * -40;
+  const mockupScale = prefersReduced ? 1 : 1 + scrollProgress * 0.02;
+  const textOpacity = prefersReduced ? 1 : Math.max(0, 1 - scrollProgress / 0.75);
 
   return (
     <section
@@ -83,12 +87,10 @@ export default function HeroSection() {
       {/* Radial glow and shadow gradients */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_35%,rgba(2,37,220,0.04),transparent_40%)]" />
 
-      {/* Uploaded Blue Mountain Background Visual Layer - motion enabled for parallax scroll */}
-      <motion.div 
-        className="absolute inset-0 opacity-[0.25] pointer-events-none z-0"
-        style={{
-          y: finalBackgroundY,
-        }}
+      {/* City background with CSS parallax */}
+      <div 
+        className="absolute inset-0 opacity-[0.25] pointer-events-none z-0 will-change-transform"
+        style={{ transform: `translateY(${bgY}%)` }}
       >
         <Image
           src="/hero-bg-city.jpg"
@@ -99,99 +101,82 @@ export default function HeroSection() {
           sizes="100vw"
           className="object-cover"
         />
-      </motion.div>
+      </div>
 
-      {/* Falling green snow particles sprinkling overlay (lazy loaded) */}
+      {/* Falling green snow particles sprinkling overlay */}
       <FloatingParticles count={50} mode="snow" />
 
       <div className="section-container relative z-10 w-full">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={staggerContainer}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
-        >
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Asymmetrical typography layout */}
-          <motion.div 
-            className="lg:col-span-7 space-y-8"
+          <div 
+            className="lg:col-span-7 hero-content-fade"
             style={{
-              opacity: finalTextOpacity,
-              y: finalTextY,
+              opacity: textOpacity,
+              transform: `translateY(${textOffset}px)`,
             }}
           >
-            {/* Monospaced indicator */}
-            <motion.div
-              variants={staggerItem}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-devflow-green/30 bg-white shadow-sm text-xs font-mono tracking-widest uppercase text-devflow-gray-100"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-devflow-green animate-breathing-glow" />
-              [ 01 // SOFTWARE ENGINEERING ]
-            </motion.div>
+            <div className="hero-stagger space-y-8">
+              {/* Monospaced indicator */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-devflow-green/30 bg-white shadow-sm text-xs font-mono tracking-widest uppercase text-devflow-gray-100">
+                <span className="w-1.5 h-1.5 rounded-full bg-devflow-green animate-breathing-glow" />
+                [ 01 // SOFTWARE ENGINEERING ]
+              </div>
 
-            {/* Serif Editorial Headline */}
-            <motion.h1
-              variants={staggerItem}
-              className="font-display text-4xl md:text-6xl lg:text-[4.75rem] font-medium text-devflow-gray-100 leading-[1.1] tracking-tight"
-            >
-              Building clean, <br />
-              <span className="italic font-normal text-devflow-green font-display">operational software</span> <br />
-              for scaling startups.
-            </motion.h1>
+              {/* Serif Editorial Headline */}
+              <h1 className="font-display text-4xl md:text-6xl lg:text-[4.75rem] font-medium text-devflow-gray-100 leading-[1.1] tracking-tight">
+                Building clean, <br />
+                <span className="italic font-normal text-devflow-green font-display">operational software</span> <br />
+                for scaling startups.
+              </h1>
 
-            {/* Subtext description */}
-            <motion.p
-              variants={staggerItem}
-              className="text-base md:text-lg text-devflow-gray-100/80 leading-relaxed font-light max-w-2xl"
-            >
-              We are a focused technical partner. We design and build high-performance Web Applications, bespoke ERP systems, and automated operational pipelines. No generic templates, no AI buzzwords. Just robust code.
-            </motion.p>
+              {/* Subtext description */}
+              <p className="text-base md:text-lg text-devflow-gray-100/80 leading-relaxed font-light max-w-2xl">
+                We are a focused technical partner. We design and build high-performance Web Applications, bespoke ERP systems, and automated operational pipelines. No generic templates, no AI buzzwords. Just robust code.
+              </p>
 
-            {/* CTA Actions */}
-            <motion.div
-              variants={staggerItem}
-              className="flex flex-col sm:flex-row items-start gap-4 pt-4"
-            >
-              <MagneticButton>
-                <Link href="/contact" className="btn-primary min-w-[200px]">
-                  Start Your Discovery
-                  <motion.svg
-                    variants={arrowSlide}
-                    className="w-5 h-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2.5}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </motion.svg>
-                </Link>
-              </MagneticButton>
+              {/* CTA Actions */}
+              <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
+                <MagneticButton>
+                  <Link href="/contact" className="btn-primary min-w-[200px] group">
+                    Start Your Discovery
+                    <svg
+                      className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2.5}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
+                  </Link>
+                </MagneticButton>
 
-              <MagneticButton>
-                <Link href="/work" className="btn-secondary min-w-[200px]">
-                  View Our Portfolio
-                </Link>
-              </MagneticButton>
-            </motion.div>
-          </motion.div>
+                <MagneticButton>
+                  <Link href="/work" className="btn-secondary min-w-[200px]">
+                    View Our Portfolio
+                  </Link>
+                </MagneticButton>
+              </div>
+            </div>
+          </div>
 
           {/* Right Column: Code/Deployment Mockup visual */}
-          <motion.div 
-            className="lg:col-span-5 w-full relative"
+          <div 
+            className="lg:col-span-5 w-full relative will-change-transform hero-mockup-entrance"
             style={{
-              y: finalMockupY,
-              scale: finalMockupScale,
+              transform: `translateY(${mockupOffset}px) scale(${mockupScale})`,
             }}
           >
-            <motion.div variants={staggerItem} className="w-full">
+            <div className="w-full">
               <HeroMockup />
-            </motion.div>
-          </motion.div>
-        </motion.div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
