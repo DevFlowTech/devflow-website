@@ -1,105 +1,158 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { FiZap, FiShield, FiGlobe, FiCode } from "react-icons/fi";
+
+const cards = [
+  {
+    icon: FiZap,
+    label: "Delivery Speed",
+    value: "10×",
+    sub: "faster than average",
+    delay: 0,
+    x: "0%",
+    y: "0%",
+  },
+  {
+    icon: FiShield,
+    label: "Uptime SLA",
+    value: "99.9%",
+    sub: "guaranteed availability",
+    delay: 0.12,
+    x: "55%",
+    y: "10%",
+  },
+  {
+    icon: FiGlobe,
+    label: "Projects Shipped",
+    value: "120+",
+    sub: "across 8 countries",
+    delay: 0.22,
+    x: "18%",
+    y: "52%",
+  },
+  {
+    icon: FiCode,
+    label: "Source Code",
+    value: "100%",
+    sub: "owned by you",
+    delay: 0.34,
+    x: "62%",
+    y: "56%",
+  },
+];
+
+const floatVariants = [
+  { y: [0, -10, 0], duration: 5.5 },
+  { y: [0, -8, 0], duration: 6.2 },
+  { y: [0, -12, 0], duration: 4.8 },
+  { y: [0, -9, 0], duration: 5.1 },
+];
+
 export default function HeroMockup() {
   return (
-    <div className="relative w-full max-w-lg mx-auto mt-12 animate-fade-in">
-      {/* Glow Effect */}
-      <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/25 via-blue-600/15 to-transparent rounded-3xl blur-xl animate-pulse-slow" />
+    <div className="relative w-full h-[340px] md:h-[400px] select-none">
+      {cards.map((card, i) => {
+        const Icon = card.icon;
+        const float = floatVariants[i];
 
-      {/* Laptop Frame */}
-      <div className="relative">
-        {/* Screen */}
-        <div className="relative bg-devflow-charcoal rounded-t-xl border border-white/10 overflow-hidden dark-terminal">
-          {/* Browser Bar */}
-          <div className="flex items-center gap-2 px-4 py-3 bg-devflow-dark border-b border-white/5">
-            <div className="flex gap-1.5">
-              <div className="w-3 h-3 rounded-full bg-red-500/60" />
-              <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
-              <div className="w-3 h-3 rounded-full bg-green-500/60" />
-            </div>
-            <div className="flex-1 mx-4">
-              <div className="bg-devflow-black/50 rounded-md px-3 py-1.5 text-xs text-devflow-gray-400 font-mono">
-                https://your-project.devflow.co.in
-              </div>
-            </div>
-          </div>
-
-          {/* Screen Content */}
-          <div className="p-4 h-48 md:h-56 bg-gradient-to-br from-devflow-dark to-devflow-black">
-            <div className="space-y-2">
-              {/* Code Lines - staggered fade-in via CSS */}
-              <div className="mockup-code">
-                <div className="flex items-center gap-2">
-                  <span className="text-purple-400 font-mono text-xs">const</span>
-                  <span className="text-blue-400 font-mono text-xs">app</span>
-                  <span className="text-white font-mono text-xs">=</span>
-                  <span className="text-yellow-400 font-mono text-xs">createApp</span>
-                  <span className="text-devflow-gray-400 font-mono text-xs">();</span>
+        return (
+          <motion.div
+            key={card.label}
+            className="absolute"
+            style={{ left: card.x, top: card.y }}
+            initial={{ opacity: 0, y: 24, scale: 0.92 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{
+              duration: 0.6,
+              delay: card.delay,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+          >
+            <motion.div
+              animate={{ y: float.y }}
+              transition={{
+                duration: float.duration,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <div
+                className="rounded-2xl px-5 py-4 min-w-[148px]"
+                style={{
+                  background: "rgba(255, 255, 255, 0.85)",
+                  backdropFilter: "blur(20px)",
+                  WebkitBackdropFilter: "blur(20px)",
+                  border: "1px solid rgba(0, 0, 0, 0.07)",
+                  boxShadow:
+                    "0 2px 12px rgba(0,0,0,0.06), 0 12px 40px rgba(2,37,220,0.06), inset 0 1px 0 rgba(255,255,255,0.9)",
+                }}
+              >
+                {/* Icon */}
+                <div
+                  className="w-8 h-8 rounded-lg flex items-center justify-center mb-3"
+                  style={{ background: "rgba(2,37,220,0.08)" }}
+                >
+                  <Icon className="w-4 h-4" style={{ color: "#0225dc" }} />
                 </div>
 
-                <div className="flex items-center gap-2">
-                  <span className="text-purple-400 font-mono text-xs">await</span>
-                  <span className="text-blue-400 font-mono text-xs">deploy</span>
-                  <span className="text-devflow-gray-400 font-mono text-xs">(</span>
-                  <span className="text-devflow-green font-mono text-xs">&apos;production&apos;</span>
-                  <span className="text-devflow-gray-400 font-mono text-xs">);</span>
-                </div>
+                {/* Value */}
+                <p
+                  className="text-2xl font-bold leading-none mb-1"
+                  style={{ color: "#0f172a", fontFamily: "var(--font-outfit)" }}
+                >
+                  {card.value}
+                </p>
 
-                <div className="flex items-center gap-2 mt-4">
-                  <span className="text-devflow-green font-mono text-xs">✓</span>
-                  <span className="text-devflow-green font-mono text-xs">Deployed successfully!</span>
-                </div>
+                {/* Label */}
+                <p className="text-xs font-semibold text-zinc-700 leading-none mb-0.5">
+                  {card.label}
+                </p>
+
+                {/* Sub */}
+                <p className="text-[10px] text-zinc-400 leading-none">{card.sub}</p>
               </div>
+            </motion.div>
+          </motion.div>
+        );
+      })}
 
-              {/* Dashboard Preview Elements */}
-              <div className="mt-4 grid grid-cols-3 gap-2 mockup-cards">
-                {[
-                  { label: "SPEED", value: "99" },
-                  { label: "UPTIME", value: "100" },
-                  { label: "SCALE", value: "10x" },
-                ].map((item) => (
-                  <div
-                    key={item.label}
-                    className="p-1.5 md:p-2 rounded-lg bg-white/[0.03] border border-white/[0.05] flex flex-col items-center justify-center text-center"
-                  >
-                    <span className="text-[10px] md:text-xs font-bold text-white mb-0.5">
-                      {item.value}
-                      {item.label !== "SCALE" && "%"}
-                    </span>
-                    <span className="text-[6px] md:text-[8px] text-devflow-green tracking-tighter uppercase font-medium">
-                      {item.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Laptop Base */}
-        <div className="h-4 bg-gradient-to-b from-devflow-gray-500/50 to-devflow-gray-600/50 rounded-b-xl backdrop-blur-md" />
-        <div className="h-2 bg-devflow-gray-600/40 mx-16 rounded-b-lg backdrop-blur-sm" />
-      </div>
-
-      {/* Floating Elements */}
-      <div
-        className="absolute -top-4 -right-4 w-14 h-14 bg-devflow-charcoal/80 backdrop-blur-md rounded-xl border border-devflow-green/20 flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 group"
-        role="img"
-        aria-label="Speed and Power"
+      {/* Subtle connector lines between cards — pure decorative */}
+      <svg
+        className="absolute inset-0 w-full h-full pointer-events-none"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <svg className="w-7 h-7 text-devflow-green group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      </div>
-      <div
-        className="absolute -bottom-2 -left-4 w-12 h-12 bg-devflow-charcoal/80 backdrop-blur-md rounded-xl border border-devflow-green/20 flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 group"
-        role="img"
-        aria-label="Launch and Scale"
-      >
-        <svg className="w-5 h-5 text-devflow-green group-hover:rotate-12 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 13l-7 7-7-7m14-8l-7 7-7-7" />
-        </svg>
-      </div>
+        <motion.path
+          d="M 140 60 Q 220 100 250 90"
+          fill="none"
+          stroke="rgba(2,37,220,0.08)"
+          strokeWidth="1.5"
+          strokeDasharray="4 6"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
+        />
+        <motion.path
+          d="M 120 180 Q 180 210 230 215"
+          fill="none"
+          stroke="rgba(2,37,220,0.08)"
+          strokeWidth="1.5"
+          strokeDasharray="4 6"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 1.2, delay: 0.7, ease: "easeOut" }}
+        />
+        <motion.path
+          d="M 250 105 Q 270 175 240 215"
+          fill="none"
+          stroke="rgba(2,37,220,0.08)"
+          strokeWidth="1.5"
+          strokeDasharray="4 6"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 1.2, delay: 0.9, ease: "easeOut" }}
+        />
+      </svg>
     </div>
   );
 }

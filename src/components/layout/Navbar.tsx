@@ -14,14 +14,13 @@ import Magnetic from "@/components/ui/Magnetic";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Expertise", href: "/expertise" },
-  { label: "Work", href: "/work" },
-  { label: "Audit", href: "/seo-audit" },
-  { label: "FAQ", href: "/faq" },
+  { label: "Case Studies", href: "/case-studies" },
+  { label: "Process", href: "/engineering-process" },
+  { label: "Security & SLA", href: "/security" },
+  { label: "Partnerships", href: "/partnerships" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -104,7 +103,7 @@ export default function Navbar() {
                   >
                     {/* Glare Reflection overlay for liquid glass effect */}
                     <span className="absolute inset-0 w-[200%] h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-20 -translate-x-[120%] group-hover:translate-x-[120%] transition-transform duration-1000 ease-out pointer-events-none" />
-                    <span className="relative z-10">Let&apos;s Talk</span>
+                    <span className="relative z-10">Talk to an Engineer</span>
                   </Link>
                 </Magnetic>
               </motion.div>
@@ -207,7 +206,7 @@ export default function Navbar() {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block text-center py-4 bg-devflow-green text-devflow-black font-semibold rounded-lg"
                   >
-                    Let's Talk
+                    Talk to an Engineer
                   </Link>
                 </motion.div>
               </div>

@@ -36,10 +36,10 @@ export default function Home() {
           transition={{ duration: 0.6, ease: [0.2, 0, 0, 1] }}
         >
           <span className="text-xs font-mono text-devflow-gold uppercase tracking-widest block mb-3">
-            [ SYSTEM SUMMARY ]
+            [ CAPABILITIES & OUTCOMES ]
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-medium text-white">
-            Operational Capabilities at a Glance
+            Accelerate Your Operations at Scale
           </h2>
         </motion.div>
 
@@ -58,7 +58,7 @@ export default function Home() {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-devflow-green/5 to-transparent pointer-events-none" />
               <div className="flex justify-between items-start">
-                <span className="text-xs font-mono text-devflow-gray-400">[ RELIABILITY // METRICS ]</span>
+                <span className="text-xs font-mono text-devflow-gray-400">[ PERFORMANCE & ROI METRICS ]</span>
                 <FiLayers className="w-5 h-5 text-devflow-green group-hover:rotate-12 transition-transform duration-300" aria-label="Layers" />
               </div>
               
@@ -79,10 +79,10 @@ export default function Home() {
 
               <div className="flex justify-between items-center text-xs font-mono">
                 <p className="text-xs text-devflow-gray-300 font-light truncate max-w-[80%]">
-                  We build fast web systems, dashboards, and automated software to save your team time.
+                  You launch high-performance platforms, dashboards, and automation systems built for business ROI.
                 </p>
                 <span className="text-devflow-green group-hover:translate-x-1 transition-transform duration-300">
-                  VIEW PORTFOLIO &rarr;
+                  VIEW CASE STUDIES &rarr;
                 </span>
               </div>
             </motion.div>
@@ -156,10 +156,10 @@ export default function Home() {
                   <FiCpu className="w-5 h-5 text-devflow-green group-hover:rotate-12 transition-transform duration-300" aria-label="CPU" />
                 </div>
                 <h3 className="text-xl font-display font-medium text-white mb-4">
-                  Simple code. Direct solutions.
+                  Outcome-First Architecture.
                 </h3>
                 <p className="text-sm text-devflow-gray-300 font-light leading-relaxed">
-                  We write clean, organized software that your business fully owns. No complex jargon, no hidden fees, and no visual clutter.
+                  You gain absolute ownership of a premium, high-performance codebase. No vendor lock-in, no hidden overheads, and complete scalability.
                 </p>
               </div>
               <span className="text-[10px] font-mono text-devflow-green group-hover:underline uppercase block">
@@ -185,7 +185,7 @@ export default function Home() {
               </div>
 
               <p className="text-sm md:text-base text-white font-light italic leading-relaxed my-2">
-                "DevFlow fixed our database errors and built our customer delivery portal in under 5 weeks. Our daily work speeded up immediately."
+                "DevFlow automated our logistics routing and delivered our secure portal in under 5 weeks. Our operational efficiency increased by 2.4x instantly."
               </p>
 
               <div className="flex justify-between items-center text-xs font-mono">
@@ -207,17 +207,17 @@ export default function Home() {
               className="glass-panel p-8 rounded-2xl flex flex-col md:flex-row md:items-center justify-between bg-gradient-to-br from-devflow-green/[0.04] to-devflow-green/[0.02] border-devflow-green/20 hover:border-devflow-green/30 cursor-pointer h-full group gap-6"
             >
               <div className="space-y-2 text-left">
-                <span className="text-[10px] font-mono text-devflow-green uppercase tracking-widest block">[ COST ESTIMATOR ]</span>
+                <span className="text-[10px] font-mono text-devflow-green uppercase tracking-widest block">[ ROI & BLUEPRINT CALCULATOR ]</span>
                 <h4 className="text-xl md:text-2xl font-display font-medium text-white group-hover:text-devflow-green transition-colors duration-300">
-                  Estimate Your Project Cost
+                  Calculate Your Project Blueprint
                 </h4>
                 <p className="text-xs text-devflow-gray-400 leading-relaxed font-light max-w-xl">
-                  Answer simple questions to estimate your custom software cost and timeline in under 3 minutes.
+                  Map your requirements to get an instant scope estimate, system timeline, and technical blueprint in under 3 minutes.
                 </p>
               </div>
 
               <div className="text-[10px] font-mono text-devflow-green tracking-widest uppercase flex-shrink-0 group-hover:underline">
-                ESTIMATE COST &rarr;
+                GET SOFTWARE BLUEPRINT &rarr;
               </div>
             </motion.div>
           </Link>
