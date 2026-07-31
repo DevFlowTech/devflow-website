@@ -234,13 +234,14 @@ export default function WebDevelopmentAhmedabadPage() {
                   </div>
                 </div>
                 
-                <div className="flex gap-4 items-center">
-                  <div className="w-10 h-10 rounded-xl bg-devflow-green/10 flex items-center justify-center text-devflow-green shrink-0">
+                <div className="flex gap-4 items-start">
+                  <div className="w-10 h-10 rounded-xl bg-devflow-green/10 flex items-center justify-center text-devflow-green shrink-0 mt-0.5">
                     <HiPhone className="w-5 h-5" aria-label="Phone" />
                   </div>
-                  <div>
+                  <div className="space-y-1">
                     <h4 className="text-xs font-mono text-devflow-gray-500 uppercase">TELEPHONE</h4>
-                    <p className="text-sm text-white font-medium">+91 98765 43210</p>
+                    <p className="text-sm text-white font-medium">+91 97261 13311 <span className="text-devflow-gray-400 font-normal text-xs">(Prince)</span></p>
+                    <p className="text-sm text-white font-medium">+91 63550 43103 <span className="text-devflow-gray-400 font-normal text-xs">(Bhavin)</span></p>
                   </div>
                 </div>
                 

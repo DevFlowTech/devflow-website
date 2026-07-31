@@ -129,7 +129,7 @@ const localBusinessSchema = {
   logo: "https://devflow.co.in/logo.png",
   image: "https://devflow.co.in/og-image.png",
   email: "info@devflow.co.in",
-  telephone: "+91-98765-43210",
+  telephone: ["+91-97261-13311", "+91-63550-43103"],
   priceRange: "$$-$$$",
   currenciesAccepted: "INR, USD",
   paymentAccepted: "Bank Transfer, UPI, Credit Card, Debit Card",
@@ -360,7 +360,7 @@ const localBusinessCitationSchema = {
   name: "DevFlow Technology",
   alternateName: "DevFlow Technology Ahmedabad",
   url: "https://devflow.co.in",
-  telephone: "+91-98765-43210",
+  telephone: ["+91-97261-13311", "+91-63550-43103"],
   email: "info@devflow.co.in",
   address: {
     "@type": "PostalAddress",

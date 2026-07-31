@@ -37,9 +37,9 @@ export default function FloatingContact() {
           <span className="text-sm font-medium">Email Us</span>
         </motion.a>
 
-        {/* WhatsApp */}
+        {/* WhatsApp - Prince */}
         <motion.a
-          href="https://wa.me/919876543210"
+          href="https://wa.me/919726113311"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-3 px-4 py-3 bg-devflow-charcoal/95 backdrop-blur-sm border border-white/10 rounded-xl text-white hover:border-green-500/30 transition-all duration-300 shadow-lg"
@@ -48,7 +48,21 @@ export default function FloatingContact() {
           <span className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center">
             💬
           </span>
-          <span className="text-sm font-medium">WhatsApp</span>
+          <span className="text-sm font-medium">WhatsApp (Prince)</span>
+        </motion.a>
+
+        {/* WhatsApp - Bhavin */}
+        <motion.a
+          href="https://wa.me/916355043103"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 px-4 py-3 bg-devflow-charcoal/95 backdrop-blur-sm border border-white/10 rounded-xl text-white hover:border-green-500/30 transition-all duration-300 shadow-lg"
+          whileHover={{ x: -5 }}
+        >
+          <span className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center">
+            💬
+          </span>
+          <span className="text-sm font-medium">WhatsApp (Bhavin)</span>
         </motion.a>
 
         {/* Schedule Call */}
