@@ -294,9 +294,9 @@ export default function ContactPage() {
                 <h1 className="font-display text-3xl md:text-4xl font-medium text-white leading-tight">
                   Design Your Architecture
                 </h1>
-                <p className="text-devflow-gray-300 text-xs mt-2 font-light">
+                <h2 className="text-devflow-gray-300 text-xs mt-2 font-light">
                   Map your requirements, budget ranges, and SLA goals. A senior systems engineer will review your specs within 24 hours.
-                </p>
+                </h2>
               </div>
 
               {/* Form */}

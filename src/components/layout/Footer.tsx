@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -39,6 +40,14 @@ const footerLinks = {
 };
 
 export default function Footer() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const emailHref = mounted ? "mailto:info@devflow.co.in" : "#";
+  const emailText = mounted ? "info@devflow.co.in" : "info [at] devflow.co.in";
+
   return (
     <footer className="bg-devflow-charcoal relative">
       {/* Gradient top border */}
@@ -72,16 +81,62 @@ export default function Footer() {
             {/* Email & Trust Signals */}
             <div className="space-y-3">
               <a
-                href="mailto:info@devflow.co.in"
+                href={emailHref}
                 className="text-devflow-green transition-colors duration-150 hover:text-devflow-green/80 text-sm block font-mono"
               >
-                info@devflow.co.in
+                {emailText}
               </a>
               <div className="flex flex-wrap gap-2 pt-2">
                 <span className="text-[10px] font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">NDA Protected</span>
                 <span className="text-[10px] font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">ISO Standard Code</span>
                 <span className="text-[10px] font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">GDPR Compliant</span>
               </div>
+            </div>
+
+            {/* Quick Callback Form */}
+            <div className="pt-6">
+              <form 
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  const form = e.currentTarget;
+                  const input = form.querySelector('input') as HTMLInputElement;
+                  const email = input.value;
+                  try {
+                    const response = await fetch("https://formspree.io/f/meeyqenk", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ email, message: "Quick Callback requested from Footer Form." }),
+                    });
+                    if (response.ok) {
+                      alert("Callback request submitted! We will reach out to you within 24 hours.");
+                      input.value = "";
+                    } else {
+                      alert("Something went wrong. Please email us directly.");
+                    }
+                  } catch {
+                    alert("Something went wrong. Please email us directly.");
+                  }
+                }}
+                className="space-y-2 max-w-sm"
+              >
+                <label className="text-[10px] font-mono uppercase tracking-widest text-devflow-gray-400 block mb-1">
+                  [ REQUEST A QUICK CALLBACK ]
+                </label>
+                <div className="flex gap-2">
+                  <input
+                    type="email"
+                    placeholder="Enter email address"
+                    required
+                    className="bg-white/[0.03] border border-white/[0.08] rounded-xl px-3 py-2 text-xs text-white placeholder-devflow-gray-500 focus:border-devflow-green/30 outline-none w-full"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-devflow-green text-devflow-black px-4 py-2 rounded-xl text-xs font-semibold hover:brightness-110 active:scale-95 transition-all whitespace-nowrap"
+                  >
+                    Send
+                  </button>
+                </div>
+              </form>
             </div>
           </motion.div>
 

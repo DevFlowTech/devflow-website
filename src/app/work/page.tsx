@@ -37,9 +37,9 @@ export default function WorkPage() {
               Crafted Products. <br />
               <span className="italic font-normal text-devflow-blue font-display">Proven Results.</span>
             </h1>
-            <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
+            <h2 className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
               Explore our gallery of custom-built web systems, database orchestrations, and enterprise portals. Click any card to read the case study.
-            </p>
+            </h2>
           </motion.div>
         </div>
       </section>

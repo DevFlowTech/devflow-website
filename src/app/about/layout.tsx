@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     absolute: "About DevFlow Technology | AI Agency & Software Company India",
   },
   description:
-    "Learn about DevFlow Technology's mission, values, and team. We are a focused technical partner building custom software, AI solutions, and enterprise systems for scaling startups.",
+    "About DevFlow's mission, values, and team. We are a technical partner building custom software, AI solutions, and enterprise systems for scaling startups.",
   keywords: [
     "about DevFlow Technology",
     "software company India",

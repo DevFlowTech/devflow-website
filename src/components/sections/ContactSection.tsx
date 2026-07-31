@@ -229,6 +229,14 @@ function SuccessScreen() {
 
 // ─── Main Component ─────────────────────────────────────────────────────────
 export default function ContactSection() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const emailHref = mounted ? "mailto:info@devflow.co.in" : "#";
+  const emailText = mounted ? "info@devflow.co.in" : "info [at] devflow.co.in";
+
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -589,10 +597,10 @@ export default function ContactSection() {
                         <p className="text-sm text-devflow-gray-500">
                           Or email us directly:{" "}
                           <a
-                            href="mailto:info@devflow.co.in"
+                            href={emailHref}
                             className="text-devflow-green/80 hover:text-devflow-green transition-colors"
                           >
-                            info@devflow.co.in
+                            {emailText}
                           </a>
                         </p>
                         <p className="text-xs text-devflow-gray-600 font-mono">

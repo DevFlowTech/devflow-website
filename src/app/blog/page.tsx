@@ -6,10 +6,10 @@ import BlogCard from "@/components/blog/BlogCard";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Tech Blog - Latest Insights on AI, Web Development & Software Engineering | DevFlow",
+    absolute: "Tech Blog - AI, Web & Software Insights | DevFlow",
   },
   description:
-    "Explore expert insights on AI integration, web development, custom software, and digital transformation. Stay updated with the latest tech trends and best practices.",
+    "Expert insights on AI integration, web development, custom software, and digital transformation. Stay updated with tech trends and software best practices.",
   keywords: [
     "tech blog",
     "AI integration",

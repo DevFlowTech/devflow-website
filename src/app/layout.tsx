@@ -1,6 +1,7 @@
 import { JetBrains_Mono, Plus_Jakarta_Sans, Outfit } from "next/font/google";
 import type { Metadata, Viewport } from "next";
 import dynamic from "next/dynamic";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
     template: "%s | DevFlow Technology - IT Solutions",
   },
   description:
-    "Top software development & AI agency in Ahmedabad, Gujarat, India. We build custom software, AI solutions, web & mobile apps, enterprise ERP, and cloud systems. Also offering digital marketing, SEO, PPC & branding. Your trusted technology partner in Ahmedabad, Gandhinagar, Surat, Vadodara, Rajkot & all Gujarat.",
+    "Top software development & AI agency in Ahmedabad, India. We build custom software, AI solutions, web & mobile apps, ERP systems, and cloud configurations.",
   keywords: [
     // ── Software Development ──────────────────────────────────
     "software development company",
@@ -664,6 +665,31 @@ export default function RootLayout({
         />
       </head>
       <body className={`${plusJakartaSans.className} antialiased`}>
+        {/* Google Tag Manager */}
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PKQSRRN2');`,
+          }}
+        />
+        {/* End Google Tag Manager */}
+
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PKQSRRN2"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
+
         {/* Scroll Progress Bar */}
         <ScrollProgress />
 

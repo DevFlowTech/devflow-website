@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     absolute: "AI Development & Custom Software Services | DevFlow Technology",
   },
   description:
-    "Full-stack AI development, custom web applications, enterprise ERP systems, mobile apps, and cloud services. DevFlow Technology builds operational software that scales.",
+    "Full-stack AI development, custom web apps, enterprise ERP systems, mobile apps, and cloud services. DevFlow builds operational software that scales.",
   keywords: [
     "AI development services",
     "custom software development",

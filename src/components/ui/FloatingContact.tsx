@@ -2,10 +2,16 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function FloatingContact() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const emailHref = mounted ? "mailto:info@devflow.co.in" : "#";
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
@@ -21,7 +27,7 @@ export default function FloatingContact() {
       >
         {/* Email */}
         <motion.a
-          href="mailto:info@devflow.co.in"
+          href={emailHref}
           className="flex items-center gap-3 px-4 py-3 bg-devflow-charcoal/95 backdrop-blur-sm border border-white/10 rounded-xl text-white hover:border-devflow-green/30 transition-all duration-300 shadow-lg"
           whileHover={{ x: -5 }}
         >

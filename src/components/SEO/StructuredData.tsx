@@ -1,6 +1,5 @@
 "use client";
 
-import Script from "next/script";
 import { usePathname } from "next/navigation";
 
 // ========== Organization Schema (Base Entity) ==========
@@ -1455,107 +1454,96 @@ export default function StructuredData() {
   return (
     <>
       {/* Base Organization Schema - Always present */}
-      <Script
+      <script
         id="organization-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        strategy="afterInteractive"
       />
 
       {/* LocalBusiness Citation Schema - NAP Consistency for directories */}
-      <Script
+      <script
         id="local-citation-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(localBusinessCitationSchema),
         }}
-        strategy="afterInteractive"
       />
 
       {/* WebSite Schema with Speakable + Entity Mentions - Always present for GEO */}
-      <Script
+      <script
         id="website-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        strategy="afterInteractive"
       />
 
       {/* FAQ Schema - Always present for AEO featured snippets */}
-      <Script
+      <script
         id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        strategy="afterInteractive"
       />
 
       {/* BreadcrumbList - Always present */}
-      <Script
+      <script
         id="breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        strategy="afterInteractive"
       />
 
       {/* HowTo Schema - Shows process steps for AEO */}
-      <Script
+      <script
         id="howto-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-        strategy="afterInteractive"
       />
 
       {/* LocalBusiness - Important for local SEO on homepage and contact */}
       {(isHomePage || isContactPage) && (
-        <Script
+        <script
           id="local-business-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(localBusinessSchema),
           }}
-          strategy="afterInteractive"
         />
       )}
 
       {/* Service Schema with Location - GEO entity richness on services page */}
       {isServicesPage && (
-        <Script
+        <script
           id="service-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-          strategy="afterInteractive"
         />
       )}
 
       {/* Page-specific service schemas for local landing pages */}
       {pageSpecificSchema && (
-        <Script
+        <script
           id="page-service-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(pageSpecificSchema),
           }}
-          strategy="afterInteractive"
         />
       )}
 
       {/* ItemList for Work/Portfolio pages */}
       {isWorkPage && (
-        <Script
+        <script
           id="work-item-list-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(workItemListSchema),
           }}
-          strategy="afterInteractive"
         />
       )}
 
       {/* SoftwareApplication Schema */}
-      <Script
+      <script
         id="software-app-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
-        strategy="afterInteractive"
       />
     </>
   );

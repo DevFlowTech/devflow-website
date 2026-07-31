@@ -60,7 +60,7 @@ const nextConfig: NextConfig = {
               "img-src 'self' data: blob: https://images.unsplash.com https://*.vercel-storage.com",
               "font-src 'self' data:",
               "connect-src 'self' https://formspree.io https://va.vercel-scripts.com https://vitals.vercel-insights.com",
-              "frame-src 'none'",
+              "frame-src 'self' https://www.googletagmanager.com",
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self' https://formspree.io",

@@ -6,6 +6,12 @@ interface WorkDetailLayoutProps {
   params: Promise<{ slug: string }>;
 }
 
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
 export async function generateMetadata({
   params,
 }: WorkDetailLayoutProps): Promise<Metadata> {
@@ -24,7 +30,7 @@ export async function generateMetadata({
     title: {
       absolute: `${project.title} - Case Study | DevFlow Technology`,
     },
-    description: project.longDescription,
+    description: project.description,
     keywords: [
       project.title.toLowerCase(),
       project.category.toLowerCase(),
@@ -36,13 +42,13 @@ export async function generateMetadata({
     ],
     openGraph: {
       title: `${project.title} - Case Study & Results | DevFlow Technology`,
-      description: project.longDescription,
+      description: project.description,
       url: `https://devflow.co.in/work/${project.slug}`,
       type: "article",
     },
     twitter: {
       title: `${project.title} - Case Study | DevFlow Technology`,
-      description: project.longDescription,
+      description: project.description,
     },
   };
 }
