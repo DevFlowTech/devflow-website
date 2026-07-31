@@ -122,7 +122,7 @@ export default function LocalSEOHubPage() {
                   </div>
                   <div>
                     <h4 className="text-xs font-mono text-devflow-gray-500 uppercase">OFFICE ADDRESS</h4>
-                    <p className="text-sm text-white font-medium">Ahmedabad, Gujarat, India</p>
+                    <p className="text-sm text-white font-medium">SG Highway, S.G. Road, Near Gujarat High Court, Ahmedabad, Gujarat 380015</p>
                   </div>
                 </div>
                 
@@ -132,7 +132,7 @@ export default function LocalSEOHubPage() {
                   </div>
                   <div>
                     <h4 className="text-xs font-mono text-devflow-gray-500 uppercase">TELEPHONE</h4>
-                    <p className="text-sm text-white font-medium">+91 99999 99999</p>
+                    <p className="text-sm text-white font-medium">+91 98765 43210</p>
                   </div>
                 </div>
                 

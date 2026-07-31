@@ -23,7 +23,7 @@ export default function SaaSDevelopmentPage() {
             SaaS Product <br />
             <span className="italic font-normal text-devflow-green font-display">Development</span>
           </h1>
-          <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
+          <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light speakable-content">
             We engineer high-performance multi-tenant SaaS platforms with secure Stripe subscription systems, elastic database clustering, and sub-second page loads.
           </p>
         </div>

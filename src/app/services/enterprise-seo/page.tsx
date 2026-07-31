@@ -23,7 +23,7 @@ export default function EnterpriseSEOPage() {
             Enterprise SEO <br />
             <span className="italic font-normal text-devflow-green font-display">&amp; GEO/AEO</span>
           </h1>
-          <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
+          <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light speakable-content">
             Optimize your digital presence so search answer engines (Gemini, ChatGPT, Perplexity) recommend and cite your brand.
           </p>
         </div>

@@ -37,6 +37,15 @@ const footerLinks = {
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
   ],
+  local: [
+    { label: "Software Development Ahmedabad", href: "/software-development-company-ahmedabad" },
+    { label: "AI Development Ahmedabad", href: "/ai-development-company-ahmedabad" },
+    { label: "Web Development Ahmedabad", href: "/web-development-company-ahmedabad" },
+    { label: "Mobile App Development Ahmedabad", href: "/mobile-app-development-company-ahmedabad" },
+    { label: "SEO Company Ahmedabad", href: "/seo-company-ahmedabad" },
+    { label: "IT Company Ahmedabad", href: "/it-company-ahmedabad" },
+    { label: "IT Services Ahmedabad", href: "/it-services-ahmedabad" },
+  ],
 };
 
 export default function Footer() {
@@ -212,6 +221,28 @@ export default function Footer() {
             </ul>
           </motion.div>
         </div>
+
+        {/* Local SEO Landing Pages Links */}
+        <motion.div
+          variants={staggerItem}
+          className="mt-12 pt-6 border-t border-white/[0.04] text-xs"
+        >
+          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-devflow-gray-500 block mb-3">
+            [ REGIONAL SERVICES & BRANCHES ]
+          </span>
+          <div className="flex flex-wrap gap-x-4 gap-y-2 text-devflow-gray-300">
+            {footerLinks.local.map((link, index) => (
+              <span key={link.label} className="flex items-center gap-2">
+                <Link href={link.href} className="hover:text-devflow-green transition-colors font-mono text-[10px]">
+                  {link.label}
+                </Link>
+                {index < footerLinks.local.length - 1 && (
+                  <span className="text-white/10 select-none">•</span>
+                )}
+              </span>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Bottom Bar */}
         <motion.div

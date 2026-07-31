@@ -23,7 +23,7 @@ export default function AIAutomationPage() {
             AI Automation <br />
             <span className="italic font-normal text-devflow-green font-display">&amp; Web Crawlers</span>
           </h1>
-          <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
+          <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light speakable-content">
             Deploy cognitive AI agents, automated Puppeteer crawling pipelines, and high-frequency sync engines to optimize operations.
           </p>
         </div>

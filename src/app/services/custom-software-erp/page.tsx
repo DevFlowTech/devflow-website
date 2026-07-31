@@ -23,7 +23,7 @@ export default function CustomERPPage() {
             Custom Software <br />
             <span className="italic font-normal text-devflow-green font-display">&amp; ERP Systems</span>
           </h1>
-          <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
+          <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light speakable-content">
             Centralize your business inventory, fleet logistics, CRM data pipelines, and operations tracking inside one secure custom platform.
           </p>
         </div>

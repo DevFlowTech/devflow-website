@@ -919,6 +919,73 @@ const webDevelopmentServiceSchema = {
   },
 };
 
+const softwareDevelopmentServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://devflow.co.in/software-development-company-ahmedabad#service",
+  name: "Software Development Services in Ahmedabad",
+  description:
+    "Top-rated software development company in Ahmedabad offering custom software engineering, ERP systems, mobile app development, AI solutions, and system integration for scaling startups and enterprises.",
+  serviceType: "Software Development",
+  provider: {
+    "@type": "LocalBusiness",
+    "@id": "https://devflow.co.in/#localbusiness",
+  },
+  areaServed: [
+    { "@type": "City", name: "Ahmedabad" },
+    { "@type": "City", name: "Gandhinagar" },
+    { "@type": "State", name: "Gujarat" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Software Development Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        name: "Custom Software Development",
+        price: "0",
+        priceCurrency: "INR",
+        category: "Software Development",
+      },
+      {
+        "@type": "Offer",
+        name: "Enterprise ERP Software",
+        price: "0",
+        priceCurrency: "INR",
+        category: "Enterprise Software",
+      },
+      {
+        "@type": "Offer",
+        name: "SaaS Product Development",
+        price: "0",
+        priceCurrency: "INR",
+        category: "SaaS Development",
+      },
+      {
+        "@type": "Offer",
+        name: "Mobile App Development",
+        price: "0",
+        priceCurrency: "INR",
+        category: "Mobile Apps",
+      },
+      {
+        "@type": "Offer",
+        name: "AI Solutions & Integrations",
+        price: "0",
+        priceCurrency: "INR",
+        category: "AI Automation",
+      },
+      {
+        "@type": "Offer",
+        name: "System Integration & APIs",
+        price: "0",
+        priceCurrency: "INR",
+        category: "Software Development",
+      },
+    ],
+  },
+};
+
 const mobileAppDevelopmentServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -1433,6 +1500,7 @@ function getPageSpecificSchema(pathname: string) {
       mobileAppDevelopmentServiceSchema,
     "/it-company-ahmedabad": itCompanyServiceSchema,
     "/it-services-ahmedabad": itServicesSchema,
+    "/software-development-company-ahmedabad": softwareDevelopmentServiceSchema,
   };
   return schemas[pathname] || null;
 }
