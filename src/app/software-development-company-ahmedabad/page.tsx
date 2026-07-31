@@ -114,59 +114,38 @@ export default function LocalSEOHubPage() {
               <p className="text-sm text-devflow-gray-300 font-light leading-relaxed">
                 Located in the heart of Gujarat's tech hub, we work directly with fast-scaling enterprises and manufacturing companies to automate complex business workflows.
               </p>
-              
-              <div className="space-y-4">
-                <div className="flex gap-4 items-center">
-                  <div className="w-10 h-10 rounded-xl bg-devflow-green/10 flex items-center justify-center text-devflow-green shrink-0">
-                    <HiMapPin className="w-5 h-5" aria-label="Address" />
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-mono text-devflow-gray-500 uppercase">OFFICE ADDRESS</h4>
-                    <p className="text-sm text-white font-medium">Opp. Empty Plot, Near Swaminarayan Temple, Navapura, Sarkhej-Bavla Highway, Ahmedabad, Gujarat 382210</p>
-                  </div>
-                </div>
-                
-                <div className="flex gap-4 items-start">
-                  <div className="w-10 h-10 rounded-xl bg-devflow-green/10 flex items-center justify-center text-devflow-green shrink-0 mt-0.5">
-                    <HiPhone className="w-5 h-5" aria-label="Phone" />
-                  </div>
-                  <div className="space-y-1">
-                    <h4 className="text-xs font-mono text-devflow-gray-500 uppercase">TELEPHONE</h4>
-                    <p className="text-sm text-white font-medium">+91 97261 13311 <span className="text-devflow-gray-400 font-normal text-xs">(Prince)</span></p>
-                    <p className="text-sm text-white font-medium">+91 63550 43103 <span className="text-devflow-gray-400 font-normal text-xs">(Bhavin)</span></p>
-                  </div>
-                </div>
-                
-                <div className="flex gap-4 items-center">
-                  <div className="w-10 h-10 rounded-xl bg-devflow-green/10 flex items-center justify-center text-devflow-green shrink-0">
-                    <HiEnvelope className="w-5 h-5" aria-label="Email" />
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-mono text-devflow-gray-500 uppercase">EMAIL</h4>
-                    <p className="text-sm text-white font-medium">info@devflow.co.in</p>
-                  </div>
-                </div>
-              </div>
             </div>
             
-            {/* Visual map placeholder with lime gradient */}
-            <div className="relative aspect-square rounded-2xl overflow-hidden border border-white/[0.06] bg-devflow-black p-8 flex flex-col justify-between group hover:border-devflow-green/20 transition-all">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(204,255,0,0.05),transparent_70%)]" />
-              <div className="flex justify-between items-start z-10">
-                <span className="text-xs font-mono text-devflow-green">[ GOOGLE MAP DATA ]</span>                  <HiShieldCheck className="w-6 h-6 text-devflow-green" aria-label="Verified" />
-
+            <div className="glass-panel p-8 rounded-2xl border border-white/[0.06] bg-devflow-black/30 space-y-6">
+              <div className="flex gap-4 items-start">
+                <div className="w-10 h-10 rounded-xl bg-devflow-green/10 flex items-center justify-center text-devflow-green shrink-0 mt-0.5">
+                  <HiMapPin className="w-5 h-5" aria-label="Address" />
+                </div>
+                <div>
+                  <h4 className="text-xs font-mono text-devflow-gray-500 uppercase">OFFICE ADDRESS</h4>
+                  <p className="text-sm text-white font-medium">Opp. Empty Plot, Near Swaminarayan Temple, Navapura, Sarkhej-Bavla Highway, Ahmedabad, Gujarat 382210</p>
+                </div>
               </div>
               
-              <div className="z-10 space-y-2">
-                <div className="flex gap-1 text-devflow-green">
-                  <HiStar className="w-4 h-4" />
-                  <HiStar className="w-4 h-4" />
-                  <HiStar className="w-4 h-4" />
-                  <HiStar className="w-4 h-4" />
-                  <HiStar className="w-4 h-4" />
+              <div className="flex gap-4 items-start">
+                <div className="w-10 h-10 rounded-xl bg-devflow-green/10 flex items-center justify-center text-devflow-green shrink-0 mt-0.5">
+                  <HiPhone className="w-5 h-5" aria-label="Phone" />
                 </div>
-                <h4 className="text-lg font-bold text-white">DevFlow Technology</h4>
-                <p className="text-xs text-devflow-gray-400">Verified Local Business Listing &bull; Ahmedabad, IN</p>
+                <div className="space-y-1">
+                  <h4 className="text-xs font-mono text-devflow-gray-500 uppercase">TELEPHONE</h4>
+                  <p className="text-sm text-white font-medium">+91 97261 13311 <span className="text-devflow-gray-400 font-normal text-xs">(Prince)</span></p>
+                  <p className="text-sm text-white font-medium">+91 63550 43103 <span className="text-devflow-gray-400 font-normal text-xs">(Bhavin)</span></p>
+                </div>
+              </div>
+              
+              <div className="flex gap-4 items-center">
+                <div className="w-10 h-10 rounded-xl bg-devflow-green/10 flex items-center justify-center text-devflow-green shrink-0">
+                  <HiEnvelope className="w-5 h-5" aria-label="Email" />
+                </div>
+                <div>
+                  <h4 className="text-xs font-mono text-devflow-gray-500 uppercase">EMAIL</h4>
+                  <p className="text-sm text-white font-medium">info@devflow.co.in</p>
+                </div>
               </div>
             </div>
           </div>
