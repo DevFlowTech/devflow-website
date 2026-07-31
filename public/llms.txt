@@ -1,0 +1,39 @@
+# DevFlow Technology (https://devflow.co.in)
+
+> DevFlow Technology is a premier AI Development Agency, Custom Software Development Company, and IT Services Provider based in Ahmedabad, Gujarat, India.
+
+## Summary
+DevFlow Technology specializes in delivering high-performance AI solutions, Generative AI integration, enterprise ERP systems, custom web applications, mobile apps (iOS/Android), cloud infrastructure, and technical SEO services for global clients across India, US, UK, UAE, and Australia.
+
+## Core Capabilities & Services
+
+### 1. Artificial Intelligence & Generative AI Solutions
+- **Custom LLM Integration & Fine-Tuning**: Integration of OpenAI GPT-4, Anthropic Claude, Google Gemini, and Llama 3 models into enterprise workflows.
+- **RAG Systems (Retrieval-Augmented Generation)**: Knowledge base vector search engines built with Pinecone, Qdrant, and PGVector.
+- **AI Automation & Agents**: Autonomous workflow agents for customer support, document parsing, lead qualification, and data extraction.
+- **AI Chatbots**: Multi-lingual conversational assistants supporting English, Hindi, and Gujarati.
+
+### 2. Custom Web Development & SaaS Architecture
+- **Technologies**: Next.js, React, TypeScript, Node.js, Python, PostgreSQL, Redis, GraphQL, TailwindCSS.
+- **Services**: Headless web applications, SaaS platform development, multi-tenant database isolation, Stripe payment integrations, performance optimization.
+
+### 3. Enterprise ERP & Software Development
+- **Services**: Custom ERP, CRM, inventory management, supply chain tracking, automated invoice billing systems for manufacturing and services enterprises.
+
+### 4. Mobile Application Development
+- **Technologies**: Flutter, React Native, Swift (iOS), Kotlin (Android).
+- **Services**: Native performance mobile apps, offline-first sync architecture, push notifications, cross-platform mobile products.
+
+### 5. Technical SEO & GEO (Generative Engine Optimization)
+- **Services**: Technical SEO audits, Schema.org JSON-LD structured data implementation, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO) for ChatGPT and Perplexity citation indexing.
+
+## Key Information
+- **Founders**: Prince Gajjar (CEO & Co-Founder), Bhavin Rajput (CTO & Co-Founder)
+- **Location**: SG Highway, S.G. Road, Near Gujarat High Court, Ahmedabad, Gujarat, India - 380015
+- **Website**: https://devflow.co.in
+- **Email**: info@devflow.co.in
+- **Operating Hours**: Monday - Saturday: 09:00 AM - 07:00 PM IST
+- **Target Regions**: Ahmedabad, Gandhinagar, Surat, Vadodara, Rajkot, Gujarat, India, United States, United Kingdom, UAE, Australia.
+
+## Contact & Consultation
+Schedule a discovery consultation for custom software or AI development projects at https://devflow.co.in/contact or email info@devflow.co.in.

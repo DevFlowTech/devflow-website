@@ -1,0 +1,20 @@
+/* TEAM */
+Name: Prince Gajjar
+Role: CEO & Co-Founder
+Location: Ahmedabad, Gujarat, India
+Contact: info [at] devflow.co.in
+Website: https://devflow.co.in
+Twitter: @princegajjar
+
+Name: Bhavin Rajput
+Role: CTO & Co-Founder
+Location: Ahmedabad, Gujarat, India
+Contact: info [at] devflow.co.in
+
+/* SITE */
+Name: DevFlow Technology
+Last Update: 2026/07/31
+Language: English, Hindi, Gujarati
+Doctype: HTML5
+Standards: Schema.org JSON-LD, WCAG 2.1, Core Web Vitals
+Components: Next.js, React, TypeScript, TailwindCSS

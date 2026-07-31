@@ -1,0 +1,57 @@
+# DevFlow Technology - robots.txt
+# Allow all search engine crawlers
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/static/development/
+
+# Sitemap location
+Sitemap: https://devflow.co.in/sitemap.xml
+
+# LLM & AI Crawlers - Generative Engine Optimization (GEO)
+# These bots are allowed to crawl for AI-powered search citation
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Standard Search Engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+# LLMs manifest files
+# https://devflow.co.in/llms.txt
+# https://devflow.co.in/llms-full.txt
