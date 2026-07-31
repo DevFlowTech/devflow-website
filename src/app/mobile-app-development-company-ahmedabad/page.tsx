@@ -277,7 +277,7 @@ export default function MobileAppDevelopmentAhmedabadPage() {
                   </div>
                   <div>
                     <h4 className="text-xs font-mono text-devflow-gray-500 uppercase">OFFICE ADDRESS</h4>
-                    <p className="text-sm text-white font-medium">SG Highway, S.G. Road, Near Gujarat High Court, Ahmedabad, Gujarat 380015</p>
+                    <p className="text-sm text-white font-medium">Opp. Empty Plot, Near Swaminarayan Temple, Navapura, Sarkhej-Bavla Highway, Ahmedabad, Gujarat 382210</p>
                   </div>
                 </div>
                 <div className="flex gap-4 items-start">

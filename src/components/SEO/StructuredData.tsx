@@ -53,8 +53,8 @@ const organizationSchema = {
     addressCountry: "IN",
     addressLocality: "Ahmedabad",
     addressRegion: "Gujarat",
-    postalCode: "380015",
-    streetAddress: "SG Highway, S.G. Road",
+    postalCode: "382210",
+    streetAddress: "Opp. Empty Plot, Near Swaminarayan Temple, Navapura, Sarkhej-Bavla Highway",
   },
   brand: {
     "@type": "Brand",
@@ -138,8 +138,8 @@ const localBusinessSchema = {
     addressCountry: "IN",
     addressLocality: "Ahmedabad",
     addressRegion: "Gujarat",
-    postalCode: "380015",
-    streetAddress: "SG Highway, S.G. Road, Near Gujarat High Court",
+    postalCode: "382210",
+    streetAddress: "Opp. Empty Plot, Near Swaminarayan Temple, Navapura, Sarkhej-Bavla Highway",
   },
   geo: {
     "@type": "GeoCoordinates",
@@ -367,8 +367,8 @@ const localBusinessCitationSchema = {
     addressCountry: "IN",
     addressLocality: "Ahmedabad",
     addressRegion: "Gujarat",
-    postalCode: "380015",
-    streetAddress: "SG Highway, S.G. Road, Near Gujarat High Court",
+    postalCode: "382210",
+    streetAddress: "Opp. Empty Plot, Near Swaminarayan Temple, Navapura, Sarkhej-Bavla Highway",
   },
   geo: {
     "@type": "GeoCoordinates",
@@ -1420,7 +1420,7 @@ const faqSchema = {
       name: "Where is DevFlow Technology located in Ahmedabad?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "DevFlow Technology is located at SG Highway, S.G. Road, Near Gujarat High Court, Ahmedabad, Gujarat 380015. We serve clients across Ahmedabad, Gandhinagar, Surat, Vadodara, and all of Gujarat with local presence and global delivery capabilities.",
+        text: "DevFlow Technology is located at Opp. Empty Plot, Near Swaminarayan Temple, Navapura, Sarkhej-Bavla Highway, Ahmedabad, Gujarat 382210. We serve clients across Ahmedabad, Gandhinagar, Surat, Vadodara, and all of Gujarat with local presence and global delivery capabilities.",
       },
     },
   ],
