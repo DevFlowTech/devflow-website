@@ -125,14 +125,14 @@ export default function HeroSection() {
 
               {/* Serif Editorial Headline */}
               <h1 className="font-display text-4xl md:text-6xl lg:text-[4.75rem] font-medium text-devflow-gray-100 leading-[1.1] tracking-tight">
-                Achieve absolute scale <br />
-                <span className="italic font-normal text-devflow-green font-display">with enterprise code</span> <br />
-                built to convert.
+                Custom Software <br />
+                <span className="italic font-normal text-devflow-green font-display">Development Company India</span> <br />
+                built for enterprise scale.
               </h1>
 
               {/* Subtext description */}
               <p className="text-base md:text-lg text-devflow-gray-100/80 leading-relaxed font-light max-w-2xl">
-                You accelerate development velocity by 10x, reduce infrastructure overhead, and automate manual operations. We deliver high-performance web applications, bespoke ERP systems, and cloud pipelines with 100% source code ownership.
+                DevFlow is a premier AI development company, ERP development company, and SaaS development company in India. As a top-rated software development company in Ahmedabad, we build custom business portals, high-performance web applications, and automated cloud pipelines with 100% source code ownership.
               </p>
 
               {/* CTA Actions */}

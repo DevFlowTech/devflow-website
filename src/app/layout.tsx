@@ -55,11 +55,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   // Basic metadata
   title: {
-    default: "DevFlow Technology | AI Agency & Web Development Company India",
-    template: "%s | DevFlow Technology - IT Solutions",
+    default: "DevFlow Technology | Custom Software Development Company India",
+    template: "%s | DevFlow Technology - Custom Software Development",
   },
   description:
-    "Top software development & AI agency in Ahmedabad, India. We build custom software, AI solutions, web & mobile apps, ERP systems, and cloud configurations.",
+    "DevFlow Technology is a premier custom software development company in India, offering custom software development, AI development, ERP systems, and SaaS development products.",
   keywords: [
     // ── Software Development ──────────────────────────────────
     "software development company",
