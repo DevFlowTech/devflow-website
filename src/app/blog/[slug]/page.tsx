@@ -74,8 +74,51 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     .filter((p) => p.slug !== post.slug && p.category === post.category)
     .slice(0, 3);
 
+  const formatDate = (dateStr: string) => {
+    try {
+      const d = new Date(dateStr);
+      if (!isNaN(d.getTime())) {
+        return d.toISOString().split("T")[0];
+      }
+    } catch {}
+    return dateStr;
+  };
+
   return (
-    <main className="min-h-screen bg-devflow-black pt-24 pb-16">
+    <main className="relative min-h-screen bg-devflow-black pt-24 pb-16">
+      {/* Dynamic SEO BlogPosting Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "@id": `https://devflow.co.in/blog/${post.slug}#blogposting`,
+            "headline": post.title,
+            "description": post.metaDescription,
+            "image": post.image,
+            "datePublished": formatDate(post.date),
+            "author": {
+              "@type": "Organization",
+              "name": "DevFlow Team",
+              "url": "https://devflow.co.in/about"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "DevFlow Technology",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://devflow.co.in/logo.png"
+              }
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": `https://devflow.co.in/blog/${post.slug}`
+            }
+          })
+        }}
+      />
+
       {/* Breadcrumb */}
       <div className="section-container mb-8">
         <div className="max-w-4xl mx-auto">

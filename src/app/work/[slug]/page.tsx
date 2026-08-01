@@ -20,7 +20,42 @@ export default function CaseStudyPage({ params }: PageProps) {
   }
 
   return (
-    <main className="min-h-screen bg-devflow-black pt-28 pb-16 overflow-hidden">
+    <main className="relative min-h-screen bg-devflow-black pt-28 pb-16 overflow-hidden">
+      {/* Dynamic SEO CreativeWork Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            "@id": `https://devflow.co.in/work/${project.slug}#case-study`,
+            "name": project.title,
+            "headline": project.title,
+            "description": project.description,
+            "alternativeHeadline": project.longDescription,
+            "genre": project.category,
+            "url": `https://devflow.co.in/work/${project.slug}`,
+            "creator": {
+              "@type": "Organization",
+              "name": "DevFlow Technology",
+              "url": "https://devflow.co.in"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "DevFlow Technology",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://devflow.co.in/logo.png"
+              }
+            },
+            "about": project.tech.map((t) => ({
+              "@type": "Thing",
+              "name": t
+            }))
+          })
+        }}
+      />
+
       {/* Back button */}
       <div className="section-container max-w-5xl pt-8">
         <Link 
