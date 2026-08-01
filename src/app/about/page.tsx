@@ -27,19 +27,19 @@ const values = [
 
 const milestones = [
   {
-    year: "2024",
-    title: "Engineering Studio Launched",
-    description: "DevFlow was established with a focus on custom Next.js engineering and database optimization for scaling products.",
+    year: "January 2026",
+    title: "Founding & R&D Setup",
+    description: "DevFlow Technology was founded in Ahmedabad, Gujarat, India by Prince Gajjar and Bhavin Rajput with a mission to deliver engineering-first software development directly to scaling businesses.",
   },
   {
-    year: "2025",
-    title: "Enterprise ERP & Cloud Scale",
-    description: "Expanded core capabilities to build secure internal portals, custom ERP modules, and multi-tenant SaaS dashboards for SMEs.",
+    year: "Q1 2026",
+    title: "Launch of Automation Modules",
+    description: "Successfully rolled out AI web crawlers and custom ERP tools for regional manufacturing units, saving client teams 50,000+ operational hours.",
   },
   {
-    year: "2026",
-    title: "AI Workflows & Global Roadmap",
-    description: "Deployed custom AI chatbots and LLM agent pipelines. Scaled remote operations to deliver offshore development for global clients in US, UK, and EU.",
+    year: "Q2 2026",
+    title: "Global Retainer Rollout",
+    description: "Expanded service pipelines to offer dedicated development teams and white label software options to digital agencies across US, UK, and Australia.",
   },
 ];
 
@@ -74,7 +74,7 @@ export default function AboutPage() {
               variants={staggerItem}
               className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light"
             >
-              You achieve high-performance digital infrastructure that drives commercial outcomes. We started DevFlow to eliminate the standard friction of agency handoffs. You work directly with the systems engineers building your software, guaranteeing quality control and secure IP.
+              You achieve high-performance digital infrastructure that drives commercial outcomes. We started DevFlow in January 2026 to eliminate the standard friction of agency handoffs. You work directly with the systems engineers building your software, guaranteeing quality control and secure IP.
             </motion.p>
           </motion.div>
         </div>
@@ -82,6 +82,36 @@ export default function AboutPage() {
 
       {/* Metrics breakdown */}
       <StatsBar />
+
+      {/* Narrative Story, Mission & Vision */}
+      <section className="py-24 border-b border-white/[0.04] bg-devflow-charcoal">
+        <div className="section-container max-w-5xl mx-auto space-y-12">
+          <div className="grid md:grid-cols-2 gap-12 text-left">
+            <div className="space-y-4">
+              <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ MISSION ]</span>
+              <h3 className="text-2xl font-display font-medium text-white">To Engineer Scalable, Custom Software Solutions that Eliminate Administrative Drag.</h3>
+              <p className="text-sm text-devflow-gray-300 font-light leading-relaxed">
+                We believe that software should be an asset, not a rental. Our mission is to build highly performant, custom-engineered digital systems that provide companies with full IP ownership and direct operational control, removing expensive third-party licensing overheads.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ VISION ]</span>
+              <h3 className="text-2xl font-display font-medium text-white">To Be the Global Benchmark for Absolute Technical Ownership.</h3>
+              <p className="text-sm text-devflow-gray-300 font-light leading-relaxed">
+                We envision a future where organizations are powered by custom databases, automated pipelines, and intelligent AI agents. We strive to lead this transition by maintaining strict code quality, radical pricing transparency, and direct collaboration with senior developers.
+              </p>
+            </div>
+          </div>
+
+          <div className="p-8 rounded-2xl bg-devflow-black border border-white/[0.05] space-y-4 mt-8 text-left">
+            <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ OUR STORY ]</span>
+            <h3 className="text-2xl font-display font-medium text-white">Engineering-First and Built in Ahmedabad</h3>
+            <p className="text-sm text-devflow-gray-300 font-light leading-relaxed">
+              Founded in January 2026 in Ahmedabad, Gujarat, India, DevFlow was created to fill a critical gap: the lack of absolute technical ownership in agency engagements. Prince Gajjar and Bhavin Rajput started the firm to connect enterprise clients directly with developers, eliminating project managers and sales layers to deliver zero vendor lock-in.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Timeline Milestones Section */}
       <section className="py-24 border-b border-white/[0.04] bg-devflow-black">
@@ -95,7 +125,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="relative border-l border-white/[0.08] ml-4 md:ml-6 space-y-12">
+          <div className="relative border-l border-white/[0.08] ml-4 md:ml-6 space-y-12 text-left">
             {milestones.map((milestone, idx) => (
               <motion.div
                 key={milestone.year}

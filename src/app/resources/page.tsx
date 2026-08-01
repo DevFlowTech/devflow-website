@@ -20,6 +20,13 @@ const resourcesTypes = [
     href: "/knowledge-base",
     cta: "Browse Guides",
   },
+  {
+    icon: FiSettings,
+    title: "Interactive Business Calculators",
+    description: "Calculate development budget ranges, estimate operational time-savings ROI, and take our AI Readiness Assessment.",
+    href: "/resources/calculators",
+    cta: "Open Calculators",
+  },
 ];
 
 export default function ResourcesPage() {
