@@ -49,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/seo-audit`,
+      url: `${baseUrl}/resources/tools/seo-audit`,
       lastModified: currentDate,
       changeFrequency: "weekly" as const,
       priority: 0.8,
