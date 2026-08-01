@@ -49,7 +49,7 @@ export default async function KnowledgePage({ params }: KnowledgePageProps) {
   }
 
   return (
-    <main className="min-h-screen bg-devflow-black text-white pt-32 pb-16 overflow-hidden">
+    <main className="relative min-h-screen bg-devflow-black text-white pt-32 pb-16 overflow-hidden">
       {/* Article dynamic structured schema markup (AEO/GEO target) */}
       <script
         type="application/ld+json"

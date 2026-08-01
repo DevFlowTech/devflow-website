@@ -35,7 +35,7 @@ const pricingModels = [
   {
     icon: FiUsers,
     title: "Dedicated Engineering Retainer",
-    description: "August sprint velocity by hiring a dedicated squad of developers, designers, and testers managed via agile sprints. Monthly billing based on resource headcount.",
+    description: "Accelerate sprint velocity by hiring a dedicated squad of developers, designers, and testers managed via agile sprints. Monthly billing based on resource headcount.",
     timeline: "Monthly Contract (3-Month Minimum)",
     bestFor: "Scaling SaaS products, ongoing API updates, and legacy digital transformations.",
     details: [
@@ -49,7 +49,7 @@ const pricingModels = [
 
 export default function PricingPage() {
   return (
-    <main className="min-h-screen bg-devflow-black text-white pt-32 pb-16 overflow-hidden">
+    <main className="relative min-h-screen bg-devflow-black text-white pt-32 pb-16 overflow-hidden">
       {/* Intro */}
       <section className="py-16 border-b border-white/[0.04] relative z-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(186,230,84,0.02),transparent_50%)] pointer-events-none" />

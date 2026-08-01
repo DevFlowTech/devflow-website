@@ -80,7 +80,7 @@ const hiringSteps = [
 
 export default function CareersPage() {
   return (
-    <main className="min-h-screen bg-devflow-black text-white pt-32 pb-16 overflow-hidden">
+    <main className="relative min-h-screen bg-devflow-black text-white pt-32 pb-16 overflow-hidden">
       {/* Aurora backdrops */}
       <div className="absolute top-[10%] right-[10%] aurora-bg-blue opacity-30 pointer-events-none" />
       <div className="absolute top-[50%] left-[5%] aurora-bg-gold opacity-15 pointer-events-none" />

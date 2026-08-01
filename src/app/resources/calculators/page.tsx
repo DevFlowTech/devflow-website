@@ -177,7 +177,7 @@ export default function CalculatorsPage() {
   const readiness = getReadinessLevel();
 
   return (
-    <main className="min-h-screen bg-devflow-black text-white pt-32 pb-16 overflow-hidden">
+    <main className="relative min-h-screen bg-devflow-black text-white pt-32 pb-16 overflow-hidden">
       {/* Background aurora */}
       <div className="absolute top-[15%] right-[5%] aurora-bg-blue opacity-35 pointer-events-none" />
       <div className="absolute top-[50%] left-[5%] aurora-bg-gold opacity-15 pointer-events-none" />

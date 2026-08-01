@@ -87,10 +87,10 @@ const servicesDetails = [
 
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen bg-devflow-black text-white pt-32 pb-16 overflow-hidden">
+    <main className="relative min-h-screen bg-devflow-black text-white pt-32 pb-16 overflow-hidden">
       {/* Aurora Gradient Backdrops */}
-      <div className="absolute top-[15%] right-[5%] aurora-bg-blue opacity-40" />
-      <div className="absolute top-[45%] left-[5%] aurora-bg-gold opacity-20" />
+      <div className="absolute top-[15%] right-[5%] aurora-bg-blue opacity-40 pointer-events-none" />
+      <div className="absolute top-[45%] left-[5%] aurora-bg-gold opacity-20 pointer-events-none" />
 
       {/* Intro Section */}
       <section className="py-16 border-b border-white/[0.04] relative z-10">

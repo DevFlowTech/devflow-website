@@ -17,10 +17,10 @@ export default function WorkPage() {
       : projects.filter((p) => p.category === activeCategory);
 
   return (
-    <main className="min-h-screen bg-devflow-black text-white pt-32 pb-16 overflow-hidden">
+    <main className="relative min-h-screen bg-devflow-black text-white pt-32 pb-16 overflow-hidden">
       {/* Aurora Gradient Backdrops */}
-      <div className="absolute top-[10%] left-[5%] aurora-bg-blue opacity-30" />
-      <div className="absolute top-[40%] right-[10%] aurora-bg-gold opacity-25" />
+      <div className="absolute top-[10%] left-[5%] aurora-bg-blue opacity-30 pointer-events-none" />
+      <div className="absolute top-[40%] right-[10%] aurora-bg-gold opacity-25 pointer-events-none" />
 
       {/* Header */}
       <section className="py-16 border-b border-white/[0.04] relative z-10">

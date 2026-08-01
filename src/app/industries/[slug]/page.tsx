@@ -48,7 +48,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
   }
 
   return (
-    <main className="min-h-screen bg-devflow-black text-white pt-32 pb-16 overflow-hidden">
+    <main className="relative min-h-screen bg-devflow-black text-white pt-32 pb-16 overflow-hidden">
       {/* Schema LD structured data injection */}
       <script
         type="application/ld+json"

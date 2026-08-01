@@ -32,22 +32,25 @@ export default function ReCaptcha({ onChange }: ReCaptchaProps) {
     }
   };
 
-  // If no site key is configured, show a graceful fallback notice
+  // If no site key is configured, show a graceful fallback notice only in development
   if (!RECAPTCHA_SITE_KEY) {
-    return (
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center p-4 rounded-xl border border-white/[0.06] bg-devflow-dark"
-      >
-        <p className="text-xs font-mono text-devflow-gray-500">
-          [ RECAPTCHA NOT CONFIGURED ]
-        </p>
-        <p className="text-[10px] text-devflow-gray-600 mt-1">
-          Set NEXT_PUBLIC_RECAPTCHA_SITE_KEY in .env.local
-        </p>
-      </motion.div>
-    );
+    if (process.env.NODE_ENV === "development") {
+      return (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center p-4 rounded-xl border border-white/[0.06] bg-devflow-dark"
+        >
+          <p className="text-xs font-mono text-devflow-gray-500">
+            [ RECAPTCHA NOT CONFIGURED ]
+          </p>
+          <p className="text-[10px] text-devflow-gray-600 mt-1">
+            Set NEXT_PUBLIC_RECAPTCHA_SITE_KEY in .env.local
+          </p>
+        </motion.div>
+      );
+    }
+    return null;
   }
 
   if (!loaded) {
