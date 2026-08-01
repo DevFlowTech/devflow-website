@@ -1,6 +1,10 @@
 import { MetadataRoute } from "next";
 import { blogPosts } from "@/data/blogData";
 import { projects } from "@/data/projectData";
+import { servicesData } from "@/data/servicesData";
+import { industriesData } from "@/data/industriesData";
+import { locationsData } from "@/data/locationsData";
+import { knowledgeHubData } from "@/data/knowledgeHubData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://devflow.co.in";
@@ -200,5 +204,45 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...blogEntries, ...workEntries];
+  // Dynamic Services pages
+  const serviceEntries = Object.keys(servicesData).map((slug) => ({
+    url: `${baseUrl}/services/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
+  }));
+
+  // Dynamic Industries pages
+  const industryEntries = Object.keys(industriesData).map((slug) => ({
+    url: `${baseUrl}/industries/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  // Dynamic Locations pages
+  const locationEntries = Object.keys(locationsData).map((slug) => ({
+    url: `${baseUrl}/locations/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
+  // Dynamic Knowledge Hub pages
+  const knowledgeEntries = Object.keys(knowledgeHubData).map((slug) => ({
+    url: `${baseUrl}/knowledge-base/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
+  return [
+    ...staticPages,
+    ...blogEntries,
+    ...workEntries,
+    ...serviceEntries,
+    ...industryEntries,
+    ...locationEntries,
+    ...knowledgeEntries,
+  ];
 }
