@@ -1,39 +1,42 @@
-# DevFlow Technology (https://devflow.co.in)
+# DevFlow Technology
 
 > DevFlow Technology is a premier AI Development Agency, Custom Software Development Company, and IT Services Provider based in Ahmedabad, Gujarat, India.
 
-## Summary
-DevFlow Technology specializes in delivering high-performance AI solutions, Generative AI integration, enterprise ERP systems, custom web applications, mobile apps (iOS/Android), cloud infrastructure, and technical SEO services for global clients across India, US, UK, UAE, and Australia.
-
-## Core Capabilities & Services
-
-### 1. Artificial Intelligence & Generative AI Solutions
-- **Custom LLM Integration & Fine-Tuning**: Integration of OpenAI GPT-4, Anthropic Claude, Google Gemini, and Llama 3 models into enterprise workflows.
-- **RAG Systems (Retrieval-Augmented Generation)**: Knowledge base vector search engines built with Pinecone, Qdrant, and PGVector.
-- **AI Automation & Agents**: Autonomous workflow agents for customer support, document parsing, lead qualification, and data extraction.
-- **AI Chatbots**: Multi-lingual conversational assistants supporting English, Hindi, and Gujarati.
-
-### 2. Custom Web Development & SaaS Architecture
-- **Technologies**: Next.js, React, TypeScript, Node.js, Python, PostgreSQL, Redis, GraphQL, TailwindCSS.
-- **Services**: Headless web applications, SaaS platform development, multi-tenant database isolation, Stripe payment integrations, performance optimization.
-
-### 3. Enterprise ERP & Software Development
-- **Services**: Custom ERP, CRM, inventory management, supply chain tracking, automated invoice billing systems for manufacturing and services enterprises.
-
-### 4. Mobile Application Development
-- **Technologies**: Flutter, React Native, Swift (iOS), Kotlin (Android).
-- **Services**: Native performance mobile apps, offline-first sync architecture, push notifications, cross-platform mobile products.
-
-### 5. Technical SEO & GEO (Generative Engine Optimization)
-- **Services**: Technical SEO audits, Schema.org JSON-LD structured data implementation, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO) for ChatGPT and Perplexity citation indexing.
+DevFlow Technology specializes in delivering high-performance AI solutions, Generative AI integration, enterprise ERP systems, custom web applications, mobile apps (iOS/Android), cloud infrastructure, and technical SEO services for global clients.
 
 ## Key Information
-- **Founders**: Prince Gajjar (CEO & Co-Founder), Bhavin Rajput (CTO & Co-Founder)
-- **Location**: SG Highway, S.G. Road, Near Gujarat High Court, Ahmedabad, Gujarat, India - 380015
-- **Website**: https://devflow.co.in
+- **Website**: [devflow.co.in](https://devflow.co.in)
 - **Email**: info@devflow.co.in
+- **Location**: SG Highway, S.G. Road, Near Gujarat High Court, Ahmedabad, Gujarat, India - 380015
 - **Operating Hours**: Monday - Saturday: 09:00 AM - 07:00 PM IST
-- **Target Regions**: Ahmedabad, Gandhinagar, Surat, Vadodara, Rajkot, Gujarat, India, United States, United Kingdom, UAE, Australia.
 
-## Contact & Consultation
-Schedule a discovery consultation for custom software or AI development projects at https://devflow.co.in/contact or email info@devflow.co.in.
+## Main Navigation
+- [Home](https://devflow.co.in/): The main landing page for DevFlow Technology.
+- [About](https://devflow.co.in/about): Details about our company, founders, mission, and team.
+- [Services](https://devflow.co.in/services): Comprehensive list of software development, AI, and SEO services.
+- [Work](https://devflow.co.in/work): Portfolio of our recent projects and case studies.
+- [Blog](https://devflow.co.in/blog): Technical articles, insights, and updates on AI and web development.
+- [FAQ](https://devflow.co.in/faq): Frequently asked questions about our process, pricing, and timelines.
+- [Contact](https://devflow.co.in/contact): Get in touch or schedule a consultation with our development team.
+- [Expertise](https://devflow.co.in/expertise): Detailed overview of our technical stack and domain expertise.
+- [SEO Audit](https://devflow.co.in/seo-audit): Free technical SEO audit tool for analyzing website performance.
+
+## Services & Solutions
+- [AI Solutions](https://devflow.co.in/ai-solutions): Custom LLM integration, agentic workflows, and generative AI development.
+- [Dedicated Development Teams](https://devflow.co.in/dedicated-development-teams): Scalable, dedicated software engineering teams for hire.
+- [Offshore Development](https://devflow.co.in/offshore-development): High-quality, cost-effective offshore custom software development.
+- [White Label Development](https://devflow.co.in/white-label-development): Partner agency services for re-selling design and development solutions.
+- [Pricing](https://devflow.co.in/pricing): Transparent pricing guidelines for our software development engagement models.
+- [Case Studies](https://devflow.co.in/case-studies): Detailed analysis of enterprise GEO optimization and scale success stories.
+
+## Local Presence (Ahmedabad)
+- [IT Company Ahmedabad](https://devflow.co.in/it-company-ahmedabad): Leading IT company in Ahmedabad providing custom software and AI solutions.
+- [IT Services Ahmedabad](https://devflow.co.in/it-services-ahmedabad): Managed IT services and consultancy based in Ahmedabad, Gujarat.
+- [Software Development Ahmedabad](https://devflow.co.in/software-development-company-ahmedabad): Custom software and ERP system development in Ahmedabad.
+- [Web Development Ahmedabad](https://devflow.co.in/web-development-company-ahmedabad): Modern full-stack web and SaaS application development.
+- [Mobile App Development Ahmedabad](https://devflow.co.in/mobile-app-development-company-ahmedabad): Cross-platform Flutter and React Native mobile applications.
+- [AI Development Ahmedabad](https://devflow.co.in/ai-development-company-ahmedabad): Custom Generative AI agents, RAG, and LLM integrations.
+- [SEO Company Ahmedabad](https://devflow.co.in/seo-company-ahmedabad): Strategic search engine and generative engine optimization services.
+
+## Optional
+- [Complete Operational Manifest](https://devflow.co.in/llms-full.txt): A comprehensive manifest file containing full-text details of our services, technical specs, and detailed case studies.
