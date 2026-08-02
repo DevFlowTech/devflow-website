@@ -3,7 +3,7 @@
 
 This document outlines the detailed system architectures, services, processes, and complete case studies for DevFlow Technology.
 
-## Core Identity
+**Core Identity:**
 DevFlow Technology is an engineering-first IT agency designing custom software systems, scalable databases, high-frequency crawlers, and AI-driven automation. 
 
 - **CEO:** Prince Gajjar
@@ -11,6 +11,7 @@ DevFlow Technology is an engineering-first IT agency designing custom software s
 - **Base:** Ahmedabad, Gujarat, India
 - **URL:** https://devflow.co.in
 - **Inquiries:** info@devflow.co.in
+
 
 ## Navigation
 - [Home](https://devflow.co.in/)

@@ -98,7 +98,7 @@ export default function HeroSection() {
           fill
           priority
           quality={75}
-          sizes="100vw"
+          sizes="(max-width: 768px) 768px, 100vw"
           className="object-cover"
         />
       </div>
@@ -125,8 +125,8 @@ export default function HeroSection() {
 
               {/* Serif Editorial Headline */}
               <h1 className="font-display text-4xl md:text-6xl lg:text-[4.75rem] font-medium text-devflow-gray-100 leading-[1.1] tracking-tight">
-                Custom Software <br />
-                <span className="italic font-normal text-devflow-green font-display">Development Company India</span> <br />
+                Custom Software <br className="hidden md:inline" />
+                <span className="italic font-normal text-devflow-green font-display">Development Company India</span> <br className="hidden md:inline" />
                 built for enterprise scale.
               </h1>
 

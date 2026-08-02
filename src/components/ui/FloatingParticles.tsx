@@ -20,9 +20,13 @@ export default function FloatingParticles({
   mode?: "float" | "snow";
 }) {
   const [mounted, setMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   
   useEffect(() => {
     setMounted(true);
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    }
   }, []);
 
   const [particles] = useState<Particle[]>(() =>
@@ -39,9 +43,11 @@ export default function FloatingParticles({
 
   if (!mounted) return null;
 
+  const displayParticles = isMobile ? particles.slice(0, Math.min(15, Math.floor(count / 3))) : particles;
+
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
-      {particles.map((particle) => (
+      {displayParticles.map((particle) => (
         <div
           key={particle.id}
           className="absolute rounded-full bg-devflow-green/25"

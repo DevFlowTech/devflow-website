@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
   SiNextdotjs,
   SiReact,
@@ -116,24 +115,14 @@ function MarqueeRow({ items, direction = "left", duration = 25 }: { items: TechE
 
   return (
     <div className="w-full overflow-hidden relative">
-      <motion.div
-        className="flex items-center whitespace-nowrap"
-        animate={{
-          x: direction === "left" ? ["0%", "-50%"] : ["-50%", "0%"],
-        }}
-        transition={{
-          x: {
-            duration: duration,
-            repeat: Infinity,
-            ease: "linear",
-            repeatType: "loop",
-          },
-        }}
+      <div
+        className={direction === "left" ? "animate-marquee-left" : "animate-marquee-right"}
+        style={{ animationDuration: `${duration}s` }}
       >
         {allItems.map((tech, i) => (
           <TechItem key={`${direction}-${i}`} tech={tech} />
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }

@@ -316,24 +316,56 @@ h6 {
   background-clip: text;
 }
 
-/* Shimmer animation */
+/* Shimmer animation - Optimized using transform to prevent layout repaints */
 @keyframes shimmer {
   0% {
-    background-position: -200% 0;
+    transform: translateX(-100%);
   }
-
   100% {
-    background-position: 200% 0;
+    transform: translateX(100%);
   }
 }
 
 .shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
   background: linear-gradient(90deg,
       transparent,
       rgba(255, 255, 255, 0.05),
       transparent);
-  background-size: 200% 100%;
   animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Performant Hardware-Accelerated CSS Marquees */
+@keyframes marquee-left {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes marquee-right {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marquee-left linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marquee-right linear infinite;
+  will-change: transform;
 }
 
 /* Section container */

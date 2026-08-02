@@ -4,11 +4,12 @@
 
 DevFlow Technology specializes in delivering high-performance AI solutions, Generative AI integration, enterprise ERP systems, custom web applications, mobile apps (iOS/Android), cloud infrastructure, and technical SEO services for global clients.
 
-## Key Information
+**Key Information:**
 - **Website**: [devflow.co.in](https://devflow.co.in)
 - **Email**: info@devflow.co.in
 - **Location**: SG Highway, S.G. Road, Near Gujarat High Court, Ahmedabad, Gujarat, India - 380015
 - **Operating Hours**: Monday - Saturday: 09:00 AM - 07:00 PM IST
+
 
 ## Main Navigation
 - [Home](https://devflow.co.in/): The main landing page for DevFlow Technology.
