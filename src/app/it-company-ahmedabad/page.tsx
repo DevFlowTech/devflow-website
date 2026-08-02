@@ -170,8 +170,8 @@ export default function ITCompanyAhmedabadPage() {
       <section className="py-24 border-b border-white/[0.04]">
         <div className="section-container max-w-6xl">
           <div className="text-center mb-16 space-y-4">
-            <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ IT SERVICES PORTFOLIO ]</span>
-            <h2 className="text-3xl md:text-4xl font-display font-medium">Comprehensive Capabilities for Gujarat's Digital Transformation</h2>
+            <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ IT SERVICES DIRECTORY ]</span>
+            <h2 className="text-3xl md:text-4xl font-display font-medium">Comprehensive IT Services &amp; Software Solutions in Ahmedabad</h2>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

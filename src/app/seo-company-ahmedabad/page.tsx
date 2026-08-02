@@ -152,7 +152,7 @@ export default function SEOCompanyAhmedabadPage() {
         <div className="section-container max-w-6xl">
           <div className="text-center mb-16 space-y-4">
             <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ SEO EXPERTISE DIRECTORY ]</span>
-            <h2 className="text-3xl md:text-4xl font-display font-medium">Complete Search Optimization for Gujarat Enterprises</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-medium">Complete SEO Services in Ahmedabad for Gujarat Enterprises</h2>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -47,7 +47,7 @@ export default function LocalSEOHubPage() {
               variants={staggerItem}
               className="font-display text-4xl md:text-7xl font-medium text-white leading-tight tracking-tight max-w-4xl"
             >
-              Top-Tier <span className="italic font-normal font-display text-devflow-green">IT Company</span> & Software Development in Ahmedabad.
+              Top-Tier <span className="italic font-normal font-display text-devflow-green">Software Development Company</span> in Ahmedabad.
             </motion.h1>
 
             <motion.p
@@ -65,7 +65,7 @@ export default function LocalSEOHubPage() {
         <div className="section-container max-w-6xl">
           <div className="text-center mb-16 space-y-4">
             <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ EXPERTISE DIRECTORY ]</span>
-            <h2 className="text-3xl md:text-4xl font-display font-medium">Engineered for Ahmedabad's Growth Leaders</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-medium">Bespoke Software Engineering for Ahmedabad's Growth Leaders</h2>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
