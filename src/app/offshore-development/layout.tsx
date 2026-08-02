@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   },
   description:
     "Lower development costs while maximizing velocity. Get access to top software architects and dedicated engineers in India.",
+  keywords: [
+    "offshore software development",
+    "offshore development center India",
+    "offshore IT outsourcing",
+    "custom software development outsourcing",
+    "offshore developers India",
+    "hire offshore coding team",
+    "outsource software engineering"
+  ],
+  alternates: { canonical: "https://devflow.co.in/offshore-development" },
 };
 
 export default function OffshoreDevelopmentLayout({
