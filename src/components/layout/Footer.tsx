@@ -61,7 +61,8 @@ const footerLinks = {
 export default function Footer() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
-    setMounted(true);
+    const t = setTimeout(() => setMounted(true), 0);
+    return () => clearTimeout(t);
   }, []);
 
   const emailHref = mounted ? "mailto:info@devflow.co.in" : "#";
@@ -78,7 +79,7 @@ export default function Footer() {
         viewport={viewportOnce}
         variants={staggerContainer}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-12 lg:gap-8">
           {/* Brand Column */}
           <motion.div variants={staggerItem} className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-4 group mb-6">
@@ -228,6 +229,94 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </motion.div>
+
+          {/* Nigeria Business Partners Column */}
+          <motion.div variants={staggerItem}>
+            <h4 className="text-xs font-medium text-devflow-gray-300 uppercase tracking-wider mb-6">
+              Nigeria Partners
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="https://onpointgroup.ng/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
+                >
+                  OnPoint Group
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://navafoods.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
+                >
+                  Nava Foods
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://shipwithonpoint.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
+                >
+                  ShipWithOnPoint
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://onpointmall.ng/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
+                >
+                  OnPoint Mall
+                </a>
+              </li>
+            </ul>
+          </motion.div>
+
+          {/* India Business Partners Column */}
+          <motion.div variants={staggerItem}>
+            <h4 className="text-xs font-medium text-devflow-gray-300 uppercase tracking-wider mb-6">
+              India Partners
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="https://spontanneous.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
+                >
+                  Spontanneous
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://rajputbhavin.engineer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
+                >
+                  Bhavin Rajput
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://prince.devflow.co.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
+                >
+                  Prince Gajjar
+                </a>
+              </li>
             </ul>
           </motion.div>
         </div>

@@ -221,7 +221,7 @@ export default function SEOCompanyAhmedabadPage() {
               <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ LOCAL SEO FOCUS ]</span>
               <h2 className="text-3xl font-display font-medium text-white">Ahmedabad & Gujarat Local SEO Specialists</h2>
               <p className="text-sm text-devflow-gray-300 font-light leading-relaxed">
-                We don't just "do SEO"—we understand Gujarat's search landscape. From "best ERP software Ahmedabad" to "AI development company Surat" to "manufacturing consultants Vadodara"—we build topical authority for the exact queries your prospects use.
+                {"We don't just \"do SEO\"—we understand Gujarat's search landscape. From \"best ERP software Ahmedabad\" to \"AI development company Surat\" to \"manufacturing consultants Vadodara\"—we build topical authority for the exact queries your prospects use."}
               </p>
               
               <div className="flex flex-wrap gap-2 mt-4">

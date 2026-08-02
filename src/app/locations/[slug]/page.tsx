@@ -30,6 +30,9 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
     title: `${location.title} | DevFlow Technology`,
     description: location.metaDescription,
     keywords: location.keywords,
+    alternates: {
+      canonical: `https://devflow.co.in/locations/${location.slug}`,
+    },
     openGraph: {
       title: location.title,
       description: location.metaDescription,
@@ -123,7 +126,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
               {location.testimonials.map((t, i) => (
                 <div key={i} className="p-6 rounded-xl border border-white/[0.06] bg-white/[0.01] relative">
                   <p className="text-sm italic text-devflow-gray-300 font-light mb-4">
-                    "{t.quote}"
+                    &ldquo;{t.quote}&rdquo;
                   </p>
                   <div className="flex items-center gap-2 text-xs font-mono">
                     <span className="text-devflow-green">—</span>
@@ -218,7 +221,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
         {/* Dynamic CTA Block */}
         <div className="pt-12 text-center border-t border-white/[0.04]">
           <div className="p-8 rounded-2xl bg-gradient-to-br from-devflow-green/10 to-transparent border border-devflow-green/20 max-w-2xl mx-auto space-y-6">
-            <h3 className="text-2xl font-bold text-white">Let's Connect in {location.name}</h3>
+            <h3 className="text-2xl font-bold text-white">Let&apos;s Connect in {location.name}</h3>
             <p className="text-xs text-devflow-gray-400 leading-relaxed font-light">
               Contact our team of developers for an instant software estimate, system audit checklist, and deployment roadmap.
             </p>

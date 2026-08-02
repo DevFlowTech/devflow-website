@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     index: true,
     follow: false,
   },
+  alternates: { canonical: "https://devflow.co.in/privacy" },
   openGraph: {
     title: "Privacy Policy | DevFlow Technology",
     description:

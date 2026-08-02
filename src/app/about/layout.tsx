@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "Indian tech startup",
     "custom software company",
   ],
+  alternates: { canonical: "https://devflow.co.in/about" },
   openGraph: {
     title: "About DevFlow Technology | Our Mission & Team",
     description:

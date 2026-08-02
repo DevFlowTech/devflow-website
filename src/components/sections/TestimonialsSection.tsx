@@ -69,7 +69,7 @@ export default function TestimonialsSection() {
 
               {/* Quote */}
               <p className="text-devflow-gray-300 text-sm italic leading-relaxed font-light mb-6 flex-grow">
-                "{t.quote}"
+                &ldquo;{t.quote}&rdquo;
               </p>
 
               {/* Author */}

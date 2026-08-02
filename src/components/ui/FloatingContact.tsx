@@ -8,7 +8,8 @@ export default function FloatingContact() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
-    setMounted(true);
+    const t = setTimeout(() => setMounted(true), 0);
+    return () => clearTimeout(t);
   }, []);
 
   const emailHref = mounted ? "mailto:info@devflow.co.in" : "#";

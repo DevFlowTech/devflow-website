@@ -8,7 +8,8 @@ import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/motio
 export default function PrivacyPolicy() {
     const [mounted, setMounted] = useState(false);
     useEffect(() => {
-        setMounted(true);
+        const t = setTimeout(() => setMounted(true), 0);
+        return () => clearTimeout(t);
     }, []);
 
     const emailHref = mounted ? "mailto:info@devflow.co.in" : "#";
@@ -85,7 +86,7 @@ export default function PrivacyPolicy() {
                             <h2 className="text-xl md:text-2xl font-bold text-white mb-6 tracking-tighter capitalize font-mono">02. Sovereign Cryptography Framework [v4.5-EXTREME]</h2>
                             <div className="space-y-8">
                                 <p className="leading-relaxed">
-                                    DevFlow Technology does not simply "protect" data; we ensure its <strong>Mathematical Sovereignty</strong> via our proprietary Encryption-in-Depth (EiD) architecture:
+                                    DevFlow Technology does not simply &quot;protect&quot; data; we ensure its <strong>Mathematical Sovereignty</strong> via our proprietary Encryption-in-Depth (EiD) architecture:
                                 </p>
                                 <div className="space-y-4">
                                     {[
@@ -151,7 +152,7 @@ export default function PrivacyPolicy() {
                                     <div>[LOG] ESTABLISHING_QUANTUM_SECURE_TUNNEL: <span className="text-devflow-green">SUCCESS</span></div>
                                     <div>[LOG] INJECTING_ENTROPY_DAEMON_v2: <span className="text-devflow-green">ACTIVE</span></div>
                                     <div>[LOG] ANALYZING_USER_TELEMETRY: <span className="text-devflow-gray-700">ANONYMIZED_OK</span></div>
-                                    <div className="mt-4 text-devflow-green">// SYSTEM_DIRECTIVE: DATA_SOVEREIGNTY_ENFORCED //</div>
+                                    <div className="mt-4 text-devflow-green">{"// SYSTEM_DIRECTIVE: DATA_SOVEREIGNTY_ENFORCED //"}</div>
                                     <div className="mt-2 text-devflow-gray-400">Our system utilizes Lattice-Based Cryptography to ensure that your metadata remains protected even against future-generation quantum computation threats. Any attempts at non-authorized ledger inspection are met with <strong>Polymorphic Threat Black-Holing</strong> responses.</div>
                                 </div>
                             </div>
@@ -229,11 +230,11 @@ export default function PrivacyPolicy() {
                                 </p>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                                     <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.05] font-mono text-[10px]">
-                                        <div className="text-devflow-green mb-2">// SHARD_MAP_ALPHA //</div>
+                                        <div className="text-devflow-green mb-2">{"// SHARD_MAP_ALPHA //"}</div>
                                         <div className="text-devflow-gray-600">Fragment ID: 0x93A... <br /> Position: [NULL_DIMENSION] <br /> Status: OSCILLATING</div>
                                     </div>
                                     <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.05] font-mono text-[10px]">
-                                        <div className="text-devflow-green mb-2">// SHARD_MAP_BETA //</div>
+                                        <div className="text-devflow-green mb-2">{"// SHARD_MAP_BETA //"}</div>
                                         <div className="text-devflow-gray-600">Fragment ID: 0x21F... <br /> Position: [NON_LOCAL] <br /> Status: PERSISTENT</div>
                                     </div>
                                 </div>
@@ -260,9 +261,9 @@ export default function PrivacyPolicy() {
                             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
                                 <div>
                                     <p className="text-[10px] font-mono text-devflow-gray-600 uppercase tracking-widest leading-loose">
-                    // SYSTEM_RELEASE: DEVFLOW_SAFE_CUSTODY_v4.5_ULTRA //
+                                        {"// SYSTEM_RELEASE: DEVFLOW_SAFE_CUSTODY_v4.5_ULTRA //"}
                                         <br />
-                    // KERNEL_HASH: 0x8F221798C54E4DE4A3A5AD3B894E762A //
+                                        {"// KERNEL_HASH: 0x8F221798C54E4DE4A3A5AD3B894E762A //"}
                                     </p>
                                 </div>
                                 <div className="bg-devflow-green/5 border border-devflow-green/20 rounded-2xl p-6 max-w-sm">

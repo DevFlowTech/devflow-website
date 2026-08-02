@@ -23,10 +23,13 @@ export default function FloatingParticles({
   const [isMobile, setIsMobile] = useState(false);
   
   useEffect(() => {
-    setMounted(true);
-    if (window.innerWidth < 768) {
-      setIsMobile(true);
-    }
+    const t = setTimeout(() => {
+      setMounted(true);
+      if (window.innerWidth < 768) {
+        setIsMobile(true);
+      }
+    }, 0);
+    return () => clearTimeout(t);
   }, []);
 
   const [particles] = useState<Particle[]>(() =>

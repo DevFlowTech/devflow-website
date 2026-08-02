@@ -67,7 +67,7 @@ export default function AboutPage() {
               variants={staggerItem}
               className="font-display text-4xl md:text-7xl font-medium text-white leading-tight tracking-tight max-w-4xl"
             >
-              Transforming <span className="italic font-normal font-display text-devflow-green">Complexity</span> into Capital.
+              About DevFlow: Transforming <span className="italic font-normal font-display text-devflow-green">Complexity</span> into Capital.
             </motion.h1>
 
             <motion.p

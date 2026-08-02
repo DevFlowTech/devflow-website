@@ -193,7 +193,7 @@ export default function CalculatorsPage() {
             <span className="italic font-normal text-devflow-green font-display">& Business Tools.</span>
           </h1>
           <p className="text-sm md:text-base text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
-            Plan your software budgets, calculate real time-savings ROI, and assess your company's AI integration maturity index instantly.
+            Plan your software budgets, calculate real time-savings ROI, and assess your company&apos;s AI integration maturity index instantly.
           </p>
         </div>
 

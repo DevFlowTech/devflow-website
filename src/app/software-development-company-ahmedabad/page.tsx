@@ -65,7 +65,7 @@ export default function LocalSEOHubPage() {
         <div className="section-container max-w-6xl">
           <div className="text-center mb-16 space-y-4">
             <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ EXPERTISE DIRECTORY ]</span>
-            <h2 className="text-3xl md:text-4xl font-display font-medium">Bespoke Software Engineering for Ahmedabad's Growth Leaders</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-medium">Bespoke Software Engineering for Ahmedabad&apos;s Growth Leaders</h2>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -112,7 +112,7 @@ export default function LocalSEOHubPage() {
               <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ HEADQUARTERS ]</span>
               <h2 className="text-3xl font-display font-medium text-white">Our Ahmedabad Presence</h2>
               <p className="text-sm text-devflow-gray-300 font-light leading-relaxed">
-                Located in the heart of Gujarat's tech hub, we work directly with fast-scaling enterprises and manufacturing companies to automate complex business workflows.
+                Located in the heart of Gujarat&apos;s tech hub, we work directly with fast-scaling enterprises and manufacturing companies to automate complex business workflows.
               </p>
             </div>
             

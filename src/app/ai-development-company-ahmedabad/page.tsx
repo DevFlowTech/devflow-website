@@ -144,7 +144,7 @@ export default function AIDevelopmentAhmedabadPage() {
         <div className="section-container max-w-6xl">
           <div className="text-center mb-16 space-y-4">
             <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ AI EXPERTISE DIRECTORY ]</span>
-            <h2 className="text-3xl md:text-4xl font-display font-medium">Engineered for Gujarat's AI-First Enterprises</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-medium">Engineered for Gujarat&apos;s AI-First Enterprises</h2>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -184,7 +184,7 @@ export default function AIDevelopmentAhmedabadPage() {
           <div className="text-center mb-16 space-y-4">
             <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ PRODUCTION STACK ]</span>
             <h2 className="text-3xl md:text-4xl font-display font-medium">Battle-Tested AI/ML Technology Stack</h2>
-            <p className="text-sm text-devflow-gray-400 font-light max-w-2xl mx-auto">We don't chase hype. We use proven tools that scale in production for our Gujarat enterprise clients.</p>
+            <p className="text-sm text-devflow-gray-400 font-light max-w-2xl mx-auto">We don&apos;t chase hype. We use proven tools that scale in production for our Gujarat enterprise clients.</p>
           </div>
           
           <div className="flex flex-wrap justify-center gap-3 md:gap-4">

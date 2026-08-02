@@ -33,13 +33,16 @@ export default function HeroSection() {
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setPrefersReduced(mediaQuery.matches);
+    const t = setTimeout(() => setPrefersReduced(mediaQuery.matches), 0);
     
     const listener = (event: MediaQueryListEvent) => {
       setPrefersReduced(event.matches);
     };
     mediaQuery.addEventListener("change", listener);
-    return () => mediaQuery.removeEventListener("change", listener);
+    return () => {
+      clearTimeout(t);
+      mediaQuery.removeEventListener("change", listener);
+    };
   }, []);
 
   // RAF-throttled scroll listener for parallax (replaces framer-motion useScroll)

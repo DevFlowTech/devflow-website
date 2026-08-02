@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     "DevOps consulting",
     "digital transformation services",
   ],
+  alternates: { canonical: "https://devflow.co.in/services" },
   openGraph: {
     title: "Custom Software & AI Development Services | DevFlow Technology",
     description:

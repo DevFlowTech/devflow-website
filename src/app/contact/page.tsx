@@ -181,7 +181,7 @@ function SuccessScreen({ name, email, preferredChannel }: { name: string; email:
         Your blueprint discovery is initialized.
       </h1>
       <p className="text-devflow-gray-300 text-sm max-w-lg mx-auto leading-relaxed mb-8">
-        Thank you, <span className="text-devflow-green font-medium">{name}</span>. We've received your requirements. 
+        Thank you, <span className="text-devflow-green font-medium">{name}</span>. We&apos;ve received your requirements. 
         A senior systems architect will review your scope parameters and reach out via <span className="text-devflow-green font-medium">{email}</span> within 24 hours to schedule your strategy session.
       </p>
       
@@ -292,7 +292,7 @@ export default function ContactPage() {
                   </span>
                 </div>
                 <h1 className="font-display text-3xl md:text-4xl font-medium text-white leading-tight">
-                  Design Your Architecture
+                  Contact Our Engineers: Design Your Architecture
                 </h1>
                 <h2 className="text-devflow-gray-300 text-xs mt-2 font-light">
                   Map your requirements, budget ranges, and SLA goals. A senior systems engineer will review your specs within 24 hours.

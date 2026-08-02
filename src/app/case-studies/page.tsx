@@ -18,8 +18,8 @@ export default function CaseStudiesPage() {
               [ REAL WORLD OUTCOMES ]
             </span>
             <h1 className="font-display text-4xl md:text-7xl font-medium text-white leading-tight">
-              Measured Business <br />
-              <span className="italic font-normal text-devflow-green font-display">Performance.</span>
+              Case Studies: Measured <br />
+              <span className="italic font-normal text-devflow-green font-display">Business Performance.</span>
             </h1>
             <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
               You achieve verified ROI. Browse through our software architecture blueprints, development processes, and measured KPIs we delivered for our global startup and SME clients.

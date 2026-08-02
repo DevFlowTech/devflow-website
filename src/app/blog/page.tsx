@@ -133,7 +133,7 @@ export default function BlogPage() {
             Need Custom Software Solutions?
           </h2>
           <p className="text-devflow-gray-300 mb-8">
-            Let's discuss how we can help transform your business with tailored
+            Let&apos;s discuss how we can help transform your business with tailored
             technology solutions.
           </p>
           <Link

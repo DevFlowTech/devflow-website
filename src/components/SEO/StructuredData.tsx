@@ -1492,7 +1492,7 @@ const softwareAppSchema = {
 
 // ========== Page-Specific Schema Generator ==========
 function getPageSpecificSchema(pathname: string) {
-  const schemas: Record<string, any> = {
+  const schemas: Record<string, unknown> = {
     "/ai-development-company-ahmedabad": aiDevelopmentServiceSchema,
     "/seo-company-ahmedabad": seoServiceSchema,
     "/web-development-company-ahmedabad": webDevelopmentServiceSchema,
@@ -1512,10 +1512,7 @@ export default function StructuredData() {
   const isHomePage = pathname === "/";
   const isServicesPage = pathname === "/services";
   const isWorkPage = pathname === "/work";
-  const isAboutPage = pathname === "/about";
   const isContactPage = pathname === "/contact";
-  const isBlogPage = pathname === "/blog" || pathname.startsWith("/blog/");
-  const isWorkDetailPage = pathname.startsWith("/work/");
 
   const pageSpecificSchema = getPageSpecificSchema(pathname);
 

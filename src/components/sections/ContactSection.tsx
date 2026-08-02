@@ -116,9 +116,12 @@ function SuccessScreen() {
   const [scale, setScale] = useState(0);
 
   useEffect(() => {
-    setScale(1);
+    const tScale = setTimeout(() => setScale(1), 0);
     const t = setTimeout(() => setShowParticles(true), 400);
-    return () => clearTimeout(t);
+    return () => {
+      clearTimeout(tScale);
+      clearTimeout(t);
+    };
   }, []);
 
   return (

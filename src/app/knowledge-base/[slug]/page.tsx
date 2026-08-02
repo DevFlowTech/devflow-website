@@ -31,6 +31,9 @@ export async function generateMetadata({ params }: KnowledgePageProps): Promise<
     title: `${article.title} | DevFlow Knowledge Hub`,
     description: article.metaDescription,
     keywords: article.keywords,
+    alternates: {
+      canonical: `https://devflow.co.in/knowledge-base/${article.slug}`,
+    },
     openGraph: {
       title: article.title,
       description: article.metaDescription,
@@ -232,7 +235,7 @@ export default async function KnowledgePage({ params }: KnowledgePageProps) {
         <div className="p-6 rounded-xl border border-white/[0.04] bg-white/[0.01]">
           <h3 className="text-xs font-mono text-devflow-gray-400 mb-2">EXPERT ADVICE</h3>
           <p className="text-xs text-devflow-gray-300 italic font-light leading-relaxed">
-            "{article.expertInsights}"
+            &ldquo;{article.expertInsights}&rdquo;
           </p>
         </div>
 

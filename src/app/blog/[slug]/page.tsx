@@ -37,6 +37,9 @@ export async function generateMetadata({
     },
     description: post.metaDescription,
     keywords: post.keywords,
+    alternates: {
+      canonical: `https://devflow.co.in/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.metaDescription,
@@ -269,7 +272,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </h2>
           <p className="text-devflow-gray-300 mb-6 max-w-2xl mx-auto">
             Our team specializes in custom software development, AI integration,
-            and digital transformation. Let's discuss your requirements.
+            and digital transformation. Let&apos;s discuss your requirements.
           </p>
           <Link
             href="/#contact"

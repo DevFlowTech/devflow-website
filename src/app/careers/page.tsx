@@ -97,7 +97,7 @@ export default function CareersPage() {
               <span className="italic font-normal text-devflow-green font-display">Own Your Impact.</span>
             </h1>
             <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light font-sans">
-              Founded in January 2026, DevFlow Technology is an engineering-first custom software company. We skip the management layers and empower developers to coordinate directly with enterprise clients. If you love clean code and direct impact, let's build together.
+              Founded in January 2026, DevFlow Technology is an engineering-first custom software company. We skip the management layers and empower developers to coordinate directly with enterprise clients. If you love clean code and direct impact, let&apos;s build together.
             </p>
           </motion.div>
         </div>
@@ -153,7 +153,7 @@ export default function CareersPage() {
         <div className="space-y-12">
           <div className="space-y-4">
             <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ ACTIVE CHALLENGES ]</span>
-            <h2 className="text-2xl md:text-4xl font-display font-semibold text-white">Open Engineering Positions</h2>
+            <h2 className="text-2xl md:text-4xl font-display font-semibold text-white">Open Careers &amp; Engineering Positions</h2>
           </div>
 
           <div className="space-y-4">
@@ -185,7 +185,7 @@ export default function CareersPage() {
       <section className="py-16 text-center border-t border-white/[0.04] relative z-10">
         <div className="section-container max-w-4xl">
           <h2 className="font-display text-3xl md:text-5xl font-medium text-white mb-6">
-            Don't see your role?
+            Don&apos;t see your Careers role?
           </h2>
           <p className="text-devflow-gray-400 max-w-xl mx-auto mb-8 font-light text-sm">
             We are always looking for smart React developers, AI prompt architects, and Python specialists. Shoot us your profile directly.

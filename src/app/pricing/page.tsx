@@ -59,7 +59,7 @@ export default function PricingPage() {
               [ ENGAGEMENT MODELS ]
             </span>
             <h1 className="font-display text-4xl md:text-7xl font-medium text-white leading-tight">
-              Flexible Engagement. <br />
+              Pricing Plans: Flexible Engagement. <br />
               <span className="italic font-normal text-devflow-green font-display">No Hidden Overhead.</span>
             </h1>
             <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">

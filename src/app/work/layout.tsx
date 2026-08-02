@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "Next.js examples",
     "India software company projects",
   ],
+  alternates: { canonical: "https://devflow.co.in/work" },
   openGraph: {
     title: "Our Work - Portfolio & Case Studies | DevFlow Technology",
     description:

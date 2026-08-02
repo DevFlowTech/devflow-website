@@ -526,15 +526,6 @@ export const metadata: Metadata = {
 
   // Canonical URL
   metadataBase: new URL(siteUrl),
-  alternates: {
-    canonical: "/",
-    languages: {
-      "en-IN": "/",
-      "hi-IN": "/",
-      "gu-IN": "/",
-      "en-US": "/",
-    },
-  },
 
   // Category
   category: "technology",

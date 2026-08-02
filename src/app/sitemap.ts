@@ -163,12 +163,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/ai-automation`,
-      lastModified: currentDate,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-    {
       url: `${baseUrl}/services/enterprise-seo`,
       lastModified: currentDate,
       changeFrequency: "monthly" as const,

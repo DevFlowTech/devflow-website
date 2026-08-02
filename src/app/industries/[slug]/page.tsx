@@ -30,6 +30,9 @@ export async function generateMetadata({ params }: IndustryPageProps): Promise<M
     title: `${industry.title} | DevFlow Technology`,
     description: industry.metaDescription,
     keywords: industry.keywords,
+    alternates: {
+      canonical: `https://devflow.co.in/industries/${industry.slug}`,
+    },
     openGraph: {
       title: industry.title,
       description: industry.metaDescription,
@@ -268,7 +271,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
           <div className="p-8 rounded-2xl bg-gradient-to-br from-devflow-green/10 to-transparent border border-devflow-green/20 max-w-2xl mx-auto space-y-6">
             <h3 className="text-2xl font-bold text-white">Get in Touch with our Sector Engineers</h3>
             <p className="text-xs text-devflow-gray-400 leading-relaxed font-light">
-              Let's build compliant database systems, automated reporting, and secure dashboards matching your exact business workflows.
+              Let&apos;s build compliant database systems, automated reporting, and secure dashboards matching your exact business workflows.
             </p>
             <Link href="/contact" className="inline-block px-6 py-3 bg-devflow-green text-devflow-black font-mono font-medium rounded-lg text-xs hover:bg-devflow-green/90 transition-colors">
               {industry.ctaText} &rarr;

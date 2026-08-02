@@ -129,7 +129,7 @@ export default function ITCompanyAhmedabadPage() {
             </motion.h1>
 
             <motion.p variants={staggerItem} className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
-              DevFlow Technology is the trusted technology partner for Gujarat's most ambitious enterprises. Custom software, AI, cloud, DevOps, security, and teams—delivered by engineers who understand your business, not account managers.
+              DevFlow Technology is the trusted technology partner for Gujarat&apos;s most ambitious enterprises. Custom software, AI, cloud, DevOps, security, and teams—delivered by engineers who understand your business, not account managers.
             </motion.p>
 
             <motion.div variants={staggerItem} className="flex flex-wrap gap-4 mt-4">
@@ -262,7 +262,7 @@ export default function ITCompanyAhmedabadPage() {
               <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ HEADQUARTERS ]</span>
               <h2 className="text-3xl font-display font-medium text-white">Our Ahmedabad Technology Center</h2>
               <p className="text-sm text-devflow-gray-300 font-light leading-relaxed">
-                SG Highway, near Gujarat High Court. A team of senior architects, principal engineers, and domain experts who've built systems for Gujarat's largest manufacturers, traders, and emerging unicorns.
+                SG Highway, near Gujarat High Court. A team of senior architects, principal engineers, and domain experts who&apos;ve built systems for Gujarat&apos;s largest manufacturers, traders, and emerging unicorns.
               </p>
               
               <div className="flex flex-wrap gap-2 mt-4">
@@ -341,7 +341,7 @@ export default function ITCompanyAhmedabadPage() {
         <div className="section-container max-w-6xl">
           <div className="text-center mb-16 space-y-4">
             <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ GUJARAT ENTERPRISE CASES ]</span>
-            <h2 className="text-3xl md:text-4xl font-display font-medium">Systems Running Gujarat's Leading Enterprises</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-medium">Systems Running Gujarat&apos;s Leading Enterprises</h2>
             <p className="text-sm text-devflow-gray-400 font-light max-w-2xl mx-auto">Anonymized. Client references & architecture diagrams shared under NDA on discovery call.</p>
           </div>
           

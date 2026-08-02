@@ -113,7 +113,7 @@ export default function WebDevelopmentAhmedabadPage() {
             </motion.h1>
 
             <motion.p variants={staggerItem} className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
-              DevFlow Technology builds production-grade web applications, enterprise portals, and e-commerce platforms for Gujarat's ambitious companies. Next.js, React, TypeScript, Node.js—engineered for scale, optimized for search, designed for conversion.
+              DevFlow Technology builds production-grade web applications, enterprise portals, and e-commerce platforms for Gujarat&apos;s ambitious companies. Next.js, React, TypeScript, Node.js—engineered for scale, optimized for search, designed for conversion.
             </motion.p>
 
             <motion.div variants={staggerItem} className="flex flex-wrap gap-4 mt-4">
@@ -155,7 +155,7 @@ export default function WebDevelopmentAhmedabadPage() {
         <div className="section-container max-w-6xl">
           <div className="text-center mb-16 space-y-4">
             <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ WEB EXPERTISE DIRECTORY ]</span>
-            <h2 className="text-3xl md:text-4xl font-display font-medium">Full-Stack Capabilities for Gujarat's Digital Leaders</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-medium">Full-Stack Capabilities for Gujarat&apos;s Digital Leaders</h2>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

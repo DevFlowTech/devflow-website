@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "start software project",
     "IT company contact India",
   ],
+  alternates: { canonical: "https://devflow.co.in/contact" },
   openGraph: {
     title: "Contact DevFlow Technology | Free Project Consultation",
     description:

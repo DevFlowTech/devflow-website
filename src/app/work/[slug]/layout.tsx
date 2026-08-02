@@ -40,6 +40,9 @@ export async function generateMetadata({
       "DevFlow portfolio",
       "custom software",
     ],
+    alternates: {
+      canonical: `https://devflow.co.in/work/${project.slug}`,
+    },
     openGraph: {
       title: `${project.title} - Case Study & Results | DevFlow Technology`,
       description: project.description,

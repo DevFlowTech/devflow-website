@@ -31,6 +31,9 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     title: `${service.title} | DevFlow Technology`,
     description: service.metaDescription,
     keywords: service.keywords,
+    alternates: {
+      canonical: `https://devflow.co.in/services/${service.slug}`,
+    },
     openGraph: {
       title: service.title,
       description: service.metaDescription,
@@ -272,7 +275,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
         <div className="p-6 rounded-xl border border-white/[0.04] bg-white/[0.01]">
           <h3 className="text-xs font-mono text-devflow-gray-400 mb-2">EXPERT ENGINEERING INSIGHT</h3>
           <p className="text-xs text-devflow-gray-300 italic font-light leading-relaxed">
-            "{service.expertInsights}"
+          &ldquo;{service.expertInsights}&rdquo;
           </p>
         </div>
 
@@ -320,7 +323,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
         {/* Bottom Call To Action Block */}
         <div className="pt-12 text-center">
           <div className="p-8 rounded-2xl bg-gradient-to-br from-devflow-green/10 to-transparent border border-devflow-green/20 max-w-2xl mx-auto space-y-6">
-            <h3 className="text-2xl font-bold text-white">Let's Design Your Solution</h3>
+            <h3 className="text-2xl font-bold text-white">Let&apos;s Design Your Solution</h3>
             <p className="text-xs text-devflow-gray-400 leading-relaxed font-light">
               Get in touch with Bhavin Rajput (CTO) and Prince Gajjar (CEO) to draft your product blueprint, database logic, and timeline estimates.
             </p>

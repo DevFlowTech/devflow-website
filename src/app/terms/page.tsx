@@ -27,7 +27,7 @@ export default function TermsOfService() {
                         </Link>
                         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">Terms of <span className="text-devflow-green">Engagement</span></h1>
                         <p className="text-devflow-gray-400 text-lg max-w-2xl leading-relaxed">
-                            These terms define the legal parameters and operational frameworks for utilizing DevFlow Technology's engineering platforms and professional services.
+                            These terms define the legal parameters and operational frameworks for utilizing DevFlow Technology&apos;s engineering platforms and professional services.
                         </p>
                         <div className="flex flex-wrap gap-4 mt-8">
                             <div className="px-4 py-2 rounded-lg bg-white/[0.03] border border-white/[0.08] text-[10px] font-mono text-devflow-gray-500 flex items-center gap-3">
@@ -190,9 +190,9 @@ export default function TermsOfService() {
                         <section className="pt-20 border-t border-white/[0.05]">
                             <div className="flex flex-col md:flex-row justify-between items-center gap-8">
                                 <p className="text-[10px] font-mono text-devflow-gray-600 uppercase tracking-[0.5em] text-center md:text-left leading-relaxed">
-                                    // END_OF_SYSTEM_ENFORCEMENT_PROTOCOL //
+                                    {"// END_OF_SYSTEM_ENFORCEMENT_PROTOCOL //"}
                                     <br />
-                                    // SECURITY_CLASS: [SIGMA-9] //
+                                    {"// SECURITY_CLASS: [SIGMA-9] //"}
                                     <br />
                                     DOC_MASTER: DEVFLOW_TERMS_v4.5_EXTREME
                                 </p>

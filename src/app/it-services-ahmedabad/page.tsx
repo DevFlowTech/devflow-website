@@ -330,7 +330,7 @@ export default function ITServicesAhmedabadPage() {
               <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ HEADQUARTERS ]</span>
               <h2 className="text-3xl font-display font-medium text-white">Ahmedabad-Based. Gujarat-Focused. Globally Delivered.</h2>
               <p className="text-sm text-devflow-gray-300 font-light leading-relaxed">
-                SG Highway, near Gujarat High Court. We're embedded in Gujarat's industrial corridors—Vadodara's manufacturing, Surat's textiles/diamonds, Ankleshwar's pharma, Mundra's logistics, GIFT City's fintech. Local context. Global standards.
+                {"SG Highway, near Gujarat High Court. We're embedded in Gujarat's industrial corridors—Vadodara's manufacturing, Surat's textiles/diamonds, Ankleshwar's pharma, Mundra's logistics, GIFT City's fintech. Local context. Global standards."}
               </p>
               
               <div className="flex flex-wrap gap-2 mt-4">
@@ -409,7 +409,7 @@ export default function ITServicesAhmedabadPage() {
         <div className="section-container max-w-6xl">
           <div className="text-center mb-16 space-y-4">
             <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ GUJARAT ENTERPRISE CASES ]</span>
-            <h2 className="text-3xl md:text-4xl font-display font-medium">Systems Running Gujarat's Leading Enterprises</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-medium">Systems Running Gujarat&apos;s Leading Enterprises</h2>
             <p className="text-sm text-devflow-gray-400 font-light max-w-2xl mx-auto">Anonymized. Client references & architecture diagrams shared under NDA on discovery call.</p>
           </div>
           
