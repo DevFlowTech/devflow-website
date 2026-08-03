@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "@/data/blogData";
 import ReactMarkdown from "react-markdown";
+import { buildSeoTitle } from "@/lib/utils";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -33,7 +34,7 @@ export async function generateMetadata({
 
   return {
     title: {
-      absolute: `${post.title} | DevFlow Blog`,
+      absolute: buildSeoTitle(post.title, " | DevFlow Blog"),
     },
     description: post.metaDescription,
     keywords: post.keywords,
@@ -185,11 +186,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="prose prose-invert prose-lg max-w-none">
             <ReactMarkdown
               components={{
-                h1: ({ children }) => (
-                  <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-white to-devflow-green/80 bg-clip-text text-transparent mt-16 mb-8 leading-tight">
-                    {children}
-                  </h1>
-                ),
+                // Many articles repeat the post title as a markdown `#` heading,
+                // duplicating the page's H1. Skip it entirely; render any other
+                // markdown `#` headings as H2 to keep a single H1 per page.
+                h1: ({ children }) => {
+                  const text = String(children).trim();
+                  if (text === post.title) return null;
+                  return (
+                    <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-white to-devflow-green/80 bg-clip-text text-transparent mt-16 mb-8 leading-tight">
+                      {children}
+                    </h2>
+                  );
+                },
                 h2: ({ children }) => (
                   <h2 className="text-3xl md:text-4xl font-bold text-white mt-14 mb-6 pb-3 border-b border-devflow-green/20 flex items-center gap-3">
                     <span className="w-1.5 h-8 bg-gradient-to-b from-devflow-green to-devflow-green/50 rounded-full" />

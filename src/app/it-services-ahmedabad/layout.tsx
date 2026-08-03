@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: { absolute: "IT Services Ahmedabad | Software & IT Solutions | DevFlow" },
+  title: { absolute: "IT Services Ahmedabad | Software Solutions | DevFlow" },
   description: "Comprehensive IT services in Ahmedabad, Gujarat: custom software development, AI/ML, web & mobile apps, cloud & DevOps, and consulting.",
   keywords: [
     "IT services Ahmedabad",

@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { knowledgeHubData } from "@/data/knowledgeHubData";
 import ReactMarkdown from "react-markdown";
+import { buildSeoTitle } from "@/lib/utils";
 import { FiChevronRight, FiCheck, FiInfo } from "react-icons/fi";
 
 interface KnowledgePageProps {
@@ -28,7 +29,9 @@ export async function generateMetadata({ params }: KnowledgePageProps): Promise<
   }
 
   return {
-    title: `${article.title} | DevFlow Knowledge Hub`,
+    title: {
+      absolute: buildSeoTitle(article.title, " | DevFlow Knowledge Hub"),
+    },
     description: article.metaDescription,
     keywords: article.keywords,
     alternates: {

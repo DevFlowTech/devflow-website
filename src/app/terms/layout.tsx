@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "DevFlow Technology's terms of service. Understand the legal framework governing the use of our platforms and professional services.",
   robots: {
     index: true,
-    follow: false,
+    follow: true,
   },
   alternates: { canonical: "https://www.devflow.co.in/terms" },
   openGraph: {

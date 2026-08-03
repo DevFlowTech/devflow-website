@@ -29,7 +29,7 @@ export const servicesData: Record<string, ServiceDetail> = {
     slug: "software-development",
     title: "Custom Software Development Company",
     metaDescription:
-      "Professional custom software development company. DevFlow builds enterprise grade systems, scalable cloud platforms, and bespoke web applications with zero vendor lock-in.",
+      "Professional custom software development company. DevFlow builds enterprise-grade systems and scalable cloud platforms with zero vendor lock-in.",
     keywords: [
       "custom software development",
       "software company",

@@ -30,7 +30,7 @@ export const locationsData: Record<string, LocationDetail> = {
     name: "Ahmedabad",
     region: "Gujarat",
     title: "Software Development Company in Ahmedabad",
-    metaDescription: "Leading software development company in Ahmedabad, Gujarat. DevFlow Technology builds custom ERP, SaaS platforms, and AI automation systems for businesses in Gujarat.",
+    metaDescription: "Leading software development company in Ahmedabad, Gujarat. DevFlow builds custom ERP, SaaS platforms, and AI automation systems.",
     keywords: ["software development company Ahmedabad", "IT company Ahmedabad", "web development company Ahmedabad", "local SEO Ahmedabad", "IT services Gujarat"],
     introduction: "DevFlow Technology is a premier software development partner in Ahmedabad, Gujarat, providing custom software, AI workflows, and enterprise web applications to growing and established regional brands.",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!3m2!1d23.0225!2d72.5714!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",

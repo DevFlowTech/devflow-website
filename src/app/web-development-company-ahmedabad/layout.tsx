@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Web Development Company Ahmedabad | Custom Web Apps, Next.js & React Experts",
+  title: {
+    absolute: "Web Development Company Ahmedabad | DevFlow Technology",
+  },
   description:
     "Leading web development company in Ahmedabad building custom web apps, enterprise portals, e-commerce, and PWAs with Next.js, React, and TypeScript.",
   keywords: [

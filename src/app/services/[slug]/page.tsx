@@ -4,6 +4,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { servicesData } from "@/data/servicesData";
 import { FiCpu, FiLayers, FiCheck, FiInfo, FiChevronRight, FiList, FiTrendingUp } from "react-icons/fi";
+import { buildSeoTitle } from "@/lib/utils";
 
 interface ServicePageProps {
   params: Promise<{
@@ -28,7 +29,9 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   }
 
   return {
-    title: `${service.title} | DevFlow Technology`,
+    title: {
+      absolute: buildSeoTitle(service.title, " | DevFlow Technology"),
+    },
     description: service.metaDescription,
     keywords: service.keywords,
     alternates: {

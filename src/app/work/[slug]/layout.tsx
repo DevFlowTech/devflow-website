@@ -1,6 +1,28 @@
 import type { Metadata } from "next";
 import { projects } from "@/data/projectData";
 
+// Compose a keyword-rich meta description (<= 155 chars) for a case study
+// from its short description, measured outcome, and tech stack.
+function buildCaseStudyDescription(project: {
+  description: string;
+  results: string[];
+  tech: string[];
+}): string {
+  const clean = (s: string) =>
+    s.replace(/\s+/g, " ").replace(/\.+$/, "").trim();
+  const desc = clean(project.description);
+  const outcome = project.results[0] ? clean(project.results[0]) : "";
+  const tech = project.tech.slice(0, 3).join(", ");
+  let text = outcome ? `${desc}. ${outcome}.` : `${desc}.`;
+  if (text.length + tech.length + 14 <= 155) {
+    text = `${text} Built with ${tech} — DevFlow case study.`;
+  }
+  if (text.length > 155) {
+    text = text.slice(0, 152).replace(/\s+\S*$/, "") + ".";
+  }
+  return text;
+}
+
 interface WorkDetailLayoutProps {
   children: React.ReactNode;
   params: Promise<{ slug: string }>;
@@ -30,7 +52,7 @@ export async function generateMetadata({
     title: {
       absolute: `${project.title} - Case Study | DevFlow Technology`,
     },
-    description: project.description,
+    description: buildCaseStudyDescription(project),
     keywords: [
       project.title.toLowerCase(),
       project.category.toLowerCase(),
@@ -45,13 +67,13 @@ export async function generateMetadata({
     },
     openGraph: {
       title: `${project.title} - Case Study & Results | DevFlow Technology`,
-      description: project.description,
+      description: buildCaseStudyDescription(project),
       url: `https://www.devflow.co.in/work/${project.slug}`,
       type: "article",
     },
     twitter: {
       title: `${project.title} - Case Study | DevFlow Technology`,
-      description: project.description,
+      description: buildCaseStudyDescription(project),
     },
   };
 }

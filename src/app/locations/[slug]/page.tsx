@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { locationsData } from "@/data/locationsData";
 import { FiMapPin, FiPhone, FiMail, FiChevronRight, FiCheck } from "react-icons/fi";
+import { buildSeoTitle } from "@/lib/utils";
 
 interface LocationPageProps {
   params: Promise<{
@@ -27,7 +28,9 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
   }
 
   return {
-    title: `${location.title} | DevFlow Technology`,
+    title: {
+      absolute: buildSeoTitle(location.title, " | DevFlow Technology"),
+    },
     description: location.metaDescription,
     keywords: location.keywords,
     alternates: {

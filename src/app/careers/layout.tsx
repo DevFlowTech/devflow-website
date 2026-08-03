@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Careers | Join the Engineering Team at DevFlow",
-  description: "Explore career opportunities at DevFlow Technology. Join our remote-first team of pre-vetted React, Node, Python, and cloud developers building enterprise-scale platforms.",
+  title: {
+    absolute: "Careers | Join the Engineering Team at DevFlow",
+  },
+  description:
+    "Explore careers at DevFlow Technology. Join our remote-first team of pre-vetted React, Node, Python, and cloud developers.",
   keywords: [
     "DevFlow careers",
     "careers at DevFlow",
