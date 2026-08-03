@@ -198,6 +198,7 @@ export default function CalculatorsPage() {
         </div>
 
         {/* Tab Selection */}
+        <h2 className="sr-only">Project Estimator, ROI Calculator & AI Readiness Tools</h2>
         <div className="flex flex-wrap gap-2 border-b border-white/[0.06] pb-4">
           <button
             onClick={() => setActiveTab("estimator")}

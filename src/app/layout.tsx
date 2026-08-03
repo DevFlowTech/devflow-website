@@ -40,7 +40,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 // Base URL for the site
-const siteUrl = "https://devflow.co.in";
+const siteUrl = "https://www.devflow.co.in";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -55,11 +55,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   // Basic metadata
   title: {
-    default: "DevFlow Technology | Custom Software Development Company India",
-    template: "%s | DevFlow Technology - Custom Software Development",
+    default: "DevFlow Technology | Custom Software Company India",
+    template: "%s | DevFlow Technology",
   },
   description:
-    "DevFlow Technology is a premier custom software development company in India, offering custom software development, AI development, ERP systems, and SaaS development products.",
+    "DevFlow Technology is a premier custom software development company in India, building AI systems, ERP solutions, and SaaS products.",
   keywords: [
     // ── Software Development ──────────────────────────────────
     "software development company",
@@ -554,7 +554,7 @@ export const metadata: Metadata = {
       "Leading AI agency & IT company in Ahmedabad, Gujarat. We build AI solutions, enterprise ERP systems, custom web apps, mobile applications & cloud services. Also offering SEO, PPC & digital marketing. Your trusted tech partner for digital transformation across Gujarat (Ahmedabad, Gandhinagar, Surat, Vadodara, Rajkot).",
     images: [
       {
-        url: `${siteUrl}/og-image.png`,
+        url: `${siteUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: "DevFlow Technology - AI Agency & Web Development Company Ahmedabad, Gujarat",
@@ -573,7 +573,7 @@ export const metadata: Metadata = {
     description:
       "Leading AI agency & IT company in Ahmedabad, Gujarat. We build AI solutions, ERP systems, web apps, mobile apps & cloud services. Transform your business with DevFlow.",
     images: {
-      url: `${siteUrl}/og-image.png`,
+      url: `${siteUrl}/og-image.jpg`,
       alt: "DevFlow Technology - AI Agency & Web Development Company Ahmedabad, Gujarat",
     },
   },
@@ -634,22 +634,11 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
-        {/* hreflang - Language & Region targeting for India markets */}
-        <link rel="alternate" hrefLang="en-IN" href="https://devflow.co.in" />
-        <link rel="alternate" hrefLang="hi-IN" href="https://devflow.co.in" />
-        <link rel="alternate" hrefLang="gu-IN" href="https://devflow.co.in" />
-        <link rel="alternate" hrefLang="en-US" href="https://devflow.co.in" />
-        <link
-          rel="alternate"
-          hrefLang="x-default"
-          href="https://devflow.co.in"
-        />
-
         {/* LLMs.txt - AI search engine manifest */}
         <link
           rel="alternate"
           type="text/plain"
-          href="https://devflow.co.in/llms.txt"
+          href="https://www.devflow.co.in/llms.txt"
           title="LLM Manifest"
         />
       </head>

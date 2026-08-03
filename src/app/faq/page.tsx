@@ -63,6 +63,8 @@ export default function FAQPage() {
           </p>
         </div>
 
+        <h2 className="sr-only">Commonly Asked Questions</h2>
+
         {/* FAQ List */}
         <div className="space-y-4 max-w-3xl mx-auto">
           {faqs.map((faq, index) => (

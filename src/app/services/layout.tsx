@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "AI Development & Custom Software Services | DevFlow Technology",
+    absolute: "AI Development & Custom Software Services | DevFlow",
   },
   description:
     "Full-stack AI development, custom web apps, enterprise ERP systems, mobile apps, and cloud services. DevFlow builds operational software that scales.",
@@ -18,12 +18,12 @@ export const metadata: Metadata = {
     "DevOps consulting",
     "digital transformation services",
   ],
-  alternates: { canonical: "https://devflow.co.in/services" },
+  alternates: { canonical: "https://www.devflow.co.in/services" },
   openGraph: {
     title: "Custom Software & AI Development Services | DevFlow Technology",
     description:
       "Explore our comprehensive technology services: AI automation, web & mobile apps, enterprise ERP, cloud infrastructure, and UI/UX design.",
-    url: "https://devflow.co.in/services",
+    url: "https://www.devflow.co.in/services",
     type: "website",
   },
   twitter: {

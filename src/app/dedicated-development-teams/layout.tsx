@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "staff augmentation services",
     "hire Nextjs developers"
   ],
-  alternates: { canonical: "https://devflow.co.in/dedicated-development-teams" },
+  alternates: { canonical: "https://www.devflow.co.in/dedicated-development-teams" },
 };
 
 export default function DedicatedTeamsLayout({

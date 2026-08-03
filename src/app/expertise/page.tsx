@@ -10,6 +10,7 @@ export default function ExpertisePage() {
       <StructuredData />
       
       {/* Re-use the clean SkillsSection component */}
+      <h1 className="sr-only">Our Expertise & Technical Capabilities</h1>
       <SkillsSection />
 
       {/* Final page-specific CTA */}

@@ -7,7 +7,7 @@ import { locationsData } from "@/data/locationsData";
 import { knowledgeHubData } from "@/data/knowledgeHubData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://devflow.co.in";
+  const baseUrl = "https://www.devflow.co.in";
   const currentDate = new Date().toISOString();
 
   // Static pages

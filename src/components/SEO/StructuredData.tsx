@@ -6,11 +6,11 @@ import { usePathname } from "next/navigation";
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://devflow.co.in/#organization",
+  "@id": "https://www.devflow.co.in/#organization",
   name: "DevFlow Technology",
   alternateName: ["DevFlow", "DevFlow Tech", "DevFlow Technology Pvt Ltd"],
-  url: "https://devflow.co.in",
-  logo: "https://devflow.co.in/logo.png",
+  url: "https://www.devflow.co.in",
+  logo: "https://www.devflow.co.in/logo.png",
   description:
     "Full-service IT company delivering AI solutions, enterprise ERP systems, custom software development, and digital transformation services for businesses worldwide. Based in Ahmedabad, Gujarat.",
   foundingDate: "2025",
@@ -19,7 +19,7 @@ const organizationSchema = {
       "@type": "Person",
       name: "Prince Gajjar",
       jobTitle: "CEO & Co-Founder",
-      url: "https://devflow.co.in/about",
+      url: "https://www.devflow.co.in/about",
       sameAs: [
         "https://github.com/princegajjar",
         "https://linkedin.com/in/princegajjar",
@@ -29,7 +29,7 @@ const organizationSchema = {
       "@type": "Person",
       name: "Bhavin Rajput",
       jobTitle: "CTO & Co-Founder",
-      url: "https://devflow.co.in/about",
+      url: "https://www.devflow.co.in/about",
       sameAs: ["https://linkedin.com/in/bhavinrajput"],
     },
   ],
@@ -37,7 +37,7 @@ const organizationSchema = {
     "https://twitter.com/devflowtechnology",
     "https://linkedin.com/company/devflowtechnology",
     "https://github.com/devflowtechnology",
-    "https://devflow.co.in",
+    "https://www.devflow.co.in",
   ],
   contactPoint: [
     {
@@ -120,14 +120,14 @@ const organizationSchema = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "ProfessionalService"],
-  "@id": "https://devflow.co.in/#localbusiness",
+  "@id": "https://www.devflow.co.in/#localbusiness",
   name: "DevFlow Technology",
   alternateName: "DevFlow - AI Agency & Web Development Company Ahmedabad",
   description:
     "Top-rated AI development company and IT services provider in Ahmedabad, Gujarat. Specializing in AI solutions, custom web development, mobile app development, ERP systems, cloud services, and SEO. Serving clients across Gujarat (Ahmedabad, Gandhinagar, Surat, Vadodara) and globally.",
-  url: "https://devflow.co.in",
-  logo: "https://devflow.co.in/logo.png",
-  image: "https://devflow.co.in/og-image.png",
+  url: "https://www.devflow.co.in",
+  logo: "https://www.devflow.co.in/logo.png",
+  image: "https://www.devflow.co.in/og-image.jpg",
   email: "info@devflow.co.in",
   telephone: ["+91-97261-13311", "+91-63550-43103"],
   priceRange: "$$-$$$",
@@ -236,7 +236,7 @@ const localBusinessSchema = {
           provider: {
             "@type": "LocalBusiness",
             name: "DevFlow Technology",
-            "@id": "https://devflow.co.in/#localbusiness",
+            "@id": "https://www.devflow.co.in/#localbusiness",
           },
         },
       },
@@ -251,7 +251,7 @@ const localBusinessSchema = {
           provider: {
             "@type": "LocalBusiness",
             name: "DevFlow Technology",
-            "@id": "https://devflow.co.in/#localbusiness",
+            "@id": "https://www.devflow.co.in/#localbusiness",
           },
         },
       },
@@ -266,7 +266,7 @@ const localBusinessSchema = {
           provider: {
             "@type": "LocalBusiness",
             name: "DevFlow Technology",
-            "@id": "https://devflow.co.in/#localbusiness",
+            "@id": "https://www.devflow.co.in/#localbusiness",
           },
         },
       },
@@ -281,7 +281,7 @@ const localBusinessSchema = {
           provider: {
             "@type": "LocalBusiness",
             name: "DevFlow Technology",
-            "@id": "https://devflow.co.in/#localbusiness",
+            "@id": "https://www.devflow.co.in/#localbusiness",
           },
         },
       },
@@ -296,7 +296,7 @@ const localBusinessSchema = {
           provider: {
             "@type": "LocalBusiness",
             name: "DevFlow Technology",
-            "@id": "https://devflow.co.in/#localbusiness",
+            "@id": "https://www.devflow.co.in/#localbusiness",
           },
         },
       },
@@ -311,7 +311,7 @@ const localBusinessSchema = {
           provider: {
             "@type": "LocalBusiness",
             name: "DevFlow Technology",
-            "@id": "https://devflow.co.in/#localbusiness",
+            "@id": "https://www.devflow.co.in/#localbusiness",
           },
         },
       },
@@ -356,10 +356,10 @@ const localBusinessSchema = {
 const localBusinessCitationSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://devflow.co.in/#citation",
+  "@id": "https://www.devflow.co.in/#citation",
   name: "DevFlow Technology",
   alternateName: "DevFlow Technology Ahmedabad",
-  url: "https://devflow.co.in",
+  url: "https://www.devflow.co.in",
   telephone: ["+91-97261-13311", "+91-63550-43103"],
   email: "info@devflow.co.in",
   address: {
@@ -397,21 +397,21 @@ const localBusinessCitationSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://devflow.co.in/#website",
+  "@id": "https://www.devflow.co.in/#website",
   name: "DevFlow Technology - AI Agency & Web Development Company Ahmedabad",
-  url: "https://devflow.co.in",
+  url: "https://www.devflow.co.in",
   description:
     "Leading AI agency and IT company in Ahmedabad, Gujarat. We build AI solutions, ERP systems, web apps, mobile apps, and provide cloud services & SEO. Top software development company in Gujarat.",
   publisher: {
     "@type": "Organization",
-    "@id": "https://devflow.co.in/#organization",
+    "@id": "https://www.devflow.co.in/#organization",
   },
   inLanguage: ["en-US", "en-IN", "hi-IN", "gu-IN"],
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://devflow.co.in/search?q={search_term_string}",
+      urlTemplate: "https://www.devflow.co.in/search?q={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },
@@ -566,7 +566,7 @@ const websiteSchema = {
   ],
   mainEntity: {
     "@type": "Organization",
-    "@id": "https://devflow.co.in/#organization",
+    "@id": "https://www.devflow.co.in/#organization",
   },
 };
 
@@ -574,13 +574,13 @@ const websiteSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://devflow.co.in/#services",
+  "@id": "https://www.devflow.co.in/#services",
   name: "DevFlow Technology IT Services",
   description:
     "Comprehensive technology services including AI development, custom web applications, enterprise ERP systems, mobile apps, cloud infrastructure, and SEO services. Based in Ahmedabad, serving Gujarat and global clients.",
   provider: {
     "@type": "LocalBusiness",
-    "@id": "https://devflow.co.in/#localbusiness",
+    "@id": "https://www.devflow.co.in/#localbusiness",
   },
   areaServed: [
     { "@type": "City", name: "Ahmedabad" },
@@ -677,14 +677,14 @@ const serviceSchema = {
 const aiDevelopmentServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://devflow.co.in/ai-development-company-ahmedabad#service",
+  "@id": "https://www.devflow.co.in/ai-development-company-ahmedabad#service",
   name: "AI Development Services in Ahmedabad",
   description:
     "Leading AI development company in Ahmedabad offering custom AI solutions, LLM integration, RAG systems, chatbots, computer vision, NLP, and generative AI applications for businesses across Gujarat.",
   serviceType: "AI Development",
   provider: {
     "@type": "LocalBusiness",
-    "@id": "https://devflow.co.in/#localbusiness",
+    "@id": "https://www.devflow.co.in/#localbusiness",
   },
   areaServed: [
     { "@type": "City", name: "Ahmedabad" },
@@ -758,14 +758,14 @@ const aiDevelopmentServiceSchema = {
 const seoServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://devflow.co.in/seo-company-ahmedabad#service",
+  "@id": "https://www.devflow.co.in/seo-company-ahmedabad#service",
   name: "SEO Services in Ahmedabad",
   description:
     "Top SEO company in Ahmedabad offering technical SEO audits, local SEO for Gujarat businesses, GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), and performance marketing to rank higher on Google and AI search.",
   serviceType: "SEO Services",
   provider: {
     "@type": "LocalBusiness",
-    "@id": "https://devflow.co.in/#localbusiness",
+    "@id": "https://www.devflow.co.in/#localbusiness",
   },
   areaServed: [
     { "@type": "City", name: "Ahmedabad" },
@@ -841,14 +841,14 @@ const seoServiceSchema = {
 const webDevelopmentServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://devflow.co.in/web-development-company-ahmedabad#service",
+  "@id": "https://www.devflow.co.in/web-development-company-ahmedabad#service",
   name: "Web Development Services in Ahmedabad",
   description:
     "Premier web development company in Ahmedabad building custom web applications, enterprise portals, e-commerce platforms, and progressive web apps using Next.js, React, Node.js, and TypeScript.",
   serviceType: "Web Development",
   provider: {
     "@type": "LocalBusiness",
-    "@id": "https://devflow.co.in/#localbusiness",
+    "@id": "https://www.devflow.co.in/#localbusiness",
   },
   areaServed: [
     { "@type": "City", name: "Ahmedabad" },
@@ -922,14 +922,14 @@ const webDevelopmentServiceSchema = {
 const softwareDevelopmentServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://devflow.co.in/software-development-company-ahmedabad#service",
+  "@id": "https://www.devflow.co.in/software-development-company-ahmedabad#service",
   name: "Software Development Services in Ahmedabad",
   description:
     "Top-rated software development company in Ahmedabad offering custom software engineering, ERP systems, mobile app development, AI solutions, and system integration for scaling startups and enterprises.",
   serviceType: "Software Development",
   provider: {
     "@type": "LocalBusiness",
-    "@id": "https://devflow.co.in/#localbusiness",
+    "@id": "https://www.devflow.co.in/#localbusiness",
   },
   areaServed: [
     { "@type": "City", name: "Ahmedabad" },
@@ -990,14 +990,14 @@ const mobileAppDevelopmentServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id":
-    "https://devflow.co.in/mobile-app-development-company-ahmedabad#service",
+    "https://www.devflow.co.in/mobile-app-development-company-ahmedabad#service",
   name: "Mobile App Development Services in Ahmedabad",
   description:
     "Leading mobile app development company in Ahmedabad building native iOS, Android, and cross-platform apps using Flutter, React Native, Swift, and Kotlin for startups and enterprises in Gujarat.",
   serviceType: "Mobile App Development",
   provider: {
     "@type": "LocalBusiness",
-    "@id": "https://devflow.co.in/#localbusiness",
+    "@id": "https://www.devflow.co.in/#localbusiness",
   },
   areaServed: [
     { "@type": "City", name: "Ahmedabad" },
@@ -1071,14 +1071,14 @@ const mobileAppDevelopmentServiceSchema = {
 const itCompanyServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://devflow.co.in/it-company-ahmedabad#service",
+  "@id": "https://www.devflow.co.in/it-company-ahmedabad#service",
   name: "IT Services & Consulting in Ahmedabad",
   description:
     "Top IT company in Ahmedabad providing end-to-end IT services including software development, IT consulting, digital transformation, cloud migration, DevOps, and managed IT services for businesses in Gujarat.",
   serviceType: "IT Services",
   provider: {
     "@type": "LocalBusiness",
-    "@id": "https://devflow.co.in/#localbusiness",
+    "@id": "https://www.devflow.co.in/#localbusiness",
   },
   areaServed: [
     { "@type": "City", name: "Ahmedabad" },
@@ -1154,14 +1154,14 @@ const itCompanyServiceSchema = {
 const itServicesSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://devflow.co.in/it-services-ahmedabad#service",
+  "@id": "https://www.devflow.co.in/it-services-ahmedabad#service",
   name: "IT Services in Ahmedabad",
   description:
     "Comprehensive IT services provider in Ahmedabad offering software development, AI solutions, cloud services, cybersecurity, IT support, and digital transformation for SMEs and enterprises across Gujarat.",
   serviceType: "IT Services",
   provider: {
     "@type": "LocalBusiness",
-    "@id": "https://devflow.co.in/#localbusiness",
+    "@id": "https://www.devflow.co.in/#localbusiness",
   },
   areaServed: [
     { "@type": "City", name: "Ahmedabad" },
@@ -1247,7 +1247,7 @@ const howToSchema = {
       position: 1,
       name: "Project Discovery Call",
       text: "Schedule a free consultation to discuss your requirements, goals, and timeline with our technical team.",
-      url: "https://devflow.co.in/contact",
+      url: "https://www.devflow.co.in/contact",
     },
     {
       "@type": "HowToStep",
@@ -1293,37 +1293,37 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://devflow.co.in",
+      item: "https://www.devflow.co.in",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Services",
-      item: "https://devflow.co.in/services",
+      item: "https://www.devflow.co.in/services",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Our Work",
-      item: "https://devflow.co.in/work",
+      item: "https://www.devflow.co.in/work",
     },
     {
       "@type": "ListItem",
       position: 4,
       name: "About",
-      item: "https://devflow.co.in/about",
+      item: "https://www.devflow.co.in/about",
     },
     {
       "@type": "ListItem",
       position: 5,
       name: "Blog",
-      item: "https://devflow.co.in/blog",
+      item: "https://www.devflow.co.in/blog",
     },
     {
       "@type": "ListItem",
       position: 6,
       name: "Contact",
-      item: "https://devflow.co.in/contact",
+      item: "https://www.devflow.co.in/contact",
     },
   ],
 };
@@ -1332,7 +1332,7 @@ const breadcrumbSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://devflow.co.in/#faq",
+  "@id": "https://www.devflow.co.in/#faq",
   mainEntity: [
     {
       "@type": "Question",
@@ -1433,44 +1433,44 @@ const workItemListSchema = {
   name: "DevFlow Technology Projects & Case Studies",
   description:
     "Our portfolio of custom web applications, enterprise systems, and digital solutions.",
-  url: "https://devflow.co.in/work",
+  url: "https://www.devflow.co.in/work",
   numberOfItems: 6,
   itemListElement: [
     {
       "@type": "ListItem",
       position: 1,
       name: "Pixsignerz Portal",
-      url: "https://devflow.co.in/work/pixsignerz-portal",
+      url: "https://www.devflow.co.in/work/pixsignerz-portal",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Future Realty Space",
-      url: "https://devflow.co.in/work/future-realty-space",
+      url: "https://www.devflow.co.in/work/future-realty-space",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Aureon India",
-      url: "https://devflow.co.in/work/aureon-india",
+      url: "https://www.devflow.co.in/work/aureon-india",
     },
     {
       "@type": "ListItem",
       position: 4,
       name: "Vassu Infotech",
-      url: "https://devflow.co.in/work/vassu-infotech",
+      url: "https://www.devflow.co.in/work/vassu-infotech",
     },
     {
       "@type": "ListItem",
       position: 5,
       name: "Narmada Sales",
-      url: "https://devflow.co.in/work/narmada-sales",
+      url: "https://www.devflow.co.in/work/narmada-sales",
     },
     {
       "@type": "ListItem",
       position: 6,
       name: "Path Visa Advisor",
-      url: "https://devflow.co.in/work/path-visa-advisor",
+      url: "https://www.devflow.co.in/work/path-visa-advisor",
     },
   ],
 };

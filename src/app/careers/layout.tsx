@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: "Join a high-performance team of developers, designers, and systems architects at DevFlow.",
     type: "website",
   },
-  alternates: { canonical: "https://devflow.co.in/careers" },
+  alternates: { canonical: "https://www.devflow.co.in/careers" },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

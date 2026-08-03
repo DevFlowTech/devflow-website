@@ -28,7 +28,7 @@ export const projects: Project[] = [
     ],
     "color": "from-devflow-green/20 to-devflow-green/5",
     "accent": "#0225dc",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Manual hospital queues and patient scheduling administrative bottlenecks.",
     "solution": "Engineered an AI-driven automated booking and hospital operations dashboard.",
     "results": [
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     ],
     "color": "from-blue-500/20 to-blue-500/5",
     "accent": "#3b82f6",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "High latency and slow rendering times on real estate listing pages.",
     "solution": "Designed a database system powered by Cloudflare D1 and static assets.",
     "results": [
@@ -69,7 +69,7 @@ export const projects: Project[] = [
     ],
     "color": "from-devflow-green/20 to-devflow-green/5",
     "accent": "#0225dc",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Inaccurate, time-consuming lead extraction from map directories.",
     "solution": "Custom Puppeteer scraping automation with multi-threaded node scripts.",
     "results": [
@@ -90,7 +90,7 @@ export const projects: Project[] = [
     ],
     "color": "from-blue-500/20 to-blue-500/5",
     "accent": "#3b82f6",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Route planning errors and delayed custom declaration flows.",
     "solution": "Dynamic tracking portal featuring real-time custom declarations.",
     "results": [
@@ -111,7 +111,7 @@ export const projects: Project[] = [
     ],
     "color": "from-devflow-green/20 to-devflow-green/5",
     "accent": "#0225dc",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Manual filtering of thousands of resumes against complex job roles.",
     "solution": "Parser powered by Gemini 1.5 Pro to parse and match candidate profiles.",
     "results": [
@@ -132,7 +132,7 @@ export const projects: Project[] = [
     ],
     "color": "from-blue-500/20 to-blue-500/5",
     "accent": "#3b82f6",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "High bounce rate on slow-loading international Shopify checkouts.",
     "solution": "Next.js headless frontend integration using GraphQL and localized translations.",
     "results": [
@@ -153,7 +153,7 @@ export const projects: Project[] = [
     ],
     "color": "from-orange-500/20 to-orange-500/5",
     "accent": "#f97316",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Scattered fleet route telemetry and tracking for driver dispatch.",
     "solution": "Developed an enterprise-grade Go and Next.js CRM system.",
     "results": [
@@ -174,7 +174,7 @@ export const projects: Project[] = [
     ],
     "color": "from-devflow-green/20 to-devflow-green/5",
     "accent": "#0225dc",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Catalog desynchronization between supplier and retail frontends.",
     "solution": "High-frequency web automation crawler powered by Puppeteer and Redis.",
     "results": [
@@ -195,7 +195,7 @@ export const projects: Project[] = [
     ],
     "color": "from-blue-500/20 to-blue-500/5",
     "accent": "#3b82f6",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Complex tax logic and failed recurring payments for multi-tenant users.",
     "solution": "Developed a billing engine with robust Stripe webhook handlers.",
     "results": [
@@ -216,7 +216,7 @@ export const projects: Project[] = [
     ],
     "color": "from-purple-500/20 to-purple-500/5",
     "accent": "#a855f7",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "High traffic spike crashes during active ad campaigns.",
     "solution": "Static Next.js page architecture with edge caching.",
     "results": [
@@ -237,7 +237,7 @@ export const projects: Project[] = [
     ],
     "color": "from-blue-500/20 to-blue-500/5",
     "accent": "#3b82f6",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Lag in rendering multi-exchange websocket price quotes.",
     "solution": "Optimized rendering cycle with WebSocket compression.",
     "results": [
@@ -258,7 +258,7 @@ export const projects: Project[] = [
     ],
     "color": "from-devflow-green/20 to-devflow-green/5",
     "accent": "#0225dc",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Under-utilized parking spots due to lack of real-time status.",
     "solution": "Connected IoT hardware nodes to an MQTT broker and React dashboard.",
     "results": [
@@ -279,7 +279,7 @@ export const projects: Project[] = [
     ],
     "color": "from-indigo-500/20 to-indigo-500/5",
     "accent": "#6366f1",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Vulnerable entry logs and slow verification for visitor access.",
     "solution": "Developed visitor verification using Kotlin and Supabase db logs.",
     "results": [
@@ -300,7 +300,7 @@ export const projects: Project[] = [
     ],
     "color": "from-orange-500/20 to-orange-500/5",
     "accent": "#f97316",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Unsecured REST endpoints and slow lookup operations for large teams.",
     "solution": "MERN Stack with JWT Auth and optimized database indexing.",
     "results": [
@@ -320,7 +320,7 @@ export const projects: Project[] = [
     ],
     "color": "from-blue-500/20 to-blue-500/5",
     "accent": "#3b82f6",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Delayed visa application processing and complex client document uploads.",
     "solution": "Secure document parsing portal with React and Node upload pipelines.",
     "results": [
@@ -341,7 +341,7 @@ export const projects: Project[] = [
     ],
     "color": "from-orange-500/20 to-orange-500/5",
     "accent": "#f97316",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Inefficient internal inventory reconciliation.",
     "solution": "Custom ERP with MySQL and real-time backend API sync.",
     "results": [
@@ -362,7 +362,7 @@ export const projects: Project[] = [
     ],
     "color": "from-orange-500/20 to-orange-500/5",
     "accent": "#f97316",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Lack of transparency in construction expense tracking.",
     "solution": "Developed expense tracking tool with real-time budget forecasting.",
     "results": [
@@ -383,7 +383,7 @@ export const projects: Project[] = [
     ],
     "color": "from-purple-500/20 to-purple-500/5",
     "accent": "#a855f7",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Tedious manual GMB rankings tracking for client campaigns.",
     "solution": "GMB automation tool with Python scraping and Google Search API nodes.",
     "results": [
@@ -404,7 +404,7 @@ export const projects: Project[] = [
     ],
     "color": "from-purple-500/20 to-purple-500/5",
     "accent": "#a855f7",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Poor mobile usability and low pagespeed scores.",
     "solution": "Complete layout optimization achieving an LCP of ~0.90s.",
     "results": [
@@ -425,7 +425,7 @@ export const projects: Project[] = [
     ],
     "color": "from-purple-500/20 to-purple-500/5",
     "accent": "#a855f7",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Low visitor-to-lead conversion on real estate portal.",
     "solution": "Developed an interactive lead capturing flow with PHP and JS.",
     "results": [
@@ -446,7 +446,7 @@ export const projects: Project[] = [
     ],
     "color": "from-purple-500/20 to-purple-500/5",
     "accent": "#a855f7",
-    "url": "https://devflow.co.in",
+    "url": "https://www.devflow.co.in",
     "challenge": "Tedious manual checks for client technical SEO audits.",
     "solution": "Automated Puppeteer crawler parsing schemas and page metrics.",
     "results": [

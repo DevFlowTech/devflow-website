@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "About DevFlow Technology | AI Agency & Software Company India",
+    absolute: "About DevFlow Technology | AI Agency & Software India",
   },
   description:
     "About DevFlow's mission, values, and team. We are a technical partner building custom software, AI solutions, and enterprise systems for scaling startups.",
@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     "Indian tech startup",
     "custom software company",
   ],
-  alternates: { canonical: "https://devflow.co.in/about" },
+  alternates: { canonical: "https://www.devflow.co.in/about" },
   openGraph: {
     title: "About DevFlow Technology | Our Mission & Team",
     description:
       "From chaos to clarity. Learn how DevFlow Technology builds robust digital systems that automate operational drag and enable compounding growth.",
-    url: "https://devflow.co.in/about",
+    url: "https://www.devflow.co.in/about",
     type: "website",
   },
   twitter: {

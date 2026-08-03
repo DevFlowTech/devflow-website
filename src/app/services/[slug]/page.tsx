@@ -32,12 +32,12 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     description: service.metaDescription,
     keywords: service.keywords,
     alternates: {
-      canonical: `https://devflow.co.in/services/${service.slug}`,
+      canonical: `https://www.devflow.co.in/services/${service.slug}`,
     },
     openGraph: {
       title: service.title,
       description: service.metaDescription,
-      url: `https://devflow.co.in/services/${service.slug}`,
+      url: `https://www.devflow.co.in/services/${service.slug}`,
       type: "website",
     },
   };
@@ -60,12 +60,12 @@ export default async function ServicePage({ params }: ServicePageProps) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "@id": `https://devflow.co.in/services/${service.slug}#service`,
+            "@id": `https://www.devflow.co.in/services/${service.slug}#service`,
             "name": service.title,
             "description": service.metaDescription,
             "provider": {
               "@type": "LocalBusiness",
-              "@id": "https://devflow.co.in/#localbusiness"
+              "@id": "https://www.devflow.co.in/#localbusiness"
             },
             "areaServed": [
               { "@type": "Country", name: "India" },
@@ -88,7 +88,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": `https://devflow.co.in/services/${service.slug}`
+              "@id": `https://www.devflow.co.in/services/${service.slug}`
             }
           })
         }}

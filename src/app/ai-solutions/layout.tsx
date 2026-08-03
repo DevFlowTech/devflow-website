@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "business AI integration",
     "GPT-4 RAG database"
   ],
-  alternates: { canonical: "https://devflow.co.in/ai-solutions" },
+  alternates: { canonical: "https://www.devflow.co.in/ai-solutions" },
 };
 
 export default function AiSolutionsLayout({

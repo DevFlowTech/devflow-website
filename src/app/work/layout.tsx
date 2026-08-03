@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     absolute: "Portfolio & Case Studies | DevFlow Technology Projects",
   },
   description:
-    "Explore our portfolio of custom-built web applications, enterprise portals, real estate platforms, and digital solutions. See proven results from real projects.",
+    "Explore our portfolio of custom web apps, enterprise portals, and digital solutions with proven results.",
   keywords: [
     "DevFlow portfolio",
     "custom web development projects",
@@ -16,12 +16,12 @@ export const metadata: Metadata = {
     "Next.js examples",
     "India software company projects",
   ],
-  alternates: { canonical: "https://devflow.co.in/work" },
+  alternates: { canonical: "https://www.devflow.co.in/work" },
   openGraph: {
     title: "Our Work - Portfolio & Case Studies | DevFlow Technology",
     description:
       "Browse our gallery of crafted products and proven results. Custom web systems, database orchestrations, and enterprise portals built by DevFlow.",
-    url: "https://devflow.co.in/work",
+    url: "https://www.devflow.co.in/work",
     type: "website",
   },
   twitter: {

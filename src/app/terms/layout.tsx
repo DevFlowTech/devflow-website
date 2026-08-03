@@ -10,12 +10,12 @@ export const metadata: Metadata = {
     index: true,
     follow: false,
   },
-  alternates: { canonical: "https://devflow.co.in/terms" },
+  alternates: { canonical: "https://www.devflow.co.in/terms" },
   openGraph: {
     title: "Terms of Service | DevFlow Technology",
     description:
       "Review the terms and conditions for using DevFlow Technology's engineering platforms and professional services.",
-    url: "https://devflow.co.in/terms",
+    url: "https://www.devflow.co.in/terms",
     type: "website",
   },
 };

@@ -31,12 +31,12 @@ export async function generateMetadata({ params }: IndustryPageProps): Promise<M
     description: industry.metaDescription,
     keywords: industry.keywords,
     alternates: {
-      canonical: `https://devflow.co.in/industries/${industry.slug}`,
+      canonical: `https://www.devflow.co.in/industries/${industry.slug}`,
     },
     openGraph: {
       title: industry.title,
       description: industry.metaDescription,
-      url: `https://devflow.co.in/industries/${industry.slug}`,
+      url: `https://www.devflow.co.in/industries/${industry.slug}`,
       type: "website",
     },
   };
@@ -59,12 +59,12 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "@id": `https://devflow.co.in/industries/${industry.slug}#webpage`,
+            "@id": `https://www.devflow.co.in/industries/${industry.slug}#webpage`,
             "name": industry.title,
             "description": industry.metaDescription,
             "publisher": {
               "@type": "Organization",
-              "@id": "https://devflow.co.in/#organization"
+              "@id": "https://www.devflow.co.in/#organization"
             }
           })
         }}

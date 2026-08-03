@@ -38,7 +38,7 @@ export async function generateMetadata({
     description: post.metaDescription,
     keywords: post.keywords,
     alternates: {
-      canonical: `https://devflow.co.in/blog/${post.slug}`,
+      canonical: `https://www.devflow.co.in/blog/${post.slug}`,
     },
     openGraph: {
       title: post.title,
@@ -46,7 +46,7 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.date,
       authors: ["DevFlow Team"],
-      url: `https://devflow.co.in/blog/${post.slug}`,
+      url: `https://www.devflow.co.in/blog/${post.slug}`,
       images: [
         {
           url: post.image,
@@ -96,7 +96,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "@id": `https://devflow.co.in/blog/${post.slug}#blogposting`,
+            "@id": `https://www.devflow.co.in/blog/${post.slug}#blogposting`,
             "headline": post.title,
             "description": post.metaDescription,
             "image": post.image,
@@ -104,19 +104,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             "author": {
               "@type": "Organization",
               "name": "DevFlow Team",
-              "url": "https://devflow.co.in/about"
+              "url": "https://www.devflow.co.in/about"
             },
             "publisher": {
               "@type": "Organization",
               "name": "DevFlow Technology",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://devflow.co.in/logo.png"
+                "url": "https://www.devflow.co.in/logo.png"
               }
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": `https://devflow.co.in/blog/${post.slug}`
+              "@id": `https://www.devflow.co.in/blog/${post.slug}`
             }
           })
         }}
@@ -173,9 +173,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <Image
               src={post.image}
               alt={post.title}
-              fill
+              width={1200}
+              height={675}
               sizes="(max-width: 1200px) 100vw, 1200px"
-              className="object-cover"
+              className="object-cover w-full h-full"
               priority
             />
           </div>
@@ -301,9 +302,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     <Image
                       src={relatedPost.image}
                       alt={relatedPost.title}
-                      fill
+                      width={1200}
+                      height={675}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-devflow-black/20 group-hover:bg-transparent transition-colors duration-300" />
                   </div>

@@ -28,24 +28,24 @@ export default function CaseStudyPage({ params }: PageProps) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CreativeWork",
-            "@id": `https://devflow.co.in/work/${project.slug}#case-study`,
+            "@id": `https://www.devflow.co.in/work/${project.slug}#case-study`,
             "name": project.title,
             "headline": project.title,
             "description": project.description,
             "alternativeHeadline": project.longDescription,
             "genre": project.category,
-            "url": `https://devflow.co.in/work/${project.slug}`,
+            "url": `https://www.devflow.co.in/work/${project.slug}`,
             "creator": {
               "@type": "Organization",
               "name": "DevFlow Technology",
-              "url": "https://devflow.co.in"
+              "url": "https://www.devflow.co.in"
             },
             "publisher": {
               "@type": "Organization",
               "name": "DevFlow Technology",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://devflow.co.in/logo.png"
+                "url": "https://www.devflow.co.in/logo.png"
               }
             },
             "about": project.tech.map((t) => ({

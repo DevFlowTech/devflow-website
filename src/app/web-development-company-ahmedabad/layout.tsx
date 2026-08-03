@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title:
     "Web Development Company Ahmedabad | Custom Web Apps, Next.js & React Experts",
   description:
-    "Leading web development company in Ahmedabad, Gujarat building custom web applications, enterprise portals, e-commerce platforms, and PWAs using Next.js, React, Node.js & TypeScript. Serving Ahmedabad, Gandhinagar, Surat, Vadodara & all Gujarat.",
+    "Leading web development company in Ahmedabad building custom web apps, enterprise portals, e-commerce, and PWAs with Next.js, React, and TypeScript.",
   keywords: [
     "web development company Ahmedabad",
     "web development company Gujarat",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://devflow.co.in/og-image.png",
+        url: "https://www.devflow.co.in/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "DevFlow Technology - Web Development Company Ahmedabad",
@@ -41,11 +41,11 @@ export const metadata: Metadata = {
     title: "Web Development Company Ahmedabad | DevFlow Technology",
     description:
       "Leading web development company in Ahmedabad, Gujarat. Custom web apps, Next.js, React, Node.js development.",
-    images: ["https://devflow.co.in/og-image.png"],
+    images: ["https://www.devflow.co.in/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://devflow.co.in/web-development-company-ahmedabad",
+    canonical: "https://www.devflow.co.in/web-development-company-ahmedabad",
   },
 };
 

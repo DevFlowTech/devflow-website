@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "IT Services Ahmedabad | Complete IT Solutions, Software Development & Consulting Gujarat",
-  description: "Comprehensive IT services in Ahmedabad, Gujarat: custom software development, AI/ML solutions, web & mobile apps, cloud & DevOps, cybersecurity, IT consulting, staff augmentation & managed services. Serving Ahmedabad, Gandhinagar, Surat, Vadodara & all Gujarat.",
+  title: { absolute: "IT Services Ahmedabad | Software & IT Solutions | DevFlow" },
+  description: "Comprehensive IT services in Ahmedabad, Gujarat: custom software development, AI/ML, web & mobile apps, cloud & DevOps, and consulting.",
   keywords: [
     "IT services Ahmedabad",
     "IT services Gujarat",
@@ -29,16 +29,16 @@ export const metadata: Metadata = {
     title: "IT Services Ahmedabad | DevFlow Technology - Complete IT Solutions Gujarat",
     description: "Full-spectrum IT services in Ahmedabad: software development, AI, cloud, DevOps, security, consulting & staffing. Gujarat's trusted technology partner.",
     type: "website",
-    images: [{ url: "https://devflow.co.in/og-image.png", width: 1200, height: 630, alt: "DevFlow Technology - IT Services Ahmedabad" }],
+    images: [{ url: "https://www.devflow.co.in/og-image.jpg", width: 1200, height: 630, alt: "DevFlow Technology - IT Services Ahmedabad" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "IT Services Ahmedabad | DevFlow Technology",
     description: "Complete IT services in Ahmedabad. Custom software development, AI solutions, web & mobile apps, cloud & security for Gujarat enterprises.",
-    images: ["https://devflow.co.in/og-image.png"],
+    images: ["https://www.devflow.co.in/og-image.jpg"],
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://devflow.co.in/it-services-ahmedabad" },
+  alternates: { canonical: "https://www.devflow.co.in/it-services-ahmedabad" },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

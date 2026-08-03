@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "hire offshore coding team",
     "outsource software engineering"
   ],
-  alternates: { canonical: "https://devflow.co.in/offshore-development" },
+  alternates: { canonical: "https://www.devflow.co.in/offshore-development" },
 };
 
 export default function OffshoreDevelopmentLayout({

@@ -98,11 +98,12 @@ export default function HeroSection() {
         <Image
           src="/hero-bg-city.jpg"
           alt="DevFlow City Skyline Background"
-          fill
+          width={1920}
+          height={1080}
           priority
           quality={75}
           sizes="(max-width: 768px) 768px, 100vw"
-          className="object-cover"
+          className="object-cover w-full h-full"
         />
       </div>
 

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   },
   description:
     "Streamline operations with tailormade enterprise systems. We build inventory, HR, accounting, and supply chain ERP software.",
+  alternates: {
+    canonical: "https://www.devflow.co.in/services/custom-software-erp",
+  },
 };
 
 export default function CustomSoftwareErpLayout({

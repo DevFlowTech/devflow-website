@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   },
   description:
     "Rank at the top of Google and AI search engines. We optimize content for answer engines and generative search tools.",
+  alternates: {
+    canonical: "https://www.devflow.co.in/services/enterprise-seo",
+  },
 };
 
 export default function EnterpriseSeoLayout({

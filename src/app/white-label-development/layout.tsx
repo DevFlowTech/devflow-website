@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "resell IT services",
     "white label coding partner"
   ],
-  alternates: { canonical: "https://devflow.co.in/white-label-development" },
+  alternates: { canonical: "https://www.devflow.co.in/white-label-development" },
 };
 
 export default function WhiteLabelLayout({

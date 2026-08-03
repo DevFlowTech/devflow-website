@@ -17,9 +17,10 @@ export default function BlogCard({ post }: BlogCardProps) {
         <Image
           src={post.image}
           alt={post.title}
-          fill
+          width={1200}
+          height={675}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-devflow-black/20 group-hover:bg-transparent transition-colors duration-300" />
       </div>

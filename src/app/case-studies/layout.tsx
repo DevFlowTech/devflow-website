@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "tech blueprints",
     "client success stories"
   ],
-  alternates: { canonical: "https://devflow.co.in/case-studies" },
+  alternates: { canonical: "https://www.devflow.co.in/case-studies" },
 };
 
 export default function CaseStudiesLayout({

@@ -31,12 +31,12 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
     description: location.metaDescription,
     keywords: location.keywords,
     alternates: {
-      canonical: `https://devflow.co.in/locations/${location.slug}`,
+      canonical: `https://www.devflow.co.in/locations/${location.slug}`,
     },
     openGraph: {
       title: location.title,
       description: location.metaDescription,
-      url: `https://devflow.co.in/locations/${location.slug}`,
+      url: `https://www.devflow.co.in/locations/${location.slug}`,
       type: "website",
     },
   };
@@ -59,9 +59,9 @@ export default async function LocationPage({ params }: LocationPageProps) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": ["LocalBusiness", "ProfessionalService"],
-            "@id": `https://devflow.co.in/locations/${location.slug}#localbusiness`,
+            "@id": `https://www.devflow.co.in/locations/${location.slug}#localbusiness`,
             "name": location.napAddress.name,
-            "url": `https://devflow.co.in/locations/${location.slug}`,
+            "url": `https://www.devflow.co.in/locations/${location.slug}`,
             "telephone": location.napAddress.phone,
             "email": location.napAddress.email,
             "address": {

@@ -70,6 +70,7 @@ export default function SEOAuditPage() {
         </div>
 
         {/* Input Form */}
+        <h2 className="sr-only">Run Your Free SEO Audit</h2>
         <div className="glass-panel p-8 rounded-2xl max-w-xl mx-auto mb-12">
           <form onSubmit={handleStartAudit} className="space-y-4">
             <label className="block text-xs font-mono text-devflow-gray-400 uppercase tracking-widest">

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   },
   description:
     "Accelerate development with white-label engineering and strategic partnerships. Scale your operations with managed dedicated developers.",
+  alternates: { canonical: "https://www.devflow.co.in/partnerships" },
 };
 
 export default function PartnershipsLayout({

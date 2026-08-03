@@ -3,10 +3,10 @@ import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Custom Software & AI Development Company Ahmedabad | DevFlow Technology",
+    absolute: "Custom Software & AI Development, Ahmedabad | DevFlow",
   },
   description:
-    "DevFlow Technology is an engineering-first custom software development company in Ahmedabad. We build custom ERP systems, AI automation pipelines, SaaS web apps, and dedicated development squads.",
+    "DevFlow Technology is an engineering-first custom software development company in Ahmedabad, building ERP systems, AI automation, and SaaS web apps.",
   keywords: [
     "custom software development company Ahmedabad",
     "AI development company Ahmedabad",
@@ -18,13 +18,7 @@ export const metadata: Metadata = {
     "AI agents development"
   ],
   alternates: {
-    canonical: "https://devflow.co.in",
-    languages: {
-      "en-IN": "https://devflow.co.in",
-      "hi-IN": "https://devflow.co.in",
-      "gu-IN": "https://devflow.co.in",
-      "en-US": "https://devflow.co.in",
-    },
+    canonical: "https://www.devflow.co.in",
   },
 };
 

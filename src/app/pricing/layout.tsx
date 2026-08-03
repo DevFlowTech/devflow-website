@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "DevFlow pricing structures",
     "outsource development budget"
   ],
-  alternates: { canonical: "https://devflow.co.in/pricing" },
+  alternates: { canonical: "https://www.devflow.co.in/pricing" },
 };
 
 export default function PricingLayout({

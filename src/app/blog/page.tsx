@@ -27,8 +27,9 @@ export const metadata: Metadata = {
     description:
       "Stay ahead with expert articles on AI, web development, and software engineering from DevFlow Technology.",
     type: "website",
-    url: "https://devflow.co.in/blog",
+    url: "https://www.devflow.co.in/blog",
   },
+  alternates: { canonical: "https://www.devflow.co.in/blog" },
 };
 
 export default function BlogPage() {
@@ -70,9 +71,10 @@ export default function BlogPage() {
                   <Image
                     src={featuredPost.image}
                     alt={featuredPost.title}
-                    fill
+                    width={1200}
+                    height={675}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                     priority
                   />
                   <div className="absolute inset-0 bg-devflow-black/20 group-hover:bg-transparent transition-colors duration-300" />

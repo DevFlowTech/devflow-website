@@ -32,12 +32,12 @@ export async function generateMetadata({ params }: KnowledgePageProps): Promise<
     description: article.metaDescription,
     keywords: article.keywords,
     alternates: {
-      canonical: `https://devflow.co.in/knowledge-base/${article.slug}`,
+      canonical: `https://www.devflow.co.in/knowledge-base/${article.slug}`,
     },
     openGraph: {
       title: article.title,
       description: article.metaDescription,
-      url: `https://devflow.co.in/knowledge-base/${article.slug}`,
+      url: `https://www.devflow.co.in/knowledge-base/${article.slug}`,
       type: "article",
     },
   };
@@ -60,22 +60,22 @@ export default async function KnowledgePage({ params }: KnowledgePageProps) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            "@id": `https://devflow.co.in/knowledge-base/${article.slug}#article`,
+            "@id": `https://www.devflow.co.in/knowledge-base/${article.slug}#article`,
             "headline": article.title,
             "description": article.metaDescription,
             "datePublished": article.date,
             "author": {
               "@type": "Organization",
               "name": "DevFlow Team",
-              "url": "https://devflow.co.in/about"
+              "url": "https://www.devflow.co.in/about"
             },
             "publisher": {
               "@type": "Organization",
-              "@id": "https://devflow.co.in/#organization"
+              "@id": "https://www.devflow.co.in/#organization"
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": `https://devflow.co.in/knowledge-base/${article.slug}`
+              "@id": `https://www.devflow.co.in/knowledge-base/${article.slug}`
             }
           })
         }}

@@ -111,9 +111,10 @@ export default function FounderSection() {
                         <Image
                           src={founder.image}
                           alt={founder.name}
-                          fill
+                          width={128}
+                          height={128}
                           sizes="(max-width: 768px) 112px, 128px"
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                       </div>

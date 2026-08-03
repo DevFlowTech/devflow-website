@@ -9,20 +9,20 @@ DevFlow Technology is an engineering-first IT agency designing custom software s
 - **CEO:** Prince Gajjar
 - **CTO:** Bhavin Rajput
 - **Base:** Ahmedabad, Gujarat, India
-- **URL:** https://devflow.co.in
+- **URL:** https://www.devflow.co.in
 - **Inquiries:** info@devflow.co.in
 
 
 ## Navigation
-- [Home](https://devflow.co.in/)
-- [About](https://devflow.co.in/about)
-- [Services](https://devflow.co.in/services)
-- [Work](https://devflow.co.in/work)
-- [Blog](https://devflow.co.in/blog)
-- [FAQ](https://devflow.co.in/faq)
-- [Contact](https://devflow.co.in/contact)
-- [Expertise](https://devflow.co.in/expertise)
-- [SEO Audit](https://devflow.co.in/seo-audit)
+- [Home](https://www.devflow.co.in/)
+- [About](https://www.devflow.co.in/about)
+- [Services](https://www.devflow.co.in/services)
+- [Work](https://www.devflow.co.in/work)
+- [Blog](https://www.devflow.co.in/blog)
+- [FAQ](https://www.devflow.co.in/faq)
+- [Contact](https://www.devflow.co.in/contact)
+- [Expertise](https://www.devflow.co.in/expertise)
+- [SEO Audit](https://www.devflow.co.in/seo-audit)
 
 ---
 
@@ -62,16 +62,16 @@ We construct digital solutions using modern, high-throughput technologies:
 4. **CI/CD Deployment:** Implementing zero-downtime automated pipelines with edge caching.
 
 ## Local Presence
-- [IT Company Ahmedabad](https://devflow.co.in/it-company-ahmedabad)
-- [IT Services Ahmedabad](https://devflow.co.in/it-services-ahmedabad)
-- [Software Development Ahmedabad](https://devflow.co.in/software-development-company-ahmedabad)
-- [Web Development Ahmedabad](https://devflow.co.in/web-development-company-ahmedabad)
-- [Mobile App Development Ahmedabad](https://devflow.co.in/mobile-app-development-company-ahmedabad)
-- [AI Development Ahmedabad](https://devflow.co.in/ai-development-company-ahmedabad)
-- [SEO Company Ahmedabad](https://devflow.co.in/seo-company-ahmedabad)
-- [AI Solutions](https://devflow.co.in/ai-solutions)
-- [Dedicated Development Teams](https://devflow.co.in/dedicated-development-teams)
-- [Offshore Development](https://devflow.co.in/offshore-development)
-- [White Label Development](https://devflow.co.in/white-label-development)
-- [Pricing](https://devflow.co.in/pricing)
-- [Case Studies](https://devflow.co.in/case-studies)
+- [IT Company Ahmedabad](https://www.devflow.co.in/it-company-ahmedabad)
+- [IT Services Ahmedabad](https://www.devflow.co.in/it-services-ahmedabad)
+- [Software Development Ahmedabad](https://www.devflow.co.in/software-development-company-ahmedabad)
+- [Web Development Ahmedabad](https://www.devflow.co.in/web-development-company-ahmedabad)
+- [Mobile App Development Ahmedabad](https://www.devflow.co.in/mobile-app-development-company-ahmedabad)
+- [AI Development Ahmedabad](https://www.devflow.co.in/ai-development-company-ahmedabad)
+- [SEO Company Ahmedabad](https://www.devflow.co.in/seo-company-ahmedabad)
+- [AI Solutions](https://www.devflow.co.in/ai-solutions)
+- [Dedicated Development Teams](https://www.devflow.co.in/dedicated-development-teams)
+- [Offshore Development](https://www.devflow.co.in/offshore-development)
+- [White Label Development](https://www.devflow.co.in/white-label-development)
+- [Pricing](https://www.devflow.co.in/pricing)
+- [Case Studies](https://www.devflow.co.in/case-studies)

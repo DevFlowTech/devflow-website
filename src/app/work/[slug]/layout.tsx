@@ -41,12 +41,12 @@ export async function generateMetadata({
       "custom software",
     ],
     alternates: {
-      canonical: `https://devflow.co.in/work/${project.slug}`,
+      canonical: `https://www.devflow.co.in/work/${project.slug}`,
     },
     openGraph: {
       title: `${project.title} - Case Study & Results | DevFlow Technology`,
       description: project.description,
-      url: `https://devflow.co.in/work/${project.slug}`,
+      url: `https://www.devflow.co.in/work/${project.slug}`,
       type: "article",
     },
     twitter: {

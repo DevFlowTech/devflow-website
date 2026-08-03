@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   },
   description:
     "Ensure high availability and continuous operational support with our service level agreement policies and system maintenance.",
+  alternates: { canonical: "https://www.devflow.co.in/sla" },
 };
 
 export default function SlaLayout({
