@@ -1,6 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "vercel-build": "echo 'No build required for static branch'"
+    "vercel-build": "node build.js"
   }
 }
