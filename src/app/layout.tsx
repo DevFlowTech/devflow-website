@@ -643,6 +643,20 @@ export default function RootLayout({
         />
       </head>
       <body className={`${plusJakartaSans.className} antialiased`}>
+        {/* Google Analytics (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1893RGH1FW"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1893RGH1FW');
+          `}
+        </Script>
+
         {/* Google Tag Manager */}
         <Script
           id="google-tag-manager"
