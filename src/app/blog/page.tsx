@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { blogPosts } from "@/data/blogData";
+import { blogCategories, categorySlugByName } from "@/data/blogCategories";
 import BlogCard from "@/components/blog/BlogCard";
 
 export const metadata: Metadata = {
@@ -62,12 +63,13 @@ export default function BlogPage() {
               <span className="w-2 h-2 rounded-full bg-devflow-green animate-pulse" />
               Featured Article
             </h2>
-            <Link
-              href={`/blog/${featuredPost.slug}`}
-              className="group block bg-devflow-charcoal border border-white/[0.06] rounded-2xl overflow-hidden hover:border-devflow-green/30 transition-all duration-300"
-            >
+            <div className="group block bg-devflow-charcoal border border-white/[0.06] rounded-2xl overflow-hidden hover:border-devflow-green/30 transition-all duration-300">
               <div className="grid md:grid-cols-2 gap-8 p-8">
-                <div className="relative aspect-video md:aspect-square rounded-xl overflow-hidden bg-devflow-dark">
+                <Link
+                  href={`/blog/${featuredPost.slug}`}
+                  className="relative aspect-video md:aspect-square rounded-xl overflow-hidden bg-devflow-dark block"
+                  aria-label={featuredPost.title}
+                >
                   <Image
                     src={featuredPost.image}
                     alt={featuredPost.title}
@@ -78,19 +80,24 @@ export default function BlogPage() {
                     priority
                   />
                   <div className="absolute inset-0 bg-devflow-black/20 group-hover:bg-transparent transition-colors duration-300" />
-                </div>
+                </Link>
                 <div className="flex flex-col justify-center">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="px-3 py-1 bg-devflow-green/10 text-devflow-green text-xs font-medium rounded-full border border-devflow-green/20">
+                    <Link
+                      href={`/blog/category/${categorySlugByName(featuredPost.category)}`}
+                      className="px-3 py-1 bg-devflow-green/10 text-devflow-green text-xs font-medium rounded-full border border-devflow-green/20 hover:border-devflow-green/50 hover:bg-devflow-green/20 transition-colors"
+                    >
                       {featuredPost.category}
-                    </span>
+                    </Link>
                     <span className="text-sm text-devflow-gray-500">
                       {featuredPost.readTime}
                     </span>
                   </div>
-                  <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-devflow-green transition-colors">
-                    {featuredPost.title}
-                  </h3>
+                  <Link href={`/blog/${featuredPost.slug}`} className="mb-4 block">
+                    <h3 className="text-3xl font-bold text-white group-hover:text-devflow-green transition-colors">
+                      {featuredPost.title}
+                    </h3>
+                  </Link>
                   <p className="text-devflow-gray-300 mb-6 leading-relaxed">
                     {featuredPost.excerpt}
                   </p>
@@ -109,7 +116,7 @@ export default function BlogPage() {
                   </div>
                 </div>
               </div>
-            </Link>
+            </div>
           </div>
         </section>
       )}
@@ -120,6 +127,25 @@ export default function BlogPage() {
           <h2 className="text-2xl font-semibold text-white mb-8">
             Latest Articles
           </h2>
+
+          {/* Topic Cluster Navigation */}
+          <div className="flex flex-wrap gap-3 mb-10">
+            <Link
+              href="/blog"
+              className="px-4 py-2 text-xs font-medium rounded-full border border-devflow-green/40 bg-devflow-green/10 text-devflow-green transition-colors"
+            >
+              All Topics
+            </Link>
+            {blogCategories.map((cat) => (
+              <Link
+                key={cat.slug}
+                href={`/blog/category/${cat.slug}`}
+                className="px-4 py-2 text-xs font-medium rounded-full border border-white/[0.08] bg-white/[0.02] text-devflow-gray-300 hover:border-devflow-green/40 hover:text-devflow-green transition-colors"
+              >
+                {cat.name}
+              </Link>
+            ))}
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {recentPosts.map((post) => (
               <BlogCard key={post.slug} post={post} />

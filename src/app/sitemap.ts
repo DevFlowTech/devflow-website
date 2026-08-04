@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { blogPosts } from "@/data/blogData";
+import { blogCategories } from "@/data/blogCategories";
 import { projects } from "@/data/projectData";
 import { servicesData } from "@/data/servicesData";
 import { industriesData } from "@/data/industriesData";
@@ -202,6 +203,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // Blog topic-cluster hub pages
+  const blogCategoryEntries = blogCategories.map((category) => ({
+    url: `${baseUrl}/blog/category/${category.slug}`,
+    lastModified: currentDate,
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
   // Work/case study pages
   const workEntries = projects.map((project) => ({
     url: `${baseUrl}/work/${project.slug}`,
@@ -245,6 +254,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages,
     ...blogEntries,
+    ...blogCategoryEntries,
     ...workEntries,
     ...serviceEntries,
     ...industryEntries,

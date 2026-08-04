@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "@/data/blogData";
+import { categorySlugByName } from "@/data/blogCategories";
 import ReactMarkdown from "react-markdown";
 import { buildSeoTitle } from "@/lib/utils";
 
@@ -135,7 +136,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               Blog
             </Link>
             <span>/</span>
-            <span className="text-devflow-gray-500">{post.category}</span>
+            <Link
+              href={`/blog/category/${categorySlugByName(post.category)}`}
+              className="hover:text-devflow-green transition-colors"
+            >
+              {post.category}
+            </Link>
           </nav>
         </div>
       </div>
@@ -143,11 +149,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       {/* Article Header */}
       <article className="section-container mb-16">
         <div className="max-w-4xl mx-auto">
-          {/* Category Badge */}
+          {/* Category Badge - links to the topic cluster hub */}
           <div className="flex items-center gap-3 mb-6">
-            <span className="px-3 py-1.5 bg-devflow-green/10 text-devflow-green text-sm font-medium rounded-full border border-devflow-green/20">
+            <Link
+              href={`/blog/category/${categorySlugByName(post.category)}`}
+              className="px-3 py-1.5 bg-devflow-green/10 text-devflow-green text-sm font-medium rounded-full border border-devflow-green/20 hover:border-devflow-green/50 hover:bg-devflow-green/20 transition-colors"
+            >
               {post.category}
-            </span>
+            </Link>
             <span className="text-devflow-gray-500">{post.readTime}</span>
           </div>
 
