@@ -29,6 +29,26 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ["react-icons", "framer-motion"],
   },
 
+  // Canonicalize the bare (non-www) domain to www.devflow.co.in with path
+  // preservation. This is a defensive, version-controlled replacement for the
+  // dashboard-level redirect rule that was emitting a literal `${1}` destination
+  // (https://www.devflow.co.in/$%7B1%7D), which caused 404s and scanner errors.
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "devflow.co.in",
+          },
+        ],
+        destination: "https://www.devflow.co.in/:path*",
+        permanent: true,
+      },
+    ];
+  },
+
   // Security & performance headers
   async headers() {
     return [
