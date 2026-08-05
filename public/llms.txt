@@ -24,6 +24,7 @@ DevFlow Technology specializes in delivering high-performance AI solutions, Gene
 
 ## Services & Solutions
 - [AI Solutions](https://www.devflow.co.in/ai-solutions): Custom LLM integration, agentic workflows, and generative AI development.
+- [Node JS Development](https://www.devflow.co.in/services/node-js-development): Custom Node.js app development, scalable backend APIs, real-time engines, and expert developer hiring.
 - [Dedicated Development Teams](https://www.devflow.co.in/dedicated-development-teams): Scalable, dedicated software engineering teams for hire.
 - [Offshore Development](https://www.devflow.co.in/offshore-development): High-quality, cost-effective offshore custom software development.
 - [White Label Development](https://www.devflow.co.in/white-label-development): Partner agency services for re-selling design and development solutions.

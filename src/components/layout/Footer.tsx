@@ -12,6 +12,7 @@ const footerLinks = {
     { label: "Dedicated Teams", href: "/dedicated-development-teams" },
     { label: "Custom Software & ERP", href: "/services/custom-software-erp" },
     { label: "SaaS Development", href: "/services/saas-development" },
+    { label: "Node.js Development", href: "/services/node-js-development" },
     { label: "Enterprise SEO & AEO", href: "/services/enterprise-seo" },
     { label: "White Label Development", href: "/white-label-development" },
     { label: "Offshore Development", href: "/offshore-development" },
