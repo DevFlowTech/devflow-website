@@ -323,6 +323,26 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </div>
         </div>
 
+        {/* Other Services Navigation Widget */}
+        <div className="space-y-4 pt-8 border-t border-white/[0.04] mt-8">
+          <h3 className="text-xs font-mono text-devflow-gray-400 uppercase tracking-wider">Other Capabilities</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+            {Object.values(servicesData)
+              .filter((item) => item.slug !== service.slug)
+              .map((otherService) => (
+                <Link
+                  key={otherService.slug}
+                  href={`/services/${otherService.slug}`}
+                  className="p-3 rounded-lg bg-white/[0.01] border border-white/[0.04] hover:border-devflow-green/20 hover:bg-white/[0.02] transition-all text-center block group"
+                >
+                  <span className="text-[10px] font-mono text-devflow-gray-300 group-hover:text-devflow-green transition-colors">
+                    {otherService.title.split(" Company")[0].split(" in USA")[0]}
+                  </span>
+                </Link>
+              ))}
+          </div>
+        </div>
+
         {/* Bottom Call To Action Block */}
         <div className="pt-12 text-center">
           <div className="p-8 rounded-2xl bg-gradient-to-br from-devflow-green/10 to-transparent border border-devflow-green/20 max-w-2xl mx-auto space-y-6">
