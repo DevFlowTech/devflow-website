@@ -8,13 +8,17 @@ import { staggerContainer, staggerItem, viewportOnce } from "@/lib/motion";
 
 const footerLinks = {
   services: [
-    { label: "AI Solutions", href: "/ai-solutions" },
+    { label: "AI Solutions Hub", href: "/ai-solutions" },
     { label: "Dedicated Teams", href: "/dedicated-development-teams" },
     { label: "Custom Software & ERP", href: "/services/custom-software-erp" },
+    { label: "Custom Software (USA)", href: "/services/software-development" },
+    { label: "ERP Systems Development", href: "/services/erp-development" },
+    { label: "CRM Portal Development", href: "/services/crm-development" },
     { label: "SaaS Development", href: "/services/saas-development" },
     { label: "Node.js Development", href: "/services/node-js-development" },
     { label: "Enterprise SEO & AEO", href: "/services/enterprise-seo" },
-    { label: "White Label Development", href: "/white-label-development" },
+    { label: "White Label Hub", href: "/white-label-development" },
+    { label: "White-Label Partnering", href: "/services/white-label-development" },
     { label: "Offshore Development", href: "/offshore-development" },
   ],
   company: [
@@ -25,6 +29,7 @@ const footerLinks = {
     { label: "Security & Compliance", href: "/security" },
     { label: "SLA Details", href: "/sla" },
     { label: "Pricing Models", href: "/pricing" },
+    { label: "Frequently Asked FAQs", href: "/faq" },
   ],
   trust: [
     { label: "NDA Protected", href: "/security" },
@@ -32,6 +37,7 @@ const footerLinks = {
     { label: "Weekly Agile Sprints", href: "/engineering-process" },
     { label: "Ahmedabad Branch", href: "/software-development-company-ahmedabad" },
     { label: "Technology Stack", href: "/technology-stack" },
+    { label: "Technical Expertise", href: "/expertise" },
     { label: "Maintenance & SLA", href: "/maintenance" },
   ],
   legal: [
@@ -56,6 +62,10 @@ const footerLinks = {
     { label: "Knowledge Hub", href: "/knowledge-base" },
     { label: "Guide: What is ERP", href: "/knowledge-base/what-is-erp" },
     { label: "Guide: ERP vs CRM", href: "/knowledge-base/erp-vs-crm" },
+    { label: "Tools & Resources Hub", href: "/resources" },
+    { label: "Calculators Hub", href: "/resources/calculators" },
+    { label: "SEO Checker Tool", href: "/resources/tools/seo-audit" },
+    { label: "Quick SEO Audit Link", href: "/seo-audit" },
   ],
 };
 
