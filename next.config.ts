@@ -46,6 +46,26 @@ const nextConfig: NextConfig = {
         destination: "https://www.devflow.co.in/:path*",
         permanent: true,
       },
+      {
+        source: "/software-development",
+        destination: "/services/software-development",
+        permanent: true,
+      },
+      {
+        source: "/erp-development",
+        destination: "/services/erp-development",
+        permanent: true,
+      },
+      {
+        source: "/crm-development",
+        destination: "/services/crm-development",
+        permanent: true,
+      },
+      {
+        source: "/node-js-development",
+        destination: "/services/node-js-development",
+        permanent: true,
+      },
     ];
   },
 
