@@ -25,6 +25,7 @@ const servicesDetails = [
       "Full API Documentation (Swagger/OpenAPI)",
       "Automated PDF & Email Invoice Generation Engine",
     ],
+    href: "/services/custom-software-erp",
   },
   {
     id: "ai-automation",
@@ -44,6 +45,7 @@ const servicesDetails = [
       "Automated Support-Ticket Categorization Script",
       "LLM Guardrails & Hallucination Prevention Policies",
     ],
+    href: "/services/ai-automation",
   },
   {
     id: "saas-development",
@@ -63,6 +65,27 @@ const servicesDetails = [
       "Conversion-Optimized Landing Page System",
       "Google Search Console & Meta Tag Optimization",
     ],
+    href: "/services/saas-development",
+  },
+  {
+    id: "node-js-development",
+    icon: FiCpu,
+    title: "Node JS Backend & Custom Development",
+    description: "Build ultra-fast, high-concurrency event-driven backends, microservices architectures, and real-time app engines engineered with TypeScript and Node.js.",
+    problem: "Blocking I/O operations and slow page load speeds causing database lag and memory bottlenecks during concurrent user traffic spikes.",
+    impact: "Ensure non-blocking operations, lower infrastructure costs, handle millions of concurrent connections, and achieve 99.99% system availability.",
+    solution: "We orchestrate asynchronous V8 runtimes, scalable database schemas, high-throughput REST/GraphQL APIs, and WebSocket hubs.",
+    architecture: "Node.js dynamic event loop, NestJS/Express microservices, PostgreSQL/MongoDB database replication, Redis caching pools.",
+    stack: "Node.js, Express.js, TypeScript, PostgreSQL, MongoDB, Redis, Docker",
+    timeline: "4 to 8 Weeks",
+    deliverables: [
+      "Asynchronous REST & GraphQL API Endpoints",
+      "High-Frequency WebSocket Real-Time Engines",
+      "Replicated Database & Redis Cache Layouts",
+      "Comprehensive Load & Security Scans (Playwright)",
+      "Zero-Overhead Node.js Migration Blueprints",
+    ],
+    href: "/services/node-js-development",
   },
   {
     id: "dedicated-engineering",
@@ -82,6 +105,7 @@ const servicesDetails = [
       "Weekly Technical Reporting & Direct Architect Consulting",
       "Zero-overhead onboarding and resource management",
     ],
+    href: "/dedicated-development-teams",
   },
 ];
 
@@ -153,6 +177,15 @@ export default function ServicesPage() {
                         {t}
                       </span>
                     ))}
+                  </div>
+                  <div className="pt-6">
+                    <Link
+                      href={service.href}
+                      className="inline-flex items-center gap-2 text-xs font-mono text-devflow-green hover:text-white transition-colors group"
+                    >
+                      EXPLORE SERVICE DETAILS
+                      <FiArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    </Link>
                   </div>
                 </div>
 
