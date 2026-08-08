@@ -14,6 +14,7 @@ const ProcessTimelineSection = dynamic(() => import("@/components/sections/Proce
 const TestimonialsSection = dynamic(() => import("@/components/sections/TestimonialsSection"));
 const FounderSection = dynamic(() => import("@/components/sections/FounderSection"));
 const FeaturedProjectsSection = dynamic(() => import("@/components/sections/FeaturedProjectsSection"));
+const FAQSection = dynamic(() => import("@/components/sections/FAQSection"));
 
 export default function HomeClient() {
   return (
@@ -25,6 +26,26 @@ export default function HomeClient() {
 
       {/* Hero Section */}
       <HeroSection />
+
+      {/* Trust Strip - Moved up for immediate trust signal */}
+      <section className="py-12 bg-devflow-black relative z-10 text-center">
+        <motion.div 
+          className="section-container max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: [0.2, 0, 0, 1] }}
+        >
+          <p className="text-xs font-mono text-devflow-gray-400 uppercase tracking-widest mb-6">
+            [ TRUSTED BY TECHNOLOGY TEAMS ]
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-12 opacity-40">
+            <span className="text-xl font-bold font-display tracking-widest text-white">VASSU INFOTECH</span>
+            <span className="text-xl font-mono tracking-widest text-white">AUREON GROUP</span>
+            <span className="text-xl font-bold tracking-widest text-white font-serif italic">TECH LABS</span>
+          </div>
+        </motion.div>
+      </section>
 
       {/* Main Bento Grid Layout Section */}
       <section className="py-20 relative z-10 section-container max-w-7xl mx-auto">
@@ -234,28 +255,13 @@ export default function HomeClient() {
       {/* Client Testimonials Section */}
       <TestimonialsSection />
 
+      {/* Frequently Asked Questions */}
+      <FAQSection />
+
       {/* Team Founders Section */}
       <FounderSection />
 
-      {/* Trust Strip */}
-      <section className="py-16 border-t border-white/[0.04] bg-devflow-black relative z-10 text-center">
-        <motion.div 
-          className="section-container max-w-4xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: [0.2, 0, 0, 1] }}
-        >
-          <p className="text-xs font-mono text-devflow-gray-400 uppercase tracking-widest mb-6">
-            [ TRUSTED BY TECHNOLOGY TEAMS ]
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-12 opacity-40">
-            <span className="text-xl font-bold font-display tracking-widest text-white">VASSU INFOTECH</span>
-            <span className="text-xl font-mono tracking-widest text-white">AUREON GROUP</span>
-            <span className="text-xl font-bold tracking-widest text-white font-serif italic">TECH LABS</span>
-          </div>
-        </motion.div>
-      </section>
+
     </div>
   );
 }
