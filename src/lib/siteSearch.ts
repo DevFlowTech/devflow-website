@@ -15,11 +15,7 @@ import {
   ContentEntry,
 } from "@/data/contentIndex";
 
-export interface SearchResult {
-  entry: ContentEntry;
-  matchType: "exact" | "keyword" | "fuzzy";
-  relevance: number;
-}
+
 
 export interface AgentResponse {
   /** The main text response */

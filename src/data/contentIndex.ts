@@ -1223,12 +1223,7 @@ export function searchContentIndex(
     .map((s) => s.entry);
 }
 
-/**
- * Get a single content entry by its ID.
- */
-export function getContentById(id: string): ContentEntry | undefined {
-  return siteContent.find((entry) => entry.id === id);
-}
+
 
 /**
  * Get content entries by type.
@@ -1239,15 +1234,4 @@ export function getContentByType(
   return siteContent.filter((entry) => entry.type === type);
 }
 
-/**
- * Get all unique keywords from the content index.
- */
-export function getAllKeywords(): string[] {
-  const keywordSet = new Set<string>();
-  for (const entry of siteContent) {
-    for (const keyword of entry.keywords) {
-      keywordSet.add(keyword.toLowerCase());
-    }
-  }
-  return Array.from(keywordSet).sort();
-}
+
