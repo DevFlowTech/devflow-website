@@ -54,7 +54,8 @@ export default function HeroSection() {
       if (!containerRef.current) return;
       const rect = containerRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-      const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / windowHeight));
+      // For a hero section at the top, we track how far it has scrolled up out of view
+      const progress = Math.max(0, Math.min(1, -rect.top / windowHeight));
       setScrollProgress(progress);
     });
   }, [prefersReduced]);
