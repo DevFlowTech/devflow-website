@@ -652,6 +652,9 @@ export default function RootLayout({
       className={`scroll-smooth ${outfit.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}
     >
       <head>
+        {/* Ahrefs Analytics */}
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="owsL0mOYqqNQ4Dc5F3yHRg" async></script>
+
         {/* DNS prefetch for external resources */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
