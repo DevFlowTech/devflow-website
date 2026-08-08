@@ -177,7 +177,7 @@ export default function HeroSection() {
               transform: `translateY(${mockupOffset}px) scale(${mockupScale})`,
             }}
           >
-            <div className="w-full">
+            <div className="w-full min-h-[340px] md:min-h-[400px] flex items-center justify-center">
               <HeroMockup />
             </div>
           </div>
