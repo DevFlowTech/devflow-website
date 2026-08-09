@@ -20,11 +20,11 @@ export default function SaaSDevelopmentPage() {
             [ SERVICE CORE // SAAS ]
           </span>
           <h1 className="font-display text-4xl md:text-7xl font-medium leading-tight">
-            SaaS Product <br />
-            <span className="italic font-normal text-devflow-green font-display">Development</span>
+            SaaS Product Development <br />
+            <span className="italic font-normal text-devflow-green font-display">&amp; Scalable Web Apps</span>
           </h1>
           <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light speakable-content">
-            We engineer high-performance multi-tenant SaaS platforms with secure Stripe subscription systems, elastic database clustering, and sub-second page loads.
+            We engineer secure, multi-tenant SaaS platforms featuring recurring Stripe billing integration, elastic database clusters, and rapid Next.js edge performance optimized for enterprise scale.
           </p>
         </div>
 

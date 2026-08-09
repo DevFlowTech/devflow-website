@@ -1,6 +1,27 @@
 import type { NextConfig } from "next";
 
+// script-src allowlist. Production drops 'unsafe-eval' (defense-in-depth; Next
+// and React do not use eval in production builds). Development keeps it because
+// React fast refresh requires eval. 'unsafe-inline' is retained in both modes:
+// the Next.js App Router hydration bootstrap and the inline JSON-LD SEO schema
+// are inline by design, and removing it would require a nonce-based CSP that
+// forces every route to dynamic rendering.
+const scriptSrc = [
+  "'self'",
+  ...(process.env.NODE_ENV === "production" ? [] : ["'unsafe-eval'"]),
+  "'unsafe-inline'",
+  // Ahrefs Analytics loads only after explicit cookie consent (AnalyticsProvider).
+  "https://analytics.ahrefs.com",
+  "https://www.googletagmanager.com",
+  "https://va.vercel-scripts.com",
+  "https://static.cloudflareinsights.com",
+  "https://www.clarity.ms",
+].join(" ");
+
 const nextConfig: NextConfig = {
+  // SEO: Enforce no trailing slashes for canonical/redirect consistency
+  trailingSlash: false,
+
   // Enable React strict mode for development
   reactStrictMode: true,
 
@@ -95,7 +116,7 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://va.vercel-scripts.com https://static.cloudflareinsights.com https://www.clarity.ms",
+              `script-src ${scriptSrc}`,
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: blob: https://images.unsplash.com https://*.vercel-storage.com https://www.googletagmanager.com https://www.google-analytics.com",
               "font-src 'self' data:",

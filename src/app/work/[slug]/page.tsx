@@ -93,14 +93,21 @@ export default function CaseStudyPage({ params }: PageProps) {
             </p>
 
             <div className="flex flex-wrap items-center gap-6 pt-4">
-              <a 
-                href={project.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="btn-primary"
-              >
-                Visit Live Site ↗
-              </a>
+              {/* Only show the live link when a real client URL is on record;
+                  placeholder URLs are "#", so the NDA badge carries the CTA */}
+              {project.url.startsWith("http") && (
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  Visit Live Site ↗
+                </a>
+              )}
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/[0.08] bg-white/[0.03] text-[10px] font-mono text-devflow-gray-400">
+                ⚠ Case study shown as a sanitized internal prototype — client URLs withheld under NDA
+              </span>
             </div>
           </motion.div>
         </div>

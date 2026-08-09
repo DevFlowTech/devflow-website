@@ -42,11 +42,11 @@ export default function DedicatedTeamsPage() {
               [ STAFF AUGMENTATION & SQUAD SETUP ]
             </span>
             <h1 className="font-display text-4xl md:text-7xl font-medium text-white leading-tight">
-              Dedicated Squads. <br />
-              <span className="italic font-normal text-devflow-green font-display">Roadmap Velocity.</span>
+              Dedicated Software Development Teams <br />
+              <span className="italic font-normal text-devflow-green font-display">in Ahmedabad, India</span>
             </h1>
             <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
-              You accelerate engineering output. Hire dedicated squads of staff-level software developers, UI designers, and DevOps specialists working directly within your workflows.
+              Accelerate your engineering roadmap by hiring dedicated offshore development teams. Deploy staff-level software developers, systems architects, and DevOps specialists integrated directly into your workflows.
             </p>
           </motion.div>
         </div>

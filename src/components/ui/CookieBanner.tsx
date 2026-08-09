@@ -19,15 +19,19 @@ export default function CookieBanner() {
         }
     }, []);
 
-    const handleAccept = () => {
-        localStorage.setItem("cookie-consent", "accepted");
+    const setConsent = (consent: "accepted" | "declined") => {
+        localStorage.setItem("cookie-consent", consent);
+        // Notify AnalyticsProvider immediately so trackers mount/drop on this
+        // visit without waiting for a page reload.
+        window.dispatchEvent(
+            new CustomEvent("cookie-consent", { detail: { consent } }),
+        );
         setIsVisible(false);
     };
 
-    const handleDecline = () => {
-        localStorage.setItem("cookie-consent", "declined");
-        setIsVisible(false);
-    };
+    const handleAccept = () => setConsent("accepted");
+
+    const handleDecline = () => setConsent("declined");
 
     return (
         <AnimatePresence>

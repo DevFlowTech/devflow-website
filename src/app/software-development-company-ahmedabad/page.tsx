@@ -47,14 +47,14 @@ export default function LocalSEOHubPage() {
               variants={staggerItem}
               className="font-display text-4xl md:text-7xl font-medium text-white leading-tight tracking-tight max-w-4xl"
             >
-              Top-Tier <span className="italic font-normal font-display text-devflow-green">Software Development Company</span> in Ahmedabad.
+              Top <span className="italic font-normal font-display text-devflow-green">Custom Software Development Company</span> in Ahmedabad, Gujarat.
             </motion.h1>
 
             <motion.p
               variants={staggerItem}
               className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light"
             >
-              DevFlow Technology is Ahmedabad’s premier technology partner, engineering high-performance SaaS products, bespoke ERP systems, custom mobile apps, AI automation, and advanced AEO/GEO solutions.
+              DevFlow Technology is a premier IT consulting and software engineering firm in Ahmedabad. We specialize in building bespoke ERP systems, scalable SaaS platforms, intelligent AI automation, and enterprise web solutions engineered for business growth.
             </motion.p>
           </motion.div>
         </div>

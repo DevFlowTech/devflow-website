@@ -35,11 +35,11 @@ export default function WhiteLabelPage() {
               [ SILENT PARTNERSHIP // WHITE LABEL ]
             </span>
             <h1 className="font-display text-4xl md:text-7xl font-medium text-white leading-tight">
-              White Label Dev. <br />
-              <span className="italic font-normal text-devflow-green font-display">Your Brand, Our Code.</span>
+              White Label Software Development <br />
+              <span className="italic font-normal text-devflow-green font-display">For IT & Marketing Agencies</span>
             </h1>
             <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
-              You scale client acquisition and relationship management. We manage backend, database, frontend, and API integrations silently under complete NDA.
+              Scale your client acquisition while we serve as your silent engineering backend. Our white-label development services handle complex ERP, SaaS, and API integrations seamlessly under strict NDA.
             </p>
           </motion.div>
         </div>

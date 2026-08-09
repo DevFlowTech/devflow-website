@@ -1,7 +1,6 @@
 import { JetBrains_Mono, Plus_Jakarta_Sans, Outfit } from "next/font/google";
 import type { Metadata, Viewport } from "next";
 import dynamic from "next/dynamic";
-import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -12,6 +11,11 @@ import ScrollProgress from "@/components/ui/ScrollProgress";
 // Dynamically import heavy components that are not in the initial viewport
 // These are code-split into separate chunks to optimize the critical rendering path
 const CookieBanner = dynamic(() => import("@/components/ui/CookieBanner"));
+// Third-party trackers only mount after the visitor accepts cookies; kept out
+// of the initial bundle since it renders nothing pre-consent.
+const AnalyticsProvider = dynamic(
+  () => import("@/components/analytics/AnalyticsProvider"),
+);
 const AIChatbot = dynamic(() => import("@/components/ui/AIChatbot"));
 const BackToTop = dynamic(() => import("@/components/ui/BackToTop"));
 const FloatingContact = dynamic(
@@ -655,9 +659,6 @@ export default function RootLayout({
         {/* Ahrefs Site Verification */}
         <meta name="ahrefs-site-verification" content="d6c511f2a7c1ba94494fe6db3616dbd8fe4fae349b1ca7a505ce5496e24e7a28" />
 
-        {/* Ahrefs Analytics */}
-        <script src="https://analytics.ahrefs.com/analytics.js" data-key="owsL0mOYqqNQ4Dc5F3yHRg" async></script>
-
         {/* DNS prefetch for external resources */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
@@ -671,55 +672,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${plusJakartaSans.className} antialiased`}>
-        {/* Google Analytics (gtag.js) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-1893RGH1FW"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-1893RGH1FW');
-          `}
-        </Script>
-
-        {/* Microsoft Clarity */}
-        <Script id="microsoft-clarity" strategy="lazyOnload">
-          {`
-            (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "xwyxun7vj0");
-          `}
-        </Script>
-
-        {/* Google Tag Manager */}
-        <Script
-          id="google-tag-manager"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PKQSRRN2');`,
-          }}
-        />
-        {/* End Google Tag Manager */}
-
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PKQSRRN2"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
+        {/* Consent-gated analytics (GA, Clarity, GTM, Ahrefs) — only mount
+            after the visitor accepts cookies, see AnalyticsProvider */}
+        <AnalyticsProvider />
 
         {/* Scroll Progress Bar */}
         <ScrollProgress />

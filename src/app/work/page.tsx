@@ -6,7 +6,10 @@ import Link from "next/link";
 import { staggerContainer, staggerItem, viewportOnce } from "@/lib/motion";
 import { projects } from "@/data/projectData";
 
-const categories = ["All", ...Array.from(new Set(projects.map((p) => p.category)))];
+const categories = [
+  "All",
+  ...Array.from(new Set(projects.map((p) => p.category))),
+];
 
 export default function WorkPage() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -25,20 +28,21 @@ export default function WorkPage() {
       {/* Header */}
       <section className="py-16 border-b border-white/[0.04] relative z-10">
         <div className="section-container max-w-5xl">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            className="space-y-6"
-          >
+          <motion.div initial="hidden" animate="visible" className="space-y-6">
             <span className="text-xs font-mono text-devflow-gold uppercase tracking-widest block">
               [ PORTFOLIO / CASE STUDIES ]
             </span>
             <h1 className="font-display text-4xl md:text-7xl font-medium text-white leading-tight">
-              Crafted Products. <br />
-              <span className="italic font-normal text-devflow-blue font-display">Proven Results.</span>
+              Custom Software & AI <br />
+              <span className="italic font-normal text-devflow-blue font-display">
+                Engineering Case Studies
+              </span>
             </h1>
             <h2 className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
-              Explore our gallery of custom-built web systems, database orchestrations, and enterprise portals. Click any card to read the case study.
+              Explore our gallery of custom-built software, AI-driven automation
+              systems, and enterprise portals. Review these case studies to see
+              how we accelerate ROI through bespoke IT solutions and rigorous
+              software engineering.
             </h2>
           </motion.div>
         </div>
@@ -86,16 +90,20 @@ export default function WorkPage() {
                     layout
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.03, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{
+                      duration: 0.4,
+                      delay: index * 0.03,
+                      ease: [0.16, 1, 0.3, 1],
+                    }}
                     className={`group relative flex flex-col justify-between p-8 rounded-2xl glass-panel cursor-pointer ${
                       isLarge ? "md:col-span-2 h-[380px]" : "h-[380px]"
                     }`}
                   >
                     {/* Subtle color highlight in background */}
-                    <div 
+                    <div
                       className="absolute inset-0 opacity-[0.02] group-hover:opacity-[0.05] pointer-events-none transition-opacity duration-500"
                       style={{
-                        background: `radial-gradient(circle at 50% 50%, ${project.accent || '#0225dc'}, transparent 65%)`
+                        background: `radial-gradient(circle at 50% 50%, ${project.accent || "#0225dc"}, transparent 65%)`,
                       }}
                     />
 
@@ -119,12 +127,15 @@ export default function WorkPage() {
                     <div className="pt-6 border-t border-white/5 flex items-center justify-between">
                       <div className="flex gap-2">
                         {project.tech.slice(0, 4).map((t, idx) => (
-                          <span key={idx} className="font-mono text-[10px] text-devflow-gray-500">
+                          <span
+                            key={idx}
+                            className="font-mono text-[10px] text-devflow-gray-500"
+                          >
                             {t}
                           </span>
                         ))}
                       </div>
-                      
+
                       <span className="flex items-center gap-1 text-xs font-mono text-devflow-green transition-colors">
                         CASE STUDY ↗
                       </span>

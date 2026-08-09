@@ -47,7 +47,7 @@ export async function generateMetadata({
       description: post.metaDescription,
       type: "article",
       publishedTime: post.date,
-      authors: ["DevFlow Team"],
+      authors: ["Prince Gajjar"],
       url: `https://www.devflow.co.in/blog/${post.slug}`,
       images: [
         {
@@ -99,28 +99,28 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "@id": `https://www.devflow.co.in/blog/${post.slug}#blogposting`,
-            "headline": post.title,
-            "description": post.metaDescription,
-            "image": post.image,
-            "datePublished": formatDate(post.date),
-            "author": {
-              "@type": "Organization",
-              "name": "DevFlow Team",
-              "url": "https://www.devflow.co.in/about"
+            headline: post.title,
+            description: post.metaDescription,
+            image: post.image,
+            datePublished: formatDate(post.date),
+            author: {
+              "@type": "Person",
+              name: "Prince Gajjar",
+              url: "https://prince.devflow.co.in",
             },
-            "publisher": {
+            publisher: {
               "@type": "Organization",
-              "name": "DevFlow Technology",
-              "logo": {
+              name: "DevFlow Technology",
+              logo: {
                 "@type": "ImageObject",
-                "url": "https://www.devflow.co.in/logo.png"
-              }
+                url: "https://www.devflow.co.in/logo.png",
+              },
             },
-            "mainEntityOfPage": {
+            mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://www.devflow.co.in/blog/${post.slug}`
-            }
-          })
+              "@id": `https://www.devflow.co.in/blog/${post.slug}`,
+            },
+          }),
         }}
       />
 

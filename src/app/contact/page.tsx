@@ -5,7 +5,14 @@ import { useState } from "react";
 import { easeOut } from "@/lib/motion";
 import ReCaptcha from "@/components/ui/ReCaptcha";
 import Link from "next/link";
-import { FiCheckCircle, FiChevronRight, FiBriefcase, FiVideo, FiMessageCircle, FiBookOpen } from "react-icons/fi";
+import {
+  FiCheckCircle,
+  FiChevronRight,
+  FiBriefcase,
+  FiVideo,
+  FiMessageCircle,
+  FiBookOpen,
+} from "react-icons/fi";
 
 const services = [
   { label: "AI Solutions", desc: "LLMs, RAG & Agents" },
@@ -103,9 +110,7 @@ function FloatingInput({
         className={`
           absolute left-4 pointer-events-none select-none
           transition-all duration-300 ease-out
-          ${
-            multiline ? "top-4" : "top-1/2 -translate-y-1/2"
-          }
+          ${multiline ? "top-4" : "top-1/2 -translate-y-1/2"}
           ${
             active
               ? "top-2.5 translate-y-0 text-[10px] font-mono uppercase tracking-wider text-devflow-green"
@@ -151,7 +156,9 @@ function SelectorGrid({
                   : "bg-devflow-gray-600 border-white/[0.08] hover:border-devflow-green/30 text-devflow-gray-200"
               }`}
             >
-              <span className={`text-sm font-semibold block leading-tight ${selected ? "text-devflow-green" : ""}`}>
+              <span
+                className={`text-sm font-semibold block leading-tight ${selected ? "text-devflow-green" : ""}`}
+              >
                 {opt.label}
               </span>
               <span className="text-[10px] text-devflow-gray-400 block mt-1 leading-snug">
@@ -166,7 +173,15 @@ function SelectorGrid({
 }
 
 // ─── Success Screen ────────────────────────────────────────────────────────
-function SuccessScreen({ name, email, preferredChannel }: { name: string; email: string; preferredChannel: string }) {
+function SuccessScreen({
+  name,
+  email,
+  preferredChannel,
+}: {
+  name: string;
+  email: string;
+  preferredChannel: string;
+}) {
   return (
     <motion.div
       key="success"
@@ -181,17 +196,23 @@ function SuccessScreen({ name, email, preferredChannel }: { name: string; email:
         Your blueprint discovery is initialized.
       </h1>
       <p className="text-devflow-gray-300 text-sm max-w-lg mx-auto leading-relaxed mb-8">
-        Thank you, <span className="text-devflow-green font-medium">{name}</span>. We&apos;ve received your requirements. 
-        A senior systems architect will review your scope parameters and reach out via <span className="text-devflow-green font-medium">{email}</span> within 24 hours to schedule your strategy session.
+        Thank you,{" "}
+        <span className="text-devflow-green font-medium">{name}</span>.
+        We&apos;ve received your requirements. A senior systems architect will
+        review your scope parameters and reach out via{" "}
+        <span className="text-devflow-green font-medium">{email}</span> within
+        24 hours to schedule your strategy session.
       </p>
-      
+
       {preferredChannel === "Calendly Link" && (
         <div className="mb-8 p-6 bg-devflow-green/5 border border-devflow-green/10 rounded-xl max-w-md mx-auto">
-          <p className="text-xs text-white mb-3">Preferred booking channel: Calendly</p>
-          <a 
-            href="https://calendly.com" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <p className="text-xs text-white mb-3">
+            Preferred booking channel: Calendly
+          </p>
+          <a
+            href="https://calendly.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-6 py-3 bg-devflow-green text-devflow-black rounded-lg text-xs font-semibold inline-flex items-center gap-2 hover:scale-105 transition-transform"
           >
             Directly Book Slots <FiChevronRight />
@@ -200,7 +221,10 @@ function SuccessScreen({ name, email, preferredChannel }: { name: string; email:
       )}
 
       <div className="flex justify-center gap-4">
-        <Link href="/" className="px-6 py-3 bg-devflow-gray-600 text-white rounded-lg text-xs font-semibold hover:bg-devflow-gray-500 transition-colors">
+        <Link
+          href="/"
+          className="px-6 py-3 bg-devflow-gray-600 text-white rounded-lg text-xs font-semibold hover:bg-devflow-gray-500 transition-colors"
+        >
           Back to Homepage
         </Link>
       </div>
@@ -218,7 +242,7 @@ export default function ContactPage() {
   const [selectedTimeline, setSelectedTimeline] = useState("");
   const [selectedChannel, setSelectedChannel] = useState("");
   const [notes, setNotes] = useState("");
-  
+
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
@@ -228,13 +252,34 @@ export default function ContactPage() {
     e.preventDefault();
     setError("");
 
-    if (!name.trim()) { setError("Name is required."); return; }
-    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setError("Valid email is required."); return; }
-    if (!selectedService) { setError("Please select a primary service."); return; }
-    if (!selectedSize) { setError("Please select your company scale."); return; }
-    if (!selectedBudget) { setError("Please select an estimated budget range."); return; }
-    if (!selectedTimeline) { setError("Please select a target timeline."); return; }
-    if (!selectedChannel) { setError("Please select your preferred communication channel."); return; }
+    if (!name.trim()) {
+      setError("Name is required.");
+      return;
+    }
+    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setError("Valid email is required.");
+      return;
+    }
+    if (!selectedService) {
+      setError("Please select a primary service.");
+      return;
+    }
+    if (!selectedSize) {
+      setError("Please select your company scale.");
+      return;
+    }
+    if (!selectedBudget) {
+      setError("Please select an estimated budget range.");
+      return;
+    }
+    if (!selectedTimeline) {
+      setError("Please select a target timeline.");
+      return;
+    }
+    if (!selectedChannel) {
+      setError("Please select your preferred communication channel.");
+      return;
+    }
 
     setIsSubmitting(true);
 
@@ -273,7 +318,7 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-devflow-black pt-32 pb-16 overflow-hidden flex items-center justify-center relative">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(186,230,84,0.03),transparent_50%)] pointer-events-none" />
-      
+
       <div className="section-container relative z-10 max-w-4xl w-full">
         {!isSubmitted ? (
           <motion.div
@@ -292,10 +337,12 @@ export default function ContactPage() {
                   </span>
                 </div>
                 <h1 className="font-display text-3xl md:text-4xl font-medium text-white leading-tight">
-                  Contact Our Engineers: Design Your Architecture
+                  Contact Our IT Consulting Firm & Software Engineers
                 </h1>
                 <h2 className="text-devflow-gray-300 text-xs mt-2 font-light">
-                  Map your requirements, budget ranges, and SLA goals. A senior systems engineer will review your specs within 24 hours.
+                  Submit your custom software development and AI engineering
+                  requirements. A senior systems architect in Ahmedabad will
+                  review your enterprise SLA goals and respond within 24 hours.
                 </h2>
               </div>
 
@@ -303,24 +350,74 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} className="space-y-8">
                 {/* Row 1: Contact Details */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                  <FloatingInput id="name" label="Full Name" value={name} onChange={setName} required />
-                  <FloatingInput id="email" label="Corporate Email" value={email} onChange={setEmail} type="email" required />
-                  <FloatingInput id="company" label="Company Name (Optional)" value={company} onChange={setCompany} />
+                  <FloatingInput
+                    id="name"
+                    label="Full Name"
+                    value={name}
+                    onChange={setName}
+                    required
+                  />
+                  <FloatingInput
+                    id="email"
+                    label="Corporate Email"
+                    value={email}
+                    onChange={setEmail}
+                    type="email"
+                    required
+                  />
+                  <FloatingInput
+                    id="company"
+                    label="Company Name (Optional)"
+                    value={company}
+                    onChange={setCompany}
+                  />
                 </div>
 
                 {/* Qualifiers selectors */}
-                <SelectorGrid label="1. Primary Project Capability Needed" options={services} value={selectedService} onChange={setSelectedService} />
-                
-                <SelectorGrid label="2. Company Scale" options={companySizes} value={selectedSize} onChange={setSelectedSize} />
-                
-                <SelectorGrid label="3. Target Budget Scope (INR)" options={budgets} value={selectedBudget} onChange={setSelectedBudget} />
-                
-                <SelectorGrid label="4. Target Launch Timeline" options={timelines} value={selectedTimeline} onChange={setSelectedTimeline} />
-                
-                <SelectorGrid label="5. Preferred Strategy Session Channel" options={channels} value={selectedChannel} onChange={setSelectedChannel} />
+                <SelectorGrid
+                  label="1. Primary Project Capability Needed"
+                  options={services}
+                  value={selectedService}
+                  onChange={setSelectedService}
+                />
+
+                <SelectorGrid
+                  label="2. Company Scale"
+                  options={companySizes}
+                  value={selectedSize}
+                  onChange={setSelectedSize}
+                />
+
+                <SelectorGrid
+                  label="3. Target Budget Scope (INR)"
+                  options={budgets}
+                  value={selectedBudget}
+                  onChange={setSelectedBudget}
+                />
+
+                <SelectorGrid
+                  label="4. Target Launch Timeline"
+                  options={timelines}
+                  value={selectedTimeline}
+                  onChange={setSelectedTimeline}
+                />
+
+                <SelectorGrid
+                  label="5. Preferred Strategy Session Channel"
+                  options={channels}
+                  value={selectedChannel}
+                  onChange={setSelectedChannel}
+                />
 
                 {/* Scope Notes */}
-                <FloatingInput id="notes" label="Technical Constraints & Project Scope Details (Optional)" value={notes} onChange={setNotes} multiline rows={4} />
+                <FloatingInput
+                  id="notes"
+                  label="Technical Constraints & Project Scope Details (Optional)"
+                  value={notes}
+                  onChange={setNotes}
+                  multiline
+                  rows={4}
+                />
 
                 {/* reCAPTCHA */}
                 <div className="pt-2 flex justify-center md:justify-start">
@@ -345,20 +442,32 @@ export default function ContactPage() {
                     disabled={isSubmitting}
                     className="px-8 py-4 bg-devflow-green text-devflow-black font-semibold text-xs rounded-xl tracking-wider uppercase hover:scale-[1.02] active:scale-[0.98] transition-transform flex items-center justify-center gap-2 flex-shrink-0"
                   >
-                    {isSubmitting ? "Generating Blueprint..." : "Get Software Blueprint"}
+                    {isSubmitting
+                      ? "Generating Blueprint..."
+                      : "Get Software Blueprint"}
                     <FiChevronRight className="w-4 h-4" />
                   </button>
-                  
+
                   <div className="flex gap-6 text-[10px] font-mono text-devflow-gray-400">
-                    <span className="flex items-center gap-1.5"><FiBriefcase className="text-devflow-green" /> NDA Protected</span>
-                    <span className="flex items-center gap-1.5"><FiVideo className="text-devflow-green" /> 1-on-1 Architect Session</span>
+                    <span className="flex items-center gap-1.5">
+                      <FiBriefcase className="text-devflow-green" /> NDA
+                      Protected
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <FiVideo className="text-devflow-green" /> 1-on-1
+                      Architect Session
+                    </span>
                   </div>
                 </div>
               </form>
             </div>
           </motion.div>
         ) : (
-          <SuccessScreen name={name} email={email} preferredChannel={selectedChannel} />
+          <SuccessScreen
+            name={name}
+            email={email}
+            preferredChannel={selectedChannel}
+          />
         )}
       </div>
     </main>

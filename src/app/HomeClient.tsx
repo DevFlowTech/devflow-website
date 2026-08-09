@@ -60,7 +60,7 @@ export default function HomeClient() {
             [ CAPABILITIES & OUTCOMES ]
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-medium text-white">
-            Accelerate Your Operations at Scale
+            Enterprise Custom Software Development Services
           </h2>
         </motion.div>
 
@@ -100,7 +100,7 @@ export default function HomeClient() {
 
               <div className="flex justify-between items-center text-xs font-mono">
                 <p className="text-xs text-devflow-gray-300 font-light truncate max-w-[80%]">
-                  You launch high-performance platforms, dashboards, and automation systems built for business ROI.
+                  Deploy custom software development solutions engineered for enterprise-grade automation and business ROI.
                 </p>
                 <span className="text-devflow-green group-hover:translate-x-1 transition-transform duration-300">
                   VIEW CASE STUDIES &rarr;
@@ -123,19 +123,19 @@ export default function HomeClient() {
                 <ul className="space-y-4">
                   <li className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" />
-                    <span className="text-sm font-mono text-white">Custom Business Portals</span>
+                    <span className="text-sm font-mono text-white">Custom ERP & CRM Software</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" />
-                    <span className="text-sm font-mono text-white">Task Automation</span>
+                    <span className="text-sm font-mono text-white">AI Agents & Workflow Automation</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" />
-                    <span className="text-sm font-mono text-white">Connecting Your Apps</span>
+                    <span className="text-sm font-mono text-white">SaaS Product Development</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" />
-                    <span className="text-sm font-mono text-white">Fast Servers & Cloud</span>
+                    <span className="text-sm font-mono text-white">Cloud Infrastructure & APIs</span>
                   </li>
                 </ul>
               </div>

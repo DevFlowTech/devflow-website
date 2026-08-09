@@ -3,23 +3,33 @@
 import { motion } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/lib/motion";
 import Link from "next/link";
-import { FiCpu, FiMessageSquare, FiTrendingUp, FiEye, FiArrowRight, FiCheckCircle } from "react-icons/fi";
+import {
+  FiCpu,
+  FiMessageSquare,
+  FiTrendingUp,
+  FiEye,
+  FiArrowRight,
+  FiCheckCircle,
+} from "react-icons/fi";
 
 const aiCapabilities = [
   {
     icon: FiMessageSquare,
     title: "Conversational RAG Chatbots",
-    description: "Connect Large Language Models (LLMs) securely to your internal databases, PDFs, and API documentation using vector database retrieval. Support queries instantly and accurately without hallucination.",
+    description:
+      "Connect Large Language Models (LLMs) securely to your internal databases, PDFs, and API documentation using vector database retrieval. Support queries instantly and accurately without hallucination.",
   },
   {
     icon: FiCpu,
     title: "Agentic Workflow Automation",
-    description: "Engineered autonomous AI agents that analyze logs, write reports, classify support tickets, and update CRM records automatically without human oversight.",
+    description:
+      "Engineered autonomous AI agents that analyze logs, write reports, classify support tickets, and update CRM records automatically without human oversight.",
   },
   {
     icon: FiEye,
     title: "LLM Fine-Tuning & Prompt Tuning",
-    description: "Fine-tune open-source models (like Llama, Mistral) on your private corporate datasets to build highly specialized semantic classification or generation engines.",
+    description:
+      "Fine-tune open-source models (like Llama, Mistral) on your private corporate datasets to build highly specialized semantic classification or generation engines.",
   },
 ];
 
@@ -39,16 +49,21 @@ export default function AISolutionsPage() {
       <section className="py-16 border-b border-white/[0.04] relative z-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(186,230,84,0.02),transparent_50%)] pointer-events-none" />
         <div className="section-container max-w-5xl">
-          <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="space-y-6">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+            className="space-y-6"
+          >
             <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">
               [ AGENTIC INTELLIGENCE ]
             </span>
             <h1 className="font-display text-4xl md:text-7xl font-medium text-white leading-tight">
-              Agentic AI. <br />
-              <span className="italic font-normal text-devflow-green font-display">Automated Operations.</span>
+              Agentic AI Solutions & <br />
+              <span className="italic font-normal text-devflow-green font-display">LLM Workflow Automation</span>
             </h1>
             <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
-              You achieve cognitive task automation. We build custom RAG pipelines, deploy specialized LLM agent nodes, and integrate semantic intelligence into your enterprise databases.
+              Achieve true cognitive task automation with our AI engineering services. We architect custom RAG (Retrieval-Augmented Generation) pipelines, deploy specialized LLM agents, and integrate enterprise-grade AI directly into your secure databases.
             </p>
           </motion.div>
         </div>
@@ -75,8 +90,12 @@ export default function AISolutionsPage() {
                   <div className="w-10 h-10 rounded-xl bg-devflow-green/10 border border-devflow-green/20 flex items-center justify-center text-devflow-green mb-6 shrink-0">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="text-base font-bold text-white mb-3">{cap.title}</h3>
-                  <p className="text-xs text-devflow-gray-300 leading-relaxed font-light">{cap.description}</p>
+                  <h3 className="text-base font-bold text-white mb-3">
+                    {cap.title}
+                  </h3>
+                  <p className="text-xs text-devflow-gray-300 leading-relaxed font-light">
+                    {cap.description}
+                  </p>
                 </div>
               </motion.div>
             );
@@ -92,11 +111,17 @@ export default function AISolutionsPage() {
               Enterprise-Grade AI Guardrails & Privacy
             </h2>
             <p className="text-sm text-devflow-gray-300 leading-relaxed font-light">
-              We construct custom AI pipelines with data privacy as a primary specification. All external API endpoints are configured with strict PII masking policies, preventing customer data or proprietary repository logs from being ingested by third-party public foundation models.
+              We construct custom AI pipelines with data privacy as a primary
+              specification. All external API endpoints are configured with
+              strict PII masking policies, preventing customer data or
+              proprietary repository logs from being ingested by third-party
+              public foundation models.
             </p>
           </div>
           <div className="bg-devflow-black border border-white/[0.05] p-8 rounded-xl space-y-4">
-            <span className="text-[10px] font-mono text-devflow-gold uppercase tracking-widest block font-bold">[ SYSTEM STANDARDS ]</span>
+            <span className="text-[10px] font-mono text-devflow-gold uppercase tracking-widest block font-bold">
+              [ SYSTEM STANDARDS ]
+            </span>
             <ul className="grid grid-cols-1 gap-3 text-xs text-devflow-gray-300">
               {standards.map((std) => (
                 <li key={std} className="flex items-center gap-2">
@@ -116,10 +141,14 @@ export default function AISolutionsPage() {
             Blueprint Your AI Strategy
           </h2>
           <p className="text-devflow-gray-400 max-w-xl mx-auto mb-8 font-light text-sm">
-            Discuss LLM agent options, training data preparation, and security guardrail configurations with our core engineering architects.
+            Discuss LLM agent options, training data preparation, and security
+            guardrail configurations with our core engineering architects.
           </p>
           <div className="flex justify-center gap-4">
-            <Link href="/contact" className="btn-primary min-w-[200px] inline-flex items-center justify-center gap-2">
+            <Link
+              href="/contact"
+              className="btn-primary min-w-[200px] inline-flex items-center justify-center gap-2"
+            >
               Book Strategy Call <FiArrowRight className="w-4 h-4" />
             </Link>
           </div>

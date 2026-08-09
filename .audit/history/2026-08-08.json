@@ -1,0 +1,17 @@
+{
+  "date": "2026-08-08",
+  "commit": "f05bf2d",
+  "scores": {
+    "Authentication & AuthZ": "N/A",
+    "Tenant / Ownership Isolation": "N/A",
+    "Financial Logic Integrity": "N/A",
+    "Input Validation": 95,
+    "API Security": 95,
+    "Frontend Security": 78,
+    "Database & Performance": 95,
+    "Data Integrity & Audit": 67,
+    "DevOps & Configuration": 84,
+    "Dependencies": 95
+  },
+  "overall": 87
+}

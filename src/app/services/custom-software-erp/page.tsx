@@ -20,11 +20,11 @@ export default function CustomERPPage() {
             [ SERVICE CORE // ERP ]
           </span>
           <h1 className="font-display text-4xl md:text-7xl font-medium leading-tight">
-            Custom Software <br />
-            <span className="italic font-normal text-devflow-green font-display">&amp; ERP Systems</span>
+            Custom ERP Software <br />
+            <span className="italic font-normal text-devflow-green font-display">&amp; Enterprise Development</span>
           </h1>
           <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light speakable-content">
-            Centralize your business inventory, fleet logistics, CRM data pipelines, and operations tracking inside one secure custom platform.
+            Centralize your business inventory, manufacturing logistics, CRM data pipelines, and operations tracking inside one secure, custom-engineered ERP software platform.
           </p>
         </div>
 

@@ -2,7 +2,15 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiSearch, FiCheckCircle, FiAlertCircle, FiTrendingUp, FiCpu, FiMail, FiGlobe } from "react-icons/fi";
+import {
+  FiSearch,
+  FiCheckCircle,
+  FiAlertCircle,
+  FiTrendingUp,
+  FiCpu,
+  FiMail,
+  FiGlobe,
+} from "react-icons/fi";
 import { easeOut } from "@/lib/motion";
 
 export default function SEOAuditPage() {
@@ -18,7 +26,7 @@ export default function SEOAuditPage() {
     "Analyzing HTML structure and heading hierarchy (H1-H6)...",
     "Checking for JSON-LD schemas (Organization, LocalBusiness, Breadcrumb)...",
     "Testing page speed, TTFB, and Core Web Vitals...",
-    "Scanning for AI indexing readiness (/llms.txt and GEO markup)..."
+    "Scanning for AI indexing readiness (/llms.txt and GEO markup)...",
   ];
 
   const handleStartAudit = (e: React.FormEvent) => {
@@ -62,10 +70,15 @@ export default function SEOAuditPage() {
             [ LEAD CONVERSION / AUDIT CORE ]
           </span>
           <h1 className="font-display text-4xl md:text-6xl font-medium mb-6">
-            Free SEO &amp; GEO <span className="italic font-normal text-devflow-green font-display">Engine Auditor</span>
+            Free SEO &amp; GEO{" "}
+            <span className="italic font-normal text-devflow-green font-display">
+              Engine Auditor
+            </span>
           </h1>
           <p className="text-devflow-gray-300 font-light text-sm md:text-base leading-relaxed">
-            Audit your website for search visibility and Generative Engine Optimization (AEO/GEO) readiness. See how Gemini, ChatGPT, and Perplexity see your brand.
+            Audit your website for search visibility and Generative Engine
+            Optimization (AEO/GEO) readiness. See how Gemini, ChatGPT, and
+            Perplexity see your brand.
           </p>
         </div>
 
@@ -94,7 +107,8 @@ export default function SEOAuditPage() {
                 disabled={isAuditing}
                 className="px-6 py-3.5 bg-devflow-green text-white font-semibold rounded-xl flex items-center gap-2 hover:scale-[1.02] active:scale-95 transition-all disabled:opacity-50 cursor-pointer text-sm shadow-[0_2px_12px_rgba(2,37,220,0.2)] hover:shadow-[0_4px_20px_rgba(2,37,220,0.35)]"
               >
-                <FiSearch className="w-4 h-4" /> {isAuditing ? "Auditing..." : "Run Audit"}
+                <FiSearch className="w-4 h-4" />{" "}
+                {isAuditing ? "Auditing..." : "Run Audit"}
               </button>
             </div>
           </form>
@@ -110,13 +124,17 @@ export default function SEOAuditPage() {
               >
                 <div className="flex justify-between text-xs font-mono text-devflow-gray-400">
                   <span>AUDITING PROGRESS</span>
-                  <span>{Math.round(((auditStep + 1) / auditSteps.length) * 100)}%</span>
+                  <span>
+                    {Math.round(((auditStep + 1) / auditSteps.length) * 100)}%
+                  </span>
                 </div>
                 <div className="h-1 bg-devflow-gray-200/10 rounded-full overflow-hidden">
                   <motion.div
                     className="h-full bg-devflow-green"
                     initial={{ width: 0 }}
-                    animate={{ width: `${((auditStep + 1) / auditSteps.length) * 100}%` }}
+                    animate={{
+                      width: `${((auditStep + 1) / auditSteps.length) * 100}%`,
+                    }}
                     transition={{ duration: 0.3 }}
                   />
                 </div>
@@ -140,54 +158,86 @@ export default function SEOAuditPage() {
               {/* Audit Summary Grid */}
               <div className="grid grid-cols-3 gap-4">
                 <div className="glass-panel p-6 rounded-2xl text-center">
-                  <span className="block text-3xl md:text-4xl font-bold font-mono text-devflow-green">94/100</span>
-                  <span className="text-[10px] font-mono text-devflow-gray-400 block mt-2">SEO SCORE</span>
+                  <span className="block text-3xl md:text-4xl font-bold font-mono text-devflow-green">
+                    94/100
+                  </span>
+                  <span className="text-[10px] font-mono text-devflow-gray-400 block mt-2">
+                    SEO SCORE
+                  </span>
                 </div>
                 <div className="glass-panel p-6 rounded-2xl text-center">
-                  <span className="block text-3xl md:text-4xl font-bold font-mono text-devflow-green">87/100</span>
-                  <span className="text-[10px] font-mono text-devflow-gray-400 block mt-2">SPEED SCORE</span>
+                  <span className="block text-3xl md:text-4xl font-bold font-mono text-devflow-green">
+                    87/100
+                  </span>
+                  <span className="text-[10px] font-mono text-devflow-gray-400 block mt-2">
+                    SPEED SCORE
+                  </span>
                 </div>
                 <div className="glass-panel p-6 rounded-2xl text-center">
-                  <span className="block text-3xl md:text-4xl font-bold font-mono text-red-500">42/100</span>
-                  <span className="text-[10px] font-mono text-devflow-gray-400 block mt-2">GEO READINESS</span>
+                  <span className="block text-3xl md:text-4xl font-bold font-mono text-red-500">
+                    42/100
+                  </span>
+                  <span className="text-[10px] font-mono text-devflow-gray-400 block mt-2">
+                    GEO READINESS
+                  </span>
                 </div>
               </div>
 
               {/* Specific Recommendations */}
               <div className="glass-panel p-8 rounded-2xl space-y-6">
                 <h3 className="text-lg font-display font-medium text-white flex items-center gap-2">
-                  <FiCpu className="text-devflow-green" /> Audit Diagnostics Report
+                  <FiCpu className="text-devflow-green" /> Audit Diagnostics
+                  Report
                 </h3>
 
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3 text-xs leading-relaxed text-devflow-gray-300">
                     <FiCheckCircle className="text-devflow-green w-4 h-4 mt-0.5 flex-shrink-0" />
                     <div>
-                      <strong className="text-white font-medium">Valid Heading Structure:</strong> H1 and H2 tags conform to standard document models.
+                      <strong className="text-white font-medium">
+                        Valid Heading Structure:
+                      </strong>{" "}
+                      H1 and H2 tags conform to standard document models.
                     </div>
                   </li>
                   <li className="flex items-start gap-3 text-xs leading-relaxed text-devflow-gray-300">
                     <FiCheckCircle className="text-devflow-green w-4 h-4 mt-0.5 flex-shrink-0" />
                     <div>
-                      <strong className="text-white font-medium">Perfect SSL &amp; Security:</strong> HTTPS active with secure cipher suites.
+                      <strong className="text-white font-medium">
+                        Perfect SSL &amp; Security:
+                      </strong>{" "}
+                      HTTPS active with secure cipher suites.
                     </div>
                   </li>
                   <li className="flex items-start gap-3 text-xs leading-relaxed text-devflow-gray-300">
                     <FiAlertCircle className="text-red-500 w-4 h-4 mt-0.5 flex-shrink-0" />
                     <div>
-                      <strong className="text-white font-medium">Missing JSON-LD Schemas:</strong> Your site has no local business schema markup. Chatbots like Perplexity AI require organization nodes to extract citations.
+                      <strong className="text-white font-medium">
+                        Missing JSON-LD Schemas:
+                      </strong>{" "}
+                      Your site has no local business schema markup. Chatbots
+                      like Perplexity AI require organization nodes to extract
+                      citations.
                     </div>
                   </li>
                   <li className="flex items-start gap-3 text-xs leading-relaxed text-devflow-gray-300">
                     <FiAlertCircle className="text-red-500 w-4 h-4 mt-0.5 flex-shrink-0" />
                     <div>
-                      <strong className="text-white font-medium">No `/llms.txt` file detected:</strong> LLM scraping agents have no instructions to summarize your brand correctly.
+                      <strong className="text-white font-medium">
+                        No `/llms.txt` file detected:
+                      </strong>{" "}
+                      LLM scraping agents have no instructions to summarize your
+                      brand correctly.
                     </div>
                   </li>
                   <li className="flex items-start gap-3 text-xs leading-relaxed text-devflow-gray-300">
                     <FiAlertCircle className="text-red-500 w-4 h-4 mt-0.5 flex-shrink-0" />
                     <div>
-                      <strong className="text-white font-medium">Conversational Content Gap:</strong> Service descriptions do not match conversational search query mappings.
+                      <strong className="text-white font-medium">
+                        Conversational Content Gap:
+                      </strong>{" "}
+                      Service descriptions do not match conversational search
+                      query mappings.
                     </div>
                   </li>
                 </ul>
@@ -202,12 +252,17 @@ export default function SEOAuditPage() {
                       Get the Full AEO/GEO Optimization Blueprint
                     </h4>
                     <p className="text-xs text-devflow-gray-300 leading-relaxed font-light">
-                      Leave your email below. Our founders, Prince &amp; Bhavin, will compile a custom SEO optimization report and send it to you within 24 hours.
+                      Leave your email below. Our founders, Prince &amp; Bhavin,
+                      will compile a custom SEO optimization report and send it
+                      to you within 24 hours.
                     </p>
                   </div>
 
                   {!emailSubmitted ? (
-                    <form onSubmit={handleEmailSubmit} className="flex gap-2 max-w-md mx-auto">
+                    <form
+                      onSubmit={handleEmailSubmit}
+                      className="flex gap-2 max-w-md mx-auto"
+                    >
                       <div className="relative flex-grow">
                         <FiMail className="absolute left-4 top-1/2 -translate-y-1/2 text-devflow-gray-400 w-4 h-4" />
                         <input
@@ -232,7 +287,8 @@ export default function SEOAuditPage() {
                       animate={{ opacity: 1, scale: 1 }}
                       className="text-xs text-devflow-green font-mono py-2 bg-devflow-green/10 border border-devflow-green/20 rounded-xl"
                     >
-                      ✓ Thank you! The custom audit blueprint has been queued for delivery.
+                      ✓ Thank you! The custom audit blueprint has been queued
+                      for delivery.
                     </motion.div>
                   )}
                 </div>

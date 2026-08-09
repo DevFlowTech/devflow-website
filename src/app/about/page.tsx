@@ -11,17 +11,20 @@ const values = [
   {
     code: "[01]",
     title: "Engineering First",
-    description: "We are builders, not pitchmen. We believe in raw technical execution, clean architecture, and systems that scale silently. You receive direct access to architects.",
+    description:
+      "We are builders, not pitchmen. We believe in raw technical execution, clean architecture, and systems that scale silently. You receive direct access to architects.",
   },
   {
     code: "[02]",
     title: "Chaos to Clarity",
-    description: "We enter ambiguous, legacy environments and deliver highly structured, intuitive digital infrastructure. You run automated operations that reduce manual errors to zero.",
+    description:
+      "We enter ambiguous, legacy environments and deliver highly structured, intuitive digital infrastructure. You run automated operations that reduce manual errors to zero.",
   },
   {
     code: "[03]",
     title: "Radical Transparency",
-    description: "No sales jargon. We explain what is possible, what is not, and exactly what resources are required to achieve the goal. You retain 100% IP ownership.",
+    description:
+      "No sales jargon. We explain what is possible, what is not, and exactly what resources are required to achieve the goal. You retain 100% IP ownership.",
   },
 ];
 
@@ -29,17 +32,20 @@ const milestones = [
   {
     year: "January 2026",
     title: "Founding & R&D Setup",
-    description: "DevFlow Technology was founded in Ahmedabad, Gujarat, India by Prince Gajjar and Bhavin Rajput with a mission to deliver engineering-first software development directly to scaling businesses.",
+    description:
+      "DevFlow Technology was founded in Ahmedabad, Gujarat, India by Prince Gajjar and Bhavin Rajput with a mission to deliver engineering-first software development directly to scaling businesses.",
   },
   {
     year: "Q1 2026",
     title: "Launch of Automation Modules",
-    description: "Successfully rolled out AI web crawlers and custom ERP tools for regional manufacturing units, saving client teams 50,000+ operational hours.",
+    description:
+      "Successfully rolled out AI web crawlers and custom ERP tools for regional manufacturing units, saving client teams 50,000+ operational hours.",
   },
   {
     year: "Q2 2026",
     title: "Global Retainer Rollout",
-    description: "Expanded service pipelines to offer dedicated development teams and white label software options to digital agencies across US, UK, and Australia.",
+    description:
+      "Expanded service pipelines to offer dedicated development teams and white label software options to digital agencies across US, UK, and Australia.",
   },
 ];
 
@@ -62,19 +68,26 @@ export default function AboutPage() {
             >
               [ THE PHILOSOPHY ]
             </motion.span>
-            
+
             <motion.h1
               variants={staggerItem}
               className="font-display text-4xl md:text-7xl font-medium text-white leading-tight tracking-tight max-w-4xl"
             >
-              About DevFlow: Transforming <span className="italic font-normal font-display text-devflow-green">Complexity</span> into Capital.
+              About DevFlow |{" "}
+              <span className="italic font-normal font-display text-devflow-green">
+                Enterprise Software & AI Engineers
+              </span>
             </motion.h1>
 
             <motion.p
               variants={staggerItem}
               className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light"
             >
-              You achieve high-performance digital infrastructure that drives commercial outcomes. We started DevFlow in January 2026 to eliminate the standard friction of agency handoffs. You work directly with the systems engineers building your software, guaranteeing quality control and secure IP.
+              You achieve high-performance digital infrastructure that drives
+              commercial outcomes. We started DevFlow in January 2026 to
+              eliminate the standard friction of agency handoffs. You work
+              directly with the systems engineers building your software,
+              guaranteeing quality control and secure IP.
             </motion.p>
           </motion.div>
         </div>
@@ -88,26 +101,39 @@ export default function AboutPage() {
         <div className="section-container max-w-5xl mx-auto space-y-12">
           <div className="grid md:grid-cols-2 gap-12 text-left">
             <div className="space-y-4">
-              <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ MISSION ]</span>
-              <h3 className="text-2xl font-display font-medium text-white">To Engineer Scalable, Custom Software Solutions that Eliminate Administrative Drag.</h3>
+              <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">
+                [ MISSION ]
+              </span>
+              <h3 className="text-2xl font-display font-medium text-white">
+                To Engineer Scalable, Custom Software Solutions that Eliminate
+                Administrative Drag.
+              </h3>
               <p className="text-sm text-devflow-gray-300 font-light leading-relaxed">
-                We believe that software should be an asset, not a rental. Our mission is to build highly performant, custom-engineered digital systems that provide companies with full IP ownership and direct operational control, removing expensive third-party licensing overheads.
+                We believe software should be a proprietary asset, not a perpetual rental. Our mission as a premier custom software development company is to engineer high-performance SaaS products, ERP systems, and AI-driven platforms that grant enterprises complete IP ownership and eliminate costly third-party vendor lock-in.
               </p>
             </div>
             <div className="space-y-4">
-              <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ VISION ]</span>
-              <h3 className="text-2xl font-display font-medium text-white">To Be the Global Benchmark for Absolute Technical Ownership.</h3>
+              <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">
+                [ VISION ]
+              </span>
+              <h3 className="text-2xl font-display font-medium text-white">
+                To Be the Global Benchmark for Absolute Technical Ownership.
+              </h3>
               <p className="text-sm text-devflow-gray-300 font-light leading-relaxed">
-                We envision a future where organizations are powered by custom databases, automated pipelines, and intelligent AI agents. We strive to lead this transition by maintaining strict code quality, radical pricing transparency, and direct collaboration with senior developers.
+                We envision enterprise ecosystems powered by scalable databases, seamless cloud architectures, and intelligent AI workflow automation. We lead this digital transformation by prioritizing strict engineering standards, radical pricing transparency, and direct collaboration with senior software architects in Ahmedabad and globally.
               </p>
             </div>
           </div>
 
           <div className="p-8 rounded-2xl bg-devflow-black border border-white/[0.05] space-y-4 mt-8 text-left">
-            <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">[ OUR STORY ]</span>
-            <h3 className="text-2xl font-display font-medium text-white">Engineering-First and Built in Ahmedabad</h3>
+            <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">
+              [ OUR STORY ]
+            </span>
+            <h3 className="text-2xl font-display font-medium text-white">
+              Engineering-First and Built in Ahmedabad
+            </h3>
             <p className="text-sm text-devflow-gray-300 font-light leading-relaxed">
-              Founded in January 2026 in Ahmedabad, Gujarat, India, DevFlow was created to fill a critical gap: the lack of absolute technical ownership in agency engagements. Prince Gajjar and Bhavin Rajput started the firm to connect enterprise clients directly with developers, eliminating project managers and sales layers to deliver zero vendor lock-in.
+              Founded in January 2026 in Ahmedabad, Gujarat, India, DevFlow was established to solve a critical industry gap: the lack of true technical ownership in traditional agency engagements. Founders Prince Gajjar and Bhavin Rajput launched this AI development and software engineering firm to connect enterprises directly with core developers—bypassing unnecessary management layers to deliver highly customized IT solutions with zero vendor lock-in.
             </p>
           </div>
         </div>
@@ -137,7 +163,7 @@ export default function AboutPage() {
               >
                 {/* Timeline Node */}
                 <span className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-devflow-black border-2 border-devflow-green group-hover:bg-devflow-green transition-colors duration-300" />
-                
+
                 <div className="space-y-2">
                   <span className="font-mono text-devflow-green text-sm font-semibold block">
                     {milestone.year}
@@ -167,13 +193,14 @@ export default function AboutPage() {
                 Our Core Values
               </h2>
               <p className="text-devflow-gray-400 font-light leading-relaxed">
-                Rules we live by to ensure premium delivery, code integrity, and outstanding product alignment.
+                Rules we live by to ensure premium delivery, code integrity, and
+                outstanding product alignment.
               </p>
             </div>
-            
+
             <div className="lg:col-span-2 grid md:grid-cols-2 lg:grid-cols-1 gap-8">
               {values.map((val) => (
-                <div 
+                <div
                   key={val.title}
                   className="p-8 rounded-xl border border-white/[0.05] bg-devflow-black hover:border-devflow-green/20 transition-colors duration-300 flex flex-col md:flex-row gap-6 items-start"
                 >
@@ -205,11 +232,16 @@ export default function AboutPage() {
             Work with builders.
           </h2>
           <p className="text-devflow-gray-400 max-w-xl mx-auto mb-8 font-light text-sm">
-            Skip the project managers and sales layers. Talk directly to our systems engineers to outline your roadmap today.
+            Skip the project managers and sales layers. Talk directly to our
+            systems engineers to outline your roadmap today.
           </p>
           <div className="flex justify-center gap-4">
-            <Link href="/contact" className="btn-primary min-w-[200px] inline-flex items-center justify-center gap-2">
-              Schedule Technical Consultation <FiArrowRight className="w-4 h-4" />
+            <Link
+              href="/contact"
+              className="btn-primary min-w-[200px] inline-flex items-center justify-center gap-2"
+            >
+              Schedule Technical Consultation{" "}
+              <FiArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

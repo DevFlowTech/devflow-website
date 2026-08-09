@@ -3,7 +3,16 @@
 import { motion } from "framer-motion";
 import { staggerContainer, staggerItem, viewportOnce } from "@/lib/motion";
 import Link from "next/link";
-import { FiCpu, FiDatabase, FiGrid, FiArrowRight, FiShield, FiTrendingUp, FiActivity, FiLayers } from "react-icons/fi";
+import {
+  FiCpu,
+  FiDatabase,
+  FiGrid,
+  FiArrowRight,
+  FiShield,
+  FiTrendingUp,
+  FiActivity,
+  FiLayers,
+} from "react-icons/fi";
 import FAQSection from "@/components/sections/FAQSection";
 
 const servicesDetails = [
@@ -11,12 +20,18 @@ const servicesDetails = [
     id: "custom-erp",
     icon: FiDatabase,
     title: "Bespoke Enterprise ERP & Core Software",
-    description: "Replace legacy spreadsheets and disjointed SaaS subscriptions with a single, high-performance operational portal tailored to your exact business logic.",
-    problem: "Operational data siloed across legacy platforms, causing billing errors, synchronization lag, and 20+ hours of manual data re-entry weekly.",
-    impact: "Reduce administrative cost by 40%, achieve instant cross-department visibility, and establish single-source-of-truth automated reporting.",
-    solution: "We build custom database structures, role-based admin portals, and sync scripts that automate workflow handoffs.",
-    architecture: "Next.js App Router frontend, Node.js/FastAPI business layer, Prisma ORM, PostgreSQL database, hosted on AWS ECS with automated RDS backups.",
-    stack: "React, Next.js, Node.js, Prisma, PostgreSQL, Docker, AWS, Cloudflare",
+    description:
+      "Modernize legacy spreadsheets and fragmented subscriptions with a fully custom, high-performance ERP software solution tailored to your exact business logic and workflows.",
+    problem:
+      "Critical data siloed across off-the-shelf platforms, causing synchronization latency, manual data re-entry overhead, and costly vendor lock-in.",
+    impact:
+      "Eliminate software licensing fees, reduce operational drag by 40%, and establish a secure, automated single-source-of-truth enterprise portal.",
+    solution:
+      "We architect proprietary databases, enterprise role-based dashboards, and automated API integrations ensuring total system interoperability.",
+    architecture:
+      "Next.js App Router frontend, Node.js/FastAPI business layer, Prisma ORM, PostgreSQL database, hosted on AWS ECS with automated RDS backups.",
+    stack:
+      "React, Next.js, Node.js, Prisma, PostgreSQL, Docker, AWS, Cloudflare",
     timeline: "12 to 18 Weeks",
     deliverables: [
       "Interactive Multi-Role Dashboards",
@@ -31,12 +46,18 @@ const servicesDetails = [
     id: "ai-automation",
     icon: FiCpu,
     title: "Agentic AI & Workflow Automation",
-    description: "Introduce custom Large Language Model (LLM) agents, automated vector databases, and semantic search interfaces to streamline support and client onboarding.",
-    problem: "Customer support agents spending 60% of their shift answering repetitive queries, leading to slow response times and customer churn.",
-    impact: "Automate up to 75% of level-1 customer inquiries, maintaining sub-minute response times 24/7 with zero human oversight required.",
-    solution: "Engineered Retrieval-Augmented Generation (RAG) pipelines and multi-agent systems connected directly to your customer support tools.",
-    architecture: "Python FastAPI backend, LangChain/LlamaIndex frameworks, Qdrant/pgvector vector stores, OpenAI/Gemini API integration.",
-    stack: "Python, FastAPI, OpenAI API, Gemini API, Qdrant, LangChain, Node.js",
+    description:
+      "Deploy custom Large Language Model (LLM) agents and semantic search pipelines to hyper-automate customer support, internal knowledge retrieval, and data processing.",
+    problem:
+      "Human teams overwhelmed by high-volume repetitive tasks, slowing response times and wasting expensive operational capacity on non-creative work.",
+    impact:
+      "Automate 75% of tier-1 support interactions with enterprise-grade AI, maintaining 24/7 sub-minute response SLAs with complete privacy compliance.",
+    solution:
+      "We build proprietary RAG (Retrieval-Augmented Generation) architectures and specialized AI agent workflows securely connected to your private data.",
+    architecture:
+      "Python FastAPI backend, LangChain/LlamaIndex frameworks, Qdrant/pgvector vector stores, OpenAI/Gemini API integration.",
+    stack:
+      "Python, FastAPI, OpenAI API, Gemini API, Qdrant, LangChain, Node.js",
     timeline: "8 to 12 Weeks",
     deliverables: [
       "Custom RAG Pipeline & Embedding Ingestion",
@@ -51,12 +72,18 @@ const servicesDetails = [
     id: "saas-development",
     icon: FiGrid,
     title: "High-Performance SaaS & Web Applications",
-    description: "Launch premium, fast web platforms with sub-second page loads, conversion-optimized checkout funnels, and enterprise-grade security.",
-    problem: "Slow-loading custom applications causing high bounce rates (50%+), drop-offs in checkout flows, and bad Google Core Web Vitals scores.",
-    impact: "Sub-second LCP (Largest Contentful Paint < 1.0s), 30%+ increase in checkout conversions, and 100% Core Web Vitals rating.",
-    solution: "Engineered with modern Next.js edge layouts, database caching, and server-side rendering combined with Framer Motion visual designs.",
-    architecture: "Next.js Server Components, Tailwind CSS styling, Stripe/Razorpay payments, Redis caching layer, deployed on Vercel Edge Network.",
-    stack: "React, Next.js, TypeScript, Tailwind CSS, Redis, Stripe API, Vercel Edge",
+    description:
+      "Launch premium, fast web platforms with sub-second page loads, conversion-optimized checkout funnels, and enterprise-grade security.",
+    problem:
+      "Slow-loading custom applications causing high bounce rates (50%+), drop-offs in checkout flows, and bad Google Core Web Vitals scores.",
+    impact:
+      "Sub-second LCP (Largest Contentful Paint < 1.0s), 30%+ increase in checkout conversions, and 100% Core Web Vitals rating.",
+    solution:
+      "Engineered with modern Next.js edge layouts, database caching, and server-side rendering combined with Framer Motion visual designs.",
+    architecture:
+      "Next.js Server Components, Tailwind CSS styling, Stripe/Razorpay payments, Redis caching layer, deployed on Vercel Edge Network.",
+    stack:
+      "React, Next.js, TypeScript, Tailwind CSS, Redis, Stripe API, Vercel Edge",
     timeline: "10 to 14 Weeks",
     deliverables: [
       "Responsive React App with Next.js App Router",
@@ -71,12 +98,18 @@ const servicesDetails = [
     id: "node-js-development",
     icon: FiCpu,
     title: "Node JS Backend & Custom Development",
-    description: "Build ultra-fast, high-concurrency event-driven backends, microservices architectures, and real-time app engines engineered with TypeScript and Node.js.",
-    problem: "Blocking I/O operations and slow page load speeds causing database lag and memory bottlenecks during concurrent user traffic spikes.",
-    impact: "Ensure non-blocking operations, lower infrastructure costs, handle millions of concurrent connections, and achieve 99.99% system availability.",
-    solution: "We orchestrate asynchronous V8 runtimes, scalable database schemas, high-throughput REST/GraphQL APIs, and WebSocket hubs.",
-    architecture: "Node.js dynamic event loop, NestJS/Express microservices, PostgreSQL/MongoDB database replication, Redis caching pools.",
-    stack: "Node.js, Express.js, TypeScript, PostgreSQL, MongoDB, Redis, Docker",
+    description:
+      "Build ultra-fast, high-concurrency event-driven backends, microservices architectures, and real-time app engines engineered with TypeScript and Node.js.",
+    problem:
+      "Blocking I/O operations and slow page load speeds causing database lag and memory bottlenecks during concurrent user traffic spikes.",
+    impact:
+      "Ensure non-blocking operations, lower infrastructure costs, handle millions of concurrent connections, and achieve 99.99% system availability.",
+    solution:
+      "We orchestrate asynchronous V8 runtimes, scalable database schemas, high-throughput REST/GraphQL APIs, and WebSocket hubs.",
+    architecture:
+      "Node.js dynamic event loop, NestJS/Express microservices, PostgreSQL/MongoDB database replication, Redis caching pools.",
+    stack:
+      "Node.js, Express.js, TypeScript, PostgreSQL, MongoDB, Redis, Docker",
     timeline: "4 to 8 Weeks",
     deliverables: [
       "Asynchronous REST & GraphQL API Endpoints",
@@ -91,12 +124,18 @@ const servicesDetails = [
     id: "dedicated-engineering",
     icon: FiLayers,
     title: "Dedicated Product Engineering Teams",
-    description: "Hire a dedicated team of staff-level software developers, UI designers, and systems architects to accelerate your product roadmap under direct management.",
-    problem: "Finding and onboarding reliable engineering talent takes months, causing roadmap slippage and delayed feature releases.",
-    impact: "Onboard dedicated developers in under 10 days, increasing development velocity by 3x and guaranteeing roadmap targets are hit on schedule.",
-    solution: "Fully managed, dedicated engineering resources working in your Slack, GitHub, and Jira, using agile Scrum sprints.",
-    architecture: "Continuous Integration & Continuous Deployment (CI/CD) pipelines, staging & production environment isolation, daily standups.",
-    stack: "Fullstack Engineers, UI/UX Designers, QA Testers, DevOps Specialists",
+    description:
+      "Hire a dedicated team of staff-level software developers, UI designers, and systems architects to accelerate your product roadmap under direct management.",
+    problem:
+      "Finding and onboarding reliable engineering talent takes months, causing roadmap slippage and delayed feature releases.",
+    impact:
+      "Onboard dedicated developers in under 10 days, increasing development velocity by 3x and guaranteeing roadmap targets are hit on schedule.",
+    solution:
+      "Fully managed, dedicated engineering resources working in your Slack, GitHub, and Jira, using agile Scrum sprints.",
+    architecture:
+      "Continuous Integration & Continuous Deployment (CI/CD) pipelines, staging & production environment isolation, daily standups.",
+    stack:
+      "Fullstack Engineers, UI/UX Designers, QA Testers, DevOps Specialists",
     timeline: "Ongoing Retainer (Monthly Contract)",
     deliverables: [
       "Dedicated Full-Time Developers (40 Hours/Week)",
@@ -119,20 +158,21 @@ export default function ServicesPage() {
       {/* Intro Section */}
       <section className="py-16 border-b border-white/[0.04] relative z-10">
         <div className="section-container max-w-5xl">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            className="space-y-6"
-          >
+          <motion.div initial="hidden" animate="visible" className="space-y-6">
             <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">
               [ SERVICES & INTEGRATIONS ]
             </span>
             <h1 className="font-display text-4xl md:text-7xl font-medium text-white leading-tight">
-              Enterprise Engineering. <br />
-              <span className="italic font-normal text-devflow-green font-display">Measured Outcomes.</span>
+              AI Development & <br />
+              <span className="italic font-normal text-devflow-green font-display">
+                Custom Software Services
+              </span>
             </h1>
             <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
-              You receive robust, scalable, and audit-compliant digital infrastructure built by senior systems engineers. We eliminate manual operational drag, accelerate roadmap velocity, and ensure complete source code ownership.
+              You receive robust, scalable, and audit-compliant digital
+              infrastructure built by senior systems engineers. We eliminate
+              manual operational drag, accelerate roadmap velocity, and ensure
+              complete source code ownership.
             </p>
           </motion.div>
         </div>
@@ -167,13 +207,20 @@ export default function ServicesPage() {
                   </div>
 
                   <div className="pt-2">
-                    <span className="text-[10px] font-mono text-devflow-gray-400 block mb-1">PROJECT TIMELINE</span>
-                    <span className="text-devflow-green font-mono font-semibold text-sm">{service.timeline}</span>
+                    <span className="text-[10px] font-mono text-devflow-gray-400 block mb-1">
+                      PROJECT TIMELINE
+                    </span>
+                    <span className="text-devflow-green font-mono font-semibold text-sm">
+                      {service.timeline}
+                    </span>
                   </div>
 
                   <div className="pt-2 flex flex-wrap gap-2">
                     {service.stack.split(", ").map((t) => (
-                      <span key={t} className="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.06] font-mono text-[9px] text-devflow-gray-300">
+                      <span
+                        key={t}
+                        className="px-2 py-0.5 rounded bg-white/[0.04] border border-white/[0.06] font-mono text-[9px] text-devflow-gray-300"
+                      >
                         {t}
                       </span>
                     ))}
@@ -259,10 +306,14 @@ export default function ServicesPage() {
             Ready to design your operational blueprint?
           </h2>
           <p className="text-devflow-gray-400 max-w-xl mx-auto mb-8 font-light text-sm">
-            Map your project requirements to calculate your ROI scope, system timeline, and receive a comprehensive technical blueprint.
+            Map your project requirements to calculate your ROI scope, system
+            timeline, and receive a comprehensive technical blueprint.
           </p>
           <div className="flex justify-center gap-4">
-            <Link href="/contact" className="btn-primary min-w-[200px] inline-flex items-center justify-center gap-2">
+            <Link
+              href="/contact"
+              className="btn-primary min-w-[200px] inline-flex items-center justify-center gap-2"
+            >
               Get Software Blueprint <FiArrowRight className="w-4 h-4" />
             </Link>
           </div>

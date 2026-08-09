@@ -7,23 +7,28 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import MagneticButton from "@/components/ui/MagneticButton";
 
 // Dynamically import the mockup (heavy visual component) and background effects
-const HeroMockup = dynamic(() => import("@/components/ui/HeroMockup"), { ssr: false });
+const HeroMockup = dynamic(() => import("@/components/ui/HeroMockup"), {
+  ssr: false,
+});
 
 const AnimatedGradientBackground = dynamic(
   () => import("@/components/ui/AnimatedGradientBackground"),
-  { ssr: false }
+  { ssr: false },
 );
 const InteractiveGrid = dynamic(
   () => import("@/components/ui/InteractiveGrid"),
-  { ssr: false }
+  { ssr: false },
 );
 const BackgroundBeams = dynamic(
-  () => import("@/components/ui/BackgroundBeams").then((mod) => ({ default: mod.BackgroundBeams })),
-  { ssr: false }
+  () =>
+    import("@/components/ui/BackgroundBeams").then((mod) => ({
+      default: mod.BackgroundBeams,
+    })),
+  { ssr: false },
 );
 const FloatingParticles = dynamic(
   () => import("@/components/ui/FloatingParticles"),
-  { ssr: false }
+  { ssr: false },
 );
 
 export default function HeroSection() {
@@ -34,7 +39,7 @@ export default function HeroSection() {
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     const t = setTimeout(() => setPrefersReduced(mediaQuery.matches), 0);
-    
+
     const listener = (event: MediaQueryListEvent) => {
       setPrefersReduced(event.matches);
     };
@@ -75,7 +80,9 @@ export default function HeroSection() {
   const textOffset = prefersReduced ? 0 : scrollProgress * -50;
   const mockupOffset = prefersReduced ? 0 : scrollProgress * -40;
   const mockupScale = prefersReduced ? 1 : 1 + scrollProgress * 0.02;
-  const textOpacity = prefersReduced ? 1 : Math.max(0, 1 - scrollProgress / 0.75);
+  const textOpacity = prefersReduced
+    ? 1
+    : Math.max(0, 1 - scrollProgress / 0.75);
 
   return (
     <section
@@ -92,7 +99,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_35%,rgba(2,37,220,0.04),transparent_40%)]" />
 
       {/* City background with CSS parallax */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.25] pointer-events-none z-0 will-change-transform"
         style={{ transform: `translateY(${bgY}%)` }}
       >
@@ -114,7 +121,7 @@ export default function HeroSection() {
       <div className="section-container relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Asymmetrical typography layout */}
-          <div 
+          <div
             className="lg:col-span-7 hero-content-fade"
             style={{
               opacity: textOpacity,
@@ -130,20 +137,29 @@ export default function HeroSection() {
 
               {/* Serif Editorial Headline */}
               <h1 className="font-display text-4xl md:text-6xl lg:text-[4.75rem] font-medium text-devflow-gray-100 leading-[1.1] tracking-tight">
-                Custom Software <br className="hidden md:inline" />
-                <span className="italic font-normal text-devflow-green font-display">Development Company India</span> <br className="hidden md:inline" />
+                Custom Software & AI <br className="hidden md:inline" />
+                <span className="italic font-normal text-devflow-green font-display">
+                  Development Company in Ahmedabad, India
+                </span>{" "}
+                <br className="hidden md:inline" />
                 built for enterprise scale.
               </h1>
 
-              {/* Subtext description */}
               <p className="text-base md:text-lg text-devflow-gray-100/80 leading-relaxed font-light max-w-2xl">
-                DevFlow is a premier AI development company, ERP development company, and SaaS development company in India. As a top-rated software development company in Ahmedabad, we build custom business portals, high-performance web applications, and automated cloud pipelines with 100% source code ownership.
+                We are a specialized software engineering firm and AI
+                development company in Ahmedabad, India. We architect custom
+                ERPs, high-performance SaaS platforms, and automated cloud
+                pipelines that eliminate operational drag—delivering
+                enterprise-scale software with 100% IP ownership.
               </p>
 
               {/* CTA Actions */}
               <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
                 <MagneticButton>
-                  <Link href="/contact" className="btn-primary min-w-[200px] group">
+                  <Link
+                    href="/contact"
+                    className="btn-primary min-w-[200px] group"
+                  >
                     Schedule Technical Consultation
                     <svg
                       className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
@@ -171,7 +187,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Column: Code/Deployment Mockup visual */}
-          <div 
+          <div
             className="lg:col-span-5 w-full relative will-change-transform hero-mockup-entrance"
             style={{
               transform: `translateY(${mockupOffset}px) scale(${mockupScale})`,
