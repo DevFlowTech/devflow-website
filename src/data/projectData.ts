@@ -65,7 +65,7 @@ export const projects: Project[] = [
     description:
       "Custom Puppeteer scraping automation with multi-threaded node scripts.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: Inaccurate, time-consuming lead extraction from map directories. Solution: Custom Puppeteer scraping automation with multi-threaded node scripts.",
+      "Inaccurate, time-consuming lead extraction from map directories. Solution: Custom Puppeteer scraping automation with multi-threaded node scripts.",
     tech: ["Node.js", "Automation", "Puppeteer", "Logic"],
     color: "from-devflow-green/20 to-devflow-green/5",
     accent: "#0225dc",
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     description:
       "Dynamic tracking portal featuring real-time custom declarations.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: Route planning errors and delayed custom declaration flows. Solution: Dynamic tracking portal featuring real-time custom declarations.",
+      "Route planning errors and delayed custom declaration flows. Solution: Dynamic tracking portal featuring real-time custom declarations.",
     tech: ["React.js", "Django", "PostgreSQL", "Docker"],
     color: "from-blue-500/20 to-blue-500/5",
     accent: "#3b82f6",
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     description:
       "Parser powered by Gemini 1.5 Pro to parse and match candidate profiles.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: Manual filtering of thousands of resumes against complex job roles. Solution: Parser powered by Gemini 1.5 Pro to parse and match candidate profiles.",
+      "Manual filtering of thousands of resumes against complex job roles. Solution: Parser powered by Gemini 1.5 Pro to parse and match candidate profiles.",
     tech: ["Next.js", "Gemini API", "Pinecone", "SaaS"],
     color: "from-devflow-green/20 to-devflow-green/5",
     accent: "#0225dc",
@@ -120,7 +120,7 @@ export const projects: Project[] = [
     description:
       "Next.js headless frontend integration using GraphQL and localized translations.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: High bounce rate on slow-loading international Shopify checkouts. Solution: Next.js headless frontend integration using GraphQL and localized translations.",
+      "High bounce rate on slow-loading international Shopify checkouts. Solution: Next.js headless frontend integration using GraphQL and localized translations.",
     tech: ["Next.js", "Shopify API", "Framer Motion", "GraphQL"],
     color: "from-blue-500/20 to-blue-500/5",
     accent: "#3b82f6",
@@ -137,7 +137,7 @@ export const projects: Project[] = [
     category: "Enterprise Systems",
     description: "Developed an enterprise-grade Go and Next.js CRM system.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: Scattered fleet route telemetry and tracking for driver dispatch. Solution: Developed an enterprise-grade Go and Next.js CRM system.",
+      "Scattered fleet route telemetry and tracking for driver dispatch. Solution: Developed an enterprise-grade Go and Next.js CRM system.",
     tech: ["Next.js", "Go", "PostgreSQL", "Docker"],
     color: "from-orange-500/20 to-orange-500/5",
     accent: "#f97316",
@@ -156,7 +156,7 @@ export const projects: Project[] = [
     description:
       "High-frequency web automation crawler powered by Puppeteer and Redis.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: Catalog desynchronization between supplier and retail frontends. Solution: High-frequency web automation crawler powered by Puppeteer and Redis.",
+      "Catalog desynchronization between supplier and retail frontends. Solution: High-frequency web automation crawler powered by Puppeteer and Redis.",
     tech: ["Node.js", "Redis", "MongoDB", "Puppeteer"],
     color: "from-devflow-green/20 to-devflow-green/5",
     accent: "#0225dc",
@@ -174,7 +174,7 @@ export const projects: Project[] = [
     description:
       "Developed a billing engine with robust Stripe webhook handlers.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: Complex tax logic and failed recurring payments for multi-tenant users. Solution: Developed a billing engine with robust Stripe webhook handlers.",
+      "Complex tax logic and failed recurring payments for multi-tenant users. Solution: Developed a billing engine with robust Stripe webhook handlers.",
     tech: ["React.js", "Express", "Stripe API", "Serverless"],
     color: "from-blue-500/20 to-blue-500/5",
     accent: "#3b82f6",
@@ -190,7 +190,7 @@ export const projects: Project[] = [
     category: "SEO & GEO Marketing",
     description: "Static Next.js page architecture with edge caching.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: High traffic spike crashes during active ad campaigns. Solution: Static Next.js page architecture with edge caching.",
+      "High traffic spike crashes during active ad campaigns. Solution: Static Next.js page architecture with edge caching.",
     tech: ["HTML5", "CSS3", "JavaScript", "SEO Ready"],
     color: "from-purple-500/20 to-purple-500/5",
     accent: "#a855f7",
@@ -205,7 +205,7 @@ export const projects: Project[] = [
     category: "SaaS & Web Apps",
     description: "Optimized rendering cycle with WebSocket compression.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: Lag in rendering multi-exchange websocket price quotes. Solution: Optimized rendering cycle with WebSocket compression.",
+      "Lag in rendering multi-exchange websocket price quotes. Solution: Optimized rendering cycle with WebSocket compression.",
     tech: ["React", "Websockets", "TailwindCSS", "Node.js"],
     color: "from-blue-500/20 to-blue-500/5",
     accent: "#3b82f6",
@@ -221,7 +221,7 @@ export const projects: Project[] = [
     description:
       "Connected IoT hardware nodes to an MQTT broker and React dashboard.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: Under-utilized parking spots due to lack of real-time status. Solution: Connected IoT hardware nodes to an MQTT broker and React dashboard.",
+      "Under-utilized parking spots due to lack of real-time status. Solution: Connected IoT hardware nodes to an MQTT broker and React dashboard.",
     tech: ["Node.js", "MQTT", "React.js", "InfluxDB"],
     color: "from-devflow-green/20 to-devflow-green/5",
     accent: "#0225dc",
@@ -238,7 +238,7 @@ export const projects: Project[] = [
     description:
       "Developed visitor verification using Kotlin and Supabase db logs.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: Vulnerable entry logs and slow verification for visitor access. Solution: Developed visitor verification using Kotlin and Supabase db logs.",
+      "Vulnerable entry logs and slow verification for visitor access. Solution: Developed visitor verification using Kotlin and Supabase db logs.",
     tech: ["Kotlin", "Supabase", "Firebase", "Security"],
     color: "from-indigo-500/20 to-indigo-500/5",
     accent: "#6366f1",
@@ -255,7 +255,7 @@ export const projects: Project[] = [
     category: "Enterprise Systems",
     description: "MERN Stack with JWT Auth and optimized database indexing.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: Unsecured REST endpoints and slow lookup operations for large teams. Solution: MERN Stack with JWT Auth and optimized database indexing.",
+      "Unsecured REST endpoints and slow lookup operations for large teams. Solution: MERN Stack with JWT Auth and optimized database indexing.",
     tech: ["MERN Stack", "JWT", "REST API", "Auth"],
     color: "from-orange-500/20 to-orange-500/5",
     accent: "#f97316",
@@ -272,7 +272,7 @@ export const projects: Project[] = [
     description:
       "Secure document parsing portal with React and Node upload pipelines.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: Delayed visa application processing and complex client document uploads. Solution: Secure document parsing portal with React and Node upload pipelines.",
+      "Delayed visa application processing and complex client document uploads. Solution: Secure document parsing portal with React and Node upload pipelines.",
     tech: ["React.js", "Node.js", "Responsive UX"],
     color: "from-blue-500/20 to-blue-500/5",
     accent: "#3b82f6",
@@ -289,7 +289,7 @@ export const projects: Project[] = [
     category: "Enterprise Systems",
     description: "Custom ERP with MySQL and real-time backend API sync.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: Inefficient internal inventory reconciliation. Solution: Custom ERP with MySQL and real-time backend API sync.",
+      "Inefficient internal inventory reconciliation. Solution: Custom ERP with MySQL and real-time backend API sync.",
     tech: ["React.js", "Node.js", "MySQL", "ERP"],
     color: "from-orange-500/20 to-orange-500/5",
     accent: "#f97316",
@@ -305,7 +305,7 @@ export const projects: Project[] = [
     description:
       "Developed expense tracking tool with real-time budget forecasting.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: Lack of transparency in construction expense tracking. Solution: Developed expense tracking tool with real-time budget forecasting.",
+      "Lack of transparency in construction expense tracking. Solution: Developed expense tracking tool with real-time budget forecasting.",
     tech: ["PHP", "XML", "MySQL", "Analytics"],
     color: "from-orange-500/20 to-orange-500/5",
     accent: "#f97316",
@@ -322,7 +322,7 @@ export const projects: Project[] = [
     description:
       "GMB automation tool with Python scraping and Google Search API nodes.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: Tedious manual GMB rankings tracking for client campaigns. Solution: GMB automation tool with Python scraping and Google Search API nodes.",
+      "Tedious manual GMB rankings tracking for client campaigns. Solution: GMB automation tool with Python scraping and Google Search API nodes.",
     tech: ["React.js", "Python", "MySQL", "Google API"],
     color: "from-purple-500/20 to-purple-500/5",
     accent: "#a855f7",
@@ -338,7 +338,7 @@ export const projects: Project[] = [
     category: "SEO & GEO Marketing",
     description: "Complete layout optimization achieving an LCP of ~0.90s.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: Poor mobile usability and low pagespeed scores. Solution: Complete layout optimization achieving an LCP of ~0.90s.",
+      "Poor mobile usability and low pagespeed scores. Solution: Complete layout optimization achieving an LCP of ~0.90s.",
     tech: ["HTML5", "CSS3", "JavaScript", "Performance"],
     color: "from-purple-500/20 to-purple-500/5",
     accent: "#a855f7",
@@ -354,7 +354,7 @@ export const projects: Project[] = [
     description:
       "Developed an interactive lead capturing flow with PHP and JS.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: Low visitor-to-lead conversion on real estate portal. Solution: Developed an interactive lead capturing flow with PHP and JS.",
+      "Low visitor-to-lead conversion on real estate portal. Solution: Developed an interactive lead capturing flow with PHP and JS.",
     tech: ["PHP", "JavaScript", "CSS3", "Real Estate"],
     color: "from-purple-500/20 to-purple-500/5",
     accent: "#a855f7",
@@ -370,7 +370,7 @@ export const projects: Project[] = [
     description:
       "Automated Puppeteer crawler parsing schemas and page metrics.",
     longDescription:
-      "Developed to address key operational challenges, this project represents a custom solution. Problem: Tedious manual checks for client technical SEO audits. Solution: Automated Puppeteer crawler parsing schemas and page metrics.",
+      "Tedious manual checks for client technical SEO audits. Solution: Automated Puppeteer crawler parsing schemas and page metrics.",
     tech: ["Next.js", "Puppeteer", "JSON-LD", "Audit"],
     color: "from-purple-500/20 to-purple-500/5",
     accent: "#a855f7",
