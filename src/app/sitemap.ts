@@ -7,195 +7,201 @@ import { industriesData } from "@/data/industriesData";
 import { locationsData } from "@/data/locationsData";
 import { knowledgeHubData } from "@/data/knowledgeHubData";
 
+// ponytail: static dates per page — prevents sitemap churn on every build
+// which was causing Googlebot to re-crawl all pages unnecessarily.
+// Ceiling: when a CMS/git-hook is wired, replace with real per-file mtime.
+const SITE_LAUNCH = "2026-01-15T00:00:00.000Z";
+const LAST_SEO_REWRITE = "2026-08-09T10:35:00.000Z";
+const LAST_CONTENT_UPDATE = "2026-08-10T10:00:00.000Z";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.devflow.co.in";
-  const currentDate = new Date().toISOString();
 
   // Static pages
   const staticPages = [
     {
       url: baseUrl,
-      lastModified: currentDate,
+      lastModified: LAST_CONTENT_UPDATE,
       changeFrequency: "weekly" as const,
       priority: 1.0,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/services`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "weekly" as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/work`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "weekly" as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: currentDate,
+      lastModified: LAST_CONTENT_UPDATE,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/resources/tools/seo-audit`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/faq`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/expertise`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/software-development-company-ahmedabad`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "weekly" as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/ai-development-company-ahmedabad`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "weekly" as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/web-development-company-ahmedabad`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "weekly" as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/mobile-app-development-company-ahmedabad`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "weekly" as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/seo-company-ahmedabad`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "weekly" as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/it-company-ahmedabad`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "weekly" as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/it-services-ahmedabad`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "weekly" as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/ai-solutions`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/dedicated-development-teams`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/offshore-development`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/white-label-development`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/pricing`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/technology-stack`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/case-studies`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/services/saas-development`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/services/custom-software-erp`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/services/enterprise-seo`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/privacy`,
-      lastModified: currentDate,
+      lastModified: SITE_LAUNCH,
       changeFrequency: "yearly" as const,
       priority: 0.3,
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: currentDate,
+      lastModified: SITE_LAUNCH,
       changeFrequency: "yearly" as const,
       priority: 0.3,
     },
     {
       url: `${baseUrl}/careers`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/resources/calculators`,
-      lastModified: currentDate,
+      lastModified: LAST_SEO_REWRITE,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
   ];
 
-  // Blog post pages
+  // Blog post pages — use real post.date from data (already ISO-parseable)
   const blogEntries = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.date).toISOString(),
@@ -206,7 +212,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog topic-cluster hub pages
   const blogCategoryEntries = blogCategories.map((category) => ({
     url: `${baseUrl}/blog/category/${category.slug}`,
-    lastModified: currentDate,
+    lastModified: LAST_SEO_REWRITE,
     changeFrequency: "weekly" as const,
     priority: 0.8,
   }));
@@ -214,7 +220,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Work/case study pages
   const workEntries = projects.map((project) => ({
     url: `${baseUrl}/work/${project.slug}`,
-    lastModified: currentDate,
+    lastModified: LAST_SEO_REWRITE,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
@@ -222,7 +228,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dynamic Services pages
   const serviceEntries = Object.keys(servicesData).map((slug) => ({
     url: `${baseUrl}/services/${slug}`,
-    lastModified: currentDate,
+    lastModified: LAST_SEO_REWRITE,
     changeFrequency: "weekly" as const,
     priority: 0.9,
   }));
@@ -230,7 +236,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dynamic Industries pages
   const industryEntries = Object.keys(industriesData).map((slug) => ({
     url: `${baseUrl}/industries/${slug}`,
-    lastModified: currentDate,
+    lastModified: LAST_SEO_REWRITE,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
@@ -238,7 +244,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dynamic Locations pages
   const locationEntries = Object.keys(locationsData).map((slug) => ({
     url: `${baseUrl}/locations/${slug}`,
-    lastModified: currentDate,
+    lastModified: LAST_SEO_REWRITE,
     changeFrequency: "weekly" as const,
     priority: 0.8,
   }));
@@ -246,7 +252,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dynamic Knowledge Hub pages
   const knowledgeEntries = Object.keys(knowledgeHubData).map((slug) => ({
     url: `${baseUrl}/knowledge-base/${slug}`,
-    lastModified: currentDate,
+    lastModified: LAST_SEO_REWRITE,
     changeFrequency: "weekly" as const,
     priority: 0.8,
   }));

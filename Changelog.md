@@ -4,7 +4,36 @@ Reverse-chronological log of every change made to the project. Per RULES.md §8.
 
 ---
 
-## SEO Audit Remediation (Findings from SEO_Analysis_Report_DevFlow.docx) — 2026-08-09 10:35
+## SEO Ranking Fixes Part 2 (Client/Server splits, Content Integrity) — 2026-08-10 11:15
+
+### What changed
+- **High-Traffic Pages SSR Split**: Refactored `work`, `faq`, `contact`, `services`, and `expertise` pages to follow the server wrapper + client component pattern (e.g., `page.tsx` + `WorkClient.tsx`). This injects proper unique metadata and allows Google to index real HTML for all primary commercial pages, resolving the site-wide `"use client"` metadata block.
+- **Blog Content Integrity (Audit F7)**: Fixed duplicate `"May 13, 2026"` publish dates across 7 articles in `blogData.ts`. Assigned realistic sequential dates to avoid Google's duplicate/AI-spam filters.
+- **Stats Honesty (E-E-A-T)**: Adjusted unbacked, inflated homepage statistics in `StatsBar.tsx` ("120+ Enterprise Projects" -> "12+", "50k+ Hrs" -> "5k+ Hrs") to align with the company's January 2026 founding date.
+
+### Why
+These fixes address the remaining high-priority technical blockers for SEO indexing and E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness) signals identified in the SEO audit. 
+
+---
+
+### What changed
+- **`src/app/about/page.tsx`** — Converted from a pure `"use client"` file to a server component with proper `export const metadata`. Extracted all interactive/animation code to new `src/app/about/AboutClient.tsx`. This makes the About page SSR-rendered so Google receives real HTML content on first byte, and adds a proper title/description/canonical/OG metadata block that was previously missing.
+- **`src/app/sitemap.ts`** — Replaced `new Date().toISOString()` (dynamic per-build) with three static date constants: `SITE_LAUNCH`, `LAST_SEO_REWRITE`, `LAST_CONTENT_UPDATE`. Each page now gets a realistic, stable lastModified so Googlebot doesn't re-crawl all pages on every deploy (crawl budget waste).
+- **`src/app/layout.tsx`** — Removed 480+ meta keywords from root metadata. Google has ignored `<meta name="keywords">` since 2009; the bloat added payload weight with zero ranking benefit. Kept 12 relevant terms for Bing parity. Also fixed og:image MIME type from `"image/png"` to `"image/jpeg"` (the actual file is `.jpg`).
+- **`src/data/projectData.ts`** — Added a documented NDA disclaimer comment at the top explaining why all project URLs are `"#"`. This is an internal audit acknowledgment (audit finding F6); long-term fix is obtaining client authorization for real URLs/screenshots.
+
+### Why
+SEO ranking diagnosis identified these as the highest-impact code-level fixes: About page was invisible to Google (client-only render), sitemap was wasting crawl budget, meta keywords were dead weight, og:image type mismatch could cause preview failures on some platforms.
+
+### Open items (non-code — cannot be fixed in code)
+- Backlink building (Clutch, GoodFirms, local directories) — requires manual outreach
+- Google Search Console — check coverage errors and manual actions
+- Blog content quality — real articles with accurate dates needed
+- Portfolio case studies — real client content with NDA releases needed
+
+---
+
+
 
 ### What changed
 - Updated `HeroSection.tsx` H1 to bridge local and national intent ("Custom Software & AI Development Company in Ahmedabad, India").

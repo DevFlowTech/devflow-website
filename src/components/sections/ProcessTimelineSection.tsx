@@ -7,22 +7,26 @@ const steps = [
   {
     num: "01",
     title: "Discovery Call",
-    description: "Aligning on goals, scope, and target outcomes to ensure custom software builds solve real business problems.",
+    description:
+      "Aligning on goals, scope, and target outcomes to ensure custom software builds solve real business problems.",
   },
   {
     num: "02",
     title: "Technical Architecture",
-    description: "Structuring scalable databases, microservices layouts, and Next.js frontends before coding starts.",
+    description:
+      "Structuring scalable databases, microservices layouts, and Next.js frontends before coding starts.",
   },
   {
     num: "03",
     title: "Weekly Sprints",
-    description: "Delivering working modules in agile weekly iterations with transparent reporting and review cycles.",
+    description:
+      "Delivering working modules in agile weekly iterations with transparent reporting and review cycles.",
   },
   {
     num: "04",
     title: "Automated Deployment",
-    description: "Launching with optimized CI/CD pipelines, SSL nodes, cloud configurations, and strict caching policies.",
+    description:
+      "Launching with optimized CI/CD pipelines, SSL nodes, cloud configurations, and strict caching policies.",
   },
 ];
 
@@ -72,8 +76,12 @@ export default function ProcessTimelineSection() {
               >
                 {/* Number indicator */}
                 <div className="flex justify-between items-start mb-6">
-                  <span className="text-3xl font-mono font-bold text-devflow-green bg-devflow-black px-2 py-0.5 rounded-lg z-10">{step.num}</span>
-                  <span className="text-[10px] font-mono text-devflow-gray-500">[ STEP ]</span>
+                  <span className="text-3xl font-mono font-bold text-devflow-green bg-devflow-black px-2 py-0.5 rounded-lg z-10">
+                    {step.num}
+                  </span>
+                  <span className="text-[10px] font-mono text-devflow-gray-500">
+                    [ STEP ]
+                  </span>
                 </div>
 
                 {/* Title & description */}

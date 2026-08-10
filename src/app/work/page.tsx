@@ -1,152 +1,29 @@
-"use client";
+import type { Metadata } from "next";
+import WorkClient from "./WorkClient";
 
-import { motion } from "framer-motion";
-import { useState } from "react";
-import Link from "next/link";
-import { staggerContainer, staggerItem, viewportOnce } from "@/lib/motion";
-import { projects } from "@/data/projectData";
-
-const categories = [
-  "All",
-  ...Array.from(new Set(projects.map((p) => p.category))),
-];
+// ponytail: server wrapper gives Google real HTML + per-page metadata.
+// Ceiling: filter state could be moved to URL searchParams for full SSR.
+export const metadata: Metadata = {
+  title: "Portfolio & Case Studies | Custom Software & AI Projects | DevFlow",
+  description:
+    "Explore DevFlow Technology's portfolio of custom software, AI automation, ERP systems, and SaaS projects delivered for clients across healthcare, logistics, and fintech industries.",
+  keywords: [
+    "DevFlow Technology portfolio",
+    "custom software case studies",
+    "AI development projects",
+    "ERP development India",
+    "SaaS development case study",
+    "software development portfolio Ahmedabad",
+  ],
+  alternates: { canonical: "https://www.devflow.co.in/work" },
+  openGraph: {
+    title: "Portfolio & Case Studies | DevFlow Technology",
+    description:
+      "Review custom software, AI automation, and SaaS projects built by DevFlow Technology engineers.",
+    url: "https://www.devflow.co.in/work",
+  },
+};
 
 export default function WorkPage() {
-  const [activeCategory, setActiveCategory] = useState("All");
-
-  const filteredProjects =
-    activeCategory === "All"
-      ? projects
-      : projects.filter((p) => p.category === activeCategory);
-
-  return (
-    <main className="relative min-h-screen bg-devflow-black text-white pt-32 pb-16 overflow-hidden">
-      {/* Aurora Gradient Backdrops */}
-      <div className="absolute top-[10%] left-[5%] aurora-bg-blue opacity-30 pointer-events-none" />
-      <div className="absolute top-[40%] right-[10%] aurora-bg-gold opacity-25 pointer-events-none" />
-
-      {/* Header */}
-      <section className="py-16 border-b border-white/[0.04] relative z-10">
-        <div className="section-container max-w-5xl">
-          <motion.div initial="hidden" animate="visible" className="space-y-6">
-            <span className="text-xs font-mono text-devflow-gold uppercase tracking-widest block">
-              [ PORTFOLIO / CASE STUDIES ]
-            </span>
-            <h1 className="font-display text-4xl md:text-7xl font-medium text-white leading-tight">
-              Custom Software & AI <br />
-              <span className="italic font-normal text-devflow-blue font-display">
-                Engineering Case Studies
-              </span>
-            </h1>
-            <h2 className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
-              Explore our gallery of custom-built software, AI-driven automation
-              systems, and enterprise portals. Review these case studies to see
-              how we accelerate ROI through bespoke IT solutions and rigorous
-              software engineering.
-            </h2>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Categories Filter */}
-      <section className="py-8 bg-devflow-charcoal/30 border-b border-white/[0.04] sticky top-16 md:top-20 z-20 backdrop-blur-md">
-        <div className="section-container">
-          <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-hide">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 rounded-lg text-xs font-mono tracking-wider uppercase whitespace-nowrap transition-all duration-200 border ${
-                  activeCategory === category
-                    ? "bg-devflow-blue text-devflow-black border-devflow-blue"
-                    : "bg-transparent text-devflow-gray-400 border-white/5 hover:text-white hover:border-white/10"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Visual Project Grid - Asymmetrical Bento Grid */}
-      <section className="py-20 relative z-10">
-        <div className="section-container">
-          <motion.div
-            layout
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            {filteredProjects.map((project, index) => {
-              // Create dynamic bento shape: make the first element span 2 columns
-              const isLarge = index === 0 && activeCategory === "All";
-              return (
-                <Link
-                  key={project.slug}
-                  href={`/work/${project.slug}`}
-                  className="block"
-                  aria-label={`Read full case study on ${project.title}`}
-                >
-                  <motion.div
-                    layout
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                      duration: 0.4,
-                      delay: index * 0.03,
-                      ease: [0.16, 1, 0.3, 1],
-                    }}
-                    className={`group relative flex flex-col justify-between p-8 rounded-2xl glass-panel cursor-pointer ${
-                      isLarge ? "md:col-span-2 h-[380px]" : "h-[380px]"
-                    }`}
-                  >
-                    {/* Subtle color highlight in background */}
-                    <div
-                      className="absolute inset-0 opacity-[0.02] group-hover:opacity-[0.05] pointer-events-none transition-opacity duration-500"
-                      style={{
-                        background: `radial-gradient(circle at 50% 50%, ${project.accent || "#0225dc"}, transparent 65%)`,
-                      }}
-                    />
-
-                    <div className="space-y-4">
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-mono text-devflow-green uppercase tracking-widest">
-                          {project.category}
-                        </span>
-                        <span className="text-xs font-mono text-devflow-gray-500">
-                          [ {project.tech[0]} ]
-                        </span>
-                      </div>
-                      <h3 className="font-display text-2xl md:text-3xl font-medium text-white group-hover:text-devflow-green transition-colors duration-300">
-                        {project.title}
-                      </h3>
-                      <p className="text-devflow-gray-300 text-sm font-light leading-relaxed max-w-3xl">
-                        {project.description}
-                      </p>
-                    </div>
-
-                    <div className="pt-6 border-t border-white/5 flex items-center justify-between">
-                      <div className="flex gap-2">
-                        {project.tech.slice(0, 4).map((t, idx) => (
-                          <span
-                            key={idx}
-                            className="font-mono text-[10px] text-devflow-gray-500"
-                          >
-                            {t}
-                          </span>
-                        ))}
-                      </div>
-
-                      <span className="flex items-center gap-1 text-xs font-mono text-devflow-green transition-colors">
-                        CASE STUDY ↗
-                      </span>
-                    </div>
-                  </motion.div>
-                </Link>
-              );
-            })}
-          </motion.div>
-        </div>
-      </section>
-    </main>
-  );
+  return <WorkClient />;
 }

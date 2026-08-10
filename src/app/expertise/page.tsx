@@ -1,34 +1,27 @@
-"use client";
+import type { Metadata } from "next";
+import ExpertiseClient from "./ExpertiseClient";
 
-import SkillsSection from "@/components/sections/SkillsSection";
-import StructuredData from "@/components/SEO/StructuredData";
-import Link from "next/link";
+export const metadata: Metadata = {
+  title: "Technical Expertise | Next.js, AI, Go, Node.js Stack | DevFlow Technology",
+  description:
+    "DevFlow Technology's full technical stack: Next.js, React, Node.js, Go, Python, PostgreSQL, AWS, Docker, Kubernetes, Framer Motion, and cutting-edge AI/LLM integrations.",
+  keywords: [
+    "DevFlow Technology tech stack",
+    "Next.js development company India",
+    "Go Golang developers Ahmedabad",
+    "Node.js developers India",
+    "AI LLM developers India",
+    "full stack technology expertise",
+  ],
+  alternates: { canonical: "https://www.devflow.co.in/expertise" },
+  openGraph: {
+    title: "Technical Expertise & Stack | DevFlow Technology",
+    description:
+      "The complete engineering stack powering DevFlow's custom software, AI, and ERP solutions.",
+    url: "https://www.devflow.co.in/expertise",
+  },
+};
 
 export default function ExpertisePage() {
-  return (
-    <main className="min-h-screen bg-devflow-black text-white pt-16 overflow-hidden">
-      <StructuredData />
-      
-      {/* Re-use the clean SkillsSection component */}
-      <h1 className="sr-only">Our Expertise & Technical Capabilities</h1>
-      <SkillsSection />
-
-      {/* Final page-specific CTA */}
-      <section className="py-20 border-t border-white/[0.04] bg-devflow-black text-center relative z-10">
-        <div className="section-container max-w-3xl mx-auto space-y-6">
-          <p className="text-xs font-mono text-devflow-gray-500 uppercase tracking-widest">[ READY TO WORK WITH OUR EXPERTISE? ]</p>
-          <h2 className="font-display text-2xl md:text-4xl font-medium">Build Secure, Custom Software Systems</h2>
-          <p className="text-sm text-devflow-gray-400 font-light max-w-md mx-auto">
-            Our engineers are ready to build SaaS products, database backends, automated crawlers, and custom business portals.
-          </p>
-          <Link
-            href="/contact"
-            className="px-6 py-3 bg-devflow-green text-devflow-black font-semibold text-xs rounded-xl hover:scale-105 transition-transform inline-block"
-          >
-            START PROJECT DISCOVERY &rarr;
-          </Link>
-        </div>
-      </section>
-    </main>
-  );
+  return <ExpertiseClient />;
 }

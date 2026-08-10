@@ -293,7 +293,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Prompt engineering is an art and a science. Learn the strategies DevFlow Team uses to get enterprise-grade results from ChatGPT and Claude.",
     category: "Web Development",
-    date: "May 13, 2026",
+    date: "May 10, 2026",
     readTime: "1 min read",
     image:
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
@@ -310,7 +310,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "A deep dive into my professional AI stack. Discover how I use specialized LLMs for prompt engineering, code architecture, and building autonomous agentic workflows.",
     category: "AI & Machine Learning",
-    date: "May 13, 2026",
+    date: "May 8, 2026",
     readTime: "2 min read",
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
@@ -327,7 +327,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Google Gemini is a powerhouse for multimodal AI. Learn how DevFlow Team integrates Gemini Pro into Next.js to build smarter applications.",
     category: "Web Development",
-    date: "May 13, 2026",
+    date: "May 7, 2026",
     readTime: "1 min read",
     image:
       "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800",
@@ -343,7 +343,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Discover how Groq’s LPU technology is enabling ultra-low latency AI responses. As an AI Pilot Engineer, I explain how speed transforms the user experience.",
     category: "AI & Machine Learning",
-    date: "May 13, 2026",
+    date: "May 5, 2026",
     readTime: "1 min read",
     image:
       "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800",
@@ -360,7 +360,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Traditional search is dead. Learn how Perplexity AI is helping developers and founders in Ahmedabad stay ahead with accurate, cited technical data.",
     category: "AI & Machine Learning",
-    date: "May 13, 2026",
+    date: "May 2, 2026",
     readTime: "1 min read",
     image:
       "https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&q=80&w=800",
@@ -377,7 +377,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "The role of a developer is changing. Discover why being an AI Pilot Engineer is the key to building the next generation of software in Gota and Ahmedabad.",
     category: "AI & Machine Learning",
-    date: "May 13, 2026",
+    date: "April 28, 2026",
     readTime: "1 min read",
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
@@ -411,7 +411,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Discover DevFlow Team, the founder of DevFlow Technology, architecting high-performance digital products and scalable IT solutions in Ahmedabad.",
     category: "Business Strategy",
-    date: "May 3, 2026",
+    date: "April 25, 2026",
     readTime: "4 min read",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
@@ -571,7 +571,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Learn how to use AnimatePresence, layout animations, and custom variants to make your site feel premium.",
     category: "Web Development",
-    date: "February 10, 2026",
+    date: "February 12, 2026",
     readTime: "1 min read",
     image:
       "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800",
@@ -587,7 +587,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Learn how to write optimized Dockerfiles, build small image layers, and coordinate multi-service applications.",
     category: "AI & Machine Learning",
-    date: "February 5, 2026",
+    date: "February 7, 2026",
     readTime: "1 min read",
     image:
       "https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&q=80&w=800",
@@ -603,7 +603,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Learn how to write readable, self-documenting, and maintainable software using modern OOP and functional patterns.",
     category: "Web Development",
-    date: "February 1, 2026",
+    date: "January 30, 2026",
     readTime: "1 min read",
     image:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",

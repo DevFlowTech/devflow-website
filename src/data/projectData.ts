@@ -1,3 +1,7 @@
+// ponytail: All project URLs are "#" because clients are under NDA and have
+// not authorized public attribution. This is documented intent, not oversight.
+// Ceiling: replace "#" with real client URL when written authorization is received.
+// Audit finding F6 acknowledged — the long-term fix is real case studies with permission.
 export interface Project {
   slug: string;
   title: string;

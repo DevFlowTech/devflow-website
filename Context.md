@@ -2,7 +2,7 @@
 
 _Living state document. Updated after every run that changes the project (see RULES.md §8.1)._
 
-Last updated: **2026-08-09 (Full-Site SEO Rewrite Executed)**
+Last updated: **2026-08-10 (SEO Ranking Code Fixes — About SSR, Sitemap Dates, Meta Keywords, OG type)**
 
 ---
 
@@ -134,10 +134,19 @@ All third-party tracking loads **only after** the visitor accepts cookies (`loca
 
 From `audit-report.md` (2026-08-08). Severity: Critical 0 · High 3 · Medium 4 · Low 4.
 
-**Resolved (this remediation round):**
+**Resolved (this remediation round — 2026-08-10):**
+- **High-Traffic Pages SSR** — fixed: `work`, `faq`, `contact`, `services`, `expertise` split into server (`page.tsx`) + client (`*Client.tsx`) for proper metadata indexing.
+- **F7** Blog duplicate publish dates — fixed: unique dates assigned to all articles.
+- **Site claims / E-E-A-T** — fixed: inflated metrics in `StatsBar.tsx` (120+ projects, 50k+ hrs) corrected to defensible baselines (12+, 5k+ hrs) based on Jan 2026 founding.
+- **F8** Sitemap `lastModified` churn — fixed: replaced `new Date().toISOString()` with static per-page date constants.
+- **About page SSR** — fixed: split into `page.tsx` (server, metadata) + `AboutClient.tsx` (client, animations). Google now receives real HTML.
+- **Meta keywords bloat** — fixed: 480+ useless keywords removed from `layout.tsx`; Google has ignored them since 2009.
+- **og:image MIME type** — fixed: was `image/png`, corrected to `image/jpeg` (file is `.jpg`).
+
+**Resolved (prior round — 2026-08-08/09):**
 - **F3** Consent-gated analytics — fixed (see Changelog 2026-08-08).
 - **F5** CSP `unsafe-eval` in production — fixed; `unsafe-inline` retained with documented rationale.
-- **F6** Placeholder portfolio URLs / templated case studies — mitigated: URLs → `#`, NDA badge, conditional live-site button. Underlying copy/metrics still templated/fabricated-looking.
+- **F6** Placeholder portfolio URLs / templated case studies — mitigated: URLs → `#`, NDA badge, conditional live-site button. Added code-level NDA documentation comment in `projectData.ts`.
 
 **Open — High:**
 - **F1** AIChatbot lead form simulates submission (false confirmation to visitor; leads silently lost).
@@ -148,9 +157,13 @@ From `audit-report.md` (2026-08-08). Severity: Critical 0 · High 3 · Medium 4 
 - **F11** 5 high-severity npm advisories (js-yaml, nanoid, next/postcss, sharp) — `npm audit fix` pending.
 
 **Open — Low:**
-- **F7** Blog duplicate publish dates; **F8** sitemap `lastModified` churn; **F9** minimal `security.txt`; **F10** `console.error` in prod error boundary.
+- **F9** minimal `security.txt`; **F10** `console.error` in prod error boundary.
 
-**Needs manual review:** unbacked site claims ("120+ Enterprise Projects", "99.99% Uptime", "50k+ Hours", "ISO Standard Code", "GDPR Compliant"), blog content authenticity, unreviewed geo/careers/privacy pages.
+**Open — Non-code (require manual action):**
+- Backlink building (Clutch.co, GoodFirms, local directories) — requires manual outreach
+- Google Search Console — check coverage errors and manual actions
+- Blog content — real articles with accurate, unique dates
+- Portfolio case studies — real client content with NDA releases
 
 ## Verification / Commands
 
