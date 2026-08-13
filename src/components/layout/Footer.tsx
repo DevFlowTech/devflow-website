@@ -106,7 +106,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-devflow-gray-300 mb-6 leading-relaxed text-sm max-w-sm">
-              Scale your business operations with enterprise-grade engineering. Achieve 10x development velocity, 99.9% uptime availability, and complete source code ownership.
+              Architecting AI-powered custom software systems, ERPs, and automated digital infrastructure for growing businesses and enterprises with 100% source code ownership.
             </p>
 
             {/* Email & Trust Signals */}

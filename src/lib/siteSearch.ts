@@ -1,74 +1,73 @@
 /**
- * SiteSearch — Agentic browsing engine for the DevFlow AI chatbot.
+ * SiteSearch — Comprehensive Knowledge & Intent Engine for DevFlow AI Chatbot.
  *
- * This module provides:
- * 1. Full-text search across all indexed site content
- * 2. Intelligent query interpretation (semantic intent matching)
- * 3. Navigation suggestions (suggesting relevant pages)
- * 4. Contextual response generation based on actual site content
+ * Provides:
+ * 1. Deep company knowledge (capabilities, founders, tech stack, differentiators, case studies)
+ * 2. Intent recognition for connection requests, pricing, services, and technical questions
+ * 3. Connection trigger (showLeadForm = true) when user wants to talk to a person/founder
  */
 
 import {
   siteContent,
   searchContentIndex,
   getContentByType,
-  ContentEntry,
 } from "@/data/contentIndex";
 
-
-
 export interface AgentResponse {
-  /** The main text response */
   text: string;
-  /** Suggested pages the user might want to visit */
   suggestions: { title: string; path: string; icon?: string }[];
-  /** Whether to show the lead capture form */
   showLeadForm: boolean;
-  /** Lead form context message */
   leadContext?: string;
 }
 
-/**
- * Query categories for intelligent routing
- */
 type QueryIntent =
+  | "connect_person"
+  | "about_company"
+  | "founders"
   | "pricing"
   | "services"
   | "projects"
-  | "contact"
-  | "about"
+  | "why_devflow"
   | "expertise"
+  | "technologies"
   | "ai_automation"
   | "erp"
   | "seo"
   | "saas"
-  | "blog"
-  | "faq"
-  | "technologies"
-  | "general"
-  | "greeting";
+  | "compare"
+  | "glossary"
+  | "location"
+  | "greeting"
+  | "general";
 
-/**
- * Classify the user's query intent based on keywords
- */
 function classifyIntent(query: string): QueryIntent {
   const q = query.toLowerCase().trim();
 
+  // Check connection / talk to person request first!
+  if (
+    /(connect|talk to (a )?person|talk to human|speak to|talk with|contact founder|schedule a call|book a call|call me|reach team|hire|discuss project|get in touch|send request|connect to customer|connect me)/i.test(
+      q
+    )
+  ) {
+    return "connect_person";
+  }
+
   const intentPatterns: [RegExp, QueryIntent][] = [
-    [/^(hi|hello|hey|good morning|good evening|greetings)/, "greeting"],
-    [/(price|pricing|cost|budget|how much|affordable|estimate|₹|rupees)/, "pricing"],
-    [/(service|what you do|offer|provide|capabilities)/, "services"],
+    [/^(hi|hello|hey|good morning|good evening|greetings|namaste)/, "greeting"],
+    [/(founder|prince|bhavin|leadership|ceo|cto|who built|who runs|who owns)/, "founders"],
+    [/(tell me about (the )?company|what is devflow|about devflow|who is devflow|company profile|company background)/, "about_company"],
+    [/(why devflow|why choose|differentiator|why partner|advantage|unique)/, "why_devflow"],
+    [/(where are you located|location|office|ahmedabad|address|india|headquarters)/, "location"],
+    [/(compare|vs|difference|versus|rag vs|agent vs|custom vs)/, "compare"],
+    [/(glossary|define|definition|what is rag|what is erp|what is an ai agent)/, "glossary"],
+    [/(price|pricing|cost|budget|how much|estimate|quote|rate|fee|payment)/, "pricing"],
+    [/(service|what you do|offer|provide|capabilities|solutions)/, "services"],
     [/(project|portfolio|work|case study|client|customers?|showcase)/, "projects"],
-    [/(contact|hire|consultation|talk|reach|email|phone|call|meeting)/, "contact"],
-    [/(about|who|team|founder|story|philosophy|values|mission|started)/, "about"],
-    [/(expertise|skill|tech|technology|stack|framework|tool|language)/, "expertise"],
+    [/(expertise|skill|tech|technology|stack|framework|tool|language|database)/, "expertise"],
     [/(ai|artificial intelligence|machine learning|llm|gpt|chatbot|rag|automation|agent|intelligent|model)/, "ai_automation"],
     [/(erp|enterprise|crm|inventory|logistics|supply chain|business system)/, "erp"],
     [/(seo|geo|aeo|search engine|ranking|google|optimization|schema|json-ld|local search)/, "seo"],
     [/(saas|subscription|multi.?tenant|billing|stripe)/, "saas"],
-    [/(blog|article|guide|read|resource|insight)/, "blog"],
-    [/(faq|question|common|answer)/, "faq"],
-    [/(react|next\.?js|typescript|node|python|docker|aws|cloud|database|postgresql)/, "technologies"],
   ];
 
   for (const [pattern, intent] of intentPatterns) {
@@ -78,10 +77,6 @@ function classifyIntent(query: string): QueryIntent {
   return "general";
 }
 
-/**
- * Generate a contextual agentic response using the content index.
- * This turns the chatbot into an "agent" that can browse the site's content.
- */
 export function generateAgentResponse(userQuery: string): AgentResponse {
   const intent = classifyIntent(userQuery);
   const searchResults = searchContentIndex(userQuery, 4);
@@ -90,275 +85,226 @@ export function generateAgentResponse(userQuery: string): AgentResponse {
   let suggestions: { title: string; path: string; icon?: string }[] = [];
   let showLeadForm = false;
 
-  // Build response based on intent + search results
   switch (intent) {
-    case "greeting": {
+    case "connect_person": {
       text =
-        "Hello! 👋 I'm DevFlow's AI agent — I can browse our entire website to answer your questions. Ask me about our services, pricing, projects, technologies, or anything else you'd like to know!";
+        "🤝 **Direct Founder & Technical Connection**\n\n" +
+        "You can connect directly with our founders & senior architects:\n" +
+        "• **Prince Gajjar (Founder & CEO)** — Technical Architecture & Strategy\n" +
+        "• **Bhavin Rajput (Co-Founder & CTO)** — Backend Systems & Cloud Infrastructure\n\n" +
+        "Please fill out your details below. Once submitted, our team will receive your connection request instantly and contact you within 24 hours!";
       suggestions = [
-        { title: "Our Services", path: "/services", icon: "⚙️" },
-        { title: "Portfolio", path: "/work", icon: "💼" },
-        { title: "About Us", path: "/about", icon: "📖" },
+        { title: "Founders Bio", path: "/about/founders", icon: "👥" },
+        { title: "Why DevFlow", path: "/why-devflow", icon: "⚡" },
+        { title: "Case Studies", path: "/case-studies", icon: "💼" },
       ];
+      showLeadForm = true;
+      break;
+    }
+
+    case "about_company": {
+      text =
+        "🏢 **About DevFlow Technology**\n\n" +
+        "DevFlow Technology is an international **AI Systems, Custom Software Infrastructure & Enterprise Software Company**.\n\n" +
+        "**What We Do:**\n" +
+        "• **AI Development & Autonomous Agents**: Custom LLM workflows, RAG search pipelines, function-calling agents.\n" +
+        "• **Custom Enterprise Software & ERPs**: High-speed Next.js platforms for inventory, logistics, and billing with zero user license fees.\n" +
+        "• **SaaS & Web Applications**: Production React 19, Next.js 16, TypeScript, Node.js, and PostgreSQL apps.\n" +
+        "• **Generative Engine Optimization (GEO/AEO)**: Optimizing entity data for AI answer engines (ChatGPT, Perplexity, Gemini).\n\n" +
+        "**Headquarters & Reach:** Based in Ahmedabad, Gujarat, India — serving clients globally across India, USA, Europe, UAE, and Australia.\n\n" +
+        "Would you like to connect with our founders Prince & Bhavin to discuss your project?";
+      suggestions = [
+        { title: "Why DevFlow", path: "/why-devflow", icon: "⚡" },
+        { title: "Our Founders", path: "/about/founders", icon: "👥" },
+        { title: "Services Overview", path: "/services", icon: "⚙️" },
+        { title: "Connect to Team", path: "/contact", icon: "📞" },
+      ];
+      break;
+    }
+
+    case "founders": {
+      text =
+        "👥 **DevFlow Leadership & Founders**\n\n" +
+        "DevFlow is led directly by technical founders:\n\n" +
+        "👨‍💻 **Prince Gajjar (Founder & CEO)** — Software architect leading enterprise strategy, AI systems design, and product engineering.\n" +
+        "🛠️ **Bhavin Rajput (Co-Founder & CTO)** — Systems architect specializing in distributed backends, database scaling, and cloud security.\n\n" +
+        "Our founders personally oversee every project's database architecture, security boundaries, and milestone release verification.";
+      suggestions = [
+        { title: "Founders Page", path: "/about/founders", icon: "👥" },
+        { title: "Why DevFlow", path: "/why-devflow", icon: "⚡" },
+        { title: "Connect with Founders", path: "/contact", icon: "📞" },
+      ];
+      showLeadForm = true;
+      break;
+    }
+
+    case "why_devflow": {
+      text =
+        "⚡ **Why High-Growth Companies Choose DevFlow**\n\n" +
+        "1️⃣ **Architecture-First** — Database schemas and security rules designed before UI code.\n" +
+        "2️⃣ **Direct Founder Involvement** — Senior founders Prince & Bhavin lead execution.\n" +
+        "3️⃣ **100% IP Ownership** — Complete source code transfer upon completion, zero monthly seat licensing.\n" +
+        "4️⃣ **Security-Conscious** — Encryption in transit (TLS 1.3) & rest (AES-256), OWASP Top 10 compliance.\n" +
+        "5️⃣ **Transparent Telemetry** — Weekly active sprint demos and clear progress reporting.\n" +
+        "6️⃣ **180-Day Warranty** — Dedicated SLA post-launch support and code warranty.";
+      suggestions = [
+        { title: "Why DevFlow Page", path: "/why-devflow", icon: "⚡" },
+        { title: "Technology Stack", path: "/technology", icon: "💻" },
+        { title: "Connect with Founders", path: "/contact", icon: "📞" },
+      ];
+      break;
+    }
+
+    case "location": {
+      text =
+        "📍 **Company Location & Operations**\n\n" +
+        "**Headquarters:** DevFlow Technology, Ahmedabad, Gujarat, India (382210).\n" +
+        "**Global Operations:** We partner with growing enterprises and mid-market companies in India, USA, Germany, Europe, UAE, and Australia.\n\n" +
+        "Would you like to schedule a virtual discovery call with our founders?";
+      suggestions = [
+        { title: "Contact Us", path: "/contact", icon: "📞" },
+        { title: "About DevFlow", path: "/about", icon: "📖" },
+      ];
+      showLeadForm = true;
       break;
     }
 
     case "pricing": {
-      const pricingData = searchContentIndex("pricing cost budget", 3);
       text =
-        "Our pricing is project-based and tailored to your specific requirements. Here's a general range:\n\n" +
-        "• **Standard Websites**: Starting at ₹50,000\n" +
-        "• **Custom Web Applications**: ₹2L – ₹8L+\n" +
-        "• **AI Automation & RAG Systems**: ₹3L – ₹15L\n" +
-        "• **Enterprise ERP/CRM**: ₹15L – ₹50L+\n\n" +
-        "For a quick estimate, use our interactive Cost Estimator on the Contact page. Or leave your email and Prince & Bhavin will reach out with a custom quote!";
+        "💰 **Transparent Commercial Models**\n\n" +
+        "We operate on **Fixed-Price Milestone Contracts** or **Dedicated Engineering Team Retainers**.\n\n" +
+        "• **100% Source Code Ownership** upon milestone sign-off.\n" +
+        "• Zero per-user monthly seat licenses or vendor lock-in.\n" +
+        "• Milestones tied directly to staging build approvals.\n\n" +
+        "Submit your project details below to receive a custom architectural scope and timeline estimate from our founders!";
       suggestions = [
         { title: "Contact & Cost Estimator", path: "/contact", icon: "📞" },
-        { title: "Services Overview", path: "/services", icon: "⚙️" },
+        { title: "Explore Services", path: "/services", icon: "⚙️" },
       ];
       showLeadForm = true;
+      break;
+    }
+
+    case "greeting": {
+      text =
+        "Hello! 👋 I'm DevFlow's AI assistant. I can tell you everything about our company, AI capabilities, software services, founders, and case studies — or connect you directly with our team!";
+      suggestions = [
+        { title: "Company Profile", path: "/about", icon: "🏢" },
+        { title: "Our Services", path: "/services", icon: "⚙️" },
+        { title: "Case Studies", path: "/case-studies", icon: "💼" },
+        { title: "Connect to Founder", path: "/contact", icon: "📞" },
+      ];
+      break;
+    }
+
+    case "compare": {
+      text =
+        "⚖️ **Architectural Trade-Off Analysis**\n\n" +
+        "We evaluate technology trade-offs objectively:\n\n" +
+        "• **AI Agent vs Chatbot**: Autonomous multi-step execution vs simple conversational Q&A.\n" +
+        "• **RAG vs Fine-Tuning**: Real-time vector document retrieval vs neural weight training.\n" +
+        "• **Custom Software vs Off-the-Shelf**: 100% IP ownership vs compounding per-seat SaaS fees.\n" +
+        "• **Custom ERP vs SAP/Oracle**: High-speed Next.js platforms vs expensive legacy modules.";
+      suggestions = [
+        { title: "Compare Index", path: "/compare", icon: "⚖️" },
+        { title: "AI Agent vs Chatbot", path: "/compare/ai-agent-vs-chatbot", icon: "🤖" },
+        { title: "RAG vs Fine-Tuning", path: "/compare/rag-vs-fine-tuning", icon: "🔍" },
+      ];
+      break;
+    }
+
+    case "glossary": {
+      text =
+        "📚 **Software & AI Engineering Glossary**\n\n" +
+        "Concise, authoritative definitions for core software concepts:\n\n" +
+        "• **AI Agent**: Goal-driven autonomous entity executing API tool calls.\n" +
+        "• **RAG**: Vector database document chunk retrieval for LLM context.\n" +
+        "• **ERP**: Centralized business software for inventory, billing & logistics.\n" +
+        "• **GEO / AEO**: Optimizing entity data for AI answer engines and LLM citations.";
+      suggestions = [
+        { title: "Full Glossary", path: "/glossary", icon: "📚" },
+        { title: "What is an AI Agent?", path: "/glossary/ai-agent", icon: "🤖" },
+        { title: "What is RAG?", path: "/glossary/rag", icon: "🔍" },
+      ];
       break;
     }
 
     case "services": {
-      const services = getContentByType("service");
       text =
-        "We offer 4 core service areas:\n\n" +
-        services
-          .map(
-            (s) =>
-              `🔹 **${s.title}** — ${s.summary.substring(0, 120)}...`
-          )
-          .join("\n\n") +
-        "\n\nEach service is custom-tailored to your business needs. Which area interests you most?";
-      suggestions = services.map((s) => ({
-        title: s.title,
-        path: s.path,
-        icon: s.icon,
-      }));
+        "⚙️ **DevFlow Core Engineering Services**\n\n" +
+        "🧠 **AI Development & Autonomous Agents** — Custom LLMs, RAG engines, automated tools.\n" +
+        "🛠️ **Custom Enterprise Software & ERPs** — High-performance business management platforms.\n" +
+        "🚀 **SaaS & Web Applications** — Next.js 16, React 19, TypeScript, PostgreSQL apps.\n" +
+        "📈 **Generative Engine Optimization (GEO/AEO)** — AI search engine citation structuring.\n\n" +
+        "Which service area matches your current software requirements?";
+      suggestions = [
+        { title: "All Services", path: "/services", icon: "⚙️" },
+        { title: "AI Development", path: "/services/ai-development", icon: "🧠" },
+        { title: "Custom Software", path: "/services/custom-software-development", icon: "🛠️" },
+        { title: "SaaS Systems", path: "/services/saas-development", icon: "🚀" },
+      ];
       break;
     }
 
     case "projects": {
-      const projects = getContentByType("project").slice(0, 5);
       text =
-        "Here are some of our featured projects:\n\n" +
-        projects
-          .map(
-            (p, i) =>
-              `${i + 1}. **${p.title}** — ${p.summary.substring(0, 100)}...`
-          )
-          .join("\n") +
-        "\n\nWe've delivered **21+ projects** across AI & Automation, SaaS, Enterprise Systems, Mobile Apps, and SEO. Check out our full portfolio!";
+        "💼 **Featured Engineering Case Studies**\n\n" +
+        "1️⃣ **Medicare AI System** — Hospital booking automation and API response optimization.\n" +
+        "2️⃣ **Real Estate Platform** — Sub-second listing search powered by Cloudflare D1.\n" +
+        "3️⃣ **German Logistics Portal** — Real-time European route tracking & custom declarations.\n" +
+        "4️⃣ **Places Data Scraper** — Puppeteer multi-threaded lead extraction pipeline.";
       suggestions = [
-        { title: "View All Projects", path: "/work", icon: "💼" },
-        ...projects.slice(0, 3).map((p) => ({
-          title: p.title,
-          path: p.path,
-          icon: p.icon,
-        })),
-      ];
-      break;
-    }
-
-    case "contact": {
-      text =
-        "I can connect you directly with **Prince Gajjar (CEO)** and **Bhavin Rajput (CTO)**. They typically respond within 24 hours.\n\n" +
-        "📧 Email: contact@devflow.co.in\n\n" +
-        "Please share your name and email below, and I'll make sure the team gets in touch!";
-      suggestions = [
-        { title: "Contact Page", path: "/contact", icon: "📞" },
-        { title: "About the Founders", path: "/about", icon: "📖" },
-      ];
-      showLeadForm = true;
-      break;
-    }
-
-    case "about": {
-      text =
-        "**DevFlow Technology** was founded by **Prince Gajjar (CEO)** and **Bhavin Rajput (CTO)** to fill a gap in standard development shops — a lack of absolute technical ownership.\n\n" +
-        "**Our Core Values:**\n" +
-        "1️⃣ **Engineering First** — We are builders, not pitchmen\n" +
-        "2️⃣ **Chaos to Clarity** — We turn ambiguity into structured systems\n" +
-        "3️⃣ **Radical Transparency** — No sales jargon, just honest technical assessments\n\n" +
-        "We're based in **Ahmedabad, Gujarat** and serve clients across India, the USA, Germany, and Europe.";
-      suggestions = [
-        { title: "Full About Page", path: "/about", icon: "📖" },
-        { title: "Our Expertise", path: "/expertise", icon: "💡" },
-        { title: "Contact Founders", path: "/contact", icon: "📞" },
+        { title: "View All Case Studies", path: "/case-studies", icon: "💼" },
+        { title: "Medicare AI Case Study", path: "/case-studies/medicare-ai-system", icon: "🏥" },
+        { title: "Real Estate Case Study", path: "/case-studies/real-estate-platform", icon: "🏢" },
       ];
       break;
     }
 
     case "expertise":
     case "technologies": {
-      const techEntries = searchContentIndex(
-        "technology stack framework",
-        3
-      );
       text =
-        "Our technical expertise spans **40+ industrial-grade frameworks and tools**:\n\n" +
-        "**Frontend:** Next.js 15/16, React 19, TypeScript, Tailwind CSS, Framer Motion\n" +
-        "**Backend:** Node.js, Go (Golang), Python, Django, Express\n" +
-        "**Databases:** PostgreSQL, MySQL, MongoDB, Redis, InfluxDB\n" +
-        "**Cloud & DevOps:** AWS, Docker, Kubernetes, CI/CD, Serverless\n" +
-        "**AI/ML:** OpenAI API, Gemini API, LangChain, Pinecone, RAG systems\n" +
-        "**Mobile:** React Native, Kotlin, Flutter\n" +
-        "**Design:** Figma, Spline 3D\n\n" +
-        "See our full expertise breakdown on the Expertise page!";
+        "💻 **DevFlow Production Stack**\n\n" +
+        "⚡ **Frontend:** Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS, Framer Motion\n" +
+        "⚙️ **Backend:** Node.js, Express, Python, FastAPI, Go\n" +
+        "🗄️ **Databases:** PostgreSQL, Redis, MongoDB, Cloudflare D1\n" +
+        "☁️ **Cloud & DevOps:** AWS, Docker, Vercel, Cloudflare\n" +
+        "🧠 **AI Stack:** OpenAI API, Gemini API, LangChain, Pinecone, Qdrant, PgVector";
       suggestions = [
-        { title: "Our Expertise", path: "/expertise", icon: "💡" },
-        { title: "Services", path: "/services", icon: "⚙️" },
-        { title: "Case Studies", path: "/work", icon: "💼" },
-      ];
-      break;
-    }
-
-    case "ai_automation": {
-      const aiService = siteContent.find(
-        (e) => e.id === "service/ai-automation"
-      );
-      text =
-        aiService
-          ? `**${aiService.title}**\n\n${aiService.summary}\n\n` +
-            (aiService.details
-              ? `**Tech Stack:** ${aiService.details.split("Tech stack:")[1]?.trim() || aiService.details}`
-              : "")
-          : "We build custom AI solutions including LLM integration, RAG systems, AI chatbots, and automated workflow pipelines.";
-      suggestions = [
-        { title: "AI Automation Service", path: "/services/ai-automation", icon: "🤖" },
-        { title: "AI Development (Ahmedabad)", path: "/ai-development-company-ahmedabad", icon: "🧠" },
-        { title: "AI Blog Posts", path: "/blog", icon: "📝" },
-      ];
-      break;
-    }
-
-    case "erp": {
-      const erpService = siteContent.find(
-        (e) => e.id === "service/custom-erp"
-      );
-      text =
-        erpService
-          ? `**${erpService.title}**\n\n${erpService.summary}\n\n` +
-            (erpService.details
-              ? `**Tech Stack:** ${erpService.details.split("Tech stack:")[1]?.trim() || erpService.details}`
-              : "")
-          : "We build custom ERP/CRM systems with real-time syncing, role-based access control, and automated reporting.";
-      suggestions = [
-        { title: "Custom ERP Service", path: "/services/custom-software-erp", icon: "🏗️" },
-        { title: "ERP vs Off-Shelf Blog", path: "/blog/custom-erp-vs-off-shelf-software-2026", icon: "📝" },
-        { title: "Enterprise Projects", path: "/work", icon: "💼" },
-      ];
-      break;
-    }
-
-    case "seo": {
-      const seoService = siteContent.find(
-        (e) => e.id === "service/enterprise-seo"
-      );
-      text =
-        seoService
-          ? `**${seoService.title}**\n\n${seoService.summary}\n\n` +
-            (seoService.details
-              ? `**Tech Stack:** ${seoService.details.split("Tech stack:")[1]?.trim() || seoService.details}`
-              : "")
-          : "We optimize for both traditional search engines AND AI answer engines (GEO/AEO). JSON-LD schemas, Google Business Profile optimization, and semantic content structuring.";
-      suggestions = [
-        { title: "Enterprise SEO Service", path: "/services/enterprise-seo", icon: "📈" },
-        { title: "Free SEO Audit Tool", path: "/seo-audit", icon: "🔍" },
-        { title: "SEO Company Ahmedabad", path: "/seo-company-ahmedabad", icon: "📊" },
-      ];
-      break;
-    }
-
-    case "saas": {
-      const saasService = siteContent.find(
-        (e) => e.id === "service/saas-development"
-      );
-      text =
-        saasService
-          ? `**${saasService.title}**\n\n${saasService.summary}\n\n` +
-            (saasService.details
-              ? `**Tech Stack:** ${saasService.details.split("Tech stack:")[1]?.trim() || saasService.details}`
-              : "")
-          : "We engineer high-performance multi-tenant SaaS platforms with Stripe billing, elastic databases, and sub-second page loads using Next.js.";
-      suggestions = [
-        { title: "SaaS Development Service", path: "/services/saas-development", icon: "🚀" },
-        { title: "SaaS Blog Posts", path: "/blog", icon: "📝" },
-        { title: "SaaS Projects", path: "/work", icon: "💼" },
-      ];
-      break;
-    }
-
-    case "blog": {
-      const blogs = getContentByType("blog").slice(0, 5);
-      text =
-        "Here are some of our latest articles:\n\n" +
-        blogs
-          .map((b, i) => `${i + 1}. **${b.title}** — ${b.summary.substring(0, 100)}...`)
-          .join("\n") +
-        "\n\nWe regularly publish insights on AI, web development, SaaS, ERP, cybersecurity, and more!";
-      suggestions = [
-        { title: "All Blog Posts", path: "/blog", icon: "📝" },
-        ...blogs.slice(0, 3).map((b) => ({
-          title: b.title,
-          path: b.path,
-          icon: b.icon,
-        })),
-      ];
-      break;
-    }
-
-    case "faq": {
-      const faqs = getContentByType("faq");
-      text =
-        "Here are answers to common questions:\n\n" +
-        faqs
-          .map((f, i) => `${i + 1}. **${f.title}**\n   ${f.summary.substring(0, 120)}...`)
-          .join("\n\n") +
-        "\n\nVisit our FAQ page for the complete list!";
-      suggestions = [
-        { title: "Full FAQ Page", path: "/faq", icon: "❓" },
-        { title: "Contact Us", path: "/contact", icon: "📞" },
+        { title: "Full Technology Page", path: "/technology", icon: "💻" },
+        { title: "Services Overview", path: "/services", icon: "⚙️" },
       ];
       break;
     }
 
     default: {
-      // For general queries, use search results to build a relevant response
       if (searchResults.length > 0) {
         const top = searchResults[0];
-        text =
-          `I found information about **${top.title}**:\n\n` +
-          `${top.summary}\n\n`;
+        text = `I found details regarding **${top.title}**:\n\n${top.summary}\n\n`;
 
         if (searchResults.length > 1) {
-          text += "**Related topics you might be interested in:**\n";
-          searchResults.slice(1, 4).forEach((r, i) => {
+          text += "**Related Topics:**\n";
+          searchResults.slice(1, 3).forEach((r, i) => {
             text += `${i + 1}. ${r.title}\n`;
           });
         }
 
-        suggestions = searchResults.slice(0, 5).map((r) => ({
+        suggestions = searchResults.slice(0, 4).map((r) => ({
           title: r.title,
           path: r.path,
-          icon: r.icon,
+          icon: r.icon || "→",
         }));
       } else {
         text =
-          "Thanks for your question! DevFlow Technology specializes in:\n\n" +
-          "🤖 **AI & Automation** — Custom LLMs, RAG systems, AI chatbots\n" +
-          "🌐 **Web & Mobile Apps** — Next.js, React, React Native\n" +
-          "🏗️ **ERP & Enterprise Systems** — Custom business software\n" +
-          "📈 **SEO & GEO/AEO** — AI search optimization\n" +
-          "🚀 **SaaS Development** — Multi-tenant platforms\n\n" +
-          "I can provide more specific details — just ask! Or would you like to connect with Prince & Bhavin for a free consultation?";
+          "DevFlow Technology specializes in custom AI software, enterprise ERPs, Next.js web applications, and GEO/AEO optimization.\n\n" +
+          "Would you like me to connect you directly with founders **Prince Gajjar** & **Bhavin Rajput** for a technical consultation?";
         suggestions = [
-          { title: "Our Services", path: "/services", icon: "⚙️" },
-          { title: "Portfolio", path: "/work", icon: "💼" },
-          { title: "Contact Us", path: "/contact", icon: "📞" },
-          { title: "About DevFlow", path: "/about", icon: "📖" },
+          { title: "Connect with Founders", path: "/contact", icon: "📞" },
+          { title: "Company Profile", path: "/about", icon: "🏢" },
+          { title: "Services", path: "/services", icon: "⚙️" },
+          { title: "Case Studies", path: "/case-studies", icon: "💼" },
         ];
+        showLeadForm = true;
       }
     }
   }

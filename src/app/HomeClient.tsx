@@ -27,24 +27,21 @@ export default function HomeClient() {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Trust Strip - Moved up for immediate trust signal */}
-      <section className="py-12 bg-devflow-black relative z-10 text-center">
-        <motion.div 
-          className="section-container max-w-4xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: [0.2, 0, 0, 1] }}
-        >
-          <p className="text-xs font-mono text-devflow-gray-400 uppercase tracking-widest mb-6">
-            [ TRUSTED BY TECHNOLOGY TEAMS ]
+      {/* Trust Strip - Factual Capabilities & Engineering Core */}
+      <section className="py-12 bg-devflow-black border-y border-white/[0.06] relative z-10">
+        <div className="section-container max-w-6xl mx-auto">
+          <p className="text-xs font-mono text-devflow-gray-400 uppercase tracking-widest text-center mb-6">
+            [ CORE ENGINEERING CAPABILITIES ]
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-12 opacity-40">
-            <span className="text-xl font-bold font-display tracking-widest text-white">VASSU INFOTECH</span>
-            <span className="text-xl font-mono tracking-widest text-white">AUREON GROUP</span>
-            <span className="text-xl font-bold tracking-widest text-white font-serif italic">TECH LABS</span>
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14 font-mono text-xs md:text-sm text-devflow-gray-200 uppercase tracking-wider">
+            <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-devflow-green" /> AI Engineering</span>
+            <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-devflow-green" /> Custom Software</span>
+            <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-devflow-green" /> SaaS Development</span>
+            <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-devflow-green" /> ERP Systems</span>
+            <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-devflow-green" /> Business Automation</span>
+            <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-devflow-green" /> Dedicated Engineering</span>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Main Bento Grid Layout Section */}
@@ -60,7 +57,7 @@ export default function HomeClient() {
             [ CAPABILITIES & OUTCOMES ]
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-medium text-white">
-            Enterprise Custom Software Development Services
+            Enterprise Custom Software & AI Solutions
           </h2>
         </motion.div>
 
@@ -71,39 +68,39 @@ export default function HomeClient() {
           variants={staggerContainer}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[240px]"
         >
-          {/* Block 1: Key Metrics (col-span-2) -> Links to Work */}
-          <Link href="/work" className="md:col-span-2 block h-full">
+          {/* Block 1: Architecture Pillars (col-span-2) -> Links to Work */}
+          <Link href="/case-studies" className="md:col-span-2 block h-full">
             <motion.div
               variants={staggerItem}
               className="glass-panel p-8 rounded-2xl flex flex-col justify-between group overflow-hidden relative h-full cursor-pointer"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-devflow-green/5 to-transparent pointer-events-none" />
               <div className="flex justify-between items-start">
-                <span className="text-xs font-mono text-devflow-gray-400">[ PERFORMANCE & ROI METRICS ]</span>
+                <span className="text-xs font-mono text-devflow-gray-400">[ ENGINEERING PRINCIPLES ]</span>
                 <FiLayers className="w-5 h-5 text-devflow-green group-hover:rotate-12 transition-transform duration-300" aria-label="Layers" />
               </div>
               
               <div className="grid grid-cols-3 gap-4 py-4">
                 <div>
-                  <span className="block text-3xl md:text-5xl font-bold font-mono text-devflow-green group-hover:scale-105 transition-transform duration-300 origin-left">99.9%</span>
-                  <span className="text-[10px] font-mono text-devflow-gray-400">SERVER UPTIME</span>
+                  <span className="block text-xl md:text-2xl font-bold font-mono text-devflow-green group-hover:scale-105 transition-transform duration-300 origin-left">100%</span>
+                  <span className="text-[10px] font-mono text-devflow-gray-400">SOURCE CODE OWNERSHIP</span>
                 </div>
                 <div>
-                  <span className="block text-3xl md:text-5xl font-bold font-mono text-devflow-green group-hover:scale-105 transition-transform duration-300 origin-left">50k+</span>
-                  <span className="text-[10px] font-mono text-devflow-gray-400">HOURS SAVED</span>
+                  <span className="block text-xl md:text-2xl font-bold font-mono text-devflow-green group-hover:scale-105 transition-transform duration-300 origin-left">DIRECT</span>
+                  <span className="text-[10px] font-mono text-devflow-gray-400">FOUNDER ACCESS</span>
                 </div>
                 <div>
-                  <span className="block text-3xl md:text-5xl font-bold font-mono text-white group-hover:scale-105 transition-transform duration-300 origin-left">2.4x</span>
-                  <span className="text-[10px] font-mono text-devflow-gray-400">WORK SPEEDUP</span>
+                  <span className="block text-xl md:text-2xl font-bold font-mono text-white group-hover:scale-105 transition-transform duration-300 origin-left">MODULAR</span>
+                  <span className="text-[10px] font-mono text-devflow-gray-400">SCALABLE ARCHITECTURE</span>
                 </div>
               </div>
 
               <div className="flex justify-between items-center text-xs font-mono">
                 <p className="text-xs text-devflow-gray-300 font-light truncate max-w-[80%]">
-                  Deploy custom software development solutions engineered for enterprise-grade automation and business ROI.
+                  Architecting software systems engineered for business reliability and long-term maintainability.
                 </p>
                 <span className="text-devflow-green group-hover:translate-x-1 transition-transform duration-300">
-                  VIEW CASE STUDIES &rarr;
+                  EXPLORE CASE STUDIES &rarr;
                 </span>
               </div>
             </motion.div>

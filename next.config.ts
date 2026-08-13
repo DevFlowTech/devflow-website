@@ -87,6 +87,41 @@ const nextConfig: NextConfig = {
         destination: "/services/node-js-development",
         permanent: true,
       },
+      {
+        source: "/ai-development-company-ahmedabad",
+        destination: "/services/ai-development",
+        permanent: true,
+      },
+      {
+        source: "/it-company-ahmedabad",
+        destination: "/services/custom-software-development",
+        permanent: true,
+      },
+      {
+        source: "/it-services-ahmedabad",
+        destination: "/services",
+        permanent: true,
+      },
+      {
+        source: "/software-development-company-ahmedabad",
+        destination: "/services/custom-software-development",
+        permanent: true,
+      },
+      {
+        source: "/mobile-app-development-company-ahmedabad",
+        destination: "/services/mobile-app-development",
+        permanent: true,
+      },
+      {
+        source: "/web-development-company-ahmedabad",
+        destination: "/services/web-application-development",
+        permanent: true,
+      },
+      {
+        source: "/seo-company-ahmedabad",
+        destination: "/services/seo",
+        permanent: true,
+      },
     ];
   },
 

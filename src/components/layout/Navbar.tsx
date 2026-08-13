@@ -13,14 +13,12 @@ import { easeOut } from "@/lib/motion";
 import Magnetic from "@/components/ui/Magnetic";
 
 const navItems = [
-  { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
+  { label: "Industries", href: "/industries" },
   { label: "Case Studies", href: "/case-studies" },
-  { label: "Process", href: "/engineering-process" },
-  { label: "Security & SLA", href: "/security" },
-  { label: "Partnerships", href: "/partnerships" },
+  { label: "Resources", href: "/resources" },
+  { label: "Company", href: "/about" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Blog", href: "/blog" },
 ];
 
 export default function Navbar() {
@@ -103,7 +101,7 @@ export default function Navbar() {
                   >
                     {/* Glare Reflection overlay for liquid glass effect */}
                     <span className="absolute inset-0 w-[200%] h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-20 -translate-x-[120%] group-hover:translate-x-[120%] transition-transform duration-1000 ease-out pointer-events-none" />
-                    <span className="relative z-10">Talk to an Engineer</span>
+                    <span className="relative z-10">Discuss Your Project</span>
                   </Link>
                 </Magnetic>
               </motion.div>
@@ -206,7 +204,7 @@ export default function Navbar() {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block text-center py-4 bg-devflow-green text-devflow-black font-semibold rounded-lg"
                   >
-                    Talk to an Engineer
+                    Discuss Your Project
                   </Link>
                 </motion.div>
               </div>

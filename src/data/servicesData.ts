@@ -974,15 +974,616 @@ export const servicesData: Record<string, ServiceDetail> = {
         question: "What is the cost to hire a Node.js developer in India?",
         answer: "The cost to hire a Node.js developer ranges depending on seniority and engagement model (dedicated team vs project-based). We offer highly flexible packages to align with your project requirements and budget.",
       },
-      {
-        question: "How do you ensure Node.js application security?",
-        answer: "We follow strict security compliance standards, including regular dependency audits via npm audit, input validation, rate limiting, and encrypted environment storage.",
-      },
-      {
-        question: "Can you migrate our existing PHP or Python backend to Node.js?",
-        answer: "Yes, we specialize in legacy migration. We rebuild APIs in Node.js while keeping database structures consistent, ensuring zero user downtime during the migration process.",
-      },
     ],
   },
+  "ai-development": {
+    slug: "ai-development",
+    title: "Enterprise AI Development & Engineering Company",
+    metaDescription: "DevFlow engineers enterprise AI systems, custom LLM applications, RAG search pipelines, and autonomous AI software with strict data security.",
+    keywords: ["AI development company", "custom AI development", "LLM software engineering", "enterprise AI solutions", "RAG development"],
+    definition: "Enterprise AI Development involves architecting custom neural networks, fine-tuning large language models, deploying RAG vector indexes, and embedding cognitive AI logic directly into core software applications.",
+    summary: "Build sovereign AI capabilities that automate complex decision chains, analyze domain-specific datasets, and process client requests 24/7.",
+    keyTakeaways: [
+      "100% private data security with zero public model training leakage.",
+      "Sub-second vector retrieval using Pinecone, Qdrant, and Redis.",
+      "Autonomous agent execution with structured function calling.",
+      "Full IP ownership of custom fine-tuned weights and prompts."
+    ],
+    pros: [
+      "Automates high-complexity manual cognitive tasks.",
+      "Scales operations without linear headcount growth.",
+      "Customized strictly to internal business data and compliance boundaries.",
+      "Integrates with existing enterprise ERP and CRM systems."
+    ],
+    cons: [
+      "Requires clean initial domain documentation.",
+      "Requires token consumption budget planning.",
+      "Demands strict guardrails to prevent hallucination."
+    ],
+    challenges: [
+      { issue: "Unstructured data fragmentation", solution: "Build custom ETL document parsers for PDF, DOCX, and SQL schemas." },
+      { issue: "Hallucination risks", solution: "Enforce strict RAG constraints with deterministic system prompts." }
+    ],
+    benefits: [
+      "Operational Velocity: Process thousands of incoming documents in seconds.",
+      "Cost Reduction: Reduce routine support and audit labor expenses.",
+      "Competitive Moat: Custom fine-tuned models tailored to your proprietary IP."
+    ],
+    features: [
+      { name: "Autonomous AI Agents", detail: "Multi-step reasoning agents that run database queries, execute API calls, and generate reports." },
+      { name: "RAG Vector Architecture", detail: "Enterprise document search engines retrieving exact answers from internal knowledge bases." }
+    ],
+    process: [
+      { step: "01", title: "Discovery & Scoping", description: "Auditing data sources, security requirements, and target AI use cases." },
+      { step: "02", title: "Architecture Design", description: "Selecting optimal LLMs (Gemini, OpenAI, Llama 3), vector DBs, and API endpoints." },
+      { step: "03", title: "Engineering Sprints", description: "Building pipelines, embedding guardrails, and integrating UI components." },
+      { step: "04", title: "Verification & Deployment", description: "Evaluating output accuracy, stress testing load, and deploying to cloud infra." }
+    ],
+    timeline: "4 to 10 weeks depending on data complexity.",
+    pricingPhilosophy: "Fixed architectural milestone budget with transparent cloud and API cost planning.",
+    faqs: [
+      { question: "Is our proprietary data used to train public AI models?", answer: "No. All models and RAG vector indexes are deployed within your isolated cloud environment (AWS/GCP) using zero-data-retention APIs." },
+      { question: "What LLMs does DevFlow work with?", answer: "We work with Gemini 1.5 Pro, GPT-4o, Claude 3.5 Sonnet, and open-source models like Llama 3 and Mistral." }
+    ],
+    technologies: ["Python", "FastAPI", "Next.js", "OpenAI API", "Gemini API", "Pinecone", "LangChain", "Docker"],
+    caseStudies: [
+      { title: "Medicare AI Booking System", outcome: "Automated patient intake processing and saved 15+ hours/week.", link: "/work/medicare-ai-system" }
+    ],
+    comparisonTable: {
+      headers: ["Parameter", "DevFlow Custom AI", "Generic Wrapper SaaS"],
+      rows: [
+        ["Data Privacy", "100% Private Isolated Vector DB", "Shared Third-Party Servers"],
+        ["Workflow Integration", "Deep Native API Connections", "Isolated Chat Widget"],
+        ["Customization", "Fine-Tuned to Proprietary IP", "Generic Base Prompts Only"]
+      ]
+    },
+    costFactors: ["Data volume and format heterogeneity", "Model selection (commercial vs open-source)", "Real-time vs batch processing"],
+    checklist: ["Gather internal documentation", "Establish data security constraints", "Define measurable operational goals"],
+    expertInsights: "Sovereign AI is the ultimate enterprise moat. Companies that structure their internal data for RAG and agentic execution today will dominate their sectors.",
+    ctaText: "Discuss AI Development"
+  },
+  "ai-agents": {
+    slug: "ai-agents",
+    title: "Autonomous AI Agent Development Services",
+    metaDescription: "Engineer task-driven AI agents capable of multi-step reasoning, API execution, database lookups, and workflow automation.",
+    keywords: ["AI agent development", "autonomous AI agents", "AI agentic systems", "enterprise AI workflows"],
+    definition: "AI Agent Development builds autonomous software entities powered by large language models that reason through complex goals, invoke external tools, query databases, and execute multi-step workflows without human intervention.",
+    summary: "Deploy intelligent agents that handle support triage, lead qualification, database reconciliation, and automated reporting.",
+    keyTakeaways: [
+      "Task execution via structured function calling and API hooks.",
+      "Multi-agent collaboration architectures (supervisor-worker pipelines).",
+      "Persistent memory and state management across user sessions.",
+      "Human-in-the-loop fallback mechanisms for critical approval steps."
+    ],
+    pros: [
+      "Operates 24/7 with zero operational downtime.",
+      "Executes complex, multi-system workflows automatically.",
+      "Scales transaction handling without adding headcount.",
+      "Maintains audit logs of every decision step."
+    ],
+    cons: [
+      "Requires explicit tool definitions and safety boundary rules.",
+      "Demands token usage optimization for high-throughput loops."
+    ],
+    challenges: [
+      { issue: "Infinite loop or runaway agent tasks", solution: "Set maximum step iterations and strict execution timeouts." },
+      { issue: "Uncontrolled external tool mutations", solution: "Enforce read-only locks or human-in-the-loop approvals for sensitive write actions." }
+    ],
+    benefits: [
+      "24/7 Autonomous Execution: Continuous processing of leads, tickets, and data streams.",
+      "Error Reduction: Standardized agent execution following rigid verification steps.",
+      "Resource Reallocation: Frees human staff for strategic initiative execution."
+    ],
+    features: [
+      { name: "Function Calling Engine", detail: "Direct connection between agent reasoning loops and internal REST APIs or SQL databases." },
+      { name: "Human-in-the-loop Approval", detail: "Graceful escalation to human managers when confidence thresholds fall below policy settings." }
+    ],
+    process: [
+      { step: "01", title: "Workflow Audit", description: "Mapping manual multi-step business processes into discrete state machine nodes." },
+      { step: "02", title: "Tool & API Wiring", description: "Defining structured JSON tool specifications and security permissions." },
+      { step: "03", title: "Agent Training & Testing", description: "Testing agent reasoning across edge cases and stress scenarios." },
+      { step: "04", title: "Production Deployment", description: "Monitoring execution logs and fine-tuning prompt chains in production." }
+    ],
+    timeline: "4 to 8 weeks.",
+    pricingPhilosophy: "Milestone-based project delivery with clear scope boundaries.",
+    faqs: [
+      { question: "What is the difference between an AI agent and a chatbot?", answer: "A chatbot only generates conversational text answers. An AI agent actually performs actions—querying databases, calling APIs, sending emails, and updating software systems autonomously." }
+    ],
+    technologies: ["LangChain", "LlamaIndex", "Python", "FastAPI", "Node.js", "Redis", "Gemini", "OpenAI"],
+    caseStudies: [
+      { title: "Medicare AI Booking System", outcome: "Autonomous appointment booking with 99.9% uptime.", link: "/work/medicare-ai-system" }
+    ],
+    comparisonTable: {
+      headers: ["Capability", "Autonomous AI Agent", "Rule-Based Bot"],
+      rows: [
+        ["Reasoning", "Dynamic Goal Planning", "Fixed Decision Trees"],
+        ["Tool Execution", "Native API & SQL Invocation", "Static Links Only"],
+        ["Adaptability", "Handles Unstructured Inputs", "Fails on Unseen Phrases"]
+      ]
+    },
+    costFactors: ["Number of external API integrations", "State persistence complexity", "Human-in-the-loop requirements"],
+    checklist: ["Identify repetitive multi-step tasks", "Map out necessary tool endpoints", "Define human approval thresholds"],
+    expertInsights: "Agents transform AI from a passive answer generator into an active digital workforce.",
+    ctaText: "Build AI Agents"
+  },
+  "custom-software-development": {
+    slug: "custom-software-development",
+    title: "Custom Software Engineering & Development Company",
+    metaDescription: "DevFlow engineers enterprise custom software, web applications, and digital business systems built for scale with 100% source code ownership.",
+    keywords: ["custom software development", "enterprise software company", "custom digital systems", "software engineering firm"],
+    definition: "Custom Software Development is the engineering of tailored digital infrastructure, web applications, and operational platforms designed specifically around a company's proprietary workflows.",
+    summary: "Architect digital systems that eliminate operational bottlenecks and provide total control over your business logic and data.",
+    keyTakeaways: [
+      "100% source code ownership with zero recurring vendor software licenses.",
+      "Custom architectures built using Next.js, Node.js, and cloud-native databases.",
+      "Seamless integration with existing enterprise software stacks.",
+      "Enterprise security standards and OWASP compliance."
+    ],
+    pros: [
+      "Precisely tailored to internal business operational rules.",
+      "Eliminates per-user software licensing costs.",
+      "High performance and scalable database structures.",
+      "Full long-term asset ownership."
+    ],
+    cons: [
+      "Requires initial discovery and scoping phase.",
+      "Initial investment higher than basic off-the-shelf subscriptions."
+    ],
+    challenges: [
+      { issue: "Siloed legacy data", solution: "Build clean database migration pipelines and unified API schemas." }
+    ],
+    benefits: [
+      "Operational Advantage: Build features your competitors cannot buy off the shelf.",
+      "Data Sovereignty: Maintain complete control over sensitive customer data."
+    ],
+    features: [
+      { name: "Enterprise Portals", detail: "Custom administrative web applications with role-based access management." }
+    ],
+    process: [
+      { step: "01", title: "Discovery", description: "Detailed scoping of technical and business requirements." },
+      { step: "02", title: "Architecture", description: "Database schema design, API planning, and system wireframes." },
+      { step: "03", title: "Engineering", description: "Agile sprint execution with continuous integration." },
+      { step: "04", title: "Launch", description: "Deployment, security auditing, and user training." }
+    ],
+    timeline: "6 to 12 weeks.",
+    pricingPhilosophy: "Fixed milestone pricing with explicit deliverables.",
+    faqs: [
+      { question: "Who owns the source code?", answer: "You do. 100% IP ownership is transferred upon project delivery." }
+    ],
+    technologies: ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "AWS", "Docker"],
+    caseStudies: [
+      { title: "Real Estate Platform", outcome: "Increased query speed by 240% across 50k listings.", link: "/work/real-estate-platform" }
+    ],
+    comparisonTable: {
+      headers: ["Metric", "Custom Software", "Off-The-Shelf SaaS"],
+      rows: [
+        ["IP Ownership", "100% Yours", "Vendor Owned"],
+        ["Monthly Seat Fees", "$0", "Scales Endlessly per User"],
+        ["Workflow Fit", "100% Exact Fit", "Forces Process Changes"]
+      ]
+    },
+    costFactors: ["Scope breadth", "Integration count", "Performance targets"],
+    checklist: ["List key pain points", "Identify necessary integrations", "Establish security targets"],
+    expertInsights: "Custom software transforms technology from an operating expense into a proprietary business asset.",
+    ctaText: "Discuss Your Project"
+  },
+  "saas-development": {
+    slug: "saas-development",
+    title: "SaaS Product Engineering & Development Company",
+    metaDescription: "Build scalable multi-tenant SaaS products, subscription platforms, and cloud applications with DevFlow's SaaS engineering team.",
+    keywords: ["SaaS development company", "SaaS product engineering", "multi-tenant SaaS architecture", "build SaaS platform"],
+    definition: "SaaS (Software-as-a-Service) Development is the design and construction of multi-tenant web applications delivered via subscription models over the cloud.",
+    summary: "Launch production-grade SaaS products built with modern Next.js, Stripe/Paddle billing, tenant isolation, and automated CI/CD pipelines.",
+    keyTakeaways: [
+      "Multi-tenant database architecture with row-level tenant isolation.",
+      "Automated subscription management and billing integration.",
+      "High-speed global distribution via cloud edge networks.",
+      "Scalable infrastructure designed for thousands of concurrent users."
+    ],
+    pros: [
+      "Recurring revenue business model capability.",
+      "Global access from any web browser or mobile device.",
+      "Centralized cloud updates without client-side installation."
+    ],
+    cons: [
+      "Requires robust tenant isolation security controls.",
+      "Demands high uptime hosting and monitoring infrastructure."
+    ],
+    challenges: [
+      { issue: "Cross-tenant data leaks", solution: "Enforce strict tenant ID middleware and row-level database security policies." }
+    ],
+    benefits: [
+      "Scalability: Support thousands of paying users with minimal incremental server costs.",
+      "Rapid Iteration: Continuous delivery of new features to all subscribers."
+    ],
+    features: [
+      { name: "Multi-Tenant Architecture", detail: "Secure isolation of customer datasets within shared or schema-per-tenant backends." },
+      { name: "Billing & Licensing Engine", detail: "Seamless integration with Stripe, Paddle, or custom invoicing backends." }
+    ],
+    process: [
+      { step: "01", title: "Product Blueprint", description: "Mapping user personas, subscription tiers, and technical architecture." },
+      { step: "02", title: "Core MVP Sprints", description: "Building auth, multi-tenancy, dashboard, and billing foundations." },
+      { step: "03", title: "Beta & QA", description: "Testing tenant boundaries, stress loading, and payment edge cases." },
+      { step: "04", title: "Production Scale", description: "Deploying to Vercel/AWS with global CDN coverage." }
+    ],
+    timeline: "8 to 14 weeks.",
+    pricingPhilosophy: "Phased milestone budgets structured around MVP and launch phases.",
+    faqs: [
+      { question: "How do you handle tenant data isolation?", answer: "We implement tenant-scoped middleware and database Row-Level Security (RLS) to guarantee strict isolation." }
+    ],
+    technologies: ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "Stripe API", "Tailwind CSS"],
+    caseStudies: [
+      { title: "Real Estate Platform", outcome: "Scaled multi-tenant access for 5,000+ active agency users.", link: "/work/real-estate-platform" }
+    ],
+    comparisonTable: {
+      headers: ["Metric", "DevFlow SaaS Engineering", "Template SaaS Starters"],
+      rows: [
+        ["Security", "Enterprise Row-Level Isolation", "Basic Client Filtering"],
+        ["Scalability", "Production Cloud Architecture", "Monolithic Limits"],
+        ["Customization", "100% Custom UI & Business Logic", "Rigid Styling Controls"]
+      ]
+    },
+    costFactors: ["Feature scope", "Payment engine complexity", "Analytics and reporting depth"],
+    checklist: ["Define subscription tiers", "Specify tenant access rules", "Determine third-party integrations"],
+    expertInsights: "SaaS products succeed on performance, security, and onboarding velocity. Building a clean multi-tenant foundation from day one prevents costly rebuilds later.",
+    ctaText: "Build Your SaaS Product"
+  },
+  "web-application-development": {
+    slug: "web-application-development",
+    title: "Web Application Engineering & Development Company",
+    metaDescription: "DevFlow architects fast, accessible, and responsive web applications using Next.js, React, TypeScript, and modern cloud stacks.",
+    keywords: ["web application development", "web app engineering", "Next.js web application", "React web app developers"],
+    definition: "Web Application Development is the process of creating interactive, database-driven software applications that run in web browsers and deliver desktop-grade functionality.",
+    summary: "Deliver ultra-fast, modern web applications that provide flawless user experiences across mobile, tablet, and desktop devices.",
+    keyTakeaways: [
+      "Server-Side Rendering (SSR) & Static Site Generation (SSG) for lightning performance.",
+      "WCAG 2.2 AA accessibility and responsive mobile-first UI.",
+      "Clean TypeScript codebases designed for long-term maintainability.",
+      "Real-time WebSocket and API integration capabilities."
+    ],
+    pros: [
+      "Accessible from any modern browser with zero client installation.",
+      "High SEO visibility when using Server-Side Rendering.",
+      "Fast deployment and instantaneous server-side updates."
+    ],
+    cons: [
+      "Requires cross-browser and multi-screen testing."
+    ],
+    challenges: [
+      { issue: "Slow initial page loads (LCP)", solution: "Implement Server Components, streaming SSR, and automated image optimization." }
+    ],
+    benefits: [
+      "High Conversion: Fast load times keep users engaged and buying.",
+      "Cross-Platform: Single web codebase serving mobile, tablet, and desktop users."
+    ],
+    features: [
+      { name: "Modern Web Dashboards", detail: "Interactive user portals with live charts, filtering, and data management tools." }
+    ],
+    process: [
+      { step: "01", title: "UX Wireframing", description: "Designing intuitive user flows and accessible component hierarchy." },
+      { step: "02", title: "Frontend & API Build", description: "Coding responsive interfaces with React/Next.js and connecting backends." },
+      { step: "03", title: "Testing & Audit", description: "Running Lighthouse, accessibility, and cross-device verification." },
+      { step: "04", title: "Deployment", description: "Shipping to edge CDN hosting with continuous deployment." }
+    ],
+    timeline: "4 to 8 weeks.",
+    pricingPhilosophy: "Fixed milestone pricing based on UI components and backend integration depth.",
+    faqs: [
+      { question: "Why use Next.js for web applications?", answer: "Next.js combines server-side rendering for top SEO performance with dynamic client hydration for instant user interactions." }
+    ],
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "Vercel"],
+    caseStudies: [
+      { title: "Vassu Infotech Optimization", outcome: "Achieved 99/100 performance rating on mobile hardware.", link: "/work/vassu-infotech" }
+    ],
+    comparisonTable: {
+      headers: ["Metric", "DevFlow Web App", "Legacy Monolith"],
+      rows: [
+        ["Page Load Speed", "< 1.0s LCP", "3.5s+ Heavy Bundles"],
+        ["SEO Optimization", "Native SSR / SSG", "Poor Client SPA Indexing"],
+        ["Accessibility", "WCAG 2.2 AA Compliant", "Minimal ARIA Support"]
+      ]
+    },
+    costFactors: ["UI view count", "Real-time sync requirements", "Third-party service integrations"],
+    checklist: ["Define key user journeys", "Identify screen resolution targets", "Establish performance benchmarks"],
+    expertInsights: "Web apps are the front door to modern businesses. Exceptional speed, clean typography, and accessibility are non-negotiable for enterprise trust.",
+    ctaText: "Build Your Web App"
+  },
+  "mobile-app-development": {
+    slug: "mobile-app-development",
+    title: "Mobile Application Engineering & Development Company",
+    metaDescription: "Build high-performance iOS and Android mobile applications using React Native and Flutter with native device integration.",
+    keywords: ["mobile app development", "iOS app development", "Android app development", "React Native developers"],
+    definition: "Mobile Application Development is the creation of software applications optimized for smartphone and tablet hardware running iOS and Android operating systems.",
+    summary: "Engineer crisp, native-feeling mobile applications with cross-platform efficiency, offline sync, push notifications, and biometric security.",
+    keyTakeaways: [
+      "Cross-platform React Native / Flutter development for single-codebase efficiency.",
+      "Native device capabilities: GPS, camera, push notifications, biometrics.",
+      "Offline-first architecture with local SQLite/AsyncStorage syncing.",
+      "App Store (iOS) and Google Play Store deployment management."
+    ],
+    pros: [
+      "Direct presence on user home screens with push notification reach.",
+      "Full hardware integration (biometrics, camera, Bluetooth, location).",
+      "Offline mode support for field and remote staff."
+    ],
+    cons: [
+      "Requires App Store review approval processes.",
+      "Demands multi-device screen size testing."
+    ],
+    challenges: [
+      { issue: "Inconsistent performance across cheap Android hardware", solution: "Optimize render loops, list virtualizers, and image caching layers." }
+    ],
+    benefits: [
+      "User Engagement: Instant push notifications keep users connected.",
+      "Field Efficiency: Enable mobile teams to operate offline and sync when connected."
+    ],
+    features: [
+      { name: "Cross-Platform Mobile Apps", detail: "Single codebase delivering native 60fps performance on both iOS and Android." }
+    ],
+    process: [
+      { step: "01", title: "Mobile UX Design", description: "Crafting touch-optimized interfaces adhering to Apple Human Interface and Material Design guidelines." },
+      { step: "02", title: "App Engineering", description: "Developing cross-platform code and connecting REST/GraphQL APIs." },
+      { step: "03", title: "Device Testing", description: "Testing across physical iOS and Android devices." },
+      { step: "04", title: "Store Submission", description: "Handling App Store and Google Play compliance and publication." }
+    ],
+    timeline: "6 to 12 weeks.",
+    pricingPhilosophy: "Milestone-driven contracts covering design, development, and store publication.",
+    faqs: [
+      { question: "Should we build cross-platform or pure native?", answer: "React Native and Flutter deliver native performance at ~40% lower cost and half the maintenance overhead of separate native apps." }
+    ],
+    technologies: ["React Native", "Flutter", "TypeScript", "Node.js", "Firebase", "PostgreSQL"],
+    caseStudies: [
+      { title: "Places Data Scraper Mobile Portal", outcome: "Delivered real-time mobile sync for field data collectors.", link: "/work/places-data-scraper" }
+    ],
+    comparisonTable: {
+      headers: ["Metric", "React Native (DevFlow)", "Dual Native (Swift + Kotlin)"],
+      rows: [
+        ["Development Cost", "Single Codebase (~40% Savings)", "Double Development Cost"],
+        ["Feature Parity", "Identical Release Timing", "Delayed Feature Parity"],
+        ["Performance", "Native 60fps UI Components", "Native 60fps UI Components"]
+      ]
+    },
+    costFactors: ["Target operating systems", "Hardware integration depth", "Offline sync requirements"],
+    checklist: ["Identify target devices", "List required native hardware APIs", "Prepare store publisher accounts"],
+    expertInsights: "Mobile apps should feel fast, fluid, and native. Cross-platform engineering gives businesses dual-store reach without doubling engineering budgets.",
+    ctaText: "Develop Your Mobile App"
+  },
+  "dedicated-development-teams": {
+    slug: "dedicated-development-teams",
+    title: "Dedicated Engineering & Development Teams",
+    metaDescription: "Scale your software engineering capacity with dedicated full-stack, backend, frontend, and AI developers managed directly by DevFlow.",
+    keywords: ["dedicated development teams", "hire software engineers", "dedicated developers india", "outsource development team"],
+    definition: "Dedicated Development Teams provide businesses with full-time, specialized software engineers who integrate directly into internal product workflows while DevFlow handles administrative management.",
+    summary: "Instantly augment your engineering capacity with senior React, Next.js, Node.js, Python, and AI developers.",
+    keyTakeaways: [
+      "Senior-level engineers matched to your specific technology stack.",
+      "100% direct communication via Slack, Teams, GitHub, and Jira.",
+      "Zero recruiting, onboarding, or payroll infrastructure friction.",
+      "Flexible scaling—expand or adjust team composition as goals shift."
+    ],
+    pros: [
+      "Bypasses lengthy recruiting and hiring cycles.",
+      "Scales development velocity immediately.",
+      "Lower total cost than expanding local in-house payroll.",
+      "Direct technical alignment with your internal team leads."
+    ],
+    cons: [
+      "Requires internal project management oversight."
+    ],
+    challenges: [
+      { issue: "Timezone communication gaps", solution: "Establish daily overlap windows, async standups, and clear sprint ticketing." }
+    ],
+    benefits: [
+      "Velocity: Add senior engineering muscle to hit critical product launch deadlines.",
+      "Flexibility: Adjust team size dynamically based on workload demand."
+    ],
+    features: [
+      { name: "Full-Stack Development Pods", detail: "Dedicated teams containing frontend, backend, QA, and DevOps specialists." }
+    ],
+    process: [
+      { step: "01", title: "Resource Mapping", description: "Assessing required skills, tech stack, and team size parameters." },
+      { step: "02", title: "Engineer Selection", description: "Reviewing developer profiles and conducting technical interviews." },
+      { step: "03", title: "Onboarding & Integration", description: "Setting up repo access, communications, and daily standups." },
+      { step: "04", title: "Continuous Delivery", description: "Executing weekly sprints under your product management." }
+    ],
+    timeline: "Team placement within 5 to 10 business days.",
+    pricingPhilosophy: "Simple monthly rate per dedicated developer with zero hidden overheads.",
+    faqs: [
+      { question: "How quickly can a dedicated team start?", answer: "Engineers can typically onboard and begin pushing code to your repository within 5 to 10 business days." }
+    ],
+    technologies: ["React", "Next.js", "TypeScript", "Node.js", "Python", "FastAPI", "AWS", "Docker"],
+    caseStudies: [
+      { title: "Apex CRM System", outcome: "Augmented client team to deliver enterprise portal 3 weeks ahead of schedule.", link: "/work/apex-crm-system" }
+    ],
+    comparisonTable: {
+      headers: ["Metric", "DevFlow Dedicated Team", "Internal Hiring"],
+      rows: [
+        ["Time to Onboard", "5-10 Days", "60-90 Days Recruiting"],
+        ["Recruiting Costs", "$0", "$15k+ per engineer"],
+        ["Scale Flexibility", "Instant Month-to-Month", "High Payroll Termination Risk"]
+      ]
+    },
+    costFactors: ["Seniority level required", "Developer count", "Specialized domain requirements"],
+    checklist: ["Define required skill sets", "Prepare repo & tool access permissions", "Assign internal team lead"],
+    expertInsights: "Dedicated teams give growing tech companies enterprise development capacity without the friction of traditional recruiting.",
+    ctaText: "Hire Dedicated Engineers"
+  },
+  "seo": {
+    slug: "seo",
+    title: "Technical SEO & Search Visibility Architecture",
+    metaDescription: "Engineered SEO architecture, crawl optimization, performance tuning, and structured data implementation for enterprise search visibility.",
+    keywords: ["technical SEO company", "SEO architecture", "enterprise SEO services", "Core Web Vitals optimization"],
+    definition: "Technical SEO is the optimization of website architecture, crawlability, indexation, performance, and semantic HTML structure to maximize search engine visibility.",
+    summary: "Build a scalable technical SEO foundation that drives sustainable organic traffic from Google, Bing, and search engines.",
+    keyTakeaways: [
+      "Server-side rendering (SSR) and dynamic sitemap generation.",
+      "Core Web Vitals optimization (LCP < 1.2s, INP < 100ms, CLS 0).",
+      "Comprehensive JSON-LD structured data implementation.",
+      "Clean canonical routing and 301 redirect architecture."
+    ],
+    pros: [
+      "Sustainable long-term organic customer acquisition.",
+      "Improves overall site speed and user experience.",
+      "Protects against indexation and crawl error penalties."
+    ],
+    cons: [
+      "Requires ongoing content and technical maintenance."
+    ],
+    challenges: [
+      { issue: "JavaScript rendering indexing delays", solution: "Implement Server-Side Rendering (SSR) so crawlers receive complete HTML instantly." }
+    ],
+    benefits: [
+      "Higher Rankings: Drive high-intent traffic to key service and resource pages.",
+      "Fast Page Speed: Enhanced user retention through instantaneous loading."
+    ],
+    features: [
+      { name: "Technical SEO Architecture Audit", detail: "Deep-scan inspection of canonical tags, sitemaps, robots.txt, and metadata structure." }
+    ],
+    process: [
+      { step: "01", title: "Technical Audit", description: "Crawling every URL for indexation, canonical, and performance bottlenecks." },
+      { step: "02", title: "Architecture Fixes", description: "Resolving metadata duplicates, rendering delays, and broken link chains." },
+      { step: "03", title: "Schema Engineering", description: "Deploying Organization, Service, FAQ, and Breadcrumb JSON-LD markup." },
+      { step: "04", title: "Monitoring", description: "Tracking GSC coverage, index status, and Core Web Vitals performance." }
+    ],
+    timeline: "Ongoing retainers or 2 to 4 week technical remediation sprints.",
+    pricingPhilosophy: "Fixed technical audit sprint pricing or ongoing monthly Optimization retainers.",
+    faqs: [
+      { question: "What makes DevFlow's technical SEO approach different?", answer: "We treat SEO as a software engineering discipline—building fast SSR pipelines, proper HTML semantics, and precise structured data directly into the codebase." }
+    ],
+    technologies: ["Next.js", "TypeScript", "JSON-LD", "Google Search Console", "Screaming Frog", "Lighthouse"],
+    caseStudies: [
+      { title: "Vassu Infotech Optimization", outcome: "Eliminated indexing errors and achieved top organic visibility.", link: "/work/vassu-infotech" }
+    ],
+    comparisonTable: {
+      headers: ["Metric", "DevFlow Engineering SEO", "Generic Agency SEO"],
+      rows: [
+        ["Core Approach", "Codebase & Architecture Optimization", "Surface Meta Tag Edits Only"],
+        ["Performance Focus", "Core Web Vitals & Sub-Second LCP", "Ignores JavaScript Overhead"],
+        ["Structured Data", "Comprehensive Custom JSON-LD Suite", "Basic Plugin Schemas"]
+      ]
+    },
+    costFactors: ["Site URL count", "Legacy technical debt level", "CMS framework limitations"],
+    checklist: ["Run full site audit", "Check Search Console coverage logs", "Validate JSON-LD schemas"],
+    expertInsights: "SEO is no longer just about keywords. It is about technical performance, clean semantic HTML, and giving search engines pristine structured data.",
+    ctaText: "Request Technical SEO Audit"
+  },
+  "aeo": {
+    slug: "aeo",
+    title: "Answer Engine Optimization (AEO) Services",
+    metaDescription: "Optimize your brand content for direct answer extraction by Google AI Overviews, Perplexity, ChatGPT, and voice assistants.",
+    keywords: ["answer engine optimization", "AEO services", "AI Overviews optimization", "Perplexity SEO"],
+    definition: "Answer Engine Optimization (AEO) is the strategic structuring of web content into concise, authoritative, direct-answer blocks that AI answer engines (ChatGPT, Perplexity, Google AI Overviews) extract and cite.",
+    summary: "Ensure your software capabilities and technical domain expertise are referenced as definitive answers across AI search platforms.",
+    keyTakeaways: [
+      "Question-based content architecture (What, Who, How, Cost, Comparison).",
+      "Concise direct answer summaries (< 50 words) placed immediately beneath headings.",
+      "Structured FAQPage and Service JSON-LD schema integration.",
+      "Data-backed, authoritative content designed for machine extraction."
+    ],
+    pros: [
+      "Captures top placement in Google AI Overviews and Perplexity citations.",
+      "Positions your company as the authoritative answer source in your sector.",
+      "Improves mobile and voice search visibility."
+    ],
+    cons: [
+      "Requires precise, non-fluff copywriting discipline."
+    ],
+    challenges: [
+      { issue: "Generic marketing fluff ignored by AI answer engines", solution: "Write concise, factual, definition-first content blocks." }
+    ],
+    benefits: [
+      "AI Visibility: Get cited by ChatGPT, Claude, and Perplexity when users search for your solutions.",
+      "User Trust: Direct answers instantly answer prospect queries, driving qualified leads."
+    ],
+    features: [
+      { name: "Direct Answer Content Blocks", detail: "Fact-dense, structured content chunks engineered for LLM retrieval and citation." }
+    ],
+    process: [
+      { step: "01", title: "Query Intent Research", description: "Identifying high-value question queries asked by buyers in your niche." },
+      { step: "02", title: "Content Restructuring", description: "Writing direct-answer definition blocks and comparison matrices." },
+      { step: "03", title: "Schema Integration", description: "Embedding FAQPage and TechArticle JSON-LD structured data." },
+      { step: "04", title: "AI Citation Audit", description: "Testing retrieval performance across Perplexity, ChatGPT, and AI Overviews." }
+    ],
+    timeline: "2 to 4 weeks.",
+    pricingPhilosophy: "Integrated into content architecture sprints or standalone optimization packages.",
+    faqs: [
+      { question: "How does AEO differ from traditional SEO?", answer: "Traditional SEO focuses on ranking blue links on a SERP. AEO focuses on formatting information so AI engines extract your exact text as the definitive answer." }
+    ],
+    technologies: ["JSON-LD", "Next.js", "GPTBot Crawl Verification", "Perplexity API Testing"],
+    caseStudies: [
+      { title: "Medicare AI Booking System", outcome: "Captured featured AI overview citations for specialized healthcare booking queries.", link: "/work/medicare-ai-system" }
+    ],
+    comparisonTable: {
+      headers: ["Metric", "AEO Content (DevFlow)", "Traditional Marketing Copy"],
+      rows: [
+        ["Formatting", "Direct Answer Paragraphs + Tables", "Long Vague Marketing Paragraphs"],
+        ["Machine Readability", "100% Structured Semantic HTML", "Unstructured Layout"],
+        ["AI Citation Rate", "High Extraction Frequency", "Ignored by LLM Summarizers"]
+      ]
+    },
+    costFactors: ["Page count to optimize", "Niche question depth", "Schema integration complexity"],
+    checklist: ["Identify core buyer questions", "Format direct answer definitions", "Validate JSON-LD schema"],
+    expertInsights: "Buyers are asking AI answer engines complex questions. If your website does not provide direct, extractable answers, your competitors will get cited instead.",
+    ctaText: "Optimize for Answer Engines"
+  },
+  "geo": {
+    slug: "geo",
+    title: "Generative Engine Optimization (GEO) Strategy",
+    metaDescription: "Establish your brand as a recognized entity across generative AI systems, LLM knowledge bases, and AI search engines.",
+    keywords: ["generative engine optimization", "GEO strategy", "AI entity optimization", "LLM citation optimization"],
+    definition: "Generative Engine Optimization (GEO) is the multi-channel discipline of establishing strong brand entities, factual consistency, authoritative evidence, and machine-readable citations across the web so AI models reliably recommend your company.",
+    summary: "Build brand authority, entity clarity, and authoritative citations so generative AI platforms recommend DevFlow for serious technology projects.",
+    keyTakeaways: [
+      "Entity-first organization and founder schema mapping.",
+      "First-hand evidence and verifiable technical methodology publishing.",
+      "Consistent external entity profiles across GitHub, LinkedIn, Crunchbase, and directories.",
+      "LLM crawler compatibility (robots.txt configuration for GPTBot, ClaudeBot, PerplexityBot)."
+    ],
+    pros: [
+      "Ensures AI tools recommend your company when users ask for top software providers.",
+      "Builds lasting digital entity authority across the web.",
+      "Protects brand representation in AI generated summaries."
+    ],
+    cons: [
+      "Requires consistent entity information across multiple web properties."
+    ],
+    challenges: [
+      { issue: "Conflicting or outdated brand entity data on third-party sites", solution: "Audit and update external profiles to maintain strict factual consistency." }
+    ],
+    benefits: [
+      "AI Recommendation: Become a recommended technology partner when buyers prompt generative AI.",
+      "Authority Moat: Strong entity signals protect your search visibility across core updates."
+    ],
+    features: [
+      { name: "Entity Schema Architecture", detail: "Deep Organization, Person, and Product JSON-LD linking brand entities to official profiles." }
+    ],
+    process: [
+      { step: "01", title: "Entity Audit", description: "Evaluating brand recognition and consistency across generative AI models." },
+      { step: "02", title: "Schema Engineering", description: "Implementing precise Organization and Person JSON-LD linking key founders and services." },
+      { step: "03", title: "Authoritative Content", description: "Publishing original research, architecture blueprints, and case studies." },
+      { step: "04", title: "External Alignment", description: "Standardizing directory profiles, GitHub assets, and social entity references." }
+    ],
+    timeline: "4 to 8 weeks.",
+    pricingPhilosophy: "Comprehensive entity optimization package included in total site transformation.",
+    faqs: [
+      { question: "What is Generative Engine Optimization (GEO)?", answer: "GEO optimizes how your brand is represented inside generative AI models (ChatGPT, Gemini, Claude) by strengthening entity signals, schema data, and authoritative citations across the web." }
+    ],
+    technologies: ["JSON-LD Schema", "Next.js", "GPTBot", "ClaudeBot", "PerplexityBot", "llms.txt"],
+    caseStudies: [
+      { title: "Real Estate Platform", outcome: "Established entity authority for enterprise real estate software engineering.", link: "/work/real-estate-platform" }
+    ],
+    comparisonTable: {
+      headers: ["Metric", "GEO Strategy (DevFlow)", "Surface Keyword Optimization"],
+      rows: [
+        ["Focus Area", "Entity Authority & LLM Recognition", "Single Page Keyword Density"],
+        ["Distribution", "Multi-Channel Entity Consistency", "On-Page Text Edits Only"],
+        ["AI Perception", "Recognized Industry Authority Entity", "Unlinked Plain Text Page"]
+      ]
+    },
+    costFactors: ["External entity profile cleanup scope", "Schema complexity", "Original research publishing"],
+    checklist: ["Audit current AI model perception", "Update external entity profiles", "Deploy llms.txt & Organization schema"],
+    expertInsights: "Generative AI engines do not just read single web pages; they assess overall entity authority. GEO ensures your enterprise is recognized, cited, and recommended.",
+    ctaText: "Build Your GEO Strategy"
+  }
 };
+
 

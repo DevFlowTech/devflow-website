@@ -5,24 +5,23 @@ import AboutClient from "./AboutClient";
 // HTML on first byte. Ceiling: if heavy interactivity is ever needed above
 // the fold, split again and add a suspense boundary.
 export const metadata: Metadata = {
-  title: "About DevFlow Technology | AI & Software Engineers Ahmedabad",
+  title: "About DevFlow Technology | Enterprise AI & Custom Software Engineering",
   description:
-    "DevFlow Technology was founded in Ahmedabad, Gujarat in January 2026 by Prince Gajjar and Bhavin Rajput. Engineering-first custom software, AI systems, and ERP development company.",
+    "DevFlow Technology is an engineering-first AI and custom software engineering company founded by Prince Gajjar and Bhavin Rajput, building software infrastructure for growing global enterprises.",
   keywords: [
     "about DevFlow Technology",
-    "software development company Ahmedabad founders",
     "Prince Gajjar DevFlow",
     "Bhavin Rajput DevFlow",
-    "AI development company Ahmedabad",
-    "custom software engineers Ahmedabad",
+    "AI engineering company",
+    "custom software development company"
   ],
   alternates: {
     canonical: "https://www.devflow.co.in/about",
   },
   openGraph: {
-    title: "About DevFlow Technology | AI & Software Engineers Ahmedabad",
+    title: "About DevFlow Technology | Enterprise AI & Custom Software Engineering",
     description:
-      "Meet the team behind DevFlow — an engineering-first AI and custom software development company based in Ahmedabad, Gujarat, India.",
+      "Meet the leadership behind DevFlow — an engineering-first AI and custom software company building enterprise digital systems.",
     url: "https://www.devflow.co.in/about",
   },
 };

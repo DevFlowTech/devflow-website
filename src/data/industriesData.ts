@@ -170,5 +170,204 @@ export const industriesData: Record<string, IndustryDetail> = {
     workflows: ["Bill of Materials (BOM) Routing", "Raw Materials Reordering Automation", "Barcode Scanning Verification", "Shop Floor Shift Analytics"],
     integrations: ["Honeywell Scanner APIs", "SAP Legacy Database Adapters", "Tally ERP Accounting Bridge", "Logistics Shipping Carriers"],
     content: "Manufacturing operations require centralized data loops to prevent assembly delays. DevFlow designs custom manufacturing ERP platforms that track parts movements across yards and yards of floor space, automating material reordering and tracking shipping logistics."
+  },
+  "real-estate": {
+    slug: "real-estate",
+    title: "Real Estate & PropTech Software Development Company",
+    metaDescription: "Build custom real estate software platforms, property management systems, CRM portals, and AI property search engines with DevFlow.",
+    keywords: ["real estate software development", "PropTech software company", "property management software", "real estate CRM"],
+    definition: "Real Estate & PropTech Software Development creates custom web applications, property management portals, automated listing scrapers, and CRM platforms for real estate developers, brokers, and asset managers.",
+    summary: "High-performance property technology portals featuring real-time inventory filtering, client document portals, map search, and automated lead routing.",
+    keyTakeaways: [
+      "Sub-second multi-filter search across thousands of property listings.",
+      "Custom tenant and buyer self-service portals with electronic document signing.",
+      "Automated WhatsApp and email lead notifications for brokers.",
+      "GIS and interactive mapping integrations."
+    ],
+    pros: ["Centralizes lead and property listings.", "Reduces sales response time to under 5 minutes.", "Automates lease and invoice generation."],
+    cons: ["Requires high-resolution image asset optimization."],
+    challenges: [{ issue: "Slow query speeds on complex multi-attribute property filters", solution: "Deploy PostgreSQL index tuning and Elasticsearch/Algolia caching layers." }],
+    benefits: ["Higher Closing Velocity: Instant lead delivery to active agents.", "Operational Automation: Automated lease generation and tenant billing."],
+    features: [{ name: "Interactive Map Search", detail: "Fast location-based property filtering with boundary mapping." }],
+    process: [
+      { step: "01", title: "Discovery", description: "Auditing property inventory workflows and CRM stages." },
+      { step: "02", title: "Engineering", description: "Building responsive frontends and spatial database backends." }
+    ],
+    timeline: "6 to 12 weeks.",
+    pricingPhilosophy: "Fixed milestone project model based on feature scope.",
+    faqs: [{ question: "Can the platform handle thousands of listings?", answer: "Yes, our real estate architectures utilize optimized database indexing to render search results in under 200ms." }],
+    technologies: ["Next.js", "React", "PostgreSQL", "Mapbox", "AWS S3", "Node.js"],
+    caseStudies: [{ title: "Real Estate Platform", outcome: "Optimized search latency by 240% across 50k listings.", link: "/work/real-estate-platform" }],
+    comparisonTable: {
+      headers: ["Metric", "DevFlow Custom PropTech", "Generic WordPress Plugin"],
+      rows: [["Search Speed", "< 200ms DB Indexing", "2.5s+ Slow SQL Queries"], ["Custom Workflows", "100% Tailored CRM", "Rigid Plugin Settings"]]
+    },
+    costFactors: ["Listing density", "GIS mapping complexity", "Payment/tenant portal features"],
+    checklist: ["Gather listing schema attributes", "Define agent permission tiers", "Establish CRM lead routing rules"],
+    expertInsights: "In real estate technology, speed is everything. A fast, interactive property portal converts window shoppers into qualified viewings.",
+    ctaText: "Build PropTech Platform",
+    compliance: ["REDA / Fair Housing Compliance", "GDPR Tenant Data Protection"],
+    workflows: ["Listing Syndication", "Lead Routing to On-Duty Agents", "Digital Lease Execution"],
+    integrations: ["MLS / RESO Web API", "Stripe Rent Payments", "DocuSign API"],
+    content: "DevFlow engineers custom PropTech platforms, property management suites, and real estate portals designed to accelerate deal closing cycles."
+  },
+  "logistics": {
+    slug: "logistics",
+    title: "Logistics & Supply Chain Software Solutions",
+    metaDescription: "Engineer custom logistics platforms, fleet management software, dispatch portals, and tracking systems with DevFlow.",
+    keywords: ["logistics software development", "fleet management software", "supply chain portal", "dispatch tracking software"],
+    definition: "Logistics Software Engineering builds custom digital infrastructure to orchestrate freight dispatch, fleet tracking, warehouse inventory, and route optimization.",
+    summary: "Real-time fleet tracking, dispatch management, and customs clearance portals built for global transport and supply chain operators.",
+    keyTakeaways: [
+      "Real-time GPS tracking and geofencing alerts.",
+      "Automated bill of lading and manifest document generation.",
+      "Driver dispatch and route optimization algorithms."
+    ],
+    pros: ["Eliminates dispatch communication lag.", "Reduces fleet fuel waste.", "Provides live telemetry to cargo owners."],
+    cons: ["Requires cellular hardware and GPS API integrations."],
+    challenges: [{ issue: "Driver connectivity drops", solution: "Implement offline-first mobile sync protocols using local SQLite caches." }],
+    benefits: ["Visibility: Complete real-time tracking of cargo movement.", "Cost Reduction: Optimized routes lower fuel consumption."],
+    features: [{ name: "Fleet Dispatch Board", detail: "Drag-and-drop dispatch management interface with live map tracking." }],
+    process: [
+      { step: "01", title: "Workflow Scoping", description: "Mapping fleet routines and cargo manifest steps." },
+      { step: "02", title: "Platform Build", description: "Constructing real-time WebSockets dispatch panels and mobile apps." }
+    ],
+    timeline: "8 to 16 weeks.",
+    pricingPhilosophy: "Milestone-driven delivery based on fleet nodes and module count.",
+    faqs: [{ question: "Can shippers track their deliveries in real-time?", answer: "Yes, we build self-service tracking portals with live interactive map updates." }],
+    technologies: ["Node.js", "React Native", "PostgreSQL", "Redis", "Google Maps API", "Docker"],
+    caseStudies: [{ title: "German Logistics Portal", outcome: "Reduced dispatch delays by 35% across European sea and road ports.", link: "/work/german-logistics-portal" }],
+    comparisonTable: {
+      headers: ["Metric", "DevFlow Custom Logistics", "Legacy TMS"],
+      rows: [["Tracking Latency", "Real-Time WebSocket Sync", "Batch Interval Updates"], ["Custom Rules", "100% Tailored Routes", "Rigid Default Settings"]]
+    },
+    costFactors: ["Fleet vehicle count", "Map API volumes", "Mobile driver app requirements"],
+    checklist: ["Map vehicle dispatch workflows", "Identify telematics hardware APIs", "Define shipper portal features"],
+    expertInsights: "Modern supply chains run on real-time data. Custom logistics portals give operators total visibility over every shipment.",
+    ctaText: "Build Logistics System",
+    compliance: ["DOT / Transport Regulations", "Customs Digital Filing Standards"],
+    workflows: ["Fleet Dispatching", "Automated Waybill Generation", "Geofence Entry/Exit Alerts"],
+    integrations: ["Telematics GPS APIs", "Customs Ports EDI", "Stripe Freight Invoicing"],
+    content: "DevFlow architects custom fleet tracking, dispatch, and supply chain portals that eliminate operational delays for transport enterprises."
+  },
+  "finance": {
+    slug: "finance",
+    title: "FinTech & Financial Software Engineering",
+    metaDescription: "DevFlow engineers secure FinTech applications, payment gateways, ledger platforms, and financial portals with enterprise security.",
+    keywords: ["FinTech software development", "financial software company", "payment portal engineering", "secure ledger software"],
+    definition: "FinTech & Financial Software Engineering is the development of highly secure, compliant digital banking portals, payment processing systems, investment dashboards, and double-entry accounting ledgers.",
+    summary: "Build bulletproof financial portals, automated billing systems, and ledger platforms with end-to-end encryption and audit trails.",
+    keyTakeaways: [
+      "Bank-grade encryption (TLS 1.3, AES-256) and OWASP Top 10 compliance.",
+      "Immutable audit logs and double-entry transaction ledgers.",
+      "Multi-currency support and automated reconciliation engines."
+    ],
+    pros: ["Zero double-entry accounting errors.", "Instant multi-bank payment processing.", "Compliant transaction logging."],
+    cons: ["Requires rigorous security auditing and penetration testing."],
+    challenges: [{ issue: "Transaction race conditions", solution: "Enforce ACID relational database transactions with optimistic locking." }],
+    benefits: ["Security: Enterprise protection against financial data tampering.", "Automation: Instant transaction reconciliation."],
+    features: [{ name: "Double-Entry Ledger Engine", detail: "Deterministic financial transaction engine maintaining zero-balance audit integrity." }],
+    process: [
+      { step: "01", title: "Security Architecture", description: "Designing database isolation, KMS keys, and access controls." },
+      { step: "02", title: "Core Engineering", description: "Building ledger logic, payment integrations, and dashboards." }
+    ],
+    timeline: "8 to 16 weeks.",
+    pricingPhilosophy: "Fixed milestone pricing with dedicated security verification phases.",
+    faqs: [{ question: "How do you handle financial security?", answer: "We enforce database encryption, strict IAM roles, double-entry transaction verification, and complete audit logging." }],
+    technologies: ["Node.js", "TypeScript", "PostgreSQL", "Redis", "AWS KMS", "Stripe API"],
+    caseStudies: [{ title: "Apex CRM System", outcome: "Engineered secure billing portal with zero financial reconciliation errors.", link: "/work/apex-crm-system" }],
+    comparisonTable: {
+      headers: ["Metric", "DevFlow FinTech Systems", "Standard Web Plugins"],
+      rows: [["Data Encryption", "Field-Level AES-256 KMS", "Plaintext DB Storage"], ["Audit Trail", "Immutable Event Logs", "Basic Edit Timestamps"]]
+    },
+    costFactors: ["Compliance level", "Payment gateway count", "Multi-currency ledger complexity"],
+    checklist: ["Define financial compliance targets", "Map ledger debit/credit schemas", "Select payment providers"],
+    expertInsights: "Financial software requires mathematical precision and unyielding security. Clean ledger architecture builds client trust.",
+    ctaText: "Build Financial System",
+    compliance: ["PCI-DSS Guidelines", "SOC 2 Type II Security Standards"],
+    workflows: ["Double-Entry Reconciliation", "Automated Invoice Generation", "KYC Identity Verification"],
+    integrations: ["Stripe / Plaid APIs", "Bank ACH Adapters", "Taxation / GST Engines"],
+    content: "DevFlow engineers enterprise FinTech applications, payment gateways, and ledger platforms designed for unyielding security and transaction accuracy."
+  },
+  "professional-services": {
+    slug: "professional-services",
+    title: "Professional Services & Agency Software Solutions",
+    metaDescription: "Custom client portals, time tracking systems, project management suites, and billing platforms for professional service firms.",
+    keywords: ["professional services software", "client portal development", "agency management system", "consulting firm software"],
+    definition: "Professional Services Software Development creates custom client portals, resource planning tools, project tracking dashboards, and automated billing software for law firms, consultancies, and digital agencies.",
+    summary: "Streamline client communication, document exchange, project delivery, and invoicing with tailored agency software platforms.",
+    keyTakeaways: [
+      "Custom branded client portals for secure document sharing and status tracking.",
+      "Automated time tracking and milestone billing tools.",
+      "Integrated resource allocation dashboards for team scheduling."
+    ],
+    pros: ["Elevates client perception with branded portals.", "Accelerates invoice collections.", "Reduces client status update emails by 70%."],
+    cons: ["Requires team adoption discipline."],
+    challenges: [{ issue: "Scattered client communication", solution: "Unify project messages, file uploads, and approvals inside a secure portal." }],
+    benefits: ["Client Retention: Premium self-service client experience.", "Margin Control: Live project profitability telemetry."],
+    features: [{ name: "Branded Client Portal", detail: "Secure client workspace for reviewing deliverables, signing contracts, and paying invoices." }],
+    process: [
+      { step: "01", title: "Workflow Design", description: "Mapping client onboarding, project phases, and billing milestones." },
+      { step: "02", title: "Build & Deploy", description: "Developing responsive Next.js client portals and backend APIs." }
+    ],
+    timeline: "6 to 10 weeks.",
+    pricingPhilosophy: "Fixed milestone investment covering custom portal design and integration.",
+    faqs: [{ question: "Can our clients upload heavy files securely?", answer: "Yes, we integrate encrypted direct-to-S3 file uploads supporting multi-gigabyte files." }],
+    technologies: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "AWS S3", "Tailwind CSS"],
+    caseStudies: [{ title: "Vassu Infotech Optimization", outcome: "Built white-label client optimization portal.", link: "/work/vassu-infotech" }],
+    comparisonTable: {
+      headers: ["Metric", "DevFlow Custom Client Portal", "Email & Spreadsheets"],
+      rows: [["Client Experience", "100% Branded Self-Service Portal", "Disorganized Email Threads"], ["File Security", "Encrypted Document Vault", "Unencrypted Attachments"]]
+    },
+    costFactors: ["Portal feature depth", "Third-party accounting links", "Role permissions complexity"],
+    checklist: ["Outline client touchpoints", "Detail document approval stages", "Specify invoicing rules"],
+    expertInsights: "A professional client portal signals engineering sophistication and operational excellence to enterprise buyers.",
+    ctaText: "Build Client Portal",
+    compliance: ["NDA Confidentiality Standards", "GDPR Client Data Rights"],
+    workflows: ["Client Onboarding", "Milestone Approval & Sign-Off", "Automated Invoice Generation"],
+    integrations: ["QuickBooks / Xero API", "DocuSign / HelloSign", "Slack / Teams Webhooks"],
+    content: "DevFlow engineers custom client portals and project management platforms for consultancies, law firms, and agencies looking to elevate client delivery."
+  },
+  "startups": {
+    slug: "startups",
+    title: "Startup MVP Engineering & Software Development",
+    metaDescription: "Accelerate your startup launch with high-velocity MVP engineering, scalable Next.js architectures, and full code ownership.",
+    keywords: ["startup software development", "MVP engineering company", "build MVP product", "tech startup developers"],
+    definition: "Startup MVP Engineering is the rapid design, prototyping, and construction of minimum viable products (MVPs) built on production-grade codebases ready to scale.",
+    summary: "Transform product concepts into scalable, market-ready web and mobile applications engineered for investor demos and user traction.",
+    keyTakeaways: [
+      "Rapid 4 to 8 week MVP engineering execution.",
+      "Clean production-grade codebase with 100% IP ownership.",
+      "Scalable Next.js and Node.js architecture built to handle user growth.",
+      "Direct technical CTO guidance from DevFlow founders."
+    ],
+    pros: ["Fast time-to-market.", "Zero technical debt.", "Direct founder-to-founder technical strategy."],
+    cons: ["Requires disciplined focus on core MVP features."],
+    challenges: [{ issue: "Scope creep threatening launch timeline", solution: "Ruthlessly prioritize core value hypothesis features for phase 1 launch." }],
+    benefits: ["Investor Readiness: Production-grade demo platform that instills confidence.", "Speed: Go from napkin concept to live product in weeks."],
+    features: [{ name: "High-Velocity MVP Pod", detail: "Dedicated product engineering sprint team delivering functional builds weekly." }],
+    process: [
+      { step: "01", title: "Product Blueprint", description: "Framing core user stories, database schemas, and wireframes." },
+      { step: "02", title: "Rapid Engineering", description: "Building MVP features in 2-week active code sprints." },
+      { step: "03", title: "Launch & Iterate", description: "Deploying to Vercel/AWS and establishing analytics feedback loops." }
+    ],
+    timeline: "4 to 8 weeks.",
+    pricingPhilosophy: "Startup-friendly milestone pricing designed for MVP validation.",
+    faqs: [{ question: "How fast can DevFlow build our MVP?", answer: "Most startup MVPs ship within 4 to 8 weeks depending on integration complexity." }],
+    technologies: ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "Supabase", "Tailwind CSS"],
+    caseStudies: [{ title: "Places Data Scraper", outcome: "Built MVP automation tool from concept to 10k daily scrapes in 4 weeks.", link: "/work/places-data-scraper" }],
+    comparisonTable: {
+      headers: ["Metric", "DevFlow MVP Engineering", "Freelance / No-Code Templates"],
+      rows: [["Code Quality", "Production TypeScript & Scalable DB", "Fragile No-Code / Spaghetti Code"], ["Scalability", "Handles 100k+ Users Native", "Breaks on Initial User Spike"]]
+    },
+    costFactors: ["Core feature count", "Third-party API count", "Design customization"],
+    checklist: ["Define core value proposition", "List 3 essential MVP features", "Set target launch date"],
+    expertInsights: "Building an MVP is about speed and technical integrity. Code it right the first time so you scale smoothly when traction hits.",
+    ctaText: "Launch Your MVP",
+    compliance: ["Standard Software IP Assignment", "NDA Security"],
+    workflows: ["Rapid Prototyping", "User Onboarding Funnels", "Analytics Telemetry"],
+    integrations: ["Stripe Billing", "PostHog Analytics", "Resend / SendGrid Email"],
+    content: "DevFlow partners with ambitious founders to engineer scalable, production-ready MVPs built to win users and impress investors."
   }
 };
+

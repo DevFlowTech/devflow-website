@@ -199,6 +199,60 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/why-devflow`,
+      lastModified: LAST_SEO_REWRITE,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/technology`,
+      lastModified: LAST_SEO_REWRITE,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/about/founders`,
+      lastModified: LAST_SEO_REWRITE,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/compare`,
+      lastModified: LAST_SEO_REWRITE,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/glossary`,
+      lastModified: LAST_SEO_REWRITE,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/partnerships/white-label-development`,
+      lastModified: LAST_SEO_REWRITE,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/partnerships/agency-partners`,
+      lastModified: LAST_SEO_REWRITE,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/cookies`,
+      lastModified: SITE_LAUNCH,
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/refund-policy`,
+      lastModified: SITE_LAUNCH,
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    },
   ];
 
   // Blog post pages — use real post.date from data (already ISO-parseable)

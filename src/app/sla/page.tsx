@@ -44,8 +44,8 @@ export default function SLAPage() {
               [ SERVICE LEVEL AGREEMENT ]
             </span>
             <h1 className="font-display text-4xl md:text-7xl font-medium text-white leading-tight">
-              Enterprise Availability. <br />
-              <span className="italic font-normal text-devflow-green font-display">99.9% Uptime SLA.</span>
+              Enterprise Availability & <br />
+              <span className="italic font-normal text-devflow-green font-display">System Support SLA.</span>
             </h1>
             <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
               You receive robust, guaranteed response structures. We support and protect production-critical operations with strict turnaround commitments.
@@ -136,7 +136,7 @@ export default function SLAPage() {
           </p>
           <div className="flex justify-center gap-4">
             <Link href="/contact" className="btn-primary min-w-[200px]">
-              Talk to an Engineer
+              Discuss Your Project
             </Link>
           </div>
         </div>
