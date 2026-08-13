@@ -6,6 +6,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { staggerContainer, staggerItem, easeOut } from "@/lib/motion";
 import { projects } from "@/data/projectData";
+import InternalLinkHub from "@/components/SEO/InternalLinkHub";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -239,6 +240,11 @@ export default function CaseStudyPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* Internal Link Cluster Hub */}
+      <div className="section-container max-w-5xl mx-auto">
+        <InternalLinkHub currentCategory="work" currentSlug={project.slug} />
+      </div>
 
       {/* Next case study navigator */}
       <section className="py-16 border-t border-white/[0.04] text-center bg-devflow-charcoal/20">

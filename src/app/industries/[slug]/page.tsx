@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { industriesData } from "@/data/industriesData";
 import { FiCpu, FiCheck, FiChevronRight, FiAlertCircle, FiSettings, FiActivity } from "react-icons/fi";
+import InternalLinkHub from "@/components/SEO/InternalLinkHub";
 
 interface IndustryPageProps {
   params: Promise<{
@@ -265,6 +266,9 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
             ))}
           </div>
         </div>
+
+        {/* Internal Link Cluster Hub */}
+        <InternalLinkHub currentCategory="industry" currentSlug={industry.slug} />
 
         {/* Bottom Call To Action Block */}
         <div className="pt-12 text-center">

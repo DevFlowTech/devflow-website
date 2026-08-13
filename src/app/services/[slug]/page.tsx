@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { servicesData } from "@/data/servicesData";
 import { FiCpu, FiLayers, FiCheck, FiInfo, FiChevronRight, FiList, FiTrendingUp } from "react-icons/fi";
 import { buildSeoTitle } from "@/lib/utils";
+import InternalLinkHub from "@/components/SEO/InternalLinkHub";
 
 interface ServicePageProps {
   params: Promise<{
@@ -342,6 +343,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
               ))}
           </div>
         </div>
+
+        {/* Internal Link Cluster Hub */}
+        <InternalLinkHub currentCategory="service" currentSlug={service.slug} />
 
         {/* Bottom Call To Action Block */}
         <div className="pt-12 text-center">
