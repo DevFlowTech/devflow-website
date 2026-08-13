@@ -1,80 +1,59 @@
-# DevFlow Technology - Complete Operational Manifest
-> Comprehensive technical documentation, detailed case studies, and full service specifications for DevFlow Technology.
+# DevFlow Technology — Full Manifest
 
-This document outlines the detailed system architectures, services, processes, and complete case studies for DevFlow Technology.
+> DevFlow Technology is an international AI Systems, Custom Software Infrastructure & Enterprise Software Engineering Company based in Ahmedabad, Gujarat, India.
 
-**Core Identity:**
-DevFlow Technology is an engineering-first IT agency designing custom software systems, scalable databases, high-frequency crawlers, and AI-driven automation. 
+DevFlow Technology delivers high-performance AI software systems, autonomous AI agents, RAG search pipelines, enterprise ERP platforms, custom SaaS web applications, cloud infrastructure, and Generative Engine Optimization (GEO/AEO).
 
-- **CEO:** Prince Gajjar
-- **CTO:** Bhavin Rajput
-- **Base:** Ahmedabad, Gujarat, India
-- **URL:** https://www.devflow.co.in
-- **Inquiries:** info@devflow.co.in
-
-
-## Navigation
-- [Home](https://www.devflow.co.in/)
-- [About](https://www.devflow.co.in/about)
-- [Services](https://www.devflow.co.in/services)
-- [Work](https://www.devflow.co.in/work)
-- [Blog](https://www.devflow.co.in/blog)
-- [FAQ](https://www.devflow.co.in/faq)
-- [Contact](https://www.devflow.co.in/contact)
-- [Expertise](https://www.devflow.co.in/expertise)
-- [SEO Audit](https://www.devflow.co.in/seo-audit)
+**Entity Information:**
+- **Legal Name**: DevFlow Technology
+- **Website**: https://www.devflow.co.in
+- **Email**: info@devflow.co.in
+- **Location**: Ahmedabad, Gujarat, India - 382210
+- **Founders**: Prince Gajjar (Founder & CEO), Bhavin Rajput (Co-Founder & CTO)
 
 ---
 
-## Technical Specifications & Stack
-We construct digital solutions using modern, high-throughput technologies:
+## 1. Core Engineering Pillars
+- **Architecture-First Development**: Database schemas, security roles, and API contracts designed prior to frontend execution.
+- **Direct Founder Access**: Founders Prince Gajjar & Bhavin Rajput lead technical architecture and milestone reviews.
+- **100% IP Source Code Ownership**: Full source code transfer upon project completion with zero monthly seat licensing or vendor lock-in.
+- **Security-Conscious Engineering**: OWASP Top 10 guidelines, TLS 1.3 encryption in transit, AES-256 at rest, and strict environment isolation.
+- **Radical Transparency**: Weekly active sprint demos, staging build access, and clear progress reporting.
+- **180-Day Warranty & Support**: Post-launch maintenance SLAs and bug resolution guarantees.
 
-- **Frontend Core:** Next.js 16 (App Router), React 19, TypeScript, Framer Motion, Tailwind CSS v4.
-- **Backend & API Systems:** Node.js, Express, Go (Golang), Python (FastAPI/Django), WebSockets.
-- **Databases & Cache:** PostgreSQL, MySQL, MongoDB, Redis, InfluxDB, Cloudflare D1.
-- **Infrastructure & Cloud:** AWS (EC2, S3, RDS), Kubernetes, Docker, Vercel Edge Networks.
-- **Automation & AI:** Puppeteer, Playwright, OpenAI API, Gemini API, LangChain, Vector Databases (Pinecone).
+---
 
-## Detailed Case Studies
+## 2. Core Service Verticals
+- **AI Development & Autonomous Agents**: https://www.devflow.co.in/services/ai-development
+- **AI Agent Workflow Automation**: https://www.devflow.co.in/services/ai-agents
+- **Custom Software & ERP Platforms**: https://www.devflow.co.in/services/custom-software-development
+- **Multi-Tenant SaaS Development**: https://www.devflow.co.in/services/saas-development
+- **Web Application Engineering**: https://www.devflow.co.in/services/web-application-development
+- **Mobile Application Development**: https://www.devflow.co.in/services/mobile-app-development
+- **Generative Engine Optimization (GEO)**: https://www.devflow.co.in/services/geo
+- **Answer Engine Optimization (AEO)**: https://www.devflow.co.in/services/aeo
+- **Dedicated Development Teams**: https://www.devflow.co.in/services/dedicated-development-teams
 
-### 1. Enterprise AEO & GEO Brand Citation Domination
-- **Context:** Standardizing digital presence so conversational AI engines cite the brand for high-intent search queries.
-- **Challenge:** Client brand was not cited in Perplexity, Claude, or ChatGPT search results.
-- **Solution:** Structured deep JSON-LD schemas (Organization, LocalBusiness, Product) and optimized headings for semantic matching.
-- **Result:** Ranked in top #1-5 citation shares in Perplexity and ChatGPT Search, yielding a 240% inbound corporate lead lift.
+---
 
-### 2. Hyper-Local Google Maps Domination
-- **Context:** Optimizing Google Business Profile for local pack visibility.
-- **Challenge:** Heavy reliance on high-CPC Google Search Ads.
-- **Solution:** Standardized address metadata, deployed verified schema coordinates, and optimized review schema aggregates.
-- **Result:** Captured #1-3 spots on maps for 15+ keywords, driving 1,200+ monthly calls and saving 55% in ad spend.
+## 3. Technology Stack Specifications
+- **Frontend**: Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS, Framer Motion
+- **Backend**: Node.js, Express, Python, FastAPI, Go
+- **Databases & Cache**: PostgreSQL, Redis, MongoDB, Cloudflare D1
+- **Cloud & DevOps**: AWS (Amazon Web Services), Docker, Vercel, Cloudflare
+- **AI & RAG Engines**: OpenAI API, Gemini API, LangChain, Pinecone, Qdrant, PgVector
 
-### 3. Global FinTech Platform Scaling
-- **Context:** Re-architecting legacy single-server database systems.
-- **Challenge:** Latency spikes and downtime during peak concurrent trading hours.
-- **Solution:** Developed a Go-based microservices fleet with container orchestration on AWS.
-- **Result:** Handled a 300% concurrent user volume increase with 99.99% uptime and 65% latency reduction.
+---
 
-## Standardized Operational Process
-1. **Discovery:** Scoping requirements directly with founders (Prince & Bhavin).
-2. **Architecture Layout:** Specifying database mappings and interfaces before coding.
-3. **Agile Sprints:** Developing in clean weekly sprints with active demo calls.
-4. **CI/CD Deployment:** Implementing zero-downtime automated pipelines with edge caching.
-
-## Local Presence
-- [IT Company Ahmedabad](https://www.devflow.co.in/it-company-ahmedabad)
-- [IT Services Ahmedabad](https://www.devflow.co.in/it-services-ahmedabad)
-- [Software Development Ahmedabad](https://www.devflow.co.in/software-development-company-ahmedabad)
-- [Web Development Ahmedabad](https://www.devflow.co.in/web-development-company-ahmedabad)
-- [Mobile App Development Ahmedabad](https://www.devflow.co.in/mobile-app-development-company-ahmedabad)
-- [AI Development Ahmedabad](https://www.devflow.co.in/ai-development-company-ahmedabad)
-- [SEO Company Ahmedabad](https://www.devflow.co.in/seo-company-ahmedabad)
-- [AI Solutions](https://www.devflow.co.in/ai-solutions)
-- [Custom Software Development](https://www.devflow.co.in/services/software-development)
-- [Node JS Development](https://www.devflow.co.in/services/node-js-development)
-- [Dedicated Development Teams](https://www.devflow.co.in/dedicated-development-teams)
-- [Offshore Development](https://www.devflow.co.in/offshore-development)
-- [White Label Development](https://www.devflow.co.in/white-label-development)
-- [Pricing](https://www.devflow.co.in/pricing)
-- [Case Studies](https://www.devflow.co.in/case-studies)
-
+## 4. Key Site Routes Index
+- **Homepage**: https://www.devflow.co.in
+- **About**: https://www.devflow.co.in/about
+- **Founders**: https://www.devflow.co.in/about/founders
+- **Why DevFlow**: https://www.devflow.co.in/why-devflow
+- **Technology**: https://www.devflow.co.in/technology
+- **Case Studies**: https://www.devflow.co.in/case-studies
+- **Comparisons**: https://www.devflow.co.in/compare
+- **Glossary**: https://www.devflow.co.in/glossary
+- **Contact**: https://www.devflow.co.in/contact
+- **White Label Partnerships**: https://www.devflow.co.in/partnerships/white-label-development
+- **Agency Partnerships**: https://www.devflow.co.in/partnerships/agency-partners

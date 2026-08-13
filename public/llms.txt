@@ -1,45 +1,36 @@
 # DevFlow Technology
 
-> DevFlow Technology is a premier AI Development Agency, Custom Software Development Company, and IT Services Provider based in Ahmedabad, Gujarat, India.
+> DevFlow Technology is an international AI Systems, Custom Software Infrastructure & Enterprise Software Engineering Company.
 
-DevFlow Technology specializes in delivering high-performance AI solutions, Generative AI integration, enterprise ERP systems, custom web applications, mobile apps (iOS/Android), cloud infrastructure, and technical SEO services for global clients.
+DevFlow Technology delivers high-performance AI software systems, autonomous AI agents, RAG search pipelines, enterprise ERP platforms, custom SaaS web applications, cloud infrastructure, and Generative Engine Optimization (GEO/AEO).
 
 **Key Information:**
 - **Website**: [devflow.co.in](https://www.devflow.co.in)
 - **Email**: info@devflow.co.in
-- **Location**: SG Highway, S.G. Road, Near Gujarat High Court, Ahmedabad, Gujarat, India - 380015
+- **Location**: Ahmedabad, Gujarat, India - 382210
+- **Founders**: Prince Gajjar (Founder & CEO), Bhavin Rajput (Co-Founder & CTO)
 - **Operating Hours**: Monday - Saturday: 09:00 AM - 07:00 PM IST
 
+## Main Navigation & Core Hubs
+- [Home](https://www.devflow.co.in/): Primary web portal for DevFlow Technology.
+- [About DevFlow](https://www.devflow.co.in/about): Engineering philosophy, core values, and entity details.
+- [Founders & Leadership](https://www.devflow.co.in/about/founders): Profiles of founders Prince Gajjar & Bhavin Rajput with schema.
+- [Why DevFlow](https://www.devflow.co.in/why-devflow): Real engineering differentiators and 100% IP source code ownership guarantees.
+- [Technology Stack](https://www.devflow.co.in/technology): Detailed stack breakdowns across Next.js, React 19, TypeScript, Node.js, Python FastAPI, PostgreSQL, AWS, and RAG vector engines.
+- [Services](https://www.devflow.co.in/services): Comprehensive list of software development, AI, ERP, and GEO/AEO services.
+- [Case Studies](https://www.devflow.co.in/case-studies): Portfolio of enterprise software case study prototypes with measured KPIs.
+- [Architectural Comparisons](https://www.devflow.co.in/compare): Side-by-side trade-off breakdowns (AI Agent vs Chatbot, RAG vs Fine-Tuning, Custom Software vs Off-The-Shelf, Custom ERP vs SAP/Oracle).
+- [Engineering Glossary](https://www.devflow.co.in/glossary): Concise technical dictionary defining AI Agent, RAG, ERP, SaaS, API, Next.js, GEO, and AEO.
+- [Blog](https://www.devflow.co.in/blog): Technical engineering articles and architectural blueprints.
+- [Contact & Connection](https://www.devflow.co.in/contact): Schedule a technical consultation directly with our founders.
 
-## Main Navigation
-- [Home](https://www.devflow.co.in/): The main landing page for DevFlow Technology.
-- [About](https://www.devflow.co.in/about): Details about our company, founders, mission, and team.
-- [Services](https://www.devflow.co.in/services): Comprehensive list of software development, AI, and SEO services.
-- [Work](https://www.devflow.co.in/work): Portfolio of our recent projects and case studies.
-- [Blog](https://www.devflow.co.in/blog): Technical articles, insights, and updates on AI and web development.
-- [FAQ](https://www.devflow.co.in/faq): Frequently asked questions about our process, pricing, and timelines.
-- [Contact](https://www.devflow.co.in/contact): Get in touch or schedule a consultation with our development team.
-- [Expertise](https://www.devflow.co.in/expertise): Detailed overview of our technical stack and domain expertise.
-- [SEO Audit](https://www.devflow.co.in/seo-audit): Free technical SEO audit tool for analyzing website performance.
+## Services & Capability Breakdown
+- [AI Development & Agents](https://www.devflow.co.in/services/ai-development): Custom LLM integration, RAG vector pipelines, and autonomous function-calling agents.
+- [Custom Enterprise Software & ERPs](https://www.devflow.co.in/services/custom-software-development): High-speed Next.js platforms for inventory, logistics, and billing with zero user license fees.
+- [SaaS Development](https://www.devflow.co.in/services/saas-development): Multi-tenant cloud platforms built with Next.js, Node.js, PostgreSQL, and Stripe.
+- [Generative Engine Optimization (GEO/AEO)](https://www.devflow.co.in/services/geo): Optimizing entity data and JSON-LD schema so generative AI engines cite your brand.
+- [White Label Development](https://www.devflow.co.in/partnerships/white-label-development): Silent engineering partnership for agencies and consultancies under strict NDA.
+- [Agency Partner Network](https://www.devflow.co.in/partnerships/agency-partners): Strategic alliances for UI/UX studios and IT consultancies.
 
-## Services & Solutions
-- [AI Solutions](https://www.devflow.co.in/ai-solutions): Custom LLM integration, agentic workflows, and generative AI development.
-- [Custom Software Development](https://www.devflow.co.in/services/software-development): Leading custom software development company in USA, enterprise software applications, and SaaS development services.
-- [Node JS Development](https://www.devflow.co.in/services/node-js-development): Custom Node.js app development, scalable backend APIs, real-time engines, and expert developer hiring.
-- [Dedicated Development Teams](https://www.devflow.co.in/dedicated-development-teams): Scalable, dedicated software engineering teams for hire.
-- [Offshore Development](https://www.devflow.co.in/offshore-development): High-quality, cost-effective offshore custom software development.
-- [White Label Development](https://www.devflow.co.in/white-label-development): Partner agency services for re-selling design and development solutions.
-- [Pricing](https://www.devflow.co.in/pricing): Transparent pricing guidelines for our software development engagement models.
-- [Case Studies](https://www.devflow.co.in/case-studies): Detailed analysis of enterprise GEO optimization and scale success stories.
-
-## Local Presence (Ahmedabad)
-- [IT Company Ahmedabad](https://www.devflow.co.in/it-company-ahmedabad): Leading IT company in Ahmedabad providing custom software and AI solutions.
-- [IT Services Ahmedabad](https://www.devflow.co.in/it-services-ahmedabad): Managed IT services and consultancy based in Ahmedabad, Gujarat.
-- [Software Development Ahmedabad](https://www.devflow.co.in/software-development-company-ahmedabad): Custom software and ERP system development in Ahmedabad.
-- [Web Development Ahmedabad](https://www.devflow.co.in/web-development-company-ahmedabad): Modern full-stack web and SaaS application development.
-- [Mobile App Development Ahmedabad](https://www.devflow.co.in/mobile-app-development-company-ahmedabad): Cross-platform Flutter and React Native mobile applications.
-- [AI Development Ahmedabad](https://www.devflow.co.in/ai-development-company-ahmedabad): Custom Generative AI agents, RAG, and LLM integrations.
-- [SEO Company Ahmedabad](https://www.devflow.co.in/seo-company-ahmedabad): Strategic search engine and generative engine optimization services.
-
-## Optional
-- [Complete Operational Manifest](https://www.devflow.co.in/llms-full.txt): A comprehensive manifest file containing full-text details of our services, technical specs, and detailed case studies.
+## Optional Manifest
+- [Complete Manifest](https://www.devflow.co.in/llms-full.txt): Full-text operational manifest for AI indexers.
