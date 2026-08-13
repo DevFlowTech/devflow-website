@@ -68,8 +68,9 @@ export default async function KnowledgePage({ params }: KnowledgePageProps) {
             "description": article.metaDescription,
             "datePublished": article.date,
             "author": {
-              "@type": "Organization",
-              "name": "DevFlow Team",
+              "@type": "Person",
+              "name": "Prince Gajjar",
+              "jobTitle": "CEO & Co-Founder",
               "url": "https://www.devflow.co.in/about"
             },
             "publisher": {

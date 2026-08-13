@@ -109,7 +109,7 @@ export default function Footer() {
               Architecting AI-powered custom software systems, ERPs, and automated digital infrastructure for growing businesses and enterprises with 100% source code ownership.
             </p>
 
-            {/* Email & Trust Signals */}
+            {/* Email & Trust Signals + NAP (Local SEO) */}
             <div className="space-y-3">
               <a
                 href={emailHref}
@@ -117,10 +117,23 @@ export default function Footer() {
               >
                 {emailText}
               </a>
+
+              {/* Visible NAP — critical for Local SEO consistency */}
+              <address className="not-italic text-xs text-devflow-gray-400 leading-relaxed">
+                <span className="block font-semibold text-devflow-gray-300">DevFlow Technology</span>
+                Opp. Empty Plot, Near Swaminarayan Temple,<br />
+                Navapura, Sarkhej-Bavla Highway,<br />
+                Ahmedabad, Gujarat 382210, India
+              </address>
+              <div className="flex flex-col gap-1 text-xs font-mono text-devflow-gray-400">
+                <a href="tel:+919726113311" className="hover:text-devflow-green transition-colors">+91-97261-13311</a>
+                <a href="tel:+916355043103" className="hover:text-devflow-green transition-colors">+91-63550-43103</a>
+              </div>
+
               <div className="flex flex-wrap gap-2 pt-2">
-                <span className="text-[10px] font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">NDA Protected</span>
-                <span className="text-[10px] font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">ISO Standard Code</span>
-                <span className="text-[10px] font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">GDPR Compliant</span>
+                <span className="text-[10px] font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">NDA Available</span>
+                <span className="text-[10px] font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">Security-Conscious Engineering</span>
+                <span className="text-[10px] font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">GDPR-Aware Architecture</span>
               </div>
             </div>
 

@@ -6,6 +6,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageWrapper from "@/components/layout/PageWrapper";
 import StructuredData from "@/components/SEO/StructuredData";
+import ServerStructuredData from "@/components/SEO/ServerStructuredData";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 
 // Dynamically import heavy components that are not in the initial viewport
@@ -90,6 +91,16 @@ export const metadata: Metadata = {
 
   // Canonical URL
   metadataBase: new URL(siteUrl),
+
+  // Hreflang alternates for international SEO
+  alternates: {
+    canonical: siteUrl,
+    languages: {
+      "en-IN": siteUrl,
+      "en": siteUrl,
+      "x-default": siteUrl,
+    },
+  },
 
   // Category
   category: "technology",
@@ -208,6 +219,9 @@ export default function RootLayout({
           href="https://www.devflow.co.in/llms.txt"
           title="LLM Manifest"
         />
+
+        {/* Server-rendered structured data — visible to AI crawlers in raw HTML */}
+        <ServerStructuredData />
       </head>
       <body className={`${plusJakartaSans.className} antialiased`}>
         {/* Consent-gated analytics (GA, Clarity, GTM, Ahrefs) — only mount

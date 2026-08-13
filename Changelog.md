@@ -2,6 +2,19 @@
 
 Reverse-chronological log of every change made to the project. Per RULES.md §8.1, updated in the same run as any project change. Entries before 2026-08-08 predate this file; see `git log` for that history.
 
+## Final Remediation & Quality Assurance Pass — 2026-08-13 13:45
+
+### What changed
+- **Terms of Service Complete Rewrite (`src/app/terms/page.tsx`)**: Replaced existing terms with a clean, professional 19-section B2B legal contract structure (Introduction, Definitions, Services, Client Responsibilities, Project Scope, Payment Terms, IP, Confidentiality, Third-Party Services, Software Acceptance, Warranty/Bug Fixing, Support & Maintenance, Limitation of Liability, Termination, Refund Policy, Dispute Resolution, Governing Law in Ahmedabad Gujarat India, Changes, Contact Info). Stripped all exaggerated / cyberpunk language.
+- **Unsupported Claims & Metrics Remediation (`src/app/about/AboutClient.tsx`, `src/data/blogData.ts`)**: Removed unbacked 50,000+ hours milestone claim from About page. Removed all fabricated statistics ($50B investments, 78% enterprise adoption, 35-45% cost reduction, 200-350% ROI, etc.) from blog articles and replaced them with defensible qualitative engineering analysis.
+- **Compliance Claims Audit (`src/components/layout/Footer.tsx`, `src/data/industriesData.ts`)**: Replaced unverified certification badges (such as "ISO Standard Code", "GDPR Compliant") with defensible wording ("NDA Available", "Security-Conscious Engineering", "GDPR-Aware Architecture").
+- **GEO / JSON-LD Terminology Cleanup (`src/app/faq/FAQClient.tsx`, `src/components/SEO/StructuredData.tsx`, `src/data/contentIndex.ts`)**: Removed claims framing JSON-LD as a special "GEO schema". Accurately defined GEO as structuring content, entities, metadata, and schema for search engine and AI search engine discoverability.
+- **Homepage Technology Wall Clean-up (`src/components/sections/TechStackSection.tsx`)**: Replaced the continuous multi-row scrolling marquee of 40+ technology logos with a clean 5-category overview grid (Frontend, Backend, Data, Cloud, AI) and added a prominent link button to `/technology-stack`.
+- **Founder & Author Entity Alignment (`src/data/blogData.ts`, `src/components/blog/BlogCard.tsx`, `src/app/blog/page.tsx`, `src/app/blog/[slug]/page.tsx`, `src/app/knowledge-base/[slug]/page.tsx`, `src/components/SEO/StructuredData.tsx`)**: Replaced placeholder author `"DevFlow Team"` with `"Prince Gajjar"` (CEO & Co-Founder) and `"Bhavin Rajput"` (CTO & Co-Founder). Aligned `foundingDate` to 2026 across schema and entity copy.
+
+### Why
+To execute the required remediation pass on the DevFlow Technology website, resolving legal, content, claims, GEO terminology, tech wall usability, and entity consistency issues without breaking or rebuilding working components.
+
 ---
 
 ## SEO Ranking Fixes Part 2 (Client/Server splits, Content Integrity) — 2026-08-10 11:15

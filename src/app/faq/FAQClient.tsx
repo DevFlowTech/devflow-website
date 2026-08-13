@@ -10,7 +10,7 @@ const faqs = [
   {
     question: "What is Generative Engine Optimization (GEO) and does DevFlow implement it?",
     answer:
-      "Generative Engine Optimization (GEO) is the practice of optimizing content so AI engines like ChatGPT, Claude, and Gemini cite your business in conversational search responses. At DevFlow, we implement comprehensive GEO schemas (JSON-LD), establish standardized NAP references, and structure headings specifically for LLM crawler readability.",
+      "Generative Engine Optimization (GEO) involves structuring content, entities, metadata, and structured data to improve discoverability across search engines and AI-powered search experiences. At DevFlow, our approach includes clear information architecture, entity consistency, standard Schema.org structured data, authoritative technical content, internal linking, semantic HTML, and machine-readable information to ensure factual consistency.",
   },
   {
     question: "How does DevFlow build custom ERP and logistics databases?",

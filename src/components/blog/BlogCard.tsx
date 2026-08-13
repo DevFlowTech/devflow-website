@@ -57,10 +57,10 @@ export default function BlogCard({ post }: BlogCardProps) {
         {/* Author & Date */}
         <div className="flex items-center gap-3 pt-4 border-t border-white/[0.06] mt-auto">
           <div className="w-8 h-8 rounded-full bg-devflow-green/10 flex items-center justify-center flex-shrink-0">
-            <span className="text-devflow-green font-semibold text-sm">D</span>
+            <span className="text-devflow-green font-semibold text-sm">P</span>
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-white text-sm font-medium">DevFlow Team</p>
+            <p className="text-white text-sm font-medium">Prince Gajjar</p>
             <p className="text-xs text-devflow-gray-500">{post.date}</p>
           </div>
           <Link

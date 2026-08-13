@@ -39,7 +39,7 @@ const milestones = [
     year: "Q1 2026",
     title: "Launch of Automation Modules",
     description:
-      "Successfully rolled out AI web crawlers and custom ERP tools for regional manufacturing units, saving client teams 50,000+ operational hours.",
+      "Successfully rolled out AI data collection modules and custom ERP tools for regional manufacturing units, streamlining operational workflows.",
   },
   {
     year: "Q2 2026",

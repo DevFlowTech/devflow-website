@@ -2,119 +2,13 @@
 
 import { usePathname } from "next/navigation";
 
-// ========== Organization Schema (Base Entity) ==========
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://www.devflow.co.in/#organization",
-  name: "DevFlow Technology",
-  alternateName: ["DevFlow", "DevFlow Tech", "DevFlow Technology Pvt Ltd"],
-  url: "https://www.devflow.co.in",
-  logo: "https://www.devflow.co.in/logo.png",
-  description:
-    "Full-service IT company delivering AI solutions, enterprise ERP systems, custom software development, and digital transformation services for businesses worldwide. Based in Ahmedabad, Gujarat.",
-  foundingDate: "2025",
-  founders: [
-    {
-      "@type": "Person",
-      name: "Prince Gajjar",
-      jobTitle: "CEO & Co-Founder",
-      url: "https://www.devflow.co.in/about",
-      sameAs: [
-        "https://github.com/princegajjar",
-        "https://linkedin.com/in/princegajjar",
-      ],
-    },
-    {
-      "@type": "Person",
-      name: "Bhavin Rajput",
-      jobTitle: "CTO & Co-Founder",
-      url: "https://www.devflow.co.in/about",
-      sameAs: ["https://linkedin.com/in/bhavinrajput"],
-    },
-  ],
-  sameAs: [
-    "https://twitter.com/devflowtechnology",
-    "https://linkedin.com/company/devflowtechnology",
-    "https://github.com/devflowtechnology",
-    "https://www.devflow.co.in",
-  ],
-  contactPoint: [
-    {
-      "@type": "ContactPoint",
-      email: "info@devflow.co.in",
-      contactType: "customer service",
-      availableLanguage: ["English", "Hindi", "Gujarati"],
-      areaServed: ["IN", "US", "GB", "AE", "AU"],
-    },
-  ],
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: "IN",
-    addressLocality: "Ahmedabad",
-    addressRegion: "Gujarat",
-    postalCode: "382210",
-    streetAddress: "Opp. Empty Plot, Near Swaminarayan Temple, Navapura, Sarkhej-Bavla Highway",
-  },
-  brand: {
-    "@type": "Brand",
-    name: "DevFlow",
-    slogan: "Custom software, clean code, fast execution.",
-  },
-  knowsAbout: [
-    "Artificial Intelligence",
-    "Machine Learning",
-    "Agentic AI",
-    "Retrieval-Augmented Generation",
-    "Large Language Models",
-    "Web Development",
-    "Mobile App Development",
-    "Enterprise Software",
-    "ERP Systems",
-    "SaaS Development",
-    "Cloud Computing",
-    "DevOps",
-    "UI/UX Design",
-    "Digital Transformation",
-    "Generative AI",
-    "LLM Integration",
-    "SEO Services",
-    "Local SEO",
-    "Answer Engine Optimization",
-    "Generative Engine Optimization",
-    "AI Search Optimization",
-    "Technical SEO",
-  ],
-  numberOfEmployees: { "@type": "QuantitativeValue", value: "5-10" },
-  areaServed: [
-    {
-      "@type": "City",
-      name: "Ahmedabad",
-      containedInPlace: { "@type": "State", name: "Gujarat" },
-    },
-    {
-      "@type": "City",
-      name: "Gandhinagar",
-      containedInPlace: { "@type": "State", name: "Gujarat" },
-    },
-    {
-      "@type": "City",
-      name: "Surat",
-      containedInPlace: { "@type": "State", name: "Gujarat" },
-    },
-    {
-      "@type": "City",
-      name: "Vadodara",
-      containedInPlace: { "@type": "State", name: "Gujarat" },
-    },
-    { "@type": "State", name: "Gujarat" },
-    { "@type": "Country", name: "India" },
-    { "@type": "Country", name: "United States" },
-    { "@type": "Country", name: "United Kingdom" },
-    { "@type": "Country", name: "United Arab Emirates" },
-    { "@type": "Country", name: "Australia" },
-  ],
-};
+// ponytail: Global schemas (Organization, WebSite, Citation) are now
+// server-rendered in ServerStructuredData.tsx so AI crawlers that do NOT
+// execute JavaScript can read them. This client component only handles
+// page-conditional schemas that require usePathname().
+
+// Organization, WebSite, and Citation schemas are NOW in
+// ServerStructuredData.tsx (server component). Removed from here.
 
 // ========== LocalBusiness Schema (Local SEO - Ahmedabad Focus) ==========
 const localBusinessSchema = {
@@ -352,223 +246,7 @@ const localBusinessSchema = {
   ],
 };
 
-// ========== LocalBusiness Citation Schema (NAP Consistency) ==========
-const localBusinessCitationSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://www.devflow.co.in/#citation",
-  name: "DevFlow Technology",
-  alternateName: "DevFlow Technology Ahmedabad",
-  url: "https://www.devflow.co.in",
-  telephone: ["+91-97261-13311", "+91-63550-43103"],
-  email: "info@devflow.co.in",
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: "IN",
-    addressLocality: "Ahmedabad",
-    addressRegion: "Gujarat",
-    postalCode: "382210",
-    streetAddress: "Opp. Empty Plot, Near Swaminarayan Temple, Navapura, Sarkhej-Bavla Highway",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: "23.0225",
-    longitude: "72.5714",
-  },
-  sameAs: [
-    "https://www.justdial.com/Ahmedabad/DevFlow-Technology-SG-Highway/9999PXXXXX",
-    "https://www.indiamart.com/devflow-technology/",
-    "https://www.sulekha.com/devflow-technology-ahmedabad",
-    "https://www.crunchbase.com/organization/devflow-technology",
-    "https://www.google.com/maps/place/DevFlow+Technology/@23.0225,72.5714",
-  ],
-  knowsAbout: [
-    "AI Development Company Ahmedabad",
-    "Software Development Company Ahmedabad",
-    "Web Development Company Ahmedabad",
-    "Mobile App Development Company Ahmedabad",
-    "SEO Company Ahmedabad",
-    "IT Company Ahmedabad",
-    "IT Services Ahmedabad",
-  ],
-};
-
-// ========== WebSite Schema with SearchAction and Speakable (AEO/GEO) ==========
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://www.devflow.co.in/#website",
-  name: "DevFlow Technology - AI Agency & Web Development Company Ahmedabad",
-  url: "https://www.devflow.co.in",
-  description:
-    "Leading AI agency and IT company in Ahmedabad, Gujarat. We build AI solutions, ERP systems, web apps, mobile apps, and provide cloud services & SEO. Top software development company in Gujarat.",
-  publisher: {
-    "@type": "Organization",
-    "@id": "https://www.devflow.co.in/#organization",
-  },
-  inLanguage: ["en-US", "en-IN", "hi-IN", "gu-IN"],
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: "https://www.devflow.co.in/search?q={search_term_string}",
-    },
-    "query-input": "required name=search_term_string",
-  },
-  speakable: {
-    "@type": "SpeakableSpecification",
-    cssSelector: [
-      "h1",
-      "h2",
-      ".speakable-content",
-      ".hero-headline",
-      ".section-title",
-    ],
-  },
-  about: [
-    {
-      "@type": "Thing",
-      name: "Artificial Intelligence",
-      sameAs: [
-        "https://en.wikipedia.org/wiki/Artificial_intelligence",
-        "https://www.wikidata.org/wiki/Q11660",
-      ],
-    },
-    {
-      "@type": "Thing",
-      name: "Web Development",
-      sameAs: [
-        "https://en.wikipedia.org/wiki/Web_development",
-        "https://www.wikidata.org/wiki/Q386275",
-      ],
-    },
-    {
-      "@type": "Thing",
-      name: "Enterprise Resource Planning",
-      sameAs: [
-        "https://en.wikipedia.org/wiki/Enterprise_resource_planning",
-        "https://www.wikidata.org/wiki/Q131315",
-      ],
-    },
-    {
-      "@type": "Thing",
-      name: "Mobile App Development",
-      sameAs: [
-        "https://en.wikipedia.org/wiki/Mobile_app_development",
-        "https://www.wikidata.org/wiki/Q6887071",
-      ],
-    },
-    {
-      "@type": "Thing",
-      name: "Cloud Computing",
-      sameAs: [
-        "https://en.wikipedia.org/wiki/Cloud_computing",
-        "https://www.wikidata.org/wiki/Q483639",
-      ],
-    },
-    {
-      "@type": "Thing",
-      name: "Search Engine Optimization",
-      sameAs: [
-        "https://en.wikipedia.org/wiki/Search_engine_optimization",
-        "https://www.wikidata.org/wiki/Q180711",
-      ],
-    },
-    {
-      "@type": "Thing",
-      name: "Generative Engine Optimization",
-      sameAs: "https://en.wikipedia.org/wiki/Generative_engine_optimization",
-    },
-    { "@type": "Thing", name: "Answer Engine Optimization" },
-    {
-      "@type": "Place",
-      name: "Ahmedabad",
-      sameAs: [
-        "https://en.wikipedia.org/wiki/Ahmedabad",
-        "https://www.wikidata.org/wiki/Q1070",
-      ],
-    },
-    {
-      "@type": "Place",
-      name: "Gujarat",
-      sameAs: [
-        "https://en.wikipedia.org/wiki/Gujarat",
-        "https://www.wikidata.org/wiki/Q1061",
-      ],
-    },
-  ],
-  mentions: [
-    {
-      "@type": "Thing",
-      name: "Next.js",
-      sameAs: "https://www.wikidata.org/wiki/Q107572702",
-    },
-    {
-      "@type": "Thing",
-      name: "React",
-      sameAs: "https://www.wikidata.org/wiki/Q19399674",
-    },
-    {
-      "@type": "Thing",
-      name: "TypeScript",
-      sameAs: "https://www.wikidata.org/wiki/Q240237",
-    },
-    {
-      "@type": "Thing",
-      name: "Python",
-      sameAs: "https://www.wikidata.org/wiki/Q28865",
-    },
-    {
-      "@type": "Thing",
-      name: "Node.js",
-      sameAs: "https://www.wikidata.org/wiki/Q706782",
-    },
-    {
-      "@type": "Thing",
-      name: "OpenAI",
-      sameAs: "https://www.wikidata.org/wiki/Q21708200",
-    },
-    {
-      "@type": "Thing",
-      name: "Anthropic",
-      sameAs: "https://www.wikidata.org/wiki/Q111165243",
-    },
-    {
-      "@type": "Thing",
-      name: "AWS",
-      sameAs: "https://www.wikidata.org/wiki/Q465132",
-    },
-    {
-      "@type": "Thing",
-      name: "Flutter",
-      sameAs: "https://www.wikidata.org/wiki/Q44804368",
-    },
-    {
-      "@type": "Thing",
-      name: "React Native",
-      sameAs: "https://www.wikidata.org/wiki/Q28402804",
-    },
-    {
-      "@type": "Thing",
-      name: "PostgreSQL",
-      sameAs: "https://www.wikidata.org/wiki/Q192490",
-    },
-    {
-      "@type": "Thing",
-      name: "Docker",
-      sameAs: "https://www.wikidata.org/wiki/Q16738927",
-    },
-    {
-      "@type": "Thing",
-      name: "Kubernetes",
-      sameAs: "https://www.wikidata.org/wiki/Q22661308",
-    },
-  ],
-  mainEntity: {
-    "@type": "Organization",
-    "@id": "https://www.devflow.co.in/#organization",
-  },
-};
+// Citation and WebSite schemas moved to ServerStructuredData.tsx
 
 // ========== Service Schema with Location (GEO - entity-rich) ==========
 const serviceSchema = {
@@ -1284,49 +962,75 @@ const howToSchema = {
   ],
 };
 
-// ========== BreadcrumbList Schema ==========
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://www.devflow.co.in",
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "Services",
-      item: "https://www.devflow.co.in/services",
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      name: "Our Work",
-      item: "https://www.devflow.co.in/work",
-    },
-    {
-      "@type": "ListItem",
-      position: 4,
-      name: "About",
-      item: "https://www.devflow.co.in/about",
-    },
-    {
-      "@type": "ListItem",
-      position: 5,
-      name: "Blog",
-      item: "https://www.devflow.co.in/blog",
-    },
-    {
-      "@type": "ListItem",
-      position: 6,
-      name: "Contact",
-      item: "https://www.devflow.co.in/contact",
-    },
-  ],
+// ========== Dynamic BreadcrumbList Schema ==========
+// Generates page-contextual breadcrumbs from the current pathname instead
+// of a static list. Google and AI engines use this to understand page
+// hierarchy and show breadcrumb rich results.
+const SEGMENT_LABELS: Record<string, string> = {
+  services: "Services",
+  blog: "Blog",
+  about: "About",
+  work: "Our Work",
+  contact: "Contact",
+  compare: "Comparisons",
+  glossary: "Glossary",
+  industries: "Industries",
+  locations: "Locations",
+  faq: "FAQ",
+  careers: "Careers",
+  pricing: "Pricing",
+  expertise: "Expertise",
+  technology: "Technology",
+  "technology-stack": "Technology Stack",
+  "case-studies": "Case Studies",
+  "knowledge-base": "Knowledge Base",
+  resources: "Resources",
+  partnerships: "Partnerships",
+  "why-devflow": "Why DevFlow",
+  "ai-solutions": "AI Solutions",
+  "dedicated-development-teams": "Dedicated Teams",
+  "offshore-development": "Offshore Development",
+  "white-label-development": "White Label",
+  privacy: "Privacy Policy",
+  terms: "Terms of Service",
+  security: "Security",
+  sla: "SLA",
+  maintenance: "Maintenance",
+  "engineering-process": "Engineering Process",
+  category: "Category",
+  founders: "Founders",
+  "agency-partners": "Agency Partners",
 };
+
+function buildBreadcrumbSchema(pathname: string) {
+  const baseUrl = "https://www.devflow.co.in";
+  const segments = pathname.split("/").filter(Boolean);
+  const items = [
+    { "@type": "ListItem" as const, position: 1, name: "Home", item: baseUrl },
+  ];
+
+  let path = "";
+  for (let i = 0; i < segments.length; i++) {
+    path += `/${segments[i]}`;
+    const label =
+      SEGMENT_LABELS[segments[i]] ||
+      segments[i]
+        .replace(/-/g, " ")
+        .replace(/\b\w/g, (c) => c.toUpperCase());
+    items.push({
+      "@type": "ListItem" as const,
+      position: i + 2,
+      name: label,
+      item: `${baseUrl}${path}`,
+    });
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items,
+  };
+}
 
 // ========== FAQ Schema (AEO - Featured Snippets) ==========
 const faqSchema = {
@@ -1339,7 +1043,7 @@ const faqSchema = {
       name: "What is Generative Engine Optimization (GEO) and does DevFlow implement it?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Generative Engine Optimization (GEO) is the practice of optimizing content so AI engines like ChatGPT, Claude, and Gemini cite your business in conversational search responses. At DevFlow, we implement comprehensive GEO schemas (JSON-LD), establish standardized NAP references, and structure headings specifically for LLM crawler readability.",
+        text: "Generative Engine Optimization (GEO) involves structuring content, entities, metadata, and structured data to improve discoverability across search engines and AI-powered search experiences. At DevFlow, our approach includes clear information architecture, entity consistency, standard Schema.org structured data, authoritative technical content, internal linking, semantic HTML, and machine-readable information to ensure factual consistency.",
       },
     },
     {
@@ -1475,32 +1179,22 @@ const workItemListSchema = {
   ],
 };
 
-// ========== SoftwareApplication Schema ==========
-const softwareAppSchema = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: "DevFlow Technology Services",
-  applicationCategory: "BusinessApplication",
-  operatingSystem: "Web, iOS, Android",
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "INR",
-    description: "Free consultation for AI, web development, and IT services",
-  },
-};
+// ponytail: SoftwareApplication schema REMOVED — DevFlow is a service
+// company, not a software product. Using this schema type was semantically
+// incorrect and could confuse Google's entity understanding.
 
 // ========== Page-Specific Schema Generator ==========
+// ponytail: paths updated to /services/* destinations because the old
+// /[keyword]-company-ahmedabad slugs now 301-redirect via next.config.ts.
 function getPageSpecificSchema(pathname: string) {
   const schemas: Record<string, unknown> = {
-    "/ai-development-company-ahmedabad": aiDevelopmentServiceSchema,
-    "/seo-company-ahmedabad": seoServiceSchema,
-    "/web-development-company-ahmedabad": webDevelopmentServiceSchema,
-    "/mobile-app-development-company-ahmedabad":
-      mobileAppDevelopmentServiceSchema,
-    "/it-company-ahmedabad": itCompanyServiceSchema,
-    "/it-services-ahmedabad": itServicesSchema,
-    "/software-development-company-ahmedabad": softwareDevelopmentServiceSchema,
+    "/services/ai-development": aiDevelopmentServiceSchema,
+    "/services/seo": seoServiceSchema,
+    "/services/web-application-development": webDevelopmentServiceSchema,
+    "/services/mobile-app-development": mobileAppDevelopmentServiceSchema,
+    "/services/custom-software-development": itCompanyServiceSchema,
+    "/services": itServicesSchema,
+    "/services/software-development": softwareDevelopmentServiceSchema,
   };
   return schemas[pathname] || null;
 }
@@ -1508,61 +1202,53 @@ function getPageSpecificSchema(pathname: string) {
 export default function StructuredData() {
   const pathname = usePathname();
 
-  // Only render certain schemas on specific pages to avoid duplication
+  // Page type detection for conditional schema rendering
   const isHomePage = pathname === "/";
   const isServicesPage = pathname === "/services";
+  const isServiceDetailPage = pathname.startsWith("/services/");
   const isWorkPage = pathname === "/work";
   const isContactPage = pathname === "/contact";
+  const isFAQPage = pathname === "/faq";
+  const isComparePage = pathname.startsWith("/compare/");
+
+  // ponytail: FAQPage schema is now SCOPED to pages with visible FAQ content.
+  // Previously rendered on every page, which violated Google guidelines.
+  const showFAQ = isHomePage || isFAQPage || isServiceDetailPage || isComparePage;
+
+  // HowTo schema only on pages describing the development process
+  const showHowTo = isHomePage || isServicesPage || isServiceDetailPage;
 
   const pageSpecificSchema = getPageSpecificSchema(pathname);
+  const breadcrumbSchema = buildBreadcrumbSchema(pathname);
 
   return (
     <>
-      {/* Base Organization Schema - Always present */}
-      <script
-        id="organization-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-
-      {/* LocalBusiness Citation Schema - NAP Consistency for directories */}
-      <script
-        id="local-citation-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessCitationSchema),
-        }}
-      />
-
-      {/* WebSite Schema with Speakable + Entity Mentions - Always present for GEO */}
-      <script
-        id="website-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
-
-      {/* FAQ Schema - Always present for AEO featured snippets */}
-      <script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* BreadcrumbList - Always present */}
+      {/* Dynamic BreadcrumbList — page-contextual, not static */}
       <script
         id="breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* HowTo Schema - Shows process steps for AEO */}
-      <script
-        id="howto-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-      />
+      {/* FAQ Schema — scoped to pages with visible FAQ content */}
+      {showFAQ && (
+        <script
+          id="faq-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
-      {/* LocalBusiness - Important for local SEO on homepage and contact */}
+      {/* HowTo Schema — only on process-relevant pages */}
+      {showHowTo && (
+        <script
+          id="howto-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+        />
+      )}
+
+      {/* LocalBusiness — local SEO on homepage and contact */}
       {(isHomePage || isContactPage) && (
         <script
           id="local-business-schema"
@@ -1573,7 +1259,7 @@ export default function StructuredData() {
         />
       )}
 
-      {/* Service Schema with Location - GEO entity richness on services page */}
+      {/* Service Schema with Location — GEO entity richness */}
       {isServicesPage && (
         <script
           id="service-schema"
@@ -1582,7 +1268,7 @@ export default function StructuredData() {
         />
       )}
 
-      {/* Page-specific service schemas for local landing pages */}
+      {/* Page-specific service schemas for service landing pages */}
       {pageSpecificSchema && (
         <script
           id="page-service-schema"
@@ -1603,13 +1289,6 @@ export default function StructuredData() {
           }}
         />
       )}
-
-      {/* SoftwareApplication Schema */}
-      <script
-        id="software-app-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
-      />
     </>
   );
 }

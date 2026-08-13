@@ -73,48 +73,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/software-development-company-ahmedabad`,
-      lastModified: LAST_SEO_REWRITE,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/ai-development-company-ahmedabad`,
-      lastModified: LAST_SEO_REWRITE,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/web-development-company-ahmedabad`,
-      lastModified: LAST_SEO_REWRITE,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/mobile-app-development-company-ahmedabad`,
-      lastModified: LAST_SEO_REWRITE,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/seo-company-ahmedabad`,
-      lastModified: LAST_SEO_REWRITE,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/it-company-ahmedabad`,
-      lastModified: LAST_SEO_REWRITE,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/it-services-ahmedabad`,
-      lastModified: LAST_SEO_REWRITE,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
+    // ponytail: REMOVED 7 URLs that 301-redirect via next.config.ts:
+    // /software-development-company-ahmedabad, /ai-development-company-ahmedabad,
+    // /web-development-company-ahmedabad, /mobile-app-development-company-ahmedabad,
+    // /seo-company-ahmedabad, /it-company-ahmedabad, /it-services-ahmedabad
+    // Sitemaps should never contain URLs that redirect — wastes crawl budget.
     {
       url: `${baseUrl}/ai-solutions`,
       lastModified: LAST_SEO_REWRITE,
@@ -138,6 +101,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: LAST_SEO_REWRITE,
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    },
+    // ponytail: Added navigable pages that were linked in footer but missing
+    // from the sitemap. Missing sitemap entries = reduced crawl priority.
+    {
+      url: `${baseUrl}/engineering-process`,
+      lastModified: LAST_SEO_REWRITE,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/security`,
+      lastModified: LAST_SEO_REWRITE,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/sla`,
+      lastModified: LAST_SEO_REWRITE,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/maintenance`,
+      lastModified: LAST_SEO_REWRITE,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/pricing`,

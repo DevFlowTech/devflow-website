@@ -104,11 +104,11 @@ export default function BlogPage() {
                   <div className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-full bg-devflow-green/10 flex items-center justify-center">
                       <span className="text-devflow-green font-semibold">
-                        D
+                        P
                       </span>
                     </div>
                     <div>
-                      <p className="text-white font-medium">DevFlow Team</p>
+                      <p className="text-white font-medium">Prince Gajjar</p>
                       <p className="text-sm text-devflow-gray-500">
                         {featuredPost.date}
                       </p>

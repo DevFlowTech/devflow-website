@@ -727,7 +727,7 @@ export const siteContent: ContentEntry[] = [
     title: "What is GEO and does DevFlow implement it?",
     type: "faq",
     summary:
-      "Generative Engine Optimization (GEO) optimizes content for AI engines like ChatGPT, Claude, and Gemini. DevFlow implements comprehensive GEO schemas (JSON-LD), NAP references, and LLM-readable headings.",
+      "Generative Engine Optimization (GEO) involves structuring content, entities, metadata, and structured data to improve discoverability across search engines and AI-powered search experiences.",
     keywords: [
       "GEO",
       "Generative Engine Optimization",

@@ -91,7 +91,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <main className="relative min-h-screen bg-devflow-black pt-24 pb-16">
-      {/* Dynamic SEO BlogPosting Schema */}
+      {/* Dynamic SEO BlogPosting Schema — enhanced for AEO/GEO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -103,13 +103,23 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             description: post.metaDescription,
             image: post.image,
             datePublished: formatDate(post.date),
+            dateModified: formatDate(post.date),
+            wordCount: post.content?.split(/\s+/).length || 0,
+            articleSection: post.category,
+            keywords: post.keywords,
             author: {
               "@type": "Person",
               name: "Prince Gajjar",
               url: "https://prince.devflow.co.in",
+              jobTitle: "CEO & Co-Founder",
+              worksFor: {
+                "@type": "Organization",
+                "@id": "https://www.devflow.co.in/#organization",
+              },
             },
             publisher: {
               "@type": "Organization",
+              "@id": "https://www.devflow.co.in/#organization",
               name: "DevFlow Technology",
               logo: {
                 "@type": "ImageObject",
@@ -120,6 +130,27 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               "@type": "WebPage",
               "@id": `https://www.devflow.co.in/blog/${post.slug}`,
             },
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: ["h1", ".prose h2", ".speakable-content"],
+            },
+          }),
+        }}
+      />
+
+      {/* BreadcrumbList Schema for this blog post */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.devflow.co.in" },
+              { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.devflow.co.in/blog" },
+              { "@type": "ListItem", position: 3, name: post.category, item: `https://www.devflow.co.in/blog/category/${post.slug}` },
+              { "@type": "ListItem", position: 4, name: post.title, item: `https://www.devflow.co.in/blog/${post.slug}` },
+            ],
           }),
         }}
       />
@@ -165,16 +196,22 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {post.title}
           </h1>
 
-          {/* Meta Info */}
+          {/* Meta Info — semantic HTML for E-E-A-T */}
           <div className="flex items-center gap-4 pb-8 border-b border-white/[0.06] mb-8">
             <div className="w-12 h-12 rounded-full bg-devflow-green/10 flex items-center justify-center">
               <span className="text-devflow-green font-semibold text-lg">
-                D
+                P
               </span>
             </div>
             <div>
-              <p className="text-white font-medium">DevFlow Team</p>
-              <p className="text-sm text-devflow-gray-500">{post.date}</p>
+              <address className="not-italic">
+                <a href="/about/founders" rel="author" className="text-white font-medium hover:text-devflow-green transition-colors">
+                  Prince Gajjar
+                </a>
+              </address>
+              <time dateTime={formatDate(post.date)} className="text-sm text-devflow-gray-500">
+                {post.date}
+              </time>
             </div>
           </div>
 
