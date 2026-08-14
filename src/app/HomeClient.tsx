@@ -66,7 +66,7 @@ export default function HomeClient() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[240px]"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto"
         >
           {/* Block 1: Architecture Pillars (col-span-2) -> Links to Work */}
           <Link href="/case-studies" className="md:col-span-2 block h-full">
