@@ -10,12 +10,13 @@ const scriptSrc = [
   "'self'",
   ...(process.env.NODE_ENV === "production" ? [] : ["'unsafe-eval'"]),
   "'unsafe-inline'",
-  // Ahrefs Analytics loads only after explicit cookie consent (AnalyticsProvider).
   "https://analytics.ahrefs.com",
   "https://www.googletagmanager.com",
   "https://va.vercel-scripts.com",
   "https://static.cloudflareinsights.com",
   "https://www.clarity.ms",
+  "https://scripts.clarity.ms",
+  "https://*.clarity.ms",
 ].join(" ");
 
 const nextConfig: NextConfig = {
@@ -153,10 +154,10 @@ const nextConfig: NextConfig = {
               "default-src 'self'",
               `script-src ${scriptSrc}`,
               "style-src 'self' 'unsafe-inline'",
-              "img-src 'self' data: blob: https://images.unsplash.com https://*.vercel-storage.com https://www.googletagmanager.com https://www.google-analytics.com",
+              "img-src 'self' data: blob: https://images.unsplash.com https://*.vercel-storage.com https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://*.clarity.ms",
               "font-src 'self' data:",
-              "connect-src 'self' https://formspree.io https://va.vercel-scripts.com https://vitals.vercel-insights.com https://www.google-analytics.com https://*.clarity.ms https://cloudflareinsights.com",
-              "frame-src 'self' https://www.googletagmanager.com",
+              "connect-src 'self' https://formspree.io https://va.vercel-scripts.com https://vitals.vercel-insights.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://*.google-analytics.com https://analytics.ahrefs.com https://*.clarity.ms https://cloudflareinsights.com https://static.cloudflareinsights.com",
+              "frame-src 'self' https://www.googletagmanager.com https://www.google.com",
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self' https://formspree.io",
