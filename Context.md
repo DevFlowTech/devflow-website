@@ -2,7 +2,7 @@
 
 _Living state document. Updated after every run that changes the project (see RULES.md §8.1)._
 
-Last updated: **2026-08-13 (Final Remediation & Quality Assurance Pass — Terms Rewrite, Unbacked Claims Cleanup, Tech Wall Categorization, Compliance Audit, GEO/JSON-LD Alignment, Founder Entity System)**
+Last updated: **2026-08-14 (SEO/AEO/GEO Infrastructure Refactor, Server JSON-LD Rendering, Sitemap Sanitization, CSP Hardening, Visible NAP Alignment, Mobile Tech Stack Carousel UX Overhaul)**
 
 ---
 
@@ -18,8 +18,8 @@ Last updated: **2026-08-13 (Final Remediation & Quality Assurance Pass — Terms
 
 - **Primary type:** Portfolio / personal-brand agency site
 - **Secondary type:** Content/blog + SaaS-adjacent resources (SEO-heavy)
-- **Local profile applies:** No (global agency positioning)
-- **International profile applies:** Partially — target keywords include USA-focused terms; served from `en-IN`, single domain (no hreflang subdirectories)
+- **Local profile applies:** Yes (Ahmedabad, Gujarat Local SEO with NAP footer consistency)
+- **International profile applies:** Partially — target keywords include USA/global-focused terms; served with `hreflang` metadata (`en-IN`, `en`, `x-default`), single domain
 - **Page-type → template:** Services detail pages use service templates; `/work/[slug]` case studies; `/resources/tools/seo-audit` is a **simulated demo** (see Open Audit Findings — do not represent as real analysis)
 
 ## Stack & Architecture
@@ -40,7 +40,8 @@ Last updated: **2026-08-13 (Final Remediation & Quality Assurance Pass — Terms
 - App Router: routes are directories under `src/app/`; dynamic routes `[slug]`.
 - Data-driven pages: `src/data/*.ts` feed service/blog/project/industry/location/knowledge pages.
 - Heavy/client-only components dynamically imported in `src/app/layout.tsx` (`dynamic()`).
-- `use client` components under `src/components/`. SEO JSON-LD centralized in `src/components/SEO/StructuredData.tsx`.
+- Server-rendered JSON-LD: global Organization, WebSite, Citation schemas in `src/components/SEO/ServerStructuredData.tsx` rendered in layout `<head>`.
+- Client-side JSON-LD: page-conditional BreadcrumbList, FAQPage, HowTo schemas in `src/components/SEO/StructuredData.tsx`.
 - ESLint via `eslint-config-next`; script: `npm run lint`.
 
 ## Folder / File Structure
@@ -48,7 +49,7 @@ Last updated: **2026-08-13 (Final Remediation & Quality Assurance Pass — Terms
 ```
 src/
   app/                 # App Router pages
-    layout.tsx         # Root layout: fonts, nav, footer, consent-gated analytics
+    layout.tsx         # Root layout: fonts, nav, footer, ServerStructuredData, hreflang, consent-gated analytics
     page.tsx           # Home
     work/, work/[slug] # Case studies (data from projectData.ts)
     blog/, blog/[slug], blog/category/[slug]
@@ -69,13 +70,15 @@ src/
     sitemap.ts, robots.ts, not-found.tsx, error.tsx, globals.css
   components/
     analytics/AnalyticsProvider.tsx  # consent-gated tracker loader
-    SEO/StructuredData.tsx           # ~1600-line JSON-LD schema block
-    layout/  Navbar, Footer, PageWrapper
+    SEO/
+      ServerStructuredData.tsx       # Server Component: Organization, WebSite, LocalBusiness schemas in raw HTML
+      StructuredData.tsx             # Client Component: page-conditional dynamic BreadcrumbList, FAQPage, HowTo
+    layout/  Navbar, Footer (visible NAP), PageWrapper
     sections/ HeroSection, StatsBar, TestimonialsSection, FounderSection,
               SkillsSection, FeaturedProjectsSection, ProcessTimelineSection,
-              TechStackSection, FAQSection, ...
+              TechStackSection (auto-rotating mobile carousel + desktop grid), FAQSection, ...
     ui/      AIChatbot, CookieBanner, ReCaptcha, BackToTop, FloatingContact,
-             ScrollProgress, Magnetic/MagneticButton, HeroMockup, ...
+              ScrollProgress, Magnetic/MagneticButton, HeroMockup, ...
   data/      projectData.ts, servicesData.ts, blogData.ts, blogCategories.ts,
              contentIndex.ts, industriesData.ts, locationsData.ts,
              knowledgeHubData.ts
@@ -83,8 +86,8 @@ src/
 public/
   llms.txt, robots.txt (via app), .well-known/security.txt,
   ga-config.js, clarity-script.js, gtm-script.js   # externalized tracker snippets
-next.config.ts    # redirects, security headers (CSP/HSTS), image config
-RULES.md, SEO.md, Audit.md, Context.md, Changelog.md, audit-report.md
+next.config.ts    # 301 redirects, security headers (CSP allowing Clarity, GA, Ahrefs), image config
+RULES.md, SEO.md, Audit.md, Context.md, Changelog.md, seo-practice.md
 .audit/history/   # prior audit scorecard JSON
 ```
 
@@ -100,14 +103,16 @@ All third-party tracking loads **only after** the visitor accepts cookies (`loca
 | Ahrefs Analytics | key `owsL0mOYqqNQ4Dc5F3yHRg` | plain async script, allowed by CSP |
 | Ahrefs Site Verification | meta tag in `layout.tsx` | non-tracking, always present |
 
-**Externalized snippets** (`public/*.js`) exist so tracker code runs under the production CSP (no `unsafe-eval`). The CSP in `next.config.ts` still carries `'unsafe-inline'` in `script-src` because the Next.js App Router bootstrap and inline JSON-LD are inline by design; removing it would require a nonce-based CSP that forces dynamic rendering.
+**Externalized snippets** (`public/*.js`) exist so tracker code runs under the production CSP (no `unsafe-eval`). The CSP in `next.config.ts` permits `scripts.clarity.ms`, `analytics.google.com`, `google-analytics.com`, `analytics.ahrefs.com`, and `static.cloudflareinsights.com`.
 
-## SEO / AEO Infrastructure
+## SEO / AEO / GEO Infrastructure
 
 - **robots.txt** — generated in `src/app/robots.ts`; explicitly permits GPTBot, ChatGPT-User, Google-Extended, PerplexityBot, ClaudeBot, anthropic-ai (per SEO.md).
-- **sitemap** — `src/app/sitemap.ts`; note: all `lastModified` values are regenerated every build (see Open Audit Findings F8).
-- **llms.txt** — `public/llms.txt`, linked from `<head>` via `<link rel="alternate">`.
-- **Structured data** — centralized `StructuredData.tsx`: Article, FAQPage, BreadcrumbList, Organization, Product/Offer where relevant; validates per SEO.md §10.
+- **sitemap** — `src/app/sitemap.ts`; sanitized to exclude 301-redirected URLs and include all navigable footer pages (`/engineering-process`, `/security`, `/sla`, `/maintenance`).
+- **llms.txt** — `public/llms.txt`, linked from layout `<head>` via `<link rel="alternate">`.
+- **Server Structured Data (`ServerStructuredData.tsx`)** — Organization, WebSite (with entity mentions & speakable), and LocalBusiness Citation schemas rendered server-side so non-JS AI bots can parse entities on first byte.
+- **Client Structured Data (`StructuredData.tsx`)** — dynamic route-contextual `BreadcrumbList`, page-scoped `FAQPage` and `HowTo` schemas.
+- **Visible NAP** — physical address (Ahmedabad, Gujarat) and phone numbers visible in `Footer.tsx` to match LocalBusiness schema.
 - **IndexNow** — key verification file committed.
 - **Ahrefs** — site verification + analytics.
 - **Guardrails (SEO.md)** — one H1/page, no keyword stuffing (~1–1.5%), no fabricated data/links/reviews, direct-answer blocks under question headings, TL;DR at top, human-quality floor.

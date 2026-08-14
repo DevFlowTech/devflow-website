@@ -2,6 +2,34 @@
 
 Reverse-chronological log of every change made to the project. Per RULES.md §8.1, updated in the same run as any project change. Entries before 2026-08-08 predate this file; see `git log` for that history.
 
+## SEO, AEO, GEO Infrastructure & Mobile UX Overhaul — 2026-08-14 09:55
+
+### What changed
+- **Server-Side JSON-LD Schema Infrastructure (`src/components/SEO/ServerStructuredData.tsx`, `src/app/layout.tsx`, `src/components/SEO/StructuredData.tsx`)**: Created a dedicated server component (`ServerStructuredData.tsx`) for core Organization, WebSite, and LocalBusiness Citation schemas rendered directly in `<head>`. Resolves AI crawler indexing blockers (GPTBot, PerplexityBot, ClaudeBot) where client-side JSON-LD was unreadable. Scoped FAQPage, HowTo, and LocalBusiness schemas in `StructuredData.tsx` to pages with matching visible copy, removed invalid `SoftwareApplication` schema, and generated dynamic route-contextual `BreadcrumbList` schemas.
+- **Sitemap Clean-Up & Crawl Budget Sanitization (`src/app/sitemap.ts`)**: Removed 7 legacy URLs (`/software-development-company-ahmedabad`, `/ai-development-company-ahmedabad`, `/web-development-company-ahmedabad`, `/mobile-app-development-company-ahmedabad`, `/seo-company-ahmedabad`, `/it-company-ahmedabad`, `/it-services-ahmedabad`) that were 301-redirecting to `/services/*`, eliminating crawl budget waste. Added missing navigable pages (`/engineering-process`, `/security`, `/sla`, `/maintenance`).
+- **Content Security Policy (CSP) & Metadata Hardening (`next.config.ts`, `src/app/layout.tsx`)**: Updated CSP headers to allow connections and scripts for `scripts.clarity.ms`, `analytics.google.com`, `google-analytics.com`, `analytics.ahrefs.com`, and Google maps/tag manager. Added `"mobile-web-app-capable": "yes"` metadata tag to eliminate browser deprecation warnings.
+- **Visible Local SEO NAP Alignment (`src/components/layout/Footer.tsx`)**: Added physical address (Ahmedabad, Gujarat) and phone contact numbers directly into visible footer markup to match JSON-LD schema for Local SEO consistency.
+- **International SEO Hreflang Tags (`src/app/layout.tsx`)**: Added `hreflang` metadata alternates (`en-IN`, `en`, `x-default`) to layout metadata.
+- **Blog & E-E-A-T Schema Enrichment (`src/app/blog/[slug]/page.tsx`)**: Added dynamic `dateModified`, `wordCount`, `articleSection`, custom `speakable` selector schema, `<time>` semantic elements, and `<address>` author links to blog post templates.
+- **Mobile Bento Grid & Tech Stack Matrix UX Overhaul (`src/app/HomeClient.tsx`, `src/components/sections/TechStackSection.tsx`, `src/app/globals.css`)**: Removed rigid `auto-rows-[240px]` height constraint from bento grid container to eliminate card truncation. Converted `TechStackSection` into an interactive, auto-rotating category tab matrix (`Frontend`, `Backend`, `Data`, `Cloud`, `AI`) with Framer Motion spring physics animations (`type: "spring", stiffness: 220, damping: 26`), centered high-contrast theme-aware pill badges, zero-clipping vertical spacing, and clean header nav controls. Added `.scrollbar-none` utility to `globals.css`.
+
+### Why
+To execute full code-level SEO/AEO/GEO & UX gap remediation based on the comprehensive audit (`seo-practice.md`), resolving AI bot schema visibility, sitemap 301 waste, CSP tracker blocks, local NAP consistency, and mobile bento grid card truncation issues.
+
+### Bug fixed (if applicable)
+- Fixed AI crawlers unable to read client-rendered JSON-LD schemas (`"use client"` StructuredData).
+- Fixed CSP blocking Microsoft Clarity, Google Analytics collect endpoints, and Ahrefs analytics.
+- Fixed 7 redirected URLs in `sitemap.ts` wasting search engine crawl budget.
+- Fixed mobile bento grid text truncation and header overlap in Tech Alignment matrix caused by rigid `auto-rows-[240px]`.
+
+### Root cause
+- Global schemas were nested inside a client-side component using `usePathname()`.
+- CSP headers in `next.config.ts` were missing subdomains used by analytics vendors.
+- Sitemap statically included 301-redirected legacy routes.
+- Grid container in `HomeClient.tsx` forced fixed 240px row heights regardless of component content height.
+
+---
+
 ## Final Remediation & Quality Assurance Pass — 2026-08-13 13:45
 
 ### What changed
