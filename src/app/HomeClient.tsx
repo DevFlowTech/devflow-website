@@ -144,23 +144,12 @@ export default function HomeClient() {
             </motion.div>
           </Link>
 
-          {/* Block 3: Tech Stack Carousel (col-span-3) */}
+          {/* Block 3: Tech Stack Matrix (col-span-3) */}
           <motion.div
             variants={staggerItem}
-            className="md:col-span-2 lg:col-span-3 glass-panel rounded-2xl flex flex-col justify-between overflow-hidden relative group py-4 sm:py-6"
+            className="md:col-span-2 lg:col-span-3 glass-panel rounded-2xl overflow-hidden relative group"
           >
-            <div className="px-4 sm:px-8 flex items-center justify-between mb-2">
-              <span className="text-xs font-mono text-devflow-gray-400">[ TECH ALIGNMENT ]</span>
-              <span className="text-[10px] font-mono text-devflow-gray-500 hidden sm:inline">JS • MOBILE • SEO • AEO • GEO</span>
-            </div>
-            
-            <div className="flex-grow flex items-center w-full overflow-hidden">
-              <TechStackSection />
-            </div>
-
-            <div className="px-4 sm:px-8 text-xs font-mono text-devflow-gray-400">
-              BUILT ON 40+ INDUSTRIAL-GRADE FRAMEWORKS & TOOLS.
-            </div>
+            <TechStackSection />
           </motion.div>
 
           {/* Block 4: Philosophy Panel (col-span-1) -> Links to About */}

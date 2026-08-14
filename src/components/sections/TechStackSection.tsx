@@ -92,7 +92,7 @@ export default function TechStackSection() {
     const timer = setInterval(() => {
       if (typeof window !== "undefined" && window.innerWidth >= 1024) return;
       goToNext();
-    }, 3200);
+    }, 3400);
 
     return () => {
       clearInterval(timer);
@@ -103,14 +103,20 @@ export default function TechStackSection() {
   const activeGroup = techOverview[activeIndex];
 
   return (
-    <div className="w-full space-y-6">
-      {/* Mobile & Tablet View (< lg): Sleek Auto-Rotating Tab Matrix */}
+    <div className="w-full p-6 sm:p-8 flex flex-col justify-between h-full space-y-6">
+      {/* Block Header */}
+      <div className="flex items-center justify-between">
+        <span className="text-xs font-mono text-devflow-gray-400">[ TECH ALIGNMENT ]</span>
+        <span className="text-[10px] font-mono text-devflow-gray-500 hidden sm:inline">JS • MOBILE • SEO • AEO • GEO</span>
+      </div>
+
+      {/* Mobile & Tablet View (< lg): Interactive Category Tabs + Animated Items */}
       <div 
-        className="block lg:hidden space-y-5 px-2 py-1"
+        className="block lg:hidden space-y-4"
         onTouchStart={pauseAutoRotate}
         onMouseEnter={pauseAutoRotate}
       >
-        {/* Category Selector Tabs Header */}
+        {/* Category Tabs & Nav Controls */}
         <div className="flex items-center justify-between gap-2 border-b border-black/10 pb-3">
           <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-none py-1">
             {techOverview.map((group, idx) => (
@@ -122,7 +128,7 @@ export default function TechStackSection() {
                 }}
                 className={`px-3 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all duration-200 whitespace-nowrap ${
                   activeIndex === idx
-                    ? "bg-devflow-blue text-white shadow-sm scale-105"
+                    ? "bg-devflow-blue text-white shadow-xs scale-105"
                     : "bg-black/[0.04] text-devflow-gray-400 hover:text-devflow-gray-100 hover:bg-black/[0.08]"
                 }`}
               >
@@ -131,7 +137,7 @@ export default function TechStackSection() {
             ))}
           </div>
 
-          {/* Quick Nav Prev/Next Buttons */}
+          {/* Nav Buttons */}
           <div className="flex items-center gap-1 shrink-0">
             <button
               onClick={() => {
@@ -157,14 +163,14 @@ export default function TechStackSection() {
         </div>
 
         {/* Animated Tech Items Display Box */}
-        <div className="min-h-[140px] flex items-center justify-center">
+        <div className="min-h-[140px] flex items-center justify-center py-2">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeGroup.category}
-              initial={{ opacity: 0, y: 8 }}
+              initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.25, ease: "easeOut" }}
+              exit={{ opacity: 0, y: -6 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
               className="w-full grid grid-cols-1 sm:grid-cols-3 gap-3"
             >
               {activeGroup.items.map((tech) => {
@@ -185,7 +191,7 @@ export default function TechStackSection() {
           </AnimatePresence>
         </div>
 
-        {/* Progress indicator bar */}
+        {/* Indicator Dots */}
         <div className="flex justify-center items-center gap-1.5 pt-1">
           {techOverview.map((group, idx) => (
             <button
@@ -206,7 +212,7 @@ export default function TechStackSection() {
       </div>
 
       {/* Desktop Grid View (>= lg): All 5 Categories Side by Side */}
-      <div className="hidden lg:grid grid-cols-5 gap-4">
+      <div className="hidden lg:grid grid-cols-5 gap-4 my-2">
         {techOverview.map((group) => (
           <div
             key={group.category}
@@ -221,7 +227,7 @@ export default function TechStackSection() {
                 return (
                   <li
                     key={tech.name}
-                    className="flex items-center justify-center gap-2.5 text-xs font-medium text-devflow-gray-100 text-center w-full py-1 rounded-lg bg-black/[0.02] border border-black/[0.04]"
+                    className="flex items-center justify-center gap-2.5 text-xs font-medium text-devflow-gray-100 text-center w-full py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.04]"
                   >
                     <Icon className="w-4 h-4 text-devflow-blue flex-shrink-0" />
                     <span className="font-mono">{tech.name}</span>
@@ -233,9 +239,10 @@ export default function TechStackSection() {
         ))}
       </div>
 
+      {/* Block Footer */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-3 border-t border-black/[0.08]">
         <span className="text-xs font-mono text-devflow-gray-400 text-center sm:text-left">
-          INDUSTRIAL-GRADE ARCHITECTURE & SECURE IP OWNERSHIP
+          BUILT ON 40+ INDUSTRIAL-GRADE FRAMEWORKS & TOOLS.
         </span>
         <Link
           href="/technology-stack"
