@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import {
   SiNextdotjs,
@@ -66,23 +66,15 @@ const techOverview = [
 export default function TechStackSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const pauseTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const handleScroll = () => {
-    if (!scrollRef.current) return;
-    const container = scrollRef.current;
-    const scrollLeft = container.scrollLeft;
-    const itemWidth = container.firstElementChild?.clientWidth || 240;
-    const gap = 16;
-    const index = Math.round(scrollLeft / (itemWidth + gap));
-    setActiveIndex(Math.min(Math.max(index, 0), techOverview.length - 1));
-  };
-
-  const scrollNav = (direction: "left" | "right") => {
-    if (!scrollRef.current) return;
-    const container = scrollRef.current;
-    const itemWidth = container.firstElementChild?.clientWidth || 240;
-    const scrollAmount = direction === "left" ? -(itemWidth + 16) : (itemWidth + 16);
-    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  const pauseAutoRotate = () => {
+    setIsPaused(true);
+    if (pauseTimeoutRef.current) clearTimeout(pauseTimeoutRef.current);
+    pauseTimeoutRef.current = setTimeout(() => {
+      setIsPaused(false);
+    }, 5000);
   };
 
   const scrollTo = (index: number) => {
@@ -94,10 +86,61 @@ export default function TechStackSection() {
     }
   };
 
+  // Auto-rotate carousel only on mobile / tablet screens (< 1024px)
+  useEffect(() => {
+    if (isPaused) return;
+
+    const timer = setInterval(() => {
+      if (typeof window !== "undefined" && window.innerWidth >= 1024) return;
+
+      setActiveIndex((prev) => {
+        const nextIndex = (prev + 1) % techOverview.length;
+        scrollTo(nextIndex);
+        return nextIndex;
+      });
+    }, 3200);
+
+    return () => {
+      clearInterval(timer);
+      if (pauseTimeoutRef.current) clearTimeout(pauseTimeoutRef.current);
+    };
+  }, [isPaused]);
+
+  const handleScroll = () => {
+    if (!scrollRef.current) return;
+    const container = scrollRef.current;
+    const scrollLeft = container.scrollLeft;
+    const itemWidth = container.firstElementChild?.clientWidth || 240;
+    const gap = 16;
+    const index = Math.round(scrollLeft / (itemWidth + gap));
+    if (index >= 0 && index < techOverview.length) {
+      setActiveIndex(index);
+    }
+  };
+
+  const scrollNav = (direction: "left" | "right") => {
+    pauseAutoRotate();
+    const next = direction === "left" 
+      ? Math.max(0, activeIndex - 1)
+      : Math.min(techOverview.length - 1, activeIndex + 1);
+    setActiveIndex(next);
+    scrollTo(next);
+  };
+
+  const handleDotClick = (index: number) => {
+    pauseAutoRotate();
+    setActiveIndex(index);
+    scrollTo(index);
+  };
+
   return (
     <div className="w-full p-4 sm:p-6 lg:p-8 space-y-6">
       {/* Carousel Container */}
-      <div className="relative group/carousel">
+      <div 
+        className="relative group/carousel"
+        onTouchStart={pauseAutoRotate}
+        onMouseEnter={pauseAutoRotate}
+      >
         {/* Navigation arrows for mobile & tablet screens */}
         <button
           onClick={() => scrollNav("left")}
@@ -159,7 +202,7 @@ export default function TechStackSection() {
           {techOverview.map((group, idx) => (
             <button
               key={group.category}
-              onClick={() => scrollTo(idx)}
+              onClick={() => handleDotClick(idx)}
               aria-label={`Go to ${group.category}`}
               className={`h-1.5 rounded-full transition-all duration-300 ${
                 activeIndex === idx
