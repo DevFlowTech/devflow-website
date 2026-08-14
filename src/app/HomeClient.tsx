@@ -242,6 +242,145 @@ export default function HomeClient() {
       {/* Client Testimonials Section */}
       <TestimonialsSection />
 
+      {/* Content Clusters & Architectural Topic Hubs */}
+      <section className="py-16 bg-devflow-black border-t border-white/[0.06] relative z-10">
+        <div className="section-container max-w-7xl mx-auto space-y-10">
+          <div className="text-center md:text-left space-y-2">
+            <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">
+              [ CONTENT CLUSTER ARCHITECTURE &amp; TOPIC HUBS ]
+            </span>
+            <h2 className="font-display text-2xl md:text-4xl font-medium text-white">
+              Explore Enterprise Technology Pillars &amp; Cluster Guides
+            </h2>
+            <p className="text-xs md:text-sm text-devflow-gray-300 max-w-2xl font-light">
+              Deep-dive architectural frameworks, trade-off comparisons, and cluster guides designed for tech leaders and founders.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Pillar 1 Hub */}
+            <div className="p-6 rounded-2xl glass-panel border border-white/[0.06] space-y-4 flex flex-col justify-between">
+              <div>
+                <span className="text-[10px] font-mono text-devflow-green uppercase tracking-widest block mb-2">[ PILLAR 1 ]</span>
+                <h3 className="text-lg font-display font-medium text-white">AI &amp; Agentic Systems Hub</h3>
+                <p className="text-xs text-devflow-gray-300 font-light mt-1 mb-4">
+                  Sovereign enterprise AI models, RAG vector retrieval, and autonomous multi-step reasoning agents.
+                </p>
+                <ul className="space-y-2 text-xs font-mono text-devflow-gray-300">
+                  <li>
+                    <Link href="/services/ai-development" className="hover:text-devflow-green transition-colors flex items-center justify-between">
+                      <span>• AI Development Services</span>
+                      <span>&rarr;</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/compare/rag-vs-fine-tuning" className="hover:text-devflow-green transition-colors flex items-center justify-between">
+                      <span>• RAG vs Fine-Tuning Guide</span>
+                      <span>&rarr;</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/compare/ai-agent-vs-chatbot" className="hover:text-devflow-green transition-colors flex items-center justify-between">
+                      <span>• AI Agent vs Chatbot Spec</span>
+                      <span>&rarr;</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/ai-solutions" className="hover:text-devflow-green transition-colors flex items-center justify-between">
+                      <span>• AI Automation Solutions</span>
+                      <span>&rarr;</span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <Link href="/services/ai-development" className="text-[11px] font-mono text-devflow-green hover:underline uppercase pt-2 block">
+                VIEW AI PILLAR HUB &rarr;
+              </Link>
+            </div>
+
+            {/* Pillar 2 Hub */}
+            <div className="p-6 rounded-2xl glass-panel border border-white/[0.06] space-y-4 flex flex-col justify-between">
+              <div>
+                <span className="text-[10px] font-mono text-devflow-green uppercase tracking-widest block mb-2">[ PILLAR 2 ]</span>
+                <h3 className="text-lg font-display font-medium text-white">Custom Software &amp; ERP Hub</h3>
+                <p className="text-xs text-devflow-gray-300 font-light mt-1 mb-4">
+                  Bespoke digital platforms, custom ERP/CRM software, and multi-tenant SaaS engineering.
+                </p>
+                <ul className="space-y-2 text-xs font-mono text-devflow-gray-300">
+                  <li>
+                    <Link href="/services/software-development" className="hover:text-devflow-green transition-colors flex items-center justify-between">
+                      <span>• Enterprise Software Hub</span>
+                      <span>&rarr;</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/erp-development" className="hover:text-devflow-green transition-colors flex items-center justify-between">
+                      <span>• Custom ERP Software</span>
+                      <span>&rarr;</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/compare/custom-software-vs-off-the-shelf" className="hover:text-devflow-green transition-colors flex items-center justify-between">
+                      <span>• Custom vs Off-the-Shelf</span>
+                      <span>&rarr;</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/crm-development" className="hover:text-devflow-green transition-colors flex items-center justify-between">
+                      <span>• Custom CRM Systems</span>
+                      <span>&rarr;</span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <Link href="/services/software-development" className="text-[11px] font-mono text-devflow-green hover:underline uppercase pt-2 block">
+                VIEW SOFTWARE PILLAR HUB &rarr;
+              </Link>
+            </div>
+
+            {/* Pillar 3 Hub */}
+            <div className="p-6 rounded-2xl glass-panel border border-white/[0.06] space-y-4 flex flex-col justify-between">
+              <div>
+                <span className="text-[10px] font-mono text-devflow-green uppercase tracking-widest block mb-2">[ PILLAR 3 ]</span>
+                <h3 className="text-lg font-display font-medium text-white">Web &amp; Dedicated Teams Hub</h3>
+                <p className="text-xs text-devflow-gray-300 font-light mt-1 mb-4">
+                  High-speed Next.js web applications, cross-platform mobile apps, and dedicated engineering pods.
+                </p>
+                <ul className="space-y-2 text-xs font-mono text-devflow-gray-300">
+                  <li>
+                    <Link href="/services/web-application-development" className="hover:text-devflow-green transition-colors flex items-center justify-between">
+                      <span>• Web App Engineering</span>
+                      <span>&rarr;</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/dedicated-development-teams" className="hover:text-devflow-green transition-colors flex items-center justify-between">
+                      <span>• Dedicated Developer Pods</span>
+                      <span>&rarr;</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/node-js-development" className="hover:text-devflow-green transition-colors flex items-center justify-between">
+                      <span>• Node.js Backend API Hub</span>
+                      <span>&rarr;</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/offshore-development" className="hover:text-devflow-green transition-colors flex items-center justify-between">
+                      <span>• Offshore Engineering</span>
+                      <span>&rarr;</span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <Link href="/services/web-application-development" className="text-[11px] font-mono text-devflow-green hover:underline uppercase pt-2 block">
+                VIEW WEB PILLAR HUB &rarr;
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Frequently Asked Questions */}
       <FAQSection />
 

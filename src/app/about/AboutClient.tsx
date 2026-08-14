@@ -6,6 +6,7 @@ import FounderSection from "@/components/sections/FounderSection";
 import StatsBar from "@/components/sections/StatsBar";
 import Link from "next/link";
 import { FiCheckCircle, FiAward, FiArrowRight } from "react-icons/fi";
+import InternalLinkHub from "@/components/SEO/InternalLinkHub";
 
 const values = [
   {
@@ -224,6 +225,11 @@ export default function AboutClient() {
 
       {/* Founder Message */}
       <FounderSection />
+
+      {/* Internal Link Cluster Mesh */}
+      <div className="section-container max-w-6xl mx-auto">
+        <InternalLinkHub currentCategory="service" currentSlug="about" />
+      </div>
 
       {/* Final CTA */}
       <section className="py-24 bg-devflow-black text-center relative">

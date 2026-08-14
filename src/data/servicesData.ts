@@ -27,28 +27,28 @@ export interface ServiceDetail {
 export const servicesData: Record<string, ServiceDetail> = {
   "software-development": {
     slug: "software-development",
-    title: "Custom Software Development Company in USA",
+    title: "Custom Software Engineering & Enterprise Development Company",
     metaDescription:
-      "DevFlow is a leading custom software development company in USA. We offer enterprise software development, SaaS development services, and trusted software outsourcing solutions with full code ownership.",
+      "DevFlow engineers enterprise custom software, cloud-native SaaS platforms, and operational systems with 100% IP ownership, sub-second API performance, and zero recurring seat fees.",
     keywords: [
       "custom software development company",
-      "software companies in usa",
-      "best software companies",
-      "software developer company",
-      "software development services",
+      "enterprise software engineering",
+      "SaaS product development",
+      "software architecture consulting",
+      "custom software developer",
+      "hire software engineers",
+      "cloud software systems",
       "outsource software development",
-      "enterprise software development",
-      "hire software developers usa",
     ],
     definition:
-      "A custom software development company designs, engineers, and deploys custom software systems and enterprise software applications tailored to specific operations. DevFlow provides comprehensive software development services and expert consulting to streamline workflows.",
+      "Custom Software Development is the process of architecting, coding, testing, and deploying bespoke software systems designed around an organization's proprietary business logic, operational workflows, and data security requirements.",
     summary:
-      "Scale your digital product roadmap with a leading software company. We offer premier software development outsourcing and dedicated software engineering experts to deliver high-performance applications.",
+      "Architect sovereign digital infrastructure that automates complex operations, eliminates recurring per-user software licensing, and provides total control over your business logic and customer data.",
     keyTakeaways: [
-      "100% source code ownership with zero recurring license costs.",
-      "High performance scaling using Next.js, Node.js, and cloud native architectures.",
-      "Dedicated software developer hiring options with zero recruiting overhead.",
-      "Highly secure, enterprise-grade custom software systems.",
+      "100% source code and IP ownership with zero recurring per-seat vendor fees.",
+      "Cloud-native Next.js, Node.js, and PostgreSQL architectures engineered for sub-second responses.",
+      "Seamless integration with legacy ERP, CRM, and third-party REST/GraphQL APIs.",
+      "OWASP Top 10 security compliance with row-level database isolation and TLS 1.3 encryption.",
     ],
     pros: [
       "Tailor-made to exact operational workflows.",
@@ -167,25 +167,26 @@ export const servicesData: Record<string, ServiceDetail> = {
   },
   "erp-development": {
     slug: "erp-development",
-    title: "Custom ERP Development Company",
+    title: "Custom ERP Software Development & Enterprise Integration",
     metaDescription:
-      "Enterprise grade ERP development systems in India. Unify inventory, logistics, HRMS, and operations with custom Next.js & Node.js ERP platforms.",
+      "Engineered custom ERP software platforms built with Next.js and PostgreSQL. Unify inventory, logistics, HRMS, and accounting with zero per-user SAP/Oracle licensing fees.",
     keywords: [
       "ERP development company",
       "custom ERP software",
-      "manufacturing ERP",
-      "construction ERP",
-      "inventory management",
+      "manufacturing ERP systems",
+      "enterprise resource planning development",
+      "custom ERP vs SAP",
+      "inventory management software",
     ],
     definition:
-      "Enterprise Resource Planning (ERP) development involves building a unified database management system to coordinate and manage an organization's core operations, including inventory, finance, logistics, and HR.",
+      "Enterprise Resource Planning (ERP) Development is the creation of a centralized operational software platform that coordinates inventory, finance, logistics, procurement, and HR pipelines into a single real-time database.",
     summary:
-      "Centralized business software built to unify supply chains, automate accounting, control inventory, and provide real-time operational telemetry.",
+      "Unify supply chains, automate accounting, control inventory, and track real-time operational telemetry across your enterprise without paying recurring seat licenses.",
     keyTakeaways: [
-      "Unify disparate operational silos into a single database.",
-      "Automate manual reporting with cron jobs and PDF export modules.",
-      "Eliminate recurring per-user licensing costs of systems like SAP or Oracle.",
-      "Real-time tracking of logistics and dispatch pipelines.",
+      "Zero per-user monthly licensing fees—save ₹4,000 to ₹12,000/user/month over SAP/Oracle.",
+      "Custom Next.js & PostgreSQL architecture tailored 100% to your warehouse and logistics pipelines.",
+      "Automated financial ledger sync, GST invoicing, and real-time inventory depletion alerts.",
+      "Native integrations with Tally, Indian bank gateways, and local shipping carrier APIs.",
     ],
     pros: [
       "Zero per-user monthly license fees.",
