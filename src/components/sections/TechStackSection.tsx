@@ -108,31 +108,8 @@ export default function TechStackSection() {
         onTouchStart={pauseAutoRotate}
         onMouseEnter={pauseAutoRotate}
       >
-        {/* Navigation Arrows */}
-        <button
-          onClick={() => {
-            pauseAutoRotate();
-            goToPrev();
-          }}
-          aria-label="Previous Tech Category"
-          className="absolute left-1 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-devflow-charcoal/95 border border-white/20 flex items-center justify-center text-white disabled:opacity-20 disabled:cursor-not-allowed hover:bg-devflow-green hover:text-devflow-black transition-all shadow-lg backdrop-blur-md"
-        >
-          <FiChevronLeft className="w-4 h-4" />
-        </button>
-
-        <button
-          onClick={() => {
-            pauseAutoRotate();
-            goToNext();
-          }}
-          aria-label="Next Tech Category"
-          className="absolute right-1 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-devflow-charcoal/95 border border-white/20 flex items-center justify-center text-white disabled:opacity-20 disabled:cursor-not-allowed hover:bg-devflow-green hover:text-devflow-black transition-all shadow-lg backdrop-blur-md"
-        >
-          <FiChevronRight className="w-4 h-4" />
-        </button>
-
         {/* Smooth Animated Track */}
-        <div className="overflow-hidden px-1 py-2">
+        <div className="overflow-hidden px-1 py-1">
           <motion.div
             className="flex gap-4"
             animate={{ x: `calc(-${activeIndex * 100}% - ${activeIndex * 16}px)` }}
@@ -146,17 +123,42 @@ export default function TechStackSection() {
             {techOverview.map((group, i) => (
               <div
                 key={group.category}
-                className="px-10 py-6 rounded-xl bg-devflow-charcoal/80 border border-white/[0.08] hover:border-devflow-green/30 transition-all duration-300 space-y-4 shrink-0 w-full shadow-sm flex flex-col items-center justify-center text-center"
+                className="p-6 rounded-xl bg-devflow-charcoal/80 border border-white/[0.08] hover:border-devflow-green/30 transition-all duration-300 space-y-4 shrink-0 w-full shadow-sm flex flex-col items-center justify-center text-center"
               >
-                <div className="flex flex-col items-center justify-center space-y-1 text-center w-full pb-2 border-b border-white/[0.06]">
+                {/* Clean Header Controls */}
+                <div className="flex items-center justify-between pb-3 border-b border-white/[0.08] w-full">
                   <h3 className="text-xs font-mono text-devflow-green uppercase tracking-wider font-bold">
                     {group.category}
                   </h3>
-                  <span className="text-[10px] font-mono text-devflow-gray-500">
-                    0{i + 1} / 0{techOverview.length}
-                  </span>
+                  <div className="flex items-center gap-1.5">
+                    <button
+                      onClick={() => {
+                        pauseAutoRotate();
+                        goToPrev();
+                      }}
+                      aria-label="Previous Category"
+                      className="p-1 rounded bg-white/[0.04] hover:bg-devflow-green hover:text-devflow-black text-devflow-gray-300 transition-colors"
+                    >
+                      <FiChevronLeft className="w-3.5 h-3.5" />
+                    </button>
+                    <span className="text-[10px] font-mono text-devflow-gray-400 px-1">
+                      0{i + 1} / 0{techOverview.length}
+                    </span>
+                    <button
+                      onClick={() => {
+                        pauseAutoRotate();
+                        goToNext();
+                      }}
+                      aria-label="Next Category"
+                      className="p-1 rounded bg-white/[0.04] hover:bg-devflow-green hover:text-devflow-black text-devflow-gray-300 transition-colors"
+                    >
+                      <FiChevronRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
                 </div>
-                <ul className="space-y-3 flex flex-col items-center justify-center w-full">
+
+                {/* Centered Item List */}
+                <ul className="space-y-3 flex flex-col items-center justify-center w-full py-1">
                   {group.items.map((tech) => {
                     const Icon = tech.icon;
                     return (

@@ -107,57 +107,58 @@ export default function HomeClient() {
           </Link>
 
           {/* Block 2: Capabilities Checklist (col-span-1) -> Links to Services */}
+          {/* Block 2: What We Build (col-span-1) -> Links to Services */}
           <Link href="/services" className="block h-full">
             <motion.div
               variants={staggerItem}
-              className="glass-panel p-8 rounded-2xl flex flex-col justify-between group h-full cursor-pointer"
+              className="glass-panel p-6 sm:p-8 rounded-2xl flex flex-col justify-between group h-full cursor-pointer overflow-hidden"
             >
               <div>
-                <div className="flex justify-between items-start mb-6">
+                <div className="flex justify-between items-start mb-4 sm:mb-6">
                   <span className="text-xs font-mono text-devflow-gray-400">[ WHAT WE BUILD ]</span>
                   <FiGrid className="w-5 h-5 text-devflow-green group-hover:scale-110 transition-transform duration-300" aria-label="Grid" />
                 </div>
-                <ul className="space-y-4">
+                <ul className="space-y-3 sm:space-y-4 mb-4">
                   <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" />
-                    <span className="text-sm font-mono text-white">Custom ERP & CRM Software</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-green shrink-0" />
+                    <span className="text-xs sm:text-sm font-mono text-white">Custom ERP & CRM Software</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" />
-                    <span className="text-sm font-mono text-white">AI Agents & Workflow Automation</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-green shrink-0" />
+                    <span className="text-xs sm:text-sm font-mono text-white">AI Agents & Workflow Automation</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" />
-                    <span className="text-sm font-mono text-white">SaaS Product Development</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-green shrink-0" />
+                    <span className="text-xs sm:text-sm font-mono text-white">SaaS Product Development</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" />
-                    <span className="text-sm font-mono text-white">Cloud Infrastructure & APIs</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-green shrink-0" />
+                    <span className="text-xs sm:text-sm font-mono text-white">Cloud Infrastructure & APIs</span>
                   </li>
                 </ul>
               </div>
-              <div className="inline-flex items-center gap-2 text-xs font-mono text-devflow-green group-hover:underline">
+              <div className="inline-flex items-center gap-2 text-xs font-mono text-devflow-green group-hover:underline pt-2">
                 SEE WHAT WE BUILD
                 <FiArrowUpRight className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" aria-label="Arrow up right" />
               </div>
             </motion.div>
           </Link>
 
-          {/* Block 3: Tech Marquee (full-width) -> Continuous Carousel */}
+          {/* Block 3: Tech Stack Carousel (col-span-3) */}
           <motion.div
             variants={staggerItem}
-            className="md:col-span-2 lg:col-span-3 glass-panel rounded-2xl flex flex-col justify-between overflow-hidden relative group py-6"
+            className="md:col-span-2 lg:col-span-3 glass-panel rounded-2xl flex flex-col justify-between overflow-hidden relative group py-4 sm:py-6"
           >
-            <div className="px-8 flex items-center justify-between mb-2">
+            <div className="px-4 sm:px-8 flex items-center justify-between mb-2">
               <span className="text-xs font-mono text-devflow-gray-400">[ TECH ALIGNMENT ]</span>
-              <span className="text-[10px] font-mono text-devflow-gray-500">JS • MOBILE • SEO • AEO • GEO</span>
+              <span className="text-[10px] font-mono text-devflow-gray-500 hidden sm:inline">JS • MOBILE • SEO • AEO • GEO</span>
             </div>
             
-            <div className="flex-grow flex items-center w-full">
+            <div className="flex-grow flex items-center w-full overflow-hidden">
               <TechStackSection />
             </div>
 
-            <div className="px-8 text-xs font-mono text-devflow-gray-400">
+            <div className="px-4 sm:px-8 text-xs font-mono text-devflow-gray-400">
               BUILT ON 40+ INDUSTRIAL-GRADE FRAMEWORKS & TOOLS.
             </div>
           </motion.div>
