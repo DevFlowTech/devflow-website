@@ -1,0 +1,7 @@
+# Google Search Console Disavow File for DevFlow Technology (devflow.co.in)
+# Created: 2026-08-14
+# Purpose: Disavow spam domains, web scrapers, and low-quality automated backlinks.
+
+# Domain-level disavows (Blocks all spam backlinks originating from these domains)
+domain:marketxy.com
+domain:rajputbhavin.engineer

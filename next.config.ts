@@ -205,6 +205,25 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      // Prevent search indexing of internal Next image optimization endpoint & API routes
+      {
+        source: "/_next/image",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, follow",
+          },
+        ],
+      },
+      {
+        source: "/api/:path*",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
     ];
   },
 };
