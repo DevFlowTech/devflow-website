@@ -1295,6 +1295,38 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/generative-ai-enterprise-implementation",
     icon: "📝",
   },
+  {
+    id: "blog/mit-study-generative-ai-enterprise-implementation",
+    title: "Mit Study Generative Ai Enterprise Implementation: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for mit study generative ai enterprise implementation: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Mit Study Generative Ai Enterprise Implementation",
+      "Mit Study Generative Ai Enterprise Implementation guide",
+      "enterprise Mit Study Generative Ai Enterprise Implementation",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/mit-study-generative-ai-enterprise-implementation",
+    icon: "📝",
+  },
+  {
+    id: "blog/postgresql-multi-tenant-database-architecture",
+    title: "Postgresql Multi-Tenant Database Architecture: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for postgresql multi-tenant database architecture: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Postgresql Multi-Tenant Database Architecture",
+      "Postgresql Multi-Tenant Database Architecture guide",
+      "enterprise Postgresql Multi-Tenant Database Architecture",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/postgresql-multi-tenant-database-architecture",
+    icon: "📝",
+  },
 ];
 
 /**
