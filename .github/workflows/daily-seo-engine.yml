@@ -1,0 +1,51 @@
+name: Autonomous Daily SEO & Content Publisher
+
+on:
+  schedule:
+    # Runs daily at 00:00 UTC (05:30 AM IST)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  publish-daily-article:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout Codebase
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 🟢 Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📦 Install Node Dependencies
+        run: npm ci || npm install
+
+      - name: 🚀 Run Autonomous Daily SEO Engine
+        run: python scripts/daily_seo_engine.py
+
+      - name: 🔍 Verify Production Build & Static Pages
+        run: npm run build
+
+      - name: 💾 Commit & Push Published Article
+        run: |
+          git config --global user.name "devflow-seo-bot[bot]"
+          git config --global user.email "devflow-seo-bot[bot]@users.noreply.github.com"
+          git add src/data/blogData.ts src/data/contentIndex.ts
+          if git diff --staged --quiet; then
+            echo "No new articles to publish."
+          else
+            git commit -m "feat(seo): publish daily automated AEO/GEO cluster article [skip ci]"
+            git push origin main
+          fi

@@ -1279,6 +1279,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/best-it-companies-ahmedabad-selection-guide",
     icon: "🏢",
   },
+  {
+    id: "blog/generative-ai-enterprise-implementation",
+    title: "Generative Ai Enterprise Implementation: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for generative ai enterprise implementation: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Generative Ai Enterprise Implementation",
+      "Generative Ai Enterprise Implementation guide",
+      "enterprise Generative Ai Enterprise Implementation",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/generative-ai-enterprise-implementation",
+    icon: "📝",
+  },
 ];
 
 /**
