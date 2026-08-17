@@ -43,4 +43,7 @@ next-env.d.ts
 # ide / local scratch
 .claude/
 Desktop/
+.agents/
+ponytail/
+skills-lock.json
 

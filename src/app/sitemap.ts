@@ -300,6 +300,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // Dynamic Technical Comparison pages
+  const compareSlugs = [
+    "ai-agent-vs-chatbot",
+    "rag-vs-fine-tuning",
+    "custom-software-vs-off-the-shelf",
+    "custom-erp-vs-ready-made-erp",
+    "react-vs-nextjs",
+    "datadog-vs-new-relic",
+    "dedicated-team-vs-in-house-hiring",
+  ];
+  const compareEntries = compareSlugs.map((slug) => ({
+    url: `${baseUrl}/compare/${slug}`,
+    lastModified: LAST_SEO_REWRITE,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   return [
     ...staticPages,
     ...blogEntries,
@@ -309,5 +326,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...industryEntries,
     ...locationEntries,
     ...knowledgeEntries,
+    ...compareEntries,
   ];
 }

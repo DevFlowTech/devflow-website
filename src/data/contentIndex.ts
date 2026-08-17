@@ -1170,6 +1170,115 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/what-is-a-prompt-architect-ahmedabad",
     icon: "📝",
   },
+  // ─── HIGH-INTENT COMPARISONS ──────────────────────────────────────────
+  {
+    id: "compare/datadog-vs-new-relic",
+    title: "Datadog vs. New Relic vs. Dynatrace APM Comparison",
+    type: "page",
+    summary:
+      "Detailed technical and pricing comparison between Datadog, New Relic, and Dynatrace for enterprise application monitoring, log management, and cloud observability.",
+    keywords: [
+      "Datadog vs New Relic",
+      "New Relic vs Dynatrace",
+      "APM comparison",
+      "observability pricing",
+      "cloud monitoring",
+    ],
+    path: "/compare/datadog-vs-new-relic",
+    icon: "⚖️",
+  },
+  {
+    id: "compare/dedicated-team-vs-in-house-hiring",
+    title: "Dedicated Development Team vs. In-House Hiring",
+    type: "page",
+    summary:
+      "Compare total cost of ownership, hiring timeline, and operational flexibility of dedicated software engineering teams vs internal hiring.",
+    keywords: [
+      "Managed IT Services vs In-House",
+      "dedicated development team",
+      "in-house software hiring",
+      "offshore software engineering",
+    ],
+    path: "/compare/dedicated-team-vs-in-house-hiring",
+    icon: "⚖️",
+  },
+  // ─── HIGH-CPC SEO CLUSTER ARTICLES ────────────────────────────────────
+  {
+    id: "blog/generative-ai-implementation-services",
+    title: "Generative AI Implementation Services: Enterprise Roadmap",
+    type: "blog",
+    summary:
+      "Complete guide to Generative AI Implementation Services. RAG pipelines, autonomous AI agents, LLM latency optimization, and custom enterprise AI integrations.",
+    keywords: [
+      "Generative AI Implementation Services",
+      "AI and Data Analytics Services",
+      "enterprise AI",
+      "RAG architecture",
+      "AI agents",
+    ],
+    path: "/blog/generative-ai-implementation-services",
+    icon: "🤖",
+  },
+  {
+    id: "blog/monolith-to-microservices-modernization",
+    title: "Application Modernization Services: Monolith to Microservices",
+    type: "blog",
+    summary:
+      "Application Modernization Services guide on migrating legacy enterprise monoliths to modular Next.js and Node.js microservices using the Strangler Fig pattern.",
+    keywords: [
+      "Application Modernization Services",
+      "Microservices Consulting",
+      "Serverless Architecture Consulting",
+      "legacy migration",
+    ],
+    path: "/blog/monolith-to-microservices-modernization",
+    icon: "🏗️",
+  },
+  {
+    id: "blog/hipaa-compliant-cloud-migration",
+    title: "HIPAA-Compliant Healthcare Cloud Migration",
+    type: "blog",
+    summary:
+      "Technical framework for HIPAA-compliant healthcare cloud migration. Architecting secure EHR software, hospital portals, and encrypted medical databases.",
+    keywords: [
+      "Cloud Migration Services Healthcare",
+      "HIPAA Compliance Consulting",
+      "Digital Transformation Healthcare",
+      "EHR cloud migration",
+    ],
+    path: "/blog/hipaa-compliant-cloud-migration",
+    icon: "🏥",
+  },
+  {
+    id: "blog/cloud-cost-optimization-finops",
+    title: "7 Cloud Cost Optimization Strategies (FinOps)",
+    type: "blog",
+    summary:
+      "Actionable Cloud Cost Optimization strategies to cut AWS, Azure, and database spend by 45%. Database indexing, Redis caching, and serverless cost optimization.",
+    keywords: [
+      "Cloud Cost Optimization Strategies",
+      "We're Charged Too Much For Cloud",
+      "Cloud FinOps Consulting",
+      "AWS cost reduction",
+    ],
+    path: "/blog/cloud-cost-optimization-finops",
+    icon: "📉",
+  },
+  {
+    id: "blog/best-it-companies-ahmedabad-selection-guide",
+    title: "Top Software & IT Consulting Companies in Ahmedabad Selection Guide",
+    type: "blog",
+    summary:
+      "How to evaluate and hire the best software development and IT consulting companies in Ahmedabad. Comprehensive vetting checklist for technical founders.",
+    keywords: [
+      "IT Consulting Firm Ahmedabad",
+      "Hire IT Consultant Near Me",
+      "Managed Services Provider Local",
+      "software development Ahmedabad",
+    ],
+    path: "/blog/best-it-companies-ahmedabad-selection-guide",
+    icon: "🏢",
+  },
 ];
 
 /**
