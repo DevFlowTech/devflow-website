@@ -1327,6 +1327,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/postgresql-multi-tenant-database-architecture",
     icon: "📝",
   },
+  {
+    id: "blog/ai-implementation-process",
+    title: "Ai Implementation Process: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for ai implementation process: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Ai Implementation Process",
+      "Ai Implementation Process guide",
+      "enterprise Ai Implementation Process",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/ai-implementation-process",
+    icon: "📝",
+  },
 ];
 
 /**
