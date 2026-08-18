@@ -17,7 +17,7 @@ Reverse-chronological log of every change made to the project. Per RULES.md §8.
   9. `financial-software-development-companies`: "Financial & Banking Software Development Companies: Sub-Millisecond Trading & PCI-DSS Compliance"
   10. `software-development-companies-in-usa`: "Software Development Companies in the USA: Domestic vs Offshore Hybrid Engineering"
 - **Content Synthesizer Engine Upgrade (`scripts/seo_engine/content_synthesizer.py`)**: Enhanced the autonomous daily SEO engine to generate dynamic, category-aware (AI, Security, Business Strategy, Enterprise) markdown content with tailored Mermaid sequence/flow diagrams, vendor comparison matrices, compliance checklists, and internal linking meshes.
-- **RULES.md Compliance**: Maintained mandatory `Context.md` and `Changelog.md` living documentation.
+- **Sitemap Dynamic Routing & Timestamp Refresh (`src/app/sitemap.ts`)**: Confirmed that all 10 new blog posts are automatically included in the `/sitemap.xml` route array via dynamic mapping over `blogPosts` in `blogData.ts`. Updated `LAST_CONTENT_UPDATE` timestamp to `2026-08-18T10:00:00.000Z` to signal fresh content indexing to search engines.
 
 ### Why
 To execute the user-approved SEO strategy targeting high-intent cornerstone and regional software development keywords, while permanently elevating the content quality baseline of the autonomous daily SEO engine.

@@ -12,7 +12,7 @@ import { knowledgeHubData } from "@/data/knowledgeHubData";
 // Ceiling: when a CMS/git-hook is wired, replace with real per-file mtime.
 const SITE_LAUNCH = "2026-01-15T00:00:00.000Z";
 const LAST_SEO_REWRITE = "2026-08-09T10:35:00.000Z";
-const LAST_CONTENT_UPDATE = "2026-08-10T10:00:00.000Z";
+const LAST_CONTENT_UPDATE = "2026-08-18T10:00:00.000Z";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.devflow.co.in";
