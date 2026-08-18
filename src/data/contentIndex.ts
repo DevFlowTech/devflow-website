@@ -1343,6 +1343,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/ai-implementation-process",
     icon: "📝",
   },
+  {
+    id: "blog/ai-implementation-ideas",
+    title: "Ai Implementation Ideas: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for ai implementation ideas: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Ai Implementation Ideas",
+      "Ai Implementation Ideas guide",
+      "enterprise Ai Implementation Ideas",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/ai-implementation-ideas",
+    icon: "📝",
+  },
 ];
 
 /**
