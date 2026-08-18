@@ -1359,6 +1359,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/ai-implementation-ideas",
     icon: "📝",
   },
+  {
+    id: "blog/rag-vs-fine-tuning-enterprise",
+    title: "Rag Vs Fine Tuning Enterprise: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for rag vs fine tuning enterprise: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Rag Vs Fine Tuning Enterprise",
+      "Rag Vs Fine Tuning Enterprise guide",
+      "enterprise Rag Vs Fine Tuning Enterprise",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/rag-vs-fine-tuning-enterprise",
+    icon: "📝",
+  },
 ];
 
 /**
