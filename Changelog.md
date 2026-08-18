@@ -2,6 +2,28 @@
 
 Reverse-chronological log of every change made to the project. Per RULES.md §8.1, updated in the same run as any project change. Entries before 2026-08-08 predate this file; see `git log` for that history.
 
+## Clean SEO Agency & AEO/GEO Content Release — 2026-08-18 10:27
+
+### What changed
+- **10 Unique SEO Agency & Algorithm Articles (`src/data/blogData.ts`, `src/data/contentIndex.ts`)**: Authored and published 10 technical, anti-slop articles targeting high-volume and explosive-growth SEO agency search keywords:
+  1. `best-companies-for-seo`: "Best Companies for SEO: 2026 Enterprise Evaluation & Vendor Selection Guide"
+  2. `seo-news-today-2026-algorithm-updates`: "SEO News Today: 2026 AI Search Engine & Google Core Algorithm Updates" (650% Explosive Growth Target)
+  3. `seo-services-companies`: "SEO Services Companies: Technical SEO, AEO & Programmatic Infrastructure Guide"
+  4. `google-seo-companies`: "Google SEO Companies: Technical Core Web Vitals, Crawl Budget & Indexing Framework"
+  5. `website-seo-companies`: "Website SEO Companies: Next.js SSR, JSON-LD Schema & Performance Audit"
+  6. `seo-companies-india`: "SEO Companies in India: Technical SEO Engineering & Global Search Strategy"
+  7. `enterprise-seo-companies`: "Enterprise SEO Companies: Programmatic Rendering & Multi-Region Hreflang Architecture"
+  8. `medical-seo-companies`: "Medical & Healthcare SEO Companies: YMYL, E-E-A-T & Patient Privacy Compliance"
+  9. `seo-for-insurance-companies`: "SEO for Insurance Companies: High-Intent Lead Acquisition & Technical Architecture"
+  10. `seo-companies-london`: "SEO Companies in London: UK Market Search Strategy & Technical Audit Framework"
+- **Automatic Sitemap Integration**: Verified that `src/app/sitemap.ts` dynamically routes all 10 new articles into `/sitemap.xml`.
+- **RULES.md Governance**: Maintained mandatory `Context.md` and `Changelog.md` living documentation.
+
+### Why
+To capture explosive organic search demand across high-intent SEO agency keywords and position DevFlow as the premier technical SEO, AEO, and GEO engineering partner.
+
+---
+
 ## Priority SEO Cornerstone Content Release & Engine Upgrade — 2026-08-18 10:03
 
 ### What changed

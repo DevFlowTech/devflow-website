@@ -2,7 +2,7 @@
 
 _Living state document. Updated after every run that changes the project (see RULES.md §8.1)._
 
-Last updated: **2026-08-18 (Priority SEO Cornerstone Content Release, 10 Unique High-Intent Articles, Content Synthesizer Engine Upgrade, Sitemap Timestamp Refresh, RULES.md Governance Compliance)**
+Last updated: **2026-08-18 (Clean SEO & AEO/GEO Content Release, 10 Unique High-Growth SEO Agency Articles, RULES.md Governance Compliance)**
 
 ---
 

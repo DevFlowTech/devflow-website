@@ -1552,6 +1552,169 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/ai-implementation-examples",
     icon: "📝",
   },
+
+  {
+    id: "blog/best-companies-for-seo",
+    title: "Best Companies for SEO: 2026 Enterprise Evaluation & Vendor Selection Guide",
+    type: "blog",
+    summary: "An objective 8-point evaluation rubric for selecting top SEO and AEO agencies. Includes Core Web Vitals, JSON-LD schemas, AI bot indexing, and reporting transparency.",
+    keywords: [
+      "best companies for seo",
+      "seo vendor evaluation",
+      "top seo agencies",
+      "enterprise seo partner",
+      "DevFlow technology",
+      "reputable seo companies",
+      "recommended seo companies"
+    ],
+    path: "/blog/best-companies-for-seo",
+    icon: "📝",
+  },
+  {
+    id: "blog/seo-news-today-2026-algorithm-updates",
+    title: "SEO News Today: 2026 AI Search Engine & Google Core Algorithm Updates",
+    type: "blog",
+    summary: "Explosive shift in search: how Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO) are reshaping Google Core updates and AI bot crawlers.",
+    keywords: [
+      "seo news today",
+      "seo news",
+      "google algorithm updates 2026",
+      "AEO",
+      "GEO",
+      "AI bot indexing",
+      "DevFlow technology",
+      "search engine news"
+    ],
+    path: "/blog/seo-news-today-2026-algorithm-updates",
+    icon: "📝",
+  },
+  {
+    id: "blog/seo-services-companies",
+    title: "SEO Services Companies: Technical SEO, AEO & Programmatic Infrastructure Guide",
+    type: "blog",
+    summary: "What to expect from modern SEO services companies. Technical SSR rendering, structured JSON-LD schemas, sitemap sanitization, and crawl budget optimization.",
+    keywords: [
+      "seo services companies",
+      "seo service companies",
+      "technical seo services",
+      "programmatic seo",
+      "DevFlow technology",
+      "website seo companies"
+    ],
+    path: "/blog/seo-services-companies",
+    icon: "📝",
+  },
+  {
+    id: "blog/google-seo-companies",
+    title: "Google SEO Companies: Technical Core Web Vitals, Crawl Budget & Indexing Framework",
+    type: "blog",
+    summary: "How Google SEO companies optimize complex web apps. Deep dive into Interaction to Next Paint (INP), LCP, CLS, Googlebot SSR hydration, and server caching.",
+    keywords: [
+      "google seo companies",
+      "core web vitals optimization",
+      "googlebot rendering",
+      "technical google seo",
+      "DevFlow technology",
+      "google seo agency"
+    ],
+    path: "/blog/google-seo-companies",
+    icon: "📝",
+  },
+  {
+    id: "blog/website-seo-companies",
+    title: "Website SEO Companies: Next.js SSR, JSON-LD Schema & Performance Audit",
+    type: "blog",
+    summary: "Architecting high-ranking websites. How specialized website SEO companies optimize Next.js App Router, canonical headers, CSP tracker allowlisting, and meta tags.",
+    keywords: [
+      "website seo companies",
+      "nextjs seo",
+      "website seo audit",
+      "json ld schema",
+      "DevFlow technology",
+      "organic seo companies"
+    ],
+    path: "/blog/website-seo-companies",
+    icon: "📝",
+  },
+  {
+    id: "blog/seo-companies-india",
+    title: "SEO Companies in India: Technical SEO Engineering & Global Search Strategy",
+    type: "blog",
+    summary: "Why global brands partner with technical SEO companies in India. Programmatic landing page architectures, international hreflang tags, and high-ROI execution.",
+    keywords: [
+      "seo companies india",
+      "seo companies in india",
+      "offshore seo india",
+      "technical seo india",
+      "DevFlow technology",
+      "seo company ahmedabad"
+    ],
+    path: "/blog/seo-companies-india",
+    icon: "📝",
+  },
+  {
+    id: "blog/enterprise-seo-companies",
+    title: "Enterprise SEO Companies: Programmatic Rendering & Multi-Region Hreflang Architecture",
+    type: "blog",
+    summary: "Scaling search for enterprise platforms. How enterprise SEO companies manage million-page architectures, edge rendering, dynamic sitemaps, and multi-lingual SEO.",
+    keywords: [
+      "enterprise seo companies",
+      "top enterprise seo companies",
+      "programmatic seo architecture",
+      "hreflang enterprise",
+      "DevFlow technology",
+      "seo for enterprise companies"
+    ],
+    path: "/blog/enterprise-seo-companies",
+    icon: "📝",
+  },
+  {
+    id: "blog/medical-seo-companies",
+    title: "Medical & Healthcare SEO Companies: YMYL, E-E-A-T & Patient Privacy Compliance",
+    type: "blog",
+    summary: "Navigating search for healthcare and medical providers. YMYL quality guidelines, author credentials, MedicalWebPage schemas, and HIPAA privacy compliance.",
+    keywords: [
+      "medical seo companies",
+      "healthcare seo",
+      "YMYL seo",
+      "HIPAA compliant seo",
+      "E-E-A-T medical",
+      "DevFlow technology"
+    ],
+    path: "/blog/medical-seo-companies",
+    icon: "📝",
+  },
+  {
+    id: "blog/seo-for-insurance-companies",
+    title: "SEO for Insurance Companies: High-Intent Lead Acquisition & Technical Architecture",
+    type: "blog",
+    summary: "Capturing high-converting insurance search traffic. Localized state quote engines, trust signal schemas, financial YMYL compliance, and site performance.",
+    keywords: [
+      "seo for insurance companies",
+      "insurance seo strategy",
+      "financial YMYL seo",
+      "insurance landing page seo",
+      "DevFlow technology"
+    ],
+    path: "/blog/seo-for-insurance-companies",
+    icon: "📝",
+  },
+  {
+    id: "blog/seo-companies-london",
+    title: "SEO Companies in London: UK Market Search Strategy & Technical Audit Framework",
+    type: "blog",
+    summary: "Navigating search optimization for UK enterprises. London market rate benchmarks, UK GDPR data privacy, local NAP consistency, and hybrid UK-India engineering.",
+    keywords: [
+      "seo companies london",
+      "london seo companies",
+      "best seo companies london",
+      "uk seo agency",
+      "DevFlow technology",
+      "top seo companies london"
+    ],
+    path: "/blog/seo-companies-london",
+    icon: "📝",
+  },
 ];
 
 /**
