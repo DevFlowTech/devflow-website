@@ -2,6 +2,28 @@
 
 Reverse-chronological log of every change made to the project. Per RULES.md §8.1, updated in the same run as any project change. Entries before 2026-08-08 predate this file; see `git log` for that history.
 
+## Priority SEO Cornerstone Content Release & Engine Upgrade — 2026-08-18 10:03
+
+### What changed
+- **10 Unique Priority SEO Blog Posts (`src/data/blogData.ts`, `src/data/contentIndex.ts`)**: Authored and published 10 comprehensive, anti-slop technical articles targeting Tier 1, Tier 2, Tier 3, and Tier 4 priority keywords:
+  1. `best-software-development-companies`: "Best Software Development Companies: 2026 Enterprise Buyer's & Evaluation Guide"
+  2. `ai-software-development-companies`: "Top AI Software Development Companies: Architectural Capabilities & Selection Framework"
+  3. `custom-software-development-companies`: "Custom Software Development Companies: How to Evaluate IP Ownership, Tech Stacks & ROI"
+  4. `software-development-companies-list`: "Software Development Companies List: 2026 Comprehensive Comparison & Selection Checklist"
+  5. `software-development-companies-australia`: "Software Development Companies in Australia: Nearshore & Offshore Engagement Models"
+  6. `software-development-companies-uk`: "Software Development Companies in the UK: Tech Talent, Compliance & Cost Structures"
+  7. `software-development-companies-in-india`: "Software Development Companies in India: Engineering Quality, Timezone & Vendor Selection Guide"
+  8. `healthcare-software-development-companies`: "Healthcare Software Development Companies: HIPAA, FHIR Interoperability & Security Architecture"
+  9. `financial-software-development-companies`: "Financial & Banking Software Development Companies: Sub-Millisecond Trading & PCI-DSS Compliance"
+  10. `software-development-companies-in-usa`: "Software Development Companies in the USA: Domestic vs Offshore Hybrid Engineering"
+- **Content Synthesizer Engine Upgrade (`scripts/seo_engine/content_synthesizer.py`)**: Enhanced the autonomous daily SEO engine to generate dynamic, category-aware (AI, Security, Business Strategy, Enterprise) markdown content with tailored Mermaid sequence/flow diagrams, vendor comparison matrices, compliance checklists, and internal linking meshes.
+- **RULES.md Compliance**: Maintained mandatory `Context.md` and `Changelog.md` living documentation.
+
+### Why
+To execute the user-approved SEO strategy targeting high-intent cornerstone and regional software development keywords, while permanently elevating the content quality baseline of the autonomous daily SEO engine.
+
+---
+
 ## SEO, AEO, GEO Infrastructure & Mobile UX Overhaul — 2026-08-14 09:55
 
 ### What changed
