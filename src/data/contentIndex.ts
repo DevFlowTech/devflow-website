@@ -1715,6 +1715,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/seo-companies-london",
     icon: "📝",
   },
+  {
+    id: "blog/artificial-intelligence-implementation-examples",
+    title: "Artificial Intelligence Implementation Examples: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for artificial intelligence implementation examples: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Artificial Intelligence Implementation Examples",
+      "Artificial Intelligence Implementation Examples guide",
+      "enterprise Artificial Intelligence Implementation Examples",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/artificial-intelligence-implementation-examples",
+    icon: "📝",
+  },
 ];
 
 /**
