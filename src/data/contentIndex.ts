@@ -1747,6 +1747,54 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/ai-agents-vs-chatbots",
     icon: "📝",
   },
+  {
+    id: "blog/ai-agent-vs-chat-bot",
+    title: "Ai Agent Vs Chat Bot: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for ai agent vs chat bot: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Ai Agent Vs Chat Bot",
+      "Ai Agent Vs Chat Bot guide",
+      "enterprise Ai Agent Vs Chat Bot",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/ai-agent-vs-chat-bot",
+    icon: "📝",
+  },
+  {
+    id: "blog/ai-agent-vs-chatbot-difference",
+    title: "Ai Agent Vs Chatbot Difference: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for ai agent vs chatbot difference: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Ai Agent Vs Chatbot Difference",
+      "Ai Agent Vs Chatbot Difference guide",
+      "enterprise Ai Agent Vs Chatbot Difference",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/ai-agent-vs-chatbot-difference",
+    icon: "📝",
+  },
+  {
+    id: "blog/aiagents-vs-traditionalchatbots",
+    title: "Ai.Agents Vs Traditional.Chatbots: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for ai.agents vs traditional.chatbots: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Ai.Agents Vs Traditional.Chatbots",
+      "Ai.Agents Vs Traditional.Chatbots guide",
+      "enterprise Ai.Agents Vs Traditional.Chatbots",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/aiagents-vs-traditionalchatbots",
+    icon: "📝",
+  },
 ];
 
 /**
