@@ -1731,6 +1731,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/artificial-intelligence-implementation-examples",
     icon: "📝",
   },
+  {
+    id: "blog/ai-agents-vs-chatbots",
+    title: "Ai Agents Vs Chatbots: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for ai agents vs chatbots: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Ai Agents Vs Chatbots",
+      "Ai Agents Vs Chatbots guide",
+      "enterprise Ai Agents Vs Chatbots",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/ai-agents-vs-chatbots",
+    icon: "📝",
+  },
 ];
 
 /**
