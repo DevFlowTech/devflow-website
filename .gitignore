@@ -47,3 +47,8 @@ Desktop/
 ponytail/
 skills-lock.json
 
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+
