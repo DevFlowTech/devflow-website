@@ -1795,6 +1795,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/aiagents-vs-traditionalchatbots",
     icon: "📝",
   },
+  {
+    id: "blog/ai-agent-vs-llm-chatbot",
+    title: "Ai Agent Vs Llm Chatbot: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for ai agent vs llm chatbot: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Ai Agent Vs Llm Chatbot",
+      "Ai Agent Vs Llm Chatbot guide",
+      "enterprise Ai Agent Vs Llm Chatbot",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/ai-agent-vs-llm-chatbot",
+    icon: "📝",
+  },
 ];
 
 /**
