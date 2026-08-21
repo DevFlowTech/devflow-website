@@ -215,7 +215,8 @@ export const siteContent: ContentEntry[] = [
     id: "page/privacy",
     title: "Privacy Policy",
     type: "page",
-    summary: "DevFlow Technology privacy policy detailing data collection, usage, cookies, and GDPR/DPDPA compliance.",
+    summary:
+      "DevFlow Technology privacy policy detailing data collection, usage, cookies, and GDPR/DPDPA compliance.",
     keywords: ["privacy", "policy", "GDPR", "DPDPA", "data protection"],
     path: "/privacy",
     icon: "🔒",
@@ -224,7 +225,8 @@ export const siteContent: ContentEntry[] = [
     id: "page/terms",
     title: "Terms of Service",
     type: "page",
-    summary: "DevFlow Technology terms and conditions for software development services, project delivery, and client agreements.",
+    summary:
+      "DevFlow Technology terms and conditions for software development services, project delivery, and client agreements.",
     keywords: ["terms", "conditions", "service agreement", "legal"],
     path: "/terms",
     icon: "📄",
@@ -597,14 +599,7 @@ export const siteContent: ContentEntry[] = [
     type: "project",
     summary:
       "Secure document parsing portal with React and Node upload pipelines. React.js, Node.js. Client onboarding time reduced by 40%.",
-    keywords: [
-      "visa",
-      "document",
-      "portal",
-      "React",
-      "Node.js",
-      "onboarding",
-    ],
+    keywords: ["visa", "document", "portal", "React", "Node.js", "onboarding"],
     path: "/work/visa-consultancy",
     details:
       "Challenge: Delayed visa application processing. Solution: Secure document parsing portal. Results: 40% faster client onboarding.",
@@ -616,7 +611,14 @@ export const siteContent: ContentEntry[] = [
     type: "project",
     summary:
       "Custom ERP with MySQL and real-time backend API sync. React.js, Node.js, MySQL. Inventory stock accuracy improved to 99.8%.",
-    keywords: ["ERP", "inventory", "MySQL", "React", "Node.js", "business system"],
+    keywords: [
+      "ERP",
+      "inventory",
+      "MySQL",
+      "React",
+      "Node.js",
+      "business system",
+    ],
     path: "/work/erp-business-system",
     details:
       "Challenge: Inefficient inventory reconciliation. Solution: Custom ERP with MySQL + real-time API sync. Results: 99.8% inventory accuracy.",
@@ -746,7 +748,15 @@ export const siteContent: ContentEntry[] = [
     type: "faq",
     summary:
       "DevFlow designs custom ERP using Next.js, Node.js, and SQL databases with real-time WebSockets. Eliminates legacy silos and unifies supply chain telemetry.",
-    keywords: ["ERP", "logistics", "database", "Next.js", "Node.js", "SQL", "WebSockets"],
+    keywords: [
+      "ERP",
+      "logistics",
+      "database",
+      "Next.js",
+      "Node.js",
+      "SQL",
+      "WebSockets",
+    ],
     path: "/faq",
     icon: "❓",
   },
@@ -858,13 +868,7 @@ export const siteContent: ContentEntry[] = [
     type: "local-seo",
     summary:
       "DevFlow Technology is a premier web development company in Ahmedabad, Gujarat. Expert in Next.js, React, and modern web applications.",
-    keywords: [
-      "web development",
-      "Ahmedabad",
-      "Next.js",
-      "React",
-      "website",
-    ],
+    keywords: ["web development", "Ahmedabad", "Next.js", "React", "website"],
     path: "/web-development-company-ahmedabad",
     icon: "🌍",
   },
@@ -908,12 +912,7 @@ export const siteContent: ContentEntry[] = [
     type: "local-seo",
     summary:
       "DevFlow Technology provides comprehensive IT services in Ahmedabad including software development, AI automation, cloud infrastructure, and digital marketing.",
-    keywords: [
-      "IT services",
-      "Ahmedabad",
-      "technology solutions",
-      "digital",
-    ],
+    keywords: ["IT services", "Ahmedabad", "technology solutions", "digital"],
     path: "/it-services-ahmedabad",
     icon: "🛠️",
   },
@@ -1133,7 +1132,14 @@ export const siteContent: ContentEntry[] = [
     type: "blog",
     summary:
       "Groq LPU achieves 500+ tokens/second. Sub-second response times for chatbots. Cost-effective for high-volume agentic workflows. OpenAI-compatible APIs.",
-    keywords: ["Groq", "LPU", "fast inference", "AI speed", "real-time", "chatbot"],
+    keywords: [
+      "Groq",
+      "LPU",
+      "fast inference",
+      "AI speed",
+      "real-time",
+      "chatbot",
+    ],
     path: "/blog/groq-lpu-the-future-of-ai-inference-speed",
     icon: "📝",
   },
@@ -1266,7 +1272,8 @@ export const siteContent: ContentEntry[] = [
   },
   {
     id: "blog/best-it-companies-ahmedabad-selection-guide",
-    title: "Top Software & IT Consulting Companies in Ahmedabad Selection Guide",
+    title:
+      "Top Software & IT Consulting Companies in Ahmedabad Selection Guide",
     type: "blog",
     summary:
       "How to evaluate and hire the best software development and IT consulting companies in Ahmedabad. Comprehensive vetting checklist for technical founders.",
@@ -1281,106 +1288,120 @@ export const siteContent: ContentEntry[] = [
   },
   {
     id: "blog/generative-ai-enterprise-implementation",
-    title: "Generative Ai Enterprise Implementation: Enterprise Architecture & Implementation Guide",
+    title:
+      "Generative Ai Enterprise Implementation: Enterprise Architecture & Implementation Guide",
     type: "blog",
-    summary: "A technical engineering blueprint for generative ai enterprise implementation: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for generative ai enterprise implementation: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Generative Ai Enterprise Implementation",
       "Generative Ai Enterprise Implementation guide",
       "enterprise Generative Ai Enterprise Implementation",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/generative-ai-enterprise-implementation",
     icon: "📝",
   },
   {
     id: "blog/mit-study-generative-ai-enterprise-implementation",
-    title: "Mit Study Generative Ai Enterprise Implementation: Enterprise Architecture & Implementation Guide",
+    title:
+      "Mit Study Generative Ai Enterprise Implementation: Enterprise Architecture & Implementation Guide",
     type: "blog",
-    summary: "A technical engineering blueprint for mit study generative ai enterprise implementation: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for mit study generative ai enterprise implementation: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Mit Study Generative Ai Enterprise Implementation",
       "Mit Study Generative Ai Enterprise Implementation guide",
       "enterprise Mit Study Generative Ai Enterprise Implementation",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/mit-study-generative-ai-enterprise-implementation",
     icon: "📝",
   },
   {
     id: "blog/postgresql-multi-tenant-database-architecture",
-    title: "Postgresql Multi-Tenant Database Architecture: Enterprise Architecture & Implementation Guide",
+    title:
+      "Postgresql Multi-Tenant Database Architecture: Enterprise Architecture & Implementation Guide",
     type: "blog",
-    summary: "A technical engineering blueprint for postgresql multi-tenant database architecture: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for postgresql multi-tenant database architecture: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Postgresql Multi-Tenant Database Architecture",
       "Postgresql Multi-Tenant Database Architecture guide",
       "enterprise Postgresql Multi-Tenant Database Architecture",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/postgresql-multi-tenant-database-architecture",
     icon: "📝",
   },
   {
     id: "blog/ai-implementation-process",
-    title: "Ai Implementation Process: Enterprise Architecture & Implementation Guide",
+    title:
+      "Ai Implementation Process: Enterprise Architecture & Implementation Guide",
     type: "blog",
-    summary: "A technical engineering blueprint for ai implementation process: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for ai implementation process: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Ai Implementation Process",
       "Ai Implementation Process guide",
       "enterprise Ai Implementation Process",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/ai-implementation-process",
     icon: "📝",
   },
   {
     id: "blog/ai-implementation-ideas",
-    title: "Ai Implementation Ideas: Enterprise Architecture & Implementation Guide",
+    title:
+      "Ai Implementation Ideas: Enterprise Architecture & Implementation Guide",
     type: "blog",
-    summary: "A technical engineering blueprint for ai implementation ideas: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for ai implementation ideas: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Ai Implementation Ideas",
       "Ai Implementation Ideas guide",
       "enterprise Ai Implementation Ideas",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/ai-implementation-ideas",
     icon: "📝",
   },
   {
     id: "blog/rag-vs-fine-tuning-enterprise",
-    title: "Rag Vs Fine Tuning Enterprise: In-Depth Technical & Cost Comparison (2026)",
+    title:
+      "Rag Vs Fine Tuning Enterprise: In-Depth Technical & Cost Comparison (2026)",
     type: "blog",
-    summary: "A technical engineering blueprint for rag vs fine tuning enterprise: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for rag vs fine tuning enterprise: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Rag Vs Fine Tuning Enterprise",
       "Rag Vs Fine Tuning Enterprise guide",
       "enterprise Rag Vs Fine Tuning Enterprise",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/rag-vs-fine-tuning-enterprise",
     icon: "📝",
   },
 
   {
     id: "blog/best-software-development-companies",
-    title: "Best Software Development Companies: 2026 Enterprise Buyer's & Evaluation Guide",
+    title:
+      "Best Software Development Companies: 2026 Enterprise Buyer's & Evaluation Guide",
     type: "blog",
-    summary: "An objective 8-point evaluation rubric for selecting top software development partners. Includes IP security, engineering benchmarks, pricing models, and tech stack criteria.",
+    summary:
+      "An objective 8-point evaluation rubric for selecting top software development partners. Includes IP security, engineering benchmarks, pricing models, and tech stack criteria.",
     keywords: [
       "best software development companies",
       "software development company evaluation",
@@ -1388,16 +1409,18 @@ export const siteContent: ContentEntry[] = [
       "top engineering partners",
       "custom software development",
       "DevFlow technology",
-      "software development companies list"
+      "software development companies list",
     ],
     path: "/blog/best-software-development-companies",
     icon: "📝",
   },
   {
     id: "blog/ai-software-development-companies",
-    title: "Top AI Software Development Companies: Architectural Capabilities & Selection Framework",
+    title:
+      "Top AI Software Development Companies: Architectural Capabilities & Selection Framework",
     type: "blog",
-    summary: "How to evaluate AI software development companies in 2026. Covers RAG vs fine-tuning, vector database architecture, enterprise LLM security, and sub-second inference SLAs.",
+    summary:
+      "How to evaluate AI software development companies in 2026. Covers RAG vs fine-tuning, vector database architecture, enterprise LLM security, and sub-second inference SLAs.",
     keywords: [
       "ai software development companies",
       "enterprise AI development",
@@ -1405,159 +1428,179 @@ export const siteContent: ContentEntry[] = [
       "RAG vs Fine-tuning",
       "AI engineering agency",
       "DevFlow technology",
-      "ai software development"
+      "ai software development",
     ],
     path: "/blog/ai-software-development-companies",
     icon: "📝",
   },
   {
     id: "blog/custom-software-development-companies",
-    title: "Custom Software Development Companies: How to Evaluate IP Ownership, Tech Stacks & ROI",
+    title:
+      "Custom Software Development Companies: How to Evaluate IP Ownership, Tech Stacks & ROI",
     type: "blog",
-    summary: "Why off-the-shelf SaaS creates per-seat vendor tax. A technical breakdown of custom software development: 100% IP ownership, microservices architecture, and long-term cost ROI.",
+    summary:
+      "Why off-the-shelf SaaS creates per-seat vendor tax. A technical breakdown of custom software development: 100% IP ownership, microservices architecture, and long-term cost ROI.",
     keywords: [
       "custom software development companies",
       "custom software ROI",
       "100% IP ownership",
       "decoupled software architecture",
       "DevFlow technology",
-      "custom software engineering"
+      "custom software engineering",
     ],
     path: "/blog/custom-software-development-companies",
     icon: "📝",
   },
   {
     id: "blog/software-development-companies-list",
-    title: "Software Development Companies List: 2026 Comprehensive Comparison & Selection Checklist",
+    title:
+      "Software Development Companies List: 2026 Comprehensive Comparison & Selection Checklist",
     type: "blog",
-    summary: "A curated taxonomy and evaluation checklist for software development companies. Analyze boutique agencies, enterprise integrators, nearshore partners, and offshore teams.",
+    summary:
+      "A curated taxonomy and evaluation checklist for software development companies. Analyze boutique agencies, enterprise integrators, nearshore partners, and offshore teams.",
     keywords: [
       "software development companies list",
       "software agency directory",
       "vendor vetting checklist",
       "engineering agency comparison",
-      "DevFlow technology"
+      "DevFlow technology",
     ],
     path: "/blog/software-development-companies-list",
     icon: "📝",
   },
   {
     id: "blog/software-development-companies-australia",
-    title: "Software Development Companies in Australia: Nearshore & Offshore Engagement Models",
+    title:
+      "Software Development Companies in Australia: Nearshore & Offshore Engagement Models",
     type: "blog",
-    summary: "How Australian businesses leverage hybrid nearshore/offshore engineering models. Timezone alignment (AEST/AWST), IP protection under Australian law, and cost structures.",
+    summary:
+      "How Australian businesses leverage hybrid nearshore/offshore engineering models. Timezone alignment (AEST/AWST), IP protection under Australian law, and cost structures.",
     keywords: [
       "software development companies australia",
       "software engineering sydney melbourne",
       "offshore development australia",
       "DevFlow technology",
-      "software development australia"
+      "software development australia",
     ],
     path: "/blog/software-development-companies-australia",
     icon: "📝",
   },
   {
     id: "blog/software-development-companies-uk",
-    title: "Software Development Companies in the UK: Tech Talent, Compliance & Cost Structures",
+    title:
+      "Software Development Companies in the UK: Tech Talent, Compliance & Cost Structures",
     type: "blog",
-    summary: "Navigating software development for UK enterprises. Balancing London tech hub rates with high-velocity UK-India hybrid engineering teams, GDPR compliance, and FCA standards.",
+    summary:
+      "Navigating software development for UK enterprises. Balancing London tech hub rates with high-velocity UK-India hybrid engineering teams, GDPR compliance, and FCA standards.",
     keywords: [
       "software development companies uk",
       "software development london",
       "UK software agency",
       "GDPR compliant software development",
       "DevFlow technology",
-      "software development companies in uk"
+      "software development companies in uk",
     ],
     path: "/blog/software-development-companies-uk",
     icon: "📝",
   },
   {
     id: "blog/software-development-companies-in-india",
-    title: "Software Development Companies in India: Engineering Quality, Timezone & Vendor Selection Guide",
+    title:
+      "Software Development Companies in India: Engineering Quality, Timezone & Vendor Selection Guide",
     type: "blog",
-    summary: "A transparent engineering guide to hiring software development companies in India. Tier-1 engineering talent, async communication protocols, code quality audits, and pricing.",
+    summary:
+      "A transparent engineering guide to hiring software development companies in India. Tier-1 engineering talent, async communication protocols, code quality audits, and pricing.",
     keywords: [
       "software development companies in india",
       "offshore development india",
       "hire developers india",
       "DevFlow technology",
       "software development ahmedabad",
-      "best software development companies in india"
+      "best software development companies in india",
     ],
     path: "/blog/software-development-companies-in-india",
     icon: "📝",
   },
   {
     id: "blog/healthcare-software-development-companies",
-    title: "Healthcare Software Development Companies: HIPAA, FHIR Interoperability & Security Architecture",
+    title:
+      "Healthcare Software Development Companies: HIPAA, FHIR Interoperability & Security Architecture",
     type: "blog",
-    summary: "Technical architectural requirements for healthcare software development. HIPAA compliance, FHIR/HL7 API integrations, zero-trust PHI encryption, and EHR interoperability.",
+    summary:
+      "Technical architectural requirements for healthcare software development. HIPAA compliance, FHIR/HL7 API integrations, zero-trust PHI encryption, and EHR interoperability.",
     keywords: [
       "healthcare software development companies",
       "HIPAA compliant software",
       "FHIR API integration",
       "EHR software development",
       "DevFlow technology",
-      "healthcare software engineering"
+      "healthcare software engineering",
     ],
     path: "/blog/healthcare-software-development-companies",
     icon: "📝",
   },
   {
     id: "blog/financial-software-development-companies",
-    title: "Financial & Banking Software Development Companies: Sub-Millisecond Trading & PCI-DSS Compliance",
+    title:
+      "Financial & Banking Software Development Companies: Sub-Millisecond Trading & PCI-DSS Compliance",
     type: "blog",
-    summary: "Engineering high-throughput, fault-tolerant financial software. PCI-DSS Level 1 compliance, sub-millisecond API response, fraud detection engine architecture, and multi-region failover.",
+    summary:
+      "Engineering high-throughput, fault-tolerant financial software. PCI-DSS Level 1 compliance, sub-millisecond API response, fraud detection engine architecture, and multi-region failover.",
     keywords: [
       "financial software development companies",
       "banking software development",
       "PCI-DSS compliance",
       "fintech engineering",
       "DevFlow technology",
-      "fintech software development"
+      "fintech software development",
     ],
     path: "/blog/financial-software-development-companies",
     icon: "📝",
   },
   {
     id: "blog/software-development-companies-in-usa",
-    title: "Software Development Companies in the USA: Domestic vs Offshore Hybrid Engineering",
+    title:
+      "Software Development Companies in the USA: Domestic vs Offshore Hybrid Engineering",
     type: "blog",
-    summary: "Strategic blueprint for US enterprises choosing software development companies. Balancing domestic US onshore project leadership with high-velocity offshore engineering execution.",
+    summary:
+      "Strategic blueprint for US enterprises choosing software development companies. Balancing domestic US onshore project leadership with high-velocity offshore engineering execution.",
     keywords: [
       "software development companies in usa",
       "US software development agency",
       "onshore offshore hybrid development",
       "DevFlow technology",
       "software development companies in us",
-      "best software development companies in usa"
+      "best software development companies in usa",
     ],
     path: "/blog/software-development-companies-in-usa",
     icon: "📝",
   },
   {
     id: "blog/ai-implementation-examples",
-    title: "Ai Implementation Examples: Enterprise Architecture & Implementation Guide",
+    title:
+      "Ai Implementation Examples: Enterprise Architecture & Implementation Guide",
     type: "blog",
-    summary: "A technical engineering blueprint for ai implementation examples: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for ai implementation examples: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Ai Implementation Examples",
       "Ai Implementation Examples guide",
       "enterprise Ai Implementation Examples",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/ai-implementation-examples",
     icon: "📝",
   },
 
   {
     id: "blog/best-companies-for-seo",
-    title: "Best Companies for SEO: 2026 Enterprise Evaluation & Vendor Selection Guide",
+    title:
+      "Best Companies for SEO: 2026 Enterprise Evaluation & Vendor Selection Guide",
     type: "blog",
-    summary: "An objective 8-point evaluation rubric for selecting top SEO and AEO agencies. Includes Core Web Vitals, JSON-LD schemas, AI bot indexing, and reporting transparency.",
+    summary:
+      "An objective 8-point evaluation rubric for selecting top SEO and AEO agencies. Includes Core Web Vitals, JSON-LD schemas, AI bot indexing, and reporting transparency.",
     keywords: [
       "best companies for seo",
       "seo vendor evaluation",
@@ -1565,16 +1608,18 @@ export const siteContent: ContentEntry[] = [
       "enterprise seo partner",
       "DevFlow technology",
       "reputable seo companies",
-      "recommended seo companies"
+      "recommended seo companies",
     ],
     path: "/blog/best-companies-for-seo",
     icon: "📝",
   },
   {
     id: "blog/seo-news-today-2026-algorithm-updates",
-    title: "SEO News Today: 2026 AI Search Engine & Google Core Algorithm Updates",
+    title:
+      "SEO News Today: 2026 AI Search Engine & Google Core Algorithm Updates",
     type: "blog",
-    summary: "Explosive shift in search: how Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO) are reshaping Google Core updates and AI bot crawlers.",
+    summary:
+      "Explosive shift in search: how Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO) are reshaping Google Core updates and AI bot crawlers.",
     keywords: [
       "seo news today",
       "seo news",
@@ -1583,151 +1628,169 @@ export const siteContent: ContentEntry[] = [
       "GEO",
       "AI bot indexing",
       "DevFlow technology",
-      "search engine news"
+      "search engine news",
     ],
     path: "/blog/seo-news-today-2026-algorithm-updates",
     icon: "📝",
   },
   {
     id: "blog/seo-services-companies",
-    title: "SEO Services Companies: Technical SEO, AEO & Programmatic Infrastructure Guide",
+    title:
+      "SEO Services Companies: Technical SEO, AEO & Programmatic Infrastructure Guide",
     type: "blog",
-    summary: "What to expect from modern SEO services companies. Technical SSR rendering, structured JSON-LD schemas, sitemap sanitization, and crawl budget optimization.",
+    summary:
+      "What to expect from modern SEO services companies. Technical SSR rendering, structured JSON-LD schemas, sitemap sanitization, and crawl budget optimization.",
     keywords: [
       "seo services companies",
       "seo service companies",
       "technical seo services",
       "programmatic seo",
       "DevFlow technology",
-      "website seo companies"
+      "website seo companies",
     ],
     path: "/blog/seo-services-companies",
     icon: "📝",
   },
   {
     id: "blog/google-seo-companies",
-    title: "Google SEO Companies: Technical Core Web Vitals, Crawl Budget & Indexing Framework",
+    title:
+      "Google SEO Companies: Technical Core Web Vitals, Crawl Budget & Indexing Framework",
     type: "blog",
-    summary: "How Google SEO companies optimize complex web apps. Deep dive into Interaction to Next Paint (INP), LCP, CLS, Googlebot SSR hydration, and server caching.",
+    summary:
+      "How Google SEO companies optimize complex web apps. Deep dive into Interaction to Next Paint (INP), LCP, CLS, Googlebot SSR hydration, and server caching.",
     keywords: [
       "google seo companies",
       "core web vitals optimization",
       "googlebot rendering",
       "technical google seo",
       "DevFlow technology",
-      "google seo agency"
+      "google seo agency",
     ],
     path: "/blog/google-seo-companies",
     icon: "📝",
   },
   {
     id: "blog/website-seo-companies",
-    title: "Website SEO Companies: Next.js SSR, JSON-LD Schema & Performance Audit",
+    title:
+      "Website SEO Companies: Next.js SSR, JSON-LD Schema & Performance Audit",
     type: "blog",
-    summary: "Architecting high-ranking websites. How specialized website SEO companies optimize Next.js App Router, canonical headers, CSP tracker allowlisting, and meta tags.",
+    summary:
+      "Architecting high-ranking websites. How specialized website SEO companies optimize Next.js App Router, canonical headers, CSP tracker allowlisting, and meta tags.",
     keywords: [
       "website seo companies",
       "nextjs seo",
       "website seo audit",
       "json ld schema",
       "DevFlow technology",
-      "organic seo companies"
+      "organic seo companies",
     ],
     path: "/blog/website-seo-companies",
     icon: "📝",
   },
   {
     id: "blog/seo-companies-india",
-    title: "SEO Companies in India: Technical SEO Engineering & Global Search Strategy",
+    title:
+      "SEO Companies in India: Technical SEO Engineering & Global Search Strategy",
     type: "blog",
-    summary: "Why global brands partner with technical SEO companies in India. Programmatic landing page architectures, international hreflang tags, and high-ROI execution.",
+    summary:
+      "Why global brands partner with technical SEO companies in India. Programmatic landing page architectures, international hreflang tags, and high-ROI execution.",
     keywords: [
       "seo companies india",
       "seo companies in india",
       "offshore seo india",
       "technical seo india",
       "DevFlow technology",
-      "seo company ahmedabad"
+      "seo company ahmedabad",
     ],
     path: "/blog/seo-companies-india",
     icon: "📝",
   },
   {
     id: "blog/enterprise-seo-companies",
-    title: "Enterprise SEO Companies: Programmatic Rendering & Multi-Region Hreflang Architecture",
+    title:
+      "Enterprise SEO Companies: Programmatic Rendering & Multi-Region Hreflang Architecture",
     type: "blog",
-    summary: "Scaling search for enterprise platforms. How enterprise SEO companies manage million-page architectures, edge rendering, dynamic sitemaps, and multi-lingual SEO.",
+    summary:
+      "Scaling search for enterprise platforms. How enterprise SEO companies manage million-page architectures, edge rendering, dynamic sitemaps, and multi-lingual SEO.",
     keywords: [
       "enterprise seo companies",
       "top enterprise seo companies",
       "programmatic seo architecture",
       "hreflang enterprise",
       "DevFlow technology",
-      "seo for enterprise companies"
+      "seo for enterprise companies",
     ],
     path: "/blog/enterprise-seo-companies",
     icon: "📝",
   },
   {
     id: "blog/medical-seo-companies",
-    title: "Medical & Healthcare SEO Companies: YMYL, E-E-A-T & Patient Privacy Compliance",
+    title:
+      "Medical & Healthcare SEO Companies: YMYL, E-E-A-T & Patient Privacy Compliance",
     type: "blog",
-    summary: "Navigating search for healthcare and medical providers. YMYL quality guidelines, author credentials, MedicalWebPage schemas, and HIPAA privacy compliance.",
+    summary:
+      "Navigating search for healthcare and medical providers. YMYL quality guidelines, author credentials, MedicalWebPage schemas, and HIPAA privacy compliance.",
     keywords: [
       "medical seo companies",
       "healthcare seo",
       "YMYL seo",
       "HIPAA compliant seo",
       "E-E-A-T medical",
-      "DevFlow technology"
+      "DevFlow technology",
     ],
     path: "/blog/medical-seo-companies",
     icon: "📝",
   },
   {
     id: "blog/seo-for-insurance-companies",
-    title: "SEO for Insurance Companies: High-Intent Lead Acquisition & Technical Architecture",
+    title:
+      "SEO for Insurance Companies: High-Intent Lead Acquisition & Technical Architecture",
     type: "blog",
-    summary: "Capturing high-converting insurance search traffic. Localized state quote engines, trust signal schemas, financial YMYL compliance, and site performance.",
+    summary:
+      "Capturing high-converting insurance search traffic. Localized state quote engines, trust signal schemas, financial YMYL compliance, and site performance.",
     keywords: [
       "seo for insurance companies",
       "insurance seo strategy",
       "financial YMYL seo",
       "insurance landing page seo",
-      "DevFlow technology"
+      "DevFlow technology",
     ],
     path: "/blog/seo-for-insurance-companies",
     icon: "📝",
   },
   {
     id: "blog/seo-companies-london",
-    title: "SEO Companies in London: UK Market Search Strategy & Technical Audit Framework",
+    title:
+      "SEO Companies in London: UK Market Search Strategy & Technical Audit Framework",
     type: "blog",
-    summary: "Navigating search optimization for UK enterprises. London market rate benchmarks, UK GDPR data privacy, local NAP consistency, and hybrid UK-India engineering.",
+    summary:
+      "Navigating search optimization for UK enterprises. London market rate benchmarks, UK GDPR data privacy, local NAP consistency, and hybrid UK-India engineering.",
     keywords: [
       "seo companies london",
       "london seo companies",
       "best seo companies london",
       "uk seo agency",
       "DevFlow technology",
-      "top seo companies london"
+      "top seo companies london",
     ],
     path: "/blog/seo-companies-london",
     icon: "📝",
   },
   {
     id: "blog/artificial-intelligence-implementation-examples",
-    title: "Artificial Intelligence Implementation Examples: Enterprise Architecture & Implementation Guide",
+    title:
+      "Artificial Intelligence Implementation Examples: Enterprise Architecture & Implementation Guide",
     type: "blog",
-    summary: "A technical engineering blueprint for artificial intelligence implementation examples: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for artificial intelligence implementation examples: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Artificial Intelligence Implementation Examples",
       "Artificial Intelligence Implementation Examples guide",
       "enterprise Artificial Intelligence Implementation Examples",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/artificial-intelligence-implementation-examples",
     icon: "📝",
   },
@@ -1735,15 +1798,16 @@ export const siteContent: ContentEntry[] = [
     id: "blog/ai-agents-vs-chatbots",
     title: "Ai Agents Vs Chatbots: In-Depth Technical & Cost Comparison (2026)",
     type: "blog",
-    summary: "A technical engineering blueprint for ai agents vs chatbots: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for ai agents vs chatbots: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Ai Agents Vs Chatbots",
       "Ai Agents Vs Chatbots guide",
       "enterprise Ai Agents Vs Chatbots",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/ai-agents-vs-chatbots",
     icon: "📝",
   },
@@ -1751,64 +1815,89 @@ export const siteContent: ContentEntry[] = [
     id: "blog/ai-agent-vs-chat-bot",
     title: "Ai Agent Vs Chat Bot: In-Depth Technical & Cost Comparison (2026)",
     type: "blog",
-    summary: "A technical engineering blueprint for ai agent vs chat bot: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for ai agent vs chat bot: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Ai Agent Vs Chat Bot",
       "Ai Agent Vs Chat Bot guide",
       "enterprise Ai Agent Vs Chat Bot",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/ai-agent-vs-chat-bot",
     icon: "📝",
   },
   {
     id: "blog/ai-agent-vs-chatbot-difference",
-    title: "Ai Agent Vs Chatbot Difference: In-Depth Technical & Cost Comparison (2026)",
+    title:
+      "Ai Agent Vs Chatbot Difference: In-Depth Technical & Cost Comparison (2026)",
     type: "blog",
-    summary: "A technical engineering blueprint for ai agent vs chatbot difference: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for ai agent vs chatbot difference: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Ai Agent Vs Chatbot Difference",
       "Ai Agent Vs Chatbot Difference guide",
       "enterprise Ai Agent Vs Chatbot Difference",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/ai-agent-vs-chatbot-difference",
     icon: "📝",
   },
   {
     id: "blog/aiagents-vs-traditionalchatbots",
-    title: "Ai.Agents Vs Traditional.Chatbots: In-Depth Technical & Cost Comparison (2026)",
+    title:
+      "Ai.Agents Vs Traditional.Chatbots: In-Depth Technical & Cost Comparison (2026)",
     type: "blog",
-    summary: "A technical engineering blueprint for ai.agents vs traditional.chatbots: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for ai.agents vs traditional.chatbots: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Ai.Agents Vs Traditional.Chatbots",
       "Ai.Agents Vs Traditional.Chatbots guide",
       "enterprise Ai.Agents Vs Traditional.Chatbots",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/aiagents-vs-traditionalchatbots",
     icon: "📝",
   },
   {
     id: "blog/ai-agent-vs-llm-chatbot",
-    title: "Ai Agent Vs Llm Chatbot: In-Depth Technical & Cost Comparison (2026)",
+    title:
+      "Ai Agent Vs Llm Chatbot: In-Depth Technical & Cost Comparison (2026)",
     type: "blog",
-    summary: "A technical engineering blueprint for ai agent vs llm chatbot: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for ai agent vs llm chatbot: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Ai Agent Vs Llm Chatbot",
       "Ai Agent Vs Llm Chatbot guide",
       "enterprise Ai Agent Vs Llm Chatbot",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/ai-agent-vs-llm-chatbot",
+    icon: "📝",
+  },
+  {
+    id: "blog/ai-agent-vs-chatbot-vs-assistant",
+    title:
+      "Ai Agent Vs Chatbot Vs Assistant: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary:
+      "A technical engineering blueprint for ai agent vs chatbot vs assistant: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Ai Agent Vs Chatbot Vs Assistant",
+      "Ai Agent Vs Chatbot Vs Assistant guide",
+      "enterprise Ai Agent Vs Chatbot Vs Assistant",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture",
+    ],
+    path: "/blog/ai-agent-vs-chatbot-vs-assistant",
     icon: "📝",
   },
 ];
@@ -1819,7 +1908,7 @@ export const siteContent: ContentEntry[] = [
  */
 export function searchContentIndex(
   query: string,
-  limit: number = 5
+  limit: number = 5,
 ): ContentEntry[] {
   const lowerQuery = query.toLowerCase().trim();
 
@@ -1864,15 +1953,9 @@ export function searchContentIndex(
     .map((s) => s.entry);
 }
 
-
-
 /**
  * Get content entries by type.
  */
-export function getContentByType(
-  type: ContentEntry["type"]
-): ContentEntry[] {
+export function getContentByType(type: ContentEntry["type"]): ContentEntry[] {
   return siteContent.filter((entry) => entry.type === type);
 }
-
-
