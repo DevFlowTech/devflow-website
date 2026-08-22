@@ -1916,6 +1916,38 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/enterprise-prompt-engineering",
     icon: "📝",
   },
+  {
+    id: "blog/what-is-an-enterprise-engineer",
+    title: "What Is An Enterprise Engineer: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for what is an enterprise engineer: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "What Is An Enterprise Engineer",
+      "What Is An Enterprise Engineer guide",
+      "enterprise What Is An Enterprise Engineer",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/what-is-an-enterprise-engineer",
+    icon: "📝",
+  },
+  {
+    id: "blog/enterprise-application-engineer-job-description",
+    title: "Enterprise Application Engineer Job Description: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for enterprise application engineer job description: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Enterprise Application Engineer Job Description",
+      "Enterprise Application Engineer Job Description guide",
+      "enterprise Enterprise Application Engineer Job Description",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/enterprise-application-engineer-job-description",
+    icon: "📝",
+  },
 ];
 
 /**
