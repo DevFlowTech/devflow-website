@@ -1900,6 +1900,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/ai-agent-vs-chatbot-vs-assistant",
     icon: "📝",
   },
+  {
+    id: "blog/enterprise-prompt-engineering",
+    title: "Enterprise Prompt Engineering: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for enterprise prompt engineering: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Enterprise Prompt Engineering",
+      "Enterprise Prompt Engineering guide",
+      "enterprise Enterprise Prompt Engineering",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/enterprise-prompt-engineering",
+    icon: "📝",
+  },
 ];
 
 /**
