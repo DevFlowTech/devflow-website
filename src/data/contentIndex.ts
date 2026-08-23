@@ -1948,6 +1948,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/enterprise-application-engineer-job-description",
     icon: "📝",
   },
+  {
+    id: "blog/enterprise-development-examples",
+    title: "Enterprise Development Examples: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for enterprise development examples: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Enterprise Development Examples",
+      "Enterprise Development Examples guide",
+      "enterprise Enterprise Development Examples",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/enterprise-development-examples",
+    icon: "📝",
+  },
 ];
 
 /**
