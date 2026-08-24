@@ -1902,50 +1902,104 @@ export const siteContent: ContentEntry[] = [
   },
   {
     id: "blog/enterprise-prompt-engineering",
-    title: "Enterprise Prompt Engineering: Enterprise Architecture & Implementation Guide",
+    title:
+      "Enterprise Prompt Engineering: Enterprise Architecture & Implementation Guide",
     type: "blog",
-    summary: "A technical engineering blueprint for enterprise prompt engineering: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for enterprise prompt engineering: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Enterprise Prompt Engineering",
       "Enterprise Prompt Engineering guide",
       "enterprise Enterprise Prompt Engineering",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/enterprise-prompt-engineering",
     icon: "📝",
   },
   {
     id: "blog/what-is-an-enterprise-engineer",
-    title: "What Is An Enterprise Engineer: Enterprise Architecture & Implementation Guide",
+    title:
+      "What Is An Enterprise Engineer: Enterprise Architecture & Implementation Guide",
     type: "blog",
-    summary: "A technical engineering blueprint for what is an enterprise engineer: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for what is an enterprise engineer: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "What Is An Enterprise Engineer",
       "What Is An Enterprise Engineer guide",
       "enterprise What Is An Enterprise Engineer",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/what-is-an-enterprise-engineer",
     icon: "📝",
   },
   {
     id: "blog/enterprise-application-engineer-job-description",
-    title: "Enterprise Application Engineer Job Description: Enterprise Architecture & Implementation Guide",
+    title:
+      "Enterprise Application Engineer Job Description: Enterprise Architecture & Implementation Guide",
     type: "blog",
-    summary: "A technical engineering blueprint for enterprise application engineer job description: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for enterprise application engineer job description: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Enterprise Application Engineer Job Description",
       "Enterprise Application Engineer Job Description guide",
       "enterprise Enterprise Application Engineer Job Description",
       "custom software development",
       "DevFlow technology",
+      "enterprise architecture",
+    ],
+    path: "/blog/enterprise-application-engineer-job-description",
+    icon: "📝",
+  },
+  {
+    id: "blog/enterprise-development-examples",
+    title: "Enterprise Development Examples: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for enterprise development examples: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Enterprise Development Examples",
+      "Enterprise Development Examples guide",
+      "enterprise Enterprise Development Examples",
+      "custom software development",
+      "DevFlow technology",
       "enterprise architecture"
 ],
-    path: "/blog/enterprise-application-engineer-job-description",
+    path: "/blog/enterprise-development-examples",
+    icon: "📝",
+  },
+  {
+    id: "blog/local-llm-deployment-architecture",
+    title: "Local Llm Deployment Architecture: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for local llm deployment architecture: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Local Llm Deployment Architecture",
+      "Local Llm Deployment Architecture guide",
+      "enterprise Local Llm Deployment Architecture",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/local-llm-deployment-architecture",
+    icon: "📝",
+  },
+  {
+    id: "blog/custom-erp-vs-sap-oracle",
+    title: "Custom Erp Vs Sap Oracle: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for custom erp vs sap oracle: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Custom Erp Vs Sap Oracle",
+      "Custom Erp Vs Sap Oracle guide",
+      "enterprise Custom Erp Vs Sap Oracle",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/custom-erp-vs-sap-oracle",
     icon: "📝",
   },
   {
