@@ -1964,6 +1964,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/enterprise-development-examples",
     icon: "📝",
   },
+  {
+    id: "blog/local-llm-deployment-architecture",
+    title: "Local Llm Deployment Architecture: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for local llm deployment architecture: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Local Llm Deployment Architecture",
+      "Local Llm Deployment Architecture guide",
+      "enterprise Local Llm Deployment Architecture",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/local-llm-deployment-architecture",
+    icon: "📝",
+  },
 ];
 
 /**
