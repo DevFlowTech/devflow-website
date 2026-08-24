@@ -1094,8 +1094,8 @@ export const siteContent: ContentEntry[] = [
     icon: "📝",
   },
   {
-    id: "blog/prompt-engineering-ai-specialist",
-    title: "Beyond the Chatbot: Prompt Engineering for SaaS",
+    id: "blog/advanced-prompt-engineering-saas",
+    title: "Beyond the Chatbot: Advanced Prompt Engineering for SaaS",
     type: "blog",
     summary:
       "Chain-of-Thought prompting, few-shot learning, system role definition. Building prompt libraries for AI operations. Advanced prompt engineering techniques.",
@@ -1106,11 +1106,11 @@ export const siteContent: ContentEntry[] = [
       "chain-of-thought",
       "system prompts",
     ],
-    path: "/blog/beyond-the-chatbot-prompt-engineering-for-saas-founders",
+    path: "/blog/advanced-prompt-engineering-saas",
     icon: "📝",
   },
   {
-    id: "blog/ai-pilot-engineer-workflow",
+    id: "blog/ai-pilot-engineering-workflow",
     title: "How I Use GPT-4o, Claude 3.5, and Agentic Systems",
     type: "blog",
     summary:
@@ -1123,11 +1123,11 @@ export const siteContent: ContentEntry[] = [
       "LangChain",
       "AI stack",
     ],
-    path: "/blog/the-workflow-of-an-ai-pilot-engineer",
+    path: "/blog/ai-pilot-engineering-workflow",
     icon: "📝",
   },
   {
-    id: "blog/groq-lpu-ai-speed",
+    id: "blog/groq-realtime-ai-speed",
     title: "Groq LPU: Ultra-Fast AI Inference for Real-Time Apps",
     type: "blog",
     summary:
@@ -1140,7 +1140,7 @@ export const siteContent: ContentEntry[] = [
       "real-time",
       "chatbot",
     ],
-    path: "/blog/groq-lpu-the-future-of-ai-inference-speed",
+    path: "/blog/groq-realtime-ai-speed",
     icon: "📝",
   },
   {
@@ -1157,12 +1157,12 @@ export const siteContent: ContentEntry[] = [
       "development",
       "SEO",
     ],
-    path: "/blog/best-it-company-gota-ahmedabad-devflow-technology",
+    path: "/blog/best-it-company-gota-ahmedabad",
     icon: "📝",
   },
   {
-    id: "blog/what-is-a-prompt-architect",
-    title: "What is a Prompt Architect?",
+    id: "blog/what-is-ai-pilot-engineering",
+    title: "What is an AI Pilot Engineer?",
     type: "blog",
     summary:
       "Prompt Architect defines system instructions for 100% accuracy. Chain-of-Thought, few-shot prompting, system role definition. Building prompt libraries for AI operations.",
@@ -1173,7 +1173,7 @@ export const siteContent: ContentEntry[] = [
       "chain-of-thought",
       "system design",
     ],
-    path: "/blog/what-is-a-prompt-architect-ahmedabad",
+    path: "/blog/what-is-ai-pilot-engineering",
     icon: "📝",
   },
   // ─── HIGH-INTENT COMPARISONS ──────────────────────────────────────────
@@ -1956,82 +1956,56 @@ export const siteContent: ContentEntry[] = [
   },
   {
     id: "blog/enterprise-development-examples",
-    title: "Enterprise Development Examples: Enterprise Architecture & Implementation Guide",
+    title:
+      "Enterprise Development Examples: Enterprise Architecture & Implementation Guide",
     type: "blog",
-    summary: "A technical engineering blueprint for enterprise development examples: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for enterprise development examples: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Enterprise Development Examples",
       "Enterprise Development Examples guide",
       "enterprise Enterprise Development Examples",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/enterprise-development-examples",
     icon: "📝",
   },
   {
     id: "blog/local-llm-deployment-architecture",
-    title: "Local Llm Deployment Architecture: Enterprise Architecture & Implementation Guide",
+    title:
+      "Local Llm Deployment Architecture: Enterprise Architecture & Implementation Guide",
     type: "blog",
-    summary: "A technical engineering blueprint for local llm deployment architecture: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for local llm deployment architecture: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Local Llm Deployment Architecture",
       "Local Llm Deployment Architecture guide",
       "enterprise Local Llm Deployment Architecture",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/local-llm-deployment-architecture",
     icon: "📝",
   },
   {
     id: "blog/custom-erp-vs-sap-oracle",
-    title: "Custom Erp Vs Sap Oracle: In-Depth Technical & Cost Comparison (2026)",
+    title:
+      "Custom Erp Vs Sap Oracle: In-Depth Technical & Cost Comparison (2026)",
     type: "blog",
-    summary: "A technical engineering blueprint for custom erp vs sap oracle: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    summary:
+      "A technical engineering blueprint for custom erp vs sap oracle: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
     keywords: [
       "Custom Erp Vs Sap Oracle",
       "Custom Erp Vs Sap Oracle guide",
       "enterprise Custom Erp Vs Sap Oracle",
       "custom software development",
       "DevFlow technology",
-      "enterprise architecture"
-],
+      "enterprise architecture",
+    ],
     path: "/blog/custom-erp-vs-sap-oracle",
-    icon: "📝",
-  },
-  {
-    id: "blog/enterprise-development-examples",
-    title: "Enterprise Development Examples: Enterprise Architecture & Implementation Guide",
-    type: "blog",
-    summary: "A technical engineering blueprint for enterprise development examples: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
-    keywords: [
-      "Enterprise Development Examples",
-      "Enterprise Development Examples guide",
-      "enterprise Enterprise Development Examples",
-      "custom software development",
-      "DevFlow technology",
-      "enterprise architecture"
-],
-    path: "/blog/enterprise-development-examples",
-    icon: "📝",
-  },
-  {
-    id: "blog/local-llm-deployment-architecture",
-    title: "Local Llm Deployment Architecture: Enterprise Architecture & Implementation Guide",
-    type: "blog",
-    summary: "A technical engineering blueprint for local llm deployment architecture: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
-    keywords: [
-      "Local Llm Deployment Architecture",
-      "Local Llm Deployment Architecture guide",
-      "enterprise Local Llm Deployment Architecture",
-      "custom software development",
-      "DevFlow technology",
-      "enterprise architecture"
-],
-    path: "/blog/local-llm-deployment-architecture",
     icon: "📝",
   },
 ];

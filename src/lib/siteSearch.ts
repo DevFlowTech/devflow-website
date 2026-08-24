@@ -255,8 +255,8 @@ export function generateAgentResponse(userQuery: string): AgentResponse {
         "4️⃣ **Places Data Scraper** — Puppeteer multi-threaded lead extraction pipeline.";
       suggestions = [
         { title: "View All Case Studies", path: "/case-studies", icon: "💼" },
-        { title: "Medicare AI Case Study", path: "/case-studies/medicare-ai-system", icon: "🏥" },
-        { title: "Real Estate Case Study", path: "/case-studies/real-estate-platform", icon: "🏢" },
+        { title: "Medicare AI Case Study", path: "/work/medicare-ai-system", icon: "🏥" },
+        { title: "Real Estate Case Study", path: "/work/real-estate-platform", icon: "🏢" },
       ];
       break;
     }

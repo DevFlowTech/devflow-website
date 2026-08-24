@@ -317,6 +317,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // Dynamic Technical Glossary pages
+  const glossarySlugs = [
+    "ai-agent",
+    "rag",
+    "erp",
+    "saas",
+    "api",
+    "nextjs",
+    "geo",
+    "aeo",
+  ];
+  const glossaryEntries = glossarySlugs.map((slug) => ({
+    url: `${baseUrl}/glossary/${slug}`,
+    lastModified: LAST_SEO_REWRITE,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   return [
     ...staticPages,
     ...blogEntries,
@@ -327,5 +345,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...locationEntries,
     ...knowledgeEntries,
     ...compareEntries,
+    ...glossaryEntries,
   ];
 }
