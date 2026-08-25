@@ -2008,6 +2008,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/custom-erp-vs-sap-oracle",
     icon: "📝",
   },
+  {
+    id: "blog/microservices-architecture-nodejs",
+    title: "Microservices Architecture Nodejs: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for microservices architecture nodejs: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Microservices Architecture Nodejs",
+      "Microservices Architecture Nodejs guide",
+      "enterprise Microservices Architecture Nodejs",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/microservices-architecture-nodejs",
+    icon: "📝",
+  },
 ];
 
 /**
