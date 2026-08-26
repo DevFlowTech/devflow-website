@@ -5,6 +5,7 @@ import { knowledgeHubData } from "@/data/knowledgeHubData";
 import ReactMarkdown from "react-markdown";
 import { buildSeoTitle } from "@/lib/utils";
 import { FiChevronRight, FiCheck, FiInfo } from "react-icons/fi";
+import GooglePreferredSource from "@/components/ui/GooglePreferredSource";
 
 interface KnowledgePageProps {
   params: Promise<{
@@ -109,12 +110,15 @@ export default async function KnowledgePage({ params }: KnowledgePageProps) {
             {article.title}
           </h1>
           
-          <div className="flex items-center gap-4 pb-6 border-b border-white/[0.06] text-xs font-mono text-devflow-gray-400">
-            <span>BY DEVFLOW ENGINEERING</span>
-            <span>•</span>
-            <span>PUBLISHED {article.date.toUpperCase()}</span>
-            <span>•</span>
-            <span>{article.readTime.toUpperCase()}</span>
+          <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.06] text-xs font-mono text-devflow-gray-400">
+            <div className="flex flex-wrap items-center gap-3">
+              <span>BY DEVFLOW ENGINEERING</span>
+              <span>•</span>
+              <span>PUBLISHED {article.date.toUpperCase()}</span>
+              <span>•</span>
+              <span>{article.readTime.toUpperCase()}</span>
+            </div>
+            <GooglePreferredSource variant="inline" theme="dark" />
           </div>
         </div>
 
@@ -254,6 +258,11 @@ export default async function KnowledgePage({ params }: KnowledgePageProps) {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Google Preferred Source Follow Section */}
+        <div className="pt-6">
+          <GooglePreferredSource variant="card" theme="dark" />
         </div>
 
         {/* CTA Contact Footer */}

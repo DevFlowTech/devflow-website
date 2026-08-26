@@ -17,6 +17,7 @@ const scriptSrc = [
   "https://www.clarity.ms",
   "https://scripts.clarity.ms",
   "https://*.clarity.ms",
+  "https://news.google.com",
 ].join(" ");
 
 const nextConfig: NextConfig = {
@@ -154,10 +155,10 @@ const nextConfig: NextConfig = {
               "default-src 'self'",
               `script-src ${scriptSrc}`,
               "style-src 'self' 'unsafe-inline'",
-              "img-src 'self' data: blob: https://images.unsplash.com https://*.vercel-storage.com https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://*.clarity.ms",
+              "img-src 'self' data: blob: https://images.unsplash.com https://*.vercel-storage.com https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://*.clarity.ms https://news.google.com https://lh3.googleusercontent.com https://*.googleusercontent.com",
               "font-src 'self' data:",
-              "connect-src 'self' https://formspree.io https://va.vercel-scripts.com https://vitals.vercel-insights.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://*.google-analytics.com https://analytics.ahrefs.com https://*.clarity.ms https://cloudflareinsights.com https://static.cloudflareinsights.com",
-              "frame-src 'self' https://www.googletagmanager.com https://www.google.com",
+              "connect-src 'self' https://formspree.io https://va.vercel-scripts.com https://vitals.vercel-insights.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://*.google-analytics.com https://analytics.ahrefs.com https://*.clarity.ms https://cloudflareinsights.com https://static.cloudflareinsights.com https://news.google.com https://play.google.com",
+              "frame-src 'self' https://www.googletagmanager.com https://www.google.com https://news.google.com https://subscribe.google.com",
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self' https://formspree.io",

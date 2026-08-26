@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRef, useState, useEffect, useCallback } from "react";
 import MagneticButton from "@/components/ui/MagneticButton";
+import GooglePreferredSource from "@/components/ui/GooglePreferredSource";
 
 // Dynamically import the mockup (heavy visual component) and background effects
 const HeroMockup = dynamic(() => import("@/components/ui/HeroMockup"), {
@@ -185,6 +186,11 @@ export default function HeroSection() {
                     View Case Studies
                   </Link>
                 </MagneticButton>
+              </div>
+
+              {/* Google Preferred Source Homepage Indicator */}
+              <div className="pt-2 flex items-center gap-3">
+                <GooglePreferredSource variant="inline" theme="dark" />
               </div>
             </div>
           </div>

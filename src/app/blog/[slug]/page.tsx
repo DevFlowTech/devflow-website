@@ -6,6 +6,7 @@ import { blogPosts } from "@/data/blogData";
 import { categorySlugByName } from "@/data/blogCategories";
 import ReactMarkdown from "react-markdown";
 import { buildSeoTitle } from "@/lib/utils";
+import GooglePreferredSource from "@/components/ui/GooglePreferredSource";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -197,22 +198,27 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </h1>
 
           {/* Meta Info — semantic HTML for E-E-A-T */}
-          <div className="flex items-center gap-4 pb-8 border-b border-white/[0.06] mb-8">
-            <div className="w-12 h-12 rounded-full bg-devflow-green/10 flex items-center justify-center">
-              <span className="text-devflow-green font-semibold text-lg">
-                P
-              </span>
+          <div className="flex flex-wrap items-center justify-between gap-4 pb-8 border-b border-white/[0.06] mb-8">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-devflow-green/10 flex items-center justify-center">
+                <span className="text-devflow-green font-semibold text-lg">
+                  P
+                </span>
+              </div>
+              <div>
+                <address className="not-italic">
+                  <a href="/about/founders" rel="author" className="text-white font-medium hover:text-devflow-green transition-colors">
+                    Prince Gajjar
+                  </a>
+                </address>
+                <time dateTime={formatDate(post.date)} className="text-sm text-devflow-gray-500">
+                  {post.date}
+                </time>
+              </div>
             </div>
-            <div>
-              <address className="not-italic">
-                <a href="/about/founders" rel="author" className="text-white font-medium hover:text-devflow-green transition-colors">
-                  Prince Gajjar
-                </a>
-              </address>
-              <time dateTime={formatDate(post.date)} className="text-sm text-devflow-gray-500">
-                {post.date}
-              </time>
-            </div>
+
+            {/* Google Preferred Source Button */}
+            <GooglePreferredSource variant="inline" theme="dark" />
           </div>
 
           {/* Featured Image */}
@@ -315,6 +321,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </span>
               ))}
             </div>
+          </div>
+
+          {/* Google Preferred Source Follow Section */}
+          <div className="mt-12">
+            <GooglePreferredSource variant="card" theme="dark" />
           </div>
         </div>
       </article>

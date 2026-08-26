@@ -206,9 +206,14 @@ export default function RootLayout({
         {/* Ahrefs Site Verification */}
         <meta name="ahrefs-site-verification" content="d6c511f2a7c1ba94494fe6db3616dbd8fe4fae349b1ca7a505ce5496e24e7a28" />
 
-        {/* DNS prefetch for external resources */}
+        {/* DNS prefetch & preconnect for external resources */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://news.google.com" />
+        <link rel="preconnect" href="https://news.google.com" crossOrigin="anonymous" />
+
+        {/* Google Official Preferred Sources / Subscribe with Google Publisher Library */}
+        <script async src="https://news.google.com/swg/js/v1/publisher.js" />
 
         {/* LLMs.txt - AI search engine manifest */}
         <link

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { staggerContainer, staggerItem, viewportOnce } from "@/lib/motion";
+import GooglePreferredSource from "@/components/ui/GooglePreferredSource";
 
 const footerLinks = {
   services: [
@@ -134,6 +135,11 @@ export default function Footer() {
                 <span className="text-[10px] font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">NDA Available</span>
                 <span className="text-[10px] font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">Security-Conscious Engineering</span>
                 <span className="text-[10px] font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">GDPR-Aware Architecture</span>
+              </div>
+
+              {/* Google Preferred Source Badge */}
+              <div className="pt-2">
+                <GooglePreferredSource variant="badge" theme="dark" />
               </div>
             </div>
 
@@ -380,6 +386,24 @@ export default function Footer() {
                 )}
               </span>
             ))}
+          </div>
+        </motion.div>
+
+        {/* Google Preferred Sources Sitewide Follow Banner */}
+        <motion.div
+          variants={staggerItem}
+          className="mt-12 p-6 rounded-2xl border border-white/[0.08] bg-gradient-to-r from-white/[0.02] via-devflow-black to-white/[0.02] flex flex-col sm:flex-row items-center justify-between gap-4 backdrop-blur-sm"
+        >
+          <div className="space-y-1 text-center sm:text-left">
+            <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-devflow-green flex items-center justify-center sm:justify-start gap-1.5">
+              <span>Google Preferred Source</span>
+            </span>
+            <p className="text-xs text-devflow-gray-300 font-light">
+              Follow DevFlow Technology in Google Search to receive our latest engineering publications, AI releases, and enterprise software insights.
+            </p>
+          </div>
+          <div className="shrink-0">
+            <GooglePreferredSource variant="inline" theme="dark" />
           </div>
         </motion.div>
 

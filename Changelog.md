@@ -2,6 +2,64 @@
 
 Reverse-chronological log of every change made to the project. Per RULES.md §8.1, updated in the same run as any project change. Entries before 2026-08-08 predate this file; see `git log` for that history.
 
+## Google Official Preferred Sources Integration — 2026-08-26 11:30
+
+### What changed
+- **Google Preferred Sources Integration**: Implemented Google's official Preferred Sources feature across the DevFlow Technology website (`https://devflow.co.in/`) according to Google Search Central guidelines (`https://developers.google.com/search/docs/appearance/preferred-sources`):
+  1. **Global Publisher Script**: Loaded `https://news.google.com/swg/js/v1/publisher.js` asynchronously once in `src/app/layout.tsx` head with DNS prefetch and preconnect.
+  2. **Security & CSP Updates**: Updated `next.config.ts` Content Security Policy directives (`script-src`, `connect-src`, `frame-src`, `img-src`) for `news.google.com`, `play.google.com`, `subscribe.google.com`, and `*.googleusercontent.com` without weakening security.
+  3. **Reusable Component (`GooglePreferredSource.tsx`)**: Created modular component supporting `inline`, `card`, and `badge` variants with high-fidelity pill button, zero layout shift (CLS = 0), and accessible fallback deeplink to `https://www.google.com/preferences/source?q=devflow.co.in`.
+  4. **Sitewide Deployment**: Integrated Google Preferred Source badge across:
+     - Global Footer brand column & sitewide follow banner (100% of pages).
+     - Global Mobile Navigation menu in `Navbar.tsx`.
+     - Homepage HeroSection CTA area in `HeroSection.tsx`.
+     - Blog articles (`blog/[slug]/page.tsx`) in metadata bar & post-content follow card.
+     - Knowledge Base guides (`knowledge-base/[slug]/page.tsx`).
+     - Tech Blog index page (`blog/page.tsx`).
+  5. **Verification**: 205 static pages compiled successfully with zero TypeScript, ESLint, or runtime errors.
+
+### Why
+To allow DevFlow readers to easily select DevFlow Technology as a preferred source in Google Search experiences (Top Stories, AI Overviews, AI Mode) while preserving Core Web Vitals, accessibility, security, and design excellence.
+
+---
+
+## Usability Heuristics Audit & Comprehensive 27-Point Frontend Remediation — 2026-08-25 13:06
+
+### What changed
+- **Usability Heuristic Remediation Formulated & Architected**: Conducted in-depth root-cause analysis and engineered concrete, accessible, production-grade code solutions for all 27 usability issues identified on the live homepage (`https://www.devflow.co.in/`):
+  1. **Consistent Type Scale**: Standardized modular typography scale tokens in `tailwind.config.ts` (`xs` 12px to `6xl` 60px), eliminating fragmented arbitrary pixel classes (`text-[9px]`, `text-[10px]`, `text-[11px]`).
+  2. **Corner Radii Consolidation**: Consolidated 8 disparate border radii down to a 4-tier token scale (`sm: 6px`, `md: 10px`, `lg: 16px`, `full: 9999px`).
+  3. **Standardized Button System**: Formulated unified `.btn-primary`, `.btn-secondary`, and `.btn-ghost` component utility layer in `globals.css` with consistent 44px touch targets and accessible `:focus-visible` rings.
+  4. **Micro-typography Elimination**: Upgraded floating hero card metrics from `text-[10px]` to `text-xs` (12px) with improved contrast.
+  5. **Title Case Conversions**: Removed 33-character uppercase tracking in Trust Strip header in favor of scannable Title Case (`[ Core Engineering Capabilities ]`).
+  6. **Capability Strip Case Normalization**: Removed parent `uppercase` styling to render capability badges with natural casing and semantic `aria-hidden` bullet indicators.
+  7. **Source Code Ownership Metric Legibility**: Upgraded `text-[10px]` monospace micro-text to `text-xs` with `text-devflow-gray-300` contrast compliance.
+  8. **Text Truncation Removal**: Removed `truncate` and `max-w-[80%]` from Engineering Principles description to prevent copy clipping.
+  9. **CTA Readability Optimization**: Converted "VIEW ALL PROJECTS" uppercase link into Title Case ("View All Projects") with explicit ARIA labels and focus rings.
+  10. **Tech Badge Readability**: Upgraded project card tech tags from `text-[9px]` in muted gray (`text-devflow-gray-500`) to readable `text-xs` (`text-devflow-gray-300`).
+  11. **Pillar Hub CTA Touch Targets**: Upgraded `text-[11px]` links to `text-xs` with minimum 44px tap targets.
+  12. **Footer Heading Styling Normalization**: Converted all-caps "Standards & Legal" header into clean Title Case with consistent font weighting.
+  13. **Footer Directory Font Scale**: Standardized footer regional links from `text-[10px]` to `text-xs` (12px).
+  14. **Footer SEO Wall-of-Text Reduction**: Formulated progressive disclosure `<details>`/`<summary>` accordion structure for regional links, eliminating visual clutter while maintaining SEO indexability.
+  15. **Bento Grid Layout Balancing**: Harmonized wide/narrow alternating checkerboard into a balanced, predictable 3-column responsive grid layout.
+  16. **Gestalt Proximity on Tech Stack CTA**: Regrouped "View Full Technology Stack" CTA with its descriptive copy into a tight inline-flex layout, eliminating the 1000px+ horizontal void.
+  17. **FAQ Accordion Padding Symmetry**: Balanced accordion button padding (`px-6 pt-6 pb-3`) and answer body container (`px-6 pb-6 pt-2`) to eliminate vertical asymmetry.
+  18. **ROI Calculator CTA Promotion**: Replaced weak `text-[10px]` corner link with prominent `.btn-primary` action button.
+  19. **ROI Calculator Visual Consistency**: Added missing header decorative icon (`FiTrendingUp`) to match sibling bento cards.
+  20. **Unified Bento Card Architecture**: Standardized disparate card styles into a unified glass panel design pattern with consistent padding (`p-6 sm:p-8`), header alignment, and footer CTA placements.
+  21. **Card Action Link Alignment**: Standardized all card-level action links to the bottom right (`justify-end` / `ml-auto`).
+  22. **Tech Stack Action Styling Alignment**: Standardized "View Full Technology Stack" link casing and brand color to match the uppercase monospaced CTA pattern.
+  23. **Pillar Hub Arrow Proximity**: Eliminated `justify-between` on pillar links, placing arrows directly adjacent to text with smooth hover micro-interactions.
+  24. **FAQ Section Spacing Calibration**: Reduced excessive vertical gap (`mb-16` -> `mb-8 md:mb-10`) between FAQ title and first accordion item.
+  25. **Local SEO Link Farm Restructuring**: Re-architected raw keyword link clusters into a categorized, scannable sub-footer grid with dedicated links to `/locations`.
+  26. **Governance Heading Typography Alignment**: Fixed anomalous `text-[10px]` styling on the "Governance" heading to match sibling `<h4>` elements (`text-xs font-medium text-devflow-gray-300 uppercase tracking-wider`).
+  27. **Footer Capabilities Column Balancing**: Expanded the 12-item Capabilities list into a balanced 2-column sub-grid (`lg:col-span-2`), eliminating vertical whitespace voids.
+
+### Why
+To eliminate 27 usability, readability, typography, spacing, and visual consistency heuristic defects on the live production landing page, elevating the UI/UX quality baseline to meet modern anti-slop, accessible, and high-conversion front-end engineering standards.
+
+---
+
 ## Clean SEO Agency & AEO/GEO Content Release — 2026-08-18 10:27
 
 ### What changed

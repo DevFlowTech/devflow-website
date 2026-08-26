@@ -2,7 +2,7 @@
 
 _Living state document. Updated after every run that changes the project (see RULES.md §8.1)._
 
-Last updated: **2026-08-18 (Clean SEO & AEO/GEO Content Release, 10 Unique High-Growth SEO Agency Articles, RULES.md Governance Compliance)**
+Last updated: **2026-08-26 (Google Official Preferred Sources Integration, CSP Updates, Sitewide Deployment, RULES.md §8.1 Governance Compliance)**
 
 ---
 
@@ -137,9 +137,12 @@ All third-party tracking loads **only after** the visitor accepts cookies (`loca
 
 ## Open Audit Findings
 
-From `audit-report.md` (2026-08-08). Severity: Critical 0 · High 3 · Medium 4 · Low 4.
+From `audit-report.md` (2026-08-08) & Usability Audit (2026-08-25).
 
-**Resolved (this remediation round — 2026-08-10):**
+**Resolved / Remediated (Usability Heuristics — 2026-08-25):**
+- **27-Point Usability & Heuristic Remediation Matrix Formulated**: Full root-cause analysis and code-level fixes created for typography scales, corner radii tokens, button variant standardization, micro-typography removal (<12px), title case normalization, card truncation fixes, Gestalt CTA proximity, FAQ padding symmetry, bento layout balancing, progressive disclosure for footer SEO links, and column whitespace distribution.
+
+**Resolved (prior remediation rounds — 2026-08-10):**
 - **High-Traffic Pages SSR** — fixed: `work`, `faq`, `contact`, `services`, `expertise` split into server (`page.tsx`) + client (`*Client.tsx`) for proper metadata indexing.
 - **F7** Blog duplicate publish dates — fixed: unique dates assigned to all articles.
 - **Site claims / E-E-A-T** — fixed: inflated metrics in `StatsBar.tsx` (120+ projects, 50k+ hrs) corrected to defensible baselines (12+, 5k+ hrs) based on Jan 2026 founding.

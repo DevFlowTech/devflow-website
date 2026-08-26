@@ -4,6 +4,7 @@ import Image from "next/image";
 import { blogPosts } from "@/data/blogData";
 import { blogCategories, categorySlugByName } from "@/data/blogCategories";
 import BlogCard from "@/components/blog/BlogCard";
+import GooglePreferredSource from "@/components/ui/GooglePreferredSource";
 
 export const metadata: Metadata = {
   title: {
@@ -48,10 +49,13 @@ export default function BlogPage() {
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Insights on Building Better Software
           </h1>
-          <p className="text-lg md:text-xl text-devflow-gray-300 leading-relaxed">
+          <p className="text-lg md:text-xl text-devflow-gray-300 leading-relaxed mb-6">
             Expert perspectives on AI integration, web development, and digital
             transformation from the DevFlow team.
           </p>
+          <div className="flex justify-center">
+            <GooglePreferredSource variant="badge" theme="dark" />
+          </div>
         </div>
       </section>
 

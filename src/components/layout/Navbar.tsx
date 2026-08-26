@@ -11,6 +11,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { easeOut } from "@/lib/motion";
 import Magnetic from "@/components/ui/Magnetic";
+import GooglePreferredSource from "@/components/ui/GooglePreferredSource";
 
 const navItems = [
   { label: "Services", href: "/services" },
@@ -206,6 +207,17 @@ export default function Navbar() {
                   >
                     Discuss Your Project
                   </Link>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.35, duration: 0.25, ease: easeOut }}
+                  className="mt-6 flex flex-col items-center gap-2 pt-4 border-t border-white/[0.06]"
+                >
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-devflow-gray-400">
+                    [ Google Preferred Source ]
+                  </span>
+                  <GooglePreferredSource variant="inline" theme="dark" />
                 </motion.div>
               </div>
             </motion.nav>
