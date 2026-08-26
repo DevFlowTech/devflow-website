@@ -2024,6 +2024,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/microservices-architecture-nodejs",
     icon: "📝",
   },
+  {
+    id: "blog/microservices-architecture-patterns-nodejs",
+    title: "Microservices Architecture Patterns Nodejs: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for microservices architecture patterns nodejs: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Microservices Architecture Patterns Nodejs",
+      "Microservices Architecture Patterns Nodejs guide",
+      "enterprise Microservices Architecture Patterns Nodejs",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/microservices-architecture-patterns-nodejs",
+    icon: "📝",
+  },
 ];
 
 /**
