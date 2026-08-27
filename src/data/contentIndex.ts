@@ -2040,6 +2040,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/microservices-architecture-patterns-nodejs",
     icon: "📝",
   },
+  {
+    id: "blog/nodejs-microservices-architecture-github",
+    title: "Nodejs Microservices Architecture Github: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for nodejs microservices architecture github: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Nodejs Microservices Architecture Github",
+      "Nodejs Microservices Architecture Github guide",
+      "enterprise Nodejs Microservices Architecture Github",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/nodejs-microservices-architecture-github",
+    icon: "📝",
+  },
 ];
 
 /**
