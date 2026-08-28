@@ -2056,6 +2056,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/nodejs-microservices-architecture-github",
     icon: "📝",
   },
+  {
+    id: "blog/event-driven-architecture-microservices-nodejs",
+    title: "Event Driven Architecture Microservices Nodejs: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for event driven architecture microservices nodejs: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Event Driven Architecture Microservices Nodejs",
+      "Event Driven Architecture Microservices Nodejs guide",
+      "enterprise Event Driven Architecture Microservices Nodejs",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/event-driven-architecture-microservices-nodejs",
+    icon: "📝",
+  },
 ];
 
 /**
