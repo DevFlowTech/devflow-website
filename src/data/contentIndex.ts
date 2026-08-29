@@ -2072,6 +2072,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/event-driven-architecture-microservices-nodejs",
     icon: "📝",
   },
+  {
+    id: "blog/microsoft-microservices-architecture-example",
+    title: "Microsoft Microservices Architecture Example: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for microsoft microservices architecture example: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Microsoft Microservices Architecture Example",
+      "Microsoft Microservices Architecture Example guide",
+      "enterprise Microsoft Microservices Architecture Example",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/microsoft-microservices-architecture-example",
+    icon: "📝",
+  },
 ];
 
 /**
