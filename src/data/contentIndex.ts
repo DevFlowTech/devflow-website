@@ -2088,6 +2088,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/microsoft-microservices-architecture-example",
     icon: "📝",
   },
+  {
+    id: "blog/microservices-architecture-example",
+    title: "Microservices Architecture Example: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for microservices architecture example: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Microservices Architecture Example",
+      "Microservices Architecture Example guide",
+      "enterprise Microservices Architecture Example",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/microservices-architecture-example",
+    icon: "📝",
+  },
 ];
 
 /**
