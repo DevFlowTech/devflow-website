@@ -2104,6 +2104,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/microservices-architecture-example",
     icon: "📝",
   },
+  {
+    id: "blog/explain-microservices-architecture",
+    title: "Explain Microservices Architecture: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for explain microservices architecture: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Explain Microservices Architecture",
+      "Explain Microservices Architecture guide",
+      "enterprise Explain Microservices Architecture",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/explain-microservices-architecture",
+    icon: "📝",
+  },
 ];
 
 /**
