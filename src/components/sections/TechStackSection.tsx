@@ -180,7 +180,7 @@ export default function TechStackSection() {
                     key={tech.name}
                     className="flex items-center justify-center gap-3 p-3.5 rounded-xl bg-black/[0.03] border border-black/[0.08] text-devflow-gray-100 shadow-2xs hover:border-devflow-blue/40 transition-all"
                   >
-                    <Icon className="w-5 h-5 text-devflow-blue flex-shrink-0" />
+                    <Icon className="w-5 h-5 text-devflow-blue flex-shrink-0" aria-hidden="true" />
                     <span className="text-xs font-mono font-medium text-devflow-gray-100">
                       {tech.name}
                     </span>
@@ -229,7 +229,7 @@ export default function TechStackSection() {
                     key={tech.name}
                     className="flex items-center justify-center gap-2.5 text-xs font-medium text-devflow-gray-100 text-center w-full py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.04]"
                   >
-                    <Icon className="w-4 h-4 text-devflow-blue flex-shrink-0" />
+                    <Icon className="w-4 h-4 text-devflow-blue flex-shrink-0" aria-hidden="true" />
                     <span className="font-mono">{tech.name}</span>
                   </li>
                 );

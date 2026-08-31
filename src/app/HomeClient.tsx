@@ -40,32 +40,32 @@ export default function HomeClient() {
       {/* Trust Strip - Factual Capabilities & Engineering Core */}
       <section className="py-12 bg-devflow-black border-y border-white/[0.06] relative z-10">
         <div className="section-container max-w-6xl mx-auto">
-          <p className="text-xs font-mono text-devflow-gray-400 uppercase tracking-widest text-center mb-6">
-            [ CORE ENGINEERING CAPABILITIES ]
+          <p className="text-xs font-mono text-devflow-gray-400 tracking-wider text-center mb-6">
+            [ Core Engineering Capabilities ]
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14 font-mono text-xs md:text-sm text-devflow-gray-200 uppercase tracking-wider">
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 font-mono text-xs md:text-sm text-devflow-gray-200 tracking-wide">
             <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" /> AI
-              Engineering
+              <span className="w-1.5 h-1.5 rounded-full bg-devflow-blue" aria-hidden="true" />
+              AI Engineering
             </span>
             <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" />{" "}
+              <span className="w-1.5 h-1.5 rounded-full bg-devflow-blue" aria-hidden="true" />
               Custom Software
             </span>
             <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" />{" "}
+              <span className="w-1.5 h-1.5 rounded-full bg-devflow-blue" aria-hidden="true" />
               SaaS Development
             </span>
             <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" /> ERP
-              Systems
+              <span className="w-1.5 h-1.5 rounded-full bg-devflow-blue" aria-hidden="true" />
+              ERP Systems
             </span>
             <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" />{" "}
+              <span className="w-1.5 h-1.5 rounded-full bg-devflow-blue" aria-hidden="true" />
               Business Automation
             </span>
             <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-devflow-green" />{" "}
+              <span className="w-1.5 h-1.5 rounded-full bg-devflow-blue" aria-hidden="true" />
               Dedicated Engineering
             </span>
           </div>
@@ -81,11 +81,11 @@ export default function HomeClient() {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, ease: [0.2, 0, 0, 1] }}
         >
-          <span className="text-xs font-mono text-devflow-gold uppercase tracking-widest block mb-3">
-            [ CAPABILITIES & OUTCOMES ]
+          <span className="text-xs font-mono text-devflow-blue tracking-wider block mb-3">
+            [ Capabilities &amp; Outcomes ]
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-medium text-white">
-            Enterprise Custom Software & AI Solutions
+            Enterprise Custom Software &amp; AI Solutions
           </h2>
         </motion.div>
 
@@ -102,58 +102,57 @@ export default function HomeClient() {
               variants={staggerItem}
               className="glass-panel p-8 rounded-2xl flex flex-col justify-between group overflow-hidden relative h-full cursor-pointer"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-devflow-green/5 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-devflow-blue/5 to-transparent pointer-events-none" />
               <div className="flex justify-between items-start">
                 <span className="text-xs font-mono text-devflow-gray-400">
-                  [ ENGINEERING PRINCIPLES ]
+                  [ Engineering Principles ]
                 </span>
                 <FiLayers
-                  className="w-5 h-5 text-devflow-green group-hover:rotate-12 transition-transform duration-300"
+                  className="w-5 h-5 text-devflow-blue group-hover:rotate-12 transition-transform duration-300"
                   aria-label="Layers"
                 />
               </div>
 
               <div className="grid grid-cols-3 gap-4 py-4">
                 <div>
-                  <span className="block text-xl md:text-2xl font-bold font-mono text-devflow-green group-hover:scale-105 transition-transform duration-300 origin-left">
+                  <span className="block text-xl md:text-2xl font-bold font-mono text-devflow-blue group-hover:scale-105 transition-transform duration-300 origin-left">
                     100%
                   </span>
-                  <span className="text-[10px] font-mono text-devflow-gray-400">
-                    SOURCE CODE OWNERSHIP
+                  <span className="text-xs font-mono text-devflow-gray-400 block mt-1">
+                    Source Code Ownership
                   </span>
                 </div>
                 <div>
-                  <span className="block text-xl md:text-2xl font-bold font-mono text-devflow-green group-hover:scale-105 transition-transform duration-300 origin-left">
-                    DIRECT
+                  <span className="block text-xl md:text-2xl font-bold font-mono text-devflow-blue group-hover:scale-105 transition-transform duration-300 origin-left">
+                    Direct
                   </span>
-                  <span className="text-[10px] font-mono text-devflow-gray-400">
-                    FOUNDER ACCESS
+                  <span className="text-xs font-mono text-devflow-gray-400 block mt-1">
+                    Founder Access
                   </span>
                 </div>
                 <div>
                   <span className="block text-xl md:text-2xl font-bold font-mono text-white group-hover:scale-105 transition-transform duration-300 origin-left">
-                    MODULAR
+                    Modular
                   </span>
-                  <span className="text-[10px] font-mono text-devflow-gray-400">
-                    SCALABLE ARCHITECTURE
+                  <span className="text-xs font-mono text-devflow-gray-400 block mt-1">
+                    Scalable Architecture
                   </span>
                 </div>
               </div>
 
               <div className="flex justify-between items-center text-xs font-mono">
-                <p className="text-xs text-devflow-gray-300 font-light truncate max-w-[80%]">
+                <p className="text-xs text-devflow-gray-300 font-light leading-relaxed max-w-xl">
                   Architecting software systems engineered for business
                   reliability and long-term maintainability.
                 </p>
-                <span className="text-devflow-green group-hover:translate-x-1 transition-transform duration-300">
-                  EXPLORE CASE STUDIES &rarr;
+                <span className="text-devflow-blue group-hover:translate-x-1 transition-transform duration-300">
+                  Explore Case Studies &rarr;
                 </span>
               </div>
             </motion.div>
           </Link>
 
           {/* Block 2: Capabilities Checklist (col-span-1) -> Links to Services */}
-          {/* Block 2: What We Build (col-span-1) -> Links to Services */}
           <Link href="/services" className="block h-full">
             <motion.div
               variants={staggerItem}
@@ -162,45 +161,45 @@ export default function HomeClient() {
               <div>
                 <div className="flex justify-between items-start mb-4 sm:mb-6">
                   <span className="text-xs font-mono text-devflow-gray-400">
-                    [ WHAT WE BUILD ]
+                    [ What We Build ]
                   </span>
                   <FiGrid
-                    className="w-5 h-5 text-devflow-green group-hover:scale-110 transition-transform duration-300"
+                    className="w-5 h-5 text-devflow-blue group-hover:scale-110 transition-transform duration-300"
                     aria-label="Grid"
                   />
                 </div>
                 <ul className="space-y-3 sm:space-y-4 mb-4">
                   <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-green shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-blue shrink-0" aria-hidden="true" />
                     <span className="text-xs sm:text-sm font-mono text-white">
                       Custom ERP & CRM Software
                     </span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-green shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-blue shrink-0" aria-hidden="true" />
                     <span className="text-xs sm:text-sm font-mono text-white">
                       AI Agents & Workflow Automation
                     </span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-green shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-blue shrink-0" aria-hidden="true" />
                     <span className="text-xs sm:text-sm font-mono text-white">
                       SaaS Product Development
                     </span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-green shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-devflow-blue shrink-0" aria-hidden="true" />
                     <span className="text-xs sm:text-sm font-mono text-white">
                       Cloud Infrastructure & APIs
                     </span>
                   </li>
                 </ul>
               </div>
-              <div className="inline-flex items-center gap-2 text-xs font-mono text-devflow-green group-hover:underline pt-2">
-                SEE WHAT WE BUILD
+              <div className="inline-flex items-center gap-2 text-xs font-mono text-devflow-blue group-hover:underline pt-2">
+                See What We Build
                 <FiArrowUpRight
                   className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200"
-                  aria-label="Arrow up right"
+                  aria-hidden="true"
                 />
               </div>
             </motion.div>
@@ -223,10 +222,10 @@ export default function HomeClient() {
               <div>
                 <div className="flex justify-between items-start mb-6">
                   <span className="text-xs font-mono text-devflow-gray-400">
-                    [ PHILOSOPHY ]
+                    [ Philosophy ]
                   </span>
                   <FiCpu
-                    className="w-5 h-5 text-devflow-green group-hover:rotate-12 transition-transform duration-300"
+                    className="w-5 h-5 text-devflow-blue group-hover:rotate-12 transition-transform duration-300"
                     aria-label="CPU"
                   />
                 </div>
@@ -239,8 +238,8 @@ export default function HomeClient() {
                   scalability.
                 </p>
               </div>
-              <span className="text-[10px] font-mono text-devflow-green group-hover:underline uppercase block">
-                OUR VALUES &rarr;
+              <span className="text-xs font-mono text-devflow-blue group-hover:underline block">
+                Our Values &rarr;
               </span>
             </motion.div>
           </Link>
@@ -251,12 +250,12 @@ export default function HomeClient() {
               variants={staggerItem}
               className="glass-panel p-8 rounded-2xl flex flex-col justify-between group relative h-full cursor-pointer"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-devflow-green/[0.02] to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-devflow-blue/[0.02] to-transparent pointer-events-none" />
               <div className="flex justify-between items-start">
                 <span className="text-xs font-mono text-devflow-gray-400">
-                  [ CLIENT REVIEWS ]
+                  [ Client Reviews ]
                 </span>
-                <div className="flex gap-1 text-devflow-green">
+                <div className="flex gap-1 text-devflow-blue">
                   {[...Array(5)].map((_, i) => (
                     <HiStar
                       key={i}
@@ -275,13 +274,13 @@ export default function HomeClient() {
 
               <div className="flex justify-between items-center text-xs font-mono">
                 <div className="flex items-center gap-3">
-                  <span className="w-6 h-px bg-devflow-green animate-pulse" />
-                  <span className="text-[10px] text-devflow-gray-300">
-                    CTO, VASSU INFOTECH
+                  <span className="w-6 h-px bg-devflow-blue animate-pulse" />
+                  <span className="text-xs text-devflow-gray-300">
+                    CTO, Vassu Infotech
                   </span>
                 </div>
-                <span className="text-devflow-green group-hover:translate-x-1 transition-transform duration-300">
-                  READ CASE STUDIES &rarr;
+                <span className="text-devflow-blue group-hover:translate-x-1 transition-transform duration-300">
+                  Read Case Studies &rarr;
                 </span>
               </div>
             </motion.div>
@@ -294,13 +293,13 @@ export default function HomeClient() {
           >
             <motion.div
               variants={staggerItem}
-              className="glass-panel p-8 rounded-2xl flex flex-col md:flex-row md:items-center justify-between bg-gradient-to-br from-devflow-green/[0.04] to-devflow-green/[0.02] border-devflow-green/20 hover:border-devflow-green/30 cursor-pointer h-full group gap-6"
+              className="glass-panel p-8 rounded-2xl flex flex-col md:flex-row md:items-center justify-between bg-gradient-to-br from-devflow-blue/[0.04] to-devflow-blue/[0.02] border-devflow-blue/20 hover:border-devflow-blue/30 cursor-pointer h-full group gap-6"
             >
               <div className="space-y-2 text-left">
-                <span className="text-[10px] font-mono text-devflow-green uppercase tracking-widest block">
-                  [ ROI & BLUEPRINT CALCULATOR ]
+                <span className="text-xs font-mono text-devflow-blue tracking-wider block">
+                  [ ROI &amp; Blueprint Calculator ]
                 </span>
-                <h4 className="text-xl md:text-2xl font-display font-medium text-white group-hover:text-devflow-green transition-colors duration-300">
+                <h4 className="text-xl md:text-2xl font-display font-medium text-white group-hover:text-devflow-blue transition-colors duration-300">
                   Calculate Your Project Blueprint
                 </h4>
                 <p className="text-xs text-devflow-gray-400 leading-relaxed font-light max-w-xl">
@@ -309,8 +308,8 @@ export default function HomeClient() {
                 </p>
               </div>
 
-              <div className="text-[10px] font-mono text-devflow-green tracking-widest uppercase flex-shrink-0 group-hover:underline">
-                GET SOFTWARE BLUEPRINT &rarr;
+              <div className="text-xs font-mono text-devflow-blue tracking-wider flex-shrink-0 group-hover:underline">
+                Get Software Blueprint &rarr;
               </div>
             </motion.div>
           </Link>
@@ -330,8 +329,8 @@ export default function HomeClient() {
       <section className="py-16 bg-devflow-black border-t border-white/[0.06] relative z-10">
         <div className="section-container max-w-7xl mx-auto space-y-10">
           <div className="text-center md:text-left space-y-2">
-            <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">
-              [ CONTENT CLUSTER ARCHITECTURE &amp; TOPIC HUBS ]
+            <span className="text-xs font-mono text-devflow-blue tracking-wider block">
+              [ Content Architecture &amp; Topic Hubs ]
             </span>
             <h2 className="font-display text-2xl md:text-4xl font-medium text-white">
               Explore Enterprise Technology Pillars &amp; Cluster Guides
@@ -342,184 +341,184 @@ export default function HomeClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             {/* Pillar 1 Hub */}
-            <div className="p-6 rounded-2xl glass-panel border border-white/[0.06] space-y-4 flex flex-col justify-between">
-              <div>
-                <span className="text-[10px] font-mono text-devflow-green uppercase tracking-widest block mb-2">
-                  [ PILLAR 1 ]
+            <div className="p-6 rounded-2xl glass-panel border border-white/[0.06] flex flex-col justify-between h-full">
+              <div className="flex-1 space-y-3">
+                <span className="text-xs font-mono text-devflow-blue tracking-wider block mb-1">
+                  [ Pillar 1 ]
                 </span>
                 <h3 className="text-lg font-display font-medium text-white">
                   AI &amp; Agentic Systems Hub
                 </h3>
-                <p className="text-xs text-devflow-gray-300 font-light mt-1 mb-4">
+                <p className="text-xs text-devflow-gray-300 font-light leading-relaxed mb-4">
                   Sovereign enterprise AI models, RAG vector retrieval, and
                   autonomous multi-step reasoning agents.
                 </p>
-                <ul className="space-y-2 text-xs font-mono text-devflow-gray-300">
+                <ul className="space-y-2.5 text-xs font-mono text-devflow-gray-300">
                   <li>
                     <Link
                       href="/services/ai-development"
-                      className="hover:text-devflow-green transition-colors flex items-center justify-between"
+                      className="group hover:text-devflow-blue transition-colors flex items-center justify-between py-0.5"
                     >
-                      <span>• AI Development Services</span>
-                      <span>&rarr;</span>
+                      <span>AI Development Services</span>
+                      <span className="text-devflow-blue group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/compare/rag-vs-fine-tuning"
-                      className="hover:text-devflow-green transition-colors flex items-center justify-between"
+                      className="group hover:text-devflow-blue transition-colors flex items-center justify-between py-0.5"
                     >
-                      <span>• RAG vs Fine-Tuning Guide</span>
-                      <span>&rarr;</span>
+                      <span>RAG vs Fine-Tuning Guide</span>
+                      <span className="text-devflow-blue group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/compare/ai-agent-vs-chatbot"
-                      className="hover:text-devflow-green transition-colors flex items-center justify-between"
+                      className="group hover:text-devflow-blue transition-colors flex items-center justify-between py-0.5"
                     >
-                      <span>• AI Agent vs Chatbot Spec</span>
-                      <span>&rarr;</span>
+                      <span>AI Agent vs Chatbot Spec</span>
+                      <span className="text-devflow-blue group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/ai-solutions"
-                      className="hover:text-devflow-green transition-colors flex items-center justify-between"
+                      className="group hover:text-devflow-blue transition-colors flex items-center justify-between py-0.5"
                     >
-                      <span>• AI Automation Solutions</span>
-                      <span>&rarr;</span>
+                      <span>AI Automation Solutions</span>
+                      <span className="text-devflow-blue group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
                     </Link>
                   </li>
                 </ul>
               </div>
               <Link
                 href="/services/ai-development"
-                className="text-[11px] font-mono text-devflow-green hover:underline uppercase pt-2 block"
+                className="btn-ghost mt-4 pt-3 border-t border-white/[0.06] block"
               >
-                VIEW AI PILLAR HUB &rarr;
+                View AI Pillar Hub &rarr;
               </Link>
             </div>
 
             {/* Pillar 2 Hub */}
-            <div className="p-6 rounded-2xl glass-panel border border-white/[0.06] space-y-4 flex flex-col justify-between">
-              <div>
-                <span className="text-[10px] font-mono text-devflow-green uppercase tracking-widest block mb-2">
-                  [ PILLAR 2 ]
+            <div className="p-6 rounded-2xl glass-panel border border-white/[0.06] flex flex-col justify-between h-full">
+              <div className="flex-1 space-y-3">
+                <span className="text-xs font-mono text-devflow-blue tracking-wider block mb-1">
+                  [ Pillar 2 ]
                 </span>
                 <h3 className="text-lg font-display font-medium text-white">
                   Custom Software &amp; ERP Hub
                 </h3>
-                <p className="text-xs text-devflow-gray-300 font-light mt-1 mb-4">
+                <p className="text-xs text-devflow-gray-300 font-light leading-relaxed mb-4">
                   Bespoke digital platforms, custom ERP/CRM software, and
                   multi-tenant SaaS engineering.
                 </p>
-                <ul className="space-y-2 text-xs font-mono text-devflow-gray-300">
+                <ul className="space-y-2.5 text-xs font-mono text-devflow-gray-300">
                   <li>
                     <Link
                       href="/services/software-development"
-                      className="hover:text-devflow-green transition-colors flex items-center justify-between"
+                      className="group hover:text-devflow-blue transition-colors flex items-center justify-between py-0.5"
                     >
-                      <span>• Enterprise Software Hub</span>
-                      <span>&rarr;</span>
+                      <span>Enterprise Software Hub</span>
+                      <span className="text-devflow-blue group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/services/erp-development"
-                      className="hover:text-devflow-green transition-colors flex items-center justify-between"
+                      className="group hover:text-devflow-blue transition-colors flex items-center justify-between py-0.5"
                     >
-                      <span>• Custom ERP Software</span>
-                      <span>&rarr;</span>
+                      <span>Custom ERP Software</span>
+                      <span className="text-devflow-blue group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/compare/custom-software-vs-off-the-shelf"
-                      className="hover:text-devflow-green transition-colors flex items-center justify-between"
+                      className="group hover:text-devflow-blue transition-colors flex items-center justify-between py-0.5"
                     >
-                      <span>• Custom vs Off-the-Shelf</span>
-                      <span>&rarr;</span>
+                      <span>Custom vs Off-the-Shelf</span>
+                      <span className="text-devflow-blue group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/services/crm-development"
-                      className="hover:text-devflow-green transition-colors flex items-center justify-between"
+                      className="group hover:text-devflow-blue transition-colors flex items-center justify-between py-0.5"
                     >
-                      <span>• Custom CRM Systems</span>
-                      <span>&rarr;</span>
+                      <span>Custom CRM Systems</span>
+                      <span className="text-devflow-blue group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
                     </Link>
                   </li>
                 </ul>
               </div>
               <Link
                 href="/services/software-development"
-                className="text-[11px] font-mono text-devflow-green hover:underline uppercase pt-2 block"
+                className="btn-ghost mt-4 pt-3 border-t border-white/[0.06] block"
               >
-                VIEW SOFTWARE PILLAR HUB &rarr;
+                View Software Pillar Hub &rarr;
               </Link>
             </div>
 
             {/* Pillar 3 Hub */}
-            <div className="p-6 rounded-2xl glass-panel border border-white/[0.06] space-y-4 flex flex-col justify-between">
-              <div>
-                <span className="text-[10px] font-mono text-devflow-green uppercase tracking-widest block mb-2">
-                  [ PILLAR 3 ]
+            <div className="p-6 rounded-2xl glass-panel border border-white/[0.06] flex flex-col justify-between h-full">
+              <div className="flex-1 space-y-3">
+                <span className="text-xs font-mono text-devflow-blue tracking-wider block mb-1">
+                  [ Pillar 3 ]
                 </span>
                 <h3 className="text-lg font-display font-medium text-white">
                   Web &amp; Dedicated Teams Hub
                 </h3>
-                <p className="text-xs text-devflow-gray-300 font-light mt-1 mb-4">
+                <p className="text-xs text-devflow-gray-300 font-light leading-relaxed mb-4">
                   High-speed Next.js web applications, cross-platform mobile
                   apps, and dedicated engineering pods.
                 </p>
-                <ul className="space-y-2 text-xs font-mono text-devflow-gray-300">
+                <ul className="space-y-2.5 text-xs font-mono text-devflow-gray-300">
                   <li>
                     <Link
                       href="/services/web-application-development"
-                      className="hover:text-devflow-green transition-colors flex items-center justify-between"
+                      className="group hover:text-devflow-blue transition-colors flex items-center justify-between py-0.5"
                     >
-                      <span>• Web App Engineering</span>
-                      <span>&rarr;</span>
+                      <span>Web App Engineering</span>
+                      <span className="text-devflow-blue group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/dedicated-development-teams"
-                      className="hover:text-devflow-green transition-colors flex items-center justify-between"
+                      className="group hover:text-devflow-blue transition-colors flex items-center justify-between py-0.5"
                     >
-                      <span>• Dedicated Developer Pods</span>
-                      <span>&rarr;</span>
+                      <span>Dedicated Developer Pods</span>
+                      <span className="text-devflow-blue group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/services/node-js-development"
-                      className="hover:text-devflow-green transition-colors flex items-center justify-between"
+                      className="group hover:text-devflow-blue transition-colors flex items-center justify-between py-0.5"
                     >
-                      <span>• Node.js Backend API Hub</span>
-                      <span>&rarr;</span>
+                      <span>Node.js Backend API Hub</span>
+                      <span className="text-devflow-blue group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/offshore-development"
-                      className="hover:text-devflow-green transition-colors flex items-center justify-between"
+                      className="group hover:text-devflow-blue transition-colors flex items-center justify-between py-0.5"
                     >
-                      <span>• Offshore Engineering</span>
-                      <span>&rarr;</span>
+                      <span>Offshore Engineering</span>
+                      <span className="text-devflow-blue group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
                     </Link>
                   </li>
                 </ul>
               </div>
               <Link
                 href="/services/web-application-development"
-                className="text-[11px] font-mono text-devflow-green hover:underline uppercase pt-2 block"
+                className="btn-ghost mt-4 pt-3 border-t border-white/[0.06] block"
               >
-                VIEW WEB PILLAR HUB &rarr;
+                View Web Pillar Hub &rarr;
               </Link>
             </div>
           </div>

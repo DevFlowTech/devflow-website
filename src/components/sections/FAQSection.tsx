@@ -21,9 +21,9 @@ const faqs = [
       "We specialize in headless React frontends, Next.js, TypeScript, Go (Golang), and AWS microservices. We build secure multi-tenant isolation architectures and configure Stripe billing engines (recurring subscriptions and invoice workflows).",
   },
   {
-    question: "Can DevFlow help optimize our local Google Business Profile (GMB)pack ranking?",
+    question: "Can DevFlow help optimize our local Google Business Profile ranking?",
     answer:
-      "Yes. We configure map api listings, align address footprints, and deploy review aggregation schemas. This helps capture the Google Maps 3-Pack rankings, driving inbound organic calls without paid ad campaigns.",
+      "Yes. We configure Google Maps API listings, align NAP consistency, and deploy schema markup to boost your local Google Search visibility and drive inbound inquiries.",
   },
   {
     question: "Do you provide automated web crawling and data extraction services?",

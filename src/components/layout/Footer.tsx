@@ -12,7 +12,7 @@ const footerLinks = {
     { label: "AI Solutions Hub", href: "/ai-solutions" },
     { label: "Dedicated Teams", href: "/dedicated-development-teams" },
     { label: "Custom Software & ERP", href: "/services/custom-software-erp" },
-    { label: "Custom Software (USA)", href: "/services/software-development" },
+    { label: "Enterprise Software", href: "/services/software-development" },
     { label: "ERP Systems Development", href: "/services/erp-development" },
     { label: "CRM Portal Development", href: "/services/crm-development" },
     { label: "SaaS Development", href: "/services/saas-development" },
@@ -30,7 +30,7 @@ const footerLinks = {
     { label: "Security & Compliance", href: "/security" },
     { label: "SLA Details", href: "/sla" },
     { label: "Pricing Models", href: "/pricing" },
-    { label: "Frequently Asked FAQs", href: "/faq" },
+    { label: "Frequently Asked Questions", href: "/faq" },
   ],
   trust: [
     { label: "NDA Protected", href: "/security" },
@@ -66,7 +66,7 @@ const footerLinks = {
     { label: "Tools & Resources Hub", href: "/resources" },
     { label: "Calculators Hub", href: "/resources/calculators" },
     { label: "SEO Checker Tool", href: "/resources/tools/seo-audit" },
-    { label: "Quick SEO Audit Link", href: "/seo-audit" },
+    { label: "Quick SEO Audit", href: "/seo-audit" },
   ],
 };
 
@@ -83,7 +83,7 @@ export default function Footer() {
   return (
     <footer className="bg-devflow-charcoal relative">
       {/* Gradient top border */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-devflow-green/20 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-devflow-blue/20 to-transparent" />
       <motion.div
         className="section-container py-16"
         initial="hidden"
@@ -92,7 +92,7 @@ export default function Footer() {
         variants={staggerContainer}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-12 lg:gap-8">
-          {/* Brand Column */}
+          {/* Brand Column (lg:col-span-2) */}
           <motion.div variants={staggerItem} className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-4 group mb-6">
               <Image
@@ -102,7 +102,7 @@ export default function Footer() {
                 height={56}
                 className="w-14 h-14 object-contain transition-transform duration-300 group-hover:rotate-12"
               />
-              <span className="font-display font-bold text-3xl tracking-tight text-devflow-gray-100 group-hover:text-devflow-green transition-colors duration-200">
+              <span className="font-display font-bold text-3xl tracking-tight text-devflow-gray-100 group-hover:text-devflow-blue transition-colors duration-200">
                 DevFlow
               </span>
             </Link>
@@ -114,7 +114,7 @@ export default function Footer() {
             <div className="space-y-3">
               <a
                 href={emailHref}
-                className="text-devflow-green transition-colors duration-150 hover:text-devflow-green/80 text-sm block font-mono"
+                className="text-devflow-blue transition-colors duration-150 hover:underline text-sm block font-mono font-medium"
               >
                 {emailText}
               </a>
@@ -127,14 +127,14 @@ export default function Footer() {
                 Ahmedabad, Gujarat 382210, India
               </address>
               <div className="flex flex-col gap-1 text-xs font-mono text-devflow-gray-400">
-                <a href="tel:+919726113311" className="hover:text-devflow-green transition-colors">+91-97261-13311</a>
-                <a href="tel:+916355043103" className="hover:text-devflow-green transition-colors">+91-63550-43103</a>
+                <a href="tel:+919726113311" className="hover:text-devflow-blue transition-colors">+91-97261-13311</a>
+                <a href="tel:+916355043103" className="hover:text-devflow-blue transition-colors">+91-63550-43103</a>
               </div>
 
               <div className="flex flex-wrap gap-2 pt-2">
-                <span className="text-[10px] font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">NDA Available</span>
-                <span className="text-[10px] font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">Security-Conscious Engineering</span>
-                <span className="text-[10px] font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">GDPR-Aware Architecture</span>
+                <span className="text-xs font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">NDA Available</span>
+                <span className="text-xs font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">Security-Conscious Engineering</span>
+                <span className="text-xs font-mono px-2 py-1 bg-white/[0.04] border border-white/[0.06] rounded text-devflow-gray-300">GDPR-Aware Architecture</span>
               </div>
 
               {/* Google Preferred Source Badge */}
@@ -169,38 +169,40 @@ export default function Footer() {
                 }}
                 className="space-y-2 max-w-sm"
               >
-                <label className="text-[10px] font-mono uppercase tracking-widest text-devflow-gray-400 block mb-1">
-                  [ REQUEST A QUICK CALLBACK ]
+                <label className="text-xs font-mono tracking-wider text-devflow-gray-400 block mb-1">
+                  [ Request a Quick Callback ]
                 </label>
                 <div className="flex gap-2">
                   <input
                     type="email"
                     placeholder="Enter email address"
                     required
-                    className="bg-white/[0.03] border border-white/[0.08] rounded-xl px-3 py-2 text-xs text-white placeholder-devflow-gray-500 focus:border-devflow-green/30 outline-none w-full"
+                    aria-label="Email address for callback"
+                    className="bg-white/[0.04] border border-white/[0.1] rounded-xl px-3 py-2 text-xs text-white placeholder-devflow-gray-500 focus:border-devflow-blue/50 outline-none w-full"
                   />
                   <button
                     type="submit"
-                    className="bg-devflow-green text-devflow-black px-4 py-2 rounded-xl text-xs font-semibold hover:brightness-110 active:scale-95 transition-all whitespace-nowrap"
+                    aria-label="Request a phone callback"
+                    className="bg-devflow-blue text-white px-4 py-2 rounded-xl text-xs font-semibold hover:brightness-110 active:scale-95 transition-all whitespace-nowrap"
                   >
-                    Send
+                    Request Callback
                   </button>
                 </div>
               </form>
             </div>
           </motion.div>
 
-          {/* Services Column */}
-          <motion.div variants={staggerItem}>
-            <h4 className="text-xs font-medium text-devflow-gray-300 uppercase tracking-wider mb-6">
-              Capabilities
+          {/* Capabilities Column (lg:col-span-2) */}
+          <motion.div variants={staggerItem} className="lg:col-span-2">
+            <h4 className="text-sm font-semibold text-devflow-gray-200 tracking-normal mb-4">
+              Capabilities &amp; Solutions
             </h4>
-            <ul className="space-y-3">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2.5">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
+                    className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-blue text-xs"
                   >
                     {link.label}
                   </Link>
@@ -211,15 +213,15 @@ export default function Footer() {
 
           {/* Company Column */}
           <motion.div variants={staggerItem}>
-            <h4 className="text-xs font-medium text-devflow-gray-300 uppercase tracking-wider mb-6">
+            <h4 className="text-sm font-semibold text-devflow-gray-200 tracking-normal mb-4">
               Company
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
+                    className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-blue text-xs"
                   >
                     {link.label}
                   </Link>
@@ -228,54 +230,57 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Trust/Standards Column */}
+          {/* Trust/Standards Column & Governance */}
           <motion.div variants={staggerItem}>
-            <h4 className="text-xs font-medium text-devflow-gray-300 uppercase tracking-wider mb-6">
-              Standards & Legal
+            <h4 className="text-sm font-semibold text-devflow-gray-200 tracking-normal mb-4">
+              Standards &amp; Trust
             </h4>
-            <ul className="space-y-3 mb-6">
+            <ul className="space-y-2.5 mb-6">
               {footerLinks.trust.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
+                    className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-blue text-xs"
                   >
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            <h4 className="text-[10px] font-mono text-devflow-gray-400 uppercase tracking-wider mb-3">
-              Governance
-            </h4>
-            <ul className="space-y-2">
-              {footerLinks.legal.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-devflow-gray-400 transition-colors duration-150 hover:text-devflow-green text-xs"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+
+            <div className="pt-4 border-t border-white/[0.06]">
+              <h4 className="text-xs font-semibold text-devflow-gray-300 tracking-normal mb-3">
+                Governance
+              </h4>
+              <ul className="space-y-2">
+                {footerLinks.legal.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-devflow-gray-400 transition-colors duration-150 hover:text-devflow-blue text-xs"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </motion.div>
 
-          {/* Nigeria Business Partners Column */}
+          {/* Partners Column (Combined) */}
           <motion.div variants={staggerItem}>
-            <h4 className="text-xs font-medium text-devflow-gray-300 uppercase tracking-wider mb-6">
-              Nigeria Partners
+            <h4 className="text-sm font-semibold text-devflow-gray-200 tracking-normal mb-4">
+              Partners &amp; Network
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5 text-xs text-devflow-gray-300">
               <li>
                 <a
                   href="https://onpointgroup.ng/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
+                  className="hover:text-devflow-blue transition-colors"
                 >
-                  OnPoint Group
+                  OnPoint Group (NG)
                 </a>
               </li>
               <li>
@@ -283,46 +288,17 @@ export default function Footer() {
                   href="https://navafoods.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
+                  className="hover:text-devflow-blue transition-colors"
                 >
                   Nava Foods
                 </a>
               </li>
               <li>
                 <a
-                  href="https://shipwithonpoint.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
-                >
-                  ShipWithOnPoint
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://onpointmall.ng/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
-                >
-                  OnPoint Mall
-                </a>
-              </li>
-            </ul>
-          </motion.div>
-
-          {/* India Business Partners Column */}
-          <motion.div variants={staggerItem}>
-            <h4 className="text-xs font-medium text-devflow-gray-300 uppercase tracking-wider mb-6">
-              India Partners
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <a
                   href="https://spontanneous.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
+                  className="hover:text-devflow-blue transition-colors"
                 >
                   Spontanneous
                 </a>
@@ -332,7 +308,7 @@ export default function Footer() {
                   href="https://rajputbhavin.engineer/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
+                  className="hover:text-devflow-blue transition-colors"
                 >
                   Bhavin Rajput
                 </a>
@@ -342,7 +318,7 @@ export default function Footer() {
                   href="https://prince.devflow.co.in/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-devflow-gray-300 transition-colors duration-150 hover:text-devflow-green text-sm"
+                  className="hover:text-devflow-blue transition-colors"
                 >
                   Prince Gajjar
                 </a>
@@ -351,42 +327,65 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        {/* Local SEO Landing Pages Links */}
+        {/* Regional Hubs & Specialized Pages Accordion */}
         <motion.div
           variants={staggerItem}
-          className="mt-12 pt-6 border-t border-white/[0.04] text-xs"
+          className="mt-12 pt-6 border-t border-white/[0.06] text-xs"
         >
-          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-devflow-gray-500 block mb-3">
-            [ REGIONAL SERVICES & BRANCHES ]
-          </span>
-          <div className="flex flex-wrap gap-x-4 gap-y-2 text-devflow-gray-300">
-            {footerLinks.local.map((link, index) => (
-              <span key={link.label} className="flex items-center gap-2">
-                <Link href={link.href} className="hover:text-devflow-green transition-colors font-mono text-[10px]">
-                  {link.label}
-                </Link>
-                {index < footerLinks.local.length - 1 && (
-                  <span className="text-white/10 select-none">•</span>
-                )}
+          <details className="group">
+            <summary className="cursor-pointer text-xs font-mono text-devflow-gray-400 hover:text-white flex items-center justify-between py-2 select-none">
+              <span className="font-semibold text-devflow-gray-300">
+                [ Regional Hubs, Specialized Industries &amp; Resource Directories ]
               </span>
-            ))}
-          </div>
+              <span className="text-devflow-blue transition-transform duration-200 group-open:rotate-180" aria-hidden="true">
+                ↓
+              </span>
+            </summary>
 
-          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-devflow-gray-500 block mb-3 mt-6">
-            [ REGIONAL CENTERS, INDUSTRIES &amp; RESOURCES ]
-          </span>
-          <div className="flex flex-wrap gap-x-4 gap-y-2 text-devflow-gray-300">
-            {footerLinks.systemIndex.map((link, index) => (
-              <span key={link.label} className="flex items-center gap-2">
-                <Link href={link.href} className="hover:text-devflow-green transition-colors font-mono text-[10px]">
-                  {link.label}
-                </Link>
-                {index < footerLinks.systemIndex.length - 1 && (
-                  <span className="text-white/10 select-none">•</span>
-                )}
-              </span>
-            ))}
-          </div>
+            <div className="pt-4 space-y-6">
+              <div>
+                <h4 className="text-xs font-semibold text-devflow-gray-300 mb-3">
+                  Regional Services &amp; Branches
+                </h4>
+                <div className="flex flex-wrap gap-x-4 gap-y-2 text-devflow-gray-300">
+                  {footerLinks.local.map((link, index) => (
+                    <span key={link.label} className="flex items-center gap-2">
+                      <Link
+                        href={link.href}
+                        className="hover:text-devflow-blue underline underline-offset-4 decoration-white/20 transition-colors font-mono text-xs"
+                      >
+                        {link.label}
+                      </Link>
+                      {index < footerLinks.local.length - 1 && (
+                        <span className="text-white/20 select-none" aria-hidden="true">•</span>
+                      )}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h4 className="text-xs font-semibold text-devflow-gray-300 mb-3">
+                  Regional Centers, Industries &amp; Resources
+                </h4>
+                <div className="flex flex-wrap gap-x-4 gap-y-2 text-devflow-gray-300">
+                  {footerLinks.systemIndex.map((link, index) => (
+                    <span key={link.label} className="flex items-center gap-2">
+                      <Link
+                        href={link.href}
+                        className="hover:text-devflow-blue underline underline-offset-4 decoration-white/20 transition-colors font-mono text-xs"
+                      >
+                        {link.label}
+                      </Link>
+                      {index < footerLinks.systemIndex.length - 1 && (
+                        <span className="text-white/20 select-none" aria-hidden="true">•</span>
+                      )}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </details>
         </motion.div>
 
         {/* Google Preferred Sources Sitewide Follow Banner */}
@@ -395,7 +394,7 @@ export default function Footer() {
           className="mt-12 p-6 rounded-2xl border border-white/[0.08] bg-gradient-to-r from-white/[0.02] via-devflow-black to-white/[0.02] flex flex-col sm:flex-row items-center justify-between gap-4 backdrop-blur-sm"
         >
           <div className="space-y-1 text-center sm:text-left">
-            <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-devflow-green flex items-center justify-center sm:justify-start gap-1.5">
+            <span className="text-xs font-mono uppercase tracking-wider text-devflow-blue flex items-center justify-center sm:justify-start gap-1.5 font-semibold">
               <span>Google Preferred Source</span>
             </span>
             <p className="text-xs text-devflow-gray-300 font-light">
@@ -410,7 +409,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <motion.div
           variants={staggerItem}
-          className="mt-14 pt-8 border-t border-devflow-green/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-devflow-gray-400"
+          className="mt-14 pt-8 border-t border-devflow-blue/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-devflow-gray-400"
         >
           <p>© {new Date().getFullYear()} DevFlow Technology. All rights reserved.</p>
           <div className="flex gap-4">

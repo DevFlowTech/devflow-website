@@ -43,14 +43,14 @@ export default function ProcessTimelineSection() {
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
-          <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block mb-4">
-            [ ROADMAP / METHODOLOGY ]
+          <span className="text-xs font-mono text-devflow-blue tracking-wider block mb-3">
+            [ Roadmap &amp; Methodology ]
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-medium text-white leading-tight">
             How We Build{" "}
-            <span className="italic font-normal text-devflow-green font-display">
+            <span className="italic font-normal text-devflow-blue font-display">
               Software Systems
             </span>
           </h2>
@@ -59,37 +59,38 @@ export default function ProcessTimelineSection() {
         {/* Process Steps */}
         <div className="relative max-w-6xl mx-auto">
           {/* Connecting Timeline Track (Desktop) */}
-          <div className="hidden md:block absolute top-[44px] left-[10%] right-[10%] h-[1.5px] bg-gradient-to-r from-devflow-green/60 via-devflow-green/25 to-transparent z-0 pointer-events-none" />
+          <div
+            className="hidden md:block absolute top-7 left-12 right-12 h-[2px] bg-gradient-to-r from-devflow-blue via-devflow-blue/40 to-devflow-blue/10 z-0 pointer-events-none"
+            aria-hidden="true"
+          />
 
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
             variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10"
+            className="grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch relative z-10"
           >
             {steps.map((step, idx) => (
               <motion.div
                 key={idx}
                 variants={staggerItem}
-                className="glass-panel p-8 rounded-2xl flex flex-col justify-between group relative h-full hover:shadow-xl hover:shadow-blue-500/5 hover:-translate-y-1 transition-all duration-300 z-10 cursor-default"
+                className="glass-panel p-6 sm:p-8 rounded-2xl flex flex-col justify-between group relative h-full hover:shadow-xl hover:shadow-blue-500/5 hover:-translate-y-1 transition-all duration-300 z-10 cursor-default"
               >
-                {/* Number indicator */}
-                <div className="flex justify-between items-start mb-6">
-                  <span className="text-3xl font-mono font-bold text-devflow-green bg-devflow-black px-2 py-0.5 rounded-lg z-10">
-                    {step.num}
-                  </span>
-                  <span className="text-[10px] font-mono text-devflow-gray-500">
-                    [ STEP ]
-                  </span>
+                {/* Unified Step Number & Badge */}
+                <div className="flex items-center justify-between mb-5">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-devflow-blue/10 border border-devflow-blue/20 text-xs font-mono font-semibold text-devflow-blue shadow-xs">
+                    <span>Step {step.num}</span>
+                  </div>
+                  <span className="w-2 h-2 rounded-full bg-devflow-blue/40 group-hover:bg-devflow-blue transition-colors" aria-hidden="true" />
                 </div>
 
                 {/* Title & description */}
-                <div>
-                  <h3 className="text-lg font-display font-medium text-white mb-3 group-hover:text-devflow-green transition-colors duration-200">
+                <div className="flex-1 flex flex-col justify-between">
+                  <h3 className="text-lg font-display font-medium text-white mb-3 group-hover:text-devflow-blue transition-colors duration-200">
                     {step.title}
                   </h3>
-                  <p className="text-devflow-gray-300 text-xs leading-relaxed font-light">
+                  <p className="text-devflow-gray-300 text-xs leading-relaxed font-light mt-auto">
                     {step.description}
                   </p>
                 </div>

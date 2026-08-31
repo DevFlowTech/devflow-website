@@ -131,23 +131,23 @@ export default function HeroSection() {
           >
             <div className="hero-stagger space-y-8">
               {/* Monospaced indicator */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-devflow-green/30 bg-white shadow-sm text-xs font-mono tracking-widest uppercase text-devflow-gray-100">
-                <span className="w-1.5 h-1.5 rounded-full bg-devflow-green animate-breathing-glow" />
-                [ AI + CUSTOM SOFTWARE ENGINEERING ]
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-devflow-blue/20 bg-white/90 shadow-sm text-xs font-mono tracking-wider text-slate-800">
+                <span className="w-1.5 h-1.5 rounded-full bg-devflow-blue animate-breathing-glow" aria-hidden="true" />
+                [ AI + Custom Software Engineering ]
               </div>
 
               {/* Serif Editorial Headline */}
-              <h1 className="font-display text-4xl md:text-6xl lg:text-[4.75rem] font-medium text-devflow-gray-100 leading-[1.1] tracking-tight">
+              <h1 className="font-display text-4xl md:text-6xl lg:text-[4.75rem] font-medium text-slate-900 leading-[1.1] tracking-tight">
                 AI-Powered Software Systems &{" "}
                 <br className="hidden md:inline" />
-                <span className="italic font-normal text-devflow-green font-display">
+                <span className="italic font-normal text-devflow-blue font-display">
                   Custom Digital Infrastructure
                 </span>{" "}
                 <br className="hidden md:inline" />
                 built for high-growth enterprises.
               </h1>
 
-              <p className="text-base md:text-lg text-devflow-gray-100/80 leading-relaxed font-light max-w-2xl">
+              <p className="text-base md:text-lg text-slate-700 leading-relaxed font-light max-w-2xl">
                 We design and engineer custom software systems, AI agents, ERP
                 platforms, and cloud workflows for growing businesses that have
                 outgrown manual processes, disconnected tools, and rigid
@@ -168,6 +168,7 @@ export default function HeroSection() {
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                       strokeWidth={2.5}
+                      aria-hidden="true"
                     >
                       <path
                         strokeLinecap="round"
@@ -186,11 +187,6 @@ export default function HeroSection() {
                     View Case Studies
                   </Link>
                 </MagneticButton>
-              </div>
-
-              {/* Google Preferred Source Homepage Indicator */}
-              <div className="pt-2 flex items-center gap-3">
-                <GooglePreferredSource variant="inline" theme="dark" />
               </div>
             </div>
           </div>

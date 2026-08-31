@@ -180,10 +180,7 @@ export default function GooglePreferredSource({
 
   // Default 'inline' variant: for article metadata bar
   return (
-    <div
-      className={`inline-flex items-center gap-2 min-h-[32px] ${className}`}
-      aria-label="Google Preferred Source"
-    >
+    <div className={`inline-flex items-center gap-2 min-h-[32px] ${className}`}>
       {renderPillButton("sm")}
     </div>
   );

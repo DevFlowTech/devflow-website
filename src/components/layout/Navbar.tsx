@@ -78,12 +78,13 @@ export default function Navbar() {
                     duration: 0.3,
                     ease: easeOut,
                   }}
-                >                    <Link
-                      href={item.href}
-                      className="relative px-4 py-2 text-sm font-medium text-devflow-gray-200 hover:text-devflow-green transition-colors duration-150"
-                    >
-                      {item.label}
-                    </Link>
+                >
+                  <Link
+                    href={item.href}
+                    className="relative px-4 py-2 text-sm font-medium text-slate-800 hover:text-devflow-blue transition-colors duration-150"
+                  >
+                    {item.label}
+                  </Link>
                 </motion.div>
               ))}
             </div>
@@ -98,11 +99,9 @@ export default function Navbar() {
                 <Magnetic>
                   <Link
                     href="/contact"
-                    className="relative overflow-hidden group px-5 py-2.5 bg-devflow-green hover:brightness-110 text-white font-semibold text-sm rounded-lg transition-all duration-300 shadow-[0_0_20px_rgba(2,37,220,0.25)] hover:shadow-[0_0_30px_rgba(2,37,220,0.45)] flex items-center justify-center"
+                    className="btn-primary h-10 px-5 text-sm"
                   >
-                    {/* Glare Reflection overlay for liquid glass effect */}
-                    <span className="absolute inset-0 w-[200%] h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-20 -translate-x-[120%] group-hover:translate-x-[120%] transition-transform duration-1000 ease-out pointer-events-none" />
-                    <span className="relative z-10">Discuss Your Project</span>
+                    Discuss Your Project
                   </Link>
                 </Magnetic>
               </motion.div>
@@ -203,7 +202,7 @@ export default function Navbar() {
                   <Link
                     href="/contact"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-center py-4 bg-devflow-green text-devflow-black font-semibold rounded-lg"
+                    className="btn-primary w-full text-center block"
                   >
                     Discuss Your Project
                   </Link>

@@ -94,24 +94,24 @@ export default function HeroMockup() {
                     className="w-8 h-8 rounded-lg flex items-center justify-center mb-3"
                     style={{ background: "rgba(2,37,220,0.08)" }}
                   >
-                    <Icon className="w-4 h-4" style={{ color: "#0225dc" }} />
+                    <Icon className="w-4 h-4" style={{ color: "#0225dc" }} aria-hidden="true" />
                   </div>
 
                   {/* Value */}
                   <p
-                    className="text-2xl font-bold leading-none mb-1"
-                    style={{ color: "#0f172a", fontFamily: "var(--font-outfit)" }}
+                    className="text-2xl font-bold leading-none mb-1 text-slate-900"
+                    style={{ fontFamily: "var(--font-outfit)" }}
                   >
                     {card.value}
                   </p>
 
                   {/* Label */}
-                  <p className="text-xs font-semibold text-zinc-700 leading-none mb-0.5">
+                  <p className="text-xs font-semibold text-slate-800 leading-none mb-0.5">
                     {card.label}
                   </p>
 
                   {/* Sub */}
-                  <p className="text-[10px] text-zinc-400 leading-none">{card.sub}</p>
+                  <p className="text-xs text-slate-600 leading-snug font-normal">{card.sub}</p>
                 </div>
               </motion.div>
             </motion.div>
@@ -121,6 +121,7 @@ export default function HeroMockup() {
         {/* Subtle connector lines between cards — pure decorative */}
         <svg
           className="absolute inset-0 w-full h-full pointer-events-none"
+          aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
         >
           <motion.path
