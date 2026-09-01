@@ -2120,6 +2120,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/explain-microservices-architecture",
     icon: "📝",
   },
+  {
+    id: "blog/serverless-architecture-vs-microservices",
+    title: "Serverless Architecture Vs Microservices: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for serverless architecture vs microservices: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Serverless Architecture Vs Microservices",
+      "Serverless Architecture Vs Microservices guide",
+      "enterprise Serverless Architecture Vs Microservices",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/serverless-architecture-vs-microservices",
+    icon: "📝",
+  },
 ];
 
 /**
