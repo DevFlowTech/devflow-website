@@ -2152,6 +2152,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/serverless-computing-vs-microservices",
     icon: "📝",
   },
+  {
+    id: "blog/serverless-architecture-and-microservices",
+    title: "Serverless Architecture And Microservices: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for serverless architecture and microservices: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Serverless Architecture And Microservices",
+      "Serverless Architecture And Microservices guide",
+      "enterprise Serverless Architecture And Microservices",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/serverless-architecture-and-microservices",
+    icon: "📝",
+  },
 ];
 
 /**
