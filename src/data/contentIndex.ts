@@ -2184,6 +2184,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/microservices-vs-serverless",
     icon: "📝",
   },
+  {
+    id: "blog/service-based-architecture-vs-microservices",
+    title: "Service Based Architecture Vs Microservices: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for service based architecture vs microservices: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Service Based Architecture Vs Microservices",
+      "Service Based Architecture Vs Microservices guide",
+      "enterprise Service Based Architecture Vs Microservices",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/service-based-architecture-vs-microservices",
+    icon: "📝",
+  },
 ];
 
 /**
