@@ -2200,6 +2200,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/service-based-architecture-vs-microservices",
     icon: "📝",
   },
+  {
+    id: "blog/zero-seat-licensing-enterprise-software",
+    title: "Zero Seat Licensing Enterprise Software: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for zero seat licensing enterprise software: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Zero Seat Licensing Enterprise Software",
+      "Zero Seat Licensing Enterprise Software guide",
+      "enterprise Zero Seat Licensing Enterprise Software",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/zero-seat-licensing-enterprise-software",
+    icon: "📝",
+  },
 ];
 
 /**
