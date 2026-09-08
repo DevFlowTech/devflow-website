@@ -2232,6 +2232,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/cloud-cost-optimization-finops-strategies",
     icon: "📝",
   },
+  {
+    id: "blog/kubernetes-container-security-enterprise",
+    title: "Kubernetes Container Security Enterprise: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for kubernetes container security enterprise: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Kubernetes Container Security Enterprise",
+      "Kubernetes Container Security Enterprise guide",
+      "enterprise Kubernetes Container Security Enterprise",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/kubernetes-container-security-enterprise",
+    icon: "📝",
+  },
 ];
 
 /**
