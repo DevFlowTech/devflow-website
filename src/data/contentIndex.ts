@@ -2248,6 +2248,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/kubernetes-container-security-enterprise",
     icon: "📝",
   },
+  {
+    id: "blog/dedicated-development-team-vs-in-house",
+    title: "Dedicated Development Team Vs In House: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for dedicated development team vs in house: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Dedicated Development Team Vs In House",
+      "Dedicated Development Team Vs In House guide",
+      "enterprise Dedicated Development Team Vs In House",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/dedicated-development-team-vs-in-house",
+    icon: "📝",
+  },
 ];
 
 /**
