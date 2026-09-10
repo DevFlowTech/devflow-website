@@ -2264,6 +2264,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/dedicated-development-team-vs-in-house",
     icon: "📝",
   },
+  {
+    id: "blog/fixed-price-vs-dedicated-team-contract",
+    title: "Fixed Price Vs Dedicated Team Contract: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for fixed price vs dedicated team contract: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Fixed Price Vs Dedicated Team Contract",
+      "Fixed Price Vs Dedicated Team Contract guide",
+      "enterprise Fixed Price Vs Dedicated Team Contract",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/fixed-price-vs-dedicated-team-contract",
+    icon: "📝",
+  },
 ];
 
 /**
