@@ -2280,6 +2280,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/fixed-price-vs-dedicated-team-contract",
     icon: "📝",
   },
+  {
+    id: "blog/hipaa-compliant-cloud-database-architecture",
+    title: "Hipaa Compliant Cloud Database Architecture: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for hipaa compliant cloud database architecture: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Hipaa Compliant Cloud Database Architecture",
+      "Hipaa Compliant Cloud Database Architecture guide",
+      "enterprise Hipaa Compliant Cloud Database Architecture",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/hipaa-compliant-cloud-database-architecture",
+    icon: "📝",
+  },
 ];
 
 /**
