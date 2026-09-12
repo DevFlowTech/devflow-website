@@ -2296,6 +2296,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/hipaa-compliant-cloud-database-architecture",
     icon: "📝",
   },
+  {
+    id: "blog/what-is-generative-ai",
+    title: "What Is Generative Ai: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for what is generative ai: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "What Is Generative Ai",
+      "What Is Generative Ai guide",
+      "enterprise What Is Generative Ai",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/what-is-generative-ai",
+    icon: "📝",
+  },
 ];
 
 /**
