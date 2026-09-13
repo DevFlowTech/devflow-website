@@ -2312,6 +2312,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/what-is-generative-ai",
     icon: "📝",
   },
+  {
+    id: "blog/autonomous-ai-agents-for-business",
+    title: "Autonomous Ai Agents For Business: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for autonomous ai agents for business: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Autonomous Ai Agents For Business",
+      "Autonomous Ai Agents For Business guide",
+      "enterprise Autonomous Ai Agents For Business",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/autonomous-ai-agents-for-business",
+    icon: "📝",
+  },
 ];
 
 /**
