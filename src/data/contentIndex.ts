@@ -2328,6 +2328,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/autonomous-ai-agents-for-business",
     icon: "📝",
   },
+  {
+    id: "blog/microsoft-is-developing-new-autonomous-ai-agents-for-businesses",
+    title: "Microsoft Is Developing New Autonomous Ai Agents For Businesses: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for microsoft is developing new autonomous ai agents for businesses: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Microsoft Is Developing New Autonomous Ai Agents For Businesses",
+      "Microsoft Is Developing New Autonomous Ai Agents For Businesses guide",
+      "enterprise Microsoft Is Developing New Autonomous Ai Agents For Businesses",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/microsoft-is-developing-new-autonomous-ai-agents-for-businesses",
+    icon: "📝",
+  },
 ];
 
 /**
