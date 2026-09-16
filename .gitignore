@@ -47,6 +47,7 @@ Desktop/
 .agents/
 ponytail/
 skills-lock.json
+cursor/
 
 # python
 __pycache__/
