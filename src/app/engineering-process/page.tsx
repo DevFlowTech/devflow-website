@@ -3,7 +3,13 @@
 import { motion } from "framer-motion";
 import { staggerContainer, staggerItem } from "@/lib/motion";
 import Link from "next/link";
-import { FiSearch, FiLayout, FiGitPullRequest, FiActivity, FiArrowRight } from "react-icons/fi";
+import {
+  FiSearch,
+  FiLayout,
+  FiGitPullRequest,
+  FiActivity,
+  FiArrowRight,
+} from "react-icons/fi";
 
 const steps = [
   {
@@ -39,16 +45,25 @@ export default function EngineeringProcessPage() {
       <section className="py-16 border-b border-white/[0.04] relative z-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(186,230,84,0.02),transparent_50%)] pointer-events-none" />
         <div className="section-container max-w-5xl">
-          <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="space-y-6">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+            className="space-y-6"
+          >
             <span className="text-xs font-mono text-devflow-green uppercase tracking-widest block">
               [ SYSTEMS DELIVERY LIFECYCLE ]
             </span>
             <h1 className="font-display text-4xl md:text-7xl font-medium text-white leading-tight">
               Agile Engineering. <br />
-              <span className="italic font-normal text-devflow-green font-display">Iterative Verification.</span>
+              <span className="italic font-normal text-devflow-green font-display">
+                Iterative Verification.
+              </span>
             </h1>
             <p className="text-lg md:text-xl text-devflow-gray-300 max-w-3xl leading-relaxed font-light">
-              You maintain complete insight. We construct custom software in secure sprints with continuous integration, unit validation, and full staging previews.
+              You maintain complete insight. We construct custom software in
+              secure sprints with continuous integration, unit validation, and
+              full staging previews.
             </p>
           </motion.div>
         </div>
@@ -75,11 +90,17 @@ export default function EngineeringProcessPage() {
                   <div className="w-12 h-12 rounded-xl bg-devflow-green/10 border border-devflow-green/20 flex items-center justify-center text-devflow-green">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <span className="font-mono text-xl font-bold text-devflow-green/30 block text-center">{step.step}</span>
+                  <span className="font-mono text-xl font-bold text-devflow-green/30 block text-center">
+                    {step.step}
+                  </span>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-base font-semibold text-white">{step.title}</h3>
-                  <p className="text-xs text-devflow-gray-300 leading-relaxed font-light">{step.desc}</p>
+                  <h3 className="text-base font-semibold text-white">
+                    {step.title}
+                  </h3>
+                  <p className="text-xs text-devflow-gray-300 leading-relaxed font-light">
+                    {step.desc}
+                  </p>
                 </div>
               </motion.div>
             );
@@ -94,7 +115,10 @@ export default function EngineeringProcessPage() {
             Strict QA & Code Review Commitments
           </h2>
           <p className="text-sm text-devflow-gray-300 leading-relaxed font-light max-w-2xl mx-auto">
-            We write clean TypeScript and Python code compliant with industry standards. Every merge request requires review by our senior lead architects. We implement rigorous end-to-end integration tests (Playwright) to eliminate critical regressions.
+            We write clean TypeScript and Python code compliant with industry
+            standards. Every merge request requires review by our senior lead
+            architects. We implement rigorous end-to-end integration tests
+            (Playwright) to eliminate critical regressions.
           </p>
         </div>
       </section>
@@ -106,10 +130,14 @@ export default function EngineeringProcessPage() {
             Get Technical Process Blueprint
           </h2>
           <p className="text-devflow-gray-400 max-w-xl mx-auto mb-8 font-light text-sm">
-            Partner with us with complete technical execution confidence. Schedule your discovery blueprint call today.
+            Partner with us with complete technical execution confidence.
+            Schedule your discovery blueprint call today.
           </p>
           <div className="flex justify-center gap-4">
-            <Link href="/contact" className="btn-primary min-w-[200px] inline-flex items-center justify-center gap-2">
+            <Link
+              href="/contact"
+              className="btn-primary min-w-[200px] inline-flex items-center justify-center gap-2"
+            >
               Book Strategy Call <FiArrowRight className="w-4 h-4" />
             </Link>
           </div>

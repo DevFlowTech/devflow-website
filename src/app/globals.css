@@ -1648,3 +1648,84 @@ footer h4 {
   scrollbar-width: none;
 }
 
+/* ==========================================================================
+   Custom Cursors - 3D Geared Steel System
+   ========================================================================== */
+@media (pointer: fine) {
+  /* Native CSS cursor fallbacks before JavaScript hydrates */
+  html,
+  body {
+    cursor: url('/cursors/default_32.png') 3 0, auto;
+  }
+
+  a,
+  button,
+  [role="button"],
+  input[type="submit"],
+  input[type="button"],
+  label[for],
+  select,
+  summary,
+  .cursor-pointer {
+    cursor: url('/cursors/pointer_32.png') 16 13, pointer;
+  }
+
+  input:not([type="button"]):not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+  textarea,
+  [contenteditable="true"] {
+    cursor: url('/cursors/text_32.png') 15 15, text;
+  }
+
+  button:disabled,
+  [aria-disabled="true"],
+  .cursor-not-allowed,
+  input:disabled,
+  textarea:disabled {
+    cursor: url('/cursors/not-allowed_32.png') 3 0, not-allowed;
+  }
+
+  .cursor-move,
+  .cursor-grab,
+  [draggable="true"] {
+    cursor: url('/cursors/move_32.png') 15 15, move;
+  }
+
+  .cursor-zoom-in,
+  [data-cursor="zoom-in"],
+  [data-zoom-in] {
+    cursor: url('/cursors/zoom-in_32.png') 15 15, zoom-in;
+  }
+
+  .cursor-zoom-out,
+  [data-cursor="zoom-out"],
+  [data-zoom-out] {
+    cursor: url('/cursors/zoom-out_32.png') 15 15, zoom-out;
+  }
+
+  .cursor-help,
+  abbr[title],
+  [data-cursor="help"],
+  [data-tooltip] {
+    cursor: url('/cursors/help_32.png') 3 0, help;
+  }
+
+  .cursor-wait,
+  [data-cursor="wait"],
+  [aria-busy="true"],
+  [data-loading="true"] {
+    cursor: url('/cursors/wait_32.png') 13 13, wait;
+  }
+}
+
+/* When the smooth animated CustomCursor component activates, hide the OS native cursor */
+html.has-custom-cursor,
+html.has-custom-cursor *,
+html.has-custom-cursor a,
+html.has-custom-cursor button,
+html.has-custom-cursor input,
+html.has-custom-cursor select,
+html.has-custom-cursor textarea {
+  cursor: none !important;
+}
+
+

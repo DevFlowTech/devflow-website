@@ -8,6 +8,7 @@ import PageWrapper from "@/components/layout/PageWrapper";
 import StructuredData from "@/components/SEO/StructuredData";
 import ServerStructuredData from "@/components/SEO/ServerStructuredData";
 import ScrollProgress from "@/components/ui/ScrollProgress";
+import CustomCursor from "@/components/ui/CustomCursor";
 
 // Dynamically import heavy components that are not in the initial viewport
 // These are code-split into separate chunks to optimize the critical rendering path
@@ -80,7 +81,6 @@ export const metadata: Metadata = {
     "hire developers India",
   ],
 
-
   // Authorship
   authors: [{ name: "DevFlow Technology", url: siteUrl }],
   creator: "DevFlow Technology",
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
     canonical: siteUrl,
     languages: {
       "en-IN": siteUrl,
-      "en": siteUrl,
+      en: siteUrl,
       "x-default": siteUrl,
     },
   },
@@ -204,13 +204,20 @@ export default function RootLayout({
     >
       <head>
         {/* Ahrefs Site Verification */}
-        <meta name="ahrefs-site-verification" content="d6c511f2a7c1ba94494fe6db3616dbd8fe4fae349b1ca7a505ce5496e24e7a28" />
+        <meta
+          name="ahrefs-site-verification"
+          content="d6c511f2a7c1ba94494fe6db3616dbd8fe4fae349b1ca7a505ce5496e24e7a28"
+        />
 
         {/* DNS prefetch & preconnect for external resources */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://news.google.com" />
-        <link rel="preconnect" href="https://news.google.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://news.google.com"
+          crossOrigin="anonymous"
+        />
 
         {/* Google Official Preferred Sources / Subscribe with Google Publisher Library */}
         <script async src="https://news.google.com/swg/js/v1/publisher.js" />
@@ -227,6 +234,9 @@ export default function RootLayout({
         <ServerStructuredData />
       </head>
       <body className={`${plusJakartaSans.className} antialiased`}>
+        {/* Custom 3D Geared Steel Animated Cursor */}
+        <CustomCursor />
+
         {/* Consent-gated analytics (GA, Clarity, GTM, Ahrefs) — only mount
             after the visitor accepts cookies, see AnalyticsProvider */}
         <AnalyticsProvider />

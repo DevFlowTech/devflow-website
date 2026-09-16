@@ -1,0 +1,306 @@
+{
+  "default": {
+    "source": "Normal_32-48-64.ani",
+    "hotspot": [
+      3,
+      0
+    ],
+    "hotspot48": [
+      4,
+      0
+    ],
+    "png": "/cursors/default_32.png",
+    "webp": "/cursors/default_32.webp",
+    "webp48": "/cursors/default_48.webp",
+    "frames": 32,
+    "duration": 33
+  },
+  "pointer": {
+    "source": "Link_32-48-64.ani",
+    "hotspot": [
+      16,
+      13
+    ],
+    "hotspot48": [
+      24,
+      20
+    ],
+    "png": "/cursors/pointer_32.png",
+    "webp": "/cursors/pointer_32.webp",
+    "webp48": "/cursors/pointer_48.webp",
+    "frames": 32,
+    "duration": 33
+  },
+  "pointer_alt": {
+    "source": "Link_1_32-48-64.ani",
+    "hotspot": [
+      3,
+      0
+    ],
+    "hotspot48": [
+      4,
+      0
+    ],
+    "png": "/cursors/pointer_alt_32.png",
+    "webp": "/cursors/pointer_alt_32.webp",
+    "webp48": "/cursors/pointer_alt_48.webp",
+    "frames": 32,
+    "duration": 33
+  },
+  "text": {
+    "source": "Text_32-48-64.ani",
+    "hotspot": [
+      15,
+      15
+    ],
+    "hotspot48": [
+      22,
+      22
+    ],
+    "png": "/cursors/text_32.png",
+    "webp": "/cursors/text_32.webp",
+    "webp48": "/cursors/text_48.webp",
+    "frames": 16,
+    "duration": 33
+  },
+  "wait": {
+    "source": "Wait_32-48-64.ani",
+    "hotspot": [
+      13,
+      13
+    ],
+    "hotspot48": [
+      20,
+      20
+    ],
+    "png": "/cursors/wait_32.png",
+    "webp": "/cursors/wait_32.webp",
+    "webp48": "/cursors/wait_48.webp",
+    "frames": 32,
+    "duration": 33
+  },
+  "progress": {
+    "source": "AppStarting_32-48-64.ani",
+    "hotspot": [
+      3,
+      0
+    ],
+    "hotspot48": [
+      4,
+      0
+    ],
+    "png": "/cursors/progress_32.png",
+    "webp": "/cursors/progress_32.webp",
+    "webp48": "/cursors/progress_48.webp",
+    "frames": 32,
+    "duration": 33
+  },
+  "not-allowed": {
+    "source": "NotAllowed_32-48-64.ani",
+    "hotspot": [
+      3,
+      0
+    ],
+    "hotspot48": [
+      4,
+      0
+    ],
+    "png": "/cursors/not-allowed_32.png",
+    "webp": "/cursors/not-allowed_32.webp",
+    "webp48": "/cursors/not-allowed_48.webp",
+    "frames": 32,
+    "duration": 33
+  },
+  "move": {
+    "source": "Move_32-48-64.ani",
+    "hotspot": [
+      15,
+      15
+    ],
+    "hotspot48": [
+      22,
+      22
+    ],
+    "png": "/cursors/move_32.png",
+    "webp": "/cursors/move_32.webp",
+    "webp48": "/cursors/move_48.webp",
+    "frames": 32,
+    "duration": 33
+  },
+  "help": {
+    "source": "Help_32-48-64.ani",
+    "hotspot": [
+      3,
+      0
+    ],
+    "hotspot48": [
+      4,
+      0
+    ],
+    "png": "/cursors/help_32.png",
+    "webp": "/cursors/help_32.webp",
+    "webp48": "/cursors/help_48.webp",
+    "frames": 32,
+    "duration": 33
+  },
+  "zoom-in": {
+    "source": "zoom-in_32-48-64.ani",
+    "hotspot": [
+      15,
+      15
+    ],
+    "hotspot48": [
+      22,
+      22
+    ],
+    "png": "/cursors/zoom-in_32.png",
+    "webp": "/cursors/zoom-in_32.webp",
+    "webp48": "/cursors/zoom-in_48.webp",
+    "frames": 32,
+    "duration": 33
+  },
+  "zoom-out": {
+    "source": "zoom-out_32-48-64.ani",
+    "hotspot": [
+      15,
+      15
+    ],
+    "hotspot48": [
+      22,
+      22
+    ],
+    "png": "/cursors/zoom-out_32.png",
+    "webp": "/cursors/zoom-out_32.webp",
+    "webp48": "/cursors/zoom-out_48.webp",
+    "frames": 32,
+    "duration": 33
+  },
+  "crosshair": {
+    "source": "Precision_32-48-64.ani",
+    "hotspot": [
+      15,
+      15
+    ],
+    "hotspot48": [
+      22,
+      22
+    ],
+    "png": "/cursors/crosshair_32.png",
+    "webp": "/cursors/crosshair_32.webp",
+    "webp48": "/cursors/crosshair_48.webp",
+    "frames": 32,
+    "duration": 33
+  },
+  "copy": {
+    "source": "copy_32-48-64.ani",
+    "hotspot": [
+      16,
+      13
+    ],
+    "hotspot48": [
+      24,
+      20
+    ],
+    "png": "/cursors/copy_32.png",
+    "webp": "/cursors/copy_32.webp",
+    "webp48": "/cursors/copy_48.webp",
+    "frames": 32,
+    "duration": 33
+  },
+  "alias": {
+    "source": "alias_32-48-64.ani",
+    "hotspot": [
+      16,
+      13
+    ],
+    "hotspot48": [
+      24,
+      20
+    ],
+    "png": "/cursors/alias_32.png",
+    "webp": "/cursors/alias_32.webp",
+    "webp48": "/cursors/alias_48.webp",
+    "frames": 32,
+    "duration": 33
+  },
+  "context-menu": {
+    "source": "context-menu_32-48-64.ani",
+    "hotspot": [
+      3,
+      0
+    ],
+    "hotspot48": [
+      4,
+      0
+    ],
+    "png": "/cursors/context-menu_32.png",
+    "webp": "/cursors/context-menu_32.webp",
+    "webp48": "/cursors/context-menu_48.webp",
+    "frames": 32,
+    "duration": 33
+  },
+  "ew-resize": {
+    "source": "EWResize_32-48-64.ani",
+    "hotspot": [
+      15,
+      15
+    ],
+    "hotspot48": [
+      22,
+      22
+    ],
+    "png": "/cursors/ew-resize_32.png",
+    "webp": "/cursors/ew-resize_32.webp",
+    "webp48": "/cursors/ew-resize_48.webp",
+    "frames": 32,
+    "duration": 33
+  },
+  "ns-resize": {
+    "source": "NSResize_32-48-64.ani",
+    "hotspot": [
+      15,
+      15
+    ],
+    "hotspot48": [
+      22,
+      22
+    ],
+    "png": "/cursors/ns-resize_32.png",
+    "webp": "/cursors/ns-resize_32.webp",
+    "webp48": "/cursors/ns-resize_48.webp",
+    "frames": 32,
+    "duration": 33
+  },
+  "nesw-resize": {
+    "source": "NEResize_32-48-64.ani",
+    "hotspot": [
+      15,
+      15
+    ],
+    "hotspot48": [
+      22,
+      22
+    ],
+    "png": "/cursors/nesw-resize_32.png",
+    "webp": "/cursors/nesw-resize_32.webp",
+    "webp48": "/cursors/nesw-resize_48.webp",
+    "frames": 32,
+    "duration": 33
+  },
+  "nwse-resize": {
+    "source": "NWResize_32-48-64.ani",
+    "hotspot": [
+      15,
+      15
+    ],
+    "hotspot48": [
+      22,
+      22
+    ],
+    "png": "/cursors/nwse-resize_32.png",
+    "webp": "/cursors/nwse-resize_32.webp",
+    "webp48": "/cursors/nwse-resize_48.webp",
+    "frames": 32,
+    "duration": 33
+  }
+}

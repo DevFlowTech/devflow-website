@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: { absolute: "SEO Company Ahmedabad | SEO & Local SEO | DevFlow" },
-  description: "Top SEO company in Ahmedabad offering technical SEO audits, local SEO, GEO/AEO optimization, and Core Web Vitals optimization.",
+  description:
+    "Top SEO company in Ahmedabad offering technical SEO audits, local SEO, GEO/AEO optimization, and Core Web Vitals optimization.",
   keywords: [
     "SEO company Ahmedabad",
     "SEO services Ahmedabad",
@@ -22,15 +23,25 @@ export const metadata: Metadata = {
     "schema markup services Ahmedabad",
   ],
   openGraph: {
-    title: "SEO Company Ahmedabad | DevFlow Technology - #1 SEO Services Gujarat",
-    description: "Leading SEO company in Ahmedabad offering technical SEO, local SEO, GEO/AEO optimization, and Core Web Vitals fixes. Rank higher on Google and AI search.",
+    title:
+      "SEO Company Ahmedabad | DevFlow Technology - #1 SEO Services Gujarat",
+    description:
+      "Leading SEO company in Ahmedabad offering technical SEO, local SEO, GEO/AEO optimization, and Core Web Vitals fixes. Rank higher on Google and AI search.",
     type: "website",
-    images: [{ url: "https://www.devflow.co.in/og-image.jpg", width: 1200, height: 630, alt: "DevFlow Technology - SEO Company Ahmedabad" }],
+    images: [
+      {
+        url: "https://www.devflow.co.in/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "DevFlow Technology - SEO Company Ahmedabad",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "SEO Company Ahmedabad | DevFlow Technology",
-    description: "Top SEO company in Ahmedabad, Gujarat. Technical SEO, Local SEO, GEO/AEO optimization for Google & AI search.",
+    description:
+      "Top SEO company in Ahmedabad, Gujarat. Technical SEO, Local SEO, GEO/AEO optimization for Google & AI search.",
     images: ["https://www.devflow.co.in/og-image.jpg"],
   },
   robots: { index: true, follow: true },
