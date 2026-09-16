@@ -2360,6 +2360,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/autonomous-agents-in-ai",
     icon: "📝",
   },
+  {
+    id: "blog/what-is-an-autonomous-agent-in-artificial-intelligence",
+    title: "What Is An Autonomous Agent In Artificial Intelligence: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for what is an autonomous agent in artificial intelligence: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "What Is An Autonomous Agent In Artificial Intelligence",
+      "What Is An Autonomous Agent In Artificial Intelligence guide",
+      "enterprise What Is An Autonomous Agent In Artificial Intelligence",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/what-is-an-autonomous-agent-in-artificial-intelligence",
+    icon: "📝",
+  },
 ];
 
 /**
