@@ -2376,6 +2376,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/what-is-an-autonomous-agent-in-artificial-intelligence",
     icon: "📝",
   },
+  {
+    id: "blog/autonomous-ai-customer-service",
+    title: "Autonomous Ai Customer Service: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for autonomous ai customer service: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Autonomous Ai Customer Service",
+      "Autonomous Ai Customer Service guide",
+      "enterprise Autonomous Ai Customer Service",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/autonomous-ai-customer-service",
+    icon: "📝",
+  },
 ];
 
 /**
