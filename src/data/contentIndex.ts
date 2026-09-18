@@ -2392,6 +2392,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/autonomous-ai-customer-service",
     icon: "📝",
   },
+  {
+    id: "blog/custom-llm-workflow-automation",
+    title: "Custom Llm Workflow Automation: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for custom llm workflow automation: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Custom Llm Workflow Automation",
+      "Custom Llm Workflow Automation guide",
+      "enterprise Custom Llm Workflow Automation",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/custom-llm-workflow-automation",
+    icon: "📝",
+  },
 ];
 
 /**
