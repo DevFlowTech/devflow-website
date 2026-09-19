@@ -2408,6 +2408,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/custom-llm-workflow-automation",
     icon: "📝",
   },
+  {
+    id: "blog/ai-agents-and-chatbots",
+    title: "Ai Agents And Chatbots: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for ai agents and chatbots: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Ai Agents And Chatbots",
+      "Ai Agents And Chatbots guide",
+      "enterprise Ai Agents And Chatbots",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/ai-agents-and-chatbots",
+    icon: "📝",
+  },
 ];
 
 /**
