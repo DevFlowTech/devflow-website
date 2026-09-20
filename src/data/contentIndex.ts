@@ -2424,6 +2424,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/ai-agents-and-chatbots",
     icon: "📝",
   },
+  {
+    id: "blog/build-ai-agents-and-chatbots-with-langgraph",
+    title: "Build Ai Agents And Chatbots With Langgraph: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for build ai agents and chatbots with langgraph: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Build Ai Agents And Chatbots With Langgraph",
+      "Build Ai Agents And Chatbots With Langgraph guide",
+      "enterprise Build Ai Agents And Chatbots With Langgraph",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/build-ai-agents-and-chatbots-with-langgraph",
+    icon: "📝",
+  },
 ];
 
 /**
