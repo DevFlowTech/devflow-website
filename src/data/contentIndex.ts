@@ -2440,6 +2440,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/build-ai-agents-and-chatbots-with-langgraph",
     icon: "📝",
   },
+  {
+    id: "blog/are-ai-agents-and-chatbots-the-same",
+    title: "Are Ai Agents And Chatbots The Same: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for are ai agents and chatbots the same: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Are Ai Agents And Chatbots The Same",
+      "Are Ai Agents And Chatbots The Same guide",
+      "enterprise Are Ai Agents And Chatbots The Same",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/are-ai-agents-and-chatbots-the-same",
+    icon: "📝",
+  },
 ];
 
 /**
