@@ -2456,6 +2456,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/are-ai-agents-and-chatbots-the-same",
     icon: "📝",
   },
+  {
+    id: "blog/build-ai-agents-and-chatbots-with-langgraph-github",
+    title: "Build Ai Agents And Chatbots With Langgraph Github: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for build ai agents and chatbots with langgraph github: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Build Ai Agents And Chatbots With Langgraph Github",
+      "Build Ai Agents And Chatbots With Langgraph Github guide",
+      "enterprise Build Ai Agents And Chatbots With Langgraph Github",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/build-ai-agents-and-chatbots-with-langgraph-github",
+    icon: "📝",
+  },
 ];
 
 /**
