@@ -2472,6 +2472,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/build-ai-agents-and-chatbots-with-langgraph-github",
     icon: "📝",
   },
+  {
+    id: "blog/building-ai-agents-and-chatbots-with-python",
+    title: "Building Ai Agents And Chatbots With Python: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for building ai agents and chatbots with python: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Building Ai Agents And Chatbots With Python",
+      "Building Ai Agents And Chatbots With Python guide",
+      "enterprise Building Ai Agents And Chatbots With Python",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/building-ai-agents-and-chatbots-with-python",
+    icon: "📝",
+  },
 ];
 
 /**
