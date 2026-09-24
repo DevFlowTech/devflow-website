@@ -2488,6 +2488,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/building-ai-agents-and-chatbots-with-python",
     icon: "📝",
   },
+  {
+    id: "blog/legacy-application-modernization-nextjs",
+    title: "Legacy Application Modernization Nextjs: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for legacy application modernization nextjs: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Legacy Application Modernization Nextjs",
+      "Legacy Application Modernization Nextjs guide",
+      "enterprise Legacy Application Modernization Nextjs",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/legacy-application-modernization-nextjs",
+    icon: "📝",
+  },
 ];
 
 /**
