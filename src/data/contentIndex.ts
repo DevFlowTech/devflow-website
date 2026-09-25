@@ -2504,6 +2504,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/legacy-application-modernization-nextjs",
     icon: "📝",
   },
+  {
+    id: "blog/custom-crm-system-development",
+    title: "Custom Crm System Development: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for custom crm system development: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Custom Crm System Development",
+      "Custom Crm System Development guide",
+      "enterprise Custom Crm System Development",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/custom-crm-system-development",
+    icon: "📝",
+  },
 ];
 
 /**
