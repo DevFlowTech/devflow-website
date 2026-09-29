@@ -2568,6 +2568,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/custom-crm-software-development-services",
     icon: "📝",
   },
+  {
+    id: "blog/custom-crm-software-development-agency-in-india",
+    title: "Custom Crm Software Development Agency In India: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for custom crm software development agency in india: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Custom Crm Software Development Agency In India",
+      "Custom Crm Software Development Agency In India guide",
+      "enterprise Custom Crm Software Development Agency In India",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/custom-crm-software-development-agency-in-india",
+    icon: "📝",
+  },
 ];
 
 /**
