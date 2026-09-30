@@ -2584,6 +2584,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/custom-crm-software-development-agency-in-india",
     icon: "📝",
   },
+  {
+    id: "blog/custom-crm-software-development-company-in-dubai",
+    title: "Custom Crm Software Development Company In Dubai: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for custom crm software development company in dubai: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Custom Crm Software Development Company In Dubai",
+      "Custom Crm Software Development Company In Dubai guide",
+      "enterprise Custom Crm Software Development Company In Dubai",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/custom-crm-software-development-company-in-dubai",
+    icon: "📝",
+  },
 ];
 
 /**
