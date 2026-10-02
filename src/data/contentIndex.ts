@@ -2616,6 +2616,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/custom-crm-software-development-dubai",
     icon: "📝",
   },
+  {
+    id: "blog/serverless-computing-and-microservices",
+    title: "Serverless Computing And Microservices: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for serverless computing and microservices: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Serverless Computing And Microservices",
+      "Serverless Computing And Microservices guide",
+      "enterprise Serverless Computing And Microservices",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/serverless-computing-and-microservices",
+    icon: "📝",
+  },
 ];
 
 /**
