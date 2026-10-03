@@ -2632,6 +2632,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/serverless-computing-and-microservices",
     icon: "📝",
   },
+  {
+    id: "blog/difference-between-serverless-and-microservices",
+    title: "Difference Between Serverless And Microservices: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for difference between serverless and microservices: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Difference Between Serverless And Microservices",
+      "Difference Between Serverless And Microservices guide",
+      "enterprise Difference Between Serverless And Microservices",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/difference-between-serverless-and-microservices",
+    icon: "📝",
+  },
 ];
 
 /**
