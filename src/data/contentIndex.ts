@@ -2648,6 +2648,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/difference-between-serverless-and-microservices",
     icon: "📝",
   },
+  {
+    id: "blog/aws-migration-services-for-growing-business",
+    title: "Aws Migration Services For Growing Business: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for aws migration services for growing business: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Aws Migration Services For Growing Business",
+      "Aws Migration Services For Growing Business guide",
+      "enterprise Aws Migration Services For Growing Business",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/aws-migration-services-for-growing-business",
+    icon: "📝",
+  },
 ];
 
 /**
