@@ -2680,6 +2680,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/cut-aws-database-bill-optimization",
     icon: "📝",
   },
+  {
+    id: "blog/postgresql-query-performance-optimization",
+    title: "Postgresql Query Performance Optimization: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for postgresql query performance optimization: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Postgresql Query Performance Optimization",
+      "Postgresql Query Performance Optimization guide",
+      "enterprise Postgresql Query Performance Optimization",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/postgresql-query-performance-optimization",
+    icon: "📝",
+  },
 ];
 
 /**
