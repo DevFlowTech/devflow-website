@@ -2696,6 +2696,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/postgresql-query-performance-optimization",
     icon: "📝",
   },
+  {
+    id: "blog/postgresql-query-performance-tuning",
+    title: "Postgresql Query Performance Tuning: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for postgresql query performance tuning: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Postgresql Query Performance Tuning",
+      "Postgresql Query Performance Tuning guide",
+      "enterprise Postgresql Query Performance Tuning",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/postgresql-query-performance-tuning",
+    icon: "📝",
+  },
 ];
 
 /**
