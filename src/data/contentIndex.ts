@@ -2712,6 +2712,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/postgresql-query-performance-tuning",
     icon: "📝",
   },
+  {
+    id: "blog/whatsapp-ai-agent-vs-chatbot",
+    title: "Whatsapp Ai Agent Vs Chatbot: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for whatsapp ai agent vs chatbot: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Whatsapp Ai Agent Vs Chatbot",
+      "Whatsapp Ai Agent Vs Chatbot guide",
+      "enterprise Whatsapp Ai Agent Vs Chatbot",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/whatsapp-ai-agent-vs-chatbot",
+    icon: "📝",
+  },
 ];
 
 /**
