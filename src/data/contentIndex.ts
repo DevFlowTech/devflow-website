@@ -2728,6 +2728,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/whatsapp-ai-agent-vs-chatbot",
     icon: "📝",
   },
+  {
+    id: "blog/ai-agents-vs-chatbots-whats-the-difference",
+    title: "Ai Agents Vs Chatbots What'S The Difference: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for ai agents vs chatbots what's the difference: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Ai Agents Vs Chatbots What'S The Difference",
+      "Ai Agents Vs Chatbots What'S The Difference guide",
+      "enterprise Ai Agents Vs Chatbots What'S The Difference",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/ai-agents-vs-chatbots-whats-the-difference",
+    icon: "📝",
+  },
 ];
 
 /**
