@@ -2744,6 +2744,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/ai-agents-vs-chatbots-whats-the-difference",
     icon: "📝",
   },
+  {
+    id: "blog/ai-agent-and-chatbot-difference",
+    title: "Ai Agent And Chatbot Difference: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for ai agent and chatbot difference: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Ai Agent And Chatbot Difference",
+      "Ai Agent And Chatbot Difference guide",
+      "enterprise Ai Agent And Chatbot Difference",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/ai-agent-and-chatbot-difference",
+    icon: "📝",
+  },
 ];
 
 /**
