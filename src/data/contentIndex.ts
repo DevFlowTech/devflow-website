@@ -2760,6 +2760,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/ai-agent-and-chatbot-difference",
     icon: "📝",
   },
+  {
+    id: "blog/how-to-improve-postgresql-query-performance",
+    title: "How To Improve Postgresql Query Performance: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for how to improve postgresql query performance: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "How To Improve Postgresql Query Performance",
+      "How To Improve Postgresql Query Performance guide",
+      "enterprise How To Improve Postgresql Query Performance",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/how-to-improve-postgresql-query-performance",
+    icon: "📝",
+  },
 ];
 
 /**
