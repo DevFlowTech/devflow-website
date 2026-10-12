@@ -2776,6 +2776,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/how-to-improve-postgresql-query-performance",
     icon: "📝",
   },
+  {
+    id: "blog/zero-downtime-deployment-nextjs",
+    title: "Zero Downtime Deployment Nextjs: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for zero downtime deployment nextjs: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Zero Downtime Deployment Nextjs",
+      "Zero Downtime Deployment Nextjs guide",
+      "enterprise Zero Downtime Deployment Nextjs",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/zero-downtime-deployment-nextjs",
+    icon: "📝",
+  },
 ];
 
 /**
