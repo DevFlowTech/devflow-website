@@ -2792,6 +2792,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/zero-downtime-deployment-nextjs",
     icon: "📝",
   },
+  {
+    id: "blog/zero-downtime-deployment-next-js",
+    title: "Zero Downtime Deployment Next Js: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for zero downtime deployment next js: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Zero Downtime Deployment Next Js",
+      "Zero Downtime Deployment Next Js guide",
+      "enterprise Zero Downtime Deployment Next Js",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/zero-downtime-deployment-next-js",
+    icon: "📝",
+  },
 ];
 
 /**
