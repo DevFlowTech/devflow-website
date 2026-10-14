@@ -2808,6 +2808,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/zero-downtime-deployment-next-js",
     icon: "📝",
   },
+  {
+    id: "blog/zero-downtime-meaning",
+    title: "Zero Downtime Meaning: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for zero downtime meaning: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Zero Downtime Meaning",
+      "Zero Downtime Meaning guide",
+      "enterprise Zero Downtime Meaning",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/zero-downtime-meaning",
+    icon: "📝",
+  },
 ];
 
 /**
