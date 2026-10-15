@@ -2824,6 +2824,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/zero-downtime-meaning",
     icon: "📝",
   },
+  {
+    id: "blog/how-long-is-fortnite-downtime-for-new-season",
+    title: "How Long Is Fortnite Downtime For New Season: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for how long is fortnite downtime for new season: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "How Long Is Fortnite Downtime For New Season",
+      "How Long Is Fortnite Downtime For New Season guide",
+      "enterprise How Long Is Fortnite Downtime For New Season",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/how-long-is-fortnite-downtime-for-new-season",
+    icon: "📝",
+  },
 ];
 
 /**
