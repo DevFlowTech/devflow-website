@@ -2856,6 +2856,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/hire-software-developers-in-ahmedabad",
     icon: "📝",
   },
+  {
+    id: "blog/offshore-engineering-team-benefits",
+    title: "Offshore Engineering Team Benefits: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for offshore engineering team benefits: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Offshore Engineering Team Benefits",
+      "Offshore Engineering Team Benefits guide",
+      "enterprise Offshore Engineering Team Benefits",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/offshore-engineering-team-benefits",
+    icon: "📝",
+  },
 ];
 
 /**
