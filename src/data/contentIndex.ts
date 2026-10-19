@@ -2888,6 +2888,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/software-development-outsourcing-best-practices",
     icon: "📝",
   },
+  {
+    id: "blog/owasp-top-10-api-security-nextjs",
+    title: "Owasp Top 10 Api Security Nextjs: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for owasp top 10 api security nextjs: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Owasp Top 10 Api Security Nextjs",
+      "Owasp Top 10 Api Security Nextjs guide",
+      "enterprise Owasp Top 10 Api Security Nextjs",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/owasp-top-10-api-security-nextjs",
+    icon: "📝",
+  },
 ];
 
 /**
