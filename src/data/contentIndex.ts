@@ -2904,6 +2904,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/owasp-top-10-api-security-nextjs",
     icon: "📝",
   },
+  {
+    id: "blog/database-encryption-at-rest-postgresql",
+    title: "Database Encryption At Rest Postgresql: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for database encryption at rest postgresql: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Database Encryption At Rest Postgresql",
+      "Database Encryption At Rest Postgresql guide",
+      "enterprise Database Encryption At Rest Postgresql",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/database-encryption-at-rest-postgresql",
+    icon: "📝",
+  },
 ];
 
 /**
