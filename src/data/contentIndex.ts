@@ -2920,6 +2920,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/database-encryption-at-rest-postgresql",
     icon: "📝",
   },
+  {
+    id: "blog/data-encryption-at-rest-postgresql",
+    title: "Data Encryption At Rest Postgresql: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for data encryption at rest postgresql: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Data Encryption At Rest Postgresql",
+      "Data Encryption At Rest Postgresql guide",
+      "enterprise Data Encryption At Rest Postgresql",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/data-encryption-at-rest-postgresql",
+    icon: "📝",
+  },
 ];
 
 /**
