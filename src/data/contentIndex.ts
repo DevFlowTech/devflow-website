@@ -2936,6 +2936,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/data-encryption-at-rest-postgresql",
     icon: "📝",
   },
+  {
+    id: "blog/ai-chatbots-vs-human-agents-a-comparative-study-of-customer-engagement",
+    title: "Ai Chatbots Vs Human Agents A Comparative Study Of Customer Engagement: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for ai chatbots vs human agents a comparative study of customer engagement: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Ai Chatbots Vs Human Agents A Comparative Study Of Customer Engagement",
+      "Ai Chatbots Vs Human Agents A Comparative Study Of Customer Engagement guide",
+      "enterprise Ai Chatbots Vs Human Agents A Comparative Study Of Customer Engagement",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/ai-chatbots-vs-human-agents-a-comparative-study-of-customer-engagement",
+    icon: "📝",
+  },
 ];
 
 /**
