@@ -2952,6 +2952,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/ai-chatbots-vs-human-agents-a-comparative-study-of-customer-engagement",
     icon: "📝",
   },
+  {
+    id: "blog/postgresql-database-encryption-at-rest",
+    title: "Postgresql Database Encryption At Rest: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for postgresql database encryption at rest: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Postgresql Database Encryption At Rest",
+      "Postgresql Database Encryption At Rest guide",
+      "enterprise Postgresql Database Encryption At Rest",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/postgresql-database-encryption-at-rest",
+    icon: "📝",
+  },
 ];
 
 /**
