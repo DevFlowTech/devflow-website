@@ -2968,6 +2968,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/postgresql-database-encryption-at-rest",
     icon: "📝",
   },
+  {
+    id: "blog/azure-database-for-postgresql-encryption-at-rest",
+    title: "Azure Database For Postgresql Encryption At Rest: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for azure database for postgresql encryption at rest: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Azure Database For Postgresql Encryption At Rest",
+      "Azure Database For Postgresql Encryption At Rest guide",
+      "enterprise Azure Database For Postgresql Encryption At Rest",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/azure-database-for-postgresql-encryption-at-rest",
+    icon: "📝",
+  },
 ];
 
 /**
