@@ -2984,6 +2984,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/azure-database-for-postgresql-encryption-at-rest",
     icon: "📝",
   },
+  {
+    id: "blog/what-is-database-encryption-at-rest",
+    title: "What Is Database Encryption At Rest: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for what is database encryption at rest: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "What Is Database Encryption At Rest",
+      "What Is Database Encryption At Rest guide",
+      "enterprise What Is Database Encryption At Rest",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/what-is-database-encryption-at-rest",
+    icon: "📝",
+  },
 ];
 
 /**
