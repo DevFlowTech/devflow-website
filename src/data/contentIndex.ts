@@ -3016,6 +3016,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/what-is-data-encryption-at-rest",
     icon: "📝",
   },
+  {
+    id: "blog/zero-trust-security-web-application",
+    title: "Zero Trust Security Web Application: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for zero trust security web application: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Zero Trust Security Web Application",
+      "Zero Trust Security Web Application guide",
+      "enterprise Zero Trust Security Web Application",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/zero-trust-security-web-application",
+    icon: "📝",
+  },
 ];
 
 /**
