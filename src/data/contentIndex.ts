@@ -3032,6 +3032,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/zero-trust-security-web-application",
     icon: "📝",
   },
+  {
+    id: "blog/zero-trust-security-for-web-applications-in-microservice-based-environments",
+    title: "Zero Trust Security For Web Applications In Microservice-Based Environments: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for zero trust security for web applications in microservice-based environments: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Zero Trust Security For Web Applications In Microservice-Based Environments",
+      "Zero Trust Security For Web Applications In Microservice-Based Environments guide",
+      "enterprise Zero Trust Security For Web Applications In Microservice-Based Environments",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/zero-trust-security-for-web-applications-in-microservice-based-environments",
+    icon: "📝",
+  },
 ];
 
 /**
