@@ -3048,6 +3048,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/zero-trust-security-for-web-applications-in-microservice-based-environments",
     icon: "📝",
   },
+  {
+    id: "blog/zero-trust-security-companies",
+    title: "Zero Trust Security Companies: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for zero trust security companies: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Zero Trust Security Companies",
+      "Zero Trust Security Companies guide",
+      "enterprise Zero Trust Security Companies",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/zero-trust-security-companies",
+    icon: "📝",
+  },
 ];
 
 /**
