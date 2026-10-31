@@ -3064,6 +3064,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/zero-trust-security-companies",
     icon: "📝",
   },
+  {
+    id: "blog/zero-trust-security-example",
+    title: "Zero Trust Security Example: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for zero trust security example: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Zero Trust Security Example",
+      "Zero Trust Security Example guide",
+      "enterprise Zero Trust Security Example",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/zero-trust-security-example",
+    icon: "📝",
+  },
 ];
 
 /**
