@@ -3096,6 +3096,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/what-is-zero-trust-security",
     icon: "📝",
   },
+  {
+    id: "blog/it-disaster-recovery-sla-targets",
+    title: "It Disaster Recovery Sla Targets: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for it disaster recovery sla targets: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "It Disaster Recovery Sla Targets",
+      "It Disaster Recovery Sla Targets guide",
+      "enterprise It Disaster Recovery Sla Targets",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/it-disaster-recovery-sla-targets",
+    icon: "📝",
+  },
 ];
 
 /**
