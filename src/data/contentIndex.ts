@@ -3112,6 +3112,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/it-disaster-recovery-sla-targets",
     icon: "📝",
   },
+  {
+    id: "blog/generative-ai-enterprise-implementation-best-practices",
+    title: "Generative Ai Enterprise Implementation Best Practices: The 2026 Engineering Blueprint",
+    type: "blog",
+    summary: "A technical engineering blueprint for generative ai enterprise implementation best practices: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Generative Ai Enterprise Implementation Best Practices",
+      "Generative Ai Enterprise Implementation Best Practices guide",
+      "enterprise Generative Ai Enterprise Implementation Best Practices",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/generative-ai-enterprise-implementation-best-practices",
+    icon: "📝",
+  },
 ];
 
 /**
