@@ -3128,6 +3128,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/generative-ai-enterprise-implementation-best-practices",
     icon: "📝",
   },
+  {
+    id: "blog/generative-ai-enterprise-implementation-architecture-guide",
+    title: "Generative Ai Enterprise Implementation Architecture Guide: The 2026 Engineering Blueprint",
+    type: "blog",
+    summary: "A technical engineering blueprint for generative ai enterprise implementation architecture guide: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Generative Ai Enterprise Implementation Architecture Guide",
+      "Generative Ai Enterprise Implementation Architecture Guide guide",
+      "enterprise Generative Ai Enterprise Implementation Architecture Guide",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/generative-ai-enterprise-implementation-architecture-guide",
+    icon: "📝",
+  },
 ];
 
 /**
