@@ -3144,6 +3144,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/generative-ai-enterprise-implementation-architecture-guide",
     icon: "📝",
   },
+  {
+    id: "blog/custom-build-crm-system-cost",
+    title: "Custom Build Crm System Cost: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for custom build crm system cost: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Custom Build Crm System Cost",
+      "Custom Build Crm System Cost guide",
+      "enterprise Custom Build Crm System Cost",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/custom-build-crm-system-cost",
+    icon: "📝",
+  },
 ];
 
 /**
