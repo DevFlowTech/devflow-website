@@ -3160,6 +3160,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/custom-build-crm-system-cost",
     icon: "📝",
   },
+  {
+    id: "blog/generative-ai-enterprise-implementation-implementation-steps",
+    title: "Generative Ai Enterprise Implementation Implementation Steps: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for generative ai enterprise implementation implementation steps: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Generative Ai Enterprise Implementation Implementation Steps",
+      "Generative Ai Enterprise Implementation Implementation Steps guide",
+      "enterprise Generative Ai Enterprise Implementation Implementation Steps",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/generative-ai-enterprise-implementation-implementation-steps",
+    icon: "📝",
+  },
 ];
 
 /**
