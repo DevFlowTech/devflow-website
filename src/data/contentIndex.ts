@@ -3176,6 +3176,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/generative-ai-enterprise-implementation-implementation-steps",
     icon: "📝",
   },
+  {
+    id: "blog/generative-ai-enterprise-implementation-comparison",
+    title: "Generative Ai Enterprise Implementation Comparison: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for generative ai enterprise implementation comparison: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Generative Ai Enterprise Implementation Comparison",
+      "Generative Ai Enterprise Implementation Comparison guide",
+      "enterprise Generative Ai Enterprise Implementation Comparison",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/generative-ai-enterprise-implementation-comparison",
+    icon: "📝",
+  },
 ];
 
 /**
