@@ -3192,6 +3192,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/generative-ai-enterprise-implementation-comparison",
     icon: "📝",
   },
+  {
+    id: "blog/generative-ai-enterprise-implementation-cost-breakdown",
+    title: "Generative Ai Enterprise Implementation Cost Breakdown: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for generative ai enterprise implementation cost breakdown: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Generative Ai Enterprise Implementation Cost Breakdown",
+      "Generative Ai Enterprise Implementation Cost Breakdown guide",
+      "enterprise Generative Ai Enterprise Implementation Cost Breakdown",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/generative-ai-enterprise-implementation-cost-breakdown",
+    icon: "📝",
+  },
 ];
 
 /**
