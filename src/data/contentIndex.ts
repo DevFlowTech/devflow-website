@@ -3208,6 +3208,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/generative-ai-enterprise-implementation-cost-breakdown",
     icon: "📝",
   },
+  {
+    id: "blog/generative-ai-enterprise-implementation-how-to-build",
+    title: "Generative Ai Enterprise Implementation How To Build: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for generative ai enterprise implementation how to build: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Generative Ai Enterprise Implementation How To Build",
+      "Generative Ai Enterprise Implementation How To Build guide",
+      "enterprise Generative Ai Enterprise Implementation How To Build",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/generative-ai-enterprise-implementation-how-to-build",
+    icon: "📝",
+  },
 ];
 
 /**
