@@ -3240,6 +3240,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/generative-ai-enterprise-implementation-enterprise-guide-2026",
     icon: "📝",
   },
+  {
+    id: "blog/autonomous-ai-agents-for-business-architecture-guide",
+    title: "Autonomous Ai Agents For Business Architecture Guide: The 2026 Engineering Blueprint",
+    type: "blog",
+    summary: "A technical engineering blueprint for autonomous ai agents for business architecture guide: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Autonomous Ai Agents For Business Architecture Guide",
+      "Autonomous Ai Agents For Business Architecture Guide guide",
+      "enterprise Autonomous Ai Agents For Business Architecture Guide",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/autonomous-ai-agents-for-business-architecture-guide",
+    icon: "📝",
+  },
 ];
 
 /**
