@@ -3272,6 +3272,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/autonomous-ai-agents-for-business-implementation-steps",
     icon: "📝",
   },
+  {
+    id: "blog/autonomous-ai-agents-for-business-cost-breakdown",
+    title: "Autonomous Ai Agents For Business Cost Breakdown: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for autonomous ai agents for business cost breakdown: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Autonomous Ai Agents For Business Cost Breakdown",
+      "Autonomous Ai Agents For Business Cost Breakdown guide",
+      "enterprise Autonomous Ai Agents For Business Cost Breakdown",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/autonomous-ai-agents-for-business-cost-breakdown",
+    icon: "📝",
+  },
 ];
 
 /**
