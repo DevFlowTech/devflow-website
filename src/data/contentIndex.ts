@@ -3288,6 +3288,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/autonomous-ai-agents-for-business-cost-breakdown",
     icon: "📝",
   },
+  {
+    id: "blog/autonomous-ai-agents-for-business-enterprise-guide-2026",
+    title: "Autonomous Ai Agents For Business Enterprise Guide 2026: The 2026 Engineering Blueprint",
+    type: "blog",
+    summary: "A technical engineering blueprint for autonomous ai agents for business enterprise guide 2026: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Autonomous Ai Agents For Business Enterprise Guide 2026",
+      "Autonomous Ai Agents For Business Enterprise Guide 2026 guide",
+      "enterprise Autonomous Ai Agents For Business Enterprise Guide 2026",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/autonomous-ai-agents-for-business-enterprise-guide-2026",
+    icon: "📝",
+  },
 ];
 
 /**
