@@ -3304,6 +3304,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/autonomous-ai-agents-for-business-enterprise-guide-2026",
     icon: "📝",
   },
+  {
+    id: "blog/rag-vs-fine-tuning-enterprise-best-practices",
+    title: "Rag Vs Fine Tuning Enterprise Best Practices: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for rag vs fine tuning enterprise best practices: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Rag Vs Fine Tuning Enterprise Best Practices",
+      "Rag Vs Fine Tuning Enterprise Best Practices guide",
+      "enterprise Rag Vs Fine Tuning Enterprise Best Practices",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/rag-vs-fine-tuning-enterprise-best-practices",
+    icon: "📝",
+  },
 ];
 
 /**
