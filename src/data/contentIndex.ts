@@ -3320,6 +3320,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/rag-vs-fine-tuning-enterprise-best-practices",
     icon: "📝",
   },
+  {
+    id: "blog/rag-vs-fine-tuning-enterprise-architecture-guide",
+    title: "Rag Vs Fine Tuning Enterprise Architecture Guide: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for rag vs fine tuning enterprise architecture guide: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Rag Vs Fine Tuning Enterprise Architecture Guide",
+      "Rag Vs Fine Tuning Enterprise Architecture Guide guide",
+      "enterprise Rag Vs Fine Tuning Enterprise Architecture Guide",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/rag-vs-fine-tuning-enterprise-architecture-guide",
+    icon: "📝",
+  },
 ];
 
 /**
