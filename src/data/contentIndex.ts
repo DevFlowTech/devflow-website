@@ -3368,6 +3368,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/rag-vs-fine-tuning-enterprise-comparison",
     icon: "📝",
   },
+  {
+    id: "blog/rag-vs-fine-tuning-enterprise-cost-breakdown",
+    title: "Rag Vs Fine Tuning Enterprise Cost Breakdown: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for rag vs fine tuning enterprise cost breakdown: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Rag Vs Fine Tuning Enterprise Cost Breakdown",
+      "Rag Vs Fine Tuning Enterprise Cost Breakdown guide",
+      "enterprise Rag Vs Fine Tuning Enterprise Cost Breakdown",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/rag-vs-fine-tuning-enterprise-cost-breakdown",
+    icon: "📝",
+  },
 ];
 
 /**
