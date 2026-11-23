@@ -3416,6 +3416,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/rag-vs-fine-tuning-enterprise-enterprise-guide-2026",
     icon: "📝",
   },
+  {
+    id: "blog/custom-llm-workflow-automation-architecture-guide",
+    title: "Custom Llm Workflow Automation Architecture Guide: The 2026 Engineering Blueprint",
+    type: "blog",
+    summary: "A technical engineering blueprint for custom llm workflow automation architecture guide: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Custom Llm Workflow Automation Architecture Guide",
+      "Custom Llm Workflow Automation Architecture Guide guide",
+      "enterprise Custom Llm Workflow Automation Architecture Guide",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/custom-llm-workflow-automation-architecture-guide",
+    icon: "📝",
+  },
 ];
 
 /**
