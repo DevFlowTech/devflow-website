@@ -3432,6 +3432,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/custom-llm-workflow-automation-architecture-guide",
     icon: "📝",
   },
+  {
+    id: "blog/ai-agents-vs-traditional-chatbots",
+    title: "Ai Agents Vs Traditional Chatbots: In-Depth Technical & Cost Comparison (2026)",
+    type: "blog",
+    summary: "A technical engineering blueprint for ai agents vs traditional chatbots: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Ai Agents Vs Traditional Chatbots",
+      "Ai Agents Vs Traditional Chatbots guide",
+      "enterprise Ai Agents Vs Traditional Chatbots",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/ai-agents-vs-traditional-chatbots",
+    icon: "📝",
+  },
 ];
 
 /**
