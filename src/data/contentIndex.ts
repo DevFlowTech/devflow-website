@@ -3464,6 +3464,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/custom-crm-software-development-cost",
     icon: "📝",
   },
+  {
+    id: "blog/ai-agents-and-chatbots-whats-the-difference",
+    title: "Ai Agents And Chatbots What'S The Difference: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for ai agents and chatbots what's the difference: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Ai Agents And Chatbots What'S The Difference",
+      "Ai Agents And Chatbots What'S The Difference guide",
+      "enterprise Ai Agents And Chatbots What'S The Difference",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/ai-agents-and-chatbots-whats-the-difference",
+    icon: "📝",
+  },
 ];
 
 /**
