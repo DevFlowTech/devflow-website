@@ -3480,6 +3480,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/ai-agents-and-chatbots-whats-the-difference",
     icon: "📝",
   },
+  {
+    id: "blog/custom-llm-workflow-automation-implementation-steps",
+    title: "Custom Llm Workflow Automation Implementation Steps: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for custom llm workflow automation implementation steps: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Custom Llm Workflow Automation Implementation Steps",
+      "Custom Llm Workflow Automation Implementation Steps guide",
+      "enterprise Custom Llm Workflow Automation Implementation Steps",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/custom-llm-workflow-automation-implementation-steps",
+    icon: "📝",
+  },
 ];
 
 /**
