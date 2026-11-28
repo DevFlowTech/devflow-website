@@ -3496,6 +3496,22 @@ export const siteContent: ContentEntry[] = [
     path: "/blog/custom-llm-workflow-automation-implementation-steps",
     icon: "📝",
   },
+  {
+    id: "blog/custom-llm-workflow-automation-cost-breakdown",
+    title: "Custom Llm Workflow Automation Cost Breakdown: Enterprise Architecture & Implementation Guide",
+    type: "blog",
+    summary: "A technical engineering blueprint for custom llm workflow automation cost breakdown: architecture patterns, performance benchmarks, cost ROI, and production best practices.",
+    keywords: [
+      "Custom Llm Workflow Automation Cost Breakdown",
+      "Custom Llm Workflow Automation Cost Breakdown guide",
+      "enterprise Custom Llm Workflow Automation Cost Breakdown",
+      "custom software development",
+      "DevFlow technology",
+      "enterprise architecture"
+],
+    path: "/blog/custom-llm-workflow-automation-cost-breakdown",
+    icon: "📝",
+  },
 ];
 
 /**
